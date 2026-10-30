@@ -1,0 +1,16 @@
+---
+import BotCard from './BotCard.astro';
+import { botBySlug, trending } from '../lib/data';
+const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
+---
+{bots.length > 0 && (
+  <section class="block wrap" aria-labelledby="trending-h" data-rail="trending">
+    <div class="section-head">
+      <h2 id="trending-h">Trending</h2>
+      <p class="asof">Popularity order as of <time datetime={trending.asOf}>{trending.asOf}</time>. A dated snapshot, not a live feed.</p>
+    </div>
+    <ul class="grid">
+      {bots.map((b) => <li><BotCard bot={b} trending showCategory /></li>)}
+    </ul>
+  </section>
+)}

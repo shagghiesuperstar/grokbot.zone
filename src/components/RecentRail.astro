@@ -1,0 +1,32 @@
+---
+import { recent, allCategories } from '../lib/data';
+const bySlug = new Map(allCategories.map((c) => [c.slug, c]));
+const cats = recent.categories.slice(0, 8);
+---
+{cats.length > 0 && (
+  <section class="block wrap" aria-labelledby="recent-h" data-rail="recent">
+    <div class="section-head">
+      <h2 id="recent-h">Recently refreshed</h2>
+      <p class="asof">Categories refreshed <time datetime={recent.asOf}>{recent.asOf}</time>.</p>
+    </div>
+    <p class="muted basis">The platform does not publish a date per bot, so this list is ordered by category refresh. Each category below was last refreshed on {recent.asOf}.</p>
+    <ul class="grid">
+      {cats.map((c) => (
+        <li>
+          <a class="panel tile" href={`/categories/${c.slug}/`}>
+            <h3>{c.label}</h3>
+            <p class="muted"><span class="num">{c.count}</span> bots · refreshed <time datetime={c.asOf}>{c.asOf}</time></p>
+            <p class="p">{bySlug.get(c.slug)?.purpose}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+<style>
+  .basis { margin: 0 0 1rem; max-width: 70ch; font-size: .92rem; }
+  .tile { display: block; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--text); height: 100%; }
+  .tile:hover { border-color: var(--olo); }
+  .tile p { margin: .35rem 0 0; font-size: .92rem; }
+  .tile .p { color: var(--text-muted); }
+</style>

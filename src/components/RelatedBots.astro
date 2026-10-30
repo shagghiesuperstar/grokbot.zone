@@ -1,0 +1,30 @@
+---
+import BotCard from './BotCard.astro';
+import { relatedFor, categoryBySlug, type Bot } from '../lib/data';
+interface Props { bot: Bot }
+const { bot } = Astro.props;
+const rel = relatedFor(bot.slug);
+const same = rel.filter((r) => r.why === 's').map((r) => r.bot);
+const similar = rel.filter((r) => r.why === 't').map((r) => r.bot);
+const cat = categoryBySlug.get(bot.cat)!;
+---
+{rel.length > 0 && (
+  <section class="block wrap" aria-labelledby="related-h" data-rail="related">
+    <div class="section-head"><h2 id="related-h">Related bots</h2></div>
+    {same.length > 0 && (
+      <>
+        <h3 class="sub">More in {cat.label}</h3>
+        <ul class="grid" data-related="same-category">{same.map((b) => <li><BotCard bot={b} /></li>)}</ul>
+      </>
+    )}
+    {similar.length > 0 && (
+      <>
+        <h3 class="sub">Similar descriptions elsewhere</h3>
+        <ul class="grid" data-related="similar">{similar.map((b) => <li><BotCard bot={b} showCategory /></li>)}</ul>
+      </>
+    )}
+  </section>
+)}
+<style>
+  .sub { margin: 1.25rem 0 .75rem; color: var(--text-muted); font-size: 1rem; letter-spacing: .06em; }
+</style>

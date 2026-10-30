@@ -1,12 +1,43 @@
 ---
 import Base from '../layouts/Base.astro';
+import SearchBar from '../components/SearchBar.astro';
+import TrendingRail from '../components/TrendingRail.astro';
+import RecentRail from '../components/RecentRail.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import { allCategories, meta } from '../lib/data';
+
+const total = meta.totalBots.toLocaleString('en-US');
 ---
-<Base title="GrokBot Zone | Find a Grok bot for any job" description="Search and browse public Grok bot listings by function. Find the bot for the job, then open it.">
+<Base
+  title="GrokBot Zone | Find a Grok bot for any job"
+  description={`Search and browse ${total} public Grok bot listings across ${meta.categoryCount} categories. Find the bot for the job, then open it. Listings as of ${meta.asOf}.`}
+  path="/"
+  jsonLd={[
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GrokBot Zone', url: 'https://grokbot.zone/',
+      potentialAction: { '@type': 'SearchAction', target: 'https://grokbot.zone/bots/?q={search_term_string}', 'query-input': 'required name=search_term_string' } },
+  ]}
+>
   <section class="hero">
     <div class="hero-grid-fallback" aria-hidden="true"></div>
     <div class="wrap">
       <h1><span class="line">Find the bot.</span><span class="line accent">Skip the hunt.</span></h1>
-      <p class="lede">A searchable index of public Grok bot listings, sorted by what they do.</p>
+      <p class="lede">{total} public Grok bot listings in {meta.categoryCount} categories. Search by name, author or job, then open the bot.</p>
+      <SearchBar />
+      <p class="asof snapshot">Listings snapshot <time datetime={meta.asOf}>{meta.asOf}</time>.</p>
     </div>
   </section>
+
+  <TrendingRail />
+  <RecentRail />
+
+  <section class="block wrap" aria-labelledby="cats-h">
+    <div class="section-head">
+      <h2 id="cats-h">Browse by job</h2>
+      <a href="/categories/">All categories</a>
+    </div>
+    <ul class="grid">{allCategories.map((c) => <li><CategoryCard category={c} /></li>)}</ul>
+  </section>
 </Base>
+<style>
+  .snapshot { margin: 1rem 0 0; }
+</style>

@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ReferralCTA from '../../components/ReferralCTA.astro';
 import RelatedBots from '../../components/RelatedBots.astro';
-import { allBots, categoryBySlug, botUrl, meta } from '../../lib/data';
+import { seoTitle, allBots, categoryBySlug, botUrl, meta } from '../../lib/data';
 
 export function getStaticPaths() {
   return allBots.map((bot) => ({ params: { id: bot.slug }, props: { bot } }));
@@ -12,10 +12,11 @@ const cat = categoryBySlug.get(bot.cat)!;
 const path = `/bots/${bot.slug}/`;
 const url = botUrl(bot);
 // Built from fields, not copied prose, so every page gets a unique, predictable summary.
-const description = `${bot.name}: a Grok bot by ${bot.author} in ${cat.label}. Listing snapshot ${meta.asOf}.`;
+const label = seoTitle(bot);
+const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${meta.asOf}.`;
 ---
 <Base
-  title={`${bot.name} | Grok bot | GrokBot Zone`}
+  title={`${label} | Grok bot | GrokBot Zone`}
   description={description}
   path={path}
   ogType="article"

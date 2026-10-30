@@ -17,3 +17,21 @@ export const botsByCategory = (slug: string) => allBots.filter((b) => b.cat === 
 export const botUrl = (b: Bot) => `https://x.ai/bot/${b.code}`;
 export const relatedFor = (slug: string) =>
   ((related as Record<string, [string, 's' | 't'][]>)[slug] ?? []).map(([s, why]) => ({ bot: botBySlug.get(s)!, why }));
+
+// Unique <title> and description per bot page. Many listings share a name, so qualify with the
+// author, then the category, then a short code prefix, only as far as needed to be unique.
+const catLabel = (b: Bot) => categoryBySlug.get(b.cat)!.label;
+const titleV: ((b: Bot) => string)[] = [
+  (b) => `${b.name} by ${b.author}`,
+  (b) => `${b.name} by ${b.author} (${catLabel(b)})`,
+  (b) => `${b.name} by ${b.author} (${catLabel(b)}, ${b.code.slice(0, 6)})`,
+];
+export const seoTitle = (() => {
+  const out = new Map<string, number>();
+  for (let v = 0; v < titleV.length; v++) {
+    const counts = new Map<string, number>();
+    for (const b of allBots) counts.set(titleV[v](b).toLowerCase(), (counts.get(titleV[v](b).toLowerCase()) ?? 0) + 1);
+    for (const b of allBots) if (!out.has(b.slug) && (counts.get(titleV[v](b).toLowerCase()) === 1 || v === titleV.length - 1)) out.set(b.slug, v);
+  }
+  return (b: Bot) => titleV[out.get(b.slug)!](b);
+})();

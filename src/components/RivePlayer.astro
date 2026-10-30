@@ -1,15 +1,32 @@
 ---
 // Thin wrapper over the Rive web runtime. The slotted fallback is what renders when motion is
 // reduced, the asset fails to load, or scripting is off. Decorative: hidden from assistive tech.
-interface Props { src: string; class?: string; fit?: 'cover' | 'contain' }
-const { src, class: cls = '', fit = 'contain' } = Astro.props;
+//
+// The host box is owned here, not by the caller: Astro scopes a component's <style> to the
+// elements that component renders, so a scoped rule written in a caller can never match this
+// host. Callers choose the box through props instead.
+interface Props {
+  src: string;
+  fit?: 'cover' | 'contain';
+  /** 'backdrop' stretches the host over its positioned ancestor; 'inline' keeps a fixed box in flow. */
+  box?: 'backdrop' | 'inline';
+  /** Edge length of the inline box, e.g. '32px'. */
+  size?: string;
+}
+const { src, fit = 'contain', box = 'inline', size = '2rem' } = Astro.props;
 ---
-<div class:list={['riv-host', cls]} data-riv-host aria-hidden="true">
+<div
+  class:list={['riv-host', `riv-host--${box}`]}
+  data-riv-host
+  style={box === 'inline' ? `--riv-size:${size}` : undefined}
+  aria-hidden="true"
+>
   <div class="riv-fallback" data-riv-fallback><slot /></div>
   <canvas class="riv" data-riv data-src={src} data-fit={fit} hidden></canvas>
 </div>
 <style>
-  .riv-host { position: relative; }
+  .riv-host--backdrop { position: absolute; inset: 0; z-index: -1; }
+  .riv-host--inline { position: relative; width: var(--riv-size, 2rem); height: var(--riv-size, 2rem); flex: none; }
   .riv-fallback, canvas.riv { position: absolute; inset: 0; width: 100%; height: 100%; }
   canvas.riv { pointer-events: none; }
 </style>
@@ -19,6 +36,37 @@ const { src, class: cls = '', fit = 'contain' } = Astro.props;
   RuntimeLoader.setWasmUrl('/riv/rive.wasm');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   const players: Rive[] = [];
+
+  // True once the canvas holds at least one non-transparent pixel. Rive's canvas renderer draws
+  // into a 2D context, so the bitmap can be read back directly.
+  function painted(canvas: HTMLCanvasElement): boolean {
+    if (!canvas.width || !canvas.height) return false;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return true; // not a 2D surface: cannot inspect it, trust the runtime
+    const { width, height } = canvas;
+    for (const fraction of [0.15, 0.35, 0.5, 0.65, 0.85]) {
+      const y = Math.min(height - 1, Math.floor(height * fraction));
+      const row = ctx.getImageData(0, y, width, 1).data;
+      for (let i = 3; i < row.length; i += 4) if (row[i] !== 0) return true;
+    }
+    return false;
+  }
+
+  // The static fallback only steps aside once the canvas has actually painted something, and
+  // stays visible if it never does.
+  function revealWhenPainted(canvas: HTMLCanvasElement, fallback: HTMLElement, host: HTMLElement, deadline: number): void {
+    if (painted(canvas)) {
+      fallback.hidden = true;
+      host.dataset.live = 'true';
+      return;
+    }
+    if (performance.now() < deadline) {
+      requestAnimationFrame(() => revealWhenPainted(canvas, fallback, host, deadline));
+      return;
+    }
+    // Nothing was painted: keep the static fallback visible rather than showing an empty box.
+    canvas.hidden = true;
+  }
 
   function start(canvas: HTMLCanvasElement) {
     const host = canvas.closest<HTMLElement>('[data-riv-host]')!;
@@ -31,10 +79,10 @@ const { src, class: cls = '', fit = 'contain' } = Astro.props;
         stateMachine: 'State Machine 1',
         layout: new Layout({ fit: canvas.dataset.fit === 'cover' ? Fit.Cover : Fit.Contain, alignment: Alignment.Center }),
         onLoad: () => {
-          r.resizeDrawingSurfaceToCanvas();
+          // Reveal before resizing: a hidden canvas has no box to measure.
           canvas.hidden = false;
-          fallback.hidden = true;
-          host.dataset.live = 'true';
+          r.resizeDrawingSurfaceToCanvas();
+          revealWhenPainted(canvas, fallback, host, performance.now() + 2000);
         },
         onLoadError: () => { /* the static fallback stays visible */ },
       });

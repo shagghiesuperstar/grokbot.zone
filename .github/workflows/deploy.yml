@@ -7,12 +7,16 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22
       - run: corepack enable && corepack prepare pnpm@10.11.1 --activate
@@ -22,3 +26,53 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Verify deployed origin
+        run: |
+          set -euo pipefail
+          ORIGIN="${ORIGIN:-https://grokbot.zone}"
+
+          # The deployed Worker can take a moment to serve the new build, so retry
+          # briefly instead of failing the job on the first cold response.
+          fetch() {
+            local path="$1" body status url
+            case "$path" in
+              http://* | https://*) url="$path" ;;
+              *) url="$ORIGIN$path" ;;
+            esac
+            body="$(mktemp)"
+            status="$(curl -sS -o "$body" -w '%{http_code}' --retry 5 --retry-delay 5 --retry-all-errors "$url" || true)"
+            if [ "$status" != "200" ]; then
+              echo "FAIL: $url returned HTTP ${status:-000}" >&2
+              rm -f "$body"
+              return 1
+            fi
+            cat "$body"
+            rm -f "$body"
+          }
+
+          home="$(fetch /)"
+          grep -q '<title>GrokBot Zone | Find a Grok bot for any job</title>' <<< "$home" \
+            || { echo "FAIL: home page title missing" >&2; exit 1; }
+          grep -q 'https://grok.com/refer/bot?code=B4ZFFHHS64AC' <<< "$home" \
+            || { echo "FAIL: referral link missing from home page" >&2; exit 1; }
+
+          category="$(fetch /categories/coding-software/)"
+          grep -q '<h1>Coding &amp; Software</h1>' <<< "$category" \
+            || { echo "FAIL: category page heading missing" >&2; exit 1; }
+
+          # Sitemap <loc> values are absolute; strip the scheme+host so the path is
+          # fetched from the origin under test rather than from whatever host the
+          # sitemap names, and read the bot slug from the sitemap so this check
+          # stays valid as the corpus changes.
+          sitemap="$(fetch /sitemap-0.xml)"
+          bot_path="$(grep -o '<loc>[^<]*/bots/[^<]*/</loc>' <<< "$sitemap" | grep -v '<loc>[^<]*/bots/</loc>' | sed -n '1p' | sed 's|<loc>||; s|</loc>||; s|https\{0,1\}://[^/]*||')"
+          [ -n "$bot_path" ] || { echo "FAIL: no bot URL in deployed sitemap" >&2; exit 1; }
+          bot="$(fetch "$bot_path")"
+          grep -q '<h1' <<< "$bot" \
+            || { echo "FAIL: bot page heading missing at $bot_path" >&2; exit 1; }
+
+          index="$(fetch /search/index.json)"
+          grep -q '"totalBots"' <<< "$index" \
+            || { echo "FAIL: search index missing totalBots" >&2; exit 1; }
+
+          echo "PASS: deployed origin verified (home, category page, bot page, search index, referral link)"

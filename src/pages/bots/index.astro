@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import SearchBar from '../../components/SearchBar.astro';
+import CategoryCard from '../../components/CategoryCard.astro';
+import { allCategories, meta } from '../../lib/data';
+---
+<Base
+  title="Search Grok bots | GrokBot Zone"
+  description={`Search ${meta.totalBots.toLocaleString('en-US')} Grok bot listings by name, author or what they do. Listings as of ${meta.asOf}.`}
+  path="/bots/"
+>
+  <div class="wrap page-head">
+    <h1>Search.<br />Find the bot.</h1>
+    <p>Search all {meta.totalBots.toLocaleString('en-US')} listings by name, author or what the bot does. Listings as of <time datetime={meta.asOf}>{meta.asOf}</time>.</p>
+  </div>
+  <div class="wrap"><SearchBar /></div>
+  <div class="wrap block">
+    <div class="section-head"><h2>Or browse by job</h2></div>
+    <ul class="grid">{allCategories.map((c) => <li><CategoryCard category={c} /></li>)}</ul>
+  </div>
+</Base>

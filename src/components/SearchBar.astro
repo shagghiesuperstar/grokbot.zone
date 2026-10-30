@@ -1,0 +1,147 @@
+---
+interface Props { id?: string; autofocus?: boolean }
+const { id = 'q' } = Astro.props;
+---
+<div class="search" data-search-root>
+  <form role="search" aria-label="Search Grok bots" onsubmit="return false">
+    <label class="sr-only" for={id}>Search bots by name, author or what they do</label>
+    <input id={id} name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search bots: try “spam call” or “resume”" data-search-input />
+  </form>
+  <p class="status muted" role="status" aria-live="polite" data-search-count></p>
+  <div class="empty panel" hidden data-search-empty>
+    <h3>No bots found.</h3>
+    <p class="muted">Nothing matches <strong data-search-term></strong>. Try fewer or simpler words, or <a href="/categories/">browse categories</a>.</p>
+  </div>
+  <ol class="results" data-search-results></ol>
+  <button type="button" class="btn ghost more" hidden data-search-more>Show more</button>
+</div>
+<style>
+  .search { width: 100%; max-width: 720px; }
+  input[type='search'] {
+    width: 100%; font: inherit; font-size: 1.1rem; color: var(--text); background: var(--panel);
+    border: 1px solid var(--olo); border-radius: 999px; padding: 1rem 1.4rem;
+  }
+  input::placeholder { color: var(--text-muted); opacity: 1; }
+  .status { margin: .6rem .4rem 0; min-height: 1.5em; font-size: .9rem; }
+  .empty { padding: 1.2rem 1.4rem; margin-top: .75rem; }
+  .empty p { margin: .4rem 0 0; }
+  .results { list-style: none; padding: 0; margin: .75rem 0 0; display: grid; gap: .6rem; }
+  .more { margin-top: 1rem; }
+</style>
+<script>
+  import { indexRecord, search, PAGE_SIZE, MIN_CHARS, type IndexedRecord, type Hit, type SearchRecord } from '../lib/search';
+
+  const root = document.querySelector<HTMLElement>('[data-search-root]')!;
+  const input = root.querySelector<HTMLInputElement>('[data-search-input]')!;
+  const countEl = root.querySelector<HTMLElement>('[data-search-count]')!;
+  const emptyEl = root.querySelector<HTMLElement>('[data-search-empty]')!;
+  const termEl = root.querySelector<HTMLElement>('[data-search-term]')!;
+  const listEl = root.querySelector<HTMLOListElement>('[data-search-results]')!;
+  const moreBtn = root.querySelector<HTMLButtonElement>('[data-search-more]')!;
+
+  let records: IndexedRecord[] | null = null;
+  let loading: Promise<void> | null = null;
+  let hits: Hit[] = [];
+  let shown = 0;
+
+  // The index is fetched on first focus (or first query), never at page load.
+  function load(): Promise<void> {
+    loading ??= (async () => {
+      countEl.textContent = 'Loading the index…';
+      try {
+        const idx = await (await fetch('/search/index.json')).json();
+        const parts = await Promise.all(
+          idx.categories.map(async (c: { path: string }) => (await fetch(c.path)).json()),
+        );
+        records = parts.flatMap((p: { slug: string; label: string; bots: SearchRecord[] }) =>
+          p.bots.map((b) => indexRecord(b, p.slug, p.label)),
+        );
+        root.dataset.ready = 'true';
+        root.dataset.total = String(records.length);
+        countEl.textContent = '';
+      } catch {
+        loading = null;
+        countEl.textContent = 'Search could not load. Reload the page to try again.';
+      }
+    })();
+    return loading;
+  }
+
+  function el(tag: string, cls?: string, text?: string) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function row(h: Hit): HTMLLIElement {
+    const li = document.createElement('li');
+    li.className = 'panel';
+    li.style.cssText = 'padding:.9rem 1.1rem';
+    const title = el('h3');
+    const a = el('a', undefined, h.rec.n) as HTMLAnchorElement;
+    a.href = `/bots/${h.rec.i}/`;
+    a.style.cssText = 'color:var(--text);text-decoration:none';
+    title.append(a);
+    const by = el('p', undefined, `by ${h.rec.a} · ${h.rec.catLabel}`);
+    by.style.cssText = 'margin:.15rem 0 0;color:var(--fuchsia);font-size:.88rem';
+    const d = el('p', 'muted', h.rec.d);
+    d.style.cssText = 'margin:.3rem 0 0;font-size:.93rem';
+    li.append(title, by, d);
+    li.dataset.id = h.rec.i;
+    return li;
+  }
+
+  function reveal() {
+    const next = hits.slice(shown, shown + PAGE_SIZE);
+    listEl.append(...next.map(row));
+    shown += next.length;
+    moreBtn.hidden = shown >= hits.length;
+    moreBtn.textContent = `Show ${Math.min(PAGE_SIZE, hits.length - shown)} more`;
+  }
+
+  function render() {
+    const q = input.value;
+    listEl.replaceChildren();
+    shown = 0;
+    hits = [];
+    emptyEl.hidden = true;
+    moreBtn.hidden = true;
+    root.dataset.state = 'idle';
+    if (!records) return;
+    if (q.trim().length < MIN_CHARS) {
+      countEl.textContent = q.trim() ? `Type at least ${MIN_CHARS} characters.` : '';
+      return;
+    }
+    hits = search(records, q);
+    if (!hits.length) {
+      root.dataset.state = 'empty';
+      termEl.textContent = `“${q.trim()}”`;
+      emptyEl.hidden = false;
+      countEl.textContent = '0 results';
+      return;
+    }
+    root.dataset.state = 'results';
+    countEl.textContent = `${hits.length.toLocaleString('en-US')} result${hits.length === 1 ? '' : 's'}${hits.length > PAGE_SIZE ? `, showing the first ${PAGE_SIZE}` : ''}`;
+    reveal();
+  }
+
+  async function onInput() {
+    const q = new URL(location.href);
+    if (input.value.trim()) q.searchParams.set('q', input.value.trim());
+    else q.searchParams.delete('q');
+    history.replaceState(null, '', q);
+    if (!records) await load();
+    render();
+  }
+
+  input.addEventListener('focus', () => void load(), { once: true });
+  input.addEventListener('input', () => void onInput());
+  moreBtn.addEventListener('click', reveal);
+
+  const initial = new URL(location.href).searchParams.get('q');
+  if (initial) {
+    input.value = initial;
+    void onInput();
+  }
+</script>

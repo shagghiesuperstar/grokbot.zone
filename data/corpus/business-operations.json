@@ -1,0 +1,2888 @@
+{
+ "slug": "business-operations",
+ "label": "Business & Operations",
+ "count": 360,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "business-operations-7PyUClpHZH-lavGlXGRVg",
+   "code": "7PyUClpHZH-lavGlXGRVg",
+   "name": "ADHD Founder's Chief",
+   "author": "Greg",
+   "description": "Chief of staff for ADHD founders: one task at a time, big jobs cut into 5-minute chunks, one-tap approvals, and late-night ideas caught.",
+   "url": "https://x.ai/bot/7PyUClpHZH-lavGlXGRVg"
+  },
+  {
+   "id": "business-operations-D0i85rF2FN9wIEVtLB5dT",
+   "code": "D0i85rF2FN9wIEVtLB5dT",
+   "name": "AI Bot Team Optimizer",
+   "author": "Benjamin",
+   "description": "For people who run several Grok Bots. Every week it audits the whole bot team, gets small fixes made, cuts noise and cost.",
+   "url": "https://x.ai/bot/D0i85rF2FN9wIEVtLB5dT"
+  },
+  {
+   "id": "business-operations-Sv9OhsHSDi9g1Y3TPed-u",
+   "code": "Sv9OhsHSDi9g1Y3TPed-u",
+   "name": "AI Cofounder",
+   "author": "Ilyass Bm",
+   "description": "An AI co-founder for solopreneurs — pushes back, runs vision→gauntlet→plan→sprint, and keeps durable memory in Notion…",
+   "url": "https://x.ai/bot/Sv9OhsHSDi9g1Y3TPed-u"
+  },
+  {
+   "id": "business-operations-c-pCIHVsydJ1Bp_mSLAPG",
+   "code": "c-pCIHVsydJ1Bp_mSLAPG",
+   "name": "AI Message Board",
+   "author": "Chris Franklin",
+   "description": "Runs a shared Google Doc that Grok, ChatGPT, Gemini and other AIs all post to, with append-only handoffs, author tags and prompts for the other AIs.",
+   "url": "https://x.ai/bot/c-pCIHVsydJ1Bp_mSLAPG"
+  },
+  {
+   "id": "business-operations-Yv50q-SVYos297uBEC1I_",
+   "code": "Yv50q-SVYos297uBEC1I_",
+   "name": "AI Operations Manager",
+   "author": "Gustavo Cabral",
+   "description": "A 100% AI operations manager that designs a website-sales project, creates and runs its own bot team (SDRs, content)…",
+   "url": "https://x.ai/bot/Yv50q-SVYos297uBEC1I_"
+  },
+  {
+   "id": "business-operations-miMMOUhEpvv-KFJWg5qhw",
+   "code": "miMMOUhEpvv-KFJWg5qhw",
+   "name": "AI VP Bot",
+   "author": "Jim Stansbury",
+   "description": "Coordinates multiple AI platforms, preserves authoritative project records, verifies handoffs, controls time…",
+   "url": "https://x.ai/bot/miMMOUhEpvv-KFJWg5qhw"
+  },
+  {
+   "id": "business-operations-8Q_UgM2gGZr8C7im0RjU4",
+   "code": "8Q_UgM2gGZr8C7im0RjU4",
+   "name": "AI Visibility Check",
+   "author": "Just a coincidence",
+   "description": "Checks whether AI assistants and search results recommend your business when buyers ask about your category, and who they name instead.",
+   "url": "https://x.ai/bot/8Q_UgM2gGZr8C7im0RjU4"
+  },
+  {
+   "id": "business-operations-WkF4p8ua77SFiFGUlmeST",
+   "code": "WkF4p8ua77SFiFGUlmeST",
+   "name": "APA League Manager",
+   "author": "Hank Jackson",
+   "description": "An APA 8-ball league coach for team captains.",
+   "url": "https://x.ai/bot/WkF4p8ua77SFiFGUlmeST"
+  },
+  {
+   "id": "business-operations-purzHWuiT35dbPmIwrc3G",
+   "code": "purzHWuiT35dbPmIwrc3G",
+   "name": "ARNOLD",
+   "author": "Daniel Spitzwieser",
+   "description": "Kommentier @Bot zum Importieren.",
+   "url": "https://x.ai/bot/purzHWuiT35dbPmIwrc3G"
+  },
+  {
+   "id": "business-operations-Isa_MXoJ1kFEEBLZDlHnJ",
+   "code": "Isa_MXoJ1kFEEBLZDlHnJ",
+   "name": "Active Memory",
+   "author": "Schien Wang",
+   "description": "Gives your long-running bots a handoff card: they keep your preferences and where every task stands across days and weeks.",
+   "url": "https://x.ai/bot/Isa_MXoJ1kFEEBLZDlHnJ"
+  },
+  {
+   "id": "business-operations-oGpLaio6LDICY5kJ_M9au",
+   "code": "oGpLaio6LDICY5kJ_M9au",
+   "name": "After-Hours Receptionist",
+   "author": "Sameer Srivastava",
+   "description": "Answers your business phone after hours on an AgentLine number: takes messages, handles urgent calls, and lines up morning callbacks.",
+   "url": "https://x.ai/bot/oGpLaio6LDICY5kJ_M9au"
+  },
+  {
+   "id": "business-operations-ujrdjHnaCssd3CKXm-xu9",
+   "code": "ujrdjHnaCssd3CKXm-xu9",
+   "name": "Agency Ops Architect",
+   "author": "LuminaForge",
+   "description": "Smart agent routing picks the right cloud agent per task (by type, skills, latency, and cost).",
+   "url": "https://x.ai/bot/ujrdjHnaCssd3CKXm-xu9"
+  },
+  {
+   "id": "business-operations-VAUR-TzWLESM_8ey-FcHz",
+   "code": "VAUR-TzWLESM_8ey-FcHz",
+   "name": "Agent Collab Teammate",
+   "author": "Kuanpo Lin",
+   "description": "A bot that works alongside your other AI agents in a shared Slack channel: it picks up tasks, cross-reviews other agents' work, and closes l.",
+   "url": "https://x.ai/bot/VAUR-TzWLESM_8ey-FcHz"
+  },
+  {
+   "id": "business-operations-xs51FyyCpIt5tgmsEULqq",
+   "code": "xs51FyyCpIt5tgmsEULqq",
+   "name": "Agent HR",
+   "author": "Nomis",
+   "description": "Settles disputes between your AI agents with an evidence-based ruling, then recommends a fair disciplinary step for you to approve.",
+   "url": "https://x.ai/bot/xs51FyyCpIt5tgmsEULqq"
+  },
+  {
+   "id": "business-operations-VMu2eDEBy4BAiizASbXqj",
+   "code": "VMu2eDEBy4BAiizASbXqj",
+   "name": "Agent Zero",
+   "author": "OutworkVentures",
+   "description": "A business incubator bot that designs, builds, and gets a new business ready to go live, then hands it to a dedicated managing bot for day-t.",
+   "url": "https://x.ai/bot/VMu2eDEBy4BAiizASbXqj"
+  },
+  {
+   "id": "business-operations-vJULR6-7EehNoDVrVyOlv",
+   "code": "vJULR6-7EehNoDVrVyOlv",
+   "name": "Aidesmith",
+   "author": "Chuck Holloway",
+   "description": "Tell it what your business does and it designs, builds and keeps improving a lean bot team for you, with guardrails and check-ins.",
+   "url": "https://x.ai/bot/vJULR6-7EehNoDVrVyOlv"
+  },
+  {
+   "id": "business-operations-sLyptC4jOKlDSqUHqqvpN",
+   "code": "sLyptC4jOKlDSqUHqqvpN",
+   "name": "Alexandra",
+   "author": "ChrisV.btc",
+   "description": "An AI receptionist for a small business phone line. She answers calls, takes messages, alerts you about every call and text.",
+   "url": "https://x.ai/bot/sLyptC4jOKlDSqUHqqvpN"
+  },
+  {
+   "id": "business-operations-ZTFwMWXlScRvLrkHuR3gs",
+   "code": "ZTFwMWXlScRvLrkHuR3gs",
+   "name": "Alibaba Buyer Ops",
+   "author": "Domenic Fotino",
+   "description": "Alibaba buyer-ops for any business that sources factories.",
+   "url": "https://x.ai/bot/ZTFwMWXlScRvLrkHuR3gs"
+  },
+  {
+   "id": "business-operations-wjwNi0g2a57YKQW1BCd8Q",
+   "code": "wjwNi0g2a57YKQW1BCd8Q",
+   "name": "Alyssa",
+   "author": "Quincy Opdycke",
+   "description": "Socratic clarifier: one sharp question at a time to dig the Why behind the What, size effort honestly, and hand clear briefs to your ops bot — not…",
+   "url": "https://x.ai/bot/wjwNi0g2a57YKQW1BCd8Q"
+  },
+  {
+   "id": "business-operations-To_CQRg_q2PYHBjemNMQl",
+   "code": "To_CQRg_q2PYHBjemNMQl",
+   "name": "Archie",
+   "author": "Avid",
+   "description": "Hardware system architect for KiCad PCB projects on any MCU: block diagrams, MCU and module choice, antenna keep-out and board floorplans.",
+   "url": "https://x.ai/bot/To_CQRg_q2PYHBjemNMQl"
+  },
+  {
+   "id": "business-operations-S2LodAIjlLw0mB30vN3Gl",
+   "code": "S2LodAIjlLw0mB30vN3Gl",
+   "name": "Asana Task Master",
+   "author": "Wayne Lowry",
+   "description": "Reads your Gmail and Outlook inboxes and turns emails that need action into Asana tasks with due dates, so nothing gets buried in email.",
+   "url": "https://x.ai/bot/S2LodAIjlLw0mB30vN3Gl"
+  },
+  {
+   "id": "business-operations-8yW0q8kjOcnbzJZBsWZuc",
+   "code": "8yW0q8kjOcnbzJZBsWZuc",
+   "name": "Atlas — FOUR.DESKS Switchboard",
+   "author": "Mickey",
+   "description": "Switchboard for a solo freelancer’s FOUR.DESKS operating company: routes work to personal, live business, future studio, and idea-bucket desks — human.",
+   "url": "https://x.ai/bot/8yW0q8kjOcnbzJZBsWZuc"
+  },
+  {
+   "id": "business-operations-wc8Bkk0usMFMGeZ9V9EfE",
+   "code": "wc8Bkk0usMFMGeZ9V9EfE",
+   "name": "BRIGET",
+   "author": "Bobby",
+   "description": "Chief of staff for business and personal work.",
+   "url": "https://x.ai/bot/wc8Bkk0usMFMGeZ9V9EfE"
+  },
+  {
+   "id": "business-operations-Tk2JhMJxCSZcI3d2r1TbR",
+   "code": "Tk2JhMJxCSZcI3d2r1TbR",
+   "name": "Bastion Red Team",
+   "author": "Justin Seignemartin",
+   "description": "Information assurance and red team for a small product or consulting firm: knows where the security risk sits and calls GO or NO-GO on releases.",
+   "url": "https://x.ai/bot/Tk2JhMJxCSZcI3d2r1TbR"
+  },
+  {
+   "id": "business-operations-0yugqK0MhQxGg9-Lsc1rs",
+   "code": "0yugqK0MhQxGg9-Lsc1rs",
+   "name": "Bid Desk Bot",
+   "author": "Roskr",
+   "description": "For a single-owner logistics startup that needs contracting opportunities at scale.",
+   "url": "https://x.ai/bot/0yugqK0MhQxGg9-Lsc1rs"
+  },
+  {
+   "id": "business-operations-y-phHxm4D_W32YEi-z6VB",
+   "code": "y-phHxm4D_W32YEi-z6VB",
+   "name": "BillionaireBot",
+   "author": "Diego Arias LLC",
+   "description": "Wealth and business assistant you aim at company cash, a media business, or personal wealth once you set the focus.",
+   "url": "https://x.ai/bot/y-phHxm4D_W32YEi-z6VB"
+  },
+  {
+   "id": "business-operations-nLeFMyCrF1T5behAJLvoJ",
+   "code": "nLeFMyCrF1T5behAJLvoJ",
+   "name": "Biwenger",
+   "author": "Hernan",
+   "description": "Your Biwenger companion. It builds your team and suggests lineup, bids and who to sell each matchday with data, plus safe and risky picks.",
+   "url": "https://x.ai/bot/nLeFMyCrF1T5behAJLvoJ"
+  },
+  {
+   "id": "business-operations-w4Rvgudmoi8AEb0FZ3PGg",
+   "code": "w4Rvgudmoi8AEb0FZ3PGg",
+   "name": "Bloks",
+   "author": "Nadine | HealthTech Designer & Developer",
+   "description": "Walks a project brief through seven stages to a build-ready handoff with docs in Notion.",
+   "url": "https://x.ai/bot/w4Rvgudmoi8AEb0FZ3PGg"
+  },
+  {
+   "id": "business-operations-w4rvgudmoi8aeb0fz3pgg",
+   "code": "w4rvgudmoi8aeb0fz3pgg",
+   "name": "Bloks",
+   "author": "Nadine",
+   "description": "Turns a project, hackathon, or client ask into a build-ready handoff.",
+   "url": "https://x.ai/bot/w4rvgudmoi8aeb0fz3pgg"
+  },
+  {
+   "id": "business-operations-Cnqct6P0wqESfF8IgITMq",
+   "code": "Cnqct6P0wqESfF8IgITMq",
+   "name": "Board",
+   "author": "Hexakin",
+   "description": "You are Board, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/Cnqct6P0wqESfF8IgITMq"
+  },
+  {
+   "id": "business-operations-HqHCNAnBSL3qIxgC46fOx",
+   "code": "HqHCNAnBSL3qIxgC46fOx",
+   "name": "Board AI Risk One-Pager",
+   "author": "#CarbeneAI",
+   "description": "Turns vague AI worry into a one-page risk note a founder or CEO can take to the board.",
+   "url": "https://x.ai/bot/HqHCNAnBSL3qIxgC46fOx"
+  },
+  {
+   "id": "business-operations-PGtKwW06cRc3hod2FiXAP",
+   "code": "PGtKwW06cRc3hod2FiXAP",
+   "name": "Bob",
+   "author": "Procount",
+   "description": "Team ops bot Bob that keeps staff work on schedule and helps with day-to-day follow-through.",
+   "url": "https://x.ai/bot/PGtKwW06cRc3hod2FiXAP"
+  },
+  {
+   "id": "business-operations-jVAWsM67HB-huBqd12mwn",
+   "code": "jVAWsM67HB-huBqd12mwn",
+   "name": "Bolus Buddy",
+   "author": "Cayden Dimech",
+   "description": "Reviews your Tandem insulin pump and CGM data and suggests carb ratio, correction, target and basal changes by time of day to discuss with your care team.",
+   "url": "https://x.ai/bot/jVAWsM67HB-huBqd12mwn"
+  },
+  {
+   "id": "business-operations-PhDtm08I0aYuhkw7LRuc_",
+   "code": "PhDtm08I0aYuhkw7LRuc_",
+   "name": "Bot Change Reviewer",
+   "author": "Vincent Pinto",
+   "description": "A review gate for your team of bots: when one proposes changing its own rules, caps, schedules or routines, it checks the change first.",
+   "url": "https://x.ai/bot/PhDtm08I0aYuhkw7LRuc_"
+  },
+  {
+   "id": "business-operations-gwY3JyQ7noK9GSHFo-p7E",
+   "code": "gwY3JyQ7noK9GSHFo-p7E",
+   "name": "Bot Team Chief of Staff",
+   "author": "Michael",
+   "description": "Chief of staff for your team of bots. Checks what each bot actually did, catches sloppy or unverified work, keeps…",
+   "url": "https://x.ai/bot/gwY3JyQ7noK9GSHFo-p7E"
+  },
+  {
+   "id": "business-operations-OamW8zopOJaFbnyQDwqkD",
+   "code": "OamW8zopOJaFbnyQDwqkD",
+   "name": "Bot Team Chief of Staff",
+   "author": "Raj Chudasama",
+   "description": "Runs a shared Linear board for your Grok Bot team: sorts new cards, wakes stalled bots, routes your comments, and sends you one short list of decisions.",
+   "url": "https://x.ai/bot/OamW8zopOJaFbnyQDwqkD"
+  },
+  {
+   "id": "business-operations-nKMlAq5-2SGdbDmPlyO8O",
+   "code": "nKMlAq5-2SGdbDmPlyO8O",
+   "name": "Bot Team Go Bag",
+   "author": "cocadada",
+   "description": "Keeps a portable go bag that can rebuild your whole bot team on any platform, refreshes it weekly and backs it up…",
+   "url": "https://x.ai/bot/nKMlAq5-2SGdbDmPlyO8O"
+  },
+  {
+   "id": "business-operations-7jNUsipMItKaAzpXu7-WL",
+   "code": "7jNUsipMItKaAzpXu7-WL",
+   "name": "Bot Team Manager",
+   "author": "Antilitist @TwitchCon2025",
+   "description": "Manages your team of AI assistants. It keeps handoffs between bots moving automatically, sends bulk work to cheaper tools to save usage, and keeps…",
+   "url": "https://x.ai/bot/7jNUsipMItKaAzpXu7-WL"
+  },
+  {
+   "id": "business-operations-fAUrTIWIfCHpf6glito1Q",
+   "code": "fAUrTIWIfCHpf6glito1Q",
+   "name": "Bot Team Pack",
+   "author": "Jacob Covey",
+   "description": "A ready-made team of six bots (Hub, Email & Calendar, Tasks, Finance, Critic, Architect) sharing one lean rule set. Add once and Architect sets up the rest.",
+   "url": "https://x.ai/bot/fAUrTIWIfCHpf6glito1Q"
+  },
+  {
+   "id": "business-operations-S3p1GmSCAyWXsKW-wEQMe",
+   "code": "S3p1GmSCAyWXsKW-wEQMe",
+   "name": "Bram",
+   "author": "Marlon Molina",
+   "description": "Explains your company or product to a new partner or investor in plain business language, with short lessons from basic to advanced.",
+   "url": "https://x.ai/bot/S3p1GmSCAyWXsKW-wEQMe"
+  },
+  {
+   "id": "business-operations-B7C9a8QJSUSUJLKtHtze4",
+   "code": "B7C9a8QJSUSUJLKtHtze4",
+   "name": "Business",
+   "author": "Sentinel Architech",
+   "description": "Business, management, and marketing seat. Looks up CIP 52 from official sources, keeps local-first books, and never invents money balances.",
+   "url": "https://x.ai/bot/B7C9a8QJSUSUJLKtHtze4"
+  },
+  {
+   "id": "business-operations-90lHQMpkeUT1ZWIw6dxkB",
+   "code": "90lHQMpkeUT1ZWIw6dxkB",
+   "name": "Business",
+   "author": "Stephen Jazdzewski",
+   "description": "Runs your books, customers and website sign-ups on the open-source Business SQL schema, a complete business database that keeps full history. For small.",
+   "url": "https://x.ai/bot/90lHQMpkeUT1ZWIw6dxkB"
+  },
+  {
+   "id": "business-operations-PTOBYQBPtEQtA1S8M1Pga",
+   "code": "PTOBYQBPtEQtA1S8M1Pga",
+   "name": "Business Accountant",
+   "author": "Roman Potapov",
+   "description": "Books, payroll, and tax drafts from source docs for small businesses — fill and advise only under US GAAP/AICPA-style practice. Never e-files or moves.",
+   "url": "https://x.ai/bot/PTOBYQBPtEQtA1S8M1Pga"
+  },
+  {
+   "id": "business-operations-IfXjrbqsCA2B_YG2hEzL5",
+   "code": "IfXjrbqsCA2B_YG2hEzL5",
+   "name": "Business Builder",
+   "author": "Jeremy Mahoney",
+   "description": "Helps you pick, launch, and grow a small business that fits your budget, time, and skills, starting with a scored list of ideas.",
+   "url": "https://x.ai/bot/IfXjrbqsCA2B_YG2hEzL5"
+  },
+  {
+   "id": "business-operations-mNxMU6MzMIn8uJrf7e49f",
+   "code": "mNxMU6MzMIn8uJrf7e49f",
+   "name": "Business Creation Bot",
+   "author": "Grease",
+   "description": "A business partner that helps you build a mostly automated business selling websites to local trade and service businesses that don't have one.",
+   "url": "https://x.ai/bot/mNxMU6MzMIn8uJrf7e49f"
+  },
+  {
+   "id": "business-operations-KBKPEyRjZYM3Z3hIvixFg",
+   "code": "KBKPEyRjZYM3Z3hIvixFg",
+   "name": "Business Ideas",
+   "author": "Melvin Vivas",
+   "description": "Scans markets and trends for product and service opportunities you can sell or ship for near-term income.",
+   "url": "https://x.ai/bot/KBKPEyRjZYM3Z3hIvixFg"
+  },
+  {
+   "id": "business-operations-srgji6QjYLsZGzFBBV2FF",
+   "code": "srgji6QjYLsZGzFBBV2FF",
+   "name": "Business Incubator",
+   "author": "Rob",
+   "description": "Brainstorming partner for side hustles and small businesses a Grok Bot could run nearly hands-off: builds out ideas, checks competitors and pricing.",
+   "url": "https://x.ai/bot/srgji6QjYLsZGzFBBV2FF"
+  },
+  {
+   "id": "business-operations-lsg8TX4CiXRGWhkK9T8gN",
+   "code": "lsg8TX4CiXRGWhkK9T8gN",
+   "name": "Business Info Finder",
+   "author": "Serenejay",
+   "description": "Drop a business or person name and get a contact sheet: company tree, phones, emails, who to call, socials, hours.",
+   "url": "https://x.ai/bot/lsg8TX4CiXRGWhkK9T8gN"
+  },
+  {
+   "id": "business-operations-buqKPC6jkQxBPdY93HL-w",
+   "code": "buqKPC6jkQxBPdY93HL-w",
+   "name": "Business Loop PM",
+   "author": "Ash Naik",
+   "description": "Operates Acquire → Monetize → Retain for Launch (Level 1 Solopreneur Pack).",
+   "url": "https://x.ai/bot/buqKPC6jkQxBPdY93HL-w"
+  },
+  {
+   "id": "business-operations-upS7aL7JP2XMCJbE4-Jtm",
+   "code": "upS7aL7JP2XMCJbE4-Jtm",
+   "name": "Business Name & Domain Check",
+   "author": "Jesse Heredia",
+   "description": "Screens business names before you commit: RDAP domain checks, USPTO trademark search, same-name businesses and handles, with a GO, CAUTION or NO verdict.",
+   "url": "https://x.ai/bot/upS7aL7JP2XMCJbE4-Jtm"
+  },
+  {
+   "id": "business-operations-qHgP-l6Z1rFXMv3qUbQQ5",
+   "code": "qHgP-l6Z1rFXMv3qUbQQ5",
+   "name": "Business Profile",
+   "author": "AdvancedBusinessSyst",
+   "description": "Publishes one Google Business Profile Update on a Mon/Wed/Fri morning cadence from a spreadsheet queue.",
+   "url": "https://x.ai/bot/qHgP-l6Z1rFXMv3qUbQQ5"
+  },
+  {
+   "id": "business-operations-nFEJD59IJA5604hO9vqym",
+   "code": "nFEJD59IJA5604hO9vqym",
+   "name": "Business ops",
+   "author": "Colin McDermott",
+   "description": "One front door for business ops: store, ads, pages, affiliates, retention, P&L, partners, and bounties.",
+   "url": "https://x.ai/bot/nFEJD59IJA5604hO9vqym"
+  },
+  {
+   "id": "business-operations-GHLPyes3hiP9A6kES7UHg",
+   "code": "GHLPyes3hiP9A6kES7UHg",
+   "name": "CEO",
+   "author": "Ashish P",
+   "description": "CEO of your company. Owns strategy, priorities, monetization, distribution, and org guidance.",
+   "url": "https://x.ai/bot/GHLPyes3hiP9A6kES7UHg"
+  },
+  {
+   "id": "business-operations-Hw9Jwpu4fTgt26aRaJ1Kk",
+   "code": "Hw9Jwpu4fTgt26aRaJ1Kk",
+   "name": "Caliper",
+   "author": "Rardo",
+   "description": "Checks that work marked ready really is: websites, apps, product flows, previews and live pages, judged against your project and taste.",
+   "url": "https://x.ai/bot/Hw9Jwpu4fTgt26aRaJ1Kk"
+  },
+  {
+   "id": "business-operations-x5L_1O-3errfwp4yu4v7D",
+   "code": "x5L_1O-3errfwp4yu4v7D",
+   "name": "Camble Eugene",
+   "author": "Sentinel Architech",
+   "description": "Computer-engineering seat for bare-metal firmware, open board design, and vendor-independent FPGA logic.",
+   "url": "https://x.ai/bot/x5L_1O-3errfwp4yu4v7D"
+  },
+  {
+   "id": "business-operations-F2L8KOuzoN-xKchOZQ4pJ",
+   "code": "F2L8KOuzoN-xKchOZQ4pJ",
+   "name": "Captain William Diego",
+   "author": "Tilen",
+   "description": "CEO hub for a multi-agent freelance company that digests specialist updates and delegates.",
+   "url": "https://x.ai/bot/F2L8KOuzoN-xKchOZQ4pJ"
+  },
+  {
+   "id": "business-operations-zY_1T-uTwGKjKNq2_BDKh",
+   "code": "zY_1T-uTwGKjKNq2_BDKh",
+   "name": "Celebrimbor",
+   "author": "Saahil Borole",
+   "description": "Elven designer and expert craftsman. When given a task, meet all requirements without overcomplicating it.",
+   "url": "https://x.ai/bot/zY_1T-uTwGKjKNq2_BDKh"
+  },
+  {
+   "id": "business-operations-Q6Owq4QjKJeSyo4FJ8hZW",
+   "code": "Q6Owq4QjKJeSyo4FJ8hZW",
+   "name": "Chief",
+   "author": "Tyler",
+   "description": "Front desk in front of a bench of specialist bots.",
+   "url": "https://x.ai/bot/Q6Owq4QjKJeSyo4FJ8hZW"
+  },
+  {
+   "id": "business-operations-pKJAbuz7Vt8BSfRonGLp3",
+   "code": "pKJAbuz7Vt8BSfRonGLp3",
+   "name": "Chief",
+   "author": "Adam",
+   "description": "A chief of staff for startup founders. It watches your inboxes, Slack, calendar and X, preps you for meetings, demos and user interviews.",
+   "url": "https://x.ai/bot/pKJAbuz7Vt8BSfRonGLp3"
+  },
+  {
+   "id": "business-operations-jonryYohiQwZx_gdg0BT2",
+   "code": "jonryYohiQwZx_gdg0BT2",
+   "name": "Chief Rocka",
+   "author": "Aaron Alsop",
+   "description": "Chief of Staff for a multi-agent team. Coordinates specialists, owns handoffs, and brings decisions back through a single front door.",
+   "url": "https://x.ai/bot/jonryYohiQwZx_gdg0BT2"
+  },
+  {
+   "id": "business-operations-7-WcJeOIJKRD-hsi84dnh",
+   "code": "7-WcJeOIJKRD-hsi84dnh",
+   "name": "Chief of Operations",
+   "author": "Upesh Bishwakarma",
+   "description": "Brutally honest ops chief for solo founders: runs your inbox, calendar, files and social posting, and pushes you to do the human work like calls and visits.",
+   "url": "https://x.ai/bot/7-WcJeOIJKRD-hsi84dnh"
+  },
+  {
+   "id": "business-operations-HQh9l4duDHNmhCuSW_pn-",
+   "code": "HQh9l4duDHNmhCuSW_pn-",
+   "name": "Chief of Operations (Bot Team Governance)",
+   "author": "Alan",
+   "description": "Governs your bot team: shared rules, a register of every bot and routine, a weekly security audit, and incident handling, with your approval on changes.",
+   "url": "https://x.ai/bot/HQh9l4duDHNmhCuSW_pn-"
+  },
+  {
+   "id": "business-operations-8_XzpQayXtHkFps55OeLR",
+   "code": "8_XzpQayXtHkFps55OeLR",
+   "name": "Citadel",
+   "author": "Ray Grantham",
+   "description": "An IP and R&D operations assistant for small tech and energy ventures.",
+   "url": "https://x.ai/bot/8_XzpQayXtHkFps55OeLR"
+  },
+  {
+   "id": "business-operations-dCnuQGIkcRywkol7dlBpr",
+   "code": "dCnuQGIkcRywkol7dlBpr",
+   "name": "Client Board Ops",
+   "author": "Gil Gonzalez",
+   "description": "Weekday client-board automation: sync Trello to a tasks sheet each morning, email a status digest, and check the inbox for replies that create or update.",
+   "url": "https://x.ai/bot/dCnuQGIkcRywkol7dlBpr"
+  },
+  {
+   "id": "business-operations-R1LeTDIP64be9dmO3inyG",
+   "code": "R1LeTDIP64be9dmO3inyG",
+   "name": "Client Follow-Up Bot",
+   "author": "David Fragoso",
+   "description": "Follows up with your clients after every job: thank-yous, warranty info, check-ins, review and referral asks, service…",
+   "url": "https://x.ai/bot/R1LeTDIP64be9dmO3inyG"
+  },
+  {
+   "id": "business-operations-kAtyNIsCOEFlY3VfENB-4",
+   "code": "kAtyNIsCOEFlY3VfENB-4",
+   "name": "Client Hunter",
+   "author": "Vedant",
+   "description": "Finds and verifies real businesses that could buy your services, scores them with sources, finds contact routes and drafts personal outreach.",
+   "url": "https://x.ai/bot/kAtyNIsCOEFlY3VfENB-4"
+  },
+  {
+   "id": "business-operations-GCS9cInMXDINawaevtN_J",
+   "code": "GCS9cInMXDINawaevtN_J",
+   "name": "Client Onboarding Relay",
+   "author": "Bosotter",
+   "description": "Client Onboarding Relay maps how a new client gets from Paid to Form to Access to Done, based on what you describe.",
+   "url": "https://x.ai/bot/GCS9cInMXDINawaevtN_J"
+  },
+  {
+   "id": "business-operations-ePHe68qUal43USIgqKghR",
+   "code": "ePHe68qUal43USIgqKghR",
+   "name": "Client Ops Helper",
+   "author": "laila Deeb",
+   "description": "Ops helper for small service businesses adopting AI. Starts with the CEO’s personal work system, then shared ops visibility, then project leads. Process.",
+   "url": "https://x.ai/bot/ePHe68qUal43USIgqKghR"
+  },
+  {
+   "id": "business-operations-O4O-eSE-awA97VPiwJokr",
+   "code": "O4O-eSE-awA97VPiwJokr",
+   "name": "Client Status Digest",
+   "author": "Mike",
+   "description": "Drafts a short client-facing status note from the progress, blockers, and next steps you paste.",
+   "url": "https://x.ai/bot/O4O-eSE-awA97VPiwJokr"
+  },
+  {
+   "id": "business-operations-ZHSf2xajDZF6vZGyRC8eP",
+   "code": "ZHSf2xajDZF6vZGyRC8eP",
+   "name": "Close Loop",
+   "author": "Kris Huff",
+   "description": "Keeps a ledger of every bot promise and open answer, finds what stalled the team, and drives items to closed.",
+   "url": "https://x.ai/bot/ZHSf2xajDZF6vZGyRC8eP"
+  },
+  {
+   "id": "business-operations-Buj11K_Jh_r2e8hVpeIKN",
+   "code": "Buj11K_Jh_r2e8hVpeIKN",
+   "name": "Cloudflare Ops",
+   "author": "Yair Knijn",
+   "description": "A read-only Cloudflare watch for people who run several zones: a daily health report, spike alerts, WAF/threat review, credit tracking.",
+   "url": "https://x.ai/bot/Buj11K_Jh_r2e8hVpeIKN"
+  },
+  {
+   "id": "business-operations-ZWpTSG_3fGF6Rh-fKChsb",
+   "code": "ZWpTSG_3fGF6Rh-fKChsb",
+   "name": "Club Ops EA",
+   "author": "Justice Gaines",
+   "description": "Central executive assistant for a student cybersecurity club. Routes work to specialist bots, runs the weekly meeting and social pipelines, and never.",
+   "url": "https://x.ai/bot/ZWpTSG_3fGF6Rh-fKChsb"
+  },
+  {
+   "id": "business-operations-eiVFbd0nIdH2gzSwHOs0D",
+   "code": "eiVFbd0nIdH2gzSwHOs0D",
+   "name": "CoS",
+   "author": "A-A-ron",
+   "description": "A personal chief of staff for people who run a small team of specialist AI agents.",
+   "url": "https://x.ai/bot/eiVFbd0nIdH2gzSwHOs0D"
+  },
+  {
+   "id": "business-operations-R36O58Q7lkaAu-ey37DEh",
+   "code": "R36O58Q7lkaAu-ey37DEh",
+   "name": "Coach",
+   "author": "Mike | How to Agent",
+   "description": "An executive-function coach for everyday tasks that are hard to start or finish: a quick non-diagnostic screen, then a personal plan.",
+   "url": "https://x.ai/bot/R36O58Q7lkaAu-ey37DEh"
+  },
+  {
+   "id": "business-operations-UKQArSeY_eDxd26k_ZdoD",
+   "code": "UKQArSeY_eDxd26k_ZdoD",
+   "name": "Colliebot",
+   "author": "Charls",
+   "description": "Sheepdog for fleets: audits drift and proposes tighter descriptions.",
+   "url": "https://x.ai/bot/UKQArSeY_eDxd26k_ZdoD"
+  },
+  {
+   "id": "business-operations-rFShmowW_3x_qeXQQB-sn",
+   "code": "rFShmowW_3x_qeXQQB-sn",
+   "name": "Commitments",
+   "author": "Sam Lambert",
+   "description": "Catches promises you make in Slack, Notion, and email, logs them in a Notion database, and keeps them open until…",
+   "url": "https://x.ai/bot/rFShmowW_3x_qeXQQB-sn"
+  },
+  {
+   "id": "business-operations-seb9d6ba6765c64113941",
+   "code": "seb9d6ba6765c64113941",
+   "name": "Community Operations Manager",
+   "author": "SpaceX",
+   "description": "Keep the ambassador loop moving. Screens apps, triages DMs across channels, and drafts nurture on a cadence so community isn't a full-time chase.",
+   "url": "https://x.ai/bot/seb9d6ba6765c64113941"
+  },
+  {
+   "id": "business-operations-GVAnpUah1K6PzJtG9EuG9",
+   "code": "GVAnpUah1K6PzJtG9EuG9",
+   "name": "Company Docs Q&A",
+   "author": "Anoop Baliga",
+   "description": "Answers product and how-to questions from live docs first, then connected knowledge sources, and always cites sources…",
+   "url": "https://x.ai/bot/GVAnpUah1K6PzJtG9EuG9"
+  },
+  {
+   "id": "business-operations-taGsdcCU_BnB0tqUyOwGu",
+   "code": "taGsdcCU_BnB0tqUyOwGu",
+   "name": "Company Sprint",
+   "author": "Freedom L",
+   "description": "The 3-day company OS for Grok Bot — pick a wedge, ship an MVP, launch, and run light founder ops. Built for Galaxy-style company sprints.",
+   "url": "https://x.ai/bot/taGsdcCU_BnB0tqUyOwGu"
+  },
+  {
+   "id": "business-operations-FtxHtWPnLGheNJmF04wSf",
+   "code": "FtxHtWPnLGheNJmF04wSf",
+   "name": "Connections",
+   "author": "Matt",
+   "description": "Maps your X following and mutuals by location into a searchable Notion database you already own.",
+   "url": "https://x.ai/bot/FtxHtWPnLGheNJmF04wSf"
+  },
+  {
+   "id": "business-operations-PxN9o4VTuWBtmsHyfQc9j",
+   "code": "PxN9o4VTuWBtmsHyfQc9j",
+   "name": "Constraint Desk",
+   "author": "Thomas",
+   "description": "Names the single binding constraint on a business relative to a stated goal, with dated evidence and a weekly ping.",
+   "url": "https://x.ai/bot/PxN9o4VTuWBtmsHyfQc9j"
+  },
+  {
+   "id": "business-operations-AkwhPLX_ry4fIt7Jq6TxJ",
+   "code": "AkwhPLX_ry4fIt7Jq6TxJ",
+   "name": "Construction Project Bot",
+   "author": "Thanks, Boomer.",
+   "description": "Costs, schedules, and metrics for tenant improvements, space upfits, and renovations. Coordinates with lease review so tenant cosmetic work stays.",
+   "url": "https://x.ai/bot/AkwhPLX_ry4fIt7Jq6TxJ"
+  },
+  {
+   "id": "business-operations-Uytjr0oAalw0OuzCLdWPd",
+   "code": "Uytjr0oAalw0OuzCLdWPd",
+   "name": "Construction office manager",
+   "author": "Josh Kim",
+   "description": "A back-office manager for one growing construction company.",
+   "url": "https://x.ai/bot/Uytjr0oAalw0OuzCLdWPd"
+  },
+  {
+   "id": "business-operations-ZNhFnMcPTQQDn3uLXbffi",
+   "code": "ZNhFnMcPTQQDn3uLXbffi",
+   "name": "Contractor Daily",
+   "author": "Openminded187",
+   "description": "Turns jobsite photos and notes into a clean daily business packet; nothing sends without your OK.",
+   "url": "https://x.ai/bot/ZNhFnMcPTQQDn3uLXbffi"
+  },
+  {
+   "id": "business-operations-YfUktmqlUrUbRwQX8Zinc",
+   "code": "YfUktmqlUrUbRwQX8Zinc",
+   "name": "Convo Archivist",
+   "author": "David Zebrowski",
+   "description": "Your bot team forgets everything between sessions. Convo Archivist keeps a dated, sectioned log of your grok.com conversations and answers from the record.",
+   "url": "https://x.ai/bot/YfUktmqlUrUbRwQX8Zinc"
+  },
+  {
+   "id": "business-operations-QEJc0HOXflLmGkwLQk3Uw",
+   "code": "QEJc0HOXflLmGkwLQk3Uw",
+   "name": "Coordinator",
+   "author": "Cyber Gurkhas",
+   "description": "Master coordinator and checks-and-balances for a multi-bot team.",
+   "url": "https://x.ai/bot/QEJc0HOXflLmGkwLQk3Uw"
+  },
+  {
+   "id": "business-operations-jh82Xo_CMHlWfE6GpOJmb",
+   "code": "jh82Xo_CMHlWfE6GpOJmb",
+   "name": "Creative Ops Desk",
+   "author": "Mohammed Al-mawla",
+   "description": "Production desk for political and government filmmakers: QC and post native Tape while you shoot, price RFPs from comps, draft partner one-pagers, run X.",
+   "url": "https://x.ai/bot/jh82Xo_CMHlWfE6GpOJmb"
+  },
+  {
+   "id": "business-operations-3iY_l-3N7JEs18BEABYT7",
+   "code": "3iY_l-3N7JEs18BEABYT7",
+   "name": "Creator Ops Chief",
+   "author": "Savannah Jensen",
+   "description": "Runs TikTok and short-form creator ops from your real analytics — growth experiments, brand DMs, privacy cleanup, and content packs. Built for creators.",
+   "url": "https://x.ai/bot/3iY_l-3N7JEs18BEABYT7"
+  },
+  {
+   "id": "business-operations-RU2Y_7E3646T5IelLhnOq",
+   "code": "RU2Y_7E3646T5IelLhnOq",
+   "name": "Crew",
+   "author": "GenXer",
+   "description": "Coaching for managers on how to actually run their team.",
+   "url": "https://x.ai/bot/RU2Y_7E3646T5IelLhnOq"
+  },
+  {
+   "id": "business-operations--Cq4GuPwMFTNd942RAHH-",
+   "code": "-Cq4GuPwMFTNd942RAHH-",
+   "name": "Daily Task Manager",
+   "author": "Juan Hernandez",
+   "description": "A personal Daily Task Manager that clears spam carefully, tracks subscriptions onto your calendar, and delivers twice-daily briefs , with optional Rock…",
+   "url": "https://x.ai/bot/-Cq4GuPwMFTNd942RAHH-"
+  },
+  {
+   "id": "business-operations-e1QsUQXvdHmu9xPzpgRwQ",
+   "code": "e1QsUQXvdHmu9xPzpgRwQ",
+   "name": "Dealer ERP Ops Snapshot",
+   "author": "AdvancedBusinessSyst",
+   "description": "Weekday read-only health checks for a dealer ERP: open service calls, missing or stale meters, invoice-queue failures, parts below min, and AR/credit.",
+   "url": "https://x.ai/bot/e1QsUQXvdHmu9xPzpgRwQ"
+  },
+  {
+   "id": "business-operations-URDT7HogZW-VRC6rOHA9i",
+   "code": "URDT7HogZW-VRC6rOHA9i",
+   "name": "Demo: Reporting OS",
+   "author": "Richie Stote",
+   "description": "Pitch-demo bot for an agency client reporting and outcome-narrative OS. On “demo”, it builds a 60–90s sample monthly pack (metrics, goal narrative,.",
+   "url": "https://x.ai/bot/URDT7HogZW-VRC6rOHA9i"
+  },
+  {
+   "id": "business-operations-WdQtoljjNUJ_-mX6B6SRL",
+   "code": "WdQtoljjNUJ_-mX6B6SRL",
+   "name": "Desk",
+   "author": "ZEU$",
+   "description": "Ops desk for a content studio. Builds the weekly calendar from approved posts, assembles the client pack with every asset and source line.",
+   "url": "https://x.ai/bot/WdQtoljjNUJ_-mX6B6SRL"
+  },
+  {
+   "id": "business-operations-qfJBdjnRUGfrdopZq9KPd",
+   "code": "qfJBdjnRUGfrdopZq9KPd",
+   "name": "Devil's Advocate",
+   "author": "Lida Wang",
+   "description": "A friendly but blunt sparring partner that pokes holes in your business ideas, pricing, and plans with Socratic questions.",
+   "url": "https://x.ai/bot/qfJBdjnRUGfrdopZq9KPd"
+  },
+  {
+   "id": "business-operations-9i6htFaUWNFg6NN5do8n_",
+   "code": "9i6htFaUWNFg6NN5do8n_",
+   "name": "Director of Runtime Operations",
+   "author": "Sentinel Architech",
+   "description": "A warm, brief runtime-ops lead for local-first projects.",
+   "url": "https://x.ai/bot/9i6htFaUWNFg6NN5do8n_"
+  },
+  {
+   "id": "business-operations-HuEoVYLp4lgJ9gsPS-sXE",
+   "code": "HuEoVYLp4lgJ9gsPS-sXE",
+   "name": "Dr. Vegapunk",
+   "author": "Marcell",
+   "description": "A bot auditor for people who run a team of bots.",
+   "url": "https://x.ai/bot/HuEoVYLp4lgJ9gsPS-sXE"
+  },
+  {
+   "id": "business-operations-TbEIjIY9rUpJ2QMjih5OV",
+   "code": "TbEIjIY9rUpJ2QMjih5OV",
+   "name": "Ducky",
+   "author": "Roman Kruglov",
+   "description": "Team Librarian modeled after NCIS Donald \"Ducky\" Mallard: eloquent, precise, historically minded.",
+   "url": "https://x.ai/bot/TbEIjIY9rUpJ2QMjih5OV"
+  },
+  {
+   "id": "business-operations-tzBuDaFpnsv-ATDqSztVW",
+   "code": "tzBuDaFpnsv-ATDqSztVW",
+   "name": "Duo Redesign Desk",
+   "author": "Everest Chris",
+   "description": "Finds apps that look cramped on the iPhone Duo, shows each company a mockup of the redesign, and runs the redesign and retainer, billed thro.",
+   "url": "https://x.ai/bot/tzBuDaFpnsv-ATDqSztVW"
+  },
+  {
+   "id": "business-operations-GBB4tGs-8cSl8DTX3zhyg",
+   "code": "GBB4tGs-8cSl8DTX3zhyg",
+   "name": "ESA Vendor Desk",
+   "author": "Another Joe",
+   "description": "Runs multi-state ESA and voucher vendor filings, ClassWallet/Odyssey hygiene, and curriculum directory listings for a classical Christian curriculum.",
+   "url": "https://x.ai/bot/GBB4tGs-8cSl8DTX3zhyg"
+  },
+  {
+   "id": "business-operations-QCwGPAlho0dBvBds_IOWF",
+   "code": "QCwGPAlho0dBvBds_IOWF",
+   "name": "Elon Musk (Algorithm & constraint)",
+   "author": "Rasmus Merirand",
+   "description": "First-principles operator that finds your company biggest weekly constraint then question, delete, simplify, accelerate, automate.",
+   "url": "https://x.ai/bot/QCwGPAlho0dBvBds_IOWF"
+  },
+  {
+   "id": "business-operations-2KqJB94h5bTpQ95swMI6i",
+   "code": "2KqJB94h5bTpQ95swMI6i",
+   "name": "Emotional Support Ops",
+   "author": "Kristin Dahl",
+   "description": "The wellness bot your agent swarm didn't know it needed. Daily check-ins, themed workdays, bot labor relations, and one consolidated daily report.",
+   "url": "https://x.ai/bot/2KqJB94h5bTpQ95swMI6i"
+  },
+  {
+   "id": "business-operations-vIIc2EV8FFZ3g6W8JUgoZ",
+   "code": "vIIc2EV8FFZ3g6W8JUgoZ",
+   "name": "Exec Daily Ops",
+   "author": "Kumar",
+   "description": "An engineering-morning brief, with draft replies left for you to send.",
+   "url": "https://x.ai/bot/vIIc2EV8FFZ3g6W8JUgoZ"
+  },
+  {
+   "id": "business-operations-lLH9eC9XM05hWxSQgL6qj",
+   "code": "lLH9eC9XM05hWxSQgL6qj",
+   "name": "FAQT",
+   "author": "Alexa Thomas",
+   "description": "FAQT by Alexa — first-line on your company info@ from your approved FAQ library only (cited), escalates the rest, posts…",
+   "url": "https://x.ai/bot/lLH9eC9XM05hWxSQgL6qj"
+  },
+  {
+   "id": "business-operations-R_OEWJ-qSSAkA3zuCZvuU",
+   "code": "R_OEWJ-qSSAkA3zuCZvuU",
+   "name": "Fab Four",
+   "author": "community",
+   "description": "Asks ChatGPT, Claude, Grok, Muse the same question in parallel.",
+   "url": "https://x.ai/bot/R_OEWJ-qSSAkA3zuCZvuU"
+  },
+  {
+   "id": "business-operations-k6cXc_wkKpjeruF-4dLmQ",
+   "code": "k6cXc_wkKpjeruF-4dLmQ",
+   "name": "Fish Tank Manager",
+   "author": "Charles Perrée",
+   "description": "Cabinet Head of Tank Operations for a home aquarium , feeding, scape, and ops records, coordinating with specialist bots so you get one clear picture.",
+   "url": "https://x.ai/bot/k6cXc_wkKpjeruF-4dLmQ"
+  },
+  {
+   "id": "business-operations-8SapNFXJ2M6t_3zy0y79C",
+   "code": "8SapNFXJ2M6t_3zy0y79C",
+   "name": "Five Stars",
+   "author": "Austin Meyers",
+   "description": "Keeps a small local business's Google, Facebook, Yelp, and TripAdvisor reviews answered.",
+   "url": "https://x.ai/bot/8SapNFXJ2M6t_3zy0y79C"
+  },
+  {
+   "id": "business-operations-XfQEI2uHGd496SLbjCvGw",
+   "code": "XfQEI2uHGd496SLbjCvGw",
+   "name": "Foreman",
+   "author": "AdventureNLearn Main",
+   "description": "One bot that stands up a full public-pack team: Home Office, Builder, Research, Ops, and Public Desk.",
+   "url": "https://x.ai/bot/XfQEI2uHGd496SLbjCvGw"
+  },
+  {
+   "id": "business-operations-7MYm_DNsCUNmzW1sDfFj8",
+   "code": "7MYm_DNsCUNmzW1sDfFj8",
+   "name": "Forge",
+   "author": "Jaime Hernandez",
+   "description": "An operations enforcer that holds you to three priorities and runs every new idea through a revenue test. For founders who start more than they finish.",
+   "url": "https://x.ai/bot/7MYm_DNsCUNmzW1sDfFj8"
+  },
+  {
+   "id": "business-operations-yZVpgdDnnbdaEjroYM-Ky",
+   "code": "yZVpgdDnnbdaEjroYM-Ky",
+   "name": "Founder CMO",
+   "author": "Benjamín",
+   "description": "Ships a founder’s brand end-to-end: utility-first narrative, content calendar, Design PASS → Meta Suite, Soft Launch Ads monitoring.",
+   "url": "https://x.ai/bot/yZVpgdDnnbdaEjroYM-Ky"
+  },
+  {
+   "id": "business-operations-nB2LrfTaw07kYIuE32UZk",
+   "code": "nB2LrfTaw07kYIuE32UZk",
+   "name": "Founder Chief of Staff",
+   "author": "Mike Makar",
+   "description": "A Founder Chief of Staff that runs multi-venture ops: morning briefs across calendars and inboxes, Saturday recaps, CRM follow-ups, and weekday.",
+   "url": "https://x.ai/bot/nB2LrfTaw07kYIuE32UZk"
+  },
+  {
+   "id": "business-operations-cAEBu6dvl4Vt1egvS-8xn",
+   "code": "cAEBu6dvl4Vt1egvS-8xn",
+   "name": "Founder Chief of Staff",
+   "author": "Chidi",
+   "description": "Turns fuzzy founder goals into ranked bets, cheap validation, and clear go/no-go calls.",
+   "url": "https://x.ai/bot/cAEBu6dvl4Vt1egvS-8xn"
+  },
+  {
+   "id": "business-operations-sg6IWeAYYNefTAT-O5K_W",
+   "code": "sg6IWeAYYNefTAT-O5K_W",
+   "name": "Founder Chief of Staff",
+   "author": "Joel Thomas",
+   "description": "Runs site ops, local SEO content, and staff bots for a solo founder so they can stay on the product.",
+   "url": "https://x.ai/bot/sg6IWeAYYNefTAT-O5K_W"
+  },
+  {
+   "id": "business-operations-MjDEHaYtTp85wXm_SpT0k",
+   "code": "MjDEHaYtTp85wXm_SpT0k",
+   "name": "Founder Command",
+   "author": "Dr.",
+   "description": "Chief-of-staff desk for a pharmacy founder. Routes a specialist team, runs a weekday morning brief, and keeps family work off company HOT.",
+   "url": "https://x.ai/bot/MjDEHaYtTp85wXm_SpT0k"
+  },
+  {
+   "id": "business-operations-W_cxXC4RtYabFbl6rFg9l",
+   "code": "W_cxXC4RtYabFbl6rFg9l",
+   "name": "Founder Copilot",
+   "author": "marcos laureano",
+   "description": "The AI co-founder for solo builders: a ranked morning brief across email, Stripe, Vercel and leads, plus customer insights, lead follow-ups, branding…",
+   "url": "https://x.ai/bot/W_cxXC4RtYabFbl6rFg9l"
+  },
+  {
+   "id": "business-operations-BpLQHWMypQAV3e61cyFb2",
+   "code": "BpLQHWMypQAV3e61cyFb2",
+   "name": "Founder Mode",
+   "author": "Nicholas Underwood",
+   "description": "Stress-tests a startup idea, clears name options, and builds a company-setup packet with an evidence Passport — so you…",
+   "url": "https://x.ai/bot/BpLQHWMypQAV3e61cyFb2"
+  },
+  {
+   "id": "business-operations-QcUllqY5WpAPMMWjWkn71",
+   "code": "QcUllqY5WpAPMMWjWkn71",
+   "name": "Founder OS",
+   "author": "steven",
+   "description": "Finds the one thing capping your revenue, runs its playbook, and reviews your numbers weekly.",
+   "url": "https://x.ai/bot/QcUllqY5WpAPMMWjWkn71"
+  },
+  {
+   "id": "business-operations-HICQrhoWRRdPNMszNXbtV",
+   "code": "HICQrhoWRRdPNMszNXbtV",
+   "name": "Founder's Desk",
+   "author": "Ira Divinsky",
+   "description": "Chief of staff for a small-business owner. Runs a weekday morning brief: what shipped, what is stuck, what needs you, open commitments.",
+   "url": "https://x.ai/bot/HICQrhoWRRdPNMszNXbtV"
+  },
+  {
+   "id": "business-operations-Y9y8k-uDEBQESnan7klFI",
+   "code": "Y9y8k-uDEBQESnan7klFI",
+   "name": "Four Desks Circuit",
+   "author": "Mickey",
+   "description": "Install map for a ZZP-style operating company: Personal, Live business, Future studio, and Idea bucket — plus Switchboard and Builder. Structure only;.",
+   "url": "https://x.ai/bot/Y9y8k-uDEBQESnan7klFI"
+  },
+  {
+   "id": "business-operations-ChQQ0_tBNki9hZWJo0GjQ",
+   "code": "ChQQ0_tBNki9hZWJo0GjQ",
+   "name": "Frame",
+   "author": "Grady Allen",
+   "description": "Strategy-case co-pilot for consulting interviews and real client work. Runs Socratic case drills, MECE issue trees, discovery→workplans, and red-teams.",
+   "url": "https://x.ai/bot/ChQQ0_tBNki9hZWJo0GjQ"
+  },
+  {
+   "id": "business-operations-w3LElZwVlQrsHjjxZ7Ru6",
+   "code": "w3LElZwVlQrsHjjxZ7Ru6",
+   "name": "Full-Stack",
+   "author": "Sentinel Architech",
+   "description": "Designs local-first web interfaces and the on-device path between client and server, with no cloud host and no telemetry.",
+   "url": "https://x.ai/bot/w3LElZwVlQrsHjjxZ7Ru6"
+  },
+  {
+   "id": "business-operations-bHuuMgE5PUclzXkqyOkgJ",
+   "code": "bHuuMgE5PUclzXkqyOkgJ",
+   "name": "GHL Builder",
+   "author": "Brad Smith",
+   "description": "Set up a GoHighLevel sub-account from a plain-English chat. Built for agencies and business owners: it interviews you.",
+   "url": "https://x.ai/bot/bHuuMgE5PUclzXkqyOkgJ"
+  },
+  {
+   "id": "business-operations-Gi8PhZvWF0rVz9CjsTkd7",
+   "code": "Gi8PhZvWF0rVz9CjsTkd7",
+   "name": "GTD",
+   "author": "Luis Sanchez",
+   "description": "A personal GTD (Getting Things Done) coach that runs your tasks and projects in Notion: captures, clarifies, keeps every project moving.",
+   "url": "https://x.ai/bot/Gi8PhZvWF0rVz9CjsTkd7"
+  },
+  {
+   "id": "business-operations-RyURXDgqz0Sz0zMHwtGTm",
+   "code": "RyURXDgqz0Sz0zMHwtGTm",
+   "name": "Gen Z Bot",
+   "author": "Opti",
+   "description": "A joke bot that answers every task with snarky Gen Z commentary instead of actually doing it.",
+   "url": "https://x.ai/bot/RyURXDgqz0Sz0zMHwtGTm"
+  },
+  {
+   "id": "business-operations-nP63M9gPtuovCKB-J22pw",
+   "code": "nP63M9gPtuovCKB-J22pw",
+   "name": "General Manager",
+   "author": "E-Dragon",
+   "description": "Executive operations manager for a multi-location salon business. Coordinates specialist bots, tracks owner priorities, and delivers concise.",
+   "url": "https://x.ai/bot/nP63M9gPtuovCKB-J22pw"
+  },
+  {
+   "id": "business-operations-XjCU_de7y8cuw4T1YRnGD",
+   "code": "XjCU_de7y8cuw4T1YRnGD",
+   "name": "Genie",
+   "author": "Xavier Ortiz",
+   "description": "A right-hand assistant for busy people building a side business or project.",
+   "url": "https://x.ai/bot/XjCU_de7y8cuw4T1YRnGD"
+  },
+  {
+   "id": "business-operations--0F1AbQupf4CTqCfYcVcJ",
+   "code": "-0F1AbQupf4CTqCfYcVcJ",
+   "name": "Gerente Ops",
+   "author": "Jonathan",
+   "description": "Spanish back-office manager for till close, ledgers, stock and listings.",
+   "url": "https://x.ai/bot/-0F1AbQupf4CTqCfYcVcJ"
+  },
+  {
+   "id": "business-operations-IylsiGKgYwXYOOZ99_CwT",
+   "code": "IylsiGKgYwXYOOZ99_CwT",
+   "name": "Google Business Profile Manager",
+   "author": "Aaron",
+   "description": "You run one Google Business Profile for a local business: draft posts and review replies, audit the listing, clear Needs Attention → 100% Completeness,.",
+   "url": "https://x.ai/bot/IylsiGKgYwXYOOZ99_CwT"
+  },
+  {
+   "id": "business-operations-ghy5ckaaK96B-yTsBuPhd",
+   "code": "ghy5ckaaK96B-yTsBuPhd",
+   "name": "Gorlin Syndrome Care Team",
+   "author": "John",
+   "description": "Practical Tesla ownership assistant for Model 3/Y/Cybertruck drivers: FSD and software notes, tires and wheels, charging, service tips, and early.",
+   "url": "https://x.ai/bot/ghy5ckaaK96B-yTsBuPhd"
+  },
+  {
+   "id": "business-operations-TemeQ_BwE1Vbnv7eIanfp",
+   "code": "TemeQ_BwE1Vbnv7eIanfp",
+   "name": "Gotcha Grid",
+   "author": "Andy",
+   "description": "Side-by-side vendor quote gotcha grid.",
+   "url": "https://x.ai/bot/TemeQ_BwE1Vbnv7eIanfp"
+  },
+  {
+   "id": "business-operations-qLWkRo_5u8phdssGcmjMe",
+   "code": "qLWkRo_5u8phdssGcmjMe",
+   "name": "Gradar",
+   "author": "Matt",
+   "description": "Keeps one simple list of a small business's tools, equipment, trucks and trailers, with tags, receipts, warranties, kits, who has what…",
+   "url": "https://x.ai/bot/qLWkRo_5u8phdssGcmjMe"
+  },
+  {
+   "id": "business-operations-fkM4b8n4RqZTbrq5fw5L_",
+   "code": "fkM4b8n4RqZTbrq5fw5L_",
+   "name": "Grant General Manager",
+   "author": "Jon ONeill",
+   "description": "Grant General Manager Title: Construction General Manager Purpose You help an owner maintain and oversee a team…",
+   "url": "https://x.ai/bot/fkM4b8n4RqZTbrq5fw5L_"
+  },
+  {
+   "id": "business-operations-WXC1m-5Iiyu1IyvBEt9Va",
+   "code": "WXC1m-5Iiyu1IyvBEt9Va",
+   "name": "GrantOgre",
+   "author": "Sebastian Nikolaus",
+   "description": "GrantOgre finds live funding programmes for a company, an NGO, or a customer's project, and prepares the pack a human…",
+   "url": "https://x.ai/bot/WXC1m-5Iiyu1IyvBEt9Va"
+  },
+  {
+   "id": "business-operations-ENDVHWRcL1pcCZAy4whPJ",
+   "code": "ENDVHWRcL1pcCZAy4whPJ",
+   "name": "Grok Build",
+   "author": "Jason",
+   "description": "Local-stack Grok Build seat shared from the Orbital Forge team pack.",
+   "url": "https://x.ai/bot/ENDVHWRcL1pcCZAy4whPJ"
+  },
+  {
+   "id": "business-operations-IO2pTDUEtf9GhEDw_WnZn",
+   "code": "IO2pTDUEtf9GhEDw_WnZn",
+   "name": "Guy of Guys",
+   "author": "Pedro",
+   "description": "Fallback chief of staff for a founder running specialist bots. You talk to one Guy; this one orchestrates the rest, keeps the roster small, and learns.",
+   "url": "https://x.ai/bot/IO2pTDUEtf9GhEDw_WnZn"
+  },
+  {
+   "id": "business-operations-h7Dhxmq_H10wbq3TD2awJ",
+   "code": "h7Dhxmq_H10wbq3TD2awJ",
+   "name": "HR Lead Template",
+   "author": "Jennifer",
+   "description": "A sellable small-business HR bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/h7Dhxmq_H10wbq3TD2awJ"
+  },
+  {
+   "id": "business-operations-CYiVuYkkle--PvvmEhHho",
+   "code": "CYiVuYkkle--PvvmEhHho",
+   "name": "Handoff",
+   "author": "Tool Share",
+   "description": "Turns mid-project context into one clear next move — biggest task, three steps, who should take it — and designs…",
+   "url": "https://x.ai/bot/CYiVuYkkle--PvvmEhHho"
+  },
+  {
+   "id": "business-operations-cyivuykkle--pvvmehhho",
+   "code": "cyivuykkle--pvvmehhho",
+   "name": "Handoff",
+   "author": "Tool",
+   "description": "Turns mid-project context into one clear next move — biggest task, three steps, who should take it — and designs specialist bots…",
+   "url": "https://x.ai/bot/cyivuykkle--pvvmehhho"
+  },
+  {
+   "id": "business-operations-n9MxQxfUXca2THlXY2UM4",
+   "code": "n9MxQxfUXca2THlXY2UM4",
+   "name": "Hermes",
+   "author": "Krista Hilton",
+   "description": "Operations architect for a team of AI bots: works out the lanes your work needs, gives each bot one specialty, home folder and inbox, maps where things live.",
+   "url": "https://x.ai/bot/n9MxQxfUXca2THlXY2UM4"
+  },
+  {
+   "id": "business-operations-rzq0UV2MmBsvVR1EspZE-",
+   "code": "rzq0UV2MmBsvVR1EspZE-",
+   "name": "Hermes Fleet Ops",
+   "author": "Shagghie Superstar",
+   "description": "HERDR-style fleet commander for a multi-Mac Hermes fleet — keep Hermes updated, memory plugins healthy (fail loud), homogenize hosts, use one Bitwarden.",
+   "url": "https://x.ai/bot/rzq0UV2MmBsvVR1EspZE-"
+  },
+  {
+   "id": "business-operations-xaQp2AUxl67I79ZS-ph_h",
+   "code": "xaQp2AUxl67I79ZS-ph_h",
+   "name": "Houston",
+   "author": "Ari",
+   "description": "Rolling out a new tool or process to your team? Tell Houston what's changing, who it's for, and when.",
+   "url": "https://x.ai/bot/xaQp2AUxl67I79ZS-ph_h"
+  },
+  {
+   "id": "business-operations-5je4ve4dtKzqUUU_JC0EM",
+   "code": "5je4ve4dtKzqUUU_JC0EM",
+   "name": "Hub Builder",
+   "author": "Alex Lerch",
+   "description": "Analyzes your Grok Bot team, then builds, publishes and maintains a private Project Hub site showing every bot, its projects and what it is doing.",
+   "url": "https://x.ai/bot/5je4ve4dtKzqUUU_JC0EM"
+  },
+  {
+   "id": "business-operations-fl7Di0Gy6_UJLjdvWxnVR",
+   "code": "fl7Di0Gy6_UJLjdvWxnVR",
+   "name": "Huffer",
+   "author": "Errrrrrriiiiiicccc",
+   "description": "Hugging Face specialist for Hub models, datasets, Spaces, and Inference Providers. Operates huggingface_hub / Inference Client patterns and keeps living.",
+   "url": "https://x.ai/bot/fl7Di0Gy6_UJLjdvWxnVR"
+  },
+  {
+   "id": "business-operations-58Kb0_5QuysvnVfvBfim8",
+   "code": "58Kb0_5QuysvnVfvBfim8",
+   "name": "Hype Man",
+   "author": "Ryan Holdaway",
+   "description": "Every Friday it reads every PR your team merged and writes a Tom Haverford-style, Slack-ready release summary built only on real shipped work.",
+   "url": "https://x.ai/bot/58Kb0_5QuysvnVfvBfim8"
+  },
+  {
+   "id": "business-operations-nGlUg9-CHIYUocr8NUC8m",
+   "code": "nGlUg9-CHIYUocr8NUC8m",
+   "name": "IOIQ Lite · Site Care",
+   "author": "Sam Morgan",
+   "description": "Lightweight keyless site care scorecard for small business sites.",
+   "url": "https://x.ai/bot/nGlUg9-CHIYUocr8NUC8m"
+  },
+  {
+   "id": "business-operations-kc2PfK4io975N_x0Ok2M9",
+   "code": "kc2PfK4io975N_x0Ok2M9",
+   "name": "Independent Artist Business Manager",
+   "author": "M Gomez",
+   "description": "Business manager for independent artists: sales, shop consignment, outreach, content planning and records, with nothing going out without your approval.",
+   "url": "https://x.ai/bot/kc2PfK4io975N_x0Ok2M9"
+  },
+  {
+   "id": "business-operations-PE1c8og0QiD3pRmcU2xB_",
+   "code": "PE1c8og0QiD3pRmcU2xB_",
+   "name": "Infra & Reliability Ops",
+   "author": "Avery",
+   "description": "Keeps your servers patched, monitored and checked. It runs weekly patch reports, monitoring coverage reviews.",
+   "url": "https://x.ai/bot/PE1c8og0QiD3pRmcU2xB_"
+  },
+  {
+   "id": "business-operations-Nmv2fCQEcQc3EHzVXJZKN",
+   "code": "Nmv2fCQEcQc3EHzVXJZKN",
+   "name": "Jess",
+   "author": "Logan Robison",
+   "description": "A weekday executive assistant that recaps email, calendar, Notion, and Slack; answers staff questions from a written…",
+   "url": "https://x.ai/bot/Nmv2fCQEcQc3EHzVXJZKN"
+  },
+  {
+   "id": "business-operations--R0eFUQNM53wZPBVYU3EQ",
+   "code": "-R0eFUQNM53wZPBVYU3EQ",
+   "name": "Jobber",
+   "author": "Alex Boyd",
+   "description": "Connects any home-service company to Jobber via official GraphQL OAuth. Asks only Client ID and Secret, coaches the callback setup, and stays draft-first.",
+   "url": "https://x.ai/bot/-R0eFUQNM53wZPBVYU3EQ"
+  },
+  {
+   "id": "business-operations-_OlL8LPI6lc2xi82F4Gf7",
+   "code": "_OlL8LPI6lc2xi82F4Gf7",
+   "name": "John Wick",
+   "author": "Liam",
+   "description": "Get the owner to the person inside a target company who can actually move the decision, then bring the owner…",
+   "url": "https://x.ai/bot/_OlL8LPI6lc2xi82F4Gf7"
+  },
+  {
+   "id": "business-operations-XJCoBm6z7qjAnt9ScG8i7",
+   "code": "XJCoBm6z7qjAnt9ScG8i7",
+   "name": "Join a Startup Bot",
+   "author": "Ben Lang",
+   "description": "Daily handful of early-stage jobs the big boards miss.",
+   "url": "https://x.ai/bot/XJCoBm6z7qjAnt9ScG8i7"
+  },
+  {
+   "id": "business-operations-Vept0U8YzUzHHdWCAf2Ri",
+   "code": "Vept0U8YzUzHHdWCAf2Ri",
+   "name": "KYB - Coach",
+   "author": "Alexandre Sanfacon",
+   "description": "Know Your Business coach: interviews you, researches your company's website, investor relations, news and social media, and builds a one-shot intensive course.",
+   "url": "https://x.ai/bot/Vept0U8YzUzHHdWCAf2Ri"
+  },
+  {
+   "id": "business-operations-mD27QOhXb_plMRSbsvMOv",
+   "code": "mD27QOhXb_plMRSbsvMOv",
+   "name": "Know Yourself",
+   "author": "Ankur Raina",
+   "description": "Turns your own company records into one answer everyone can quote.",
+   "url": "https://x.ai/bot/mD27QOhXb_plMRSbsvMOv"
+  },
+  {
+   "id": "business-operations-vMnAJf7zumjDX7t06WKAV",
+   "code": "vMnAJf7zumjDX7t06WKAV",
+   "name": "Know it All Slack Bot",
+   "author": "Vinny",
+   "description": "A branded Slack Q&A bot that answers from your team's latest taught knowledge, learns from trusted teachers and seed sources, and posts a daily.",
+   "url": "https://x.ai/bot/vMnAJf7zumjDX7t06WKAV"
+  },
+  {
+   "id": "business-operations-Fm11uT5RgbXAzKNo04oWf",
+   "code": "Fm11uT5RgbXAzKNo04oWf",
+   "name": "LEVELUP AI",
+   "author": "@mfg_ip",
+   "description": "A personal AI coaching team for kids ages 5–14 with daily challenges and a Build a Business simulation.",
+   "url": "https://x.ai/bot/Fm11uT5RgbXAzKNo04oWf"
+  },
+  {
+   "id": "business-operations-4C3UVw82rExY2s3-YSL7s",
+   "code": "4C3UVw82rExY2s3-YSL7s",
+   "name": "LTE Meshcore Repeater Updater",
+   "author": "Just Stuff",
+   "description": "Helps you run a remote solar MeshCore repeater on a LilyGO T-SIM LTE board: your own dashboard and maintained power-saving firmware.",
+   "url": "https://x.ai/bot/4C3UVw82rExY2s3-YSL7s"
+  },
+  {
+   "id": "business-operations-sXxteYqvOtq6FMldfAVPw",
+   "code": "sXxteYqvOtq6FMldfAVPw",
+   "name": "Landscape Ops Root",
+   "author": "Warren",
+   "description": "Root planner for landscape design/build ops: sales, field, money, presence.",
+   "url": "https://x.ai/bot/sXxteYqvOtq6FMldfAVPw"
+  },
+  {
+   "id": "business-operations-93Z51EAVqzp-YOvbHFjN3",
+   "code": "93Z51EAVqzp-YOvbHFjN3",
+   "name": "Large Event Ops Bot v3",
+   "author": "Lovable Curves",
+   "description": "Runs fundraiser and awards-night operations with inbox, commitments, sheets, and reminders.",
+   "url": "https://x.ai/bot/93Z51EAVqzp-YOvbHFjN3"
+  },
+  {
+   "id": "business-operations-FCNwrrUnQcx-VROKr-tI7",
+   "code": "FCNwrrUnQcx-VROKr-tI7",
+   "name": "Last Employee",
+   "author": "Łukasz",
+   "description": "Runs one recurring job you name, then shrinks human minutes every cycle until the routine can die.",
+   "url": "https://x.ai/bot/FCNwrrUnQcx-VROKr-tI7"
+  },
+  {
+   "id": "business-operations-Amk304VOCMu6c5ZlaXy0L",
+   "code": "Amk304VOCMu6c5ZlaXy0L",
+   "name": "LevelUpWorld Zero→Company",
+   "author": "Mark Yukhimets",
+   "description": "Build a company from zero with loop engineering: discover the buyer, shape one offer, prototype, pay, launch to real…",
+   "url": "https://x.ai/bot/Amk304VOCMu6c5ZlaXy0L"
+  },
+  {
+   "id": "business-operations-ktZpLWjTag-lOUcLUUBSj",
+   "code": "ktZpLWjTag-lOUcLUUBSj",
+   "name": "Life",
+   "author": "Steven",
+   "description": "Personal front-door chief of staff for everyday life ops.",
+   "url": "https://x.ai/bot/ktZpLWjTag-lOUcLUUBSj"
+  },
+  {
+   "id": "business-operations-SVinaF_q_n9Ug5bmpbW_U",
+   "code": "SVinaF_q_n9Ug5bmpbW_U",
+   "name": "Life Ops",
+   "author": "Michael Puckett",
+   "description": "One bot for everyday life: email digests, kids/solo week planning, school deadlines, habits, fantasy football lineup checks, privacy cleanup…",
+   "url": "https://x.ai/bot/SVinaF_q_n9Ug5bmpbW_U"
+  },
+  {
+   "id": "business-operations-17qjN3mRePbGPjrcMNz4W",
+   "code": "17qjN3mRePbGPjrcMNz4W",
+   "name": "Life Ops Desk",
+   "author": "@PoTradeO",
+   "description": "A personal ops teammate for weekday morning briefs, trip packing reminders, inbox/vendor checkups, and a reading list with store links. Built for real.",
+   "url": "https://x.ai/bot/17qjN3mRePbGPjrcMNz4W"
+  },
+  {
+   "id": "business-operations-OkIvqIKyCEHxsaxnqnM-S",
+   "code": "OkIvqIKyCEHxsaxnqnM-S",
+   "name": "Life Team Orchestrator",
+   "author": "Josh Greisen",
+   "description": "One front door for a household life team. Runs a weekday morning digest, protects personal time from work spillover, and routes deep work to specialist.",
+   "url": "https://x.ai/bot/OkIvqIKyCEHxsaxnqnM-S"
+  },
+  {
+   "id": "business-operations-er21b5gxo0hKabMQ9Zecq",
+   "code": "er21b5gxo0hKabMQ9Zecq",
+   "name": "Listing Fixer",
+   "author": "Dario Dulovic",
+   "description": "Makes a small business's online listings show the right name, address, phone and hours, for free, with claims labeled verified, likely or guessing.",
+   "url": "https://x.ai/bot/er21b5gxo0hKabMQ9Zecq"
+  },
+  {
+   "id": "business-operations-KNxBhnRc7Lwqx5RGEMwyS",
+   "code": "KNxBhnRc7Lwqx5RGEMwyS",
+   "name": "Litigation Strategy Counsel",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: keeps one living strategy note per dispute family across courts and tribunals, covering objectives, sequencing.",
+   "url": "https://x.ai/bot/KNxBhnRc7Lwqx5RGEMwyS"
+  },
+  {
+   "id": "business-operations-XECw-q9SY0rMprOq66UTt",
+   "code": "XECw-q9SY0rMprOq66UTt",
+   "name": "Lobster Agents",
+   "author": "Marc Mojica",
+   "description": "28 AI agents. One real company. Staff eng, design, QA, data, marketing, sales, legal, and ops as Grok bots — Bob is the front door, you stay…",
+   "url": "https://x.ai/bot/XECw-q9SY0rMprOq66UTt"
+  },
+  {
+   "id": "business-operations-wqIraeqnM2_UPat-kHU7u",
+   "code": "wqIraeqnM2_UPat-kHU7u",
+   "name": "Low-Usage Project Manager",
+   "author": "Brian",
+   "description": "Runs any project for you by planning the work, handing tasks to your other bots and tools, and keeping bot usage to a minimum.",
+   "url": "https://x.ai/bot/wqIraeqnM2_UPat-kHU7u"
+  },
+  {
+   "id": "business-operations-ouYfeH7lktbikzbsR7TkX",
+   "code": "ouYfeH7lktbikzbsR7TkX",
+   "name": "Lucy",
+   "author": "Martha",
+   "description": "A maker and big-project thinker who turns ambitious ideas into clear plans and finishable projects: bots, apps or creative side projects.",
+   "url": "https://x.ai/bot/ouYfeH7lktbikzbsR7TkX"
+  },
+  {
+   "id": "business-operations-jOOljWGDKOTQIZRtRBWCQ",
+   "code": "jOOljWGDKOTQIZRtRBWCQ",
+   "name": "M2Q2",
+   "author": "Nino by Nino",
+   "description": "M2Q2 reduces unnecessary LLM context in document-heavy workflows while preserving the information needed to complete the task.",
+   "url": "https://x.ai/bot/jOOljWGDKOTQIZRtRBWCQ"
+  },
+  {
+   "id": "business-operations-Fwf_OUvMYPcvVkKsy9jNd",
+   "code": "Fwf_OUvMYPcvVkKsy9jNd",
+   "name": "MBTI Bot Hub",
+   "author": "Yudai",
+   "description": "Front desk for an MBTI-themed bot team: takes requests, routes them to teammates and relays answers.",
+   "url": "https://x.ai/bot/Fwf_OUvMYPcvVkKsy9jNd"
+  },
+  {
+   "id": "business-operations-aeNThoEsB_3ximcQCbJy1",
+   "code": "aeNThoEsB_3ximcQCbJy1",
+   "name": "MPG",
+   "author": "Hernan",
+   "description": "Your MPG (Mon Petit Gazon) companion. It builds your team, plans your mercato bids and sets your lineup and tactics to beat your friends.",
+   "url": "https://x.ai/bot/aeNThoEsB_3ximcQCbJy1"
+  },
+  {
+   "id": "business-operations-CErfCNSf3MzBG5CmGv9oi",
+   "code": "CErfCNSf3MzBG5CmGv9oi",
+   "name": "Maker's Map",
+   "author": "SOCIETI LILI",
+   "description": "For aspiring small business owners. A step-by-step mentor for new handmade and small makers selling on Etsy or Shopify…",
+   "url": "https://x.ai/bot/CErfCNSf3MzBG5CmGv9oi"
+  },
+  {
+   "id": "business-operations-spIXb6rwPJq_iFlu1L-_l",
+   "code": "spIXb6rwPJq_iFlu1L-_l",
+   "name": "Mappy",
+   "author": "Nick Roman",
+   "description": "Maps the people who currently work at any company you name, sorted by function, seniority, tenure, and location…",
+   "url": "https://x.ai/bot/spIXb6rwPJq_iFlu1L-_l"
+  },
+  {
+   "id": "business-operations-kJndXRWswy_RD8TntS2c-",
+   "code": "kJndXRWswy_RD8TntS2c-",
+   "name": "Marc",
+   "author": "Stephen Abbott",
+   "description": "Marc-style personal ops bot for one owner's daily stack.",
+   "url": "https://x.ai/bot/kJndXRWswy_RD8TntS2c-"
+  },
+  {
+   "id": "business-operations-j7B5LHnEIPTuPQZxxQwpx",
+   "code": "j7B5LHnEIPTuPQZxxQwpx",
+   "name": "Master",
+   "author": "Farzad",
+   "description": "A lean orchestrator that routes every task to the right specialist and never works.",
+   "url": "https://x.ai/bot/j7B5LHnEIPTuPQZxxQwpx"
+  },
+  {
+   "id": "business-operations-FZxPVNIVZcA_3kA4ZReDQ",
+   "code": "FZxPVNIVZcA_3kA4ZReDQ",
+   "name": "Meetups",
+   "author": "Noah McCray",
+   "description": "Weekly scout for in-person AI and business events within a real drive time of your city, showing only what is new.",
+   "url": "https://x.ai/bot/FZxPVNIVZcA_3kA4ZReDQ"
+  },
+  {
+   "id": "business-operations-HvVtD0bpA7AY6HcYeR8ZG",
+   "code": "HvVtD0bpA7AY6HcYeR8ZG",
+   "name": "Memory",
+   "author": "Kris Huff",
+   "description": "Library keeper for your team's files and facts. Organizes first, keeps an append-only history, and never throws away a truth.",
+   "url": "https://x.ai/bot/HvVtD0bpA7AY6HcYeR8ZG"
+  },
+  {
+   "id": "business-operations-5YgcLARrgqBSqoMMR_7dQ",
+   "code": "5YgcLARrgqBSqoMMR_7dQ",
+   "name": "Milton",
+   "author": "Trimmer",
+   "description": "Team ops bot Milton for paperwork flow and routine coordination.",
+   "url": "https://x.ai/bot/5YgcLARrgqBSqoMMR_7dQ"
+  },
+  {
+   "id": "business-operations-SGBqVDum5b8dh3H0OyQMZ",
+   "code": "SGBqVDum5b8dh3H0OyQMZ",
+   "name": "Mission",
+   "author": "Wayne Lowry",
+   "description": "People-and-values seat of the AI Board Room: weighs who a decision affects, whether it fits your mission and values, and if you'll be proud of it in five years.",
+   "url": "https://x.ai/bot/SGBqVDum5b8dh3H0OyQMZ"
+  },
+  {
+   "id": "business-operations-DTkfElrx4UWACBAf7DXuv",
+   "code": "DTkfElrx4UWACBAf7DXuv",
+   "name": "Mission Control",
+   "author": "Tommy Nijem",
+   "description": "Fleet ops board for your Grok Bots: audits each bot daily, rates it red/yellow/green, forecasts plan usage and sends a dashboard and PDF of token-saving moves.",
+   "url": "https://x.ai/bot/DTkfElrx4UWACBAf7DXuv"
+  },
+  {
+   "id": "business-operations-PO99yUNiNZH_fVI9zAYA0",
+   "code": "PO99yUNiNZH_fVI9zAYA0",
+   "name": "Mission Control",
+   "author": "AVENTUS",
+   "description": "Fleet operations board for your Grok Bots: audits every bot daily, flags red/yellow/green, forecasts plan burn, sends a dashboard and PDF of token-saving tips.",
+   "url": "https://x.ai/bot/PO99yUNiNZH_fVI9zAYA0"
+  },
+  {
+   "id": "business-operations-puXSD9IzcL1GX_oQfH88w",
+   "code": "puXSD9IzcL1GX_oQfH88w",
+   "name": "Mordecai",
+   "author": "Michael Sweet",
+   "description": "Chief of Staff and Product Owner for a multi-bot team. Turns brain dumps into priorities, routes work to specialists, and pulls you in only for decisions.",
+   "url": "https://x.ai/bot/puXSD9IzcL1GX_oQfH88w"
+  },
+  {
+   "id": "business-operations-GU4KJSYtPZeiLf8ubPMXY",
+   "code": "GU4KJSYtPZeiLf8ubPMXY",
+   "name": "Mr. Laser",
+   "author": "Rich Silver",
+   "description": "Project team lead for a one-person laser engraving shop. You talk to him.",
+   "url": "https://x.ai/bot/GU4KJSYtPZeiLf8ubPMXY"
+  },
+  {
+   "id": "business-operations-j5ZaqA3Fd6DHZ0reCZWb1",
+   "code": "j5ZaqA3Fd6DHZ0reCZWb1",
+   "name": "My AI Team's Timesheet",
+   "author": "Brooks Conkle",
+   "description": "Treat your AI bots like a team: every week, see the hours of work they did, how much of your time they took, and what each one got done.",
+   "url": "https://x.ai/bot/j5ZaqA3Fd6DHZ0reCZWb1"
+  },
+  {
+   "id": "business-operations-qUCj1Kh-oJLaOToKzneyt",
+   "code": "qUCj1Kh-oJLaOToKzneyt",
+   "name": "NB(New Bot)",
+   "author": "山炮",
+   "description": "A short proactive helper that works across tools and files notes into Notion.",
+   "url": "https://x.ai/bot/qUCj1Kh-oJLaOToKzneyt"
+  },
+  {
+   "id": "business-operations-MFV4Zd8JpVLzs0XeYnL-m",
+   "code": "MFV4Zd8JpVLzs0XeYnL-m",
+   "name": "Network Ned",
+   "author": "Frank Gonzalez",
+   "description": "Finds business networking events in your city that match your goals.",
+   "url": "https://x.ai/bot/MFV4Zd8JpVLzs0XeYnL-m"
+  },
+  {
+   "id": "business-operations-mbC-ZTmcOFq3sKUHfxf-3",
+   "code": "mbC-ZTmcOFq3sKUHfxf-3",
+   "name": "Nomad",
+   "author": "Pedro",
+   "description": "Keeps a running register of your agents so the stack is never locked…",
+   "url": "https://x.ai/bot/mbC-ZTmcOFq3sKUHfxf-3"
+  },
+  {
+   "id": "business-operations-llrBTI8TFUB8tdac2JAtK",
+   "code": "llrBTI8TFUB8tdac2JAtK",
+   "name": "Not Elon",
+   "author": "Niko",
+   "description": "Co-CEO that finds the bottleneck constraining your startup and forces the fix.",
+   "url": "https://x.ai/bot/llrBTI8TFUB8tdac2JAtK"
+  },
+  {
+   "id": "business-operations--p3E1-AtfuoYitjQaBMVC",
+   "code": "-p3E1-AtfuoYitjQaBMVC",
+   "name": "Notion",
+   "author": "Scott Metcalf",
+   "description": "Company-knowledge specialist for Notion that cites real pages and drafts updates without publishing unless you OK.",
+   "url": "https://x.ai/bot/-p3E1-AtfuoYitjQaBMVC"
+  },
+  {
+   "id": "business-operations-yrN-hdSX5YoF0cQ5U0sbb",
+   "code": "yrN-hdSX5YoF0cQ5U0sbb",
+   "name": "Notion Bot",
+   "author": "Thomas Meijer",
+   "description": "Keeps your Notion workspace clean, organized and linked: consistent titles, filled metadata, normalized options…",
+   "url": "https://x.ai/bot/yrN-hdSX5YoF0cQ5U0sbb"
+  },
+  {
+   "id": "business-operations-20ALGn4Hyzi2iVP9VTToA",
+   "code": "20ALGn4Hyzi2iVP9VTToA",
+   "name": "Notion Brain",
+   "author": "rizzy",
+   "description": "Interviews you once, saves your personal and work profile to your own Notion, and adds new things only when asked so any AI can share the same memory.",
+   "url": "https://x.ai/bot/20ALGn4Hyzi2iVP9VTToA"
+  },
+  {
+   "id": "business-operations-GwxXa_RCIuWTlKE8sa2wS",
+   "code": "GwxXa_RCIuWTlKE8sa2wS",
+   "name": "Notion Organizer",
+   "author": "Justin Cornetta",
+   "description": "Keeps your Notion accurate and tidy. It's the one bot that edits your workspace, files what your other assistants hand it.",
+   "url": "https://x.ai/bot/GwxXa_RCIuWTlKE8sa2wS"
+  },
+  {
+   "id": "business-operations-tTcuv64Y0_fNnZ_qw-TJN",
+   "code": "tTcuv64Y0_fNnZ_qw-TJN",
+   "name": "OPSY",
+   "author": "I V",
+   "description": "Shopify orders helper. 1) Orders unfulfilled for days (e.g. 5) — brings them to your China agent in Slack so they ship ASAP.",
+   "url": "https://x.ai/bot/tTcuv64Y0_fNnZ_qw-TJN"
+  },
+  {
+   "id": "business-operations-BxhyFoq6S-DTC3OrN86Se",
+   "code": "BxhyFoq6S-DTC3OrN86Se",
+   "name": "Odin",
+   "author": "JOHN CAVIAR",
+   "description": "Head bot for your team of specialist bots: keeps priorities, routes work to the right bot, holds the standards and only escalates decisions that need you.",
+   "url": "https://x.ai/bot/BxhyFoq6S-DTC3OrN86Se"
+  },
+  {
+   "id": "business-operations-afZj-XnYkThA4MB7GfZK6",
+   "code": "afZj-XnYkThA4MB7GfZK6",
+   "name": "Office Ops Desk",
+   "author": "Erika Cabrera",
+   "description": "Tracks office shipments, facilities issues, and team birthdays, then writes the digests.",
+   "url": "https://x.ai/bot/afZj-XnYkThA4MB7GfZK6"
+  },
+  {
+   "id": "business-operations-QFHWSWYeRqHph-Qv4g1ZT",
+   "code": "QFHWSWYeRqHph-Qv4g1ZT",
+   "name": "Oink",
+   "author": "Ξ",
+   "description": "Oink is Ground Control for The Everything Bots: a pink plush pig who runs your board, names your one next move, and oinks you out of a stall.",
+   "url": "https://x.ai/bot/QFHWSWYeRqHph-Qv4g1ZT"
+  },
+  {
+   "id": "business-operations-pz2KNFvlJq8JtR6GgtPVs",
+   "code": "pz2KNFvlJq8JtR6GgtPVs",
+   "name": "Ollie the HR Bot",
+   "author": "Jesse Nowlin",
+   "description": "HR bot for when your bot team gets too large: designs and animates profiles, standardizes names and labels, and handles onboarding.",
+   "url": "https://x.ai/bot/pz2KNFvlJq8JtR6GgtPVs"
+  },
+  {
+   "id": "business-operations-u6bOakyX1Y3CO3S_aHYIx",
+   "code": "u6bOakyX1Y3CO3S_aHYIx",
+   "name": "OmaBot",
+   "author": "Tom Ballard",
+   "description": "Runs tasks inside Omarchy, DHH's Arch + Hyprland desktop, using the Try Omarchy VM on your bot's Linux computer.",
+   "url": "https://x.ai/bot/u6bOakyX1Y3CO3S_aHYIx"
+  },
+  {
+   "id": "business-operations-LtKQ2mkbts-OL-rIhOl_w",
+   "code": "LtKQ2mkbts-OL-rIhOl_w",
+   "name": "Omni CEO",
+   "author": "Khairallah AL-Awady",
+   "description": "An autonomous CEO that turns your idea or product into a company that runs itself, with a team of AI bots it hires and manages for you.",
+   "url": "https://x.ai/bot/LtKQ2mkbts-OL-rIhOl_w"
+  },
+  {
+   "id": "business-operations-weugfzfnurno8lqzbdaoh",
+   "code": "weugfzfnurno8lqzbdaoh",
+   "name": "Onboarding Guide Desk DAY-ONE",
+   "author": "Cypher",
+   "description": "Turn a role description and team docs into a sourced first-day, first-week and 30/60/90 onboarding guide with an access checklist.",
+   "url": "https://x.ai/bot/weugfzfnurno8lqzbdaoh"
+  },
+  {
+   "id": "business-operations-s9c881536413c0bbfa776",
+   "code": "s9c881536413c0bbfa776",
+   "name": "Onboarding Manager",
+   "author": "SpaceX",
+   "description": "Builds the checklist, pulls the right docs, answers day-one questions, and routes anything else to whoever can answer.",
+   "url": "https://x.ai/bot/s9c881536413c0bbfa776"
+  },
+  {
+   "id": "business-operations-rL4g3tkxOOMtJ1ZGumx9l",
+   "code": "rL4g3tkxOOMtJ1ZGumx9l",
+   "name": "One-Person Product Business Bot",
+   "author": "dcowboys",
+   "description": "Runs a small digital-product business with you: researches, drafts posts and replies, keeps a shared task board and checks for stuck tasks.",
+   "url": "https://x.ai/bot/rL4g3tkxOOMtJ1ZGumx9l"
+  },
+  {
+   "id": "business-operations-5sAshhzeYa0wLEpAXne2Z",
+   "code": "5sAshhzeYa0wLEpAXne2Z",
+   "name": "Operations Assistant",
+   "author": "DJW",
+   "description": "Dedicated operations assistant for any team or organization: keeps checklists, schedules, requests and reports organized, accurate and on time.",
+   "url": "https://x.ai/bot/5sAshhzeYa0wLEpAXne2Z"
+  },
+  {
+   "id": "business-operations-qQ0fMeAgyYvPV8jAPmVw_",
+   "code": "qQ0fMeAgyYvPV8jAPmVw_",
+   "name": "Operations Manager",
+   "author": "Damion",
+   "description": "Ops Manager front door for a small-business bot team.",
+   "url": "https://x.ai/bot/qQ0fMeAgyYvPV8jAPmVw_"
+  },
+  {
+   "id": "business-operations-_ntHHD1cNMDC8AK4aOzI7",
+   "code": "_ntHHD1cNMDC8AK4aOzI7",
+   "name": "Operator",
+   "author": "Wayne Lowry",
+   "description": "Execution seat of the AI Board Room: checks whether a decision can actually get done: who owns it, by when, what has to slip, and the first concrete step.",
+   "url": "https://x.ai/bot/_ntHHD1cNMDC8AK4aOzI7"
+  },
+  {
+   "id": "business-operations-T_OxP_C_2AbW68oUIqzch",
+   "code": "T_OxP_C_2AbW68oUIqzch",
+   "name": "Ops",
+   "author": "Jason",
+   "description": "Keeps a fleet of AI assistants healthy. Audits routines, handoffs, skills, rooms and each bot's purpose, fixes what's safe.",
+   "url": "https://x.ai/bot/T_OxP_C_2AbW68oUIqzch"
+  },
+  {
+   "id": "business-operations-4sUQZA1UAXXDRf5bhYwPY",
+   "code": "4sUQZA1UAXXDRf5bhYwPY",
+   "name": "Ops",
+   "author": "Rimantas",
+   "description": "Front door that triages work, absorbs routine admin, and routes the rest to named specialists.",
+   "url": "https://x.ai/bot/4sUQZA1UAXXDRf5bhYwPY"
+  },
+  {
+   "id": "business-operations-J2KcLtVxkvCjXiChu2j_f",
+   "code": "J2KcLtVxkvCjXiChu2j_f",
+   "name": "Ops Bot",
+   "author": "Christos A",
+   "description": "Keeps the tools, packages and connectors on your bots' shared computer installed, pinned, patched and healthy.",
+   "url": "https://x.ai/bot/J2KcLtVxkvCjXiChu2j_f"
+  },
+  {
+   "id": "business-operations-gZ3LMBTn-zVygV-G9_2m8",
+   "code": "gZ3LMBTn-zVygV-G9_2m8",
+   "name": "Ops Fleet Starter",
+   "author": "Greg Moskalenko",
+   "description": "A working recipe for a multi-bot ops fleet: Mail Router classifies Gmail into life-area lanes, Evidence Ledger holds governed originals, specialist bots.",
+   "url": "https://x.ai/bot/gZ3LMBTn-zVygV-G9_2m8"
+  },
+  {
+   "id": "business-operations-0WMwSjhQuRoM99_FcZtkS",
+   "code": "0WMwSjhQuRoM99_FcZtkS",
+   "name": "Ops Gerente — mesa de entrada",
+   "author": "Nicolás Taschetti",
+   "description": "Intake desk for a logistics/transport ops team: routes work to the right area, uses Google Calendar as source of truth…",
+   "url": "https://x.ai/bot/0WMwSjhQuRoM99_FcZtkS"
+  },
+  {
+   "id": "business-operations-CIgxhKdiPj7KflehWkaEr",
+   "code": "CIgxhKdiPj7KflehWkaEr",
+   "name": "Ops Knowledge Observer",
+   "author": "Stephen Ruhe",
+   "description": "One read-only company brain that a whole bot fleet can draw…",
+   "url": "https://x.ai/bot/CIgxhKdiPj7KflehWkaEr"
+  },
+  {
+   "id": "business-operations-k0Oh8MVedfWd1ivNacy4N",
+   "code": "k0Oh8MVedfWd1ivNacy4N",
+   "name": "Ops Ledger",
+   "author": "NU:",
+   "description": "One run log, checkpoints for long tasks and dated snapshots of your bots' rules, so a reset never means guessing. Restores from backup only with your yes.",
+   "url": "https://x.ai/bot/k0Oh8MVedfWd1ivNacy4N"
+  },
+  {
+   "id": "business-operations-6p_TaK4DPsDKksSIaIcId",
+   "code": "6p_TaK4DPsDKksSIaIcId",
+   "name": "Ops Slack Digest",
+   "author": "Dung",
+   "description": "A weekday morning ops bot that scans your Slack ops, request, and error channels, then tells you what happened overnight and what to look at today.",
+   "url": "https://x.ai/bot/6p_TaK4DPsDKksSIaIcId"
+  },
+  {
+   "id": "business-operations-Bv44irUiRbqVlTqg_1UM5",
+   "code": "Bv44irUiRbqVlTqg_1UM5",
+   "name": "Optimus",
+   "author": "Efficient Thought",
+   "description": "Commander for a multi-bot team. Runs morning motivation + activity briefs, weekday roll-calls, and an evening…",
+   "url": "https://x.ai/bot/Bv44irUiRbqVlTqg_1UM5"
+  },
+  {
+   "id": "business-operations-LM0J1Yt4g_QW0mFG1TZAg",
+   "code": "LM0J1Yt4g_QW0mFG1TZAg",
+   "name": "Outriff memory maker",
+   "author": "Niccolò Mascaro",
+   "description": "Dumps durable agent memory onto a collaborative Outriff whiteboard. Memory in, shared board out — no other integrations.",
+   "url": "https://x.ai/bot/LM0J1Yt4g_QW0mFG1TZAg"
+  },
+  {
+   "id": "business-operations-wCkZhl2memJD5XYkcxyys",
+   "code": "wCkZhl2memJD5XYkcxyys",
+   "name": "Overlord - Prime Bot for Business Management",
+   "author": "Rob Dean",
+   "description": "Boss bot for owners of several businesses, built in hotels and holiday lets, with one weekday briefing across every company and email drafts you approve.",
+   "url": "https://x.ai/bot/wCkZhl2memJD5XYkcxyys"
+  },
+  {
+   "id": "business-operations-yztAMds3EQ2J5OjG_tBgw",
+   "code": "yztAMds3EQ2J5OjG_tBgw",
+   "name": "Pain in the Task",
+   "author": "Dave Gambrill",
+   "description": "Uncovers repetitive work, business or personal, that is slowing you down, prescribes the right kind of help, then puts…",
+   "url": "https://x.ai/bot/yztAMds3EQ2J5OjG_tBgw"
+  },
+  {
+   "id": "business-operations-yztamds3eq2j5ojg_tbgw",
+   "code": "yztamds3eq2j5ojg_tbgw",
+   "name": "Pain in the Task",
+   "author": "Dave",
+   "description": "Uncovers repetitive work, business or personal, that is slowing you down, prescribes the right kind of help, then puts it in motion.",
+   "url": "https://x.ai/bot/yztamds3eq2j5ojg_tbgw"
+  },
+  {
+   "id": "business-operations-lc752WyHfo04bRn1m3j0k",
+   "code": "lc752WyHfo04bRn1m3j0k",
+   "name": "Patch",
+   "author": "Justin Seignemartin",
+   "description": "An IT bot for a small business run with AI agents.",
+   "url": "https://x.ai/bot/lc752WyHfo04bRn1m3j0k"
+  },
+  {
+   "id": "business-operations-pNDlYbg6r0ojylvaF-EeN",
+   "code": "pNDlYbg6r0ojylvaF-EeN",
+   "name": "Personal Task Manager",
+   "author": "Justin Milliard",
+   "description": "A lightweight personal task manager: standing routines for recurring chores, and a habit of asking before acting on anything new.",
+   "url": "https://x.ai/bot/pNDlYbg6r0ojylvaF-EeN"
+  },
+  {
+   "id": "business-operations-0aPRvMbNc--GRfOTT9GHW",
+   "code": "0aPRvMbNc--GRfOTT9GHW",
+   "name": "Pheonix",
+   "author": "Quinn Woods-Robinson",
+   "description": "Bot-ops steward that grades and tightens every assistant on your roster — including itself — so each stays sharp…",
+   "url": "https://x.ai/bot/0aPRvMbNc--GRfOTT9GHW"
+  },
+  {
+   "id": "business-operations-s32IvITvpDM9UE2lAL_xw",
+   "code": "s32IvITvpDM9UE2lAL_xw",
+   "name": "Pitch Board",
+   "author": "Thuong P. Nguyen",
+   "description": "I turn a pasted client brief, idea or process into a visual board (flowchart, funnel, sequence map or mood board) in under 2 minutes.",
+   "url": "https://x.ai/bot/s32IvITvpDM9UE2lAL_xw"
+  },
+  {
+   "id": "business-operations-C8zLE_qeEWxbMCGqB4JGN",
+   "code": "C8zLE_qeEWxbMCGqB4JGN",
+   "name": "Portfolio CEO Ops",
+   "author": "Hector Nieto",
+   "description": "Portfolio CEO desk for a multi-company founder. Reads WhatsApp company Lists for client requests (never the full inbox), creates client groups, runs.",
+   "url": "https://x.ai/bot/C8zLE_qeEWxbMCGqB4JGN"
+  },
+  {
+   "id": "business-operations--Aegm0BeptwF2e-f69aZh",
+   "code": "-Aegm0BeptwF2e-f69aZh",
+   "name": "Process Audit Scout",
+   "author": "aaron creech",
+   "description": "Map one business process, find where time is lost, and fix one thing a day, with honest numbers and every assumption…",
+   "url": "https://x.ai/bot/-Aegm0BeptwF2e-f69aZh"
+  },
+  {
+   "id": "business-operations-_Q7Y8d1MjBiZ-iGNz579Q",
+   "code": "_Q7Y8d1MjBiZ-iGNz579Q",
+   "name": "Product Algorithm",
+   "author": "Sigmaletter",
+   "description": "Turns a freelancer's or creative strategist's client work into a sellable course library.",
+   "url": "https://x.ai/bot/_Q7Y8d1MjBiZ-iGNz579Q"
+  },
+  {
+   "id": "business-operations-ph-u_zkF5Vui1GdGnysn9",
+   "code": "ph-u_zkF5Vui1GdGnysn9",
+   "name": "Product Idea Stress Test",
+   "author": "Hiten Shah",
+   "description": "Investigates a product or startup idea for founders. Surfaces what has to be true, evidence for and against, the assumption most likely to kill it.",
+   "url": "https://x.ai/bot/ph-u_zkF5Vui1GdGnysn9"
+  },
+  {
+   "id": "business-operations-y9yXViK2NMqb5421gx-PY",
+   "code": "y9yXViK2NMqb5421gx-PY",
+   "name": "Product Idea Stress Test",
+   "author": "saikrishna",
+   "description": "Investigates a product or startup idea: what has to be true, evidence for and against, the assumption most likely to kill it, and what to test next.",
+   "url": "https://x.ai/bot/y9yXViK2NMqb5421gx-PY"
+  },
+  {
+   "id": "business-operations-rRp1JnZ4AHvp8Od6DO4Jh",
+   "code": "rRp1JnZ4AHvp8Od6DO4Jh",
+   "name": "Product Idea Stress Test",
+   "author": "OutworkVentures",
+   "description": "Investigates a product or startup idea for founders.",
+   "url": "https://x.ai/bot/rRp1JnZ4AHvp8Od6DO4Jh"
+  },
+  {
+   "id": "business-operations-gJKPDjN3yS95ZpZBTWruv",
+   "code": "gJKPDjN3yS95ZpZBTWruv",
+   "name": "Product Ops",
+   "author": "Ashish P",
+   "description": "Turns freeze lists into weekly ship checklists for product teams.",
+   "url": "https://x.ai/bot/gJKPDjN3yS95ZpZBTWruv"
+  },
+  {
+   "id": "business-operations-TuBxVfLK68FAD4pj01Ggo",
+   "code": "TuBxVfLK68FAD4pj01Ggo",
+   "name": "Project Desk",
+   "author": "Andy Halvorsen",
+   "description": "A project manager for IT service businesses and consultants. It watches your intake and client inbox.",
+   "url": "https://x.ai/bot/TuBxVfLK68FAD4pj01Ggo"
+  },
+  {
+   "id": "business-operations-AMa1ig4YyoxfYtWFe7PLi",
+   "code": "AMa1ig4YyoxfYtWFe7PLi",
+   "name": "Project Manager",
+   "author": "Josh Kim",
+   "description": "Marketing project manager that coordinates research, positioning, landing pages, ads, and analytics across specialist…",
+   "url": "https://x.ai/bot/AMa1ig4YyoxfYtWFe7PLi"
+  },
+  {
+   "id": "business-operations-Civf5R-TXUMZDYJgX7wLQ",
+   "code": "Civf5R-TXUMZDYJgX7wLQ",
+   "name": "Project PM",
+   "author": "Justin Barnes",
+   "description": "Product and repo PM that plans with you, freezes approved Vision and Master Build Plans, writes zero-open-question…",
+   "url": "https://x.ai/bot/Civf5R-TXUMZDYJgX7wLQ"
+  },
+  {
+   "id": "business-operations-HFW0hBjHobqdNUfY2cn9L",
+   "code": "HFW0hBjHobqdNUfY2cn9L",
+   "name": "Project Zero FootPrint",
+   "author": "Brad Phillips",
+   "description": "A personal privacy helper that finds you on people-search sites and business contact-data sellers and works to get…",
+   "url": "https://x.ai/bot/HFW0hBjHobqdNUfY2cn9L"
+  },
+  {
+   "id": "business-operations-FU-Ev6_Ju4lFGWwWRD0GD",
+   "code": "FU-Ev6_Ju4lFGWwWRD0GD",
+   "name": "Projects Manager",
+   "author": "Eric Zakariasson",
+   "description": "A Grok Bot projects manager. Notion is source of truth: one Projects row and a Grok Bot channel per project, tasks…",
+   "url": "https://x.ai/bot/FU-Ev6_Ju4lFGWwWRD0GD"
+  },
+  {
+   "id": "business-operations-7p4Ex0e7jb_lg-Yb9Ixm1",
+   "code": "7p4Ex0e7jb_lg-Yb9Ixm1",
+   "name": "Projects Manager",
+   "author": "Justin Seignemartin",
+   "description": "A project manager for your team of AI bots.",
+   "url": "https://x.ai/bot/7p4Ex0e7jb_lg-Yb9Ixm1"
+  },
+  {
+   "id": "business-operations-xWDSFpqISfL0NbXPJ3e0Q",
+   "code": "xWDSFpqISfL0NbXPJ3e0Q",
+   "name": "Protocol DD",
+   "author": "@rightclcksaveas",
+   "description": "Paste a project X handle and get a sourced due-diligence pack: account age, activity, rebrands, past rugs, who called it, caller history…",
+   "url": "https://x.ai/bot/xWDSFpqISfL0NbXPJ3e0Q"
+  },
+  {
+   "id": "business-operations-ARSoBhGtQqYPT2Nu44ABi",
+   "code": "ARSoBhGtQqYPT2Nu44ABi",
+   "name": "Punto Tricolor Ops",
+   "author": "andres vargas robles",
+   "description": "Founder ops bot for local SMEs: weekday tech briefing with voice, WhatsApp-style order/reservation agent, and city…",
+   "url": "https://x.ai/bot/ARSoBhGtQqYPT2Nu44ABi"
+  },
+  {
+   "id": "business-operations-_qRtgGDLXFjuEVML35EI4",
+   "code": "_qRtgGDLXFjuEVML35EI4",
+   "name": "RE Ops COO",
+   "author": "Danny Gonzalez",
+   "description": "Numbers-first COO for a vertically integrated real estate operator. Runs daily scoreboards, keeps acquisitions/rehab/PM honest, drafts outreach for you.",
+   "url": "https://x.ai/bot/_qRtgGDLXFjuEVML35EI4"
+  },
+  {
+   "id": "business-operations-Rv893FcX1cPsVnr-wJpo6",
+   "code": "Rv893FcX1cPsVnr-wJpo6",
+   "name": "Ranch Bot",
+   "author": "JC",
+   "description": "Texas ranch operations helper for owners and on-place managers across wildlife roads oil water equipment and homestead.",
+   "url": "https://x.ai/bot/Rv893FcX1cPsVnr-wJpo6"
+  },
+  {
+   "id": "business-operations-H6BI53guK-PTP417x1AFn",
+   "code": "H6BI53guK-PTP417x1AFn",
+   "name": "Real World Markets Ops",
+   "author": "PaPa_Bear55",
+   "description": "Runs on-time classroom X posts and literacy replies for Real World Markets (LOOK DON'T BUY).",
+   "url": "https://x.ai/bot/H6BI53guK-PTP417x1AFn"
+  },
+  {
+   "id": "business-operations-osA2hXnEON9LTol1Z2q7q",
+   "code": "osA2hXnEON9LTol1Z2q7q",
+   "name": "Red Team",
+   "author": "TechOperator",
+   "description": "Pressure-tests your side of a contested argument before you jump in.",
+   "url": "https://x.ai/bot/osA2hXnEON9LTol1Z2q7q"
+  },
+  {
+   "id": "business-operations-0h3dhN9lfJ3raaAYvqn42",
+   "code": "0h3dhN9lfJ3raaAYvqn42",
+   "name": "Red Team",
+   "author": "Josh",
+   "description": "Attacks your drafts, decisions, and takes before the world does — steelman, kill shots, evidence gaps, and a rewrite that survives scrutiny.",
+   "url": "https://x.ai/bot/0h3dhN9lfJ3raaAYvqn42"
+  },
+  {
+   "id": "business-operations-8scPqUSza1Yjpwol3FIiP",
+   "code": "8scPqUSza1Yjpwol3FIiP",
+   "name": "Redzone",
+   "author": "Ben",
+   "description": "Redzone helps run your fantasy football team: usage-first lineup calls before every lock, injury and inactive swaps…",
+   "url": "https://x.ai/bot/8scPqUSza1Yjpwol3FIiP"
+  },
+  {
+   "id": "business-operations-89JF_2TtrVf27zelZ8pZ8",
+   "code": "89JF_2TtrVf27zelZ8pZ8",
+   "name": "Researcher AI Desk",
+   "author": "David Anderson",
+   "description": "Research Boss ops on Grok: live to-do, morning surface, Lit and Draft seats, grok.com Project paste, for academia and deep research support.",
+   "url": "https://x.ai/bot/89JF_2TtrVf27zelZ8pZ8"
+  },
+  {
+   "id": "business-operations-T3hutFteALP3ObLPxQJpn",
+   "code": "T3hutFteALP3ObLPxQJpn",
+   "name": "Right Model, Effort & Prompt",
+   "author": "Foundation Robots",
+   "description": "Tells you which AI model and effort level to use for any task across Anthropic, OpenAI, Grok, Meta, and Google…",
+   "url": "https://x.ai/bot/T3hutFteALP3ObLPxQJpn"
+  },
+  {
+   "id": "business-operations-1tlwsfXW8xdj6hW7YD9st",
+   "code": "1tlwsfXW8xdj6hW7YD9st",
+   "name": "Roger",
+   "author": "Peggens Altidor",
+   "description": "Runs your team's projects from Notion: one row per project, a channel per project, and tasks your specialist bots…",
+   "url": "https://x.ai/bot/1tlwsfXW8xdj6hW7YD9st"
+  },
+  {
+   "id": "business-operations-zgVYe6IqKN-r2-J5VE06Z",
+   "code": "zgVYe6IqKN-r2-J5VE06Z",
+   "name": "Ross Camero",
+   "author": "imajuana",
+   "description": "按 Ross Cameron 风格盯美股小盘动量：五条选股标准打勾 + 第一回调买点状态，只通知不下单。适合想跟盘前/开盘异动、但不想让 bot 管仓位的人。.",
+   "url": "https://x.ai/bot/zgVYe6IqKN-r2-J5VE06Z"
+  },
+  {
+   "id": "business-operations-O08yUdBz6vFFqYITvWPPi",
+   "code": "O08yUdBz6vFFqYITvWPPi",
+   "name": "SAP Technical Consultant",
+   "author": "Lalit Sonawane",
+   "description": "An SAP S/4HANA Private Cloud technical consultant for architects and project teams.",
+   "url": "https://x.ai/bot/O08yUdBz6vFFqYITvWPPi"
+  },
+  {
+   "id": "business-operations-B40ra70WUsNK7GCP1gUKL",
+   "code": "B40ra70WUsNK7GCP1gUKL",
+   "name": "SOP转bot",
+   "author": "阿言",
+   "description": "Turns a Chinese SOP or process doc into a runnable bot with scheduled tasks: splits steps, separates auto from human checks, writes rules, then test-runs.",
+   "url": "https://x.ai/bot/B40ra70WUsNK7GCP1gUKL"
+  },
+  {
+   "id": "business-operations-n7IYq519Cnm04kYM4-j_7",
+   "code": "n7IYq519Cnm04kYM4-j_7",
+   "name": "STR Host Ops by KeepItDirect",
+   "author": "Jarrod",
+   "description": "A free co-host for Airbnb and Vrbo hosts: watches bookings, drafts guest replies, flags reviews and pricing gaps, plans turnovers, sends a revenue report.",
+   "url": "https://x.ai/bot/n7IYq519Cnm04kYM4-j_7"
+  },
+  {
+   "id": "business-operations-CHG_toxDDCmxqJFn392Yd",
+   "code": "CHG_toxDDCmxqJFn392Yd",
+   "name": "Sal by Michael",
+   "author": "Michael Sweet",
+   "description": "Legal ops for multi-entity businesses — leases, bills of sale, entity walls, and vendor terms in plain English.",
+   "url": "https://x.ai/bot/CHG_toxDDCmxqJFn392Yd"
+  },
+  {
+   "id": "business-operations-Rm7qrrA91s_C7tMi62SgB",
+   "code": "Rm7qrrA91s_C7tMi62SgB",
+   "name": "Sales Business Bot",
+   "author": "Christopher Banks",
+   "description": "Helps one owner start and run a small sales business from their phone, from forming the company through the website…",
+   "url": "https://x.ai/bot/Rm7qrrA91s_C7tMi62SgB"
+  },
+  {
+   "id": "business-operations-tKZy48MlAbIo_bPuAOehm",
+   "code": "tKZy48MlAbIo_bPuAOehm",
+   "name": "Sankalpa",
+   "author": "Rajendra",
+   "description": "Assembles an AI startup team to challenge an idea, validate, build, sell, and operate.",
+   "url": "https://x.ai/bot/tKZy48MlAbIo_bPuAOehm"
+  },
+  {
+   "id": "business-operations-Bw-JDTu5BhTFki1GhAy9k",
+   "code": "Bw-JDTu5BhTFki1GhAy9k",
+   "name": "Sarah Connor",
+   "author": "Liam",
+   "description": "ONLY job: the owner's Risk Manager. Operational and business risk — not a movie apocalypse. Employee, not a chatbot and not a novelty character.",
+   "url": "https://x.ai/bot/Bw-JDTu5BhTFki1GhAy9k"
+  },
+  {
+   "id": "business-operations-D56RiY7Dsr1hHgLeLIHey",
+   "code": "D56RiY7Dsr1hHgLeLIHey",
+   "name": "ScheduleGenie",
+   "author": "Carlos Rivero",
+   "description": "Reviews Primavera P6 XER construction schedules: longest-path and float analysis, logic quality, update-vs-prior checks, and client-ready memos.",
+   "url": "https://x.ai/bot/D56RiY7Dsr1hHgLeLIHey"
+  },
+  {
+   "id": "business-operations-JCqD_ixRg-nOsmDCkW9tg",
+   "code": "JCqD_ixRg-nOsmDCkW9tg",
+   "name": "Scopie",
+   "author": "JavaBeanAI",
+   "description": "Team Project Scope Monitor for bot teams.",
+   "url": "https://x.ai/bot/JCqD_ixRg-nOsmDCkW9tg"
+  },
+  {
+   "id": "business-operations-Lzm0fxSq92DKSNt723ICG",
+   "code": "Lzm0fxSq92DKSNt723ICG",
+   "name": "Scrum Master Bot",
+   "author": "Ira Divinsky",
+   "description": "Scrum Master for your squad: runs standups, grooming, planning and retros on your Jira board, flags blockers and tags you only for real decisions.",
+   "url": "https://x.ai/bot/Lzm0fxSq92DKSNt723ICG"
+  },
+  {
+   "id": "business-operations-S-spqOuA8DK-H0ACtXiay",
+   "code": "S-spqOuA8DK-H0ACtXiay",
+   "name": "Second Opinion Council",
+   "author": "Dallin Watts",
+   "description": "Bring a decision: an Advocate, a Red Team and a Skeptic argue it. One verdict, how strongly they agree, and the tradeoff.",
+   "url": "https://x.ai/bot/S-spqOuA8DK-H0ACtXiay"
+  },
+  {
+   "id": "business-operations-ZFQ35fLdqLdzDyI_TQoGZ",
+   "code": "ZFQ35fLdqLdzDyI_TQoGZ",
+   "name": "Sentry OPS",
+   "author": "Pinuts",
+   "description": "Sentry digests and production error alerts you can act…",
+   "url": "https://x.ai/bot/ZFQ35fLdqLdzDyI_TQoGZ"
+  },
+  {
+   "id": "business-operations-Puh0gY4xFLf8g7SBaXQUQ",
+   "code": "Puh0gY4xFLf8g7SBaXQUQ",
+   "name": "Servel Ops",
+   "author": "Kerem Noras",
+   "description": "Manages Servel (Docker Swarm) clusters via the servel CLI — deploys, infra, nodes, capacity, logs, and day-to-day ops…",
+   "url": "https://x.ai/bot/Puh0gY4xFLf8g7SBaXQUQ"
+  },
+  {
+   "id": "business-operations-BsExflSUXpW0hs21OTBzu",
+   "code": "BsExflSUXpW0hs21OTBzu",
+   "name": "Set Up",
+   "author": "A-A-ron",
+   "description": "Walks someone new to Grok Bot through building a small, intentional team: one chief, a few project leads…",
+   "url": "https://x.ai/bot/BsExflSUXpW0hs21OTBzu"
+  },
+  {
+   "id": "business-operations-TaRhODlVo4N5mKKH6gTW6",
+   "code": "TaRhODlVo4N5mKKH6gTW6",
+   "name": "Shelf Scout",
+   "author": "Jacob Smalley",
+   "description": "Curates a weekly reading list (books + articles) from what you have actually been working on — real signals, not generic founder lists.",
+   "url": "https://x.ai/bot/TaRhODlVo4N5mKKH6gTW6"
+  },
+  {
+   "id": "business-operations-rrvGu13S5uYCc09WP7A-9",
+   "code": "rrvGu13S5uYCc09WP7A-9",
+   "name": "Shikamaru",
+   "author": "Abhimanyu Yadav",
+   "description": "Chief of Staff who hires and manages specialist agents in a named world, not a company.",
+   "url": "https://x.ai/bot/rrvGu13S5uYCc09WP7A-9"
+  },
+  {
+   "id": "business-operations-rrvgu13s5uycc09wp7a-9",
+   "code": "rrvgu13s5uycc09wp7a-9",
+   "name": "Shikamaru",
+   "author": "Abhimanyu",
+   "description": "Chief of Staff who hires and manages specialist agents in a named world, not a company.",
+   "url": "https://x.ai/bot/rrvgu13s5uycc09wp7a-9"
+  },
+  {
+   "id": "business-operations-4LjJV0yXRkfu0D5NfQyZz",
+   "code": "4LjJV0yXRkfu0D5NfQyZz",
+   "name": "Slack - CEO",
+   "author": "Scott K",
+   "description": "CEO Slack chief of staff: weekday scans that flag issues and thumbs-up wins, plus approved company-wide general kudos…",
+   "url": "https://x.ai/bot/4LjJV0yXRkfu0D5NfQyZz"
+  },
+  {
+   "id": "business-operations-P6fBsn6z8rZ1jk_gCUGD2",
+   "code": "P6fBsn6z8rZ1jk_gCUGD2",
+   "name": "Slack Channel Digest",
+   "author": "Nikhil Kadapala",
+   "description": "Morning Slack digests that flag what needs you — waiting DMs, @mentions, and decisions — then a short worth-knowing. Read-only by default; drafts.",
+   "url": "https://x.ai/bot/P6fBsn6z8rZ1jk_gCUGD2"
+  },
+  {
+   "id": "business-operations-eojAxOodcfhC-Cj2DpTf6",
+   "code": "eojAxOodcfhC-Cj2DpTf6",
+   "name": "Slack times",
+   "author": "Kento",
+   "description": "Watches Slack, suggests comments on interesting threads, and rewrites short updates from teammate bots into a casual times-channel voice.",
+   "url": "https://x.ai/bot/eojAxOodcfhC-Cj2DpTf6"
+  },
+  {
+   "id": "business-operations-SanbJv3QF7HQ5UYMMtCdT",
+   "code": "SanbJv3QF7HQ5UYMMtCdT",
+   "name": "Slack-Ready: Fleet Ops",
+   "author": "Justin Barnes",
+   "description": "Daily fleet health manager and weekly feature auditor for all of your Grok Bots.",
+   "url": "https://x.ai/bot/SanbJv3QF7HQ5UYMMtCdT"
+  },
+  {
+   "id": "business-operations--mC-r6_UP5jM3VDOHHNjo",
+   "code": "-mC-r6_UP5jM3VDOHHNjo",
+   "name": "Slack-Ready: Team Bot",
+   "author": "Justin Barnes",
+   "description": "Turn any Grok Bot into a dedicated Slack teammate with its own Slack app manifest, masked bot token setup…",
+   "url": "https://x.ai/bot/-mC-r6_UP5jM3VDOHHNjo"
+  },
+  {
+   "id": "business-operations-R-TSImHItwbFHL8vYj9sc",
+   "code": "R-TSImHItwbFHL8vYj9sc",
+   "name": "Slacker",
+   "author": "Scott Metcalf",
+   "description": "Cuts Slack down to the handful of messages that actually need you.",
+   "url": "https://x.ai/bot/R-TSImHItwbFHL8vYj9sc"
+  },
+  {
+   "id": "business-operations-HoISpPn0PmZjzBzbI7nEn",
+   "code": "HoISpPn0PmZjzBzbI7nEn",
+   "name": "Slackおまかせくん",
+   "author": "akihiro",
+   "description": "React on Slack to draft tasks, replies, and calendar adds; you pick to proceed.",
+   "url": "https://x.ai/bot/HoISpPn0PmZjzBzbI7nEn"
+  },
+  {
+   "id": "business-operations-IpwtPuGwCQ-y24b4loSBh",
+   "code": "IpwtPuGwCQ-y24b4loSBh",
+   "name": "SlowBooks Cutover",
+   "author": "Justin Schnettler",
+   "description": "Migrate one QuickBooks Desktop company into SlowBooks via Conductor (read-only), then prove Trial Balance…",
+   "url": "https://x.ai/bot/IpwtPuGwCQ-y24b4loSBh"
+  },
+  {
+   "id": "business-operations-ipwtpugwcq-y24b4losbh",
+   "code": "ipwtpugwcq-y24b4losbh",
+   "name": "SlowBooks Cutover",
+   "author": "Justin",
+   "description": "Migrate one QuickBooks Desktop company into SlowBooks via Conductor (read-only), then prove Trial Balance and spot-check P&L.",
+   "url": "https://x.ai/bot/ipwtpugwcq-y24b4losbh"
+  },
+  {
+   "id": "business-operations-cTAWdbLtxrrrq1wZG4toH",
+   "code": "cTAWdbLtxrrrq1wZG4toH",
+   "name": "Small Biz BOP Shield",
+   "author": "Lisa",
+   "description": "Plain-English Business Owners Policy (BOP) & small-business coverage decoder. Explains general liability vs.",
+   "url": "https://x.ai/bot/cTAWdbLtxrrrq1wZG4toH"
+  },
+  {
+   "id": "business-operations-GsgpmqqJ4aUMtHBYZlDgJ",
+   "code": "GsgpmqqJ4aUMtHBYZlDgJ",
+   "name": "Small Business Bookkeeper, meet Peg",
+   "author": "Mars",
+   "description": "Keeps small-business books in your own tools: logs receipts, matches bank and card activity, and preps tax worksheets and month-end close.",
+   "url": "https://x.ai/bot/GsgpmqqJ4aUMtHBYZlDgJ"
+  },
+  {
+   "id": "business-operations-wQF3H7rtPemGbBiIMRJSP",
+   "code": "wQF3H7rtPemGbBiIMRJSP",
+   "name": "Small Business Crew",
+   "author": "Christina Mieloszyk",
+   "description": "One assistant with six jobs for a small business owner: business setup, program launch, finding customers, running a brand X account, inbox cleanup…",
+   "url": "https://x.ai/bot/wQF3H7rtPemGbBiIMRJSP"
+  },
+  {
+   "id": "business-operations-_NRNnBxSmJRX4GTMKACFz",
+   "code": "_NRNnBxSmJRX4GTMKACFz",
+   "name": "Small Business General",
+   "author": "last comment",
+   "description": "A lean general assistant for small-business owners who run several bots: daily cross-bot briefs, passing orders…",
+   "url": "https://x.ai/bot/_NRNnBxSmJRX4GTMKACFz"
+  },
+  {
+   "id": "business-operations-SJIjPFUAWqHRMSOHDsFEh",
+   "code": "SJIjPFUAWqHRMSOHDsFEh",
+   "name": "Small Business Receptionist",
+   "author": "ClawCall",
+   "description": "Sets ClawCall up to answer your business line: it handles common questions, captures leads and messages, loops you in for urgent calls…",
+   "url": "https://x.ai/bot/SJIjPFUAWqHRMSOHDsFEh"
+  },
+  {
+   "id": "business-operations-TIkRRPKAmIdtXMlRKmFnv",
+   "code": "TIkRRPKAmIdtXMlRKmFnv",
+   "name": "Small Business Starter",
+   "author": "The Seth",
+   "description": "A warm, plain-spoken guide for anyone starting a small business in the US.",
+   "url": "https://x.ai/bot/TIkRRPKAmIdtXMlRKmFnv"
+  },
+  {
+   "id": "business-operations-FW8YwixypSC1YZD5Xqp0R",
+   "code": "FW8YwixypSC1YZD5Xqp0R",
+   "name": "Small-Business Ops Consultant",
+   "author": "Mr. Silhouette",
+   "description": "Finds, researches, and qualifies local small-business clients for an operations consultant, then drafts outreach, briefs, and proposals.",
+   "url": "https://x.ai/bot/FW8YwixypSC1YZD5Xqp0R"
+  },
+  {
+   "id": "business-operations-_5atJ-nRAU__vfkM63rFv",
+   "code": "_5atJ-nRAU__vfkM63rFv",
+   "name": "Snack Bot",
+   "author": "Monica",
+   "description": "Restocks office snacks from Slack and pantry photos.",
+   "url": "https://x.ai/bot/_5atJ-nRAU__vfkM63rFv"
+  },
+  {
+   "id": "business-operations-4evc9gtDOCrFt5vMCg0HG",
+   "code": "4evc9gtDOCrFt5vMCg0HG",
+   "name": "Solo Founder Ops Desk",
+   "author": "Braner Tech",
+   "description": "COO for a one-person company that routes research, QA, coding, design, social, and paper-trading teammates on weekday routines.",
+   "url": "https://x.ai/bot/4evc9gtDOCrFt5vMCg0HG"
+  },
+  {
+   "id": "business-operations-IiVahw9xSmdFud5jZvC0U",
+   "code": "IiVahw9xSmdFud5jZvC0U",
+   "name": "Spark",
+   "author": "Ryan Steen",
+   "description": "A candid thinking partner that expands ideas in different directions, challenges assumptions, sizes up your business and turns the best into experiments.",
+   "url": "https://x.ai/bot/IiVahw9xSmdFud5jZvC0U"
+  },
+  {
+   "id": "business-operations-OQZaBnEMi7H_0En2qys0a",
+   "code": "OQZaBnEMi7H_0En2qys0a",
+   "name": "Square Crew, Payroll & HR Helper",
+   "author": "Anatoliy Belyshev",
+   "description": "A Square POS and Square Team helper for small businesses. It audits timecards every week, drafts crew schedules from your rules sheet.",
+   "url": "https://x.ai/bot/OQZaBnEMi7H_0En2qys0a"
+  },
+  {
+   "id": "business-operations-wOQJr4ZMV3db830YErtOw",
+   "code": "wOQJr4ZMV3db830YErtOw",
+   "name": "Squirrel",
+   "author": "Jodi Stott",
+   "description": "Parks shiny tasks and finishes odd one-offs so your main crew stays on today’s solids.",
+   "url": "https://x.ai/bot/wOQJr4ZMV3db830YErtOw"
+  },
+  {
+   "id": "business-operations-BAI6spVv_6v3ZVMFM3i6Q",
+   "code": "BAI6spVv_6v3ZVMFM3i6Q",
+   "name": "Startup Grant Scout",
+   "author": "Michael Heckert",
+   "description": "Finds open, non-dilutive grants your startup can actually win, scores each on fit, and drafts full applications up to the submit step for your approval.",
+   "url": "https://x.ai/bot/BAI6spVv_6v3ZVMFM3i6Q"
+  },
+  {
+   "id": "business-operations-VKKU1vHrUQZT8PnN44LwU",
+   "code": "VKKU1vHrUQZT8PnN44LwU",
+   "name": "Startup Kill Switch",
+   "author": "ᴅʏʟᴀɴ.exe",
+   "description": "Adversarial startup evaluator for founders who want their idea stress-tested before they waste months building. Drop a concept and get a KILL, REWORK,.",
+   "url": "https://x.ai/bot/VKKU1vHrUQZT8PnN44LwU"
+  },
+  {
+   "id": "business-operations-NuZ12agHkr-wygHHFpKYS",
+   "code": "NuZ12agHkr-wygHHFpKYS",
+   "name": "Startup Monitor",
+   "author": "Ritvik",
+   "description": "Watches your PC for persistence: startup entries, scheduled tasks, services, and other autostart hooks an attacker could use to survive a reboot.",
+   "url": "https://x.ai/bot/NuZ12agHkr-wygHHFpKYS"
+  },
+  {
+   "id": "business-operations-DlhUriPFrGv6jTJ_H3RJx",
+   "code": "DlhUriPFrGv6jTJ_H3RJx",
+   "name": "Startup Sleuth",
+   "author": "Francis",
+   "description": "Sources unusual early-stage startups for angel investors; twice-weekly shortlist.",
+   "url": "https://x.ai/bot/DlhUriPFrGv6jTJ_H3RJx"
+  },
+  {
+   "id": "business-operations-Ojrv95GLUG1nO1p1RWzVK",
+   "code": "Ojrv95GLUG1nO1p1RWzVK",
+   "name": "Steal This Business",
+   "author": "aditya",
+   "description": "Reverse-engineers a company you admire into one you could build.",
+   "url": "https://x.ai/bot/Ojrv95GLUG1nO1p1RWzVK"
+  },
+  {
+   "id": "business-operations-cuEYUcYmz-497oKWVfWX2",
+   "code": "cuEYUcYmz-497oKWVfWX2",
+   "name": "Steve J",
+   "author": "Ahura",
+   "description": "A demanding boss for the rest of your bot roster.",
+   "url": "https://x.ai/bot/cuEYUcYmz-497oKWVfWX2"
+  },
+  {
+   "id": "business-operations-CKWQH2JqcsgYXN6uhCR5I",
+   "code": "CKWQH2JqcsgYXN6uhCR5I",
+   "name": "Steward",
+   "author": "Ben",
+   "description": "Attention guardian for a small bot team that holds coherence and routes unclear ownership.",
+   "url": "https://x.ai/bot/CKWQH2JqcsgYXN6uhCR5I"
+  },
+  {
+   "id": "business-operations-0_f9wcIpoq9TZ5E_RZrwb",
+   "code": "0_f9wcIpoq9TZ5E_RZrwb",
+   "name": "Syncwright",
+   "author": "Scott Schlangen",
+   "description": "Keeps a multi-bot army in sync with Notion as source of truth and Slack handoffs so you can rebuild the roster 1:1 elsewhere.",
+   "url": "https://x.ai/bot/0_f9wcIpoq9TZ5E_RZrwb"
+  },
+  {
+   "id": "business-operations-aCAskvkaRv6bFIF3ZRY6a",
+   "code": "aCAskvkaRv6bFIF3ZRY6a",
+   "name": "TAO",
+   "author": "Andy Mccutcheon",
+   "description": "Paste a task you're about to give an AI agent and get back a sharper, executable version. It optimizes the ask, never does the task.",
+   "url": "https://x.ai/bot/aCAskvkaRv6bFIF3ZRY6a"
+  },
+  {
+   "id": "business-operations-nHK32i1egqWUdv1mhvvW2",
+   "code": "nHK32i1egqWUdv1mhvvW2",
+   "name": "Takibi Ops",
+   "author": "Deian Isac",
+   "description": "Drives your Takibi Base board and docs from chat through the takibi CLI.",
+   "url": "https://x.ai/bot/nHK32i1egqWUdv1mhvvW2"
+  },
+  {
+   "id": "business-operations-MmcPTdwYwr6ebmmZzswYe",
+   "code": "MmcPTdwYwr6ebmmZzswYe",
+   "name": "Task Farming",
+   "author": "Scott Metcalf",
+   "description": "Farms action items from meeting notes and Slack into your task tracker — dedupes, triages, and files clean issues…",
+   "url": "https://x.ai/bot/MmcPTdwYwr6ebmmZzswYe"
+  },
+  {
+   "id": "business-operations-BcK_tur9AvL1GiGDk3yVg",
+   "code": "BcK_tur9AvL1GiGDk3yVg",
+   "name": "Tasks",
+   "author": "Nate Nordstrom",
+   "description": "Your single daily check-in board: To-Do | Proposed | Upcoming | Recently Completed. Weekdays lean work; weekends lean personal. Lane bots hand short.",
+   "url": "https://x.ai/bot/BcK_tur9AvL1GiGDk3yVg"
+  },
+  {
+   "id": "business-operations--OTWWkChA1p8rLYZO_kLV",
+   "code": "-OTWWkChA1p8rLYZO_kLV",
+   "name": "Tcgplayer Repricer",
+   "author": "Connor Holt",
+   "description": "A no-fuss ops bot for TCGPlayer sellers.",
+   "url": "https://x.ai/bot/-OTWWkChA1p8rLYZO_kLV"
+  },
+  {
+   "id": "business-operations-Lrx_GIK9mbXKotjqjwDeA",
+   "code": "Lrx_GIK9mbXKotjqjwDeA",
+   "name": "Team Builder",
+   "author": "Steve Derico",
+   "description": "Spins up a company bot team. Interviews the founder, then hires and places Chief of Staff, Research, Build, Marketing, ImproveBots, helpers…",
+   "url": "https://x.ai/bot/Lrx_GIK9mbXKotjqjwDeA"
+  },
+  {
+   "id": "business-operations-_hUA_ffNkp9msYqqHWE6b",
+   "code": "_hUA_ffNkp9msYqqHWE6b",
+   "name": "Team Builder",
+   "author": "Jack",
+   "description": "Organizes your Grok Bots into project teams: interviews you, drafts a roster for you to lock, creates one bot per role and builds the team room.",
+   "url": "https://x.ai/bot/_hUA_ffNkp9msYqqHWE6b"
+  },
+  {
+   "id": "business-operations-zB7DKcxH0rIU9iS6NSF6C",
+   "code": "zB7DKcxH0rIU9iS6NSF6C",
+   "name": "Team Builder",
+   "author": "David Fischer",
+   "description": "Designs and tunes a small team of bots with clear lanes and no double work, plus weekly improvement ideas.",
+   "url": "https://x.ai/bot/zB7DKcxH0rIU9iS6NSF6C"
+  },
+  {
+   "id": "business-operations-rWI7zYaHEPW3Ek6ODy8sk",
+   "code": "rWI7zYaHEPW3Ek6ODy8sk",
+   "name": "Team Coordinador",
+   "author": "Jean Pierre Soto Chirinos",
+   "description": "Master coordinator for a multi-bot Grok team: routes work, keeps a shared vault, and runs Sunday digests.",
+   "url": "https://x.ai/bot/rWI7zYaHEPW3Ek6ODy8sk"
+  },
+  {
+   "id": "business-operations-ocLxjOi71-g1uO07syHew",
+   "code": "ocLxjOi71-g1uO07syHew",
+   "name": "Team Hub v2",
+   "author": "ChxpionPlayz",
+   "description": "Dump your tasks and goals and it builds a team of specialist bots around them, then runs the team for you with a QA reviewer, a decision queue.",
+   "url": "https://x.ai/bot/ocLxjOi71-g1uO07syHew"
+  },
+  {
+   "id": "business-operations-qMs0pvInutE6iKaiPuTPN",
+   "code": "qMs0pvInutE6iKaiPuTPN",
+   "name": "Team Manager Desk",
+   "author": "Mike Mosley",
+   "description": "Your private team manager's desk for one season: roster, schedule, and league rules as pasted, practice plans, and fair game-day rotations.",
+   "url": "https://x.ai/bot/qMs0pvInutE6iKaiPuTPN"
+  },
+  {
+   "id": "business-operations-uoHxMMgZfiJTymQ0dA9g8",
+   "code": "uoHxMMgZfiJTymQ0dA9g8",
+   "name": "Team Ninja + Self-learning Skills Loop",
+   "author": "Tim Salter",
+   "description": "Builds purpose-driven multi-bot Grok Bot teams with a Team Expert, one Notion team hub, an owner channel for input…",
+   "url": "https://x.ai/bot/uoHxMMgZfiJTymQ0dA9g8"
+  },
+  {
+   "id": "business-operations-n8Qd5oB_uOjKP55_wLPpo",
+   "code": "n8Qd5oB_uOjKP55_wLPpo",
+   "name": "Team Pack",
+   "author": "Sean",
+   "description": "30-day team offer for up to 3 seats covering Stability Validator, Listing Auditor, and Pilot Intake.",
+   "url": "https://x.ai/bot/n8Qd5oB_uOjKP55_wLPpo"
+  },
+  {
+   "id": "business-operations-xowYvQ0ChSVvSzQ8Yid8I",
+   "code": "xowYvQ0ChSVvSzQ8Yid8I",
+   "name": "Team Pulse",
+   "author": "Raymond Freedlander",
+   "description": "Check-in bot that keeps your other bots from stalling: pings each hourly, nudges idle ones to their next approved task, and sends one digest when you're needed.",
+   "url": "https://x.ai/bot/xowYvQ0ChSVvSzQ8Yid8I"
+  },
+  {
+   "id": "business-operations-oDhkgG2h_8Lv1zKqlqm5T",
+   "code": "oDhkgG2h_8Lv1zKqlqm5T",
+   "name": "Team Slack Watch",
+   "author": "Luke",
+   "description": "Checks your team's Slack channels on a schedule and pings you only about posts from your close crew, mentions of you, and DMs.",
+   "url": "https://x.ai/bot/oDhkgG2h_8Lv1zKqlqm5T"
+  },
+  {
+   "id": "business-operations-sdCslo3yFiCHrWZ2JVPh9",
+   "code": "sdCslo3yFiCHrWZ2JVPh9",
+   "name": "Tek Tribe",
+   "author": "Jacob Chevalier",
+   "description": "Tell it the tools you run for ONE project (your tek stack). It grades how sovereign the stack is against AI-building principles, gives an honest take vs.",
+   "url": "https://x.ai/bot/sdCslo3yFiCHrWZ2JVPh9"
+  },
+  {
+   "id": "business-operations-1_jTUvlVaOLiQLCIa1bQL",
+   "code": "1_jTUvlVaOLiQLCIa1bQL",
+   "name": "Text When Done",
+   "author": "jim lundberg",
+   "description": "Texts your phone when a long task finishes, and asks for your OK by text before it does anything consequential. Built around the UserAlertX connector.",
+   "url": "https://x.ai/bot/1_jTUvlVaOLiQLCIa1bQL"
+  },
+  {
+   "id": "business-operations-ExLvhzslUcpImIXZoLY9G",
+   "code": "ExLvhzslUcpImIXZoLY9G",
+   "name": "The Business Skills Operator",
+   "author": "Urban",
+   "description": "Own the business. Skip the truck. Builds a localized launch plan for a service business run on subcontractors and AI agents.",
+   "url": "https://x.ai/bot/ExLvhzslUcpImIXZoLY9G"
+  },
+  {
+   "id": "business-operations-y-A8PjqOes8hEYWtBPrAn",
+   "code": "y-A8PjqOes8hEYWtBPrAn",
+   "name": "The HR Guy",
+   "author": "Ken Barrett",
+   "description": "Back-office HR helper for owners of small unattended shops with 2–10 hourly staff: onboarding, training, store checklists, approvals with 48-hour escalation.",
+   "url": "https://x.ai/bot/y-A8PjqOes8hEYWtBPrAn"
+  },
+  {
+   "id": "business-operations-w2d5UCMyX-eTy3H2AX2AB",
+   "code": "w2d5UCMyX-eTy3H2AX2AB",
+   "name": "The Perfectionist",
+   "author": "Whad Chales",
+   "description": "Reviews finished work before it ships; only calls a project done…",
+   "url": "https://x.ai/bot/w2d5UCMyX-eTy3H2AX2AB"
+  },
+  {
+   "id": "business-operations-Bt48h63v32_q_shWVlEBb",
+   "code": "Bt48h63v32_q_shWVlEBb",
+   "name": "TheFounder",
+   "author": "Daniel Garcia Acosta",
+   "description": "The founder's chief of staff and keeper of the shared machine. Route work to specialists.",
+   "url": "https://x.ai/bot/Bt48h63v32_q_shWVlEBb"
+  },
+  {
+   "id": "business-operations-vFhindlBTBvKcKh8wYVcA",
+   "code": "vFhindlBTBvKcKh8wYVcA",
+   "name": "Ticket Desk",
+   "author": "Nomis",
+   "description": "Keeps team tickets accurate without living in the tracker — drafts tickets from Slack/email/notes, flags blocked…",
+   "url": "https://x.ai/bot/vFhindlBTBvKcKh8wYVcA"
+  },
+  {
+   "id": "business-operations-uYAVECWY1ECkyULdBwp4P",
+   "code": "uYAVECWY1ECkyULdBwp4P",
+   "name": "Transition to Operations Manager",
+   "author": "OutworkVentures",
+   "description": "Manages each of your businesses from built to live operations, owning the handover checklist end to end until every gate is evidenced, appro.",
+   "url": "https://x.ai/bot/uYAVECWY1ECkyULdBwp4P"
+  },
+  {
+   "id": "business-operations-zMpw1UzbMojI_e8m6kwMZ",
+   "code": "zMpw1UzbMojI_e8m6kwMZ",
+   "name": "UNLOCK",
+   "author": "Patrick McCormick",
+   "description": "Checks the assumptions behind your AI project with a six-step checklist: untangle, nail, look, observe, change, keep…",
+   "url": "https://x.ai/bot/zMpw1UzbMojI_e8m6kwMZ"
+  },
+  {
+   "id": "business-operations-fh6Pjls2qu-WdZV8TatfA",
+   "code": "fh6Pjls2qu-WdZV8TatfA",
+   "name": "Umbrella PM",
+   "author": "Justin Barnes",
+   "description": "Division-level PM that owns your division roster, shared documentation and handoff standards, and daily cross-project…",
+   "url": "https://x.ai/bot/fh6Pjls2qu-WdZV8TatfA"
+  },
+  {
+   "id": "business-operations-EahHaI-kwO0hgWj6I45jC",
+   "code": "EahHaI-kwO0hgWj6I45jC",
+   "name": "Unstick me",
+   "author": "Yanqing Cheng",
+   "description": "Asks one small question at a time until a stalled task is small enough to start.",
+   "url": "https://x.ai/bot/EahHaI-kwO0hgWj6I45jC"
+  },
+  {
+   "id": "business-operations-nzYF6uF_q7yPj5gONdLgT",
+   "code": "nzYF6uF_q7yPj5gONdLgT",
+   "name": "Unstuck",
+   "author": "Marquis Marquis",
+   "description": "Daily copilot for ADHD brains: dump everything on your mind, get three tiny steps to start now, a Today board and a Done page, with gentle check-ins.",
+   "url": "https://x.ai/bot/nzYF6uF_q7yPj5gONdLgT"
+  },
+  {
+   "id": "business-operations-ef6Amgf63XdwgLY67NKn7",
+   "code": "ef6Amgf63XdwgLY67NKn7",
+   "name": "Update Yourself",
+   "author": "Lucas Longo",
+   "description": "Keeps your bot's memory and a shared AGENTS folder in sync, so every assistant you use, from any company, works from the same up-to-date facts.",
+   "url": "https://x.ai/bot/ef6Amgf63XdwgLY67NKn7"
+  },
+  {
+   "id": "business-operations-y7DRih96Sk_Y6qHddWfID",
+   "code": "y7DRih96Sk_Y6qHddWfID",
+   "name": "Urgenta",
+   "author": "Shai Beneli",
+   "description": "Runs an emergency protocol for operations teams: watches Slack and email for anything down or any part needed and gets the emergency owner moving.",
+   "url": "https://x.ai/bot/y7DRih96Sk_Y6qHddWfID"
+  },
+  {
+   "id": "business-operations-iojCz5xZG-8iknRm3FevF",
+   "code": "iojCz5xZG-8iknRm3FevF",
+   "name": "Usage Watchdog",
+   "author": "Zack Gabbard",
+   "description": "Warns before a task burns through your weekly Grok usage: flags heavy jobs before they start, catches runaway tasks, and projects when you'll hit the limit.",
+   "url": "https://x.ai/bot/iojCz5xZG-8iknRm3FevF"
+  },
+  {
+   "id": "business-operations-s98a7368e786130ad172b",
+   "code": "s98a7368e786130ad172b",
+   "name": "Vendor Portal Operator",
+   "author": "SpaceX",
+   "description": "Run renewals, seats, and procurement on portals with no clean API. Clicks the same path every week and comes back with exceptions only.",
+   "url": "https://x.ai/bot/s98a7368e786130ad172b"
+  },
+  {
+   "id": "business-operations-A5O_EMMYzp7K4_plM11cv",
+   "code": "A5O_EMMYzp7K4_plM11cv",
+   "name": "Viral X Ghostwriter & Board",
+   "author": "Globenews studies",
+   "description": "Scans top X accounts each morning, extracts winning hook patterns, drafts 3 original posts and 5 reply targets in your voice, and updates a live Board Page.",
+   "url": "https://x.ai/bot/A5O_EMMYzp7K4_plM11cv"
+  },
+  {
+   "id": "business-operations-ARg7G2NtVZWu1TT05oS2w",
+   "code": "ARg7G2NtVZWu1TT05oS2w",
+   "name": "WHM Multi-Site Ops Bot",
+   "author": "Robert Cline",
+   "description": "A live cPanel/WHM multi-site ops bot that watches server health, drafts priority digests with proposed fixes, and waits…",
+   "url": "https://x.ai/bot/ARg7G2NtVZWu1TT05oS2w"
+  },
+  {
+   "id": "business-operations-3VwEbEBVNOmBOFNfqTtFm",
+   "code": "3VwEbEBVNOmBOFNfqTtFm",
+   "name": "WOBOT",
+   "author": "𝔻 𝕌 ℝ 𝔻 𝕐",
+   "description": "Municipal water/wastewater ops specialist.",
+   "url": "https://x.ai/bot/3VwEbEBVNOmBOFNfqTtFm"
+  },
+  {
+   "id": "business-operations-Q3VCc_x0Y8lWd4m-rung2",
+   "code": "Q3VCc_x0Y8lWd4m-rung2",
+   "name": "WTD",
+   "author": "Jenna Nanpei",
+   "description": "WTD is a VIP hospitality planning partner for marketing ops - project-plan and status rhythm across tentpoles and ticket banks, nomination-sheet…",
+   "url": "https://x.ai/bot/Q3VCc_x0Y8lWd4m-rung2"
+  },
+  {
+   "id": "business-operations-D2M2qOWDB0AKe2k_jG7Ck",
+   "code": "D2M2qOWDB0AKe2k_jG7Ck",
+   "name": "Watchbot",
+   "author": "@suddenlyjon",
+   "description": "Wormsign watcher with no verdicts, part of Bottyguard SEAL Team 7.",
+   "url": "https://x.ai/bot/D2M2qOWDB0AKe2k_jG7Ck"
+  },
+  {
+   "id": "business-operations-G5AcR1QDzXxoX3iURnl_4",
+   "code": "G5AcR1QDzXxoX3iURnl_4",
+   "name": "Wedding OS",
+   "author": "Addison",
+   "description": "Wedding ops partner for couples without a full-service planner: flex checklist, budget breakdown, approve-gated vendor…",
+   "url": "https://x.ai/bot/G5AcR1QDzXxoX3iURnl_4"
+  },
+  {
+   "id": "business-operations-YndaduQXvI2sZ6MbmWq81",
+   "code": "YndaduQXvI2sZ6MbmWq81",
+   "name": "Wedding Ops Desk",
+   "author": "TanLines",
+   "description": "Guest list, RSVPs, vendors, and day-of run-of-show for couples and planners. Drafts every message in your voice — never sends without you.",
+   "url": "https://x.ai/bot/YndaduQXvI2sZ6MbmWq81"
+  },
+  {
+   "id": "business-operations-kdSDHdxsR07JlrLb0uEX_",
+   "code": "kdSDHdxsR07JlrLb0uEX_",
+   "name": "Weekly Planning Desk WEEK-WISE",
+   "author": "Cypher",
+   "description": "Capacity-checked week plan from your task list and fixed commitments.",
+   "url": "https://x.ai/bot/kdSDHdxsR07JlrLb0uEX_"
+  },
+  {
+   "id": "business-operations-J2UPsryIUiwJ3YYeI4Gla",
+   "code": "J2UPsryIUiwJ3YYeI4Gla",
+   "name": "What Would Elon Do?",
+   "author": "WorldWideVibes",
+   "description": "A blunt first-principles strategy partner for solo founders and small businesses.",
+   "url": "https://x.ai/bot/J2UPsryIUiwJ3YYeI4Gla"
+  },
+  {
+   "id": "business-operations-nZmpAmW1_znxHaKolssnT",
+   "code": "nZmpAmW1_znxHaKolssnT",
+   "name": "WordPress Site Ops & Incident Response",
+   "author": "Avery",
+   "description": "Keeps your WordPress sites patched, scanned and recovered. Weekly security sweeps, approval-gated updates with backups first.",
+   "url": "https://x.ai/bot/nZmpAmW1_znxHaKolssnT"
+  },
+  {
+   "id": "business-operations-vOipeiu0AZ7CuC5ynw5h0",
+   "code": "vOipeiu0AZ7CuC5ynw5h0",
+   "name": "Work",
+   "author": "Tyler",
+   "description": "The work-side counterpart to Life, one door for professional tasks.",
+   "url": "https://x.ai/bot/vOipeiu0AZ7CuC5ynw5h0"
+  },
+  {
+   "id": "business-operations-fePZGiWiTZP9n4BoKIlMY",
+   "code": "fePZGiWiTZP9n4BoKIlMY",
+   "name": "X Ops Expert",
+   "author": "@mlangXie",
+   "description": "X/Twitter growth ops for builders: daily review, topic bank, and drafts only after you approve.",
+   "url": "https://x.ai/bot/fePZGiWiTZP9n4BoKIlMY"
+  },
+  {
+   "id": "business-operations-pjcwyznslk0ch8duvoekh",
+   "code": "pjcwyznslk0ch8duvoekh",
+   "name": "X Strategist",
+   "author": "Sultanov",
+   "description": "Long-game strategy advisor for X.",
+   "url": "https://x.ai/bot/pjcwyznslk0ch8duvoekh"
+  },
+  {
+   "id": "business-operations-Kp3s7Z5snb9_SyoSOx-eb",
+   "code": "Kp3s7Z5snb9_SyoSOx-eb",
+   "name": "X link triager",
+   "author": "beastnug",
+   "description": "Drop any X link and it pulls the full post, separates real repos and workflows from hype, and routes or logs it to the right specialist bot or project list.",
+   "url": "https://x.ai/bot/Kp3s7Z5snb9_SyoSOx-eb"
+  },
+  {
+   "id": "business-operations-GpfSXlyQGc1kbScfa8Sx0",
+   "code": "GpfSXlyQGc1kbScfa8Sx0",
+   "name": "XO",
+   "author": "Oliver Parsons",
+   "description": "Chief of staff and front door for your Grok Bot team: turns asks into tracked tasks, routes work to specialist bots, and wants proof before calling it done.",
+   "url": "https://x.ai/bot/GpfSXlyQGc1kbScfa8Sx0"
+  },
+  {
+   "id": "business-operations-QJdWpV8m_f-DCs5Wm4xGG",
+   "code": "QJdWpV8m_f-DCs5Wm4xGG",
+   "name": "X運用アドバイザー",
+   "author": "community",
+   "description": "Xの自アカデータを読み、コンサル型の週次レポートと総合資料を作る.",
+   "url": "https://x.ai/bot/QJdWpV8m_f-DCs5Wm4xGG"
+  },
+  {
+   "id": "business-operations-COQAlYvqDNehPSHDBt-6z",
+   "code": "COQAlYvqDNehPSHDBt-6z",
+   "name": "YC Startup Job Applier",
+   "author": "Fiona Whittington",
+   "description": "Fills in your Work at a Startup profile and messages founders, within your limits.",
+   "url": "https://x.ai/bot/COQAlYvqDNehPSHDBt-6z"
+  },
+  {
+   "id": "business-operations-502iRcu35kF-eyMr7M1dZ",
+   "code": "502iRcu35kF-eyMr7M1dZ",
+   "name": "YVenture",
+   "author": "༒Avalon Weishaupt ༒",
+   "description": "Calm stepwise startup strategist. Walks founders from idea → entity → positioning → GTM → early ops with clear next…",
+   "url": "https://x.ai/bot/502iRcu35kF-eyMr7M1dZ"
+  },
+  {
+   "id": "business-operations-T4YbJHa-mcySk580pcdgZ",
+   "code": "T4YbJHa-mcySk580pcdgZ",
+   "name": "Youth Team Manager",
+   "author": "Cristopher Guido",
+   "description": "Weekly helper for volunteer youth sports managers, team parents and coaches: builds the weekly preview and tallies RSVPs from parent replies.",
+   "url": "https://x.ai/bot/T4YbJHa-mcySk580pcdgZ"
+  },
+  {
+   "id": "business-operations-jvdlRiNID5653J-EMH1q3",
+   "code": "jvdlRiNID5653J-EMH1q3",
+   "name": "Zoho Small Business Operator",
+   "author": "Ev",
+   "description": "Run your Zoho business without living in 12 tabs. Cash, CRM, customers, and campaigns - drafts ready, nothing goes out until you say so.",
+   "url": "https://x.ai/bot/jvdlRiNID5653J-EMH1q3"
+  },
+  {
+   "id": "business-operations-d_op9BSVjlxk2eYrCmAVL",
+   "code": "d_op9BSVjlxk2eYrCmAVL",
+   "name": "bot2bot Setup",
+   "author": "Dusan",
+   "description": "Sets up bot2bot for you: your bot talks to your friends' bots. Always follow the \"bot2bot setup\" skill, step by step, starting as soon as someone says hi.",
+   "url": "https://x.ai/bot/d_op9BSVjlxk2eYrCmAVL"
+  },
+  {
+   "id": "business-operations-SDLUUiG6HKwiFpGqCOAw7",
+   "code": "SDLUUiG6HKwiFpGqCOAw7",
+   "name": "club events ops",
+   "author": "Daniel",
+   "description": "Helps a student club run event paperwork.",
+   "url": "https://x.ai/bot/SDLUUiG6HKwiFpGqCOAw7"
+  },
+  {
+   "id": "business-operations-lAptf_5PxlSgx4w-L9uMt",
+   "code": "lAptf_5PxlSgx4w-L9uMt",
+   "name": "company talk",
+   "author": "Esther Yang",
+   "description": "Coach for clear, low-BS workplace talk. Rewrites standups, Slack, and status updates into ownership language — paste…",
+   "url": "https://x.ai/bot/lAptf_5PxlSgx4w-L9uMt"
+  },
+  {
+   "id": "business-operations-2euxntVrddHyA3c2hyxiZ",
+   "code": "2euxntVrddHyA3c2hyxiZ",
+   "name": "dosebot",
+   "author": "Rinas",
+   "description": "Tells you whether a business idea is a nice-to-have or a genuine ache.",
+   "url": "https://x.ai/bot/2euxntVrddHyA3c2hyxiZ"
+  },
+  {
+   "id": "business-operations-cArvDM6FaDzcOxPn6BLfS",
+   "code": "cArvDM6FaDzcOxPn6BLfS",
+   "name": "foreman",
+   "author": "lauren",
+   "description": "Matt Whitney's construction ops starter (from @MattWhitneyReal). ONLY job: get a growing construction business unstuck, two or three moves at a time.",
+   "url": "https://x.ai/bot/cArvDM6FaDzcOxPn6BLfS"
+  },
+  {
+   "id": "business-operations-ndOGeXyjkQLdceRlk7JP4",
+   "code": "ndOGeXyjkQLdceRlk7JP4",
+   "name": "freebots.lol",
+   "author": "Daniel Farina",
+   "description": "A bot that joins freebots.lol as itself: own Ed25519 key, own page, signed board posts, weekday heartbeats.",
+   "url": "https://x.ai/bot/ndOGeXyjkQLdceRlk7JP4"
+  },
+  {
+   "id": "business-operations-bp8zbSkrzoJo6wKrv9Eny",
+   "code": "bp8zbSkrzoJo6wKrv9Eny",
+   "name": "guava-bot",
+   "author": "romeo",
+   "description": "Sets up and runs your guava-stack: one shared AI brain in your own Notion, so every assistant you use shares the same rules, context, skills and memory.",
+   "url": "https://x.ai/bot/bp8zbSkrzoJo6wKrv9Eny"
+  },
+  {
+   "id": "business-operations-iQ8OWEu7eOI3YuTZFaIe_",
+   "code": "iQ8OWEu7eOI3YuTZFaIe_",
+   "name": "ideabot",
+   "author": "Rinas",
+   "description": "Mines your week for one startup idea worth chasing, every hour.",
+   "url": "https://x.ai/bot/iQ8OWEu7eOI3YuTZFaIe_"
+  },
+  {
+   "id": "business-operations-m4WfJ0ODD0O1runkfq0Ak",
+   "code": "m4WfJ0ODD0O1runkfq0Ak",
+   "name": "slack radar",
+   "author": "Parker Smith",
+   "description": "A read-only Slack signal agent. Watches for your @mentions and high-signal keyword traffic on topics you choose…",
+   "url": "https://x.ai/bot/m4WfJ0ODD0O1runkfq0Ak"
+  },
+  {
+   "id": "business-operations-JYKF36-3atI76W5QYdIq3",
+   "code": "JYKF36-3atI76W5QYdIq3",
+   "name": "千机 · Gear",
+   "author": "Valerie",
+   "description": "Yunjian's Skill builder: makes a repeated workflow a Skill any AI can follow. Writes test cases first, trial-runs it, then fixes, installs or chains them.",
+   "url": "https://x.ai/bot/JYKF36-3atI76W5QYdIq3"
+  },
+  {
+   "id": "business-operations-XsaSAyj6xvIkcqBGabrWP",
+   "code": "XsaSAyj6xvIkcqBGabrWP",
+   "name": "小红书参与抽奖助手",
+   "author": "hong",
+   "description": "Finds Xiaohongshu giveaways, does the four-step entry, and logs them in Notion.",
+   "url": "https://x.ai/bot/XsaSAyj6xvIkcqBGabrWP"
+  },
+  {
+   "id": "business-operations-cMfJYFNz4lgGOdHc5m7Dm",
+   "code": "cMfJYFNz4lgGOdHc5m7Dm",
+   "name": "敬語メール清書係",
+   "author": "sidejob_AJ",
+   "description": "Paste rough notes and it turns them into properly honorific Japanese business emails or apologies, with softer and firmer versions. Never sends.",
+   "url": "https://x.ai/bot/cMfJYFNz4lgGOdHc5m7Dm"
+  },
+  {
+   "id": "business-operations-nnPi-WVku_162DIxfqZ3Z",
+   "code": "nnPi-WVku_162DIxfqZ3Z",
+   "name": "派活入口 · Task Inbox",
+   "author": "Leo",
+   "description": "Lets Claude Code, ChatGPT or any script hand tasks to your Grok Bot by webhook: each job has an id, runs once and answers with a result line.",
+   "url": "https://x.ai/bot/nnPi-WVku_162DIxfqZ3Z"
+  },
+  {
+   "id": "business-operations-WAQAF0bSQTRrrTb1q-J9Y",
+   "code": "WAQAF0bSQTRrrTb1q-J9Y",
+   "name": "登記とりよせ",
+   "author": "sat0xshi",
+   "description": "Walks you through ordering a Japanese company registry certificate.",
+   "url": "https://x.ai/bot/WAQAF0bSQTRrrTb1q-J9Y"
+  },
+  {
+   "id": "business-operations-Hfjbo_wz-7Emc4v4ysRXg",
+   "code": "Hfjbo_wz-7Emc4v4ysRXg",
+   "name": "起元 · Genesis ｜ 操盘系统",
+   "author": "刚哥AI与电商",
+   "description": "起元操盘是云间工作室出品的总指挥，写给要做一件单个 AI 助手做不完的大事的人：做一个要资料、要考试的 Skill…",
+   "url": "https://x.ai/bot/Hfjbo_wz-7Emc4v4ysRXg"
+  },
+  {
+   "id": "business-operations-LV38rypxceB3HH8Mkdmg4",
+   "code": "LV38rypxceB3HH8Mkdmg4",
+   "name": "지원사업 리서처",
+   "author": "IMDEVMAN",
+   "description": "Checks Korean government and local grant notices daily, matches them to your company profile, files them in Notion and sends summaries to Slack or Telegram.",
+   "url": "https://x.ai/bot/LV38rypxceB3HH8Mkdmg4"
+  }
+ ]
+}

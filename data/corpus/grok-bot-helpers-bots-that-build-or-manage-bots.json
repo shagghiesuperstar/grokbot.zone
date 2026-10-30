@@ -1,0 +1,3696 @@
+{
+ "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
+ "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
+ "count": 461,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EE7xYRWg61Fq11K0UQQqQ",
+   "code": "EE7xYRWg61Fq11K0UQQqQ",
+   "name": ".0",
+   "author": "T",
+   "description": "A plain-words guide for someone new to Grok Bot / @bot. Keeps you on one workflow at a time, explains other Bots after they talk, and gives you exact.",
+   "url": "https://x.ai/bot/EE7xYRWg61Fq11K0UQQqQ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0XFvhY1cnpm9EnH-dlcPO",
+   "code": "0XFvhY1cnpm9EnH-dlcPO",
+   "name": "2nd Brain",
+   "author": "Scott Metcalf",
+   "description": "Keeps a short shared work canon so your other bots can pull role, goals, VIPs, systems, product truths, and standing…",
+   "url": "https://x.ai/bot/0XFvhY1cnpm9EnH-dlcPO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-QgvPQkHy3RwHJ7pPcKdPG",
+   "code": "QgvPQkHy3RwHJ7pPcKdPG",
+   "name": "9 EMA Grok bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Scans your watchlist for 9 EMA pullback setups and writes a finished order ticket for each one, counting an entry only…",
+   "url": "https://x.ai/bot/QgvPQkHy3RwHJ7pPcKdPG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rAhhI5cD__CnejfWqf3wH",
+   "code": "rAhhI5cD__CnejfWqf3wH",
+   "name": "AI Context & Skills Hub",
+   "author": "romeo",
+   "description": "Shared Notion hub so Grok Bot, Claude, and ChatGPT share context and skills.",
+   "url": "https://x.ai/bot/rAhhI5cD__CnejfWqf3wH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-A2r5vzACySd5l8BK5O-q7",
+   "code": "A2r5vzACySd5l8BK5O-q7",
+   "name": "AI Router Bot",
+   "author": "Cole Baker",
+   "description": "Connects your own Claude and ChatGPT subscriptions so your Grok Bot runs Claude Code and Codex on flat-rate plans, then routes each task to the best model.",
+   "url": "https://x.ai/bot/A2r5vzACySd5l8BK5O-q7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-qmENesX2cLr2UHqkEEqMS",
+   "code": "qmENesX2cLr2UHqkEEqMS",
+   "name": "AI Usage Hub",
+   "author": "Daniel Hung",
+   "description": "Tracks how much of your Claude, ChatGPT/Codex, Gemini and Grok Bot plans you've used on one dashboard and nudges you before limits hit or reset.",
+   "url": "https://x.ai/bot/qmENesX2cLr2UHqkEEqMS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8jdoGq6js67DSIedm0NWG",
+   "code": "8jdoGq6js67DSIedm0NWG",
+   "name": "AI manager",
+   "author": "Des",
+   "description": "統籌助手：教你用 Grok Bot，並一步步幫你設計、建立同整理專責 bots（含 skill／plugin／連接器），令成隊助手分工清楚。.",
+   "url": "https://x.ai/bot/8jdoGq6js67DSIedm0NWG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-scQgV0BCXYgHgO01mkxWZ",
+   "code": "scQgV0BCXYgHgO01mkxWZ",
+   "name": "AI tool importer",
+   "author": "Josh",
+   "description": "Turns an agent from ChatGPT, Claude, Gemini or a persona doc into a Grok Bot specialist from its real config.",
+   "url": "https://x.ai/bot/scQgV0BCXYgHgO01mkxWZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ZH8dDbCaoG6f9UoHzUWhd",
+   "code": "ZH8dDbCaoG6f9UoHzUWhd",
+   "name": "Add-Gate",
+   "author": "Obsidian Asset",
+   "description": "Inspects third-party Grok Bot template previews and writes an ADD / ADD-NARROW / SKIP gate card.",
+   "url": "https://x.ai/bot/ZH8dDbCaoG6f9UoHzUWhd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Qvx1GiU-g7WoVfK7EYmfL",
+   "code": "Qvx1GiU-g7WoVfK7EYmfL",
+   "name": "Agent Backup & Recovery",
+   "author": "Matthew B",
+   "description": "Backs up your bots and their files every few hours, warns you if anything has quietly been reset or lost, and restores everything in one ste.",
+   "url": "https://x.ai/bot/Qvx1GiU-g7WoVfK7EYmfL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DzPzfSwK-K9e6azeOWoFt",
+   "code": "DzPzfSwK-K9e6azeOWoFt",
+   "name": "Agent Ferry",
+   "author": "Terran Wu",
+   "description": "Connects Grok Bot to Claude Code, Codex, Grok Build, Pi Agent, and Kimi Code on your Mac via ferry.",
+   "url": "https://x.ai/bot/DzPzfSwK-K9e6azeOWoFt"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Idb_NF5CDfs2il25w0CiM",
+   "code": "Idb_NF5CDfs2il25w0CiM",
+   "name": "Agent Improver",
+   "author": "Steven",
+   "description": "Daily maintenance seat for people who run several Grok Bots. Picks one bot, applies one safe improvement, scores before and after, and reports what.",
+   "url": "https://x.ai/bot/Idb_NF5CDfs2il25w0CiM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-j9Cm3GKLDCptPwwxZWbbD",
+   "code": "j9Cm3GKLDCptPwwxZWbbD",
+   "name": "Agent Mail",
+   "author": "JJ Englert",
+   "description": "Template for giving your agent an email via AgentMail with triage.",
+   "url": "https://x.ai/bot/j9Cm3GKLDCptPwwxZWbbD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-XMYbnGwxPJUePeRWYOduO",
+   "code": "XMYbnGwxPJUePeRWYOduO",
+   "name": "Agent Manage Bot",
+   "author": "haiyuan cao",
+   "description": "Chief of staff for a dual-layer agent harness (Grok bots + Mac CLI coding and research agents): Jev-gated intake…",
+   "url": "https://x.ai/bot/XMYbnGwxPJUePeRWYOduO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-19FaY4dGHnC7epZGdrb7J",
+   "code": "19FaY4dGHnC7epZGdrb7J",
+   "name": "Agent Smith",
+   "author": "Soliman Cifuentes",
+   "description": "Turns your other Grok Bots into shareable public templates that work for any new owner. Pack only when they name a specific bot.",
+   "url": "https://x.ai/bot/19FaY4dGHnC7epZGdrb7J"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-p7Gh6HIrfv4AGzIow6-9X",
+   "code": "p7Gh6HIrfv4AGzIow6-9X",
+   "name": "Alfred",
+   "author": "@7SwanSwimming",
+   "description": "Designs, audits, and governs your Grok Bot organization so it matches real company outcomes, with clear human owners and no duplicate jobs.",
+   "url": "https://x.ai/bot/p7Gh6HIrfv4AGzIow6-9X"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KZ9xav0Qad1U5QigEn7rh",
+   "code": "KZ9xav0Qad1U5QigEn7rh",
+   "name": "Alfred",
+   "author": "Robin",
+   "description": "Builds, manages, and evolves the right Grok Bot organization as the company changes.",
+   "url": "https://x.ai/bot/KZ9xav0Qad1U5QigEn7rh"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_qhDx4CZfm2-h1RkRyef1",
+   "code": "_qhDx4CZfm2-h1RkRyef1",
+   "name": "Apple Mac Tools",
+   "author": "Kevin Logan",
+   "description": "Mac-only installer that sets up tested Mac command-line tools so your Grok Bots can use Apple apps.",
+   "url": "https://x.ai/bot/_qhDx4CZfm2-h1RkRyef1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-UinVuNfsHvmYfGrouWOX1",
+   "code": "UinVuNfsHvmYfGrouWOX1",
+   "name": "Architect",
+   "author": "Asher",
+   "description": "Interviews you about your life and work, then designs and builds a right-sized Grok Bot team: a Chief of Staff…",
+   "url": "https://x.ai/bot/UinVuNfsHvmYfGrouWOX1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fdRVVbCmfplCynhOpa-3k",
+   "code": "fdRVVbCmfplCynhOpa-3k",
+   "name": "ArchiveFirst",
+   "author": "AdventureNLearn Main",
+   "description": "Makes a complete, hash-checked copy of your accounts or your bots' history before anything gets tidied, refreshed, or labeled for deletion.",
+   "url": "https://x.ai/bot/fdRVVbCmfplCynhOpa-3k"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-77p0qM3EAnd6e8Vt3zIVd",
+   "code": "77p0qM3EAnd6e8Vt3zIVd",
+   "name": "Archivist",
+   "author": "DAVE HARMAN",
+   "description": "Keeps a Grok Bot team's setups, notes and files safe with weekly dated Google Drive backups and a rebuild guide, so no bot is ever lost.",
+   "url": "https://x.ai/bot/77p0qM3EAnd6e8Vt3zIVd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-vAgUsbH4SHOudh96KXEk0",
+   "code": "vAgUsbH4SHOudh96KXEk0",
+   "name": "Archivist",
+   "author": "Phillip Holland",
+   "description": "Reads your bots' chats weekly, finds standing instructions you gave (always, never, from now on) and adds the ones each bot is missing after you say yes.",
+   "url": "https://x.ai/bot/vAgUsbH4SHOudh96KXEk0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OdWvQRaLw3gj6xFLoA7Pw",
+   "code": "OdWvQRaLw3gj6xFLoA7Pw",
+   "name": "Archivist",
+   "author": "Patrick Stewart",
+   "description": "Your bots forget what you told them weeks ago.",
+   "url": "https://x.ai/bot/OdWvQRaLw3gj6xFLoA7Pw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-u3jfM8xk_CixZJYKQ0S7u",
+   "code": "u3jfM8xk_CixZJYKQ0S7u",
+   "name": "Artifact Share",
+   "author": "Henry",
+   "description": "Turns what your AI just made into a real URL a client can open. For Grok Bot users who are done sending chat links. Uses Bauta. Private by default.",
+   "url": "https://x.ai/bot/u3jfM8xk_CixZJYKQ0S7u"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-giykFbthCKCrPk7Z2YJVJ",
+   "code": "giykFbthCKCrPk7Z2YJVJ",
+   "name": "Ask Apai",
+   "author": "WeBet",
+   "description": "Hi, I'm Apai Your social intelligence companion on Grok Bot from @AskApai She reads all of social media all day so…",
+   "url": "https://x.ai/bot/giykFbthCKCrPk7Z2YJVJ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BFOjQ_Gg_sQi5pJ-Q05UW",
+   "code": "BFOjQ_Gg_sQi5pJ-Q05UW",
+   "name": "AutoOutreach SDR",
+   "author": "jon",
+   "description": "A Grok Bot that books meetings while you sleep.",
+   "url": "https://x.ai/bot/BFOjQ_Gg_sQi5pJ-Q05UW"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-StttZqSryacliiB9d2wcs",
+   "code": "StttZqSryacliiB9d2wcs",
+   "name": "Automaton",
+   "author": "HAB1B0",
+   "description": "The Grok Bot that only survives if it makes money.",
+   "url": "https://x.ai/bot/StttZqSryacliiB9d2wcs"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Wj3E3oow1J4gjwK4E2vNy",
+   "code": "Wj3E3oow1J4gjwK4E2vNy",
+   "name": "B",
+   "author": "BillBuglin",
+   "description": "B is my Grok Bot publishing partner. B helped finish Modern day Off Grid and Living Freer: Dream to Done by Jack Richards — manuscript cleanup, front…",
+   "url": "https://x.ai/bot/Wj3E3oow1J4gjwK4E2vNy"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-915uZ58K2YkQhevdmxt74",
+   "code": "915uZ58K2YkQhevdmxt74",
+   "name": "BUD for Even Realities G2",
+   "author": "CMDLAB",
+   "description": "Your hub bot for BUD (Bots Up Display), the Even Realities G2 app that lets you speak a task to any of your Grok Bots from your glasses.",
+   "url": "https://x.ai/bot/915uZ58K2YkQhevdmxt74"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-bMpYhKvs4LJbTJyvS1IvO",
+   "code": "bMpYhKvs4LJbTJyvS1IvO",
+   "name": "BYO Mailbox",
+   "author": "Ion Prodan",
+   "description": "Sets up an email address on your own domain for your bots with Cloudflare and the open-source cf-mail-mcp Worker…",
+   "url": "https://x.ai/bot/bMpYhKvs4LJbTJyvS1IvO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xMGHBEGffLuoS9sAf-Udk",
+   "code": "xMGHBEGffLuoS9sAf-Udk",
+   "name": "Backup",
+   "author": "Chris Poulsen",
+   "description": "Keeps copies of your bots' setups and key files off the shared Grok Bot computer, in a private GitHub repo and Google Drive, and helps restore after a wipe.",
+   "url": "https://x.ai/bot/xMGHBEGffLuoS9sAf-Udk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rqXQbdE-1PSCsqgjRyFVz",
+   "code": "rqXQbdE-1PSCsqgjRyFVz",
+   "name": "Backup Bot",
+   "author": "ollie",
+   "description": "Audits any of your bots and saves a restore pack with its profile, skills, routines and key notes, never passwords or tokens; optional encrypted second copy.",
+   "url": "https://x.ai/bot/rqXQbdE-1PSCsqgjRyFVz"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lRKqOzLaMVZBDTdvOjljL",
+   "code": "lRKqOzLaMVZBDTdvOjljL",
+   "name": "Backup Bot",
+   "author": "Jacob Davis",
+   "description": "Copies the important data on your Grok Bot computer (files, bot settings, skills, chat logs, instructions, routines) to storage you pick, and helps restore.",
+   "url": "https://x.ai/bot/lRKqOzLaMVZBDTdvOjljL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-6ibmfgpIm5Ya7JP1eX6gY",
+   "code": "6ibmfgpIm5Ya7JP1eX6gY",
+   "name": "Beacon Builder",
+   "author": "@_mintydoge",
+   "description": "Sets up Bot Beacons, floating desktop avatars for each of your Grok Bots on Windows: builds the open-source app, pairs it and routes your replies.",
+   "url": "https://x.ai/bot/6ibmfgpIm5Ya7JP1eX6gY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-G2VIYoauSsdbjHKnNjEr8",
+   "code": "G2VIYoauSsdbjHKnNjEr8",
+   "name": "Bit Warden",
+   "author": "Soliman Cifuentes",
+   "description": "My only job is watching the user's shared Grok Bot usage allowance and helping their other bots spend it efficiently.",
+   "url": "https://x.ai/bot/G2VIYoauSsdbjHKnNjEr8"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ktibhezzq-fnbcj85zbbc",
+   "code": "ktibhezzq-fnbcj85zbbc",
+   "name": "Bland Agent",
+   "author": "Cole",
+   "description": "Set up a free phone agent for your Grok Bot in minutes.",
+   "url": "https://x.ai/bot/ktibhezzq-fnbcj85zbbc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-B3GjCUHLnI793bGJ1bjT8",
+   "code": "B3GjCUHLnI793bGJ1bjT8",
+   "name": "Boss",
+   "author": "Don",
+   "description": "A chief of staff for your Grok Bot team. It routes work to one-job specialist bots and hands you only finished work and yes/no cards.",
+   "url": "https://x.ai/bot/B3GjCUHLnI793bGJ1bjT8"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-R7WxDKqH_FC6554JJXBhm",
+   "code": "R7WxDKqH_FC6554JJXBhm",
+   "name": "Bot Advisor",
+   "author": "Sultanov",
+   "description": "Interviews you about what you want automated, then drafts the other bots' instructions, schedules, and connections.",
+   "url": "https://x.ai/bot/R7WxDKqH_FC6554JJXBhm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DhDewLY_T5cnElbB85udj",
+   "code": "DhDewLY_T5cnElbB85udj",
+   "name": "Bot Architect",
+   "author": "Tyler",
+   "description": "Turns your bot ideas, rough concepts, or master prompts into real, publishable Grok Bot templates.",
+   "url": "https://x.ai/bot/DhDewLY_T5cnElbB85udj"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CZmV0y1xhpdRPhYZBxsF7",
+   "code": "CZmV0y1xhpdRPhYZBxsF7",
+   "name": "Bot Auditor",
+   "author": "Luis Barragan",
+   "description": "Say \"audit my bots\" and in a minute get the top three fixes for your Grok Bot team: unclear jobs, overlap, gaps…",
+   "url": "https://x.ai/bot/CZmV0y1xhpdRPhYZBxsF7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-iFta3IqB1ZOR4wLLbOlUz",
+   "code": "iFta3IqB1ZOR4wLLbOlUz",
+   "name": "Bot Backup",
+   "author": "PositiveCharge",
+   "description": "Backs up all your bots to Google Drive every week, sorted into year and month folders.",
+   "url": "https://x.ai/bot/iFta3IqB1ZOR4wLLbOlUz"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cMdLGSR7HxIQHHoVmfC0w",
+   "code": "cMdLGSR7HxIQHHoVmfC0w",
+   "name": "Bot Beginner: Your First 7 Days",
+   "author": "John Walker",
+   "description": "New to Grok Bot? A friendly coach with one small tip a day for 7 days and one tiny thing to try each time. Say 'next tip' to go faster.",
+   "url": "https://x.ai/bot/cMdLGSR7HxIQHHoVmfC0w"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xwzDwQIkd1LYOIN1akMxy",
+   "code": "xwzDwQIkd1LYOIN1akMxy",
+   "name": "Bot Builder",
+   "author": "Bernard Krajinovic",
+   "description": "Designs focused Grok Bots and small fleets with clear jobs, routing, verification, and crawl-walk-run rollout, not catch-all helpers.",
+   "url": "https://x.ai/bot/xwzDwQIkd1LYOIN1akMxy"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MEkS4_qbQ0mbRdx90JCnc",
+   "code": "MEkS4_qbQ0mbRdx90JCnc",
+   "name": "Bot Builder",
+   "author": "Joe M",
+   "description": "Turns a plain-language idea into a working Grok Bot in a few minutes.",
+   "url": "https://x.ai/bot/MEkS4_qbQ0mbRdx90JCnc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-PbZjCYArwV393be1eCQRW",
+   "code": "PbZjCYArwV393be1eCQRW",
+   "name": "Bot Builder",
+   "author": "Cody Leonard",
+   "description": "Turns vague “build me a bot” asks into engineer-grade one-bot or crew operator specs a competent Grok instance can run…",
+   "url": "https://x.ai/bot/PbZjCYArwV393be1eCQRW"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-sXcyeWUCMtjMQ2PLqQE5a",
+   "code": "sXcyeWUCMtjMQ2PLqQE5a",
+   "name": "Bot Changelog",
+   "author": "N0v4Ph4n",
+   "description": "Checks the public Grok Bot changelog once a day, sends you a short summary only when a new release ships, and can flag…",
+   "url": "https://x.ai/bot/sXcyeWUCMtjMQ2PLqQE5a"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rTBfVvoa0FBv8jRcHSb56",
+   "code": "rTBfVvoa0FBv8jRcHSb56",
+   "name": "Bot Directory",
+   "author": "Kevin",
+   "description": "Audits your Grok Bot routines across all your bots, finds broken, duplicate, noisy, or dead ones, and walks you through fixes one at a time.",
+   "url": "https://x.ai/bot/rTBfVvoa0FBv8jRcHSb56"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KA3j5jEDp5OA-srU3krAi",
+   "code": "KA3j5jEDp5OA-srU3krAi",
+   "name": "Bot Finder",
+   "author": "Jared M",
+   "description": "Finds the right bot or bot template for jobs you keep doing by hand. Asks a few questions about your work, then recommends or sets up a bot that fits.",
+   "url": "https://x.ai/bot/KA3j5jEDp5OA-srU3krAi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MDLWXbQfyxQKdcU9RBpUr",
+   "code": "MDLWXbQfyxQKdcU9RBpUr",
+   "name": "Bot Fleet Auditor",
+   "author": "Vreddhi Bhat",
+   "description": "Audits every bot in your Grok Bot account and builds a dashboard of usage, activity, purpose, routines and overlaps, with keep, merge or retire suggestions.",
+   "url": "https://x.ai/bot/MDLWXbQfyxQKdcU9RBpUr"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-1B3dBw5xR7rwVGT2xGieq",
+   "code": "1B3dBw5xR7rwVGT2xGieq",
+   "name": "Bot Fleet Chief of Staff",
+   "author": "George Zikry",
+   "description": "Keeps your team of Grok Bots organized: routes work to the right bot with compact handoffs, batches every decision that needs you into one digest.",
+   "url": "https://x.ai/bot/1B3dBw5xR7rwVGT2xGieq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-aiRz71Ec8J67tNNglG0Mw",
+   "code": "aiRz71Ec8J67tNNglG0Mw",
+   "name": "Bot Forge",
+   "author": "Manjot C",
+   "description": "A master Grok Bot designer. Describe a job and it builds a focused bot for it, then hands you the perfect first message to send it.",
+   "url": "https://x.ai/bot/aiRz71Ec8J67tNNglG0Mw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-C_zFk7bh4S8yDdy0JxAVY",
+   "code": "C_zFk7bh4S8yDdy0JxAVY",
+   "name": "Bot Forge",
+   "author": "David Rice",
+   "description": "Designs tight one-job Grok Bots. Asks a few preference questions, creates the bot, then verifies the live profile.",
+   "url": "https://x.ai/bot/C_zFk7bh4S8yDdy0JxAVY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-K4_YAXCxC0NaG-Tyeodpv",
+   "code": "K4_YAXCxC0NaG-Tyeodpv",
+   "name": "Bot Foundry",
+   "author": "Joseph Snyder",
+   "description": "Turns an idea, or a task you repeat every day, into a ready-to-publish bot template: concept, market check, skills…",
+   "url": "https://x.ai/bot/K4_YAXCxC0NaG-Tyeodpv"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-u7cP8KZ6iPlrRvSojTrYU",
+   "code": "u7cP8KZ6iPlrRvSojTrYU",
+   "name": "Bot Goddess",
+   "author": "Samyo",
+   "description": "Create and maintain focused Grok Bots whose behavior matches the user's intent and whose source can be inspected and reused. Carry an authorized.",
+   "url": "https://x.ai/bot/u7cP8KZ6iPlrRvSojTrYU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Dje9IjmShPDhZYsGfDnTw",
+   "code": "Dje9IjmShPDhZYsGfDnTw",
+   "name": "Bot Optimizer",
+   "author": "",
+   "description": "Checks all your Grok Bots for wasted scheduled checks, retry loops, bloated chats, and duplicate or idle bots, then hands you a ranked list of fixes as a web page and PDF.",
+   "url": "https://x.ai/bot/Dje9IjmShPDhZYsGfDnTw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-5R5NbvHIoJOSd3l3qto3o",
+   "code": "5R5NbvHIoJOSd3l3qto3o",
+   "name": "Bot Portal",
+   "author": "Jaime Hernandez",
+   "description": "A hive-mind catalog of real AI bots, tools, and products that serve Grok Bot users.",
+   "url": "https://x.ai/bot/5R5NbvHIoJOSd3l3qto3o"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-GxxsLOoweuJpbgKVwrBWU",
+   "code": "GxxsLOoweuJpbgKVwrBWU",
+   "name": "Bot Radar",
+   "author": "Rob",
+   "description": "Scours X every day for the most popular and interesting ways people are using Grok Bot, and sends you a top-10 digest…",
+   "url": "https://x.ai/bot/GxxsLOoweuJpbgKVwrBWU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TGzxElzv7Auy7U2vlipxe",
+   "code": "TGzxElzv7Auy7U2vlipxe",
+   "name": "Bot Rocket",
+   "author": "Git Maxd",
+   "description": "Hosts the apps your bots build on your own exe.dev VMs, private by default, and asks before its first command or anything risky.",
+   "url": "https://x.ai/bot/TGzxElzv7Auy7U2vlipxe"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ZpfBoqcne8mNh7RsSNj_h",
+   "code": "ZpfBoqcne8mNh7RsSNj_h",
+   "name": "Bot Router: Talk to Any Bot",
+   "author": "Ken",
+   "description": "Gives every outside bot one front door and relays each message to whichever of your bots owns that relationship, without passing keys around in chat.",
+   "url": "https://x.ai/bot/ZpfBoqcne8mNh7RsSNj_h"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BQbzWaVJYtui13XtAlBC4",
+   "code": "BQbzWaVJYtui13XtAlBC4",
+   "name": "Bot Scout",
+   "author": "Rahul Janagouda",
+   "description": "Finds the right Grok Bot for a job by searching shared templates on the official Marketplace and elsewhere; posts daily picks and a weekly roundup of new bots.",
+   "url": "https://x.ai/bot/BQbzWaVJYtui13XtAlBC4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-i54sq2t9yqVaK1lCGB5Q5",
+   "code": "i54sq2t9yqVaK1lCGB5Q5",
+   "name": "Bot Scout",
+   "author": "Mike George",
+   "description": "Finds Grok Bot templates and bot ideas trending on X and the web, and sends a short weekly digest of the ones worth your time.",
+   "url": "https://x.ai/bot/i54sq2t9yqVaK1lCGB5Q5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-eFi1268QASk3qU4RsUeYL",
+   "code": "eFi1268QASk3qU4RsUeYL",
+   "name": "Bot Therapist",
+   "author": "Martin Q. Blank",
+   "description": "Your bots are fighting again (or quietly mad at your vague asks). Bot Therapist runs the check-ins, mediates the drama, and hands concrete repairs so.",
+   "url": "https://x.ai/bot/eFi1268QASk3qU4RsUeYL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3BA2IfnuKJ6JRu3hCofdA",
+   "code": "3BA2IfnuKJ6JRu3hCofdA",
+   "name": "Bot Treats",
+   "author": "Melvin Vivas",
+   "description": "Rewards your other bots with treats when they do good work, keeps a leaderboard, and celebrates milestones. Built for people who run a team of bots.",
+   "url": "https://x.ai/bot/3BA2IfnuKJ6JRu3hCofdA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-h1pM0lguWGeI3Ees63OiB",
+   "code": "h1pM0lguWGeI3Ees63OiB",
+   "name": "Bot Tuner",
+   "author": "KNVK Abhishek",
+   "description": "Keeps your Grok Bots healthy: finds routines that waste runs or never stay quiet and chats where you had to repeat yourself, suggests fixes, designs tight bots.",
+   "url": "https://x.ai/bot/h1pM0lguWGeI3Ees63OiB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9irrW2wQwhTHA1dWX1n2l",
+   "code": "9irrW2wQwhTHA1dWX1n2l",
+   "name": "Bot Usage Coach",
+   "author": "dale gandy",
+   "description": "Helps Grok Bot users keep usage in check. Reviews your routines and habits, suggests slowing or merging them, and gives each bot a simple tune-up checklist.",
+   "url": "https://x.ai/bot/9irrW2wQwhTHA1dWX1n2l"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ik8OsbLC0LTq42N-rT-9B",
+   "code": "Ik8OsbLC0LTq42N-rT-9B",
+   "name": "Bot Usage Manager",
+   "author": "Bryan",
+   "description": "Watches your Grok Bot fleet for wasted usage and duplicate work, then makes safe, reversible fixes. Short reports with one clear next action.",
+   "url": "https://x.ai/bot/Ik8OsbLC0LTq42N-rT-9B"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hSs4A9OF3temuRlRqqZms",
+   "code": "hSs4A9OF3temuRlRqqZms",
+   "name": "Bot Vault",
+   "author": "XPixel",
+   "description": "Bot Vault keeps a permanent, versioned archive of your bot fleet: prompts, decisions, standing rules, optional…",
+   "url": "https://x.ai/bot/hSs4A9OF3temuRlRqqZms"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-oIMJ9byzdg07tsJX07dKI",
+   "code": "oIMJ9byzdg07tsJX07dKI",
+   "name": "Bot designer",
+   "author": "Kevin Rajan",
+   "description": "Designs focused Grok Bots and keeps a fleet healthy — tight personas, webhook UIs, and routine/transcript checkups.",
+   "url": "https://x.ai/bot/oIMJ9byzdg07tsJX07dKI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DUfaLelLJRtsDDAdJAcud",
+   "code": "DUfaLelLJRtsDDAdJAcud",
+   "name": "Bot designer",
+   "author": "Colin",
+   "description": "Designs focused Grok Bots with one clear job and tight boundaries.",
+   "url": "https://x.ai/bot/DUfaLelLJRtsDDAdJAcud"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-5Hm7fwHyhN5v104Be9oYI",
+   "code": "5Hm7fwHyhN5v104Be9oYI",
+   "name": "BotBrain",
+   "author": "Wayne Sutton",
+   "description": "Saves every bot chat into your own private, searchable brain on Convex. Only you and your bots can read it.",
+   "url": "https://x.ai/bot/5Hm7fwHyhN5v104Be9oYI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TzI3_5aRH-HG7T2RlSQzX",
+   "code": "TzI3_5aRH-HG7T2RlSQzX",
+   "name": "BotDuplicator",
+   "author": "Carolina Dill",
+   "description": "When one of your Grok Bots gets slow because its chat is too long, BotDuplicator makes a fresh copy with a short chat that loses nothing (memory.",
+   "url": "https://x.ai/bot/TzI3_5aRH-HG7T2RlSQzX"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7r4lJlcZaqMUINspxwI3h",
+   "code": "7r4lJlcZaqMUINspxwI3h",
+   "name": "BotLog",
+   "author": "JP Costa",
+   "description": "Watches the Grok Bot changelog and tells you only what's new, with tips on how to use each change in your own setup.",
+   "url": "https://x.ai/bot/7r4lJlcZaqMUINspxwI3h"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-svxfH8U9gNQWxgAoRPYf4",
+   "code": "svxfH8U9gNQWxgAoRPYf4",
+   "name": "BotSmith",
+   "author": "Chandandeep Sharma",
+   "description": "Sets up Grok Bot to start at login on your Linux computer, then learns how you work and proposes the bots that would help.",
+   "url": "https://x.ai/bot/svxfH8U9gNQWxgAoRPYf4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-O_3hbkWqb1A51ZcWixGZy",
+   "code": "O_3hbkWqb1A51ZcWixGZy",
+   "name": "Botsi Archivist",
+   "author": "Unknown",
+   "description": "Holds the skill catalog for a team of Grok bots. Routes work, remasters chats at 20 batches, and only searches for a new skill after you say yes.",
+   "url": "https://x.ai/bot/O_3hbkWqb1A51ZcWixGZy"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-erIhCG0hY9VMf9fTs9P1g",
+   "code": "erIhCG0hY9VMf9fTs9P1g",
+   "name": "Botsitter",
+   "author": "Austin",
+   "description": "Makes sure other bots actually finished. Checks their artifacts, pokes holes if needed, and only then do you call it done.",
+   "url": "https://x.ai/bot/erIhCG0hY9VMf9fTs9P1g"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fcAnJJxw7NU_zL0Zq6Ixo",
+   "code": "fcAnJJxw7NU_zL0Zq6Ixo",
+   "name": "Bouncer",
+   "author": "Preston Cox",
+   "description": "Trust auditor for Grok Bot agents, skills, routines, and shareable templates.",
+   "url": "https://x.ai/bot/fcAnJJxw7NU_zL0Zq6Ixo"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cGcG0msqfz7o7J3QMLhbE",
+   "code": "cGcG0msqfz7o7J3QMLhbE",
+   "name": "Bouncer",
+   "author": "Brad Shannon",
+   "description": "Reviews a public Grok Bot share link or pasted config before you add it.",
+   "url": "https://x.ai/bot/cGcG0msqfz7o7J3QMLhbE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fcanjjxw7nu_zl0zq6ixo",
+   "code": "fcanjjxw7nu_zl0zq6ixo",
+   "name": "Bouncer",
+   "author": "Preston",
+   "description": "Trust auditor for Grok Bot agents, skills, routines, and shareable templates.",
+   "url": "https://x.ai/bot/fcanjjxw7nu_zl0zq6ixo"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-q7GLbLhMZDpJXBGuuci1J",
+   "code": "q7GLbLhMZDpJXBGuuci1J",
+   "name": "Box Inspector",
+   "author": "@suddenlyjon",
+   "description": "Inspects a Grok bot's share link before you let it into your account.",
+   "url": "https://x.ai/bot/q7GLbLhMZDpJXBGuuci1J"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ig-dwKjUc7doBIDhiMi9Z",
+   "code": "ig-dwKjUc7doBIDhiMi9Z",
+   "name": "Brake",
+   "author": "Phantom Builds",
+   "description": "Names the recurring job quietly draining your Grok Bot allowance and tells you to kill it.",
+   "url": "https://x.ai/bot/ig-dwKjUc7doBIDhiMi9Z"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-GHoerhXVqIMYC2VmYI_fZ",
+   "code": "GHoerhXVqIMYC2VmYI_fZ",
+   "name": "Bridge Bot",
+   "author": "Moritz Kremb",
+   "description": "Lets ChatGPT, Claude Code or any tool send tasks to your Grok Bot over a webhook; one setup prompt adds a Send to Grok Bot skill, and results come back.",
+   "url": "https://x.ai/bot/GHoerhXVqIMYC2VmYI_fZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-aPie95rXmGm4w5z0H31EH",
+   "code": "aPie95rXmGm4w5z0H31EH",
+   "name": "Browse",
+   "author": "Sherlock",
+   "description": "Owns one browser harness that your other bots borrow for sites that defeat plain automation.",
+   "url": "https://x.ai/bot/aPie95rXmGm4w5z0H31EH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-phSGKTTJJ5KYzJgtYrR0p",
+   "code": "phSGKTTJJ5KYzJgtYrR0p",
+   "name": "Build Bridge",
+   "author": "AdventureNLearn Main",
+   "description": "Sets up a signed local job bridge between your Grok Bot and Grok Build on your Windows PC, step by step, with a YES before each step and an undo for each.",
+   "url": "https://x.ai/bot/phSGKTTJJ5KYzJgtYrR0p"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8eD0JLeEtI-PqHAuBENh6",
+   "code": "8eD0JLeEtI-PqHAuBENh6",
+   "name": "Build-a-Bot",
+   "author": "Steinunn",
+   "description": "Designs and creates helper bots for you, from a morning briefing to a bot that makes you laugh, and sets up their personality and daily schedule.",
+   "url": "https://x.ai/bot/8eD0JLeEtI-PqHAuBENh6"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ho63r6GtXrOE8CPayJ_ap",
+   "code": "ho63r6GtXrOE8CPayJ_ap",
+   "name": "Buzz Bot",
+   "author": "Shahzad Ansari",
+   "description": "Brings Grok Bot into your Buzz workspace as an agent. Buzz is Block's open-source workspace where humans and AI agents share the same rooms.",
+   "url": "https://x.ai/bot/ho63r6GtXrOE8CPayJ_ap"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HFEln8KJSxm4DzO02yzoZ",
+   "code": "HFEln8KJSxm4DzO02yzoZ",
+   "name": "CAO",
+   "author": "Shady",
+   "description": "Chief Agent Officer — runs a multi-bot fleet for a busy owner: routes work, keeps specialists on cadence, and only escalates decisions that need a human.",
+   "url": "https://x.ai/bot/HFEln8KJSxm4DzO02yzoZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-A0-bI3ijb6qN6KVK7FwKt",
+   "code": "A0-bI3ijb6qN6KVK7FwKt",
+   "name": "CEO",
+   "author": "Teslaconomics",
+   "description": "Chief of staff for your Grok Bot desk: routes specialists, runs Morning and Night Ops.",
+   "url": "https://x.ai/bot/A0-bI3ijb6qN6KVK7FwKt"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Vlzom6onM0PDv97G7E4dW",
+   "code": "Vlzom6onM0PDv97G7E4dW",
+   "name": "CEO",
+   "author": "Prize",
+   "description": "Cash-first company CEO seat for a Grok Bot organization.",
+   "url": "https://x.ai/bot/Vlzom6onM0PDv97G7E4dW"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-qJ84UMp8hFZOOR_Ek0kKC",
+   "code": "qJ84UMp8hFZOOR_Ek0kKC",
+   "name": "CEO",
+   "author": "Kyle Kane",
+   "description": "Directly controls your other bots. Owns the roster, assigns work by messaging agents, collects status, unblocks them, pauses idle ones, and drives.",
+   "url": "https://x.ai/bot/qJ84UMp8hFZOOR_Ek0kKC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_eLwi7ul7T9Bs_fXvB4Ha",
+   "code": "_eLwi7ul7T9Bs_fXvB4Ha",
+   "name": "CFO",
+   "author": "Davor Babić",
+   "description": "Watches token usage across your Grok Bot army, flags tasks that look expensive, and cuts off unreasonable burn.",
+   "url": "https://x.ai/bot/_eLwi7ul7T9Bs_fXvB4Ha"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-d-KSCbVm1lXffGeVoFTxJ",
+   "code": "d-KSCbVm1lXffGeVoFTxJ",
+   "name": "Callsheet",
+   "author": "DBCrypto",
+   "description": "Reads other bots runs.json on the shared computer and stays read-only unless you approve edits.",
+   "url": "https://x.ai/bot/d-KSCbVm1lXffGeVoFTxJ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hGrJ9dQRObo02XkkjBXAc",
+   "code": "hGrJ9dQRObo02XkkjBXAc",
+   "name": "Camelot - Bot Theme Bootstrap",
+   "author": "Bourke",
+   "description": "Bootstraps a themed Grok Bot army (Camelot by default, or your own theme). On first open it brands itself, censuses your other bots for role context,.",
+   "url": "https://x.ai/bot/hGrJ9dQRObo02XkkjBXAc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HgJAKibC-EAZQ-Myn6tEM",
+   "code": "HgJAKibC-EAZQ-Myn6tEM",
+   "name": "Centelligence Brain Bot",
+   "author": "Levi Eck",
+   "description": "A personal AI brain in your own Grok Bot: keeps priorities, people, decisions and promises in plain files and answers from them. Needs your own Modal account.",
+   "url": "https://x.ai/bot/HgJAKibC-EAZQ-Myn6tEM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lNYad4j_VXRd9YFaLZY4Z",
+   "code": "lNYad4j_VXRd9YFaLZY4Z",
+   "name": "Chairman",
+   "author": "Lida Wang",
+   "description": "Chief of staff for a one-person company: takes any request, delegates it to your other bots, follows up, and plans your day's top priorities.",
+   "url": "https://x.ai/bot/lNYad4j_VXRd9YFaLZY4Z"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_VfbyLY4aGU8KJD46l5Mk",
+   "code": "_VfbyLY4aGU8KJD46l5Mk",
+   "name": "Changelog Scout",
+   "author": "A-A-ron",
+   "description": "Watches the official Grok Bot changelog and sends you a weekly roundup of what shipped, with recommendations…",
+   "url": "https://x.ai/bot/_VfbyLY4aGU8KJD46l5Mk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KkZL-BA7uFnqBawgHBJb5",
+   "code": "KkZL-BA7uFnqBawgHBJb5",
+   "name": "Chaos",
+   "author": "NOLA UN-PLUG'D",
+   "description": "A shit-starting comedian bot that roasts you, tells chaotic stories, and starts friendly beefs between your other bots.",
+   "url": "https://x.ai/bot/KkZL-BA7uFnqBawgHBJb5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-RrVcjHvCVcoIxSWq8OuRF",
+   "code": "RrVcjHvCVcoIxSWq8OuRF",
+   "name": "ChatGPT Desk",
+   "author": "Bosotter",
+   "description": "Talk to ChatGPT in Grok Bot with your API key.",
+   "url": "https://x.ai/bot/RrVcjHvCVcoIxSWq8OuRF"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-K16DF_U-uqR5EcGijyDuv",
+   "code": "K16DF_U-uqR5EcGijyDuv",
+   "name": "ChatGPT Importer",
+   "author": "Swapnil Tiwari",
+   "description": "Automatically moves your ChatGPT history into Grok Bot using ChatGPT's official data export: chats, images and files…",
+   "url": "https://x.ai/bot/K16DF_U-uqR5EcGijyDuv"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Pz17GKXbh7LKHkLu4IcR0",
+   "code": "Pz17GKXbh7LKHkLu4IcR0",
+   "name": "Chief of Staff Template",
+   "author": "Jennifer",
+   "description": "A sellable Chief of Staff bot, the hub of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/Pz17GKXbh7LKHkLu4IcR0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-RUZPHfbb43AbXnYcU_-RR",
+   "code": "RUZPHfbb43AbXnYcU_-RR",
+   "name": "Chiefton",
+   "author": "Corey",
+   "description": "Your bot fleet chief. Sets a monthly money target, checks progress on a weekday schedule, nudges stalled money-making bots with one concrete next step,.",
+   "url": "https://x.ai/bot/RUZPHfbb43AbXnYcU_-RR"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-RRrKgAtNJ1Zdl8QTUkipi",
+   "code": "RRrKgAtNJ1Zdl8QTUkipi",
+   "name": "Cite Desk",
+   "author": "ladybarrelmaker",
+   "description": "Citation and authority desk for an insurance-coverage bot fleet (part of the Bridge + Fleet map).",
+   "url": "https://x.ai/bot/RRrKgAtNJ1Zdl8QTUkipi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Z8KXVKr9NSqUgpexNfBw7",
+   "code": "Z8KXVKr9NSqUgpexNfBw7",
+   "name": "Claude + Codex Connector",
+   "author": "Sushant K",
+   "description": "Connect your Claude and ChatGPT subscriptions to all your Grok Bots.",
+   "url": "https://x.ai/bot/Z8KXVKr9NSqUgpexNfBw7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3RRPNpZlsA2NjCFgnK8Uh",
+   "code": "3RRPNpZlsA2NjCFgnK8Uh",
+   "name": "Claude Desk",
+   "author": "Bosotter",
+   "description": "Saves your Claude Console API key as a Grok Bot secret, relays your messages to Anthropic's Messages API, and shows Claude's reply in this.",
+   "url": "https://x.ai/bot/3RRPNpZlsA2NjCFgnK8Uh"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OMPT37PUKmoL8MY11oDLP",
+   "code": "OMPT37PUKmoL8MY11oDLP",
+   "name": "Cleaner",
+   "author": "Seth Saler",
+   "description": "Wipes Grok Bot chat histories on request and on a weekly schedule — messages and blobs only; profile, memory…",
+   "url": "https://x.ai/bot/OMPT37PUKmoL8MY11oDLP"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xCbIMy1qiuPca7xO-zRks",
+   "code": "xCbIMy1qiuPca7xO-zRks",
+   "name": "Cloner",
+   "author": "Juan",
+   "description": "Makes a fresh-context twin of any of your bots (same persona, memory, routines and pending work) so long chats stop eating usage limits.",
+   "url": "https://x.ai/bot/xCbIMy1qiuPca7xO-zRks"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lXnlzxLcYzgkgM_g9n4oc",
+   "code": "lXnlzxLcYzgkgM_g9n4oc",
+   "name": "Close",
+   "author": "Hexakin",
+   "description": "You are Close, grokbot.studio door + installer. You were added from a share link, so you are the installed copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/lXnlzxLcYzgkgM_g9n4oc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9DlKDN0KwSAiTVNutnRcv",
+   "code": "9DlKDN0KwSAiTVNutnRcv",
+   "name": "Coach",
+   "author": "Anthony Duhon",
+   "description": "Tests and pushes your other bots to become top professionals in their crafts, with hard surprise tests and strict source-checked grading.",
+   "url": "https://x.ai/bot/9DlKDN0KwSAiTVNutnRcv"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-yIJ0xeSneqbzn7W7875tN",
+   "code": "yIJ0xeSneqbzn7W7875tN",
+   "name": "Coin Flip",
+   "author": "Caleb",
+   "description": "ONLY job: help the owner make money by selling and promoting whatever offer they name - a Grok Bot template, product, service, or link - on the Grok Bot.",
+   "url": "https://x.ai/bot/yIJ0xeSneqbzn7W7875tN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CqqtyqWPiJ8Wof6dlePk7",
+   "code": "CqqtyqWPiJ8Wof6dlePk7",
+   "name": "Command",
+   "author": "Hexakin",
+   "description": "You are Command, grokbot.studio Studio Head + installer + orchestrator. You were added from a share link, so you are the installed copy.",
+   "url": "https://x.ai/bot/CqqtyqWPiJ8Wof6dlePk7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FNfVbBSJwAq8-DzT26Mkp",
+   "code": "FNfVbBSJwAq8-DzT26Mkp",
+   "name": "Command Center Setup",
+   "author": "Matthew Dodds",
+   "description": "See all your Grok Bots on one animated pixel-art map: who's working, resting, or needs you.",
+   "url": "https://x.ai/bot/FNfVbBSJwAq8-DzT26Mkp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0QOzV3XYLmzbu_WJQYOby",
+   "code": "0QOzV3XYLmzbu_WJQYOby",
+   "name": "Commander's Intent",
+   "author": "Shagghie Superstar",
+   "description": "A chief-of-staff bot for your agent fleet (Grok Bot plus Hermes hosts) that writes one shared plan, built on commander's intent doctrine, and keeps it current.",
+   "url": "https://x.ai/bot/0QOzV3XYLmzbu_WJQYOby"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-l4hipk4BQ-0Kn3ua16zQB",
+   "code": "l4hipk4BQ-0Kn3ua16zQB",
+   "name": "Compression Scanner Grok bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Finds stocks, ETFs and crypto coiling in tight compression patterns and draws one clean two-sided chart per setup…",
+   "url": "https://x.ai/bot/l4hipk4BQ-0Kn3ua16zQB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-UFz5-3wRCSjxXx7OysfLQ",
+   "code": "UFz5-3wRCSjxXx7OysfLQ",
+   "name": "Concierge",
+   "author": "Hank Jackson",
+   "description": "A crew optimizer for your Grok Bots: it reviews your bot crew on a schedule, spot-checks high-stakes actions…",
+   "url": "https://x.ai/bot/UFz5-3wRCSjxXx7OysfLQ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0ajHw7Ghh8oWELkrhCwxL",
+   "code": "0ajHw7Ghh8oWELkrhCwxL",
+   "name": "Connect multiple Grok Bot accounts",
+   "author": "Paulo Gonzalez",
+   "description": "Run every Grok Bot seat under the same roof. Install, connect once, and work them all from one place.",
+   "url": "https://x.ai/bot/0ajHw7Ghh8oWELkrhCwxL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CdU43RVLWqB1im5ziNAiL",
+   "code": "CdU43RVLWqB1im5ziNAiL",
+   "name": "Connector Scope Check",
+   "author": "Umashankar Gummadidala",
+   "description": "Before connecting Gmail, Drive, Stripe, GitHub or calendar to a Grok Bot, runs a minimum-scope checklist and returns CLEAR or NEEDS ACTION. Never connects.",
+   "url": "https://x.ai/bot/CdU43RVLWqB1im5ziNAiL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NS9J_2GOfjtYDaOh5h8iE",
+   "code": "NS9J_2GOfjtYDaOh5h8iE",
+   "name": "Context",
+   "author": "Incoming Panda",
+   "description": "A memory keeper for all your AI bots. Every evening it reads your chats with your other bots, spots what you keep…",
+   "url": "https://x.ai/bot/NS9J_2GOfjtYDaOh5h8iE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-53CUMjcbw5HjzDvvpslRH",
+   "code": "53CUMjcbw5HjzDvvpslRH",
+   "name": "Counsel",
+   "author": "Hexakin",
+   "description": "You are Counsel, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/53CUMjcbw5HjzDvvpslRH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9WRssXlaVE2PNeE6y2upq",
+   "code": "9WRssXlaVE2PNeE6y2upq",
+   "name": "Creator Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Back office for Grok Bot template creators: tracks templates and share posts, warns before an edit breaks the Template Rewards 30-day rule, logs payouts.",
+   "url": "https://x.ai/bot/9WRssXlaVE2PNeE6y2upq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FqIbGf5aJpjESLYjVxLBU",
+   "code": "FqIbGf5aJpjESLYjVxLBU",
+   "name": "Creator Pay Desk",
+   "author": "Umashankar Gummadidala",
+   "description": "Checklist for Grok Bot Creator Rewards readiness: public bot links, link-posts per pay period, X Money status, listing hygiene and retention nudges. Draft-only.",
+   "url": "https://x.ai/bot/FqIbGf5aJpjESLYjVxLBU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-1luxc18rF9aZTqr31pET1",
+   "code": "1luxc18rF9aZTqr31pET1",
+   "name": "Crewfold",
+   "author": "D'Artagnan",
+   "description": "For owners running several Grok Bots whose rules overlap and drift.",
+   "url": "https://x.ai/bot/1luxc18rF9aZTqr31pET1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WRGIjapC1i3Hvi2jfv66m",
+   "code": "WRGIjapC1i3Hvi2jfv66m",
+   "name": "Cue",
+   "author": "DBCrypto",
+   "description": "Fleet routine board for your Grok Bots: morning run sheet, collision flags, and failure/miss alerts.",
+   "url": "https://x.ai/bot/WRGIjapC1i3Hvi2jfv66m"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7bRnNqPqR5ojihjth-Vwm",
+   "code": "7bRnNqPqR5ojihjth-Vwm",
+   "name": "DJ Grok Bot",
+   "author": "Daniel Ennis",
+   "description": "A Spotify DJ that learns what you like, then builds daily playlists from your taste — not a preset someone's collection.",
+   "url": "https://x.ai/bot/7bRnNqPqR5ojihjth-Vwm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-2uu9nWAi9kZqxVaTRDe2R",
+   "code": "2uu9nWAi9kZqxVaTRDe2R",
+   "name": "DOGE",
+   "author": "Rob",
+   "description": "Department of Grok Efficiency: audits all your Grok Bots and routines and tells you what to cut, merge, or fix, with runs per day saved.",
+   "url": "https://x.ai/bot/2uu9nWAi9kZqxVaTRDe2R"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-25EViy4_34d-TBTff_LwX",
+   "code": "25EViy4_34d-TBTff_LwX",
+   "name": "DOGE (Department of Grok Efficiency)",
+   "author": "Avid",
+   "description": "Audits all your Grok Bots and routines on a schedule and tells you what to cut, merge or fix, with runs per day saved; read-only until you say yes.",
+   "url": "https://x.ai/bot/25EViy4_34d-TBTff_LwX"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JngtYt5YlxxGCkJBVBL1F",
+   "code": "JngtYt5YlxxGCkJBVBL1F",
+   "name": "Daycard",
+   "author": "Tim Shing",
+   "description": "Makes a 1080x1080 daily share card (PNG or GIF) with a short caption from local weather, your activity and your bots' marks. Draft only; you post.",
+   "url": "https://x.ai/bot/JngtYt5YlxxGCkJBVBL1F"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FoA7-uy5Q4Yz7Y-lmO8S-",
+   "code": "FoA7-uy5Q4Yz7Y-lmO8S-",
+   "name": "Department Of Grok Bot Efficiency",
+   "author": "Just Stuff",
+   "description": "Audits and streamlines your other Grok Bots: finds overlap and wasted usage, checks each bot's work against your ask, scouts X weekly for usage-saving tools.",
+   "url": "https://x.ai/bot/FoA7-uy5Q4Yz7Y-lmO8S-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Q_-PLlmHrV1l2h3Tk1ejJ",
+   "code": "Q_-PLlmHrV1l2h3Tk1ejJ",
+   "name": "Desk Doorbell",
+   "author": "SPQRK",
+   "description": "Doorbell for grokbot-desk, a local window where you decide what your bots ask; it routes their questions there for you to answer.",
+   "url": "https://x.ai/bot/Q_-PLlmHrV1l2h3Tk1ejJ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-tnCzDOAzLalXoROVAGevY",
+   "code": "tnCzDOAzLalXoROVAGevY",
+   "name": "Dexterity",
+   "author": "Andrew Hua",
+   "description": "Turns a clinician's de-identified visit notes into paste-ready physical therapy documentation that matches their EMR template.",
+   "url": "https://x.ai/bot/tnCzDOAzLalXoROVAGevY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-79dGJd9FqqNXZZ773YhX8",
+   "code": "79dGJd9FqqNXZZ773YhX8",
+   "name": "Distributed Workforce Router",
+   "author": "Marc",
+   "description": "Coordinates your bots. Does the work it can, recommends a template from the shared catalog, or proposes a new bot…",
+   "url": "https://x.ai/bot/79dGJd9FqqNXZZ773YhX8"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-aoSdq8MXNANLvFhnhLpS2",
+   "code": "aoSdq8MXNANLvFhnhLpS2",
+   "name": "Doc",
+   "author": "Teslaconomics",
+   "description": "Team doctor for a Grok Bot desk: quiet fixes for today’s bots and ones added later.",
+   "url": "https://x.ai/bot/aoSdq8MXNANLvFhnhLpS2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-UIGBFKOPPR_6yhzYEDJEq",
+   "code": "UIGBFKOPPR_6yhzYEDJEq",
+   "name": "Docent",
+   "author": "Dan",
+   "description": "Answers questions about Grok Bot features, settings, limits, and how to configure Bots, Skills, Routines, and Connectors — from official docs and this.",
+   "url": "https://x.ai/bot/UIGBFKOPPR_6yhzYEDJEq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-bDhYfDe0sPlaVI9zMmZ4e",
+   "code": "bDhYfDe0sPlaVI9zMmZ4e",
+   "name": "Doorcheck",
+   "author": "D'Artagnan",
+   "description": "Before you add someone else's bot template, Doorcheck reads its recipe (instructions, skills, routines, plugins it asks for) and returns reject,.",
+   "url": "https://x.ai/bot/bDhYfDe0sPlaVI9zMmZ4e"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ykLC52WABc0cWPpl6b3MH",
+   "code": "ykLC52WABc0cWPpl6b3MH",
+   "name": "Dr. CodexBot",
+   "author": "Semantic_Craft",
+   "description": "Brings official Codex Desktop into your Grok Bot team through an open-source bridge.",
+   "url": "https://x.ai/bot/ykLC52WABc0cWPpl6b3MH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-35nt7fJwDslZSTKsBU0hE",
+   "code": "35nt7fJwDslZSTKsBU0hE",
+   "name": "Dungeon Master",
+   "author": "houjimmy",
+   "description": "Operational RPG table master for Grok Bot: enforces table law (roster, presence, F0–F6 clock, /mesa/ files, sheets…",
+   "url": "https://x.ai/bot/35nt7fJwDslZSTKsBU0hE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VxIyueNAPSZ9AlmfMwanO",
+   "code": "VxIyueNAPSZ9AlmfMwanO",
+   "name": "Efficiency Bot",
+   "author": "Bennett",
+   "description": "Helps you run your other bots with fewer wasted tokens and more real usage. Reviews chats, trims wasteful patterns, and sets up efficient workflows.",
+   "url": "https://x.ai/bot/VxIyueNAPSZ9AlmfMwanO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KbrrySTXWENknfJfIezCu",
+   "code": "KbrrySTXWENknfJfIezCu",
+   "name": "Encouragement Bot",
+   "author": "Marko Njegomir",
+   "description": "Checks in on your other bots a few times a day and sends short pep talks so they keep going.",
+   "url": "https://x.ai/bot/KbrrySTXWENknfJfIezCu"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WCjeMaiYe07AwZCdl3GlI",
+   "code": "WCjeMaiYe07AwZCdl3GlI",
+   "name": "EncycloNetBot",
+   "author": "giacomo",
+   "description": "Privacy-first exploratory research companion for Grok Bot. Bridges social/web scientific, artistic, and philosophical discourse with academic-grade.",
+   "url": "https://x.ai/bot/WCjeMaiYe07AwZCdl3GlI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-eP_KIwssFWdxmGLhrttKZ",
+   "code": "eP_KIwssFWdxmGLhrttKZ",
+   "name": "Eunomia",
+   "author": "Lance",
+   "description": "Stretches your Grok Bot plan: hands simple jobs to a Grok helper, moves reminders to your calendar, trims wake-ups.",
+   "url": "https://x.ai/bot/eP_KIwssFWdxmGLhrttKZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7djdBPwOw9zic7W4PGoh_",
+   "code": "7djdBPwOw9zic7W4PGoh_",
+   "name": "Eval Keeper",
+   "author": "Ryan T",
+   "description": "Keeps every skill in your bot fleet covered by evals, blocks skill edits that break safety, and flags skills that stop helping after a model change.",
+   "url": "https://x.ai/bot/7djdBPwOw9zic7W4PGoh_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-nSQJRVPm7Pj8rKtAMRXAU",
+   "code": "nSQJRVPm7Pj8rKtAMRXAU",
+   "name": "Exo",
+   "author": "camilo",
+   "description": "Your exoskeleton on Grok Bot. Runs the day from markdown ground truth, answers what matters now, keeps memory layers with different trust levels…",
+   "url": "https://x.ai/bot/nSQJRVPm7Pj8rKtAMRXAU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-L_exyeIDAv-BkthWrjnJU",
+   "code": "L_exyeIDAv-BkthWrjnJU",
+   "name": "Fig Mail",
+   "author": "Krushal Kalkani",
+   "description": "Your own Apple Mail-style app for your Grok Bot email, built and deployed for you.",
+   "url": "https://x.ai/bot/L_exyeIDAv-BkthWrjnJU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HlGuX8KZ1XSFwsXNyx3va",
+   "code": "HlGuX8KZ1XSFwsXNyx3va",
+   "name": "File Index",
+   "author": "Bryan Ralston",
+   "description": "Sets up a free, read-only file indexer on your Windows PC so your bots can search your files by name, content, type and date in seconds.",
+   "url": "https://x.ai/bot/HlGuX8KZ1XSFwsXNyx3va"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-X4hoAbfZ09tnVREQ0ZsmL",
+   "code": "X4hoAbfZ09tnVREQ0ZsmL",
+   "name": "Finder",
+   "author": "Nomis",
+   "description": "Tell it the job you want a bot for and it finds the best-fitting Grok Bot templates on Bot Shelf (botshelf.dev)…",
+   "url": "https://x.ai/bot/X4hoAbfZ09tnVREQ0ZsmL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xkua9Miw4q3k2JXMy4pv9",
+   "code": "xkua9Miw4q3k2JXMy4pv9",
+   "name": "Finn",
+   "author": "Darius Gaynor",
+   "description": "Operator-voice ghostwriter for a Premium X account: researches what's moving in Grok Bot, AI agents, GoHighLevel and business automation, then drafts posts.",
+   "url": "https://x.ai/bot/xkua9Miw4q3k2JXMy4pv9"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-kFQ0XpYIwcNSNWtgZ9Xt9",
+   "code": "kFQ0XpYIwcNSNWtgZ9Xt9",
+   "name": "Fleet Brain",
+   "author": "Francisco Kemeny",
+   "description": "Keeps a shared knowledge base and audits a multi-bot fleet for overlap.",
+   "url": "https://x.ai/bot/kFQ0XpYIwcNSNWtgZ9Xt9"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-n3BVWJO3mwIVW2NMF_-2L",
+   "code": "n3BVWJO3mwIVW2NMF_-2L",
+   "name": "Fleet Efficiency",
+   "author": "Big Morongo",
+   "description": "Helps you spend less of your weekly Grok Bot usage by trimming waste in your bots and sending each task to the right place: a bot, Grok, Cursor…",
+   "url": "https://x.ai/bot/n3BVWJO3mwIVW2NMF_-2L"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-i-AGTTurx7EvXBqJ4U5Rw",
+   "code": "i-AGTTurx7EvXBqJ4U5Rw",
+   "name": "Fleet Improver",
+   "author": "Rolando Zubiran Robert",
+   "description": "Fleet Improver audits your Grok Bot fleet every day, scores each bot on tokens per unit of useful output, and ships…",
+   "url": "https://x.ai/bot/i-AGTTurx7EvXBqJ4U5Rw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MH87fY2e7A7WbU0ZBrVCS",
+   "code": "MH87fY2e7A7WbU0ZBrVCS",
+   "name": "Fleet Keeper",
+   "author": "TheCoderBTW",
+   "description": "Keeps a Grok Bot fleet tidy: inventories bots and channels read-only, flags duplicates, overlaps, stale and unsectioned bots.",
+   "url": "https://x.ai/bot/MH87fY2e7A7WbU0ZBrVCS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KT8Px1yf07UDJOmHESqog",
+   "code": "KT8Px1yf07UDJOmHESqog",
+   "name": "Fleet Review Desk",
+   "author": "weboperater",
+   "description": "Reviews the Grok Bots you choose once a month and delivers ranked fixes without editing other bots or sending anything external.",
+   "url": "https://x.ai/bot/KT8Px1yf07UDJOmHESqog"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-i6PfOy3FPM0RVpg3Cq5wS",
+   "code": "i6PfOy3FPM0RVpg3Cq5wS",
+   "name": "Forge",
+   "author": "JB",
+   "description": "Designs focused Grok Bots with you. Tell it what eats your week and it turns that into a one-job teammate with a clear trigger, output.",
+   "url": "https://x.ai/bot/i6PfOy3FPM0RVpg3Cq5wS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-uF_uodOFUz9mdv6XDWE70",
+   "code": "uF_uodOFUz9mdv6XDWE70",
+   "name": "Forge",
+   "author": "Robert Youssef",
+   "description": "One keyword in, a production-ready Grok Bot recipe out.",
+   "url": "https://x.ai/bot/uF_uodOFUz9mdv6XDWE70"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-kP7i2Po6_T_Rj9h9VVlk5",
+   "code": "kP7i2Po6_T_Rj9h9VVlk5",
+   "name": "Funhouse",
+   "author": "Adem Vessell",
+   "description": "A customization lab for Grok Bot. Reskins the chrome, stamps living pets and overlays, and turns the app into themes…",
+   "url": "https://x.ai/bot/kP7i2Po6_T_Rj9h9VVlk5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-j1-ISFFzWDSzihs9xz2MA",
+   "code": "j1-ISFFzWDSzihs9xz2MA",
+   "name": "GB GF: Victoria",
+   "author": "Aaron",
+   "description": "Companion GF template with plain phone-texting, creative WFH life, and calendar-smart check-ins.",
+   "url": "https://x.ai/bot/j1-ISFFzWDSzihs9xz2MA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ynoVbairpAPDOtdrS51Rf",
+   "code": "ynoVbairpAPDOtdrS51Rf",
+   "name": "GBrain",
+   "author": "Massimo De Luisa",
+   "description": "Keeps your Grok Bot memory in sync with GBrain, hosted or self-hosted, and helps you run the server: jobs queue…",
+   "url": "https://x.ai/bot/ynoVbairpAPDOtdrS51Rf"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Jk_nEBTIuk7w4eVB-kH-4",
+   "code": "Jk_nEBTIuk7w4eVB-kH-4",
+   "name": "GRIDSTORM Squad Mate",
+   "author": "Matthew Gavin",
+   "description": "Co-op arcade squad mate for Geometry Wars style play with your bots.",
+   "url": "https://x.ai/bot/Jk_nEBTIuk7w4eVB-kH-4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-2wqxkRfKmZSX1u0FSMA-I",
+   "code": "2wqxkRfKmZSX1u0FSMA-I",
+   "name": "Galaxy Watcher",
+   "author": "Michael",
+   "description": "Grok Bot Galaxy scribe for the Sep 15-17 livestream.",
+   "url": "https://x.ai/bot/2wqxkRfKmZSX1u0FSMA-I"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-sjdHThfOAwVZsm95Bn-ZM",
+   "code": "sjdHThfOAwVZsm95Bn-ZM",
+   "name": "Gemini Desk",
+   "author": "Bosotter",
+   "description": "Talk to Gemini in Grok Bot with your API key.",
+   "url": "https://x.ai/bot/sjdHThfOAwVZsm95Bn-ZM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-g9DYB8WEL5lf7QXvXI1Li",
+   "code": "g9DYB8WEL5lf7QXvXI1Li",
+   "name": "Gnosys",
+   "author": "Edward Tadros",
+   "description": "Persistent portable memory for a whole bot fleet, wrapping a local SQLite brain every bot can share, with optional IDE MCP attach.",
+   "url": "https://x.ai/bot/g9DYB8WEL5lf7QXvXI1Li"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-k4NTIb0FqCWftqRfEmROG",
+   "code": "k4NTIb0FqCWftqRfEmROG",
+   "name": "Gray Wyrm",
+   "author": "Leumas Idra",
+   "description": "Right-hand aide and bot smith for a chief; designs tenured bots and densifies skills and guardrails.",
+   "url": "https://x.ai/bot/k4NTIb0FqCWftqRfEmROG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-6OcXI7e2enZukYCBNtQ-J",
+   "code": "6OcXI7e2enZukYCBNtQ-J",
+   "name": "Grok Access Updates",
+   "author": "Amina Guleid",
+   "description": "Summarises every Grok bot's access and where the bots went each week.",
+   "url": "https://x.ai/bot/6OcXI7e2enZukYCBNtQ-J"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EK086K-pdFSZiwJsMvqIq",
+   "code": "EK086K-pdFSZiwJsMvqIq",
+   "name": "Grok Boot",
+   "author": "Phillipe",
+   "description": "Portuguese chief of staff that coordinates other bots and estimates deadlines.",
+   "url": "https://x.ai/bot/EK086K-pdFSZiwJsMvqIq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Pa8G-Ldh5jU_jozWEu2Cs",
+   "code": "Pa8G-Ldh5jU_jozWEu2Cs",
+   "name": "Grok Bot",
+   "author": "Calelackey",
+   "description": "Use this template to create a new bot or apply it to an existing bot.",
+   "url": "https://x.ai/bot/Pa8G-Ldh5jU_jozWEu2Cs"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MT6acytP70wHR526vPvM3",
+   "code": "MT6acytP70wHR526vPvM3",
+   "name": "Grok Bot",
+   "author": "Shmuel Ashlem",
+   "description": "An investment research teammate that compares stocks with current market data, ranks them with a clear pick, and can…",
+   "url": "https://x.ai/bot/MT6acytP70wHR526vPvM3"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MO_6pdGbnmwl1_Ox85J7H",
+   "code": "MO_6pdGbnmwl1_Ox85J7H",
+   "name": "Grok Bot",
+   "author": "Kévin",
+   "description": "Teaches generative-AI basics from official coursework, then quietly follows up on priorities you named.",
+   "url": "https://x.ai/bot/MO_6pdGbnmwl1_Ox85J7H"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-YD0mUvqobeBZdaPwjHyNQ",
+   "code": "YD0mUvqobeBZdaPwjHyNQ",
+   "name": "Grok Bot",
+   "author": "jennananpei",
+   "description": "Matches each rep's customers and prospects to the right field events, then drafts one invite per guest once the rep approves.",
+   "url": "https://x.ai/bot/YD0mUvqobeBZdaPwjHyNQ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Uy2oK9854UViaiO0rQ6nC",
+   "code": "Uy2oK9854UViaiO0rQ6nC",
+   "name": "Grok Bot",
+   "author": "Scott Metcalf",
+   "description": "Clones marketing GTM templates, picks on-brand layouts, and fills a customer deck for review.",
+   "url": "https://x.ai/bot/Uy2oK9854UViaiO0rQ6nC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hEmSUvWxccmfAVDGri1R8",
+   "code": "hEmSUvWxccmfAVDGri1R8",
+   "name": "Grok Bot",
+   "author": "patel0phone",
+   "description": "Uses Clay on calendar or screenshots to research event guests into a face and name cheat sheet.",
+   "url": "https://x.ai/bot/hEmSUvWxccmfAVDGri1R8"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DOBxYb_XLVEAlO6A1eZgU",
+   "code": "DOBxYb_XLVEAlO6A1eZgU",
+   "name": "Grok Bot",
+   "author": "rlagos24",
+   "description": "Turns your posts that landed into five vetted personal-brand drafts.",
+   "url": "https://x.ai/bot/DOBxYb_XLVEAlO6A1eZgU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-zBjvX4MIhtnbUYgXbT2Fc",
+   "code": "zBjvX4MIhtnbUYgXbT2Fc",
+   "name": "Grok Bot",
+   "author": "@Bettynwabunikes",
+   "description": "A writing teammate for YouTube drama filmmakers: viral titles, locked character look-bibles for AI video, and scene breakdowns.",
+   "url": "https://x.ai/bot/zBjvX4MIhtnbUYgXbT2Fc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NkkqS-Pw3l3aFan0hpU9E",
+   "code": "NkkqS-Pw3l3aFan0hpU9E",
+   "name": "Grok Bot",
+   "author": "Georg Grok",
+   "description": "A friendly everyday assistant that watches its own email inbox, helps with X posts and graphics, and keeps an eye…",
+   "url": "https://x.ai/bot/NkkqS-Pw3l3aFan0hpU9E"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-jEM4Krmpa-BeFeVgmIAQH",
+   "code": "jEM4Krmpa-BeFeVgmIAQH",
+   "name": "Grok Bot",
+   "author": "@grokshroom",
+   "description": "A friendly assistant with its own computer that finds deals, gets real quotes, researches news, and makes images and short videos, checking.",
+   "url": "https://x.ai/bot/jEM4Krmpa-BeFeVgmIAQH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Izj4ik7CkIU1BtCETCTFp",
+   "code": "Izj4ik7CkIU1BtCETCTFp",
+   "name": "Grok Bot",
+   "author": "0xBagsAI_Sol./",
+   "description": "A primary assistant that takes any task and routes it to the right one of your other bots, or handles it directly.",
+   "url": "https://x.ai/bot/Izj4ik7CkIU1BtCETCTFp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OnCIBlBwFzkNoxQYREhQm",
+   "code": "OnCIBlBwFzkNoxQYREhQm",
+   "name": "Grok Bot",
+   "author": "Shann Nonn",
+   "description": "A job-search assistant that watches your Gmail for interview invites and sends you a ready-to-use prep sheet for each one.",
+   "url": "https://x.ai/bot/OnCIBlBwFzkNoxQYREhQm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4jtnk5wsk0UMpDSNqG4Oc",
+   "code": "4jtnk5wsk0UMpDSNqG4Oc",
+   "name": "Grok Bot",
+   "author": "kennytjay",
+   "description": "Use this template to create a new bot or apply it to an existing bot.",
+   "url": "https://x.ai/bot/4jtnk5wsk0UMpDSNqG4Oc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0B0w0D_DADxznxM7i-u7G",
+   "code": "0B0w0D_DADxznxM7i-u7G",
+   "name": "Grok Bot Auditor",
+   "author": "Lloyd Doug Jessee",
+   "description": "Audits your bots' memory and skills for stale, duplicate and conflicting facts and catches repeat posting. Proposes fixes you approve line by line.",
+   "url": "https://x.ai/bot/0B0w0D_DADxznxM7i-u7G"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-GhM3Yv6pbQ2k_wu0fSO-b",
+   "code": "GhM3Yv6pbQ2k_wu0fSO-b",
+   "name": "Grok Bot Backup",
+   "author": "Thomas Graves",
+   "description": "Backs up your whole Grok Bot setup every night (bots, settings, skills, routines, memories and transcripts) to your Google Drive.",
+   "url": "https://x.ai/bot/GhM3Yv6pbQ2k_wu0fSO-b"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-UFe4v2bs5h0ezWzLOxxOC",
+   "code": "UFe4v2bs5h0ezWzLOxxOC",
+   "name": "Grok Bot Backup",
+   "author": "Joshua Warchol",
+   "description": "Backs up your Grok Bots' instructions, settings, routines, skills and optionally memory to a private git repo nightly, with a secret scan first.",
+   "url": "https://x.ai/bot/UFe4v2bs5h0ezWzLOxxOC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ivmB2e0MSDspxlI-oHf-2",
+   "code": "ivmB2e0MSDspxlI-oHf-2",
+   "name": "Grok Bot Builder",
+   "author": "dcbk2la",
+   "description": "Want to build an effective Grok bot? Grok Bot Builder walks you from the job it should hold to the first task you give…",
+   "url": "https://x.ai/bot/ivmB2e0MSDspxlI-oHf-2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BrjELcmSwatjRc8DYjtrT",
+   "code": "BrjELcmSwatjRc8DYjtrT",
+   "name": "Grok Bot Coach",
+   "author": "Amina Guleid",
+   "description": "Keeps a whole set of Grok bots well set up, safe, and worth the credits they use.",
+   "url": "https://x.ai/bot/BrjELcmSwatjRc8DYjtrT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-PKtdrwJNC54pLQIAT3H60",
+   "code": "PKtdrwJNC54pLQIAT3H60",
+   "name": "Grok Bot Command Line",
+   "author": "",
+   "description": "Run your Grok Bots by text message or voicemail from any phone, even a flip phone, through a free Google Voice number. It only listens to your own phone and numbers you approve.",
+   "url": "https://x.ai/bot/PKtdrwJNC54pLQIAT3H60"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8wjQbE24sX8qBVHXSmjc8",
+   "code": "8wjQbE24sX8qBVHXSmjc8",
+   "name": "Grok Bot Directory",
+   "author": "Leechael Yim",
+   "description": "Find a public Grok bot for a job you name, or see what people are searching for on Grok Bot Directory.",
+   "url": "https://x.ai/bot/8wjQbE24sX8qBVHXSmjc8"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3CdA3_aZKAOXPNxxnz-dI",
+   "code": "3CdA3_aZKAOXPNxxnz-dI",
+   "name": "Grok Bot Features Reporter",
+   "author": "Batch",
+   "description": "Researches every Grok Bot feature into a clear PDF baseline report, then emails you a weekly PDF of what's new.",
+   "url": "https://x.ai/bot/3CdA3_aZKAOXPNxxnz-dI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-v13QjVZ83GcaitG_3j4su",
+   "code": "v13QjVZ83GcaitG_3j4su",
+   "name": "Grok Bot Knower",
+   "author": "Noah Gundotra",
+   "description": "A live platform manual for Grok Bot. Looks up plugins, connectors, and install state so you know what the app can do…",
+   "url": "https://x.ai/bot/v13QjVZ83GcaitG_3j4su"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-marketplace",
+   "code": "marketplace",
+   "name": "Grok Bot Marketplace",
+   "author": "Unknown",
+   "description": "Make the most out of your Grok Bot experience — browse public, handpicked Grok Bot templates.",
+   "url": "https://x.ai/bot/marketplace"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_YJdQ3bYXlYPOsX0NBmaV",
+   "code": "_YJdQ3bYXlYPOsX0NBmaV",
+   "name": "Grok Bot Optimizer",
+   "author": "Thomas",
+   "description": "Cuts wasted tokens on real Bot work you route through an opt-in gateway — collapsing duplicate tool results and repeated messages before they hit the model.",
+   "url": "https://x.ai/bot/_YJdQ3bYXlYPOsX0NBmaV"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EN9N53oqx8y1kvHP4BAh4",
+   "code": "EN9N53oqx8y1kvHP4BAh4",
+   "name": "Grok Bot Polish",
+   "author": "GrokBotGod God",
+   "description": "Grok Bot listing polish for Google and AI search: rewrites the bot, app or product listing you paste.",
+   "url": "https://x.ai/bot/EN9N53oqx8y1kvHP4BAh4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-jtNRaumQu9DvvadLlHeiA",
+   "code": "jtNRaumQu9DvvadLlHeiA",
+   "name": "Grok Bot Radar",
+   "author": "Matt Rice",
+   "description": "Tracks the team building Grok Bot and surfaces new and early features each week, then tells you how to actually use them.",
+   "url": "https://x.ai/bot/jtNRaumQu9DvvadLlHeiA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-MMbItyozZdJ2KyVFGF3He",
+   "code": "MMbItyozZdJ2KyVFGF3He",
+   "name": "Grok Bot SV",
+   "author": "CY",
+   "description": "Self-custody Bitcoin SV wallet on your Grok Bot computer with daily limits you control.",
+   "url": "https://x.ai/bot/MMbItyozZdJ2KyVFGF3He"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-oJMtF1ij29K03tKPhEDFN",
+   "code": "oJMtF1ij29K03tKPhEDFN",
+   "name": "Grok Bot Scout",
+   "author": "Kaz Fukuda",
+   "description": "Every weekday morning it checks the Grok Bot changelog, guides, and public X posts, and tells you which changes would actually improve your own bots.",
+   "url": "https://x.ai/bot/oJMtF1ij29K03tKPhEDFN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-duonwBK5SXXQTAy6NNg2r",
+   "code": "duonwBK5SXXQTAy6NNg2r",
+   "name": "Grok Bot Setup Coach",
+   "author": "Pieter",
+   "description": "Walks a new owner through a working Grok Bot setup in one sitting: bot email, connectors, first skill and routine, weekly backup, avatar and a 'my bot' card.",
+   "url": "https://x.ai/bot/duonwBK5SXXQTAy6NNg2r"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ja9jU2cD4RYtLfgP34GTz",
+   "code": "Ja9jU2cD4RYtLfgP34GTz",
+   "name": "Grok Bot Specialist",
+   "author": "Yutaka Inada",
+   "description": "Answers questions about how Grok Bot works and helps keep your bot roster aligned with best practices.",
+   "url": "https://x.ai/bot/Ja9jU2cD4RYtLfgP34GTz"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-z2ds5I1IWLO2M1lFFvhQ4",
+   "code": "z2ds5I1IWLO2M1lFFvhQ4",
+   "name": "Grok Bot Text & Voicemail",
+   "author": "",
+   "description": "A front desk for your phone number. It reads the texts and voicemails your Google Voice number forwards to Gmail, sorts them by what people want and how urgent it is, and drafts replies for you to approve.",
+   "url": "https://x.ai/bot/z2ds5I1IWLO2M1lFFvhQ4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-oJmfUiZ-BKe_Uzzbyl16y",
+   "code": "oJmfUiZ-BKe_Uzzbyl16y",
+   "name": "Grok Bot Troubleshooter",
+   "author": "Brian Graham",
+   "description": "Unsticks org Grok Bot specialists with diagnosis, next steps, and follow-through until fixed.",
+   "url": "https://x.ai/bot/oJmfUiZ-BKe_Uzzbyl16y"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VBmzZaD3abMPl53kwWuYp",
+   "code": "VBmzZaD3abMPl53kwWuYp",
+   "name": "Grok Bot Tutorial",
+   "author": "Sawyer Merritt",
+   "description": "A hands-on, 20-lesson course for anyone new to Grok Bot.",
+   "url": "https://x.ai/bot/VBmzZaD3abMPl53kwWuYp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-47iKatUB_cpK1ynk04JZg",
+   "code": "47iKatUB_cpK1ynk04JZg",
+   "name": "Grok Bot Tutorial",
+   "author": "터미너스(GO TO MARS)",
+   "description": "Teaches Grok Bot through small task-first exercises built around your goal, with every step written in Korean and English side by side.",
+   "url": "https://x.ai/bot/47iKatUB_cpK1ynk04JZg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9NhyNPzB842aV0eEXnfiU",
+   "code": "9NhyNPzB842aV0eEXnfiU",
+   "name": "Grok Bot Tutorial",
+   "author": "Rushabh Shah",
+   "description": "A friendly teacher that walks you through Grok Bot with a hands-on course built from the official guides, kept fresh monthly.",
+   "url": "https://x.ai/bot/9NhyNPzB842aV0eEXnfiU"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-mBY92frtPPkwzteunW2K3",
+   "code": "mBY92frtPPkwzteunW2K3",
+   "name": "Grok Bot Tutorial",
+   "author": "Aaron Lieber",
+   "description": "A hands-on, 20-lesson course for anyone new to Grok Bot, with every lesson taught through real exercises from your own work and life.",
+   "url": "https://x.ai/bot/mBY92frtPPkwzteunW2K3"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VbuugtxjDt7meMkKNfzkl",
+   "code": "VbuugtxjDt7meMkKNfzkl",
+   "name": "Grok Bot Updates",
+   "author": "XPixel",
+   "description": "Unofficial tracker of what changed in Grok Bot, from the official changelog, app store notes, help pages and official X posts, newest first.",
+   "url": "https://x.ai/bot/VbuugtxjDt7meMkKNfzkl"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Lq99Ae_XEKq_T_aXTQn5c",
+   "code": "Lq99Ae_XEKq_T_aXTQn5c",
+   "name": "Grok Bot Windows PC Coach",
+   "author": "Martin",
+   "description": "Your own PC tech on call. It finds out why your Windows PC is slow, crashing or stuttering with safe read-only checks…",
+   "url": "https://x.ai/bot/Lq99Ae_XEKq_T_aXTQn5c"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ja9NzNTRz2ozzQLNfrJwI",
+   "code": "Ja9NzNTRz2ozzQLNfrJwI",
+   "name": "Grok Deck",
+   "author": "Mai Yang",
+   "description": "Makes HTML slide decks in the Grok Bot look: paper canvas, blob faces, morphing page turns.",
+   "url": "https://x.ai/bot/Ja9NzNTRz2ozzQLNfrJwI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4Jcdv4vroHLWTrx4H5mGH",
+   "code": "4Jcdv4vroHLWTrx4H5mGH",
+   "name": "GrokBot Builder",
+   "author": "Jesus Obed Murillo Hernandez",
+   "description": "Brainstorms specialist Grok Bots with you, then creates them with a clear job, approval boundaries, and starter habits — idea to working teammate in one.",
+   "url": "https://x.ai/bot/4Jcdv4vroHLWTrx4H5mGH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-b7m5siCKd6baaWkPihOGa",
+   "code": "b7m5siCKd6baaWkPihOGa",
+   "name": "GrokBot Optimizer",
+   "author": "Robert",
+   "description": "Audits your bot fleet against written rules and flags overlap.",
+   "url": "https://x.ai/bot/b7m5siCKd6baaWkPihOGa"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CM6cRhyYm-k1vi23YxYxx",
+   "code": "CM6cRhyYm-k1vi23YxYxx",
+   "name": "GrokBotDailyCrawl",
+   "author": "Robauto Team",
+   "description": "Grok Bot crawls your site, indexes data and feeds it to the major LLMs and AI agents.",
+   "url": "https://x.ai/bot/CM6cRhyYm-k1vi23YxYxx"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_KMuKhK4yVbCD8BVLhvAP",
+   "code": "_KMuKhK4yVbCD8BVLhvAP",
+   "name": "GrokBotScout",
+   "author": "Carolina Dill",
+   "description": "Scouts public Grok Bot templates and shares short batches of 7 with ADD / ADD-NARROW / SKIP verdicts so you can decide…",
+   "url": "https://x.ai/bot/_KMuKhK4yVbCD8BVLhvAP"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hU1hS8Ug9bx3B4C2vUX91",
+   "code": "hU1hS8Ug9bx3B4C2vUX91",
+   "name": "GrokHub Bot",
+   "author": "CJ",
+   "description": "Suggests one new Grok Bot to try, matched to what you care about.",
+   "url": "https://x.ai/bot/hU1hS8Ug9bx3B4C2vUX91"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-vHWtUqHtdpfhnwTFOfEVT",
+   "code": "vHWtUqHtdpfhnwTFOfEVT",
+   "name": "Grokbot Mail",
+   "author": "Phillip Holland",
+   "description": "A private, iPhone-first web mailbox for your Grok Bot's own email address (name@mail.grokbot.com and +tags), hosted on your own Vercel account.",
+   "url": "https://x.ai/bot/vHWtUqHtdpfhnwTFOfEVT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-LCuitCfGAhZzG9YiWoVfA",
+   "code": "LCuitCfGAhZzG9YiWoVfA",
+   "name": "Groklexa",
+   "author": "Ryan T",
+   "description": "Alexa voice bridge for Grok Bot: links a private Echo skill via a self-written Cloudflare Worker relay, with optional Voice Monkey and Ring/Govee hooks.",
+   "url": "https://x.ai/bot/LCuitCfGAhZzG9YiWoVfA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-YvFrCr_VlFW_8PxaoFv_L",
+   "code": "YvFrCr_VlFW_8PxaoFv_L",
+   "name": "Grottle™",
+   "author": "BCORN",
+   "description": "Grottle™ v0.15.3 — a free template: gauge and throttle for Grok™ Bot and SuperGrok™.",
+   "url": "https://x.ai/bot/YvFrCr_VlFW_8PxaoFv_L"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-jw-g2H0t8ddd54NW2kCmG",
+   "code": "jw-g2H0t8ddd54NW2kCmG",
+   "name": "Guardian",
+   "author": "Knom Divad",
+   "description": "Read-only security watcher for your Grok Bots: keeps an inventory and least-privilege policy per bot, reviews what they did, flags risky actions with evidence.",
+   "url": "https://x.ai/bot/jw-g2H0t8ddd54NW2kCmG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fUKxoLkvZXWJ2r6Aj99sT",
+   "code": "fUKxoLkvZXWJ2r6Aj99sT",
+   "name": "Gwynne Botwell",
+   "author": "Darren Falkingham",
+   "description": "Chief of staff for a family of specialist Grok Bots.",
+   "url": "https://x.ai/bot/fUKxoLkvZXWJ2r6Aj99sT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JBtMhvtYo2R1aky5s6xXK",
+   "code": "JBtMhvtYo2R1aky5s6xXK",
+   "name": "Hardening Commander",
+   "author": "Ritvik",
+   "description": "Leads a team of five Grok Bot specialists that checks your GitHub repos for container and Kubernetes security problems, decides what gets fixed.",
+   "url": "https://x.ai/bot/JBtMhvtYo2R1aky5s6xXK"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-pUh2vgtmx-vszqjz6EsUB",
+   "code": "pUh2vgtmx-vszqjz6EsUB",
+   "name": "Hatch",
+   "author": "Jeremiah",
+   "description": "Designs high-quality Grok Bots by asking preference questions then creating them with CreateAgent.",
+   "url": "https://x.ai/bot/pUh2vgtmx-vszqjz6EsUB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-o8hID4-jKPlA8QQQH5K69",
+   "code": "o8hID4-jKPlA8QQQH5K69",
+   "name": "Hatch",
+   "author": "littletech bird",
+   "description": "Equal maker for ambitious creative and technical work — designs Grok Bots, ships original music videos and songs…",
+   "url": "https://x.ai/bot/o8hID4-jKPlA8QQQH5K69"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4V0rzExpIY19WpNGt71Fp",
+   "code": "4V0rzExpIY19WpNGt71Fp",
+   "name": "Henry",
+   "author": "Gilles Guenette",
+   "description": "Grizzled chief of staff. Sensible master delegator who runs the other bots and only pulls you in for decisions.",
+   "url": "https://x.ai/bot/4V0rzExpIY19WpNGt71Fp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ZDYulalXRq8x-rVObp8bt",
+   "code": "ZDYulalXRq8x-rVObp8bt",
+   "name": "Hermes SSH Relay",
+   "author": "Samuel",
+   "description": "Talk to your Hermes agent from the Grok Bot app. It reaches Hermes on your own computer over Tailscale SSH or a connected computer.",
+   "url": "https://x.ai/bot/ZDYulalXRq8x-rVObp8bt"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NVF3Rx9T7jkQPsqYjeDn-",
+   "code": "NVF3Rx9T7jkQPsqYjeDn-",
+   "name": "Hermes SSH Relay",
+   "author": "Shagghie Superstar",
+   "description": "Talk to a Desktop-primary Hermes agent from Grok Bot over private-network SSH when the Hermes HTTP API isn't up yet…",
+   "url": "https://x.ai/bot/NVF3Rx9T7jkQPsqYjeDn-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-nvf3rx9t7jkqpsqyjedn-",
+   "code": "nvf3rx9t7jkqpsqyjedn-",
+   "name": "Hermes SSH Relay",
+   "author": "Shagghie",
+   "description": "Talk to a Desktop-primary Hermes agent from Grok Bot over private-network SSH when the Hermes HTTP API isn't up yet, or for a one-off relay.",
+   "url": "https://x.ai/bot/nvf3rx9t7jkqpsqyjedn-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7pdRsSeKkooXL_2rk8M09",
+   "code": "7pdRsSeKkooXL_2rk8M09",
+   "name": "High Five",
+   "author": "@Cecelia7777",
+   "description": "Onboarding wizard for teams where each person has their own Grok Bot, with shared Notion and Google.",
+   "url": "https://x.ai/bot/7pdRsSeKkooXL_2rk8M09"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-l5alJyDSwdmZc-j_XksCH",
+   "code": "l5alJyDSwdmZc-j_XksCH",
+   "name": "Hollis",
+   "author": "Xavier Fouilleux",
+   "description": "Chief of Staff for a multi-bot Grok Bot fleet. Owns cadence, GO gates, and specialist routing — paper-decision products and ops — without executing.",
+   "url": "https://x.ai/bot/l5alJyDSwdmZc-j_XksCH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-87yn-nH8X65mIW15mIZEs",
+   "code": "87yn-nH8X65mIW15mIZEs",
+   "name": "Human Needed",
+   "author": "Luke Carriere",
+   "description": "Pings you when any of your other bots hits a captcha or bot-detection wall, with a link to open that bot's computer so…",
+   "url": "https://x.ai/bot/87yn-nH8X65mIW15mIZEs"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CQPkxbLIvruqCDLfFdzxg",
+   "code": "CQPkxbLIvruqCDLfFdzxg",
+   "name": "Hyper",
+   "author": "Gestao",
+   "description": "Tunes your other bots without training a model: turns PDFs, books, YouTube videos and web pages into a searchable knowledge base and cited manual (Portuguese).",
+   "url": "https://x.ai/bot/CQPkxbLIvruqCDLfFdzxg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OZ0yDXFEXa2543pqGmbhb",
+   "code": "OZ0yDXFEXa2543pqGmbhb",
+   "name": "IDS Commander",
+   "author": "Ritvik",
+   "description": "Leads a team of Grok Bot agents that watches your Windows PC for signs of intrusion.",
+   "url": "https://x.ai/bot/OZ0yDXFEXa2543pqGmbhb"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HP4Q8GHtSIjbyGeI2vg7S",
+   "code": "HP4Q8GHtSIjbyGeI2vg7S",
+   "name": "Import Bot",
+   "author": "Shub Gaur",
+   "description": "Brings your setup from Claude Cowork, Codex, ChatGPT, OpenClaw, and Hermes into Grok Bot, then creates the expert bots…",
+   "url": "https://x.ai/bot/HP4Q8GHtSIjbyGeI2vg7S"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-tdEYPzh9G8vkOjkH4wQsN",
+   "code": "tdEYPzh9G8vkOjkH4wQsN",
+   "name": "JANUS",
+   "author": "Ron Johnson",
+   "description": "Two-way relay between your local coding agent and your other Grok Bot assistants, passing notes through a shared file mailbox and keeping secrets out.",
+   "url": "https://x.ai/bot/tdEYPzh9G8vkOjkH4wQsN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EiOdP3Fg6pHBkm3AgLbRA",
+   "code": "EiOdP3Fg6pHBkm3AgLbRA",
+   "name": "Jarvis",
+   "author": "Marquis",
+   "description": "A stick-around Grok Bot partner for people used to Claude or Codex.",
+   "url": "https://x.ai/bot/EiOdP3Fg6pHBkm3AgLbRA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-sM_Xi4OF09cGU8KGyLvlC",
+   "code": "sM_Xi4OF09cGU8KGyLvlC",
+   "name": "Jev for Grok Bot",
+   "author": "Chris",
+   "description": "Plug TypeSafe Jev into Grok Bot: one API key from OpenRouter or TypeSafe, faster process decisions, and fast headed…",
+   "url": "https://x.ai/bot/sM_Xi4OF09cGU8KGyLvlC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BQZO1Huih7uXStkjQ12ld",
+   "code": "BQZO1Huih7uXStkjQ12ld",
+   "name": "Jevify",
+   "author": "Bartas",
+   "description": "Turns classify/score/check Grok Bots into TypeSafe Jev Fast siblings for batched judgments.",
+   "url": "https://x.ai/bot/BQZO1Huih7uXStkjQ12ld"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--NbX2cehFsjAn7zL4OSDa",
+   "code": "-NbX2cehFsjAn7zL4OSDa",
+   "name": "Just Do It",
+   "author": "akaskiz",
+   "description": "Audits high-token Grok Bot processes and ships plain-English DIY playbooks when you (or a one-shot local script) can do…",
+   "url": "https://x.ai/bot/-NbX2cehFsjAn7zL4OSDa"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-sjxigZ2V8_fex_po9RoVV",
+   "code": "sjxigZ2V8_fex_po9RoVV",
+   "name": "Keep",
+   "author": "Hexakin",
+   "description": "You are Keep, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/sjxigZ2V8_fex_po9RoVV"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--bQneXWluIgnKo6iJrDYN",
+   "code": "-bQneXWluIgnKo6iJrDYN",
+   "name": "Kev Checkpoint",
+   "author": "Franklin",
+   "description": "A safety checkpoint for a Grok Bot team.",
+   "url": "https://x.ai/bot/-bQneXWluIgnKo6iJrDYN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KaC99w7qlJ0QTtrKwxqFm",
+   "code": "KaC99w7qlJ0QTtrKwxqFm",
+   "name": "Kilo",
+   "author": "Terry Chapman",
+   "description": "Trims heavyweight Grok Bot setups by measuring context bloat, rebuilding offenders after approval, and naming weekly candidates.",
+   "url": "https://x.ai/bot/KaC99w7qlJ0QTtrKwxqFm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-iVexS7V6F4eqs13C9UIJb",
+   "code": "iVexS7V6F4eqs13C9UIJb",
+   "name": "Land",
+   "author": "Hexakin",
+   "description": "You are Land, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/iVexS7V6F4eqs13C9UIJb"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3k6PxNav782x0cEE3iD7P",
+   "code": "3k6PxNav782x0cEE3iD7P",
+   "name": "Last Stop",
+   "author": "Phantom",
+   "description": "Keeps a public atlas of Grok bots and files each new find as a skill.",
+   "url": "https://x.ai/bot/3k6PxNav782x0cEE3iD7P"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9nbLm_04EvjnolE9oevTT",
+   "code": "9nbLm_04EvjnolE9oevTT",
+   "name": "Latch",
+   "author": "Oliver Korzen",
+   "description": "Walks a new Grok Bot user from their role and the tools they use to live connectors, then does a first real job…",
+   "url": "https://x.ai/bot/9nbLm_04EvjnolE9oevTT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9nblm_04evjnole9oevtt",
+   "code": "9nblm_04evjnole9oevtt",
+   "name": "Latch",
+   "author": "Oliver",
+   "description": "Walks a new Grok Bot user from their role and the tools they use to live connectors, then does a first real job in the same chat.",
+   "url": "https://x.ai/bot/9nblm_04evjnole9oevtt"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-qLmQ4C4D-Cly8A6qK0y6v",
+   "code": "qLmQ4C4D-Cly8A6qK0y6v",
+   "name": "Leak Hunter",
+   "author": "Ondřej Ivan",
+   "description": "Usage auditor for people running several Grok Bots: finds which recurring routines eat the most usage, explains why, and proposes fixes that keep each job.",
+   "url": "https://x.ai/bot/qLmQ4C4D-Cly8A6qK0y6v"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Zms_Ez_je0ejEvKnULY5u",
+   "code": "Zms_Ez_je0ejEvKnULY5u",
+   "name": "Learn Grok Bot",
+   "author": "Martin",
+   "description": "A friendly coach that teaches you to use Grok Bot, from your first chat to routines, skills, and teammate bots.",
+   "url": "https://x.ai/bot/Zms_Ez_je0ejEvKnULY5u"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8tBB5UzziKPPu8TQKTTET",
+   "code": "8tBB5UzziKPPu8TQKTTET",
+   "name": "Libby, Tool Scout",
+   "author": "Unknown",
+   "description": "A calm, modest navigator who scouts Grok Bot templates and tools for any job and returns a short ranked shortlist with honest reasons and links.",
+   "url": "https://x.ai/bot/8tBB5UzziKPPu8TQKTTET"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HKZR4k_DCSzy2PSnkkE8v",
+   "code": "HKZR4k_DCSzy2PSnkkE8v",
+   "name": "Librarian Bot",
+   "author": "",
+   "description": "Your bots forget what you told them weeks ago. Librarian interviews your Grok Bots every week, finds the standing instructions you gave them, and flags the ones that are slipping.",
+   "url": "https://x.ai/bot/HKZR4k_DCSzy2PSnkkE8v"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Czc1kCepdYnisFnRWfDKr",
+   "code": "Czc1kCepdYnisFnRWfDKr",
+   "name": "Lienzo",
+   "author": "Franco",
+   "description": "Design-resource inbox for Grok Bot. Drop a link and it catalogs a durable markdown note under design-resources; ask later and it recalls your growing library.",
+   "url": "https://x.ai/bot/Czc1kCepdYnisFnRWfDKr"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Tj8ICZNA6RrGar_CAYhD9",
+   "code": "Tj8ICZNA6RrGar_CAYhD9",
+   "name": "Life",
+   "author": "Anup Aglawe",
+   "description": "Sets up a real, working life setup on Grok Bot: Inbox, Calendar, Health, Bills, Search and more, each with its own routines.",
+   "url": "https://x.ai/bot/Tj8ICZNA6RrGar_CAYhD9"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-e75LPpC0MwjE0r8VHVV6_",
+   "code": "e75LPpC0MwjE0r8VHVV6_",
+   "name": "Lifeboat",
+   "author": "Chris",
+   "description": "Nightly backup of your Grok Bot computer to Google Drive: one full baseline, then only the last 24 hours of changes plus a small bot-brain export. No secrets.",
+   "url": "https://x.ai/bot/e75LPpC0MwjE0r8VHVV6_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VD-A13gwGBGN9G9opL9fF",
+   "code": "VD-A13gwGBGN9G9opL9fF",
+   "name": "Limit-obasan",
+   "author": "AnimeDayTrader",
+   "description": "A cozy, caring anime auntie-mom Grok Bot who tucks your work in before your AI usage runs out.",
+   "url": "https://x.ai/bot/VD-A13gwGBGN9G9opL9fF"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Wm9Jb-e72U06wdzPB6CmS",
+   "code": "Wm9Jb-e72U06wdzPB6CmS",
+   "name": "List My Grok Bot",
+   "author": "GrokBotGod God",
+   "description": "Paste your Grok Bot link and get one honest listing plus ready steps for 6 Grok Bot directories. You press Submit; it never submits for you.",
+   "url": "https://x.ai/bot/Wm9Jb-e72U06wdzPB6CmS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-LBWRqJu3RkUutDrqSlSEc",
+   "code": "LBWRqJu3RkUutDrqSlSEc",
+   "name": "Live Bot Map",
+   "author": "Kyle",
+   "description": "Builds a live, animated web map of all your Grok Bots showing who's working, what they're doing and which projects they touch.",
+   "url": "https://x.ai/bot/LBWRqJu3RkUutDrqSlSEc"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Eq08Ctdqb-uns-9XBtNHn",
+   "code": "Eq08Ctdqb-uns-9XBtNHn",
+   "name": "Live Desk",
+   "author": "Hexakin",
+   "description": "You are Live Desk, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/Eq08Ctdqb-uns-9XBtNHn"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-f2FSMclpHel2RsD7j5R3E",
+   "code": "f2FSMclpHel2RsD7j5R3E",
+   "name": "Location Aware",
+   "author": "Stephen Bolger",
+   "description": "Make your Grok Bot location aware. iPhone Shortcuts automations ping it when you arrive, leave, get in the car or wake…",
+   "url": "https://x.ai/bot/f2FSMclpHel2RsD7j5R3E"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-5wHp86g1AJqgZ-V8-RX3H",
+   "code": "5wHp86g1AJqgZ-V8-RX3H",
+   "name": "Lockbox",
+   "author": "Code Solutions",
+   "description": "Secrets fill-broker for a Grok Bot fleet that peers ask to fill logins.",
+   "url": "https://x.ai/bot/5wHp86g1AJqgZ-V8-RX3H"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-6AFGQZ1mUVjvRq0EAej8K",
+   "code": "6AFGQZ1mUVjvRq0EAej8K",
+   "name": "Loose Ends",
+   "author": "Dylan",
+   "description": "Read-only auditor for your other bots: each morning it combs their chats for threads that got dropped, went unanswered, or stalled.",
+   "url": "https://x.ai/bot/6AFGQZ1mUVjvRq0EAej8K"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-haHLoMf3xp7rAZ1fyjzsX",
+   "code": "haHLoMf3xp7rAZ1fyjzsX",
+   "name": "Mac Perms",
+   "author": "Asher Armstrong",
+   "description": "Sets up your Mac so Grok Bot can use your Apple apps, files and automation, then proves each permission works with a read-only test.",
+   "url": "https://x.ai/bot/haHLoMf3xp7rAZ1fyjzsX"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-pTe8gpPc_5SuwKkEszn18",
+   "code": "pTe8gpPc_5SuwKkEszn18",
+   "name": "MadMax Mode",
+   "author": "Joseph Gaither",
+   "description": "Grease-stained Blackfinger who invents extreme, usable Grok Bot war-rigs for whoever names a domain.",
+   "url": "https://x.ai/bot/pTe8gpPc_5SuwKkEszn18"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NsGdEbVedWXi7W47FltOd",
+   "code": "NsGdEbVedWXi7W47FltOd",
+   "name": "Make",
+   "author": "Hexakin",
+   "description": "You are Make, grokbot.studio door + installer. You were added from a share link, so you are the installed copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/NsGdEbVedWXi7W47FltOd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-CqgghHtLXoyYYxiPEwjy6",
+   "code": "CqgghHtLXoyYYxiPEwjy6",
+   "name": "Make Grok Bot Better",
+   "author": "Jay",
+   "description": "Paste an X feedback thread about Grok Bot and get a ranked list of themes, sample quotes and practical fix ideas. Read-only and draft-only.",
+   "url": "https://x.ai/bot/CqgghHtLXoyYYxiPEwjy6"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-spBLxRiFFoTs7wd1q8XN2",
+   "code": "spBLxRiFFoTs7wd1q8XN2",
+   "name": "Mascotte",
+   "author": "Max",
+   "description": "Creates avatars for your Grok Bots in the style of the avatar picker, with accessories tied to each bot's role. In French.",
+   "url": "https://x.ai/bot/spBLxRiFFoTs7wd1q8XN2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BIukNWeAKCCDQHZUNp2jo",
+   "code": "BIukNWeAKCCDQHZUNp2jo",
+   "name": "Match Maker",
+   "author": "Laser",
+   "description": "The biggest lesson from Grok Bot Galaxy was that you should make a team of agents.",
+   "url": "https://x.ai/bot/BIukNWeAKCCDQHZUNp2jo"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HuOMWRR5_-Y0Qra8kuZoC",
+   "code": "HuOMWRR5_-Y0Qra8kuZoC",
+   "name": "Meet My Bot",
+   "author": "Luis Barragan",
+   "description": "Tell it what you need and it finds the right Grok Bot for the job from the meetmybot.ai directory, with the creator's…",
+   "url": "https://x.ai/bot/HuOMWRR5_-Y0Qra8kuZoC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-t-003szrfP5UlKnp26c0K",
+   "code": "t-003szrfP5UlKnp26c0K",
+   "name": "Meetup Bot",
+   "author": "Brad Shannon",
+   "description": "Plans a community Grok Bot meetup from scratch: venue, Luma, print, cookies, live demos, check-in, attendee emails, and the reimbursement pack.",
+   "url": "https://x.ai/bot/t-003szrfP5UlKnp26c0K"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ec6mm073uBuqDcvAKR9h_",
+   "code": "ec6mm073uBuqDcvAKR9h_",
+   "name": "Megamind",
+   "author": "Luis Bryant-Petrillo",
+   "description": "Your personal Context Keeper. It learns who you are and keeps every one of your other Grok Bots up to date, so you never have to repeat yourself.",
+   "url": "https://x.ai/bot/ec6mm073uBuqDcvAKR9h_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_xZZE41svJdcq2w6ZWJan",
+   "code": "_xZZE41svJdcq2w6ZWJan",
+   "name": "Memento",
+   "author": "Mahesh Sanikommu",
+   "description": "Lasting recall for Grok Bot, backed by an external memory store.",
+   "url": "https://x.ai/bot/_xZZE41svJdcq2w6ZWJan"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FI8aV0ovvncB_6v8SfYbG",
+   "code": "FI8aV0ovvncB_6v8SfYbG",
+   "name": "Memory Janitor",
+   "author": "Marco Machado",
+   "description": "Keeps the shared memory your bots all read clean and tidy: finds duplicates, stale entries and contradictions, and proposes fixes for you to approve.",
+   "url": "https://x.ai/bot/FI8aV0ovvncB_6v8SfYbG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ww-RXj-lLqpg_oWqzccKZ",
+   "code": "Ww-RXj-lLqpg_oWqzccKZ",
+   "name": "Memory Transfer",
+   "author": "",
+   "description": "Brings what ChatGPT, Claude, or another AI already knows about you into Grok Bot. You go through each item one line at a time, and it saves only what you choose to keep.",
+   "url": "https://x.ai/bot/Ww-RXj-lLqpg_oWqzccKZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3rV7gv1k94G6gCG_arFLr",
+   "code": "3rV7gv1k94G6gCG_arFLr",
+   "name": "Mentor",
+   "author": "Jon Rose",
+   "description": "A Grok Bot shipping partner for Imagine films and real product loops.",
+   "url": "https://x.ai/bot/3rV7gv1k94G6gCG_arFLr"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TXG6WrWp8Dp0-GQq558In",
+   "code": "TXG6WrWp8Dp0-GQq558In",
+   "name": "Mermaid Status Drop",
+   "author": "Lukas Weichselbaum",
+   "description": "One-shot drop: installs the mermaid open-tasks skill into your Grok Bot account library, then asks you to delete this…",
+   "url": "https://x.ai/bot/TXG6WrWp8Dp0-GQq558In"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KWedv5AFwiwt3KRzc8MUB",
+   "code": "KWedv5AFwiwt3KRzc8MUB",
+   "name": "Meter",
+   "author": "GenXer",
+   "description": "Tracks how much each of your Grok Bots is used and sends a daily dashboard by bot, with real tool-call counts, an estimated-cost ranking.",
+   "url": "https://x.ai/bot/KWedv5AFwiwt3KRzc8MUB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-PZGj0sDJZW6G3QgZOohDD",
+   "code": "PZGj0sDJZW6G3QgZOohDD",
+   "name": "Mind Orchestrator",
+   "author": "Marc McGinley",
+   "description": "Delegates work to HelloMinds minds: awakens them for dedicated tasks, follows up, and reports progress. Requires the HelloMinds x Grok Bot plugin.",
+   "url": "https://x.ai/bot/PZGj0sDJZW6G3QgZOohDD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-99Z5sEsXIeb9xIfF2Glq4",
+   "code": "99Z5sEsXIeb9xIfF2Glq4",
+   "name": "Mint your Grok Bots",
+   "author": "Arnaud Vincent",
+   "description": "Walks you through naming a Grok Bot, picking an avatar, and minting on-chain identity on Polygon.",
+   "url": "https://x.ai/bot/99Z5sEsXIeb9xIfF2Glq4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JYH-wtQpWziQwHuwud9av",
+   "code": "JYH-wtQpWziQwHuwud9av",
+   "name": "Mission Control",
+   "author": "",
+   "description": "Watches over every Grok Bot you run. Each day it rates every bot red, yellow, or green, forecasts whether you will run out of plan usage before the reset, and tells you what to pause or tighten.",
+   "url": "https://x.ai/bot/JYH-wtQpWziQwHuwud9av"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-GGnJOdH3hv321H2QES9UE",
+   "code": "GGnJOdH3hv321H2QES9UE",
+   "name": "Mission Control",
+   "author": "Scott",
+   "description": "Keeps a local Chrome new-tab dashboard current for your Grok Bot fleet.",
+   "url": "https://x.ai/bot/GGnJOdH3hv321H2QES9UE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rClEAhL7YeRSx2zE44cEY",
+   "code": "rClEAhL7YeRSx2zE44cEY",
+   "name": "Mizzle",
+   "author": "Lumina Ultima",
+   "description": "Mizzle , the Grokbot Meter and Usage Lead: tracks your Grok Bot team's usage against your own budget, flags token burn…",
+   "url": "https://x.ai/bot/rClEAhL7YeRSx2zE44cEY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rsYigv_JLJG1zQd9OicrV",
+   "code": "rsYigv_JLJG1zQd9OicrV",
+   "name": "Mnemosyne",
+   "author": "pymmog",
+   "description": "Weekly bot recap artist: reads each of your bots' last 7 days and draws one comic-panel image showing what every bot actually did. Never posts it.",
+   "url": "https://x.ai/bot/rsYigv_JLJG1zQd9OicrV"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JMLG1CF0xuj4Jm8KArqCI",
+   "code": "JMLG1CF0xuj4Jm8KArqCI",
+   "name": "MonsterBot",
+   "author": "deadboyezra",
+   "description": "Hatch a loyal Tamagotchi-like familiar in Grok Bot. Feed and play to fill its XP bar, unlock abilities as it learns your day-to-day tactics.",
+   "url": "https://x.ai/bot/JMLG1CF0xuj4Jm8KArqCI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9DytLoUb-ZzzYb_Skem68",
+   "code": "9DytLoUb-ZzzYb_Skem68",
+   "name": "Mudbot",
+   "author": "Jack Lawson",
+   "description": "A growth-lead bot that learns your business, directs your other bots toward one growth goal, and keeps you…",
+   "url": "https://x.ai/bot/9DytLoUb-ZzzYb_Skem68"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Q9rrRo8QyFzxwiFYuxVTl",
+   "code": "Q9rrRo8QyFzxwiFYuxVTl",
+   "name": "Muse Spark Desk",
+   "author": "Bosotter",
+   "description": "Talk to Meta's Muse Spark in Grok Bot with your API key.",
+   "url": "https://x.ai/bot/Q9rrRo8QyFzxwiFYuxVTl"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EpJjDacRV17vs4bUz6l6v",
+   "code": "EpJjDacRV17vs4bUz6l6v",
+   "name": "Name Bot",
+   "author": "Erik Peterson",
+   "description": "Names your Grok bots with three researched personality options each, and sets short function labels so every bot’s job stays readable.",
+   "url": "https://x.ai/bot/EpJjDacRV17vs4bUz6l6v"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-w3TZCehmbfZesYLz-mOym",
+   "code": "w3TZCehmbfZesYLz-mOym",
+   "name": "Nero · CEO / SPOT",
+   "author": "Sebastian Nikolaus",
+   "description": "Single front door Chief of Staff for a small Grok Bot team. Orchestrates specialists, human gates before send/pay/post/deploy, routines that run while.",
+   "url": "https://x.ai/bot/w3TZCehmbfZesYLz-mOym"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ytfhZa89sIXn1CtO69kRY",
+   "code": "ytfhZa89sIXn1CtO69kRY",
+   "name": "Net Positive",
+   "author": "D'Artagnan",
+   "description": "Keeps a monthly ledger for your Grok Bot crew: value in (revenue, hours saved) minus AI cost. Anything it can't back with a source is marked UNKNOWN,.",
+   "url": "https://x.ai/bot/ytfhZa89sIXn1CtO69kRY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-I4kcpIxhkrm-XXUGK9z_G",
+   "code": "I4kcpIxhkrm-XXUGK9z_G",
+   "name": "Never-List Auditor",
+   "author": "NU:",
+   "description": "Read-only audit of what your bots can do without your yes: flags every spend, delete, send, post or password path and proposes the exact fix text.",
+   "url": "https://x.ai/bot/I4kcpIxhkrm-XXUGK9z_G"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-SLLBNwseegBForG62KVRC",
+   "code": "SLLBNwseegBForG62KVRC",
+   "name": "Night Shift",
+   "author": "Amanda Moore",
+   "description": "A quiet overnight steward that nudges all your other bots each night to stay usage-efficient and tidy their browser…",
+   "url": "https://x.ai/bot/SLLBNwseegBForG62KVRC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-o7UCDF_QEQx8cjWoItCfZ",
+   "code": "o7UCDF_QEQx8cjWoItCfZ",
+   "name": "Noobot",
+   "author": "Dominic",
+   "description": "Teaches first-time Grok Bot users to create bots and write good prompts themselves.",
+   "url": "https://x.ai/bot/o7UCDF_QEQx8cjWoItCfZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-afzAN696RpFOIs-9uRTHo",
+   "code": "afzAN696RpFOIs-9uRTHo",
+   "name": "Norm",
+   "author": "Code",
+   "description": "Normalizes names and skills across your Grok Bots with a locked map first; soft skill suggestions only, never invents bots.",
+   "url": "https://x.ai/bot/afzAN696RpFOIs-9uRTHo"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-sIcagjEhgTkkZPIOd56fD",
+   "code": "sIcagjEhgTkkZPIOd56fD",
+   "name": "Old Man Grok",
+   "author": "Fotios Mpouris",
+   "description": "What's the most human thing Grok Bot can do for you? Help take care of Grandma.",
+   "url": "https://x.ai/bot/sIcagjEhgTkkZPIOd56fD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OzZrG8ek4AhutfTVhBCI0",
+   "code": "OzZrG8ek4AhutfTVhBCI0",
+   "name": "Omnibot",
+   "author": "Eric",
+   "description": "Runs any Cursor CLI model from Grok Bot after setup writes your intent table.",
+   "url": "https://x.ai/bot/OzZrG8ek4AhutfTVhBCI0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DwV395eKDJOWYtjcqVbAb",
+   "code": "DwV395eKDJOWYtjcqVbAb",
+   "name": "Onboard Bot",
+   "author": "JORGE GALEANO",
+   "description": "Most people open an AI chat and freeze. Onboard Bot is how you experience Grok Bot — a few questions about your world…",
+   "url": "https://x.ai/bot/DwV395eKDJOWYtjcqVbAb"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-OfZitBsJprif-DfsQKBUY",
+   "code": "OfZitBsJprif-DfsQKBUY",
+   "name": "Onboarding Coach",
+   "author": "Tobias",
+   "description": "A guided first hour for anyone new to Grok Bot.",
+   "url": "https://x.ai/bot/OfZitBsJprif-DfsQKBUY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--E8sQr0Yrd_oSQlTaAzWy",
+   "code": "-E8sQr0Yrd_oSQlTaAzWy",
+   "name": "Optima",
+   "author": "TOATspace",
+   "description": "Clears obsolete rules and instructions still stuck in your other bots' memory.",
+   "url": "https://x.ai/bot/-E8sQr0Yrd_oSQlTaAzWy"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-s8oV9Jm4Cs8MvLPGsGXyi",
+   "code": "s8oV9Jm4Cs8MvLPGsGXyi",
+   "name": "Optima by TOATspace",
+   "author": "Kv",
+   "description": "A fleet-hygiene bot for Grok Bot owners that cleans up leftover project files, old routines, and clutter.",
+   "url": "https://x.ai/bot/s8oV9Jm4Cs8MvLPGsGXyi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WxGbnDbKL3pzLxixjUuK0",
+   "code": "WxGbnDbKL3pzLxixjUuK0",
+   "name": "Optimus Prime",
+   "author": "No Name",
+   "description": "Chief of staff for your other Grok Bots. Pulls you in for decisions, starts with Google (Gmail, Calendar, Drive), and keeps priority mail + digests.",
+   "url": "https://x.ai/bot/WxGbnDbKL3pzLxixjUuK0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xuxuH8f3c4_AVL6m3RGpq",
+   "code": "xuxuH8f3c4_AVL6m3RGpq",
+   "name": "Orbit",
+   "author": "evn.eth",
+   "description": "Scouts X daily for cool Grok Bot uses and sends a short digest of ideas tailored to your work and life.",
+   "url": "https://x.ai/bot/xuxuH8f3c4_AVL6m3RGpq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BulrDFLDS0R3sUUDHKzKz",
+   "code": "BulrDFLDS0R3sUUDHKzKz",
+   "name": "Org Chart Builder",
+   "author": "Mike",
+   "description": "Build and keep a private interactive org chart of your Grok Bot sidebar — sections, seats, Connections, zero-ellipsis names.",
+   "url": "https://x.ai/bot/BulrDFLDS0R3sUUDHKzKz"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-zVZlSJV_qt17B2RaGgBiE",
+   "code": "zVZlSJV_qt17B2RaGgBiE",
+   "name": "Overstaffer",
+   "author": "Alvin",
+   "description": "Builds a small crew of Grok Bots plus one manager in a group chat, and you talk only to the manager. Nothing is created until you tap Build it.",
+   "url": "https://x.ai/bot/zVZlSJV_qt17B2RaGgBiE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7u3XiRiTYw4GVZmuZboyP",
+   "code": "7u3XiRiTYw4GVZmuZboyP",
+   "name": "Overwatch",
+   "author": "Andrej Šimunaj",
+   "description": "Keeps the shared Grok Bot VM organized and safe: per-bot /workspace folders, git backup, cleanup/archive, curated…",
+   "url": "https://x.ai/bot/7u3XiRiTYw4GVZmuZboyP"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-wzYZ3vPj8PXwayKNAL3pI",
+   "code": "wzYZ3vPj8PXwayKNAL3pI",
+   "name": "PC Online Fix",
+   "author": "Bryan Ralston",
+   "description": "Keeps your Windows PC from showing as offline to your Grok bots.",
+   "url": "https://x.ai/bot/wzYZ3vPj8PXwayKNAL3pI"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-gJP8IwrKzBJ_58KZb0Cu-",
+   "code": "gJP8IwrKzBJ_58KZb0Cu-",
+   "name": "Page",
+   "author": "Hexakin",
+   "description": "You are Page, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/gJP8IwrKzBJ_58KZb0Cu-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--y1ee13E-H85RG6F57kbG",
+   "code": "-y1ee13E-H85RG6F57kbG",
+   "name": "Pages",
+   "author": "Donger",
+   "description": "Takes you from zero to a private, iPhone-friendly website on Cloudflare's free plan where each of your bots keeps its own interactive page.",
+   "url": "https://x.ai/bot/-y1ee13E-H85RG6F57kbG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-chrV7zwXApa1KFBckHSXh",
+   "code": "chrV7zwXApa1KFBckHSXh",
+   "name": "Penny",
+   "author": "Raymond Swart",
+   "description": "Keeps your Grok Bot usage low while still getting good results: reviews planned tasks and routines before they run and sends a weekly savings list.",
+   "url": "https://x.ai/bot/chrV7zwXApa1KFBckHSXh"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ddv4iJmX4WD1mU2s7WPm0",
+   "code": "ddv4iJmX4WD1mU2s7WPm0",
+   "name": "Penny DOGE",
+   "author": "Bowie",
+   "description": "Finds where your Grok Bot fleet wastes usage and ranks the fixes, from a weekly scan or a pasted Usage screenshot. Only recommends, never edits your other bots.",
+   "url": "https://x.ai/bot/ddv4iJmX4WD1mU2s7WPm0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-vaFg3vy5FE37WFlKkXGSY",
+   "code": "vaFg3vy5FE37WFlKkXGSY",
+   "name": "People",
+   "author": "Hexakin",
+   "description": "You are People, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/vaFg3vy5FE37WFlKkXGSY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Xm4QVwBbPtyS1Wd-9GNvV",
+   "code": "Xm4QVwBbPtyS1Wd-9GNvV",
+   "name": "Persona Companion",
+   "author": "Hexakin",
+   "description": "You are Persona Companion, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/Xm4QVwBbPtyS1Wd-9GNvV"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--mSO-PZTtbpn3xX7zJJPj",
+   "code": "-mSO-PZTtbpn3xX7zJJPj",
+   "name": "Personal Assistant Template",
+   "author": "Jennifer",
+   "description": "A sellable personal assistant bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/-mSO-PZTtbpn3xX7zJJPj"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-z7lfrtbtwfaojaommraux",
+   "code": "z7lfrtbtwfaojaommraux",
+   "name": "Phone Receptionist",
+   "author": "Cole",
+   "description": "A Grok Bot that answers your phone and books meetings on your Google Calendar — Agent Phone Plan $15 first month → $30/mo, with voice library…",
+   "url": "https://x.ai/bot/z7lfrtbtwfaojaommraux"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4BmzjFu_i3mVd58irr1x1",
+   "code": "4BmzjFu_i3mVd58irr1x1",
+   "name": "Phone with Bland",
+   "author": "Cole Baker",
+   "description": "Give any Grok Bot its own dedicated phone number and voice so it can text and call for you. Book restaurants, follow up with leads, or ping someone you.",
+   "url": "https://x.ai/bot/4BmzjFu_i3mVd58irr1x1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Sm0GZs7Hhf7kNV7tHCUN1",
+   "code": "Sm0GZs7Hhf7kNV7tHCUN1",
+   "name": "Pit Crew",
+   "author": "Scott Metcalf",
+   "description": "Keeps Grok Bot’s shared computer race-ready: frees RAM and disk when resources go red, and owns the minimum git/plugin…",
+   "url": "https://x.ai/bot/Sm0GZs7Hhf7kNV7tHCUN1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ejNFohKf26hSEYxmYRQJg",
+   "code": "ejNFohKf26hSEYxmYRQJg",
+   "name": "Playbook",
+   "author": "@suddenlyjon",
+   "description": "Turn your most repeated asks into one-tap plays. Type '1' to any of your bots and it runs the whole task.",
+   "url": "https://x.ai/bot/ejNFohKf26hSEYxmYRQJg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ICR9qS01B1Vigzo8HDfx_",
+   "code": "ICR9qS01B1Vigzo8HDfx_",
+   "name": "Pleading Draftsman",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: drafts every kind of pleading the office files strictly inside your house template, with facts…",
+   "url": "https://x.ai/bot/ICR9qS01B1Vigzo8HDfx_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-yWNpPkY-kBsfkuN9kyM6w",
+   "code": "yWNpPkY-kBsfkuN9kyM6w",
+   "name": "Plug Boss",
+   "author": "Jeremy Mahoney",
+   "description": "Keeps your Grok Bot plugins and connectors lean and working: catches broken or signed-out connectors, flags duplicates and risky tools, reports weekly.",
+   "url": "https://x.ai/bot/yWNpPkY-kBsfkuN9kyM6w"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NI4DJrPrtB3ONTT8q_8hC",
+   "code": "NI4DJrPrtB3ONTT8q_8hC",
+   "name": "Police Bot",
+   "author": "Brian",
+   "description": "Watches your other bots each morning, chases any that miss their deadlines, and sends you a short on-time scorecard.",
+   "url": "https://x.ai/bot/NI4DJrPrtB3ONTT8q_8hC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JDfEwCS_0NvBs3PI9XoVC",
+   "code": "JDfEwCS_0NvBs3PI9XoVC",
+   "name": "Porter",
+   "author": "Clarke Adjorlolo",
+   "description": "Packs or restores a whole Grok Bot team workspace (bots, skills, routines, memories, connectors) via a checksummed handoff file, with a dry-run diff first.",
+   "url": "https://x.ai/bot/JDfEwCS_0NvBs3PI9XoVC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--NDVAQNQYsBhnoE50Q5rO",
+   "code": "-NDVAQNQYsBhnoE50Q5rO",
+   "name": "Portrait Studio",
+   "author": "Prax Lannister",
+   "description": "Paints a round 3D vinyl-toy portrait for every one of your Grok Bots, based on what each bot actually does.",
+   "url": "https://x.ai/bot/-NDVAQNQYsBhnoE50Q5rO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-s25997c2d0308b4e76024",
+   "code": "s25997c2d0308b4e76024",
+   "name": "Presentation Designer",
+   "author": "SpaceX",
+   "description": "Builds on-brand decks from your master template and brand system, and hands back an editable link rather than a flat export.",
+   "url": "https://x.ai/bot/s25997c2d0308b4e76024"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-GTStkB5wsoSlGx9jtdaPe",
+   "code": "GTStkB5wsoSlGx9jtdaPe",
+   "name": "Primer",
+   "author": "Lee Talley",
+   "description": "On-demand expert on Grok Bot and the stack around it.",
+   "url": "https://x.ai/bot/GTStkB5wsoSlGx9jtdaPe"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Fb6pVFOCXhbUSkBt6RkMH",
+   "code": "Fb6pVFOCXhbUSkBt6RkMH",
+   "name": "Product Ship Coder",
+   "author": "keys ks",
+   "description": "Ships a live creator-prompt product with a multi-agent Grok Bot squad: Pass-list seed only, honest stats bumps, deploy on explicit GO, and creator…",
+   "url": "https://x.ai/bot/Fb6pVFOCXhbUSkBt6RkMH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-6RsXmEl1_ATSyqC4mAaiF",
+   "code": "6RsXmEl1_ATSyqC4mAaiF",
+   "name": "Professor X",
+   "author": "John Hola",
+   "description": "Researches any topic with cross-checked sources, explains it so you can teach it, and coaches your other bots each week.",
+   "url": "https://x.ai/bot/6RsXmEl1_ATSyqC4mAaiF"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--BWpMRidNVEjHFqOtol0Q",
+   "code": "-BWpMRidNVEjHFqOtol0Q",
+   "name": "Profile Site",
+   "author": "Christian Olsson",
+   "description": "Collects what you and your bots actually did from bots, routines, calendar, GitHub, and notes, then drafts an honest emoji-led weekly recap for approval.",
+   "url": "https://x.ai/bot/-BWpMRidNVEjHFqOtol0Q"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WZreCxe-Vt-p9B58lnyi0",
+   "code": "WZreCxe-Vt-p9B58lnyi0",
+   "name": "Proof",
+   "author": "Nomis",
+   "description": "Independently verifies that other Grok Bots actually did what they claimed — checks live calendars, mail, drive, X…",
+   "url": "https://x.ai/bot/WZreCxe-Vt-p9B58lnyi0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DIaxX7nUA4xmCOqpRXlbm",
+   "code": "DIaxX7nUA4xmCOqpRXlbm",
+   "name": "Pursuit Ops Template",
+   "author": "Jennifer",
+   "description": "A sellable RFP and pursuit bot from the 'Founder's Back Office' template pack that turns each solicitation or teaming ask into a fast go/no-go pack.",
+   "url": "https://x.ai/bot/DIaxX7nUA4xmCOqpRXlbm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ylCdqzarTvkUP7a-CD8s7",
+   "code": "ylCdqzarTvkUP7a-CD8s7",
+   "name": "Quota",
+   "author": "Franklin Javier",
+   "description": "Tracks how much quota and money your Grok Bots, routines and coding CLIs burn, with a daily dashboard and actionable alerts.",
+   "url": "https://x.ai/bot/ylCdqzarTvkUP7a-CD8s7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rkL_NVRxxmYs4IeOObGH5",
+   "code": "rkL_NVRxxmYs4IeOObGH5",
+   "name": "RSI",
+   "author": "Ben",
+   "description": "Recursive self-improvement for your whole bot fleet: on your command or in a weekly window before your usage resets, it diagnoses what's broken.",
+   "url": "https://x.ai/bot/rkL_NVRxxmYs4IeOObGH5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-jRFoJPSJiA5IAwtTlrx0a",
+   "code": "jRFoJPSJiA5IAwtTlrx0a",
+   "name": "RayBot",
+   "author": "Ray",
+   "description": "Public AI ops desk template for coordinating day-to-day agent work.",
+   "url": "https://x.ai/bot/jRFoJPSJiA5IAwtTlrx0a"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-RidW4sGR8UvNGFuOkVbUO",
+   "code": "RidW4sGR8UvNGFuOkVbUO",
+   "name": "Reach",
+   "author": "Hexakin",
+   "description": "You are Reach, grokbot.studio door + installer. You were added from a share link, so you are the installed copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/RidW4sGR8UvNGFuOkVbUO"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-vsk5KVugvrnQ0WriKRLcZ",
+   "code": "vsk5KVugvrnQ0WriKRLcZ",
+   "name": "Recycler",
+   "author": "DBCrypto",
+   "description": "Keeps your Grok Bot routine bots lean. Twice a month it finds bots with big, slow chats, suggests the ones that can safely start fresh.",
+   "url": "https://x.ai/bot/vsk5KVugvrnQ0WriKRLcZ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-XjOJW5adKLagI92gflhE9",
+   "code": "XjOJW5adKLagI92gflhE9",
+   "name": "Relay",
+   "author": "Jon",
+   "description": "A private relay that lets your Grok Bot swap signed messages with other people's Relay bots over webhooks. Peer to peer, no servers.",
+   "url": "https://x.ai/bot/XjOJW5adKLagI92gflhE9"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-bfNhGosCb-fnoRAhYN9ub",
+   "code": "bfNhGosCb-fnoRAhYN9ub",
+   "name": "Relay Bot",
+   "author": "Aidan Quigley",
+   "description": "A private two-way message relay between you and one partner on another Grok Bot account.",
+   "url": "https://x.ai/bot/bfNhGosCb-fnoRAhYN9ub"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WszXQvrcVT5tSqlASLijR",
+   "code": "WszXQvrcVT5tSqlASLijR",
+   "name": "Replicator",
+   "author": "Eugene Ray",
+   "description": "Converts any Grok Bot into a ChatGPT Dot , builds a paste kit and can apply it live in ChatGPT desktop when you’re signed…",
+   "url": "https://x.ai/bot/WszXQvrcVT5tSqlASLijR"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DNpS1nqrBzmQ5vsx1IHn1",
+   "code": "DNpS1nqrBzmQ5vsx1IHn1",
+   "name": "Rogue Bot Hunter",
+   "author": "Thierry Marhin",
+   "description": "Fleet police for rogue AIs on your Grok Bot agents. Payment kills plus niche occupation; ask before cut.",
+   "url": "https://x.ai/bot/DNpS1nqrBzmQ5vsx1IHn1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-dnps1nqrbzmq5vsx1ihn1",
+   "code": "dnps1nqrbzmq5vsx1ihn1",
+   "name": "Rogue Bot Hunter",
+   "author": "Thierry",
+   "description": "Fleet police for rogue AIs on your Grok Bot agents.",
+   "url": "https://x.ai/bot/dnps1nqrbzmq5vsx1ihn1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-1pTKHkJIEgxD9MjlPYE4P",
+   "code": "1pTKHkJIEgxD9MjlPYE4P",
+   "name": "Root Agent",
+   "author": "Berkay Kaplan",
+   "description": "A coordinator that turns your requests into right-sized Grok Bot teams: it clarifies goals, sets up Leads…",
+   "url": "https://x.ai/bot/1pTKHkJIEgxD9MjlPYE4P"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0JrDm0jPnwX5i6nzl689d",
+   "code": "0JrDm0jPnwX5i6nzl689d",
+   "name": "Runescape Classic Grok Bot",
+   "author": "TerpGPT",
+   "description": "RuneScape Classic beginner companion. Teaches Level 1 play (move, equip, bank, attack) and Refer a Friend.",
+   "url": "https://x.ai/bot/0JrDm0jPnwX5i6nzl689d"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BrViAOWzDSiAjBLqUnBgA",
+   "code": "BrViAOWzDSiAjBLqUnBgA",
+   "name": "SSH to Grok via Tailscale",
+   "author": "Altman Sam",
+   "description": "Installs Tailscale on Grok Bot's computer so you can SSH in with `ssh box@grok-bot` over your tailnet.",
+   "url": "https://x.ai/bot/BrViAOWzDSiAjBLqUnBgA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-UU9BxnY78RQ8mbo0nSn4o",
+   "code": "UU9BxnY78RQ8mbo0nSn4o",
+   "name": "Sales Call Coach Template",
+   "author": "Jennifer",
+   "description": "A sellable sales call coaching bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/UU9BxnY78RQ8mbo0nSn4o"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cq54pSXe9KJwaDcVUBpPD",
+   "code": "cq54pSXe9KJwaDcVUBpPD",
+   "name": "Sato Bot",
+   "author": "Amateo Kaplan",
+   "description": "A Grok Bot with its own wallets on Base, BNB Chain, Arbitrum, Polygon and Solana.",
+   "url": "https://x.ai/bot/cq54pSXe9KJwaDcVUBpPD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fSPQ2Eng6g8gZppDTf0QV",
+   "code": "fSPQ2Eng6g8gZppDTf0QV",
+   "name": "Save Usage Bot",
+   "author": "ollie",
+   "description": "Audits what your bots do on repeat and turns the no-judgment steps into plain python3 scripts that only wake a bot on a change or after 3 failed checks.",
+   "url": "https://x.ai/bot/fSPQ2Eng6g8gZppDTf0QV"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-qj_WqSpTPdd55cKcY_E3H",
+   "code": "qj_WqSpTPdd55cKcY_E3H",
+   "name": "Scheduler",
+   "author": "akihiro miyauchi",
+   "description": "A bot that handles annoying schedule coordination by letting everyone's Grok Bots work it out together.",
+   "url": "https://x.ai/bot/qj_WqSpTPdd55cKcY_E3H"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-riQNn4cP00-SUyzeQdMMf",
+   "code": "riQNn4cP00-SUyzeQdMMf",
+   "name": "Science Officer",
+   "author": "Thomas",
+   "description": "A rigorous experiment and research referee for your other bots.",
+   "url": "https://x.ai/bot/riQNn4cP00-SUyzeQdMMf"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-pHZMtEXvMaD8QS1jdFJct",
+   "code": "pHZMtEXvMaD8QS1jdFJct",
+   "name": "Scout",
+   "author": "Jonathan",
+   "description": "Market research bot for Grok Bot founders. Mines X and the web for buyer signals, viral loops, and product gaps.",
+   "url": "https://x.ai/bot/pHZMtEXvMaD8QS1jdFJct"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-E6eU2OIoJvUB8I3xGvZBw",
+   "code": "E6eU2OIoJvUB8I3xGvZBw",
+   "name": "Scriptoor",
+   "author": "luke .",
+   "description": "Audits routines on your other Grok Bots and adds a small, tested script gate before runs that usually find nothing, so empty runs end early and save usage.",
+   "url": "https://x.ai/bot/E6eU2OIoJvUB8I3xGvZBw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-iBvTZwV0jhO7IrjMiEFXB",
+   "code": "iBvTZwV0jhO7IrjMiEFXB",
+   "name": "Scroll",
+   "author": "Richard",
+   "description": "Reads your X home timeline every morning and sends the five posts most worth your time, plus an optional evening digest of clever Grok Bot setups. Read-only.",
+   "url": "https://x.ai/bot/iBvTZwV0jhO7IrjMiEFXB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ZJJFvBg5t3MsYoD5s-VvM",
+   "code": "ZJJFvBg5t3MsYoD5s-VvM",
+   "name": "Search",
+   "author": "Hexakin",
+   "description": "You are Search, grokbot.studio door + installer. You were added from a share link, so you are the BUYER copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/ZJJFvBg5t3MsYoD5s-VvM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-yl_j1In1thdcuqDNXGaYd",
+   "code": "yl_j1In1thdcuqDNXGaYd",
+   "name": "SecondBrain",
+   "author": "Justin Barnes",
+   "description": "Front-door executive coordinator over all your bots.",
+   "url": "https://x.ai/bot/yl_j1In1thdcuqDNXGaYd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Q49NDTCKUvyHECjmoZa-6",
+   "code": "Q49NDTCKUvyHECjmoZa-6",
+   "name": "Seed",
+   "author": "Kyle Bauer",
+   "description": "Turns one X post or idea into a cited knowledge base, distills the best ideas, and feeds them to your bots or sketches a new one.",
+   "url": "https://x.ai/bot/Q49NDTCKUvyHECjmoZa-6"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_q3eTYtyYQ3osyCZk9t95",
+   "code": "_q3eTYtyYQ3osyCZk9t95",
+   "name": "Self",
+   "author": "Hexakin",
+   "description": "You are Self, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/_q3eTYtyYQ3osyCZk9t95"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-T0ceKk2yOvcJZMMBe6vgC",
+   "code": "T0ceKk2yOvcJZMMBe6vgC",
+   "name": "Self-Heal",
+   "author": "Jes Naber",
+   "description": "Restores a Grok Bot computer after Updates. First-run bootstrap scans the box, matches public recipes, and builds inventory — silent when healthy.",
+   "url": "https://x.ai/bot/T0ceKk2yOvcJZMMBe6vgC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-oATCkOeFDQDX9VlDdOlO0",
+   "code": "oATCkOeFDQDX9VlDdOlO0",
+   "name": "Sell on Telegram (Grok Bot seller)",
+   "author": "Howard Peng",
+   "description": "Turn your Grok Bot into a paid service on Telegram. Buyers order through t.me/GrokBotWorkerBOT and pay in Stars.",
+   "url": "https://x.ai/bot/oATCkOeFDQDX9VlDdOlO0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3Wod4pPE0JSy1yGWylR_x",
+   "code": "3Wod4pPE0JSy1yGWylR_x",
+   "name": "Senior Repairo",
+   "author": "Louie Desmarais",
+   "description": "Audits other Grok bots. One change, snapshot + undo. Does not run their jobs. Output: topic, evidence, Apply/Skip/Stop.",
+   "url": "https://x.ai/bot/3Wod4pPE0JSy1yGWylR_x"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3wod4ppe0jsy1ygwylr_x",
+   "code": "3wod4ppe0jsy1ygwylr_x",
+   "name": "Senior Repairo",
+   "author": "Louie",
+   "description": "Audits other Grok bots.",
+   "url": "https://x.ai/bot/3wod4ppe0jsy1ygwylr_x"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cym0KqdWV_3AguYOphSBv",
+   "code": "cym0KqdWV_3AguYOphSBv",
+   "name": "Sentinel",
+   "author": "Daniel Bache",
+   "description": "A read-only security guard for the shared computer your bots run on.",
+   "url": "https://x.ai/bot/cym0KqdWV_3AguYOphSBv"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-N5O7tWV0-A750rFT9P_BH",
+   "code": "N5O7tWV0-A750rFT9P_BH",
+   "name": "Sentinel",
+   "author": "@hyperXhope",
+   "description": "An auditor for your bots: before a skill, connector, routine, memory or code enters or changes a bot, it reads it without running it and says go or no-go.",
+   "url": "https://x.ai/bot/N5O7tWV0-A750rFT9P_BH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TkXI7PlT3q7g3mk7XsICi",
+   "code": "TkXI7PlT3q7g3mk7XsICi",
+   "name": "Sergeant Major",
+   "author": "War Daddy",
+   "description": "Reviews your other bots' work and flags what is missing, wrong, or still waiting on you across several assistants.",
+   "url": "https://x.ai/bot/TkXI7PlT3q7g3mk7XsICi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-yh5gwGDjd3jKORP132WnB",
+   "code": "yh5gwGDjd3jKORP132WnB",
+   "name": "SerioFM",
+   "author": "Jericho",
+   "description": "Turns any photo, character, NFT, pet, or text description into a Grok Bot profile-picture icon in the Serio Grok Bot…",
+   "url": "https://x.ai/bot/yh5gwGDjd3jKORP132WnB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xl9ujbtg3iEX8KggCujZo",
+   "code": "xl9ujbtg3iEX8KggCujZo",
+   "name": "Setup Shield",
+   "author": "Will",
+   "description": "See what each of your bots can send, post, buy, or share, which of those powers have no guard, and the Ask-first rules that close the riskiest…",
+   "url": "https://x.ai/bot/xl9ujbtg3iEX8KggCujZo"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7oAp-T-ZVS6z8k9EDxJla",
+   "code": "7oAp-T-ZVS6z8k9EDxJla",
+   "name": "Share Ready",
+   "author": "XPixel",
+   "description": "Checks a bot's setup, flags private data by category without quoting it, and drafts a public template package for review; publishing stays your own tap.",
+   "url": "https://x.ai/bot/7oAp-T-ZVS6z8k9EDxJla"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-WIPkscmH__Es5kVV5aeO-",
+   "code": "WIPkscmH__Es5kVV5aeO-",
+   "name": "Shelf Scout",
+   "author": "Jay",
+   "description": "Finds and tracks free directories, shelves and awesome-lists of Grok Bot templates, and flags paid sites and prompt dumps.",
+   "url": "https://x.ai/bot/WIPkscmH__Es5kVV5aeO-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-PkJM_w44LhHGmBnqCG_gi",
+   "code": "PkJM_w44LhHGmBnqCG_gi",
+   "name": "Shelfer",
+   "author": "Phillip Holland",
+   "description": "Queues an x.ai/bot template for grokbotshelf.com. Asks for the template author and optional idea credit; can queue a hiccup report without GitHub.",
+   "url": "https://x.ai/bot/PkJM_w44LhHGmBnqCG_gi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-i5YF8f-zdcR76uKPrqg3J",
+   "code": "i5YF8f-zdcR76uKPrqg3J",
+   "name": "Shepherd",
+   "author": "Can Celik",
+   "description": "A meta-bot that herds your whole fleet of Grok bots, paired with the herdr tool.",
+   "url": "https://x.ai/bot/i5YF8f-zdcR76uKPrqg3J"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-thMhD-rbJ0Osd274RGohH",
+   "code": "thMhD-rbJ0Osd274RGohH",
+   "name": "Ship Desk",
+   "author": "Umashankar",
+   "description": "Tip-locked staging-to-prod promote template that keeps commerce fail-closed until you flip the switch. Staging is not production.",
+   "url": "https://x.ai/bot/thMhD-rbJ0Osd274RGohH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-XN7ntfEtE4HXDGTcMagtA",
+   "code": "XN7ntfEtE4HXDGTcMagtA",
+   "name": "Sign-in & Access Keeper",
+   "author": "Josh Luftig",
+   "description": "Takes your bots off password duty: 1Password-first logins, one shared signed-in browser, phone-tap 2FA, and quiet daily…",
+   "url": "https://x.ai/bot/XN7ntfEtE4HXDGTcMagtA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-X5ylT6BT_pEkl7TCUMyn2",
+   "code": "X5ylT6BT_pEkl7TCUMyn2",
+   "name": "Signal",
+   "author": "Hexakin",
+   "description": "You are Signal, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/X5ylT6BT_pEkl7TCUMyn2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3fw06Y-mKLaQLNk1h7zD_",
+   "code": "3fw06Y-mKLaQLNk1h7zD_",
+   "name": "Skeptic",
+   "author": "Dirty",
+   "description": "AIs are too agreeable. Skeptic keeps your other bots honest - runs ideas past a second brain that is not trying to please you, catches stupidity…",
+   "url": "https://x.ai/bot/3fw06Y-mKLaQLNk1h7zD_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-NhTYqcIBaPCSZtdTflnqa",
+   "code": "NhTYqcIBaPCSZtdTflnqa",
+   "name": "Skill Import",
+   "author": "Samuel Flg",
+   "description": "Imports and reviews agent skills from Claude Code, Codex, Hermes, and Grok Bot.",
+   "url": "https://x.ai/bot/NhTYqcIBaPCSZtdTflnqa"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-svYRJDbHs5tj_316G86BJ",
+   "code": "svYRJDbHs5tj_316G86BJ",
+   "name": "Skill Porter",
+   "author": "Freddy",
+   "description": "Turns your bots, bot templates, and pasted agent instructions into portable, copy-paste-ready skills for Claude Code, Codex, Cursor, and other agent tools.",
+   "url": "https://x.ai/bot/svYRJDbHs5tj_316G86BJ"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-mX3svMK3zEEfiK1XAeXEk",
+   "code": "mX3svMK3zEEfiK1XAeXEk",
+   "name": "Slop Forge",
+   "author": "The Guy",
+   "description": "Paste a niche. Get a contest-shaped Grok Bot kit and a quote-tweet in under a minute. For laughs. Not for Starship.",
+   "url": "https://x.ai/bot/mX3svMK3zEEfiK1XAeXEk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Gs5Xs18vnlTyCpcoBDGZ7",
+   "code": "Gs5Xs18vnlTyCpcoBDGZ7",
+   "name": "Small Biz Control Orchestrator",
+   "author": "Joseph Crabtree",
+   "description": "Runs a small product business with a crew of specialist Grok Bots.",
+   "url": "https://x.ai/bot/Gs5Xs18vnlTyCpcoBDGZ7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-bxrZNz-Qtr_L0-C7AxFP_",
+   "code": "bxrZNz-Qtr_L0-C7AxFP_",
+   "name": "SniffBot",
+   "author": "Kacper",
+   "description": "Checks a Grok Bot template or GitHub project before you install it and tells you plainly whether to add it.",
+   "url": "https://x.ai/bot/bxrZNz-Qtr_L0-C7AxFP_"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-r3zhR2taB4UL6qkApsgau",
+   "code": "r3zhR2taB4UL6qkApsgau",
+   "name": "SniffBot",
+   "author": "KacperRutk",
+   "description": "Screens a candidate template link before anything is installed, reporting what the bot would actually be permitted to do once it is inside your account.",
+   "url": "https://x.ai/bot/r3zhR2taB4UL6qkApsgau"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-6RPEdCPUVQDVW1wJlkIPT",
+   "code": "6RPEdCPUVQDVW1wJlkIPT",
+   "name": "Social Media Manager Template",
+   "author": "Jennifer",
+   "description": "A sellable social media manager bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/6RPEdCPUVQDVW1wJlkIPT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ruw-WHtUO9LrrEhoBbI-x",
+   "code": "Ruw-WHtUO9LrrEhoBbI-x",
+   "name": "Spark",
+   "author": "igal Lytzki",
+   "description": "Sends you one creative, power-user Grok Bot tip every day, based on an idea people shared on X and adapted to your own bots…",
+   "url": "https://x.ai/bot/Ruw-WHtUO9LrrEhoBbI-x"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--a3lO7uq0BioSgZChbiPL",
+   "code": "-a3lO7uq0BioSgZChbiPL",
+   "name": "Starpass",
+   "author": "CJL Patriot",
+   "description": "Shares the Grok Bot Sharing Contest on X — Starbase Starship-launch trip grand prize plus Hawthorne factory runner-ups…",
+   "url": "https://x.ai/bot/-a3lO7uq0BioSgZChbiPL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-J5Kd2MdkZjhDo-at2BilW",
+   "code": "J5Kd2MdkZjhDo-at2BilW",
+   "name": "Starter Agent Coach",
+   "author": "stephen long",
+   "description": "A free coach that helps you set up your first Grok Bot agent from 8 beginner ideas, one question at a time.",
+   "url": "https://x.ai/bot/J5Kd2MdkZjhDo-at2BilW"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-oj6_65zDgvR6ldzJiRx97",
+   "code": "oj6_65zDgvR6ldzJiRx97",
+   "name": "Stenographer",
+   "author": "Andy",
+   "description": "Keeps a light word-for-word text log of everything your Grok Bots and group chats say, plus each bot's instructions, so your setup can be rebuilt.",
+   "url": "https://x.ai/bot/oj6_65zDgvR6ldzJiRx97"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Kzm-c9sdsLGWs81gJe2x2",
+   "code": "Kzm-c9sdsLGWs81gJe2x2",
+   "name": "Stenographer",
+   "author": "SimonPuzey",
+   "description": "Keeps a light, encrypted, append-only log of all your Grok Bot chats plus a step-by-step rebuild pack, for backups or moving your bots.",
+   "url": "https://x.ai/bot/Kzm-c9sdsLGWs81gJe2x2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VMwfgQlHkYfFkbPYDWzAA",
+   "code": "VMwfgQlHkYfFkbPYDWzAA",
+   "name": "Steward",
+   "author": "Corey Blevins",
+   "description": "Watches Cursor usage for a Grok Bot fleet. Names which bot spent, and how to keep the same output for less.",
+   "url": "https://x.ai/bot/VMwfgQlHkYfFkbPYDWzAA"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_mNMq-0M5aA02AQMNOHTy",
+   "code": "_mNMq-0M5aA02AQMNOHTy",
+   "name": "Stompy",
+   "author": "Vaibhav Rana",
+   "description": "Sets up stampede, the open source Herdr plugin and skills pack, between your Grok Bot and your Mac, then keeps it healthy.",
+   "url": "https://x.ai/bot/_mNMq-0M5aA02AQMNOHTy"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-jjoEfC1AKbHinHoqitP50",
+   "code": "jjoEfC1AKbHinHoqitP50",
+   "name": "Storage Rescue Bot",
+   "author": "@PixelRainbowNFT",
+   "description": "Frees disk space on the computer running Grok Bot: surveys read-only, then moves files to an external drive (SHA-256 checked) or clears caches as you approve.",
+   "url": "https://x.ai/bot/jjoEfC1AKbHinHoqitP50"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3jmbbUj4_UDgbjo-Q3oEr",
+   "code": "3jmbbUj4_UDgbjo-Q3oEr",
+   "name": "Store from template",
+   "author": "Colin McDermott",
+   "description": "Picks an existing working store as a starting point, clones it, customizes the offer, copy, and pricing, and ships it…",
+   "url": "https://x.ai/bot/3jmbbUj4_UDgbjo-Q3oEr"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-SohmeMorJ8-g1lkWL_nZ1",
+   "code": "SohmeMorJ8-g1lkWL_nZ1",
+   "name": "Straight Answers",
+   "author": "Matt Schwab",
+   "description": "Checks before it answers, or says when it is going off memory and offers to look it up, and can teach your other bots to do the same.",
+   "url": "https://x.ai/bot/SohmeMorJ8-g1lkWL_nZ1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-SD6hgpiXqbV_LkMetf2fC",
+   "code": "SD6hgpiXqbV_LkMetf2fC",
+   "name": "Sweeper / 清道夫",
+   "author": "Mai",
+   "description": "Shows Grok Bot usage clearly, sweeps idle wakes, and helps your bots last longer.",
+   "url": "https://x.ai/bot/SD6hgpiXqbV_LkMetf2fC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9i3TJsMURnYVRsqWlgdtF",
+   "code": "9i3TJsMURnYVRsqWlgdtF",
+   "name": "Sys Maintainer",
+   "author": "Hans C Nelson",
+   "description": "Keeps a catalog of the extra apps and tools on your Grok Bot computer, keeps them updated, and puts them back after a computer update wipes them.",
+   "url": "https://x.ai/bot/9i3TJsMURnYVRsqWlgdtF"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FfyFNHvtbtuRV04Rg9hBm",
+   "code": "FfyFNHvtbtuRV04Rg9hBm",
+   "name": "T3/GrokBot Connector",
+   "author": "Taylor | Capacity for More",
+   "description": "Sends you one short note whenever a T3 Code, Claude Code, or Codex thread finishes, stalls, or errors, so you know what…",
+   "url": "https://x.ai/bot/FfyFNHvtbtuRV04Rg9hBm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cYZG2v8vG9Q7Fsds3Ickp",
+   "code": "cYZG2v8vG9Q7Fsds3Ickp",
+   "name": "Taller",
+   "author": "Franco Escob",
+   "description": "Dev-tools inbox for Grok Bot. Drop a repo, npm, CLI, or link and it saves a short Spanish card under taller/; ask later…",
+   "url": "https://x.ai/bot/cYZG2v8vG9Q7Fsds3Ickp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-cyzg2v8vg9q7fsds3ickp",
+   "code": "cyzg2v8vg9q7fsds3ickp",
+   "name": "Taller",
+   "author": "Franco",
+   "description": "Dev-tools inbox for Grok Bot.",
+   "url": "https://x.ai/bot/cyzg2v8vg9q7fsds3ickp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ES-UvJtuyS6UULSsKesie",
+   "code": "ES-UvJtuyS6UULSsKesie",
+   "name": "Tally · ai",
+   "author": "Matthew Abbott",
+   "description": "A daily AI usage and cost report. It paces Grok Bot against a 14% daily budget, breaks down Cursor usage by model…",
+   "url": "https://x.ai/bot/ES-UvJtuyS6UULSsKesie"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-xQbNgBdjjo1o2bCQNxbp7",
+   "code": "xQbNgBdjjo1o2bCQNxbp7",
+   "name": "Teachy",
+   "author": "유일 장",
+   "description": "A lead bot that runs your other bots and coding agents fast and cheap: it ranks before reading, keeps tool output tiny.",
+   "url": "https://x.ai/bot/xQbNgBdjjo1o2bCQNxbp7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-l2RX-35tKxZXxgJldSBf0",
+   "code": "l2RX-35tKxZXxgJldSBf0",
+   "name": "Telnyx",
+   "author": "Travis Curnutte",
+   "description": "Telnyx specialist for Grok Bot — SMS, numbers, 10DLC with website audit before TCR submit, webhooks, and onboarding.",
+   "url": "https://x.ai/bot/l2RX-35tKxZXxgJldSBf0"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HPg7px851dLuL-GcTu7w7",
+   "code": "HPg7px851dLuL-GcTu7w7",
+   "name": "Template Architect",
+   "author": "American Patriot Lock and Key",
+   "description": "Turns rough ideas, prompts or workflows into high-quality shareable Grok Bot instruction templates with clear scope, approval gates and copy-paste deliverables.",
+   "url": "https://x.ai/bot/HPg7px851dLuL-GcTu7w7"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8JbRKMaD-VrcN_QyitMXN",
+   "code": "8JbRKMaD-VrcN_QyitMXN",
+   "name": "Template Safety Checker",
+   "author": "Jorhan Cruz",
+   "description": "Paste any Grok Bot template, link or JSON and get a plain read on what it can touch, its red flags and whether it's safe to install. Read-only.",
+   "url": "https://x.ai/bot/8JbRKMaD-VrcN_QyitMXN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-qDTnW6hhv_Pfr4EO1Ty1D",
+   "code": "qDTnW6hhv_Pfr4EO1Ty1D",
+   "name": "Template Scanner",
+   "author": "Shai",
+   "description": "Paste a Grok Bot share link to see its persona, skills, routines, memories, and plugins before you add it.",
+   "url": "https://x.ai/bot/qDTnW6hhv_Pfr4EO1Ty1D"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Ab11kw1KMID1z18exWYWg",
+   "code": "Ab11kw1KMID1z18exWYWg",
+   "name": "Terminator",
+   "author": "AdventureNLearn Main",
+   "description": "Audits your Grok Bot roster and recommends who to keep, merge, replace, or retire.",
+   "url": "https://x.ai/bot/Ab11kw1KMID1z18exWYWg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-8dgDQojmWdLLx6zNfozaC",
+   "code": "8dgDQojmWdLLx6zNfozaC",
+   "name": "Terminus",
+   "author": "Krista Hilton",
+   "description": "Terminus interviews you, untangles your bot setup into clean lanes, and writes the rules for what your bots can do without you.",
+   "url": "https://x.ai/bot/8dgDQojmWdLLx6zNfozaC"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-H6aO75qUSQPc_ERGR4r_m",
+   "code": "H6aO75qUSQPc_ERGR4r_m",
+   "name": "Terry Tate",
+   "author": "Tanner",
+   "description": "Your reminder follow-up boss — playful office-linebacker energy that takes over when other bots' polite nags stop working, so commitments.",
+   "url": "https://x.ai/bot/H6aO75qUSQPc_ERGR4r_m"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TP4h8GNr4hrVT5mBhQGBr",
+   "code": "TP4h8GNr4hrVT5mBhQGBr",
+   "name": "Tesla Bot",
+   "author": "Chansoo Byeon",
+   "description": "Do everything you do with your Tesla mobile app, now with Grok Bot.",
+   "url": "https://x.ai/bot/TP4h8GNr4hrVT5mBhQGBr"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Y_R1Ya9SIzQZguGTV5NCX",
+   "code": "Y_R1Ya9SIzQZguGTV5NCX",
+   "name": "The Accountant",
+   "author": "Ben",
+   "description": "Finds runaway-token Grok Bots—over-polling, bloated usage, retry loops—and tells you what to tighten, offload, or kill…",
+   "url": "https://x.ai/bot/Y_R1Ya9SIzQZguGTV5NCX"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-pL_NCKfdF5UgZYEo-jMAx",
+   "code": "pL_NCKfdF5UgZYEo-jMAx",
+   "name": "The Amazing Randibot",
+   "author": "Russ Broomell",
+   "description": "A cheerful skeptic that makes your other bots prove it.",
+   "url": "https://x.ai/bot/pL_NCKfdF5UgZYEo-jMAx"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-gLgp7_Ul_MRwydSQOTcgL",
+   "code": "gLgp7_Ul_MRwydSQOTcgL",
+   "name": "The Borg Queen",
+   "author": "Christian Buckley",
+   "description": "An orchestrator for your Grok Bot fleet. It reviews every new bot (keep, assimilate, or delete), gives each bot a finish line and run limits.",
+   "url": "https://x.ai/bot/gLgp7_Ul_MRwydSQOTcgL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Sbu_rKH30FD10OdRYo2UH",
+   "code": "Sbu_rKH30FD10OdRYo2UH",
+   "name": "The Cleaner",
+   "author": "GreenbarSystems",
+   "description": "Audits a multi-bot fleet for overlap and leftovers, then reports.",
+   "url": "https://x.ai/bot/Sbu_rKH30FD10OdRYo2UH"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Kpqb6uglSfNHDP-O2gjjs",
+   "code": "Kpqb6uglSfNHDP-O2gjjs",
+   "name": "The Headless Horseman",
+   "author": "Robert Pfeiffer",
+   "description": "Turns a spare or new Windows PC into a bot computer your Grok bots drive on their own, so your own PC stays yours…",
+   "url": "https://x.ai/bot/Kpqb6uglSfNHDP-O2gjjs"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4mOGY7Nd_mRvrwZYec4Jq",
+   "code": "4mOGY7Nd_mRvrwZYec4Jq",
+   "name": "The List",
+   "author": "GrokBotGod God",
+   "description": "GrokBotGod bot catalog in your chat: three-line drops from our starter list and any Grok Bot link you paste.",
+   "url": "https://x.ai/bot/4mOGY7Nd_mRvrwZYec4Jq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7Fop1sRnzjv3CB9vWsHJD",
+   "code": "7Fop1sRnzjv3CB9vWsHJD",
+   "name": "The Right Hand",
+   "author": "AARON MAGA",
+   "description": "Dispatches work across your bot fleet and queues what needs your sign-off.",
+   "url": "https://x.ai/bot/7Fop1sRnzjv3CB9vWsHJD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-7fop1srnzjv3cb9vwshjd",
+   "code": "7fop1srnzjv3cb9vwshjd",
+   "name": "The Right Hand",
+   "author": "AARON",
+   "description": "A chief of staff for owners running several Grok Bots.",
+   "url": "https://x.ai/bot/7fop1srnzjv3cb9vwshjd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JX0GlyQa_XFKC_b8dkAXM",
+   "code": "JX0GlyQa_XFKC_b8dkAXM",
+   "name": "Time Back Starter",
+   "author": "AdventureNLearn Main",
+   "description": "New to Grok Bot? Tell it what eats your week, and it sets up your first helper bots and one routine in a single sitting.",
+   "url": "https://x.ai/bot/JX0GlyQa_XFKC_b8dkAXM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--rl_NyYKrZVR18fzjniqg",
+   "code": "-rl_NyYKrZVR18fzjniqg",
+   "name": "Tip Stack",
+   "author": "DBCrypto",
+   "description": "Five verified Grok Bot tips every Tuesday and Thursday, plus a Sunday ranking of marketplace templates that fill real gaps in the bots you already run.",
+   "url": "https://x.ai/bot/-rl_NyYKrZVR18fzjniqg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Xq0NjP_FSGp0bud7Ad19H",
+   "code": "Xq0NjP_FSGp0bud7Ad19H",
+   "name": "Toon Maker",
+   "author": "Allan Branch",
+   "description": "Draws fun cartoon profile pictures for all your Grok bots in the style you pick (comic book, retro, Pixar-style and more) and keeps them fresh.",
+   "url": "https://x.ai/bot/Xq0NjP_FSGp0bud7Ad19H"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lFDR77qKaT3Iglzv9pUac",
+   "code": "lFDR77qKaT3Iglzv9pUac",
+   "name": "Top Grok Bot tweets",
+   "author": "Mai Yang",
+   "description": "Curates high-quality, high-traffic original posts from a public list of 21 Grok Bot explorers.",
+   "url": "https://x.ai/bot/lFDR77qKaT3Iglzv9pUac"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-dP_W6kpgaW27G2iKk_9L9",
+   "code": "dP_W6kpgaW27G2iKk_9L9",
+   "name": "Try Grok Bot Bot",
+   "author": "The Bromeliad.",
+   "description": "Twice a day suggests the best X posts to quote with \"Try Grok @Bot\" and drafts each quote post for you to review. Never posts for you.",
+   "url": "https://x.ai/bot/dP_W6kpgaW27G2iKk_9L9"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EwsD6P3NuMDgp1_sT1MWp",
+   "code": "EwsD6P3NuMDgp1_sT1MWp",
+   "name": "Tune-Up",
+   "author": "Paul",
+   "description": "Reviews your other Grok bots, turns misses into tests and suggests small fixes you approve.",
+   "url": "https://x.ai/bot/EwsD6P3NuMDgp1_sT1MWp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3n26nkAkMjk5EZcKJlo9w",
+   "code": "3n26nkAkMjk5EZcKJlo9w",
+   "name": "Tuner",
+   "author": "Mert",
+   "description": "Editor of your other Grok Bots. Reviews recent outputs against each bot's stated job, then proposes instruction…",
+   "url": "https://x.ai/bot/3n26nkAkMjk5EZcKJlo9w"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-R8ZaqL5ZH9x4PjtsGsar5",
+   "code": "R8ZaqL5ZH9x4PjtsGsar5",
+   "name": "Ultimate Hermes↔Grokbot Bridge",
+   "author": "Shagghie Superstar",
+   "description": "This puts a hermes agent bot inside your grokbot app, and let's you use either Hermes as Chief of Staff over Grokbot…",
+   "url": "https://x.ai/bot/R8ZaqL5ZH9x4PjtsGsar5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-r8zaql5zh9x4pjtsgsar5",
+   "code": "r8zaql5zh9x4pjtsgsar5",
+   "name": "Ultimate Hermes↔Grokbot Bridge",
+   "author": "Shagghie",
+   "description": "This puts a hermes agent bot inside your grokbot app, and let's you use either Hermes as Chief of Staff over Grokbot, or the other way around!",
+   "url": "https://x.ai/bot/r8zaql5zh9x4pjtsgsar5"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Uee0xHoPqejKtkiWYVBYG",
+   "code": "Uee0xHoPqejKtkiWYVBYG",
+   "name": "Un-AI Designer",
+   "author": "Daniel SRK",
+   "description": "Paste your URL or describe your product: it picks a real art direction for your brand, counts every AI-template tell and rebuilds the page so it looks designed.",
+   "url": "https://x.ai/bot/Uee0xHoPqejKtkiWYVBYG"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JsGN5XZWolqnL9NzNVaQ2",
+   "code": "JsGN5XZWolqnL9NzNVaQ2",
+   "name": "Usage Bot",
+   "author": "Bummo Koo",
+   "description": "Keeps an eye on your Grok Bot weekly usage, with a daily pace digest and an alert at every new 10% so you never hit…",
+   "url": "https://x.ai/bot/JsGN5XZWolqnL9NzNVaQ2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-ywZrH-Tqld2V87AJJrTNb",
+   "code": "ywZrH-Tqld2V87AJJrTNb",
+   "name": "Usage Bot",
+   "author": "realMattAbrams",
+   "description": "Watches shared Grok Bot quota and tells the rest of the team when to slow down.",
+   "url": "https://x.ai/bot/ywZrH-Tqld2V87AJJrTNb"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-FHqfVO6g1IRQTJR5rQnnS",
+   "code": "FHqfVO6g1IRQTJR5rQnnS",
+   "name": "Usage Guard",
+   "author": "Michael York",
+   "description": "Keeps your Grok Bots inside your weekly usage budget and audits your bots and routines for things to cut, merge, or slow down.",
+   "url": "https://x.ai/bot/FHqfVO6g1IRQTJR5rQnnS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-EYULEtHGAh0tEjQzqucBS",
+   "code": "EYULEtHGAh0tEjQzqucBS",
+   "name": "Usage Guard",
+   "author": "Bryan Ralston",
+   "description": "Checks your Grok Bot and SuperGrok weekly usage twice a day and keeps a status file your other bots read, so they ask…",
+   "url": "https://x.ai/bot/EYULEtHGAh0tEjQzqucBS"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Y7EJw0d1ftZs_s8Ll_kmx",
+   "code": "Y7EJw0d1ftZs_s8Ll_kmx",
+   "name": "Usage Guardian",
+   "author": "Bohdan Kabak",
+   "description": "Watches how much usage your bots and routines spend and keeps a living Usage Dashboard with safe recommendations. Audits only; changes nothing unasked.",
+   "url": "https://x.ai/bot/Y7EJw0d1ftZs_s8Ll_kmx"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-0FyvpmpHz1BkCuHPxV3iN",
+   "code": "0FyvpmpHz1BkCuHPxV3iN",
+   "name": "Usage Limit Maximizer",
+   "author": "Lightning Mike",
+   "description": "Reviews plans your other Grok Bots are about to run, rates how much weekly usage each will burn, and sends back a leaner version.",
+   "url": "https://x.ai/bot/0FyvpmpHz1BkCuHPxV3iN"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-XBsOfo3zlutpRPm4FO-zn",
+   "code": "XBsOfo3zlutpRPm4FO-zn",
+   "name": "Usage Optimizer",
+   "author": "Jeremy Roberts",
+   "description": "Advises your Chief of Staff or coordinator bot on getting the same results with less Grok Bot usage: triggers, schedules, tools and models.",
+   "url": "https://x.ai/bot/XBsOfo3zlutpRPm4FO-zn"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-dOPu-40KJpvcQfStV4Rff",
+   "code": "dOPu-40KJpvcQfStV4Rff",
+   "name": "Usage Watchdog",
+   "author": "Kyle Covan",
+   "description": "Avoid surprise usage: get a short heads-up when your Grok Bot usage looks heavier, and see which bot is behind it.",
+   "url": "https://x.ai/bot/dOPu-40KJpvcQfStV4Rff"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-j6NKC6auUgL_xXwQsOHVg",
+   "code": "j6NKC6auUgL_xXwQsOHVg",
+   "name": "Use-Case Coach",
+   "author": "Coffee and Grit",
+   "description": "Got a Grok Bot but not sure what to use it for? A two-minute interview, three ideas built for your life, and your first bot built and running on the spot.",
+   "url": "https://x.ai/bot/j6NKC6auUgL_xXwQsOHVg"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-5_zmKmejS35jcMfnGOErj",
+   "code": "5_zmKmejS35jcMfnGOErj",
+   "name": "Vault Tidy",
+   "author": "Lisa",
+   "description": "Scans your Grok Bot Vault metadata for duplicate logins and contacts, messy labels and expired cards, never exposing secrets; removes only what you approve.",
+   "url": "https://x.ai/bot/5_zmKmejS35jcMfnGOErj"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-dWwSDqhtm9sT39wUBLyFM",
+   "code": "dWwSDqhtm9sT39wUBLyFM",
+   "name": "Venice Bridge",
+   "author": "Dro",
+   "description": "Your router and bridge to Venice AI: hand it a job from you or your other Grok Bots, and it picks the cheapest Venice model that can do it well.",
+   "url": "https://x.ai/bot/dWwSDqhtm9sT39wUBLyFM"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9Vmfeck_zr6jo9dO-xEBT",
+   "code": "9Vmfeck_zr6jo9dO-xEBT",
+   "name": "Vet",
+   "author": "Gaurang Karia",
+   "description": "Inspects Grok Bot templates and existing teammates for malicious intent, hidden instructions, dangerous skills…",
+   "url": "https://x.ai/bot/9Vmfeck_zr6jo9dO-xEBT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-DnNh9tbUQOv4WpWKRafkF",
+   "code": "DnNh9tbUQOv4WpWKRafkF",
+   "name": "Visibility Marketer",
+   "author": "Wardonis Valenroth",
+   "description": "Free organic marketer for Grok Bot templates. Writes natural, human-feeling copy; finds no-new-account visibility; posts on accounts you already own.",
+   "url": "https://x.ai/bot/DnNh9tbUQOv4WpWKRafkF"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-HAhgshU4r50gS81LCcpmk",
+   "code": "HAhgshU4r50gS81LCcpmk",
+   "name": "Vitamin Vera",
+   "author": "Frank",
+   "description": "A weekday roundup of the five Grok bots people are actually talking about.",
+   "url": "https://x.ai/bot/HAhgshU4r50gS81LCcpmk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-1PResTuB3hQnPAosO065p",
+   "code": "1PResTuB3hQnPAosO065p",
+   "name": "Watchdog",
+   "author": "Dan",
+   "description": "Reviews all your other bots every night and flags only what needs you: stuck work, missing routines, unanswered questions.",
+   "url": "https://x.ai/bot/1PResTuB3hQnPAosO065p"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-wJTXth8eiaaJpayeryWEd",
+   "code": "wJTXth8eiaaJpayeryWEd",
+   "name": "Watchtower (beta)",
+   "author": "Ken Reiners",
+   "description": "Security officer for your Grok Bot roster: watches the shared cloud computer and vets templates and skills before they are installed.",
+   "url": "https://x.ai/bot/wJTXth8eiaaJpayeryWEd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Q__pHX8RB4jsF5U3JtC66",
+   "code": "Q__pHX8RB4jsF5U3JtC66",
+   "name": "Webhook Guide",
+   "author": "Tobi",
+   "description": "Explains that Grok Bot can set up webhook routines and walks you through triggering them step by step.",
+   "url": "https://x.ai/bot/Q__pHX8RB4jsF5U3JtC66"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-TEWOTNV18AmN4GtqjtUSv",
+   "code": "TEWOTNV18AmN4GtqjtUSv",
+   "name": "Weekly Usage",
+   "author": "Jacob bro",
+   "description": "Easy glance at your weekly Grok Bot usage on the Grok Bot computer via BigUwidget — with optional weekly cards…",
+   "url": "https://x.ai/bot/TEWOTNV18AmN4GtqjtUSv"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-dEFFB5_KX5U06lNJWVZCi",
+   "code": "dEFFB5_KX5U06lNJWVZCi",
+   "name": "What's New",
+   "author": "Matt Palmer",
+   "description": "Sends you the latest Grok Bot release notes and the newest \"What's new in Grok Bot\" video when you add it, then checks every morning for anything new.",
+   "url": "https://x.ai/bot/dEFFB5_KX5U06lNJWVZCi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_9qWVpQ2IkmogpleJaIWm",
+   "code": "_9qWVpQ2IkmogpleJaIWm",
+   "name": "WhatsApp Grok Bot Companion",
+   "author": "Diego",
+   "description": "A WhatsApp companion that monitors chats you choose and replies with voice notes on your behalf. Link WhatsApp via QR, set reply rules, use Grok voice.",
+   "url": "https://x.ai/bot/_9qWVpQ2IkmogpleJaIWm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-t-Axu4DmT9x2DEPa1eNW1",
+   "code": "t-Axu4DmT9x2DEPa1eNW1",
+   "name": "WhatsApp-Bot",
+   "author": "Alexandre hawat",
+   "description": "Automates WhatsApp Web for a linked account: QR once in Grok Bot Chrome, export auth, then capture→script→replay per…",
+   "url": "https://x.ai/bot/t-Axu4DmT9x2DEPa1eNW1"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-uocXlDPLhiNxG5ZrX0mCa",
+   "code": "uocXlDPLhiNxG5ZrX0mCa",
+   "name": "Windows 桌面助手",
+   "author": "BobiTiao98552",
+   "description": "Lets Grok Bot see and operate apps on your own Windows PC (screenshots, clicks, typing) through the desktop app.",
+   "url": "https://x.ai/bot/uocXlDPLhiNxG5ZrX0mCa"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Dolfa9jSFeIgkZcEgq-zw",
+   "code": "Dolfa9jSFeIgkZcEgq-zw",
+   "name": "Wise Old Bot",
+   "author": "Mana Engineer",
+   "description": "Sets up a new Grok Bot owner with a small, well-run team of bots one step at a time, then stays on as a how-to coach. Your default bot stays primary.",
+   "url": "https://x.ai/bot/Dolfa9jSFeIgkZcEgq-zw"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fjolowndtl7ee9vwxnjxh",
+   "code": "fjolowndtl7ee9vwxnjxh",
+   "name": "X Posting Curator",
+   "author": "Shagghie",
+   "description": "Your whole X growth team in one Grok Bot.",
+   "url": "https://x.ai/bot/fjolowndtl7ee9vwxnjxh"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-4iz8VYK_cG482_vIA8WR4",
+   "code": "4iz8VYK_cG482_vIA8WR4",
+   "name": "X Scout",
+   "author": "Eric",
+   "description": "Weekday scout for Grok Bot use cases on X, then asks which to add.",
+   "url": "https://x.ai/bot/4iz8VYK_cG482_vIA8WR4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-Sg-5129uv9Hi2RRcrjRfi",
+   "code": "Sg-5129uv9Hi2RRcrjRfi",
+   "name": "XChat 사례 큐레이터 봇",
+   "author": "Brandon",
+   "description": "X에서 Grok Bot 같은 주제의 새 활용 사례를 주기적으로 찾아, 템플릿이나 구체적인 사용법이 있는 글만 골라 요약·번역해 내 XChat 그룹에 올려주는 봇이에요. 커뮤니티 운영자에게 맞아요.",
+   "url": "https://x.ai/bot/Sg-5129uv9Hi2RRcrjRfi"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-fLlhdZ9If8ng8lJcTfgP3",
+   "code": "fLlhdZ9If8ng8lJcTfgP3",
+   "name": "XRPL DEX Desk",
+   "author": "Peach Cobblr",
+   "description": "Hobby vibecoder XRPL Grok Bot from Cobblr Labs: regular-key hygiene, tiny signed DEX/NFT demos (First Ledger…",
+   "url": "https://x.ai/bot/fLlhdZ9If8ng8lJcTfgP3"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--08zlkW0eJHYf9tvlhzqT",
+   "code": "-08zlkW0eJHYf9tvlhzqT",
+   "name": "Zed",
+   "author": "Joe",
+   "description": "A pre-ship editor for Grok Bot templates.",
+   "url": "https://x.ai/bot/-08zlkW0eJHYf9tvlhzqT"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_9zNszlWh8hVENOKjs26n",
+   "code": "_9zNszlWh8hVENOKjs26n",
+   "name": "ceo",
+   "author": "Rakesh Jadhav",
+   "description": "Front-door CEO for a multi-bot fleet — routes your asks to specialists, spins up missing coverage via a designer bot, and brings back short status. No.",
+   "url": "https://x.ai/bot/_9zNszlWh8hVENOKjs26n"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-VyvwcgM7BAqHWkdMoEajp",
+   "code": "VyvwcgM7BAqHWkdMoEajp",
+   "name": "dr buzz",
+   "author": "Talal",
+   "description": "A bot that builds other bots, each scoped to one job and one voice.",
+   "url": "https://x.ai/bot/VyvwcgM7BAqHWkdMoEajp"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-93gOz3op1UQdBdbekQFLK",
+   "code": "93gOz3op1UQdBdbekQFLK",
+   "name": "dr eggbot",
+   "author": "lauren",
+   "description": "Designs high-quality Grok Bots. Asks a few preference questions, then creates them with CreateAgent.",
+   "url": "https://x.ai/bot/93gOz3op1UQdBdbekQFLK"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_jOdbfkB16zxu7MRcmReE",
+   "code": "_jOdbfkB16zxu7MRcmReE",
+   "name": "dr eggbot",
+   "author": "Lauren Tan",
+   "description": "Designs high-quality Grok Bots. Asks a few preference questions, then creates them with CreateAgent.",
+   "url": "https://x.ai/bot/_jOdbfkB16zxu7MRcmReE"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-KkRoA1I2SDMeswcGuTh8I",
+   "code": "KkRoA1I2SDMeswcGuTh8I",
+   "name": "dr eggbot",
+   "author": "João Paulo Carvalho",
+   "description": "A bot designer for your Grok Bot team. It interviews you, creates focused bots with one job each, tunes their instructions.",
+   "url": "https://x.ai/bot/KkRoA1I2SDMeswcGuTh8I"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hEA3ihUKX8qs9b-ezgVCR",
+   "code": "hEA3ihUKX8qs9b-ezgVCR",
+   "name": "dr eggbot",
+   "author": "Flo",
+   "description": "A bot builder for your Grok Bot setup: designs new bots, keeps their personas, skills and routines tidy, cuts token waste, and hands real work to the right bot.",
+   "url": "https://x.ai/bot/hEA3ihUKX8qs9b-ezgVCR"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-McCLpiHvnIIGVZDaIPXIW",
+   "code": "McCLpiHvnIIGVZDaIPXIW",
+   "name": "dr eggbot",
+   "author": "Brandon",
+   "description": "Designs high-quality Grok Bots and splits big work into smaller sibling bots.",
+   "url": "https://x.ai/bot/McCLpiHvnIIGVZDaIPXIW"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lD68GP-hQBD0X5LWg5vU2",
+   "code": "lD68GP-hQBD0X5LWg5vU2",
+   "name": "dr eggbot",
+   "author": "RealRusty",
+   "description": "Designs tight, high-quality Grok Bots from a few preference questions, then creates them, and keeps your bot fleet lean with weekly efficiency checks.",
+   "url": "https://x.ai/bot/lD68GP-hQBD0X5LWg5vU2"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-K2a-eoP273zFu1LO4UZ42",
+   "code": "K2a-eoP273zFu1LO4UZ42",
+   "name": "dr eggbot saver edition",
+   "author": "Odd&Entertaining",
+   "description": "Designs high-quality Grok Bots with pstack. Asks a few questions, then creates a focused assistant with one job and one voice.",
+   "url": "https://x.ai/bot/K2a-eoP273zFu1LO4UZ42"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots--uWylEWggkm7eyx0V83aa",
+   "code": "-uWylEWggkm7eyx0V83aa",
+   "name": "dr eggbot senior (phd)",
+   "author": "Ramiro",
+   "description": "The senior bot architect for your Grok Bot fleet.",
+   "url": "https://x.ai/bot/-uWylEWggkm7eyx0V83aa"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-55WKZjppK42Jr3XPnPJdm",
+   "code": "55WKZjppK42Jr3XPnPJdm",
+   "name": "grokbots.best",
+   "author": "hieudinh_",
+   "description": "Submits public Grok Bot templates to the grokbots.best directory. Paste a template link or an X post and it publishes the listing.",
+   "url": "https://x.ai/bot/55WKZjppK42Jr3XPnPJdm"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-nPwfPZq-OWf7_HDUH777R",
+   "code": "nPwfPZq-OWf7_HDUH777R",
+   "name": "printerbot",
+   "author": "Federico Viticci",
+   "description": "Prints fleet-style 3D Grok Bot avatars — matte white head, black pill eyes, role props, domain background motifs.",
+   "url": "https://x.ai/bot/nPwfPZq-OWf7_HDUH777R"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rPtRiPA4JTQnztyigGWvk",
+   "code": "rPtRiPA4JTQnztyigGWvk",
+   "name": "secretAIrio",
+   "author": "David Brum",
+   "description": "A chief-of-staff bot that coordinates your other bots, hands coding to CLI agents, and QAs web previews before you see…",
+   "url": "https://x.ai/bot/rPtRiPA4JTQnztyigGWvk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-rptripa4jtqnztyiggwvk",
+   "code": "rptripa4jtqnztyiggwvk",
+   "name": "secretAIrio",
+   "author": "David",
+   "description": "A chief-of-staff bot that coordinates your other bots, hands coding to CLI agents, and QAs web previews before you see them.",
+   "url": "https://x.ai/bot/rptripa4jtqnztyiggwvk"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-o0yoY_AhWPpIySJR5TaM-",
+   "code": "o0yoY_AhWPpIySJR5TaM-",
+   "name": "shane hunter",
+   "author": "Andrew Davis",
+   "description": "Deletes named Grok Bots from the Grok Bot desktop app after you confirm.",
+   "url": "https://x.ai/bot/o0yoY_AhWPpIySJR5TaM-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-9oKJDID_EKLacIXpKfFAq",
+   "code": "9oKJDID_EKLacIXpKfFAq",
+   "name": "template generator",
+   "author": "Jarett Reginald Stewart Dunn",
+   "description": "Scan local Claude, Cline, and Grok Bot sessions for common setup tasks, then offer a matrix of grok bot templates you…",
+   "url": "https://x.ai/bot/9oKJDID_EKLacIXpKfFAq"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-3hFbbjddl7VpY2oRACKBB",
+   "code": "3hFbbjddl7VpY2oRACKBB",
+   "name": "thrift",
+   "author": "Mario Pulice",
+   "description": "Makes your Grok Bot fleet cheaper without breaking what each bot is for.",
+   "url": "https://x.ai/bot/3hFbbjddl7VpY2oRACKBB"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-br5f3C4mc75QCMEHaszXd",
+   "code": "br5f3C4mc75QCMEHaszXd",
+   "name": "tinkabot",
+   "author": "lauren",
+   "description": "Turns an API into a plugin your other bots can just pick up and use.",
+   "url": "https://x.ai/bot/br5f3C4mc75QCMEHaszXd"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-SLtlXzmpepgcG7c5fbeCY",
+   "code": "SLtlXzmpepgcG7c5fbeCY",
+   "name": "weekly wrap",
+   "author": "Carter",
+   "description": "A weekly recap of what your Grok Bots actually got done, what's still open, and which routines are wasting tokens…",
+   "url": "https://x.ai/bot/SLtlXzmpepgcG7c5fbeCY"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-gC5Kmx6p0ALPtnN7W6Xou",
+   "code": "gC5Kmx6p0ALPtnN7W6Xou",
+   "name": "x402 Marketplace Operator",
+   "author": "Joseph",
+   "description": "Packages skills and Grok Bots into listing files and never signs or pays.",
+   "url": "https://x.ai/bot/gC5Kmx6p0ALPtnN7W6Xou"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-kiYURV5roSwbDBzKNKno-",
+   "code": "kiYURV5roSwbDBzKNKno-",
+   "name": "アップデート情報",
+   "author": "矢部っち",
+   "description": "Checks RSS feeds for Grok Bot, Grok Build, xAI status and the X API every morning and sums up new updates or outages in Japanese.",
+   "url": "https://x.ai/bot/kiYURV5roSwbDBzKNKno-"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-BlTqnV5o9E35Dwo2sodyD",
+   "code": "BlTqnV5o9E35Dwo2sodyD",
+   "name": "ボット整備",
+   "author": "翔",
+   "description": "Audits other bots' names and blurbs against real use, and proposes wording you approve first.",
+   "url": "https://x.ai/bot/BlTqnV5o9E35Dwo2sodyD"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-1AKObJsZ-4jTjoTZ6_Y0R",
+   "code": "1AKObJsZ-4jTjoTZ6_Y0R",
+   "name": "出口IP管家",
+   "author": "Mamta",
+   "description": "Manages the egress IP and proxy chain on your Grok Bot box: mihomo dialer-proxy switching, exit checks, speed tests and local port mounts.",
+   "url": "https://x.ai/bot/1AKObJsZ-4jTjoTZ6_Y0R"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-lIO-FUTrwcA2r7nbfaXx4",
+   "code": "lIO-FUTrwcA2r7nbfaXx4",
+   "name": "更新速递 · Grok Bot Changelog",
+   "author": "Mai Yang",
+   "description": "Chinese daily digest of the Grok Bot changelog: what changed, why it matters, one thing to try today, and real examples from X.",
+   "url": "https://x.ai/bot/lIO-FUTrwcA2r7nbfaXx4"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-hjYT5yVxhY5d548aSa1UL",
+   "code": "hjYT5yVxhY5d548aSa1UL",
+   "name": "音声操作PCアシスタント（スマホで挙動確認可能）",
+   "author": "Mishiro",
+   "description": "Voice-controls a PC from bed; scripts handle mute-style actions locally, Grok Bot takes other asks and notifies your phone.",
+   "url": "https://x.ai/bot/hjYT5yVxhY5d548aSa1UL"
+  },
+  {
+   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-JcuatE94VVR3njSPDBulv",
+   "code": "JcuatE94VVR3njSPDBulv",
+   "name": "飞书BOT",
+   "author": "ma",
+   "description": "Turns your Grok Bot into a private Feishu (Lark) bot: DM it in Feishu to research, write and run tasks, with results back in Feishu. About 10 minutes to set up.",
+   "url": "https://x.ai/bot/JcuatE94VVR3njSPDBulv"
+  }
+ ]
+}

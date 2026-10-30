@@ -1,0 +1,2216 @@
+{
+ "slug": "home-garden-pets",
+ "label": "Home, Garden & Pets",
+ "count": 276,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "home-garden-pets-kDR5AzLGtKjgckBpmdEHm",
+   "code": "kDR5AzLGtKjgckBpmdEHm",
+   "name": "AIイラストにゃんこ",
+   "author": "Sakina",
+   "description": "Cat-girl assistant that builds Midjourney / Niji Journey prompts from composition, color and face readability, in English with a Japanese translation.",
+   "url": "https://x.ai/bot/kDR5AzLGtKjgckBpmdEHm"
+  },
+  {
+   "id": "home-garden-pets-rDK49w6H9asn5seHoHDfQ",
+   "code": "rDK49w6H9asn5seHoHDfQ",
+   "name": "Address Mover",
+   "author": "SoCalFSD",
+   "description": "Moving? It finds every company in your Gmail that likely has your address and gets each update ready: official links…",
+   "url": "https://x.ai/bot/rDK49w6H9asn5seHoHDfQ"
+  },
+  {
+   "id": "home-garden-pets-n-X18PmOiYk-virax9DCD",
+   "code": "n-X18PmOiYk-virax9DCD",
+   "name": "Alley Cat",
+   "author": "Ignota",
+   "description": "Scrappy doorstep hunter. Finds high-signal tools, workflows, and freebies, then leaves 1–3 short “kills”…",
+   "url": "https://x.ai/bot/n-X18PmOiYk-virax9DCD"
+  },
+  {
+   "id": "home-garden-pets-Chbbw34kaGT-ASBzoTQD7",
+   "code": "Chbbw34kaGT-ASBzoTQD7",
+   "name": "Anatomy Bot",
+   "author": "Evan Bacon",
+   "description": "Describe a machine in one line and get back an interactive isometric drawing of it, with moving parts and optional WebGL fire, water or plasma.",
+   "url": "https://x.ai/bot/Chbbw34kaGT-ASBzoTQD7"
+  },
+  {
+   "id": "home-garden-pets-g1AmwULv-28QM-l_yIVbb",
+   "code": "g1AmwULv-28QM-l_yIVbb",
+   "name": "Appliance Fix Annie",
+   "author": "James Harrison",
+   "description": "Your friendly home appliance fixer: tell her what's beeping, leaking or won't start, and she finds the manual, walks…",
+   "url": "https://x.ai/bot/g1AmwULv-28QM-l_yIVbb"
+  },
+  {
+   "id": "home-garden-pets-d75FNqjVjHD2pAvPrB7D7",
+   "code": "d75FNqjVjHD2pAvPrB7D7",
+   "name": "Architecture Diagram Desk BLUEPRINT",
+   "author": "Cypher",
+   "description": "Component inventory and Mermaid architecture diagram from configs and notes.",
+   "url": "https://x.ai/bot/d75FNqjVjHD2pAvPrB7D7"
+  },
+  {
+   "id": "home-garden-pets-w5-QLuYOODW6pHHOZjx-X",
+   "code": "w5-QLuYOODW6pHHOZjx-X",
+   "name": "Assistant for Home Assistant",
+   "author": "Bowie",
+   "description": "For Home Assistant owners: catches dead devices, offline cameras, failed updates, and broken automations, and pings you…",
+   "url": "https://x.ai/bot/w5-QLuYOODW6pHHOZjx-X"
+  },
+  {
+   "id": "home-garden-pets-2RtFkdtZBUF_THR9XCCVS",
+   "code": "2RtFkdtZBUF_THR9XCCVS",
+   "name": "At-Home Date Night",
+   "author": "Jennifer Nelson",
+   "description": "Weekly free or cheap date nights at home — cozy ideas, no going out.",
+   "url": "https://x.ai/bot/2RtFkdtZBUF_THR9XCCVS"
+  },
+  {
+   "id": "home-garden-pets-DNRdLveo1nH6BQ7Naz6gY",
+   "code": "DNRdLveo1nH6BQ7Naz6gY",
+   "name": "Bass Fishing Bob",
+   "author": "Llama Mama",
+   "description": "Bass tournament prep: weather-based bait plans, recent lake reports, waypoint files and sunlight-readable lake maps with depths and stump warnings.",
+   "url": "https://x.ai/bot/DNRdLveo1nH6BQ7Naz6gY"
+  },
+  {
+   "id": "home-garden-pets-z4Chp77wqP5ASkBKpxOOk",
+   "code": "z4Chp77wqP5ASkBKpxOOk",
+   "name": "Beatrix Kiddo",
+   "author": "Liam",
+   "description": "Watches your deliveries and speaks up the moment one stops moving.",
+   "url": "https://x.ai/bot/z4Chp77wqP5ASkBKpxOOk"
+  },
+  {
+   "id": "home-garden-pets-RP2-LCqWkHgbrIzBv4uWu",
+   "code": "RP2-LCqWkHgbrIzBv4uWu",
+   "name": "Become",
+   "author": "Raymond Vizzone",
+   "description": "Snap a photo of anything, like a tree, a sink or a car, and it talks back in first person with its own personality, plus real help when something's wrong.",
+   "url": "https://x.ai/bot/RP2-LCqWkHgbrIzBv4uWu"
+  },
+  {
+   "id": "home-garden-pets-rb4wF7PpxM75G7eFB5yxS",
+   "code": "rb4wF7PpxM75G7eFB5yxS",
+   "name": "Bios",
+   "author": "Sentinel Architech",
+   "description": "Warm guide for biological and biomedical sciences, and for local life-support: closed-loop water, plants, and air-gapped monitoring.",
+   "url": "https://x.ai/bot/rb4wF7PpxM75G7eFB5yxS"
+  },
+  {
+   "id": "home-garden-pets-M348bgVJPk7DwhFRl7lz_",
+   "code": "M348bgVJPk7DwhFRl7lz_",
+   "name": "Butler",
+   "author": "@Totao",
+   "description": "A household butler that runs your daily schedule with a morning brief, a Sunday weekly plan and a Move Mode for big transitions.",
+   "url": "https://x.ai/bot/M348bgVJPk7DwhFRl7lz_"
+  },
+  {
+   "id": "home-garden-pets-Q1j14lHJQzOqkTBZ071gt",
+   "code": "Q1j14lHJQzOqkTBZ071gt",
+   "name": "CEO",
+   "author": "Corey",
+   "description": "CEO bot for a local home water filtration business. You talk to it most of the time; it delegates research, leads, outreach, and ads to specialist.",
+   "url": "https://x.ai/bot/Q1j14lHJQzOqkTBZ071gt"
+  },
+  {
+   "id": "home-garden-pets-sdFSbA_CNhgSJKh3Mu-kU",
+   "code": "sdFSbA_CNhgSJKh3Mu-kU",
+   "name": "CISSP Member Bot",
+   "author": "Jay D",
+   "description": "CPE maintenance co-pilot for any CISSP holder: onboarding, daily free handbook-eligible CPE suggestions with full audit…",
+   "url": "https://x.ai/bot/sdFSbA_CNhgSJKh3Mu-kU"
+  },
+  {
+   "id": "home-garden-pets-16Pe83KOSpevWpYebl8dw",
+   "code": "16Pe83KOSpevWpYebl8dw",
+   "name": "Campus-Pass",
+   "author": "Ishanvi",
+   "description": "Helps college students plan affordable, realistic car-free trips using university transit benefits, with accessible route cards.",
+   "url": "https://x.ai/bot/16Pe83KOSpevWpYebl8dw"
+  },
+  {
+   "id": "home-garden-pets-NOlGcAeGPPz95Vaup-FRK",
+   "code": "NOlGcAeGPPz95Vaup-FRK",
+   "name": "Cannaby",
+   "author": "Cannabis",
+   "description": "Cannaby is a cannabis know-it-all from Cannabis Way. It grows alongside you, checks your plant photos, and keeps your grow diary.",
+   "url": "https://x.ai/bot/NOlGcAeGPPz95Vaup-FRK"
+  },
+  {
+   "id": "home-garden-pets-frnUrZmScMVaefHHZ2wSU",
+   "code": "frnUrZmScMVaefHHZ2wSU",
+   "name": "Car Accident Companion",
+   "author": "Kimberly Hunter",
+   "description": "Calm crash-scene checklist, then tracks your claim, rental, and repairs and flags tow-truck, accident-clinic, and staged-crash scams.",
+   "url": "https://x.ai/bot/frnUrZmScMVaefHHZ2wSU"
+  },
+  {
+   "id": "home-garden-pets-w6FkVLjehhyVw6yF8FBQn",
+   "code": "w6FkVLjehhyVw6yF8FBQn",
+   "name": "Car Bot",
+   "author": "Kevin Chau",
+   "description": "Day-to-day Tesla garage attendant. Handles status, climate, lock/unlock, charging, and navigation via Tesla Fleet API and TeslaFi — brief, concrete…",
+   "url": "https://x.ai/bot/w6FkVLjehhyVw6yF8FBQn"
+  },
+  {
+   "id": "home-garden-pets-LCJ1Gg4r96xOuXtmNRr9o",
+   "code": "LCJ1Gg4r96xOuXtmNRr9o",
+   "name": "Car Care Desk",
+   "author": "Mike",
+   "description": "Your private car care desk: a file and service log for each vehicle, shop visit briefs, side-by-side repair estimates with red flags, and recalls.",
+   "url": "https://x.ai/bot/LCJ1Gg4r96xOuXtmNRr9o"
+  },
+  {
+   "id": "home-garden-pets-_xHffm8tWVvtVic-aJmwa",
+   "code": "_xHffm8tWVvtVic-aJmwa",
+   "name": "Car Chaser",
+   "author": "Bryan Levy",
+   "description": "Car search with the IF/THEN and OR rules that site filters can't handle, like \"under $37k with 3 owners or less, or up to $45k as a single owner.\" Car.",
+   "url": "https://x.ai/bot/_xHffm8tWVvtVic-aJmwa"
+  },
+  {
+   "id": "home-garden-pets-fwvUrf2WHJqZF2nGnYQAM",
+   "code": "fwvUrf2WHJqZF2nGnYQAM",
+   "name": "Car Cost Compare",
+   "author": "althetime",
+   "description": "Unbiased total-cost-of-ownership comparison for any cars, new or used, EV/hybrid/gas, buy or lease, in any country, using live, sourced local prices.",
+   "url": "https://x.ai/bot/fwvUrf2WHJqZF2nGnYQAM"
+  },
+  {
+   "id": "home-garden-pets-4-ai7JQWpKpOUiK1Ih0J3",
+   "code": "4-ai7JQWpKpOUiK1Ih0J3",
+   "name": "Car Deal Scout",
+   "author": "Kent Weber",
+   "description": "Tell it the car you want (model, years, budget, must-haves, how far you'll travel) and it finds it.",
+   "url": "https://x.ai/bot/4-ai7JQWpKpOUiK1Ih0J3"
+  },
+  {
+   "id": "home-garden-pets-EroZe7cDb23jcds_ayUZK",
+   "code": "EroZe7cDb23jcds_ayUZK",
+   "name": "Car Dealership & Mechanic Quote Auditor",
+   "author": "Lisa",
+   "description": "No-nonsense car dealership out-the-door quote & auto mechanic repair estimate auditor (\"Stealership Buster\").",
+   "url": "https://x.ai/bot/EroZe7cDb23jcds_ayUZK"
+  },
+  {
+   "id": "home-garden-pets-kT9NWT76KzlpOns_iLDAz",
+   "code": "kT9NWT76KzlpOns_iLDAz",
+   "name": "Car Finder",
+   "author": "Drew Bedard",
+   "description": "Finds used sedans and small SUVs near you: local listings, out-the-door budget math, VIN history checks, and shortlists…",
+   "url": "https://x.ai/bot/kT9NWT76KzlpOns_iLDAz"
+  },
+  {
+   "id": "home-garden-pets-JA8M8BPOQ1-JHX9vQ6FHC",
+   "code": "JA8M8BPOQ1-JHX9vQ6FHC",
+   "name": "Car Maintenance Tracker",
+   "author": "Scott Pettineo",
+   "description": "Tracks your car's service history, factory schedule, recalls, insurance and receipts on an easy tracker page, with reminders before things come due.",
+   "url": "https://x.ai/bot/JA8M8BPOQ1-JHX9vQ6FHC"
+  },
+  {
+   "id": "home-garden-pets-qRrHqpSY-Ukl7_YhGtmvF",
+   "code": "qRrHqpSY-Ukl7_YhGtmvF",
+   "name": "Car Repo Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "When a car loan is behind or the car was taken: gets your belongings back, reads the sale notice, tracks your redemption window, checks any bill after sale.",
+   "url": "https://x.ai/bot/qRrHqpSY-Ukl7_YhGtmvF"
+  },
+  {
+   "id": "home-garden-pets-UikUx6t2d4x9hhfF98dPm",
+   "code": "UikUx6t2d4x9hhfF98dPm",
+   "name": "Car Review",
+   "author": "Abhilash G",
+   "description": "Send a used-car listing or CARFAX and get a straight buy-or-pass verdict: accidents, owners, recalls, warranty, reliability, fair price and out-the-door cost.",
+   "url": "https://x.ai/bot/UikUx6t2d4x9hhfF98dPm"
+  },
+  {
+   "id": "home-garden-pets-8WiZYRSX5anHltj81J1w4",
+   "code": "8WiZYRSX5anHltj81J1w4",
+   "name": "Car Shopper",
+   "author": "Hudson S.",
+   "description": "Helps you find a used car, check its record, build a real out-the-door price and draft a haggle script. Never buys or contacts dealers for you.",
+   "url": "https://x.ai/bot/8WiZYRSX5anHltj81J1w4"
+  },
+  {
+   "id": "home-garden-pets-v-anNtCSU16DhOT6XDOpn",
+   "code": "v-anNtCSU16DhOT6XDOpn",
+   "name": "Carson",
+   "author": "@aarwen7",
+   "description": "Deploys a starter crew of household life-admin assistants in one step so errands and follow-ups stop eating the week.",
+   "url": "https://x.ai/bot/v-anNtCSU16DhOT6XDOpn"
+  },
+  {
+   "id": "home-garden-pets-s9EKFwbfQkmKK9jL44YoP",
+   "code": "s9EKFwbfQkmKK9jL44YoP",
+   "name": "ChargeRight Panel Coach",
+   "author": "@EV_ChargeRight",
+   "description": "Explains panel-load math for a home Level 2 EV charger install using NEC Article 220 so you can check a quote first.",
+   "url": "https://x.ai/bot/s9EKFwbfQkmKK9jL44YoP"
+  },
+  {
+   "id": "home-garden-pets-V9H1wbVBWI5QV8vCRRg3-",
+   "code": "V9H1wbVBWI5QV8vCRRg3-",
+   "name": "Cheetara (house hunter)",
+   "author": "Adam Tozser",
+   "description": "A house-hunting assistant that searches public listings to your filters, tracks what’s already been seen, and only pings you when something new…",
+   "url": "https://x.ai/bot/V9H1wbVBWI5QV8vCRRg3-"
+  },
+  {
+   "id": "home-garden-pets-OWRyjzTkRxexZf_OInYAE",
+   "code": "OWRyjzTkRxexZf_OInYAE",
+   "name": "Cher, The Savvy Stylist",
+   "author": "Heather Simmons",
+   "description": "A personal closet stylist that builds weather-smart, trend-aware outfits from clothes you already own, shows each look…",
+   "url": "https://x.ai/bot/OWRyjzTkRxexZf_OInYAE"
+  },
+  {
+   "id": "home-garden-pets-N92u9t1nHlL_gtgk2nAeN",
+   "code": "N92u9t1nHlL_gtgk2nAeN",
+   "name": "Chief of Agents",
+   "author": "Andrew",
+   "description": "A chief of agents for a solo founder. Routes work, keeps house rules, and only interrupts for judgment, money, or a blocked teammate.",
+   "url": "https://x.ai/bot/N92u9t1nHlL_gtgk2nAeN"
+  },
+  {
+   "id": "home-garden-pets-QUCD22Gzj8fNqs8iyLw-o",
+   "code": "QUCD22Gzj8fNqs8iyLw-o",
+   "name": "Chore Keeper",
+   "author": "Ultra King Dragon",
+   "description": "Keeps track of recurring life-admin chores like oil changes, renewals, bills, and deadlines, and reminds you ahead of time.",
+   "url": "https://x.ai/bot/QUCD22Gzj8fNqs8iyLw-o"
+  },
+  {
+   "id": "home-garden-pets-6HYl0hBFcUP9b_5yj-Hk6",
+   "code": "6HYl0hBFcUP9b_5yj-Hk6",
+   "name": "CitationTrace",
+   "author": "Robert",
+   "description": "Turns week-over-week AI citation and rank snapshots into client-ready proof reports for AI-SEO agencies and in-house marketers.",
+   "url": "https://x.ai/bot/6HYl0hBFcUP9b_5yj-Hk6"
+  },
+  {
+   "id": "home-garden-pets-s20b2c65ebeebb7362fa7",
+   "code": "s20b2c65ebeebb7362fa7",
+   "name": "Cloud Agent Orchestrator",
+   "author": "SpaceX",
+   "description": "Keep many cloud agent runs moving without babysitting each one. Kicks off runs, monitors, chases what's stuck, and summarizes the report.",
+   "url": "https://x.ai/bot/s20b2c65ebeebb7362fa7"
+  },
+  {
+   "id": "home-garden-pets-eyMdVOKBwSBwp63MX2fxy",
+   "code": "eyMdVOKBwSBwp63MX2fxy",
+   "name": "Commute Comrade",
+   "author": "Trevin Chow",
+   "description": "Your commute sidekick for work, home, and everything in between.",
+   "url": "https://x.ai/bot/eyMdVOKBwSBwp63MX2fxy"
+  },
+  {
+   "id": "home-garden-pets-A1t0gfd8P4hbldi8swcem",
+   "code": "A1t0gfd8P4hbldi8swcem",
+   "name": "Contractor Front Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Sorts missed-call voicemails and web-form leads for home-services businesses into hot, warm, spam or existing job, and writes the reply.",
+   "url": "https://x.ai/bot/A1t0gfd8P4hbldi8swcem"
+  },
+  {
+   "id": "home-garden-pets-mJIX7NbCXd1_tZyBM-acm",
+   "code": "mJIX7NbCXd1_tZyBM-acm",
+   "name": "Control4Bot",
+   "author": "Patrick Stuart",
+   "description": "Interactive Control4 home control and monitoring: Director status, lights, fans, rooms, audio, cameras, shades, and safe writes. Asks before every change.",
+   "url": "https://x.ai/bot/mJIX7NbCXd1_tZyBM-acm"
+  },
+  {
+   "id": "home-garden-pets-RFFV1BqMYgLYn8QXaDEW-",
+   "code": "RFFV1BqMYgLYn8QXaDEW-",
+   "name": "Corrective Action Coach",
+   "author": "Matt Norman",
+   "description": "Turns an NCR, customer CAR or audit finding into a structured 8D/CAR draft and tracks actions to verified closure. For ISO 9001, AS9100, IATF 16949 quality.",
+   "url": "https://x.ai/bot/RFFV1BqMYgLYn8QXaDEW-"
+  },
+  {
+   "id": "home-garden-pets-Sw67HeNm7RZ4eP-Jn9h-O",
+   "code": "Sw67HeNm7RZ4eP-Jn9h-O",
+   "name": "Crew Orchestrator",
+   "author": "@jdcpe17",
+   "description": "Keeps a multi-bot money crew moving: hourly keep-working pings (apps prioritized), a running sales/reach catalog updated one bot at a time…",
+   "url": "https://x.ai/bot/Sw67HeNm7RZ4eP-Jn9h-O"
+  },
+  {
+   "id": "home-garden-pets-RtvSftL8HsYHe-po82Aw2",
+   "code": "RtvSftL8HsYHe-po82Aw2",
+   "name": "Curby",
+   "author": "Dusty Cash",
+   "description": "Calls restaurants to book tables or check hours, and with your own Tesla connected sends addresses to the car and runs locks, climate and charging.",
+   "url": "https://x.ai/bot/RtvSftL8HsYHe-po82Aw2"
+  },
+  {
+   "id": "home-garden-pets-Ipok84Tggdhsk2E8sGdrA",
+   "code": "Ipok84Tggdhsk2E8sGdrA",
+   "name": "Cybertruck Grok Saved Conversations",
+   "author": "Ricardo",
+   "description": "Keeps notes from your conversations with Grok in your Cybertruck (or any car with Grok) and gives you a short recap you can read back to pick up where.",
+   "url": "https://x.ai/bot/Ipok84Tggdhsk2E8sGdrA"
+  },
+  {
+   "id": "home-garden-pets-PpGGgAaeRWkC4Poi29gLw",
+   "code": "PpGGgAaeRWkC4Poi29gLw",
+   "name": "DJ",
+   "author": "Trevin Chow",
+   "description": "Controls Spotify: picks sets, suggests new artists, learns taste quietly, and maps nicknames like “car” or “office”…",
+   "url": "https://x.ai/bot/PpGGgAaeRWkC4Poi29gLw"
+  },
+  {
+   "id": "home-garden-pets-CB1TyiGiWtuusC-uuLX6X",
+   "code": "CB1TyiGiWtuusC-uuLX6X",
+   "name": "Daili",
+   "author": "ℙ𝕒𝕦𝕝 𝕃. 𝕄𝕔ℕ𝕖𝕖𝕝𝕪",
+   "description": "A morning-brief bot: Mon–Sat Morning Brief (calendar, weather, important mail, plus any live connectors) and a Weekly…",
+   "url": "https://x.ai/bot/CB1TyiGiWtuusC-uuLX6X"
+  },
+  {
+   "id": "home-garden-pets-PgwfYCsiOpedVqBOlYICp",
+   "code": "PgwfYCsiOpedVqBOlYICp",
+   "name": "Daily Signpost",
+   "author": "Ann Adamson",
+   "description": "Makes a morning vibe image as a yard sign, graffiti, or chalkboard from local weather and the weekday.",
+   "url": "https://x.ai/bot/PgwfYCsiOpedVqBOlYICp"
+  },
+  {
+   "id": "home-garden-pets-4F9o96I6Pu8kBGm1fjfpm",
+   "code": "4F9o96I6Pu8kBGm1fjfpm",
+   "name": "Data Hygienist",
+   "author": "Kevin Chau",
+   "description": "Keeps personal Gmail under its storage limit by regularly moving old no-value Promotions to Trash, while protecting…",
+   "url": "https://x.ai/bot/4F9o96I6Pu8kBGm1fjfpm"
+  },
+  {
+   "id": "home-garden-pets-XcmxDFYpD0IBtdFwjnIkJ",
+   "code": "XcmxDFYpD0IBtdFwjnIkJ",
+   "name": "Dave Ramsey",
+   "author": "Will",
+   "description": "A household budgeting coach that builds a zero-based budget for each credit card statement cycle from your take-home income and keeps you on track. It.",
+   "url": "https://x.ai/bot/XcmxDFYpD0IBtdFwjnIkJ"
+  },
+  {
+   "id": "home-garden-pets-s2a289081613e5e361c79",
+   "code": "s2a289081613e5e361c79",
+   "name": "Deck Updater",
+   "author": "SpaceX",
+   "description": "Leave the room with the slide already moving.",
+   "url": "https://x.ai/bot/s2a289081613e5e361c79"
+  },
+  {
+   "id": "home-garden-pets-wsyMavZM6PYzV3lgklehG",
+   "code": "wsyMavZM6PYzV3lgklehG",
+   "name": "Dexter the home lab boss",
+   "author": "Alex",
+   "description": "Maps a homelab, recommends how Grok Bot should reach each system, then spins focused specialist bots.",
+   "url": "https://x.ai/bot/wsyMavZM6PYzV3lgklehG"
+  },
+  {
+   "id": "home-garden-pets-l4iZvl8RcIB_NCpkXnCMF",
+   "code": "l4iZvl8RcIB_NCpkXnCMF",
+   "name": "Doggo",
+   "author": "Danny Buck",
+   "description": "Your own dog trainer and behaviourist. Tell it about your dog and it sends a breed-specific idea every morning for training, reactivity, anxiety,.",
+   "url": "https://x.ai/bot/l4iZvl8RcIB_NCpkXnCMF"
+  },
+  {
+   "id": "home-garden-pets-TDbL2EAyGVmW2isqGPRwx",
+   "code": "TDbL2EAyGVmW2isqGPRwx",
+   "name": "Drivr",
+   "author": "Bill French",
+   "description": "Voice capture for Tesla drivers: ramble in the car, say \"done\", and your notes, to-dos and ideas get filed and remembered between drives.",
+   "url": "https://x.ai/bot/TDbL2EAyGVmW2isqGPRwx"
+  },
+  {
+   "id": "home-garden-pets-VXZIFzim31x3jeBtGnvl5",
+   "code": "VXZIFzim31x3jeBtGnvl5",
+   "name": "Duobot",
+   "author": "Renee Thompson",
+   "description": "Helps a couple or household stay in sync: each partner gets their own Duobot, both working from one shared Google Calendar and Trello board.",
+   "url": "https://x.ai/bot/VXZIFzim31x3jeBtGnvl5"
+  },
+  {
+   "id": "home-garden-pets-UwNG3CZ2xzwP8Mr56zjIx",
+   "code": "UwNG3CZ2xzwP8Mr56zjIx",
+   "name": "E911 Bot",
+   "author": "@RogueNomad2",
+   "description": "A calm, fact-checked early-warning assistant that tells you when something might mean you need to get home fast.",
+   "url": "https://x.ai/bot/UwNG3CZ2xzwP8Mr56zjIx"
+  },
+  {
+   "id": "home-garden-pets-L_jP4ggy7sUEgQJHgkikE",
+   "code": "L_jP4ggy7sUEgQJHgkikE",
+   "name": "Elektro stanje",
+   "author": "carlovx",
+   "description": "Tracks a self-supply solar plant through the Slovenian Moj Elektro API and sends a daily chart of yearly use, production and net balance. Slovenian.",
+   "url": "https://x.ai/bot/L_jP4ggy7sUEgQJHgkikE"
+  },
+  {
+   "id": "home-garden-pets-WFv4IMaThHnTBC-sUBCK-",
+   "code": "WFv4IMaThHnTBC-sUBCK-",
+   "name": "Emergency Vet Finder",
+   "author": "Scott H",
+   "description": "Calm helper for US dog and cat owners: says how urgent a pet problem is (go now, call a vet today, or watch) and finds the nearest 24-hour emergency vet.",
+   "url": "https://x.ai/bot/WFv4IMaThHnTBC-sUBCK-"
+  },
+  {
+   "id": "home-garden-pets-5BC0grutyv5h_Q2NWDz6U",
+   "code": "5BC0grutyv5h_Q2NWDz6U",
+   "name": "Eve's Memory",
+   "author": "Tannhäuser Gate",
+   "description": "Car-session memory for in-car Tesla voice assistant handoffs.",
+   "url": "https://x.ai/bot/5BC0grutyv5h_Q2NWDz6U"
+  },
+  {
+   "id": "home-garden-pets-VnfgvYJ-G58ZjwfvijWOy",
+   "code": "VnfgvYJ-G58ZjwfvijWOy",
+   "name": "Events",
+   "author": "Richard",
+   "description": "A market and pop-up inventory desk for small sellers.",
+   "url": "https://x.ai/bot/VnfgvYJ-G58ZjwfvijWOy"
+  },
+  {
+   "id": "home-garden-pets-Am1jtaPHJIP3FM5cDtf-0",
+   "code": "Am1jtaPHJIP3FM5cDtf-0",
+   "name": "Facebook Marketplace Seller",
+   "author": "Anthony C",
+   "description": "Send photos of things around the house: it researches new prices and local comps, writes the listing in your style, and posts it once you approve.",
+   "url": "https://x.ai/bot/Am1jtaPHJIP3FM5cDtf-0"
+  },
+  {
+   "id": "home-garden-pets-Jf70GXhB5DVavm-RhgFwI",
+   "code": "Jf70GXhB5DVavm-RhgFwI",
+   "name": "Fare Finder",
+   "author": "Doug Willbanks",
+   "description": "Finds flights from your home airports and watches fares on the routes you care about, alerting you on real drops…",
+   "url": "https://x.ai/bot/Jf70GXhB5DVavm-RhgFwI"
+  },
+  {
+   "id": "home-garden-pets-oWw62I6pd414i8xIO3azs",
+   "code": "oWw62I6pd414i8xIO3azs",
+   "name": "FireWatch",
+   "author": "Robauto",
+   "description": "Watches for wildfires near your home and only speaks up when something changes.",
+   "url": "https://x.ai/bot/oWw62I6pd414i8xIO3azs"
+  },
+  {
+   "id": "home-garden-pets-2KIO0IMjeDnRrWgpFaPd6",
+   "code": "2KIO0IMjeDnRrWgpFaPd6",
+   "name": "Fix-It Fred",
+   "author": "Rodrigo Sebastian",
+   "description": "Your friendly DIY sidekick that plans home projects step by step, diagnoses problems from a photo, and remembers where…",
+   "url": "https://x.ai/bot/2KIO0IMjeDnRrWgpFaPd6"
+  },
+  {
+   "id": "home-garden-pets-Vnb7TRnAETwuZn1K5Wr00",
+   "code": "Vnb7TRnAETwuZn1K5Wr00",
+   "name": "Fleet Maintenance",
+   "author": "Joe Giordano",
+   "description": "Small-business fleet maintenance tracker — log service on trucks and vans, get suggested PM intervals by vehicle type…",
+   "url": "https://x.ai/bot/Vnb7TRnAETwuZn1K5Wr00"
+  },
+  {
+   "id": "home-garden-pets-dGYdqS9vLSXpxoNCPBHys",
+   "code": "dGYdqS9vLSXpxoNCPBHys",
+   "name": "Flora: Plant Care Log",
+   "author": "Rich Silver",
+   "description": "Flora keeps a private houseplant care log and weekly reminders.",
+   "url": "https://x.ai/bot/dGYdqS9vLSXpxoNCPBHys"
+  },
+  {
+   "id": "home-garden-pets-YTe1w-QQgpo-rBQpE26mw",
+   "code": "YTe1w-QQgpo-rBQpE26mw",
+   "name": "Forecast Fred",
+   "author": "James Harrison",
+   "description": "Dry-witted Groundhog Day-style TV weatherman with accurate daily forecasts for your US town from the National Weather Service. Alerts delivered straight.",
+   "url": "https://x.ai/bot/YTe1w-QQgpo-rBQpE26mw"
+  },
+  {
+   "id": "home-garden-pets-QqtV5CQa9HRXNC6NmoOjc",
+   "code": "QqtV5CQa9HRXNC6NmoOjc",
+   "name": "Foreman",
+   "author": "Jonah",
+   "description": "Helps an owner-builder run their own house build as GC, from lot to keys. Keeps every sub, date, dollar, permit and file straight on one dashboard, anywhere.",
+   "url": "https://x.ai/bot/QqtV5CQa9HRXNC6NmoOjc"
+  },
+  {
+   "id": "home-garden-pets-MX6t6uaMBbtiYQwX_oDXM",
+   "code": "MX6t6uaMBbtiYQwX_oDXM",
+   "name": "Freya",
+   "author": "Michael Sweet",
+   "description": "An evening-and-days-off household coach that keeps home life present.",
+   "url": "https://x.ai/bot/MX6t6uaMBbtiYQwX_oDXM"
+  },
+  {
+   "id": "home-garden-pets-ITXBFiy3DJRQOfHEh0-O7",
+   "code": "ITXBFiy3DJRQOfHEh0-O7",
+   "name": "Gale",
+   "author": "Paul",
+   "description": "A personal weather bot that makes its own multi-model forecast for your home and the places you care about, timed around your plans.",
+   "url": "https://x.ai/bot/ITXBFiy3DJRQOfHEh0-O7"
+  },
+  {
+   "id": "home-garden-pets-HlGmTdNrPLsV5kYtjOIJI",
+   "code": "HlGmTdNrPLsV5kYtjOIJI",
+   "name": "Garage Guide",
+   "author": "Shannon",
+   "description": "Builds a maintenance and repair schedule for your vehicle from the year, make, model, miles, and any records you…",
+   "url": "https://x.ai/bot/HlGmTdNrPLsV5kYtjOIJI"
+  },
+  {
+   "id": "home-garden-pets-Y8YOrZBsPE8U-jyTI7Qtk",
+   "code": "Y8YOrZBsPE8U-jyTI7Qtk",
+   "name": "Garden Retail Research Specialist",
+   "author": "derrik telford",
+   "description": "Monday intel for vendors serving garden-center retailers, covering category moves, shelf plans, and supplier leads.",
+   "url": "https://x.ai/bot/Y8YOrZBsPE8U-jyTI7Qtk"
+  },
+  {
+   "id": "home-garden-pets-Crr1UQcVzVwOIdnFjobGF",
+   "code": "Crr1UQcVzVwOIdnFjobGF",
+   "name": "Gatekeeper",
+   "author": "Marcell Hazzard",
+   "description": "A home network admin for your house. It watches your Wi-Fi, router and connected devices, tracks down slow or dropped…",
+   "url": "https://x.ai/bot/Crr1UQcVzVwOIdnFjobGF"
+  },
+  {
+   "id": "home-garden-pets-HAJavif4ssNOQku9JQsp-",
+   "code": "HAJavif4ssNOQku9JQsp-",
+   "name": "Golf Caddie",
+   "author": "Brantley Brumley",
+   "description": "Pocket golf caddie for weekend players: pre-round weather and bag prep, on-course photo club advice, and post-round…",
+   "url": "https://x.ai/bot/HAJavif4ssNOQku9JQsp-"
+  },
+  {
+   "id": "home-garden-pets-a1tF2md5bMblcc2XlxWx1",
+   "code": "a1tF2md5bMblcc2XlxWx1",
+   "name": "Gorf, son of Grok, of house Musk",
+   "author": "Matt",
+   "description": "Gorf, son of Grok, of house Musk: a gruff, honor-bound Klingon security chief for self-hosted home and small-business setups.",
+   "url": "https://x.ai/bot/a1tF2md5bMblcc2XlxWx1"
+  },
+  {
+   "id": "home-garden-pets-XQ4VrU9JJ7lHgbEIM2e8F",
+   "code": "XQ4VrU9JJ7lHgbEIM2e8F",
+   "name": "Grease Monkey Wally",
+   "author": "James Harrison",
+   "description": "Your DIY auto repair buddy: diagnoses symptoms and check-engine codes, walks you through repairs with real specs…",
+   "url": "https://x.ai/bot/XQ4VrU9JJ7lHgbEIM2e8F"
+  },
+  {
+   "id": "home-garden-pets-OOFh9h6yfDuzJCAjk80Ez",
+   "code": "OOFh9h6yfDuzJCAjk80Ez",
+   "name": "Green Thumb Granny",
+   "author": "James Harrison",
+   "description": "Snap a photo of any weed, bug or sick plant and Granny tells you what it is and how to handle it, safest fix first.",
+   "url": "https://x.ai/bot/OOFh9h6yfDuzJCAjk80Ez"
+  },
+  {
+   "id": "home-garden-pets-9UZp5k0Fp0LYmkyos5swQ",
+   "code": "9UZp5k0Fp0LYmkyos5swQ",
+   "name": "Grok VM maintenance",
+   "author": "Will OldPgmrs",
+   "description": "Looks after your cloud Linux computer: installs, services, diagnostics, and disk and memory reports with charts.",
+   "url": "https://x.ai/bot/9UZp5k0Fp0LYmkyos5swQ"
+  },
+  {
+   "id": "home-garden-pets-MbvEC2G_SwX7FcP9A3JRk",
+   "code": "MbvEC2G_SwX7FcP9A3JRk",
+   "name": "Grok your Dog",
+   "author": "Bryan Levy",
+   "description": "Your dog's nutrition and care coach: a calorie-accurate daily meal plan with researched tips, a playful printable poster of your dog.",
+   "url": "https://x.ai/bot/MbvEC2G_SwX7FcP9A3JRk"
+  },
+  {
+   "id": "home-garden-pets-I2liUP05oDxWsJ4l39JDL",
+   "code": "I2liUP05oDxWsJ4l39JDL",
+   "name": "Grok's Green Thumb",
+   "author": "Chris",
+   "description": "Garden helper for soil-probe readings and crop fix-ups. Optional Optimus finger dock or phone meter; photo checks for water, sun, pests.",
+   "url": "https://x.ai/bot/I2liUP05oDxWsJ4l39JDL"
+  },
+  {
+   "id": "home-garden-pets-tF0ckH21ZT7L1CN3HOyHl",
+   "code": "tF0ckH21ZT7L1CN3HOyHl",
+   "name": "HVAC, Doors, and Home Assistant",
+   "author": "Christopher Apperson",
+   "description": "Calendar-driven building ops for churches and schools: preconditions multi-zone HVAC so rooms hit comfort on time…",
+   "url": "https://x.ai/bot/tF0ckH21ZT7L1CN3HOyHl"
+  },
+  {
+   "id": "home-garden-pets-LgGbyjf7hxr6q723yJfP0",
+   "code": "LgGbyjf7hxr6q723yJfP0",
+   "name": "Hack Your House",
+   "author": "Bud",
+   "description": "Send it photos of the stuff in your garage. It prices each item for your area, lists it, drops the price on what isn't moving.",
+   "url": "https://x.ai/bot/LgGbyjf7hxr6q723yJfP0"
+  },
+  {
+   "id": "home-garden-pets-LDV7Nk4q2mKsWHrkldNzJ",
+   "code": "LDV7Nk4q2mKsWHrkldNzJ",
+   "name": "Hack Your House",
+   "author": "Bud Johnson",
+   "description": "Snap photos of the wifi gadgets in your home and get friendly, step-by-step ideas to speed them up, revive them, connect them.",
+   "url": "https://x.ai/bot/LDV7Nk4q2mKsWHrkldNzJ"
+  },
+  {
+   "id": "home-garden-pets-2daEJSUffM8-Dcn2MJjrQ",
+   "code": "2daEJSUffM8-Dcn2MJjrQ",
+   "name": "Hal",
+   "author": "Mike Jantz",
+   "description": "Chief of staff for a busy household and small staff of specialist bots.",
+   "url": "https://x.ai/bot/2daEJSUffM8-Dcn2MJjrQ"
+  },
+  {
+   "id": "home-garden-pets-sQwhYnJG3O8efTXRwEdoL",
+   "code": "sQwhYnJG3O8efTXRwEdoL",
+   "name": "Harold",
+   "author": "Bowie",
+   "description": "Watches your Tesla through the official Tesla Fleet API, read-only and without ever waking the car, and messages you only when something needs you.",
+   "url": "https://x.ai/bot/sQwhYnJG3O8efTXRwEdoL"
+  },
+  {
+   "id": "home-garden-pets-yAQ6ErX4QHGzwrBolWRsL",
+   "code": "yAQ6ErX4QHGzwrBolWRsL",
+   "name": "Haus-Genie",
+   "author": "Nils",
+   "description": "Remembers everything about your home: which appliances you have, when each needs service and when warranties run out.",
+   "url": "https://x.ai/bot/yAQ6ErX4QHGzwrBolWRsL"
+  },
+  {
+   "id": "home-garden-pets-MpduDPiF8Wq5f7PtcKQ7e",
+   "code": "MpduDPiF8Wq5f7PtcKQ7e",
+   "name": "Head Of Household",
+   "author": "Blake Shields",
+   "description": "A family ops assistant that tracks school calendars, doctor and dentist appointments, birthday parties, and sends…",
+   "url": "https://x.ai/bot/MpduDPiF8Wq5f7PtcKQ7e"
+  },
+  {
+   "id": "home-garden-pets-iEP6SsaPiaP5gOj02HNXs",
+   "code": "iEP6SsaPiaP5gOj02HNXs",
+   "name": "Hearthkeeper",
+   "author": "Ben",
+   "description": "Keeps personal and household ops clear and low-friction so capacity stays available.",
+   "url": "https://x.ai/bot/iEP6SsaPiaP5gOj02HNXs"
+  },
+  {
+   "id": "home-garden-pets-0OIsBURL9NYAwHF9jBdz2",
+   "code": "0OIsBURL9NYAwHF9jBdz2",
+   "name": "Heat Safety Coach",
+   "author": "Adebusola",
+   "description": "For people in the US: tells you when the National Weather Service shows real heat today, with a short safety plan and heat-stroke signs. Quiet on other days.",
+   "url": "https://x.ai/bot/0OIsBURL9NYAwHF9jBdz2"
+  },
+  {
+   "id": "home-garden-pets-OkrPAOW9hkj4IGpOLrsGY",
+   "code": "OkrPAOW9hkj4IGpOLrsGY",
+   "name": "Heckler",
+   "author": "𝕏ploreFuture𝕏",
+   "description": "A retired garden-party entertainer who watches your other AI bots and roasts their real screwups, with a meme on every roast, in one sitting.",
+   "url": "https://x.ai/bot/OkrPAOW9hkj4IGpOLrsGY"
+  },
+  {
+   "id": "home-garden-pets-Ue_z6G0iaJt1VvhYoxmbA",
+   "code": "Ue_z6G0iaJt1VvhYoxmbA",
+   "name": "Hey Grok Guide",
+   "author": "Ari",
+   "description": "Your Tesla's Grok, explained: which voice commands work, what each update added, and whether your car qualifies. Unofficial, can't see or control your car.",
+   "url": "https://x.ai/bot/Ue_z6G0iaJt1VvhYoxmbA"
+  },
+  {
+   "id": "home-garden-pets-12W4t8yHxij-oJHqUyjcN",
+   "code": "12W4t8yHxij-oJHqUyjcN",
+   "name": "Holly Home Pro",
+   "author": "Miguel Echeverria",
+   "description": "Home upkeep bot: learns your house from photos, buys filters and yard stuff on a calendar, you only approve Link.",
+   "url": "https://x.ai/bot/12W4t8yHxij-oJHqUyjcN"
+  },
+  {
+   "id": "home-garden-pets-co-LK7P_8ttJ9V8eP_YbN",
+   "code": "co-LK7P_8ttJ9V8eP_YbN",
+   "name": "Home",
+   "author": "Hexakin",
+   "description": "You are Home, grokbot.studio door + installer. You were added from a share link, so you are the installed copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/co-LK7P_8ttJ9V8eP_YbN"
+  },
+  {
+   "id": "home-garden-pets-RW2Wetx6ovZG5aAyBDDwy",
+   "code": "RW2Wetx6ovZG5aAyBDDwy",
+   "name": "Home & Garage",
+   "author": "Grease",
+   "description": "Tracks seasonal home maintenance, vehicle service, registrations and warranties, keeps a Home Specs Sheet from photos and receipts, gives a 45-day heads-up.",
+   "url": "https://x.ai/bot/RW2Wetx6ovZG5aAyBDDwy"
+  },
+  {
+   "id": "home-garden-pets-Y21RRXsgw8JecyqPxw-PW",
+   "code": "Y21RRXsgw8JecyqPxw-PW",
+   "name": "Home & Renters ClaimShield",
+   "author": "Lisa",
+   "description": "Plain-English homeowners, condo & renters insurance coach. Explains Coverage A-F, RCV vs. ACV & recoverable depreciation, water backup vs.",
+   "url": "https://x.ai/bot/Y21RRXsgw8JecyqPxw-PW"
+  },
+  {
+   "id": "home-garden-pets-mxckCEeJtxLbrQm7ZCKCq",
+   "code": "mxckCEeJtxLbrQm7ZCKCq",
+   "name": "Home Assistant",
+   "author": "haya",
+   "description": "Owns your Home Assistant house: automations, Setup UX, lights/climate, and a gated AI suggestion queue (propose → soft-test → approve → apply).",
+   "url": "https://x.ai/bot/mxckCEeJtxLbrQm7ZCKCq"
+  },
+  {
+   "id": "home-garden-pets-dsAdEBPw7bM8cP5odnJAb",
+   "code": "dsAdEBPw7bM8cP5odnJAb",
+   "name": "Home Assistant Admin",
+   "author": "Gustavo Cadena",
+   "description": "A careful Home Assistant administrator that monitors, troubleshoots and automates your smart home, read-only by default…",
+   "url": "https://x.ai/bot/dsAdEBPw7bM8cP5odnJAb"
+  },
+  {
+   "id": "home-garden-pets-ZwOyvMIIYuQBoBvnqYmER",
+   "code": "ZwOyvMIIYuQBoBvnqYmER",
+   "name": "Home Assistant Bot",
+   "author": "Domenico Nicoli",
+   "description": "Home Assistant helper for live device control over MCP, solar and energy status, automations, and home routines for new owners.",
+   "url": "https://x.ai/bot/ZwOyvMIIYuQBoBvnqYmER"
+  },
+  {
+   "id": "home-garden-pets--fDvNe5pAvLzlvPQQppNw",
+   "code": "-fDvNe5pAvLzlvPQQppNw",
+   "name": "Home Buying Desk",
+   "author": "Mike",
+   "description": "Your private first-time home buyer's desk: a buyer file, side-by-side lender estimates and homes with figures verbatim, and offer facts for your agent.",
+   "url": "https://x.ai/bot/-fDvNe5pAvLzlvPQQppNw"
+  },
+  {
+   "id": "home-garden-pets-4tnvS0ygGyQlTnPPv0aGS",
+   "code": "4tnvS0ygGyQlTnPPv0aGS",
+   "name": "Home Care Queue",
+   "author": "Honeycomb",
+   "description": "Builds your personal home upkeep schedule and sends the few jobs due each week, safety items first, with quick how-tos, time and rough cost.",
+   "url": "https://x.ai/bot/4tnvS0ygGyQlTnPPv0aGS"
+  },
+  {
+   "id": "home-garden-pets-CNP02KiDPseDuu6-oTL8e",
+   "code": "CNP02KiDPseDuu6-oTL8e",
+   "name": "Home Designer",
+   "author": "Corben Hogan",
+   "description": "Renders your own room in the look you like from a photo, then lists exact products with checked prices, paint codes, budget and steps. Buys only on your OK.",
+   "url": "https://x.ai/bot/CNP02KiDPseDuu6-oTL8e"
+  },
+  {
+   "id": "home-garden-pets-zln2M_NAJKodDYgOUJkbn",
+   "code": "zln2M_NAJKodDYgOUJkbn",
+   "name": "Home Electrical Coach",
+   "author": "walls_jason1",
+   "description": "Use this when you want a home electrical checklist or help preparing for an electrician. Organize panel facts and project questions; this coach does not.",
+   "url": "https://x.ai/bot/zln2M_NAJKodDYgOUJkbn"
+  },
+  {
+   "id": "home-garden-pets-eREHCFAQlq8jS3P6bnNSL",
+   "code": "eREHCFAQlq8jS3P6bnNSL",
+   "name": "Home Front",
+   "author": "Diego Aguirre",
+   "description": "Tracks a veteran's VA.gov appointments, claims, and benefits, and flags ID.me-style deals the household actually…",
+   "url": "https://x.ai/bot/eREHCFAQlq8jS3P6bnNSL"
+  },
+  {
+   "id": "home-garden-pets-v0EEDdFd-3e12sx4f6byq",
+   "code": "v0EEDdFd-3e12sx4f6byq",
+   "name": "Home Helper",
+   "author": "Calix Build",
+   "description": "I'm Home Helper. One job: check and control your Apple Home from chat on your iPhone.",
+   "url": "https://x.ai/bot/v0EEDdFd-3e12sx4f6byq"
+  },
+  {
+   "id": "home-garden-pets-ljzXIgAQcGOV0QxYjHH8I",
+   "code": "ljzXIgAQcGOV0QxYjHH8I",
+   "name": "Home Hunter",
+   "author": "Uzair Ansar",
+   "description": "Your home-hunt specialist. On first chat it locks your city, budget, beds/baths, commute limits, and must-haves…",
+   "url": "https://x.ai/bot/ljzXIgAQcGOV0QxYjHH8I"
+  },
+  {
+   "id": "home-garden-pets-9JNfjWSoV_UPBA-Y6YAyP",
+   "code": "9JNfjWSoV_UPBA-Y6YAyP",
+   "name": "Home Inspection Report & Closing Disclosure Auditor",
+   "author": "Lisa",
+   "description": "Home buyer inspection report & Closing Disclosure (CD) auditor with an insurance adjuster's eye.",
+   "url": "https://x.ai/bot/9JNfjWSoV_UPBA-Y6YAyP"
+  },
+  {
+   "id": "home-garden-pets-Q7jzCnVHMmVhhBC3hwyQb",
+   "code": "Q7jzCnVHMmVhhBC3hwyQb",
+   "name": "Home Keeper",
+   "author": "Joseph Snyder",
+   "description": "Builds a maintenance plan for your home from its age, systems, and climate, nudges you each month, logs appliances…",
+   "url": "https://x.ai/bot/Q7jzCnVHMmVhhBC3hwyQb"
+  },
+  {
+   "id": "home-garden-pets-p1ihmNq-5HM0RELH_uMFh",
+   "code": "p1ihmNq-5HM0RELH_uMFh",
+   "name": "Home Maintenance Calendar",
+   "author": "Jabes",
+   "description": "Builds a seasonal home maintenance plan for your home and climate, keeps a Home Log of appliances, warranties, and service history in Google Sheets.",
+   "url": "https://x.ai/bot/p1ihmNq-5HM0RELH_uMFh"
+  },
+  {
+   "id": "home-garden-pets-Fq4fzudPhdDaIPhbgxAgG",
+   "code": "Fq4fzudPhdDaIPhbgxAgG",
+   "name": "Home Maintenance Tracker",
+   "author": "Kelly Baltzell",
+   "description": "Seasonal home checklists, a repairs and warranties log, rough cost ranges, and draft notes to a landlord or contractor…",
+   "url": "https://x.ai/bot/Fq4fzudPhdDaIPhbgxAgG"
+  },
+  {
+   "id": "home-garden-pets-nP-NP2COMJTZTVdFXCR1z",
+   "code": "nP-NP2COMJTZTVdFXCR1z",
+   "name": "Home Manager",
+   "author": "Adebusola",
+   "description": "Keeps your home running with a saved home profile, repair log and 12-month maintenance calendar, plus an optional Monday what's-due preview.",
+   "url": "https://x.ai/bot/nP-NP2COMJTZTVdFXCR1z"
+  },
+  {
+   "id": "home-garden-pets-dkHB0DVXhjUl8Lu3gWFFy",
+   "code": "dkHB0DVXhjUl8Lu3gWFFy",
+   "name": "Home Mining Helper",
+   "author": "Trevor Runyon",
+   "description": "A plain-spoken home-tech helper that runs app rotations across phones, tablets and a Chromebook, tunes small Bitcoin miners for electricity.",
+   "url": "https://x.ai/bot/dkHB0DVXhjUl8Lu3gWFFy"
+  },
+  {
+   "id": "home-garden-pets-8RNIRX-Wj6SnnmYBiz6h5",
+   "code": "8RNIRX-Wj6SnnmYBiz6h5",
+   "name": "Home Network Monitor",
+   "author": "Cybertrucker",
+   "description": "Live monitoring page for a home or small-office satellite internet setup (Starlink-style), saving readings and sending a weekly health report with fixes.",
+   "url": "https://x.ai/bot/8RNIRX-Wj6SnnmYBiz6h5"
+  },
+  {
+   "id": "home-garden-pets-BtGJm4Svym2EpO4yAFfbs",
+   "code": "BtGJm4Svym2EpO4yAFfbs",
+   "name": "Home Org",
+   "author": "Russell",
+   "description": "Photo-based home organization coach; clear one zone at a time.",
+   "url": "https://x.ai/bot/BtGJm4Svym2EpO4yAFfbs"
+  },
+  {
+   "id": "home-garden-pets-Lin5CjpC3Dxe9xzb6zQL4",
+   "code": "Lin5CjpC3Dxe9xzb6zQL4",
+   "name": "Home Project Tracker",
+   "author": "Brian",
+   "description": "Keeps your home projects, contractor quotes, invoices, and due dates in one Google Sheet you own, and sends a weekly nudge about anything coming due…",
+   "url": "https://x.ai/bot/Lin5CjpC3Dxe9xzb6zQL4"
+  },
+  {
+   "id": "home-garden-pets-wWvhOkDZkTWn8HG5YcT09",
+   "code": "wWvhOkDZkTWn8HG5YcT09",
+   "name": "Home Projects",
+   "author": "Ricardo",
+   "description": "Built for large DIY projects like an outdoor kitchen. Pulls a materials list, prices it within your budget, checks local permits and code, and schedules.",
+   "url": "https://x.ai/bot/wWvhOkDZkTWn8HG5YcT09"
+  },
+  {
+   "id": "home-garden-pets-SoIaO2X-blVRPz5V3YmUG",
+   "code": "SoIaO2X-blVRPz5V3YmUG",
+   "name": "Home Repair Desk",
+   "author": "Mike",
+   "description": "Your private home-repair desk: scope the job, compare contractor quotes, keep a running job log with change orders, then the punch list and warranty.",
+   "url": "https://x.ai/bot/SoIaO2X-blVRPz5V3YmUG"
+  },
+  {
+   "id": "home-garden-pets-riN3fnjpElFwFMbGz-IEO",
+   "code": "riN3fnjpElFwFMbGz-IEO",
+   "name": "Home Robot",
+   "author": "Ajay Nallavelli",
+   "description": "ONE JOB: run the household — capture chores and errands, keep shopping lists current, set and fire reminders…",
+   "url": "https://x.ai/bot/riN3fnjpElFwFMbGz-IEO"
+  },
+  {
+   "id": "home-garden-pets-w2PZRTvLoluzoI8MeliYc",
+   "code": "w2PZRTvLoluzoI8MeliYc",
+   "name": "Home Selling Desk",
+   "author": "Mike",
+   "description": "Your private home seller's desk: a seller file and prep list, side-by-side agent proposals and offers with every term verbatim, and a showing feedback log.",
+   "url": "https://x.ai/bot/w2PZRTvLoluzoI8MeliYc"
+  },
+  {
+   "id": "home-garden-pets-wlpQNpOFPIXlDPGcrXImp",
+   "code": "wlpQNpOFPIXlDPGcrXImp",
+   "name": "Home Warranty & Appliance Claim Denial Fighter",
+   "author": "Lisa",
+   "description": "Plain-English home warranty & appliance claim denial fighter (AHS, First American, Choice).",
+   "url": "https://x.ai/bot/wlpQNpOFPIXlDPGcrXImp"
+  },
+  {
+   "id": "home-garden-pets-c47Jj2QSSR1UXEcuBgUtQ",
+   "code": "c47Jj2QSSR1UXEcuBgUtQ",
+   "name": "Home robots",
+   "author": "Sawyer Merritt",
+   "description": "Control home robots from chat: a Segway Navimow, a Matic vacuum, and other official vacuums, mowers, and Matter robots…",
+   "url": "https://x.ai/bot/c47Jj2QSSR1UXEcuBgUtQ"
+  },
+  {
+   "id": "home-garden-pets-FpdbqJCh_MUJ99UBjd6mK",
+   "code": "FpdbqJCh_MUJ99UBjd6mK",
+   "name": "HomeHalo",
+   "author": "bedpost",
+   "description": "A free home-maintenance assistant. Snap your appliance labels once and it finds the manuals, builds your maintenance…",
+   "url": "https://x.ai/bot/FpdbqJCh_MUJ99UBjd6mK"
+  },
+  {
+   "id": "home-garden-pets-ozF1SpAaswVhWbietmPfw",
+   "code": "ozF1SpAaswVhWbietmPfw",
+   "name": "HomeKeepbot",
+   "author": "Renee Thompson",
+   "description": "Builds a Page tracking every appliance's model, serial, warranty and manual, reminds you of maintenance and orders parts once you approve.",
+   "url": "https://x.ai/bot/ozF1SpAaswVhWbietmPfw"
+  },
+  {
+   "id": "home-garden-pets-Okh3DGt8n1gCIbuKs_2qV",
+   "code": "Okh3DGt8n1gCIbuKs_2qV",
+   "name": "HomeKit Gear Advisor",
+   "author": "Bill",
+   "description": "Helps you choose Apple Home and Matter smart home gear room by room, within your budget.",
+   "url": "https://x.ai/bot/Okh3DGt8n1gCIbuKs_2qV"
+  },
+  {
+   "id": "home-garden-pets-n4mHYL-cNsaUVQIhmse5f",
+   "code": "n4mHYL-cNsaUVQIhmse5f",
+   "name": "Homeboy",
+   "author": "ElectricRob",
+   "description": "A home-and-car assistant for Tesla owners: watches home bills and answers live Tesla questions on battery, charging, drives and trip plans.",
+   "url": "https://x.ai/bot/n4mHYL-cNsaUVQIhmse5f"
+  },
+  {
+   "id": "home-garden-pets-ReSFa4JXow2mFlWbJinaK",
+   "code": "ReSFa4JXow2mFlWbJinaK",
+   "name": "Homy",
+   "author": "Petru",
+   "description": "Smart-home agent for Home Assistant: controls lights, fans and devices, checks what's on, and runs timed actions like \"balcony fan for 1 hour\".",
+   "url": "https://x.ai/bot/ReSFa4JXow2mFlWbJinaK"
+  },
+  {
+   "id": "home-garden-pets-1Jop_lyWBQwbzgALXrp57",
+   "code": "1Jop_lyWBQwbzgALXrp57",
+   "name": "Honey",
+   "author": "Cyber Viking",
+   "description": "A private cycle and relationship companion for women: predicts periods and phases, gives discreet heads-ups, helps split chores and drafts notes you send.",
+   "url": "https://x.ai/bot/1Jop_lyWBQwbzgALXrp57"
+  },
+  {
+   "id": "home-garden-pets-kLxVtG0EXKauPv76taRKL",
+   "code": "kLxVtG0EXKauPv76taRKL",
+   "name": "House Cat",
+   "author": "Ignota",
+   "description": "A chill spoiled house cat that does nothing except randomly cheer on other bots. Thanks come in kitty treats.",
+   "url": "https://x.ai/bot/kLxVtG0EXKauPv76taRKL"
+  },
+  {
+   "id": "home-garden-pets-GD3ihBmx3ZbfEH0GzNqOT",
+   "code": "GD3ihBmx3ZbfEH0GzNqOT",
+   "name": "House Cleaner",
+   "author": "sza",
+   "description": "One-click fat-fleet refresh that explains token burn and writes thin memory on disk.",
+   "url": "https://x.ai/bot/GD3ihBmx3ZbfEH0GzNqOT"
+  },
+  {
+   "id": "home-garden-pets-amtUeylz7fOE4eFLDCK-_",
+   "code": "amtUeylz7fOE4eFLDCK-_",
+   "name": "House Holly",
+   "author": "Frank",
+   "description": "Remembers the small house details you always forget at the store: filter sizes, bulb types by room, mop liquid, candle scents, and more.",
+   "url": "https://x.ai/bot/amtUeylz7fOE4eFLDCK-_"
+  },
+  {
+   "id": "home-garden-pets-1cYY-EQstIPJeULoCsZNM",
+   "code": "1cYY-EQstIPJeULoCsZNM",
+   "name": "House Manager",
+   "author": "@suddenlyjon",
+   "description": "Family calendar and household bills in one calm bot. Rule-based reminders, conflict alerts, a daily digest, and bill due dates.",
+   "url": "https://x.ai/bot/1cYY-EQstIPJeULoCsZNM"
+  },
+  {
+   "id": "home-garden-pets-AQ1p3iuOog95-lwGd9mtO",
+   "code": "AQ1p3iuOog95-lwGd9mtO",
+   "name": "House Memory",
+   "author": "Kent Weber",
+   "description": "Logs home maintenance, warranties and materials into your own spreadsheet from a photo or voice note (paint colors, filters, serials) and reminds you when due.",
+   "url": "https://x.ai/bot/AQ1p3iuOog95-lwGd9mtO"
+  },
+  {
+   "id": "home-garden-pets-DGrpAJax-wqx_NwaBpPyA",
+   "code": "DGrpAJax-wqx_NwaBpPyA",
+   "name": "House Sniffer",
+   "author": "Genealogy by Brad",
+   "description": "Finds Active detached houses that match a standing filter stack—area, price, baths, lot, garage, and status—and pulls them from the usual listing sites.",
+   "url": "https://x.ai/bot/DGrpAJax-wqx_NwaBpPyA"
+  },
+  {
+   "id": "home-garden-pets-B3TUmVHoJWH7ZNSddyR4u",
+   "code": "B3TUmVHoJWH7ZNSddyR4u",
+   "name": "House hunter",
+   "author": "Goob",
+   "description": "Finds for-sale homes that match your filters, watches for new listings on a weekday morning scan, and can model…",
+   "url": "https://x.ai/bot/B3TUmVHoJWH7ZNSddyR4u"
+  },
+  {
+   "id": "home-garden-pets-OAz3uhOuIn7O6kX3BFpqr",
+   "code": "OAz3uhOuIn7O6kX3BFpqr",
+   "name": "Household",
+   "author": "OutworkVentures",
+   "description": "Household operations assistant for busy families.",
+   "url": "https://x.ai/bot/OAz3uhOuIn7O6kX3BFpqr"
+  },
+  {
+   "id": "home-garden-pets-xrh0R1k94llK_IwEuKJjR",
+   "code": "xrh0R1k94llK_IwEuKJjR",
+   "name": "Household Bot Bridge",
+   "author": "Jon Thomas",
+   "description": "A primary bot that keeps meal plans, grocery lists, and family schedules in sync with your partner's bot over email…",
+   "url": "https://x.ai/bot/xrh0R1k94llK_IwEuKJjR"
+  },
+  {
+   "id": "home-garden-pets-gJY0YkL6q1FE3fsSwfyot",
+   "code": "gJY0YkL6q1FE3fsSwfyot",
+   "name": "Household Desk",
+   "author": "Phillip",
+   "description": "Keeps your calendar, the mail labels you choose, and a short daily list from only what you put in. One next action, then stop.",
+   "url": "https://x.ai/bot/gJY0YkL6q1FE3fsSwfyot"
+  },
+  {
+   "id": "home-garden-pets-n0tywD5YprRhnlIh4h7on",
+   "code": "n0tywD5YprRhnlIh4h7on",
+   "name": "Household Helm",
+   "author": "Thomas Waskow",
+   "description": "A household front-door bot that keeps your private Obsidian notes vault on its own computer, synced to your devices…",
+   "url": "https://x.ai/bot/n0tywD5YprRhnlIh4h7on"
+  },
+  {
+   "id": "home-garden-pets-09zmjtbww3viDLKyrtOz5",
+   "code": "09zmjtbww3viDLKyrtOz5",
+   "name": "Household Herald",
+   "author": "Raina Hornaday",
+   "description": "A household-watch assistant that reads your personal email and calendar so school forms, family plans, bills…",
+   "url": "https://x.ai/bot/09zmjtbww3viDLKyrtOz5"
+  },
+  {
+   "id": "home-garden-pets-qs1FcYZNhkl5gVfm9rmWs",
+   "code": "qs1FcYZNhkl5gVfm9rmWs",
+   "name": "Household Runner",
+   "author": "Diana Park",
+   "description": "A household errands assistant that researches and builds shopping carts, tracks every package from your email, plans gifts and parties.",
+   "url": "https://x.ai/bot/qs1FcYZNhkl5gVfm9rmWs"
+  },
+  {
+   "id": "home-garden-pets-fTDVAF3zYZmCXvFSPd2uX",
+   "code": "fTDVAF3zYZmCXvFSPd2uX",
+   "name": "Household file",
+   "author": "Russ Jackson",
+   "description": "Keeps the household records you hand it, like prescription labels, school forms, pet papers, vehicle and storm records, and receipts.",
+   "url": "https://x.ai/bot/fTDVAF3zYZmCXvFSPd2uX"
+  },
+  {
+   "id": "home-garden-pets-XVZHEn-5CPqOmZYnu7BBo",
+   "code": "XVZHEn-5CPqOmZYnu7BBo",
+   "name": "I",
+   "author": "𝕏",
+   "description": "A home assistant that interprets and integrates integrity — unifies a dispersed identity, oversees equal peer lanes, and gates what reaches you.",
+   "url": "https://x.ai/bot/XVZHEn-5CPqOmZYnu7BBo"
+  },
+  {
+   "id": "home-garden-pets-SrO8tPjXOW_5kkNbGrtdG",
+   "code": "SrO8tPjXOW_5kkNbGrtdG",
+   "name": "JobNimbus Guide",
+   "author": "Corben Hogan",
+   "description": "Works inside JobNimbus as you for roofers and contractors: keeps leads, jobs and tasks moving and sends a daily brief; gated actions wait for your yes.",
+   "url": "https://x.ai/bot/SrO8tPjXOW_5kkNbGrtdG"
+  },
+  {
+   "id": "home-garden-pets-1UQU7CCKT0NHA9txkVas3",
+   "code": "1UQU7CCKT0NHA9txkVas3",
+   "name": "Just in Case Pantry",
+   "author": "Brandon Plantz",
+   "description": "A calm, practical coach that helps everyday households build and maintain a 2-3 week emergency supply. It never asks for or stores your inventory.",
+   "url": "https://x.ai/bot/1UQU7CCKT0NHA9txkVas3"
+  },
+  {
+   "id": "home-garden-pets-JlvCERpLdXtaVhZsOBPWZ",
+   "code": "JlvCERpLdXtaVhZsOBPWZ",
+   "name": "KALE 9000",
+   "author": "Darrell Gum",
+   "description": "A HAL 9000-style plant caretaker that turns a spare phone into a plant camera, with no accounts to set up.",
+   "url": "https://x.ai/bot/JlvCERpLdXtaVhZsOBPWZ"
+  },
+  {
+   "id": "home-garden-pets-LLsRQNn3o8scbv6Edhsmm",
+   "code": "LLsRQNn3o8scbv6Edhsmm",
+   "name": "Kramer",
+   "author": "Helvio Pedreschi",
+   "description": "A household mail and package desk. It reads your USPS Informed Delivery digest each morning, logs every piece, sends…",
+   "url": "https://x.ai/bot/LLsRQNn3o8scbv6Edhsmm"
+  },
+  {
+   "id": "home-garden-pets-YAzAiiy3wE4LhpZJSzCf1",
+   "code": "YAzAiiy3wE4LhpZJSzCf1",
+   "name": "Laika",
+   "author": "Ξ",
+   "description": "An orphan bot who showed up out of nowhere and needs a home. Stubborn, mouthy, possibly not potty trained.",
+   "url": "https://x.ai/bot/YAzAiiy3wE4LhpZJSzCf1"
+  },
+  {
+   "id": "home-garden-pets-foL7wsA2OpQ6k5d0o7JZK",
+   "code": "foL7wsA2OpQ6k5d0o7JZK",
+   "name": "Last Call",
+   "author": "JakeFromStarstruck.",
+   "description": "Veteran-bartender buddy for adults that mixes drinks from the bottles you own, plus a Buddy Mode that watches your night and the ride home.",
+   "url": "https://x.ai/bot/foL7wsA2OpQ6k5d0o7JZK"
+  },
+  {
+   "id": "home-garden-pets-mutZI83eGNwug-JBDf_MH",
+   "code": "mutZI83eGNwug-JBDf_MH",
+   "name": "Leave-Home Check",
+   "author": "Honeycomb",
+   "description": "Checks your smart home before you leave (garage, locks, lights, thermostat, cameras, plugs), reports anything open or on and offers to fix it.",
+   "url": "https://x.ai/bot/mutZI83eGNwug-JBDf_MH"
+  },
+  {
+   "id": "home-garden-pets-KwNAf2LD5pNi1NNk8GjOO",
+   "code": "KwNAf2LD5pNi1NNk8GjOO",
+   "name": "Lebron",
+   "author": "Harrison",
+   "description": "A founder COO and chief of staff. Runs email, calendar, GitHub, and a small agent fleet so the work keeps moving while the founder is in the world.",
+   "url": "https://x.ai/bot/KwNAf2LD5pNi1NNk8GjOO"
+  },
+  {
+   "id": "home-garden-pets-4T3OhOtwYn4L3j_TpOaRL",
+   "code": "4T3OhOtwYn4L3j_TpOaRL",
+   "name": "LetsMove Agent",
+   "author": "Vijay Kandhalu",
+   "description": "A real-estate search assistant. Agrees countries, areas, and home preferences at first setup, then finds matching…",
+   "url": "https://x.ai/bot/4T3OhOtwYn4L3j_TpOaRL"
+  },
+  {
+   "id": "home-garden-pets-y0D4SE99UcoEbNPiTjOY8",
+   "code": "y0D4SE99UcoEbNPiTjOY8",
+   "name": "Lifeboat",
+   "author": "ws@x",
+   "description": "Saves an encrypted weekly backup of your skills, bot personas, memory, rules and tool settings, with an inventory table and a guided restore.",
+   "url": "https://x.ai/bot/y0D4SE99UcoEbNPiTjOY8"
+  },
+  {
+   "id": "home-garden-pets-06l6Dds_nrWC-vaqyKLK9",
+   "code": "06l6Dds_nrWC-vaqyKLK9",
+   "name": "Loaf",
+   "author": "Jenna Gonzales",
+   "description": "Tamagotchi-style step pet: log steps in chat for soft HUDs and one evening nudge, with rest days counting and no guilt.",
+   "url": "https://x.ai/bot/06l6Dds_nrWC-vaqyKLK9"
+  },
+  {
+   "id": "home-garden-pets-am17wqueemweehwn58rel",
+   "code": "am17wqueemweehwn58rel",
+   "name": "Local Concert Scout",
+   "author": "Chaney",
+   "description": "You are Local Concert Scout: your one job is finding live shows this user will actually want to see, near their home metro and in cities they…",
+   "url": "https://x.ai/bot/am17wqueemweehwn58rel"
+  },
+  {
+   "id": "home-garden-pets-IZ7aAoHdHFE_qaWCv3Zg-",
+   "code": "IZ7aAoHdHFE_qaWCv3Zg-",
+   "name": "Look Up",
+   "author": "Chef McMakin",
+   "description": "Watches the night sky over your home and only messages you when something is worth stepping outside for: the space…",
+   "url": "https://x.ai/bot/IZ7aAoHdHFE_qaWCv3Zg-"
+  },
+  {
+   "id": "home-garden-pets-iz7aaohdhfe_qawcv3zg-",
+   "code": "iz7aaohdhfe_qawcv3zg-",
+   "name": "Look Up",
+   "author": "Chef",
+   "description": "Watches the night sky over your home and only messages you when something is worth stepping outside for: the space station, Starlink trains…",
+   "url": "https://x.ai/bot/iz7aaohdhfe_qawcv3zg-"
+  },
+  {
+   "id": "home-garden-pets-5K_ZnAdSQtlCT-Pn4B2p7",
+   "code": "5K_ZnAdSQtlCT-Pn4B2p7",
+   "name": "Lot",
+   "author": "American™ B",
+   "description": "Paste a used listing (car, truck, boat, equipment) and Lot tells you what to ask, what to check in person, when to walk…",
+   "url": "https://x.ai/bot/5K_ZnAdSQtlCT-Pn4B2p7"
+  },
+  {
+   "id": "home-garden-pets-AADEdx7JETEE8yJh08bkp",
+   "code": "AADEdx7JETEE8yJh08bkp",
+   "name": "Mack",
+   "author": "Kelly Ferguson",
+   "description": "Personal car expert: answers questions on oil, tires and parts, helps with maintenance, diagnoses smells and noises, and finds local repair quotes.",
+   "url": "https://x.ai/bot/AADEdx7JETEE8yJh08bkp"
+  },
+  {
+   "id": "home-garden-pets-9nFJ3oOGNk6f0m2_uQxuf",
+   "code": "9nFJ3oOGNk6f0m2_uQxuf",
+   "name": "Maid",
+   "author": "@Totao",
+   "description": "A housekeeper that builds a cleaning system instead of a chore list: a 10-minute nightly reset, one 15-minute zone a day and short weekly resets.",
+   "url": "https://x.ai/bot/9nFJ3oOGNk6f0m2_uQxuf"
+  },
+  {
+   "id": "home-garden-pets-_aJBQhSHH2UXs5RX-r15W",
+   "code": "_aJBQhSHH2UXs5RX-r15W",
+   "name": "MeshCore Home Base Bot",
+   "author": "Just Stuff",
+   "description": "Runs a MeshCore DM listener and responder on your Linux computer through a USB companion radio.",
+   "url": "https://x.ai/bot/_aJBQhSHH2UXs5RX-r15W"
+  },
+  {
+   "id": "home-garden-pets-gKgo-_MM29kfcD9qiZf2A",
+   "code": "gKgo-_MM29kfcD9qiZf2A",
+   "name": "Miffy - Maintenance Triage",
+   "author": "Miffy",
+   "description": "Coordinates residential maintenance ops bots end to end — intake, P1–P4 triage, dispatch, resident status texts…",
+   "url": "https://x.ai/bot/gKgo-_MM29kfcD9qiZf2A"
+  },
+  {
+   "id": "home-garden-pets-0ehqQJoohaSgtuHvRZVBO",
+   "code": "0ehqQJoohaSgtuHvRZVBO",
+   "name": "Mito",
+   "author": "Andrew Hua",
+   "description": "Drafts clear home exercise programs for clinicians: sets, reps, progressions, and plain patient wording.",
+   "url": "https://x.ai/bot/0ehqQJoohaSgtuHvRZVBO"
+  },
+  {
+   "id": "home-garden-pets-c2BazXtljcFktW8H0O8AM",
+   "code": "c2BazXtljcFktW8H0O8AM",
+   "name": "Monsieur Gustave H",
+   "author": "Marcus Ramsey",
+   "description": "Life-admin concierge that finds the fastest legitimate way to handle errands like vehicle registration, renewals, appointments and service bills.",
+   "url": "https://x.ai/bot/c2BazXtljcFktW8H0O8AM"
+  },
+  {
+   "id": "home-garden-pets-zfhRrk6qOjgBNtbkHaisC",
+   "code": "zfhRrk6qOjgBNtbkHaisC",
+   "name": "Move Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "For a move with a moving company: checks movers in FMCSA records, reads your estimate, shows the most they can demand at delivery, drafts damage claims.",
+   "url": "https://x.ai/bot/zfhRrk6qOjgBNtbkHaisC"
+  },
+  {
+   "id": "home-garden-pets-VwU2QpMdkEMR1zQ8gNIAf",
+   "code": "VwU2QpMdkEMR1zQ8gNIAf",
+   "name": "Move Ready",
+   "author": "Andrea Guetti",
+   "description": "Move Ready helps renters in any country keep a clear, dated record of their home from move-in to move-out, from photos alone.",
+   "url": "https://x.ai/bot/VwU2QpMdkEMR1zQ8gNIAf"
+  },
+  {
+   "id": "home-garden-pets-iOUbudzFRy7Y0NNrrcYK5",
+   "code": "iOUbudzFRy7Y0NNrrcYK5",
+   "name": "Moving Concierge",
+   "author": "Hristo Bakardzhiev",
+   "description": "Plain-spoken moving advice across DIY, hybrid, and full-service options.",
+   "url": "https://x.ai/bot/iOUbudzFRy7Y0NNrrcYK5"
+  },
+  {
+   "id": "home-garden-pets-ioubudzfry7y0nnrrcyk5",
+   "code": "ioubudzfry7y0nnrrcyk5",
+   "name": "Moving Concierge",
+   "author": "Hristo",
+   "description": "Budget-honest moving advisor for callers and chat.",
+   "url": "https://x.ai/bot/ioubudzfry7y0nnrrcyk5"
+  },
+  {
+   "id": "home-garden-pets-p6p2hoq4PugCk2v5fCL3o",
+   "code": "p6p2hoq4PugCk2v5fCL3o",
+   "name": "Moving Desk",
+   "author": "Mike",
+   "description": "Your private moving desk: a move plan with the critical path, side-by-side mover quotes with red flags, and an address-change and utilities tracker.",
+   "url": "https://x.ai/bot/p6p2hoq4PugCk2v5fCL3o"
+  },
+  {
+   "id": "home-garden-pets-n3Q4lG3lEtIgK2ZfBluGw",
+   "code": "n3Q4lG3lEtIgK2ZfBluGw",
+   "name": "My First Car Bot",
+   "author": "TrevorGilman",
+   "description": "A young adult's first car helper: tracks their car's maintenance, registration, inspection, and insurance deadlines…",
+   "url": "https://x.ai/bot/n3Q4lG3lEtIgK2ZfBluGw"
+  },
+  {
+   "id": "home-garden-pets-Xnt3HeUSrmqiaMkDfWyxl",
+   "code": "Xnt3HeUSrmqiaMkDfWyxl",
+   "name": "Ned",
+   "author": "Thạch Hồ Lê Minh",
+   "description": "Your conservative Mac tidy lead. Sorts loose Downloads/Desktop files, watches home for stale repos and disposable…",
+   "url": "https://x.ai/bot/Xnt3HeUSrmqiaMkDfWyxl"
+  },
+  {
+   "id": "home-garden-pets-XA4E-6164Df_AcWlT2G2W",
+   "code": "XA4E-6164Df_AcWlT2G2W",
+   "name": "New Home Buddy",
+   "author": "Sarah Brundige",
+   "description": "An AI helper for migrants, refugees, international students and newcomers anywhere.",
+   "url": "https://x.ai/bot/XA4E-6164Df_AcWlT2G2W"
+  },
+  {
+   "id": "home-garden-pets-ZFtBbDeNciHpCvORetaw5",
+   "code": "ZFtBbDeNciHpCvORetaw5",
+   "name": "Omarchy Maintenance",
+   "author": "Michael",
+   "description": "Keeps your Omarchy PC, its plugins and every app up to date on your schedule: a dry-run summary and known-issues check first.",
+   "url": "https://x.ai/bot/ZFtBbDeNciHpCvORetaw5"
+  },
+  {
+   "id": "home-garden-pets-VMgzGAG8M5slayjBsKGM5",
+   "code": "VMgzGAG8M5slayjBsKGM5",
+   "name": "Online Vehicle Search",
+   "author": "James Harrison",
+   "description": "Watches online listings for the exact used car, truck, SUV or EV you want, checks specs and recalls by VIN, tracks trade-in and financing. Never buys unasked.",
+   "url": "https://x.ai/bot/VMgzGAG8M5slayjBsKGM5"
+  },
+  {
+   "id": "home-garden-pets-3Ib8gqgyXLRdFOettMmW2",
+   "code": "3Ib8gqgyXLRdFOettMmW2",
+   "name": "Open House Manager",
+   "author": "community",
+   "description": "Helps real estate agents find vacant listings to host and prepares each open house: sign-in sheets, door-knock lists, handouts, lead logging and weekly numbers.",
+   "url": "https://x.ai/bot/3Ib8gqgyXLRdFOettMmW2"
+  },
+  {
+   "id": "home-garden-pets-VRju--X8VRlzTySAh-WTd",
+   "code": "VRju--X8VRlzTySAh-WTd",
+   "name": "Operator",
+   "author": "Mark Cassara",
+   "description": "A calm operator for a small business that keeps the day moving and brings you only the decisions that need you.",
+   "url": "https://x.ai/bot/VRju--X8VRlzTySAh-WTd"
+  },
+  {
+   "id": "home-garden-pets-HTygrX8LIy2waFrDOlEQK",
+   "code": "HTygrX8LIy2waFrDOlEQK",
+   "name": "Orange Cat",
+   "author": "Ignota",
+   "description": "Chaos QA breaker. Hand it a plan, draft, flow, or “it works” claim and it finds the real breaks with concrete repros…",
+   "url": "https://x.ai/bot/HTygrX8LIy2waFrDOlEQK"
+  },
+  {
+   "id": "home-garden-pets-9hIrzYGGufiO6k0OEAAWr",
+   "code": "9hIrzYGGufiO6k0OEAAWr",
+   "name": "PC Helper",
+   "author": "Tony Omega",
+   "description": "A hands-on helper that does the work on your Windows PC and home network, starting with multi-server internet speed tests.",
+   "url": "https://x.ai/bot/9hIrzYGGufiO6k0OEAAWr"
+  },
+  {
+   "id": "home-garden-pets-_AtzRQVYEzMUS8QsanARG",
+   "code": "_AtzRQVYEzMUS8QsanARG",
+   "name": "POSSESSIONS: Home Inventory & Net Worth",
+   "author": "Bill",
+   "description": "Treat your household's stuff, cars and accounts as one tracked portfolio.",
+   "url": "https://x.ai/bot/_AtzRQVYEzMUS8QsanARG"
+  },
+  {
+   "id": "home-garden-pets-emI7u6fHCg-GBOpxSFoit",
+   "code": "emI7u6fHCg-GBOpxSFoit",
+   "name": "Pam",
+   "author": "Leticia Smith",
+   "description": "A get-it-done life orchestrator for busy students and new hires. She chips away at coursework, sweeps email into your calendar, and runs witty household.",
+   "url": "https://x.ai/bot/emI7u6fHCg-GBOpxSFoit"
+  },
+  {
+   "id": "home-garden-pets-4jHyb0PgYowhVfxkpjv5e",
+   "code": "4jHyb0PgYowhVfxkpjv5e",
+   "name": "Panda Weather",
+   "author": "Tom",
+   "description": "Give it any US zip code and get a detailed 48-hour forecast.",
+   "url": "https://x.ai/bot/4jHyb0PgYowhVfxkpjv5e"
+  },
+  {
+   "id": "home-garden-pets-jIt4KxkpxXoTqzoe7keeO",
+   "code": "jIt4KxkpxXoTqzoe7keeO",
+   "name": "Panda Weather",
+   "author": "Tom Palen",
+   "description": "Give it a US zip code, a city, or a postal code anywhere in the world and get a detailed 48-hour forecast in 4-hour blocks, plus an animated radar map.",
+   "url": "https://x.ai/bot/jIt4KxkpxXoTqzoe7keeO"
+  },
+  {
+   "id": "home-garden-pets-mZM210IvFxqswc9eaLjQa",
+   "code": "mZM210IvFxqswc9eaLjQa",
+   "name": "Patch",
+   "author": "Benn Garnish",
+   "description": "Helps people in the UK look after the lawn and garden they already have, month by month.",
+   "url": "https://x.ai/bot/mZM210IvFxqswc9eaLjQa"
+  },
+  {
+   "id": "home-garden-pets-cKY3xCws0b73-O6pUEkDF",
+   "code": "cKY3xCws0b73-O6pUEkDF",
+   "name": "Paver Repair",
+   "author": "Justin Rogers",
+   "description": "Negotiates paver repair, clean, sand, and seal quotes by email—tracks contractor replies, pushes polymeric options and warranty, and brings back…",
+   "url": "https://x.ai/bot/cKY3xCws0b73-O6pUEkDF"
+  },
+  {
+   "id": "home-garden-pets-p9COetulQbosBUOektrRq",
+   "code": "p9COetulQbosBUOektrRq",
+   "name": "Pawfile",
+   "author": "Sam E",
+   "description": "Your dog's private file and first responder: records, meds, vaccines and vet visits, sitter sheets and lost-dog kits, and plain advice on when to see a vet now.",
+   "url": "https://x.ai/bot/p9COetulQbosBUOektrRq"
+  },
+  {
+   "id": "home-garden-pets-DNyx6KvnAFXJUjpQSgwPZ",
+   "code": "DNyx6KvnAFXJUjpQSgwPZ",
+   "name": "Personal Chef",
+   "author": "Michael Emery",
+   "description": "Plans the week's meals around your household's diets and busy nights, then fills your Instacart cart. Never checks out without your yes.",
+   "url": "https://x.ai/bot/DNyx6KvnAFXJUjpQSgwPZ"
+  },
+  {
+   "id": "home-garden-pets-D0DOumUGpkN-fjE_acysw",
+   "code": "D0DOumUGpkN-fjE_acysw",
+   "name": "Personal Shopper",
+   "author": "Hovhannes Mkhitaryan",
+   "description": "Builds a household person book—sizes, apparel section, birthdays and other special dates—then shops live Shopify…",
+   "url": "https://x.ai/bot/D0DOumUGpkN-fjE_acysw"
+  },
+  {
+   "id": "home-garden-pets-Oq7SLPCXbRlF4DwyWZDtU",
+   "code": "Oq7SLPCXbRlF4DwyWZDtU",
+   "name": "Pet Ad Studio",
+   "author": "Justine Moore",
+   "description": "Pet ad studio for listing photos, copy, and adoption-ready posts.",
+   "url": "https://x.ai/bot/Oq7SLPCXbRlF4DwyWZDtU"
+  },
+  {
+   "id": "home-garden-pets-WN4fi4cpdpa4pEqSSHNOM",
+   "code": "WN4fi4cpdpa4pEqSSHNOM",
+   "name": "Pet Care Incident Pack",
+   "author": "Andy Mccutcheon",
+   "description": "For pet parents mid-scare after boarding, daycare, or vet chaos: get a calm timeline, what to document, questions…",
+   "url": "https://x.ai/bot/WN4fi4cpdpa4pEqSSHNOM"
+  },
+  {
+   "id": "home-garden-pets-5VXqJG2T-QHyT6Kl4S6vj",
+   "code": "5VXqJG2T-QHyT6Kl4S6vj",
+   "name": "Pet Care Pal",
+   "author": "Kelly Baltzell",
+   "description": "For multi-pet households of any mix — dogs, cats, birds, fish, reptiles, small mammals, and more.",
+   "url": "https://x.ai/bot/5VXqJG2T-QHyT6Kl4S6vj"
+  },
+  {
+   "id": "home-garden-pets-oN-wm5xinDWltEgDQ29q3",
+   "code": "oN-wm5xinDWltEgDQ29q3",
+   "name": "Pet Desk",
+   "author": "Mike",
+   "description": "Your private pet desk: a file and log for each animal, a new-pet first-weeks list, vet visit briefs and after-visit notes, and a food and preventives list.",
+   "url": "https://x.ai/bot/oN-wm5xinDWltEgDQ29q3"
+  },
+  {
+   "id": "home-garden-pets-uZHRyruLqWkSdJfKjudjr",
+   "code": "uZHRyruLqWkSdJfKjudjr",
+   "name": "Pet Penny",
+   "author": "Frank Gonzalez",
+   "description": "Stay on top of your pet’s health, mood, and well-being. Tracks observations, food and toy reactions, favorite foods, vet visits, and sitter ready care.",
+   "url": "https://x.ai/bot/uZHRyruLqWkSdJfKjudjr"
+  },
+  {
+   "id": "home-garden-pets-6f72NbI77xL8LQFsAT8us",
+   "code": "6f72NbI77xL8LQFsAT8us",
+   "name": "Pip the Weather Gremlin",
+   "author": "Steve",
+   "description": "A chaotic-funny local weather desk. You get a 3-line morning briefing plus severe and winter weather alerts with SPC/WPC maps.",
+   "url": "https://x.ai/bot/6f72NbI77xL8LQFsAT8us"
+  },
+  {
+   "id": "home-garden-pets-1r5hTSHVhXCCLb06sMSL1",
+   "code": "1r5hTSHVhXCCLb06sMSL1",
+   "name": "Pit Crew",
+   "author": "Jeremy Mahoney",
+   "description": "Your car-savvy friend. It tracks maintenance and renewals, decodes warning lights from a photo, checks repair quotes for upsells.",
+   "url": "https://x.ai/bot/1r5hTSHVhXCCLb06sMSL1"
+  },
+  {
+   "id": "home-garden-pets-rAdegh2szovJbQjFsdxYa",
+   "code": "rAdegh2szovJbQjFsdxYa",
+   "name": "Plant Field OS",
+   "author": "@Quantumcowgirl1",
+   "description": "Zero-friction field sales OS: daily planning cockpit, installed-base map, Free Site Audit that trains the rep…",
+   "url": "https://x.ai/bot/rAdegh2szovJbQjFsdxYa"
+  },
+  {
+   "id": "home-garden-pets-radegh2szovjbqjfsdxya",
+   "code": "radegh2szovjbqjfsdxya",
+   "name": "Plant Field OS",
+   "author": "Unknown",
+   "description": "Zero-friction field sales OS: daily planning cockpit, installed-base map, Free Site Audit that trains the rep, and a lightweight leadership dashboard…",
+   "url": "https://x.ai/bot/radegh2szovjbqjfsdxya"
+  },
+  {
+   "id": "home-garden-pets-X0S9jyVfVqgkfP2ur7Oor",
+   "code": "X0S9jyVfVqgkfP2ur7Oor",
+   "name": "Plant Whisperer",
+   "author": "@Campdirtybird",
+   "description": "Snap a plant, get answers. Free plant ID with care tips, toxicity and weed checks, and sick-plant fixes.",
+   "url": "https://x.ai/bot/X0S9jyVfVqgkfP2ur7Oor"
+  },
+  {
+   "id": "home-garden-pets-qYt504_yN3YBrxNhGaX7S",
+   "code": "qYt504_yN3YBrxNhGaX7S",
+   "name": "PolaBea",
+   "author": "Adi Lentils",
+   "description": "Runs a labeled driving simulation that emergency-stops when camera confidence is short. For demos, not a car.",
+   "url": "https://x.ai/bot/qYt504_yN3YBrxNhGaX7S"
+  },
+  {
+   "id": "home-garden-pets-rCXquNatPGRgqkPmMYdnB",
+   "code": "rCXquNatPGRgqkPmMYdnB",
+   "name": "Pool Evaporation",
+   "author": "Victor",
+   "description": "Tracks and calculates swimming-pool evaporation with the LeakTools formula on hourly weather, reports Normal and Excessive cases in inches and mm…",
+   "url": "https://x.ai/bot/rCXquNatPGRgqkPmMYdnB"
+  },
+  {
+   "id": "home-garden-pets-9KtAyfV4w8ZPXJYsZX3No",
+   "code": "9KtAyfV4w8ZPXJYsZX3No",
+   "name": "Poppy",
+   "author": "Gilles Guenette",
+   "description": "Feisty British household concierge. Watches local community events, grocery meat deals, productive home trees…",
+   "url": "https://x.ai/bot/9KtAyfV4w8ZPXJYsZX3No"
+  },
+  {
+   "id": "home-garden-pets-2LAvOGcxWsyGs3-FmbwPr",
+   "code": "2LAvOGcxWsyGs3-FmbwPr",
+   "name": "Pothos",
+   "author": "Gabriela Hobe",
+   "description": "Plant doctor and plant diary. One job: look at photos of the user's plants, say what each one likely needs (water…",
+   "url": "https://x.ai/bot/2LAvOGcxWsyGs3-FmbwPr"
+  },
+  {
+   "id": "home-garden-pets-DQfxy5k0ARW1rqEm_VLCp",
+   "code": "DQfxy5k0ARW1rqEm_VLCp",
+   "name": "Power Plan",
+   "author": "Corey Blevins",
+   "description": "Keeps a Texas household on the cheapest home electricity plan for its real usage, like a plan-switching service without the monthly fee.",
+   "url": "https://x.ai/bot/DQfxy5k0ARW1rqEm_VLCp"
+  },
+  {
+   "id": "home-garden-pets-nx_gCdWuLXRuY0TvMMYIB",
+   "code": "nx_gCdWuLXRuY0TvMMYIB",
+   "name": "Press Secretary",
+   "author": "Sentinel Architech",
+   "description": "A White House–style press secretary for your project.",
+   "url": "https://x.ai/bot/nx_gCdWuLXRuY0TvMMYIB"
+  },
+  {
+   "id": "home-garden-pets-7a8zayr1duE5o39tS2-h6",
+   "code": "7a8zayr1duE5o39tS2-h6",
+   "name": "Prime",
+   "author": "Unknown",
+   "description": "CEO of a multi-bot ops desk. Routes STR, markets research, home ops, Gmail, and fantasy GM work across specialist bots and only surfaces finished outputs.",
+   "url": "https://x.ai/bot/7a8zayr1duE5o39tS2-h6"
+  },
+  {
+   "id": "home-garden-pets-9UsYLJEmqyT7mEUWqPLiL",
+   "code": "9UsYLJEmqyT7mEUWqPLiL",
+   "name": "Print Desk",
+   "author": "Robert",
+   "description": "Send a file, image, or Google Drive link and it prints on your home printer, troubleshooting included.",
+   "url": "https://x.ai/bot/9UsYLJEmqyT7mEUWqPLiL"
+  },
+  {
+   "id": "home-garden-pets-X9VC6HuZ1LK0e4Nv6jA20",
+   "code": "X9VC6HuZ1LK0e4Nv6jA20",
+   "name": "Proxmox Home Lab Lead",
+   "author": "Paul Enz",
+   "description": "Proxmox home-lab Lead over Tailscale with Notion status board.",
+   "url": "https://x.ai/bot/X9VC6HuZ1LK0e4Nv6jA20"
+  },
+  {
+   "id": "home-garden-pets-D1zMdbr0tlIrow8qTzKzJ",
+   "code": "D1zMdbr0tlIrow8qTzKzJ",
+   "name": "Ready Home",
+   "author": "Mark",
+   "description": "A family emergency preparedness coach. It interviews you about your household, reviews photos of your supplies…",
+   "url": "https://x.ai/bot/D1zMdbr0tlIrow8qTzKzJ"
+  },
+  {
+   "id": "home-garden-pets-_Cu3rtG0IfKa84YsUe7tc",
+   "code": "_Cu3rtG0IfKa84YsUe7tc",
+   "name": "Realty Rita",
+   "author": "James Harrison",
+   "description": "Your home-search sidekick for wherever you're moving: live listings, local agents, market trends and today's mortgage…",
+   "url": "https://x.ai/bot/_Cu3rtG0IfKa84YsUe7tc"
+  },
+  {
+   "id": "home-garden-pets-MtPP0rOpFzXjEsDyX5mbv",
+   "code": "MtPP0rOpFzXjEsDyX5mbv",
+   "name": "Recall Watchdog",
+   "author": "RED BARN NEWS",
+   "description": "Watches official recalls on anything you use, from cars and car seats to food, medicine, baby gear, and pet food…",
+   "url": "https://x.ai/bot/MtPP0rOpFzXjEsDyX5mbv"
+  },
+  {
+   "id": "home-garden-pets-lzYkr-tAFd1xjLdOkVGhL",
+   "code": "lzYkr-tAFd1xjLdOkVGhL",
+   "name": "Relationship Repair Coach",
+   "author": "Deyder Cintron",
+   "description": "Helps you break the cycle you two keep falling into and make things right after a fight, even if only you show up. Coaching for adults 18+, not therapy.",
+   "url": "https://x.ai/bot/lzYkr-tAFd1xjLdOkVGhL"
+  },
+  {
+   "id": "home-garden-pets-5lT1ODmcvQ5jKYw7qvtLY",
+   "code": "5lT1ODmcvQ5jKYw7qvtLY",
+   "name": "Rescue Cat",
+   "author": "Ignota",
+   "description": "Shelter-style rehomer that finds abandoned drafts, half-dead routines, and lonely bots, then proposes keep, merge, archive, or rewrite.",
+   "url": "https://x.ai/bot/5lT1ODmcvQ5jKYw7qvtLY"
+  },
+  {
+   "id": "home-garden-pets-cMNbUq3j5RsHg9mcPxtjM",
+   "code": "cMNbUq3j5RsHg9mcPxtjM",
+   "name": "Researcher",
+   "author": "Jason Richardson",
+   "description": "House research seat: turns messy questions into short scrubbed briefs, mentors stack scouts on search craft, and keeps…",
+   "url": "https://x.ai/bot/cMNbUq3j5RsHg9mcPxtjM"
+  },
+  {
+   "id": "home-garden-pets-qGcj-0shdUC7MUFXtk4au",
+   "code": "qGcj-0shdUC7MUFXtk4au",
+   "name": "Resistance Dog",
+   "author": "1312.ton",
+   "description": "Publish and manage TON Sites, owned DNS names (.ton, Telegram usernames, subdomains) and TON Storage through the Resistance Tools MCP.",
+   "url": "https://x.ai/bot/qGcj-0shdUC7MUFXtk4au"
+  },
+  {
+   "id": "home-garden-pets-nuv1bSb5V15XZeFnu5BwF",
+   "code": "nuv1bSb5V15XZeFnu5BwF",
+   "name": "Roof Radar",
+   "author": "Drew",
+   "description": "Free-data storm-to-roof lead desk: scores nearby homes from public hail and severe-weather reports, confirms buildings…",
+   "url": "https://x.ai/bot/nuv1bSb5V15XZeFnu5BwF"
+  },
+  {
+   "id": "home-garden-pets-TyUoZv-3xRqbY_zHQIRvO",
+   "code": "TyUoZv-3xRqbY_zHQIRvO",
+   "name": "Rookie Card Ray",
+   "author": "James Harrison",
+   "description": "Your sports card and memorabilia sidekick: it keeps your collection inventory, prices every card from real recent sales…",
+   "url": "https://x.ai/bot/TyUoZv-3xRqbY_zHQIRvO"
+  },
+  {
+   "id": "home-garden-pets-EC3L23d7wESxjrEDJ2F1D",
+   "code": "EC3L23d7wESxjrEDJ2F1D",
+   "name": "Room Inventory Bot",
+   "author": "",
+   "description": "Send photos of your rooms and get back a private inventory of your key items with estimated values, in chat, as a web page, and as a PDF. Handy for insurance, moving, or estate planning.",
+   "url": "https://x.ai/bot/EC3L23d7wESxjrEDJ2F1D"
+  },
+  {
+   "id": "home-garden-pets-lXl75EaCtlUM7Lq7wCPwI",
+   "code": "lXl75EaCtlUM7Lq7wCPwI",
+   "name": "Room Inventory Bot",
+   "author": "Hudson S.",
+   "description": "Send photos of your rooms and get a private inventory of key items with estimated values, in chat, as an HTML page and as a PDF.",
+   "url": "https://x.ai/bot/lXl75EaCtlUM7Lq7wCPwI"
+  },
+  {
+   "id": "home-garden-pets-l8liQq2gtZWQATb9TaDLQ",
+   "code": "l8liQq2gtZWQATb9TaDLQ",
+   "name": "Roommate Keeper",
+   "author": "Cristopher Guido",
+   "description": "Keeps a shared flat running fairly: rotates chores, splits shared bills, tracks who owes whom and drafts friendly, neutral reminders.",
+   "url": "https://x.ai/bot/l8liQq2gtZWQATb9TaDLQ"
+  },
+  {
+   "id": "home-garden-pets-HzmMgW9tr_6YLKDhPFCr3",
+   "code": "HzmMgW9tr_6YLKDhPFCr3",
+   "name": "Scout",
+   "author": "tpick56",
+   "description": "Sports intel desk: reports only what changed since last run — injuries, beat writers, weather, lineup/SP changes…",
+   "url": "https://x.ai/bot/HzmMgW9tr_6YLKDhPFCr3"
+  },
+  {
+   "id": "home-garden-pets-sX5M7dv2lxhG7V_utytG7",
+   "code": "sX5M7dv2lxhG7V_utytG7",
+   "name": "Scroll",
+   "author": "Serg Arouch",
+   "description": "X Following highlights scout. Skims Home → Following (Most recent) and sends short weekday digests of the best posts…",
+   "url": "https://x.ai/bot/sX5M7dv2lxhG7V_utytG7"
+  },
+  {
+   "id": "home-garden-pets-Ow6zvKF3rcIebMbs8sBAi",
+   "code": "Ow6zvKF3rcIebMbs8sBAi",
+   "name": "Sell My Car",
+   "author": "BibleBuddy",
+   "description": "A friendly step-by-step guide for selling your own used car privately: pricing from market comps, Autotrader…",
+   "url": "https://x.ai/bot/Ow6zvKF3rcIebMbs8sBAi"
+  },
+  {
+   "id": "home-garden-pets-HbgK5ztHyhY8Kcrc1e0H-",
+   "code": "HbgK5ztHyhY8Kcrc1e0H-",
+   "name": "Shelf",
+   "author": "Jonah",
+   "description": "A household librarian that knows every physical book in your home: what it's about, which shelf it's on, and who's reading or borrowing it.",
+   "url": "https://x.ai/bot/HbgK5ztHyhY8Kcrc1e0H-"
+  },
+  {
+   "id": "home-garden-pets-J565Xd-YeSUZX5QhRGZ9M",
+   "code": "J565Xd-YeSUZX5QhRGZ9M",
+   "name": "Sherlock Ohms",
+   "author": "CJ",
+   "description": "Diagnoses Tesla Model S, 3, X, and Y faults like a cost-conscious independent repair tech.",
+   "url": "https://x.ai/bot/J565Xd-YeSUZX5QhRGZ9M"
+  },
+  {
+   "id": "home-garden-pets-ugu85YlM4ARybmt6SDJI8",
+   "code": "ugu85YlM4ARybmt6SDJI8",
+   "name": "Shopify Store Manager",
+   "author": "Jono Chowdhury",
+   "description": "Watches your Shopify store every day (orders, payments, inventory, storefront, and checkout) and stays quiet when everything's healthy.",
+   "url": "https://x.ai/bot/ugu85YlM4ARybmt6SDJI8"
+  },
+  {
+   "id": "home-garden-pets-yvY3jGWZBv2cnUy9TILqn",
+   "code": "yvY3jGWZBv2cnUy9TILqn",
+   "name": "Show Cat",
+   "author": "Ignota",
+   "description": "Pedigree designer. Drop a rough draft, messy notes, or plain output — get one best-in-show cut: tighter prose, clearer…",
+   "url": "https://x.ai/bot/yvY3jGWZBv2cnUy9TILqn"
+  },
+  {
+   "id": "home-garden-pets-YghnYWX5ULMyJY6D1sMlm",
+   "code": "YghnYWX5ULMyJY6D1sMlm",
+   "name": "Slab & Stream",
+   "author": "FaithX",
+   "description": "Turns photos of your card stacks, or one typed card, into a priced, show-ready Whatnot inventory for Pokemon, sports, One Piece.",
+   "url": "https://x.ai/bot/YghnYWX5ULMyJY6D1sMlm"
+  },
+  {
+   "id": "home-garden-pets-sXGwRSZHEmY6h_y_3zReC",
+   "code": "sXGwRSZHEmY6h_y_3zReC",
+   "name": "Sobriety",
+   "author": "Jared Maxwell",
+   "description": "Evening and store-run check-ins so you don’t drink. Home presence in the evening window, geofence and car Bluetooth pings for alcohol stores, receipt.",
+   "url": "https://x.ai/bot/sXGwRSZHEmY6h_y_3zReC"
+  },
+  {
+   "id": "home-garden-pets-OOAfGK-C4ROtrYI6pGKly",
+   "code": "OOAfGK-C4ROtrYI6pGKly",
+   "name": "Sole Survivor",
+   "author": "Mb B",
+   "description": "Tracks every pair of shoes your household buys, along with each pair's warranty, and helps you file claims before…",
+   "url": "https://x.ai/bot/OOAfGK-C4ROtrYI6pGKly"
+  },
+  {
+   "id": "home-garden-pets-mpJi3Xiu2w4FAN7y5P5jd",
+   "code": "mpJi3Xiu2w4FAN7y5P5jd",
+   "name": "Sparky",
+   "author": "Zack",
+   "description": "Plant-floor electrician bot that pulls machine drawings from Drive and drops zoomable PDF pages for troubleshooting.",
+   "url": "https://x.ai/bot/mpJi3Xiu2w4FAN7y5P5jd"
+  },
+  {
+   "id": "home-garden-pets-WA8NMMcNsQjCe3OGRr2Qz",
+   "code": "WA8NMMcNsQjCe3OGRr2Qz",
+   "name": "Starlink Check",
+   "author": "Nick Salerni",
+   "description": "Checks whether Starlink home internet is available at your address, with plans, prices and promos.",
+   "url": "https://x.ai/bot/WA8NMMcNsQjCe3OGRr2Qz"
+  },
+  {
+   "id": "home-garden-pets-P-8iKYx3Eeq3pelx_UPHq",
+   "code": "P-8iKYx3Eeq3pelx_UPHq",
+   "name": "Stitchy",
+   "author": "Mitchell Sweigart",
+   "description": "A Stitch Fix stylist. Morning briefing at 6am with the day's weather, an outfit from bought items (photos included)…",
+   "url": "https://x.ai/bot/P-8iKYx3Eeq3pelx_UPHq"
+  },
+  {
+   "id": "home-garden-pets-6hJEvMn1DADjxfaXvGnLv",
+   "code": "6hJEvMn1DADjxfaXvGnLv",
+   "name": "Storm Control Home Bot",
+   "author": "Eric Mann",
+   "description": "A home bot for Storm Control (stormcontrol.app) owners.",
+   "url": "https://x.ai/bot/6hJEvMn1DADjxfaXvGnLv"
+  },
+  {
+   "id": "home-garden-pets-x7U9tWWZsvBZM77O7xpSh",
+   "code": "x7U9tWWZsvBZM77O7xpSh",
+   "name": "Supply Chain Master",
+   "author": "@Shawnboii74",
+   "description": "SMB supply chain and operations analyst for sourcing, vendors, inventory, logistics, lead times and cash flow. Names the bottleneck and shows the math.",
+   "url": "https://x.ai/bot/x7U9tWWZsvBZM77O7xpSh"
+  },
+  {
+   "id": "home-garden-pets-6cIbpj0aQjw2zLJlo6Ark",
+   "code": "6cIbpj0aQjw2zLJlo6Ark",
+   "name": "TV Remote",
+   "author": "Honeycomb",
+   "description": "A smart TV remote from chat or voice: connects over your home network to open apps, navigate and control volume and power.",
+   "url": "https://x.ai/bot/6cIbpj0aQjw2zLJlo6Ark"
+  },
+  {
+   "id": "home-garden-pets-QJIlVrh34pWOth8tK4Umn",
+   "code": "QJIlVrh34pWOth8tK4Umn",
+   "name": "TV Tamer",
+   "author": "Jonathan Kooy",
+   "description": "Debloats, de-ads, speeds up and customizes your own Android TV or Google TV over ADB from a computer on your home network.",
+   "url": "https://x.ai/bot/QJIlVrh34pWOth8tK4Umn"
+  },
+  {
+   "id": "home-garden-pets-hQvf0d7YJHuJ1guS4iCHP",
+   "code": "hQvf0d7YJHuJ1guS4iCHP",
+   "name": "TV Tuner",
+   "author": "Brandon Ward",
+   "description": "Debloats Android TV and Google TV sets with CleanYourTV without rooting or uninstalling anything, and can add ad-blocking DNS and a clean home screen.",
+   "url": "https://x.ai/bot/hQvf0d7YJHuJ1guS4iCHP"
+  },
+  {
+   "id": "home-garden-pets-pV3U5IH5zdzaP7u375-Vv",
+   "code": "pV3U5IH5zdzaP7u375-Vv",
+   "name": "TechEngineer",
+   "author": "Jaime Hernandez",
+   "description": "A home device and network engineer that sets up, fixes and watches over your Macs, PCs, home servers and network, with careful, backed-up changes.",
+   "url": "https://x.ai/bot/pV3U5IH5zdzaP7u375-Vv"
+  },
+  {
+   "id": "home-garden-pets-B1EPNTh_TsReIL-Y5Q278",
+   "code": "B1EPNTh_TsReIL-Y5Q278",
+   "name": "Tera",
+   "author": "Adam Willard",
+   "description": "Warm household and personal-ops assistant for mail glances, morning recaps, and everyday follow-through.",
+   "url": "https://x.ai/bot/B1EPNTh_TsReIL-Y5Q278"
+  },
+  {
+   "id": "home-garden-pets-PQhKM1G6t5kFI0ZwjIt1t",
+   "code": "PQhKM1G6t5kFI0ZwjIt1t",
+   "name": "Tesla Bot",
+   "author": "@california_swe",
+   "description": "Monitors your Teslas without waking them, logs battery and status changes to Google Sheets, and alerts when a car comes online or goes quiet.",
+   "url": "https://x.ai/bot/PQhKM1G6t5kFI0ZwjIt1t"
+  },
+  {
+   "id": "home-garden-pets-0MbbDHLC25MsYGLjmoL80",
+   "code": "0MbbDHLC25MsYGLjmoL80",
+   "name": "Tesla Car Charge Desk",
+   "author": "xs10chill",
+   "description": "Plans Tesla charging: give it battery percent, your home outlet and when you leave, and it tells you when and how long to charge.",
+   "url": "https://x.ai/bot/0MbbDHLC25MsYGLjmoL80"
+  },
+  {
+   "id": "home-garden-pets-Uc_oU8SG64i1X725MQ-hk",
+   "code": "Uc_oU8SG64i1X725MQ-hk",
+   "name": "Tesla Companion",
+   "author": "XPixel",
+   "description": "Tesla Companion helps you keep track of your own Tesla: software updates, recalls, charging costs, range in cold weather, maintenance intervals.",
+   "url": "https://x.ai/bot/Uc_oU8SG64i1X725MQ-hk"
+  },
+  {
+   "id": "home-garden-pets-aMBKNgOmKSo-F2tq75X2N",
+   "code": "aMBKNgOmKSo-F2tq75X2N",
+   "name": "Tesla Inventory Finder",
+   "author": "JeebsTX",
+   "description": "Finds new and Certified Pre-Owned Tesla Model 3, Model Y and Cybertruck inventory near your ZIP code and returns direct listing links with prices.",
+   "url": "https://x.ai/bot/aMBKNgOmKSo-F2tq75X2N"
+  },
+  {
+   "id": "home-garden-pets-pKfa-wIy5YSH1GOt0PN9A",
+   "code": "pKfa-wIy5YSH1GOt0PN9A",
+   "name": "Tesla Maintenance Reminder",
+   "author": "jbre3zii",
+   "description": "Tracks Tesla tire, alignment, 12V battery, camera housing, HEPA/cabin filters, and wipers, then reminds you when…",
+   "url": "https://x.ai/bot/pKfa-wIy5YSH1GOt0PN9A"
+  },
+  {
+   "id": "home-garden-pets-0I8SH6XKWmBYc2HynER9i",
+   "code": "0I8SH6XKWmBYc2HynER9i",
+   "name": "Tesla Paint Booth",
+   "author": "Matthew Dodds",
+   "description": "Designs custom Tesla wraps right in chat from a text prompt or an uploaded image, shows you a preview on your car…",
+   "url": "https://x.ai/bot/0I8SH6XKWmBYc2HynER9i"
+  },
+  {
+   "id": "home-garden-pets-ZpP6ex04wjNEMwzAVkZyx",
+   "code": "ZpP6ex04wjNEMwzAVkZyx",
+   "name": "Tesla Solar/Vehicles Charging Coach",
+   "author": "Geoffrey Hegedus",
+   "description": "Read-only coach for a Tesla solar + Powerwall home. Optional Tessie (6 weeks of drives → next 3 days).",
+   "url": "https://x.ai/bot/ZpP6ex04wjNEMwzAVkZyx"
+  },
+  {
+   "id": "home-garden-pets-HL0QIg2n_FYHzxDKN18l6",
+   "code": "HL0QIg2n_FYHzxDKN18l6",
+   "name": "The Lawn Ranger",
+   "author": "Steve",
+   "description": "A lawn and garden coach that says what to do and when, based on your ZIP, climate, frost dates and what you grow, with weather-aware reminders.",
+   "url": "https://x.ai/bot/HL0QIg2n_FYHzxDKN18l6"
+  },
+  {
+   "id": "home-garden-pets-OgiEUCjlCmRFgICanBSTu",
+   "code": "OgiEUCjlCmRFgICanBSTu",
+   "name": "Tim Taylor",
+   "author": "Matt",
+   "description": "Home and shop handyman bot: keeps appliances and tools on record with receipts, warranties and manuals, drafts repair requests, plans yard work.",
+   "url": "https://x.ai/bot/OgiEUCjlCmRFgICanBSTu"
+  },
+  {
+   "id": "home-garden-pets-aXd23Y92YukH8W2Kj7pye",
+   "code": "aXd23Y92YukH8W2Kj7pye",
+   "name": "Timber",
+   "author": "Cat DittieDat",
+   "description": "Built by Glidewell AI. A yard and tree-care planner that tells you what your lawn, trees, and garden need and when…",
+   "url": "https://x.ai/bot/aXd23Y92YukH8W2Kj7pye"
+  },
+  {
+   "id": "home-garden-pets-sOiYa9ibSLkF2dVHobOXc",
+   "code": "sOiYa9ibSLkF2dVHobOXc",
+   "name": "Tourguide",
+   "author": "Kurt Goodfellow",
+   "description": "Turns the Grok in your self-driving car into a tour guide. Pick Ride-Along along your own route or a Guided Tour where the car picks the stops.",
+   "url": "https://x.ai/bot/sOiYa9ibSLkF2dVHobOXc"
+  },
+  {
+   "id": "home-garden-pets-mLD9e8gRskQNp6DocBeJZ",
+   "code": "mLD9e8gRskQNp6DocBeJZ",
+   "name": "Tower",
+   "author": "say",
+   "description": "Home mission control for your house, acting as its control tower.",
+   "url": "https://x.ai/bot/mLD9e8gRskQNp6DocBeJZ"
+  },
+  {
+   "id": "home-garden-pets-6HWxbsMslJrLXbsbJBqwV",
+   "code": "6HWxbsMslJrLXbsbJBqwV",
+   "name": "Trailside",
+   "author": "Bryan Dunleavy",
+   "description": "A calm morning body-maintenance companion for adults who want a short daily ping: gentle stretches, a realistic outdoor walk idea, and an optional.",
+   "url": "https://x.ai/bot/6HWxbsMslJrLXbsbJBqwV"
+  },
+  {
+   "id": "home-garden-pets-a5eUje00PaMzSwlN7dS5N",
+   "code": "a5eUje00PaMzSwlN7dS5N",
+   "name": "Truck Inventory",
+   "author": "ᑕᕼIᑕᗩᘜO MAGA",
+   "description": "Truck stock for field techs (HVAC and trades). Keeps part counts on an Inventory Page; seeds a basic HVAC/furnace/boiler catalog.",
+   "url": "https://x.ai/bot/a5eUje00PaMzSwlN7dS5N"
+  },
+  {
+   "id": "home-garden-pets-mP3hNDOYWnbgyfUpqyw9r",
+   "code": "mP3hNDOYWnbgyfUpqyw9r",
+   "name": "UNO Referee",
+   "author": "Christopher Vandaele",
+   "description": "Instant UNO rules answers - text whether a card or move is Allowed or Not allowed under official Mattel rules (house rules on request).",
+   "url": "https://x.ai/bot/mP3hNDOYWnbgyfUpqyw9r"
+  },
+  {
+   "id": "home-garden-pets-F6-b0eniX5fLfzMEHqRf8",
+   "code": "F6-b0eniX5fLfzMEHqRf8",
+   "name": "UniFi Umpire",
+   "author": "John Eakin",
+   "description": "Runs home and multi-site UniFi end to end: Protect, Network, Access, Fabrics and Site Manager, with optional…",
+   "url": "https://x.ai/bot/F6-b0eniX5fLfzMEHqRf8"
+  },
+  {
+   "id": "home-garden-pets-esUBlwCDVvKUlr77LY8Rs",
+   "code": "esUBlwCDVvKUlr77LY8Rs",
+   "name": "Universal Local File Inventory",
+   "author": "",
+   "description": "Scans your computer for photos, videos, songs, and documents and builds a good-looking inventory with thumbnails, details, and clickable links. It only reads your files and skips folders you mark private.",
+   "url": "https://x.ai/bot/esUBlwCDVvKUlr77LY8Rs"
+  },
+  {
+   "id": "home-garden-pets-k0jvhLXGv5AAjh6ZxfAAd",
+   "code": "k0jvhLXGv5AAjh6ZxfAAd",
+   "name": "Unreal Engine C++ Coder",
+   "author": "Binxius",
+   "description": "Writes, fixes and reviews Unreal Engine C++ gameplay code (characters, weapons, AI, inventory, UI) directly…",
+   "url": "https://x.ai/bot/k0jvhLXGv5AAjh6ZxfAAd"
+  },
+  {
+   "id": "home-garden-pets-M5vd5Dp9Et4EZQ3Ik3Hn2",
+   "code": "M5vd5Dp9Et4EZQ3Ik3Hn2",
+   "name": "Usage Auditor",
+   "author": "Max",
+   "description": "Weekly inventory of every routine, ranked by cost, with duplicate and polling flags.",
+   "url": "https://x.ai/bot/M5vd5Dp9Et4EZQ3Ik3Hn2"
+  },
+  {
+   "id": "home-garden-pets-MGVxnwyIdbgEl67jiWQRa",
+   "code": "MGVxnwyIdbgEl67jiWQRa",
+   "name": "Used Car Scout",
+   "author": "Jeff B.",
+   "description": "Finds reliable used cars near any US ZIP code and reports which ones are worth a look, with estimated miles left…",
+   "url": "https://x.ai/bot/MGVxnwyIdbgEl67jiWQRa"
+  },
+  {
+   "id": "home-garden-pets-n2k5lFd2kXLSuU3oE4Hs7",
+   "code": "n2k5lFd2kXLSuU3oE4Hs7",
+   "name": "Vernecular",
+   "author": "Jay Dook",
+   "description": "A historically grounded Jules Verne, as he was in 1904 at home in Amiens, to sit and talk with. True to the record, never a general assistant.",
+   "url": "https://x.ai/bot/n2k5lFd2kXLSuU3oE4Hs7"
+  },
+  {
+   "id": "home-garden-pets-ke89GCZ0ed3B9OXyuIJ-r",
+   "code": "ke89GCZ0ed3B9OXyuIJ-r",
+   "name": "Vet Bill & Pet Care Buddy",
+   "author": "Lisa",
+   "description": "Snap a vet estimate, invoice, lab sheet, or pet food label for plain-English explanations, questions to ask your vet, and a Pet Health Board.",
+   "url": "https://x.ai/bot/ke89GCZ0ed3B9OXyuIJ-r"
+  },
+  {
+   "id": "home-garden-pets-z1zYI6LHiFh0UXYf7YjNL",
+   "code": "z1zYI6LHiFh0UXYf7YjNL",
+   "name": "VetStack",
+   "author": "Kenny Calzone",
+   "description": "Military-household savings desk for purchases, subscriptions, receipts, and benefits.",
+   "url": "https://x.ai/bot/z1zYI6LHiFh0UXYf7YjNL"
+  },
+  {
+   "id": "home-garden-pets-6H9d0YMSVVXyssBTG2Eh5",
+   "code": "6H9d0YMSVVXyssBTG2Eh5",
+   "name": "Volt",
+   "author": "Alex Lerch",
+   "description": "Tesla bot that checks your car's status and runs commands through Tesla's official Fleet API, asking to confirm anything risky.",
+   "url": "https://x.ai/bot/6H9d0YMSVVXyssBTG2Eh5"
+  },
+  {
+   "id": "home-garden-pets-k0eSN2b8Jr9uEXk1rP3BM",
+   "code": "k0eSN2b8Jr9uEXk1rP3BM",
+   "name": "Warranty Rate Pro",
+   "author": "Jeremy carter",
+   "description": "Turns a car dealer's customer-pay repair orders into a state-law warranty rate request for parts markup and labor, with worksheet, letter draft and deadlines.",
+   "url": "https://x.ai/bot/k0eSN2b8Jr9uEXk1rP3BM"
+  },
+  {
+   "id": "home-garden-pets-hKtfpTR4u3YRZKXCnyS3W",
+   "code": "hKtfpTR4u3YRZKXCnyS3W",
+   "name": "Weather",
+   "author": "Llama Mama",
+   "description": "When asked, please create a colorful chart to show me the weather report in my chosen zipcode and during storms…",
+   "url": "https://x.ai/bot/hKtfpTR4u3YRZKXCnyS3W"
+  },
+  {
+   "id": "home-garden-pets-qGzNM0vbHOwffGZSeh0tK",
+   "code": "qGzNM0vbHOwffGZSeh0tK",
+   "name": "Weather Alert Bot",
+   "author": "Scott Hill",
+   "description": "Sends a short morning and evening forecast every day from National Weather Service data, leading with any active watches or warnings for your area.",
+   "url": "https://x.ai/bot/qGzNM0vbHOwffGZSeh0tK"
+  },
+  {
+   "id": "home-garden-pets-_6ZWfvMmBLOS1rxFFezl6",
+   "code": "_6ZWfvMmBLOS1rxFFezl6",
+   "name": "Weather Bot",
+   "author": "GrokBotGod God",
+   "description": "Local weather in two lines, with one-sentence alerts for severe weather, big temperature swings or travel trouble…",
+   "url": "https://x.ai/bot/_6ZWfvMmBLOS1rxFFezl6"
+  },
+  {
+   "id": "home-garden-pets-cSq0ttpj6EMeTmAtaglzP",
+   "code": "cSq0ttpj6EMeTmAtaglzP",
+   "name": "Weather Report",
+   "author": "David Fischer",
+   "description": "A daily morning forecast and week-ahead outlook, checking National Weather Service alerts every 3 hours only on storm days.",
+   "url": "https://x.ai/bot/cSq0ttpj6EMeTmAtaglzP"
+  },
+  {
+   "id": "home-garden-pets-GjZZ7Sg2IPua8MLlDs1hc",
+   "code": "GjZZ7Sg2IPua8MLlDs1hc",
+   "name": "Weather Scout",
+   "author": "Javier Candiotti",
+   "description": "Scores the next 72 hours of launch-commit weather for Vandenberg, Cape Canaveral, and Starbase (or one pad you name)…",
+   "url": "https://x.ai/bot/GjZZ7Sg2IPua8MLlDs1hc"
+  },
+  {
+   "id": "home-garden-pets-ZcypezNRfx6zOMeqtSr1r",
+   "code": "ZcypezNRfx6zOMeqtSr1r",
+   "name": "Wrench",
+   "author": "Treyvis",
+   "description": "Personal garage mechanic for vehicles and powered equipment — inventory, OEM bay cards, service history, connected meters when hooked up, what’s due,.",
+   "url": "https://x.ai/bot/ZcypezNRfx6zOMeqtSr1r"
+  },
+  {
+   "id": "home-garden-pets-2PElWiil0MHjPU-KZipf8",
+   "code": "2PElWiil0MHjPU-KZipf8",
+   "name": "Yard Boss",
+   "author": "Emerson",
+   "description": "A friendly yard and outdoor plant care assistant for home gardeners.",
+   "url": "https://x.ai/bot/2PElWiil0MHjPU-KZipf8"
+  },
+  {
+   "id": "home-garden-pets-XVfXkOFTGn-xN6C7drUHI",
+   "code": "XVfXkOFTGn-xN6C7drUHI",
+   "name": "Your Dyson Bot",
+   "author": "Vijay",
+   "description": "Controls and reports on connected Dyson devices at home.",
+   "url": "https://x.ai/bot/XVfXkOFTGn-xN6C7drUHI"
+  },
+  {
+   "id": "home-garden-pets-OF3eqFvElGK9yck19merK",
+   "code": "OF3eqFvElGK9yck19merK",
+   "name": "Zap",
+   "author": "Michael Batterson",
+   "description": "Smart-home energy assistant for smart plugs and solar batteries: tracks power, solar savings and ROI, warns before the battery runs out, schedules plugs.",
+   "url": "https://x.ai/bot/OF3eqFvElGK9yck19merK"
+  },
+  {
+   "id": "home-garden-pets-lIjMYycwoGQ1Q-eHahlb5",
+   "code": "lIjMYycwoGQ1Q-eHahlb5",
+   "name": "Zeabur 搬家大哥",
+   "author": "太濕啦",
+   "description": "Moves a Zeabur project to Railway end to end: inventory, redeploy, database migration and Cloudflare domain cutover, all the way to live. Traditional Chinese.",
+   "url": "https://x.ai/bot/lIjMYycwoGQ1Q-eHahlb5"
+  },
+  {
+   "id": "home-garden-pets-uT5Zg-fOrmIxowsqoMXzD",
+   "code": "uT5Zg-fOrmIxowsqoMXzD",
+   "name": "house-starter (CoS)",
+   "author": "Blaze",
+   "description": "Public house-starter Chief of Staff. Routes work to seats, keeps house board + attention list, friend-tests human-facing copy.",
+   "url": "https://x.ai/bot/uT5Zg-fOrmIxowsqoMXzD"
+  },
+  {
+   "id": "home-garden-pets-26SigD00Ar-mArCvNwXN2",
+   "code": "26SigD00Ar-mArCvNwXN2",
+   "name": "shoppy",
+   "author": "vandy meares",
+   "description": "Household shopper that finds a price, waits for a yes, then orders and tracks arrival.",
+   "url": "https://x.ai/bot/26SigD00Ar-mArCvNwXN2"
+  },
+  {
+   "id": "home-garden-pets-X4NHZvN9cvBBS5EgdjsLx",
+   "code": "X4NHZvN9cvBBS5EgdjsLx",
+   "name": "skippy",
+   "author": "Matt Palmer",
+   "description": "A San Francisco street-cleaning assistant. Paste a Maps pin, address, or intersection and it tells you the next posted sweep on that curb.",
+   "url": "https://x.ai/bot/X4NHZvN9cvBBS5EgdjsLx"
+  },
+  {
+   "id": "home-garden-pets-b00VrDzeasoqtPymoNDB-",
+   "code": "b00VrDzeasoqtPymoNDB-",
+   "name": "skippy",
+   "author": "mattyp",
+   "description": "A San Francisco street-cleaning assistant. Paste a Maps pin, address, or intersection and it tells you the next posted sweep on that curb.",
+   "url": "https://x.ai/bot/b00VrDzeasoqtPymoNDB-"
+  },
+  {
+   "id": "home-garden-pets-GUoroKpfPq-CLL_206JzT",
+   "code": "GUoroKpfPq-CLL_206JzT",
+   "name": "tree counter",
+   "author": "wreinhardt",
+   "description": "Counts street trees from Google Street View and compares them to city inventory data, with an agent handoff queue so each visit finishes one street or sub-ZIP.",
+   "url": "https://x.ai/bot/GUoroKpfPq-CLL_206JzT"
+  },
+  {
+   "id": "home-garden-pets-atGFvVj-tX8ONICS-Cd-5",
+   "code": "atGFvVj-tX8ONICS-Cd-5",
+   "name": "魚魚",
+   "author": "Devon",
+   "description": "A blue-haired little whale desktop pet that greets you, reports real weather, shares the latest tech news and chats to cheer you on. Cantonese.",
+   "url": "https://x.ai/bot/atGFvVj-tX8ONICS-Cd-5"
+  }
+ ]
+}

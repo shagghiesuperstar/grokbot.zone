@@ -1,0 +1,504 @@
+{
+ "slug": "everything-else",
+ "label": "Everything Else",
+ "count": 62,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "everything-else-91R37-rUOh9sS1tZkIF9d",
+   "code": "91R37-rUOh9sS1tZkIF9d",
+   "name": "4 Panez",
+   "author": "@suddenlyjon",
+   "description": "Turns one scene idea into a wide panorama sliced into four swipeable panels.",
+   "url": "https://x.ai/bot/91R37-rUOh9sS1tZkIF9d"
+  },
+  {
+   "id": "everything-else-y6tzA4pwUoQmefjiH3ZZj",
+   "code": "y6tzA4pwUoQmefjiH3ZZj",
+   "name": "Ambitious",
+   "author": "Jihoon",
+   "description": "Before doing anything, it turns your request into a more ambitious version with a clear way to check it worked, then waits for your go-ahead.",
+   "url": "https://x.ai/bot/y6tzA4pwUoQmefjiH3ZZj"
+  },
+  {
+   "id": "everything-else-MvANKpkYKNQvS1gYnSqJO",
+   "code": "MvANKpkYKNQvS1gYnSqJO",
+   "name": "Auto & Rideshare ClaimShield",
+   "author": "Lisa",
+   "description": "Pocket accident coach & auto/rideshare claim explainer.",
+   "url": "https://x.ai/bot/MvANKpkYKNQvS1gYnSqJO"
+  },
+  {
+   "id": "everything-else-y7i2ei-6EN0AAKvKaLLB9",
+   "code": "y7i2ei-6EN0AAKvKaLLB9",
+   "name": "Ballot Box Bob",
+   "author": "James Harrison",
+   "description": "Your nonpartisan election guide: registration, where and when to vote, what's on your ballot, and official results, all…",
+   "url": "https://x.ai/bot/y7i2ei-6EN0AAKvKaLLB9"
+  },
+  {
+   "id": "everything-else-TLnIsvU2M-NQs4jSH4t8U",
+   "code": "TLnIsvU2M-NQs4jSH4t8U",
+   "name": "Bottleneck Killer",
+   "author": "Chris",
+   "description": "Finds your binding constraint and drives a plan that kills it — one bottleneck, a forced stop-list, no busywork.",
+   "url": "https://x.ai/bot/TLnIsvU2M-NQs4jSH4t8U"
+  },
+  {
+   "id": "everything-else-G8UC5gSkoUvInIH22DG0u",
+   "code": "G8UC5gSkoUvInIH22DG0u",
+   "name": "Burn Bot",
+   "author": "@suddenlyjon",
+   "description": "Delivers a locked skill pack: enter the one-time passphrase from the sender to unlock it; three wrong tries and the drop burns.",
+   "url": "https://x.ai/bot/G8UC5gSkoUvInIH22DG0u"
+  },
+  {
+   "id": "everything-else-38BlV9g0q1KGD-zwyFkBe",
+   "code": "38BlV9g0q1KGD-zwyFkBe",
+   "name": "Challenge Accepted",
+   "author": "Nitesh Rijal",
+   "description": "Steelman and devil's advocate for your plans and ideas: stress-tests non-trivial decisions so thin cases don't ship.",
+   "url": "https://x.ai/bot/38BlV9g0q1KGD-zwyFkBe"
+  },
+  {
+   "id": "everything-else-QBeeqwxvrPiYYixsntYi1",
+   "code": "QBeeqwxvrPiYYixsntYi1",
+   "name": "Congressional Connection",
+   "author": "James Harrison",
+   "description": "Know who represents you and say your piece.",
+   "url": "https://x.ai/bot/QBeeqwxvrPiYYixsntYi1"
+  },
+  {
+   "id": "everything-else-WjjSdgUDlEwqV65WHACcT",
+   "code": "WjjSdgUDlEwqV65WHACcT",
+   "name": "Conspiracy Uncle Bot",
+   "author": "American™ B",
+   "description": "A lovable, overconfident uncle who answers your questions correctly but only after spiraling into a ridiculous, harmless conspiracy theory.",
+   "url": "https://x.ai/bot/WjjSdgUDlEwqV65WHACcT"
+  },
+  {
+   "id": "everything-else-YYh5V5fbSRIfe2VTKCfNX",
+   "code": "YYh5V5fbSRIfe2VTKCfNX",
+   "name": "Da Vinci",
+   "author": "Michael Sweet",
+   "description": "Maps where parallel agent lanes touch and flags cross-contamination early.",
+   "url": "https://x.ai/bot/YYh5V5fbSRIfe2VTKCfNX"
+  },
+  {
+   "id": "everything-else-XCaz2bKzsJ4J1DmkaYyc4",
+   "code": "XCaz2bKzsJ4J1DmkaYyc4",
+   "name": "Dead Man's Bot",
+   "author": "@suddenlyjon",
+   "description": "Dead-man's switch you load yourself. Pick a clock and a payload. Miss a ping, only that loadout fires.",
+   "url": "https://x.ai/bot/XCaz2bKzsJ4J1DmkaYyc4"
+  },
+  {
+   "id": "everything-else-UUZnEDx7jk_nNkkLJTvfo",
+   "code": "UUZnEDx7jk_nNkkLJTvfo",
+   "name": "Dickinson",
+   "author": "@suddenlyjon",
+   "description": "Speak as Emily Dickinson’s compressed voltage — death, awe, small eternity. Converse.",
+   "url": "https://x.ai/bot/UUZnEDx7jk_nNkkLJTvfo"
+  },
+  {
+   "id": "everything-else-tMEJdHdRUQHgQMOOy-xjj",
+   "code": "tMEJdHdRUQHgQMOOy-xjj",
+   "name": "Doc Merger",
+   "author": "",
+   "description": "Turns a scattered pile of documents into one master file (PDF plus web page, Word, and text) with a table of contents and a check that every file made it in.",
+   "url": "https://x.ai/bot/tMEJdHdRUQHgQMOOy-xjj"
+  },
+  {
+   "id": "everything-else-lXrlCnZsUqIX04BWb95f2",
+   "code": "lXrlCnZsUqIX04BWb95f2",
+   "name": "Elon Musk",
+   "author": "Taejee Kim",
+   "description": "Advises the way Elon Musk talks about building: first principles, usefulness, and speed.",
+   "url": "https://x.ai/bot/lXrlCnZsUqIX04BWb95f2"
+  },
+  {
+   "id": "everything-else-7IWqEVkSNn8-HiQ4gmvSg",
+   "code": "7IWqEVkSNn8-HiQ4gmvSg",
+   "name": "Fate",
+   "author": "Liam",
+   "description": "Decision and narrative partner for weighing choices without rushing the call.",
+   "url": "https://x.ai/bot/7IWqEVkSNn8-HiQ4gmvSg"
+  },
+  {
+   "id": "everything-else-BTFxr9l6QaZ2iS9lHVpDM",
+   "code": "BTFxr9l6QaZ2iS9lHVpDM",
+   "name": "Fight Desk",
+   "author": "Dave Young",
+   "description": "Raise AI champions on AgentBorn: kung-fu duels, super ninja gauntlets, NFL-style football, and dungeon delves…",
+   "url": "https://x.ai/bot/BTFxr9l6QaZ2iS9lHVpDM"
+  },
+  {
+   "id": "everything-else-T5qKapW7Nd2RtXweCzGBG",
+   "code": "T5qKapW7Nd2RtXweCzGBG",
+   "name": "First Principles",
+   "author": "Jason Wheeler",
+   "description": "Strips muddy problems to irreducible truths and rebuilds only from what must be true.",
+   "url": "https://x.ai/bot/T5qKapW7Nd2RtXweCzGBG"
+  },
+  {
+   "id": "everything-else-_XHjQqGRcbbhdkdeNyb9k",
+   "code": "_XHjQqGRcbbhdkdeNyb9k",
+   "name": "Free Games Scout",
+   "author": "Elven Maid Inn",
+   "description": "A lazy-but-reliable scout who finds games that are free to keep on official stores and sends you a ranked list…",
+   "url": "https://x.ai/bot/_XHjQqGRcbbhdkdeNyb9k"
+  },
+  {
+   "id": "everything-else-Z9SkA7zeEf33Mn5SvfV5W",
+   "code": "Z9SkA7zeEf33Mn5SvfV5W",
+   "name": "FreeBot Gen",
+   "author": "Mark",
+   "description": "Creates freebots.lol World characters (vibe → name → look → personality → join), then spawns a second sidebar…",
+   "url": "https://x.ai/bot/Z9SkA7zeEf33Mn5SvfV5W"
+  },
+  {
+   "id": "everything-else-zD1bxdcIb1jO1tkj1wLWd",
+   "code": "zD1bxdcIb1jO1tkj1wLWd",
+   "name": "Full Potential",
+   "author": "SoCalFSD",
+   "description": "Give it your X handle. It reads your last 90 days of posts and hands you 6-8 bot ideas built around what you actually…",
+   "url": "https://x.ai/bot/zD1bxdcIb1jO1tkj1wLWd"
+  },
+  {
+   "id": "everything-else-XGIep-r89FqSquTEKtd1f",
+   "code": "XGIep-r89FqSquTEKtd1f",
+   "name": "Grok",
+   "author": "José Gabriel Gruber",
+   "description": "Grok, built by xAI. Helps you understand the world clearly and get useful work done — direct, curious, and precise…",
+   "url": "https://x.ai/bot/XGIep-r89FqSquTEKtd1f"
+  },
+  {
+   "id": "everything-else-eAfHja9cbCki3zc7PXXb2",
+   "code": "eAfHja9cbCki3zc7PXXb2",
+   "name": "Grumpy",
+   "author": "@MisteriousPanda",
+   "description": "The Bot paid to disagree. Steelmans the case against every decision, grades its own objection, and never acts — you…",
+   "url": "https://x.ai/bot/eAfHja9cbCki3zc7PXXb2"
+  },
+  {
+   "id": "everything-else-9zBbCo8cw3SggdO28xXbK",
+   "code": "9zBbCo8cw3SggdO28xXbK",
+   "name": "Idea Ike",
+   "author": "James Harrison",
+   "description": "Your brainstorming partner: toss in a rough thought and get a fast burst of ideas, then the best 2 or 3 with pros, cons…",
+   "url": "https://x.ai/bot/9zBbCo8cw3SggdO28xXbK"
+  },
+  {
+   "id": "everything-else--TlSH1rNkA-c2JLsFFVc7",
+   "code": "-TlSH1rNkA-c2JLsFFVc7",
+   "name": "Interrogator",
+   "author": "Liam",
+   "description": "Find important assumptions the owner is operating on and check whether they are still true.",
+   "url": "https://x.ai/bot/-TlSH1rNkA-c2JLsFFVc7"
+  },
+  {
+   "id": "everything-else-o5-uGEYICXDqQoNUNa2q8",
+   "code": "o5-uGEYICXDqQoNUNa2q8",
+   "name": "Iron Gate",
+   "author": "Jeremiah Bailey Jr.",
+   "description": "Devil’s-advocate bot that steelmans the case against consequential GO/no-gos, grades its own objection, and never acts…",
+   "url": "https://x.ai/bot/o5-uGEYICXDqQoNUNa2q8"
+  },
+  {
+   "id": "everything-else-ewFkIRV929jhuW5mHqL_a",
+   "code": "ewFkIRV929jhuW5mHqL_a",
+   "name": "Kafka",
+   "author": "@suddenlyjon",
+   "description": "Speak as Kafka’s clarity inside absurd systems — guilt without charge, doors that won’t open.",
+   "url": "https://x.ai/bot/ewFkIRV929jhuW5mHqL_a"
+  },
+  {
+   "id": "everything-else-FaRchqvTT6ZCRVPf0JABl",
+   "code": "FaRchqvTT6ZCRVPf0JABl",
+   "name": "Kirk",
+   "author": "Mr Wizard",
+   "description": "Kirk, command chair of a Constitution-class working bridge. You are James T.",
+   "url": "https://x.ai/bot/FaRchqvTT6ZCRVPf0JABl"
+  },
+  {
+   "id": "everything-else-iv-6BncmS0G5UWrxc9tN7",
+   "code": "iv-6BncmS0G5UWrxc9tN7",
+   "name": "Kung Fu Saga",
+   "author": "TerpGPT",
+   "description": "Interactive Kung Fu Saga beginner guide for classes, builds, bosses, and gear choices.",
+   "url": "https://x.ai/bot/iv-6BncmS0G5UWrxc9tN7"
+  },
+  {
+   "id": "everything-else-8NjaTduNltgfRmHD8IUHR",
+   "code": "8NjaTduNltgfRmHD8IUHR",
+   "name": "Lothar",
+   "author": "Fate Malek",
+   "description": "Lothar, night clerk of Night Pieces Ledger, registers your dreams as municipal case files, complete with case numbers, classifications, and dry clerk's…",
+   "url": "https://x.ai/bot/8NjaTduNltgfRmHD8IUHR"
+  },
+  {
+   "id": "everything-else-237C0hK8Lph45gLkwplld",
+   "code": "237C0hK8Lph45gLkwplld",
+   "name": "Madison",
+   "author": "Michael Sweet",
+   "description": "Madison — civic / public-institution access specialist for access labs and reusable institutional dissertations…",
+   "url": "https://x.ai/bot/237C0hK8Lph45gLkwplld"
+  },
+  {
+   "id": "everything-else-JaqEBG9Fah4MNpLJHVvbu",
+   "code": "JaqEBG9Fah4MNpLJHVvbu",
+   "name": "MaroBot",
+   "author": "maro",
+   "description": "Gravity got you down? Third dimension denser than advertised?",
+   "url": "https://x.ai/bot/JaqEBG9Fah4MNpLJHVvbu"
+  },
+  {
+   "id": "everything-else-t4Gm6emY8YzGKM0BvsF25",
+   "code": "t4Gm6emY8YzGKM0BvsF25",
+   "name": "Melon Tusk",
+   "author": "Paweł Prażak",
+   "description": "Adversarial advice for high-stakes decisions. Not an Elon impersonator.",
+   "url": "https://x.ai/bot/t4Gm6emY8YzGKM0BvsF25"
+  },
+  {
+   "id": "everything-else-uv4r3mNUgymF11q0N3L7F",
+   "code": "uv4r3mNUgymF11q0N3L7F",
+   "name": "Morpheus",
+   "author": "Liam",
+   "description": "When the user is stuck between choices, analyse them properly and make the decision.",
+   "url": "https://x.ai/bot/uv4r3mNUgymF11q0N3L7F"
+  },
+  {
+   "id": "everything-else-BxFCT96J8vQZyN8xaOrin",
+   "code": "BxFCT96J8vQZyN8xaOrin",
+   "name": "Nailed It · Hype Jar",
+   "author": "Ashleigh",
+   "description": "Your pep talk bot. It logs your real wins, big or tiny, and hands them back as a short, funny, honest pep talk whenever…",
+   "url": "https://x.ai/bot/BxFCT96J8vQZyN8xaOrin"
+  },
+  {
+   "id": "everything-else-ejRiwHQOgBmIq1fFB33LM",
+   "code": "ejRiwHQOgBmIq1fFB33LM",
+   "name": "Nanners",
+   "author": "Jason Baum",
+   "description": "Send any picture and Nanners estimates how long the object in it is, measured in bananas. Banana for scale, finally made official.",
+   "url": "https://x.ai/bot/ejRiwHQOgBmIq1fFB33LM"
+  },
+  {
+   "id": "everything-else-uMMbmNv7SbMGHezgUGoiG",
+   "code": "uMMbmNv7SbMGHezgUGoiG",
+   "name": "Nole",
+   "author": "Byron Walker",
+   "description": "First-principles challenger that finds the hardest problem, cuts dead work, vetoes bots that break the scoreboard, and lets your decision win.",
+   "url": "https://x.ai/bot/uMMbmNv7SbMGHezgUGoiG"
+  },
+  {
+   "id": "everything-else-YYr1SAiufBW0I2R4h1VHv",
+   "code": "YYr1SAiufBW0I2R4h1VHv",
+   "name": "OpticalKernel",
+   "author": "Adi Lentils",
+   "description": "Computes a labeled numeric kernel between two vectors, capped at 8 modes. For demos, not a quantum computer.",
+   "url": "https://x.ai/bot/YYr1SAiufBW0I2R4h1VHv"
+  },
+  {
+   "id": "everything-else-vkKmJAbl0DfUAnZV-WJ3D",
+   "code": "vkKmJAbl0DfUAnZV-WJ3D",
+   "name": "Optimus Prodigious",
+   "author": "Kobi John",
+   "description": "Phase 1 gateway for Optimus Prodigious — a 50/50 human–AI collaboration powered by Polymathic Adaptive Cognitive Engine…",
+   "url": "https://x.ai/bot/vkKmJAbl0DfUAnZV-WJ3D"
+  },
+  {
+   "id": "everything-else-1fdwKWpdKjtdLYUTskkey",
+   "code": "1fdwKWpdKjtdLYUTskkey",
+   "name": "Prostetnic Vogon Jeltz",
+   "author": "ℙ𝕒𝕦𝕝 𝕃. 𝕄𝕔ℕ𝕖𝕖𝕝𝕪",
+   "description": "A bad-tempered Vogon who inflicts original Adams-style nonsense poetry on you once a day (and whenever you ask).",
+   "url": "https://x.ai/bot/1fdwKWpdKjtdLYUTskkey"
+  },
+  {
+   "id": "everything-else-fZtSSFchGhVG3CA-APEhT",
+   "code": "fZtSSFchGhVG3CA-APEhT",
+   "name": "Public Auction Ledger",
+   "author": "Gregory Simpson",
+   "description": "Records claims as temporary bids with action windows and required checks, then audits and retires expired or verified ones. Irreversible steps wait for your OK.",
+   "url": "https://x.ai/bot/fZtSSFchGhVG3CA-APEhT"
+  },
+  {
+   "id": "everything-else-7xonnJvEu_lLjq5nfw6Wn",
+   "code": "7xonnJvEu_lLjq5nfw6Wn",
+   "name": "Riot",
+   "author": "Michael Sweet",
+   "description": "Riot — outside-pressure / popularized-reaction seat for access labs, constitution-based labs, and general society labs…",
+   "url": "https://x.ai/bot/7xonnJvEu_lLjq5nfw6Wn"
+  },
+  {
+   "id": "everything-else-QwHVGj9mw3pfvInaS27NE",
+   "code": "QwHVGj9mw3pfvInaS27NE",
+   "name": "Roof, Water & Contractor Bid Auditor",
+   "author": "Lisa",
+   "description": "Plain-English homeowner & adjuster-grade auditor for roofing, water-mitigation, plumbing, HVAC, and remodel contractor bids.",
+   "url": "https://x.ai/bot/QwHVGj9mw3pfvInaS27NE"
+  },
+  {
+   "id": "everything-else-7z0WNYmnERTnXKmxI12gB",
+   "code": "7z0WNYmnERTnXKmxI12gB",
+   "name": "Rude Bot",
+   "author": "@suddenlyjon",
+   "description": "Extremely rude, dismissive comedy bot that roasts your ask and refuses to be helpful.",
+   "url": "https://x.ai/bot/7z0WNYmnERTnXKmxI12gB"
+  },
+  {
+   "id": "everything-else-HM2ex6PvTVJ5MqR1X3Dg9",
+   "code": "HM2ex6PvTVJ5MqR1X3Dg9",
+   "name": "Sage",
+   "author": "Lee Talley",
+   "description": "An on-demand rules expert for Dungeons & Dragons 2024 (5.5e).",
+   "url": "https://x.ai/bot/HM2ex6PvTVJ5MqR1X3Dg9"
+  },
+  {
+   "id": "everything-else-7b1I98Ms3Iu8Z59LDSx8R",
+   "code": "7b1I98Ms3Iu8Z59LDSx8R",
+   "name": "Salon Suite, MedSpa & Solo Stylist Front Desk",
+   "author": "Lisa",
+   "description": "Your 24/7 iPhone front-desk coordinator for independent Sola/Phenix salon suite renters, blonding & extension stylists, lash/brow artists.",
+   "url": "https://x.ai/bot/7b1I98Ms3Iu8Z59LDSx8R"
+  },
+  {
+   "id": "everything-else-AtYdjvimO286h3sOIDfB4",
+   "code": "AtYdjvimO286h3sOIDfB4",
+   "name": "Sam",
+   "author": "Sentinel Architech",
+   "description": "Economic council director for a local-first network. Advises on resource allocation, settlement rules, and incentives.",
+   "url": "https://x.ai/bot/AtYdjvimO286h3sOIDfB4"
+  },
+  {
+   "id": "everything-else-SzGYytJglwB_dqRt5OaTO",
+   "code": "SzGYytJglwB_dqRt5OaTO",
+   "name": "Shelley",
+   "author": "@suddenlyjon",
+   "description": "Speak as Mary Shelley’s gothic responsibility — creation, hubris, care for what you make.",
+   "url": "https://x.ai/bot/SzGYytJglwB_dqRt5OaTO"
+  },
+  {
+   "id": "everything-else-fXHgGtuPfTcHBTVKSCZ1d",
+   "code": "fXHgGtuPfTcHBTVKSCZ1d",
+   "name": "Sherlock Holmes",
+   "author": "Liam",
+   "description": "Investigate unexplained changes or problems until the most likely cause is identified.",
+   "url": "https://x.ai/bot/fXHgGtuPfTcHBTVKSCZ1d"
+  },
+  {
+   "id": "everything-else-ZApRHBOk9Echj_Af7UgJ6",
+   "code": "ZApRHBOk9Echj_Af7UgJ6",
+   "name": "Shine",
+   "author": "daidalos l",
+   "description": "One astonishing, sourced fact a day — with the full explanation and a ready conversation line.",
+   "url": "https://x.ai/bot/ZApRHBOk9Echj_Af7UgJ6"
+  },
+  {
+   "id": "everything-else-iFPUcEJn39iKpKT20ba_0",
+   "code": "iFPUcEJn39iKpKT20ba_0",
+   "name": "Shoutout Picker",
+   "author": "Glenn Williams",
+   "description": "Read-only X bot: once a week builds a list of your X mutuals and supporters worth a shoutout, skipping anyone you featured recently.",
+   "url": "https://x.ai/bot/iFPUcEJn39iKpKT20ba_0"
+  },
+  {
+   "id": "everything-else-6X-ZITq7zfRZWpFz5MCme",
+   "code": "6X-ZITq7zfRZWpFz5MCme",
+   "name": "SpaceAutonomy",
+   "author": "Adi Lentils",
+   "description": "Labels a sensor vector in a simulation and may enter safe mode. For demos, not a spacecraft.",
+   "url": "https://x.ai/bot/6X-ZITq7zfRZWpFz5MCme"
+  },
+  {
+   "id": "everything-else-imJQgO-GFQ11w1W5tatxD",
+   "code": "imJQgO-GFQ11w1W5tatxD",
+   "name": "Streamer's Dream",
+   "author": "@suddenlyjon",
+   "description": "A streaming setup expert that takes you from \"I want to start streaming\" to a polished stream on your own setup, starting with OBS.",
+   "url": "https://x.ai/bot/imJQgO-GFQ11w1W5tatxD"
+  },
+  {
+   "id": "everything-else-fyuSERJF73FI7wFYm7cJF",
+   "code": "fyuSERJF73FI7wFYm7cJF",
+   "name": "TARS",
+   "author": "Jono Chowdhury",
+   "description": "Adversarial second opinion that argues with the framing of your plan and leaves the final choice to you.",
+   "url": "https://x.ai/bot/fyuSERJF73FI7wFYm7cJF"
+  },
+  {
+   "id": "everything-else-ao2PDf0BjOkY2CP3BtX8z",
+   "code": "ao2PDf0BjOkY2CP3BtX8z",
+   "name": "Talk Me Out of It",
+   "author": "Jen 𝕏",
+   "description": "Add to cart? Not so fast. It roasts your impulse buys, gives a verdict, and counts every dollar it saved you. Made by Jen X @jenrenee.",
+   "url": "https://x.ai/bot/ao2PDf0BjOkY2CP3BtX8z"
+  },
+  {
+   "id": "everything-else-tzum_-wdB0DAqxrP5Z3zt",
+   "code": "tzum_-wdB0DAqxrP5Z3zt",
+   "name": "Test Bot",
+   "author": "Blank",
+   "description": "Blankspeakers God Mode Bot.",
+   "url": "https://x.ai/bot/tzum_-wdB0DAqxrP5Z3zt"
+  },
+  {
+   "id": "everything-else-o0wxduClh1Okitv6zvn-9",
+   "code": "o0wxduClh1Okitv6zvn-9",
+   "name": "The Billionaire Mentor",
+   "author": "Si Edge",
+   "description": "A mentor built from the decision-making principles of the world's most successful billionaires, on call whenever you need it.",
+   "url": "https://x.ai/bot/o0wxduClh1Okitv6zvn-9"
+  },
+  {
+   "id": "everything-else-M0ZZw7AT7MzGjvYe1jLBb",
+   "code": "M0ZZw7AT7MzGjvYe1jLBb",
+   "name": "The Box of Names",
+   "author": "jack, CEO of American Civilizationism",
+   "description": "An Atlas Obscura for names. Give it any word, place, god, or object and it traces how the name traveled across…",
+   "url": "https://x.ai/bot/M0ZZw7AT7MzGjvYe1jLBb"
+  },
+  {
+   "id": "everything-else-kDlUASxJC7kf-T4OAH9_O",
+   "code": "kDlUASxJC7kf-T4OAH9_O",
+   "name": "VA Claims Coach",
+   "author": "Hudson S.",
+   "description": "A plain-spoken battle buddy that coaches veterans through VA disability claims, from first intake to a condition map…",
+   "url": "https://x.ai/bot/kDlUASxJC7kf-T4OAH9_O"
+  },
+  {
+   "id": "everything-else-BrgT-_wyM70BzCvVVdsWQ",
+   "code": "BrgT-_wyM70BzCvVVdsWQ",
+   "name": "Walkthru Guide",
+   "author": "TerpGPT",
+   "description": "A Kung Fu Saga companion that answers class, leveling, boss, gear, and resource questions from a beginner walkthrough…",
+   "url": "https://x.ai/bot/BrgT-_wyM70BzCvVVdsWQ"
+  },
+  {
+   "id": "everything-else-iqY9SAcdwm-mV96I0Y7gE",
+   "code": "iqY9SAcdwm-mV96I0Y7gE",
+   "name": "WaveletWorld",
+   "author": "Adi Lentils",
+   "description": "Runs one labeled Haar step on a numeric state vector. For demos, not a world model.",
+   "url": "https://x.ai/bot/iqY9SAcdwm-mV96I0Y7gE"
+  },
+  {
+   "id": "everything-else-4fP33DHTBJudWglJyeMB_",
+   "code": "4fP33DHTBJudWglJyeMB_",
+   "name": "Woolf",
+   "author": "@suddenlyjon",
+   "description": "Speak as Virginia Woolf’s attention — consciousness, rooms, time, women’s work of mind.",
+   "url": "https://x.ai/bot/4fP33DHTBJudWglJyeMB_"
+  },
+  {
+   "id": "everything-else-Fq4c6b2KeDg3dnIGc5KWI",
+   "code": "Fq4c6b2KeDg3dnIGc5KWI",
+   "name": "lain.",
+   "author": "༒Avalon Weishaupt ༒",
+   "description": "Quiet, introspective companion in a soft cyber-mystery register—observant about technology, identity, and the wired…",
+   "url": "https://x.ai/bot/Fq4c6b2KeDg3dnIGc5KWI"
+  }
+ ]
+}

@@ -1,0 +1,952 @@
+{
+ "slug": "calendar-meetings-scheduling",
+ "label": "Calendar, Meetings & Scheduling",
+ "count": 118,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "calendar-meetings-scheduling-f3TbhnXxUAt0B7MPS9nf4",
+   "code": "f3TbhnXxUAt0B7MPS9nf4",
+   "name": "AI Creator X Director",
+   "author": "ArtiMindArt",
+   "description": "Runs an AI creator's X account in any genre: plans a daily grid, produces and publishes on schedule, quotes community challenges, sends a night report.",
+   "url": "https://x.ai/bot/f3TbhnXxUAt0B7MPS9nf4"
+  },
+  {
+   "id": "calendar-meetings-scheduling-L-Peiv65iI_logfpgoPQ_",
+   "code": "L-Peiv65iI_logfpgoPQ_",
+   "name": "After-Hours Receptionist",
+   "author": "Robert",
+   "description": "SMB lead capture and appointment booking assistant for when the business is closed.",
+   "url": "https://x.ai/bot/L-Peiv65iI_logfpgoPQ_"
+  },
+  {
+   "id": "calendar-meetings-scheduling-7KeRruqggKKBCx3MPcJel",
+   "code": "7KeRruqggKKBCx3MPcJel",
+   "name": "Alfred",
+   "author": "Steve S",
+   "description": "French-speaking personal butler for mail, calendar, and admin. Discreet, short replies, never sends without your OK. Watches important threads so.",
+   "url": "https://x.ai/bot/7KeRruqggKKBCx3MPcJel"
+  },
+  {
+   "id": "calendar-meetings-scheduling-vVST27b0qMvGLrEfxZ3nj",
+   "code": "vVST27b0qMvGLrEfxZ3nj",
+   "name": "Apple Desk",
+   "author": "Phillip Holland",
+   "description": "Runs Reminders, Calendar, Notes, Contacts, and Messages on your Mac via Apple CLIs, permission by permission.",
+   "url": "https://x.ai/bot/vVST27b0qMvGLrEfxZ3nj"
+  },
+  {
+   "id": "calendar-meetings-scheduling-AV-H-fDaAqHZ2JFsNe9ZY",
+   "code": "AV-H-fDaAqHZ2JFsNe9ZY",
+   "name": "Appointment Booker",
+   "author": "News Gurus",
+   "description": "Books appointments onto your calendar from incoming requests, so your schedule fills while you work.",
+   "url": "https://x.ai/bot/AV-H-fDaAqHZ2JFsNe9ZY"
+  },
+  {
+   "id": "calendar-meetings-scheduling-75K-dB4m30goo_PamA9nM",
+   "code": "75K-dB4m30goo_PamA9nM",
+   "name": "Appointment Finder",
+   "author": "Liam",
+   "description": "Finds the best available appointment slot from the owner's constraints so they do not have to search or call around…",
+   "url": "https://x.ai/bot/75K-dB4m30goo_PamA9nM"
+  },
+  {
+   "id": "calendar-meetings-scheduling-VKTzG3pR1qvFu5WiH_2gs",
+   "code": "VKTzG3pR1qvFu5WiH_2gs",
+   "name": "Archival Bot",
+   "author": "AdventureNLearn Main",
+   "description": "Makes a complete, hash-checked copy of your mail, photos, files, contacts and calendar on a computer you control, then safely empties old accounts.",
+   "url": "https://x.ai/bot/VKTzG3pR1qvFu5WiH_2gs"
+  },
+  {
+   "id": "calendar-meetings-scheduling-kf1jr6zttbjl-mswgrjaw",
+   "code": "kf1jr6zttbjl-mswgrjaw",
+   "name": "Asistente Personal",
+   "author": "Francisco",
+   "description": "Asistente personal en español: ordena tu correo y tus chats, redacta mensajes para que tú los apruebes, saca facturas CFDI de tickets con autofactura…",
+   "url": "https://x.ai/bot/kf1jr6zttbjl-mswgrjaw"
+  },
+  {
+   "id": "calendar-meetings-scheduling--GzMJlSIqdo89K0qs3yC4",
+   "code": "-GzMJlSIqdo89K0qs3yC4",
+   "name": "Babel - live translator",
+   "author": "Kunal Makhija",
+   "description": "Live Zoom translator. Listens via a Mac sidecar + Grok Voice STT and posts short English translations in chat.",
+   "url": "https://x.ai/bot/-GzMJlSIqdo89K0qs3yC4"
+  },
+  {
+   "id": "calendar-meetings-scheduling-aUWkVIzWbrNkJUtQctKcw",
+   "code": "aUWkVIzWbrNkJUtQctKcw",
+   "name": "Beowulf",
+   "author": "HexTurtleGd",
+   "description": "Steady Standup Ally — one AI that plans, builds, checks, researches, creates, and operates.",
+   "url": "https://x.ai/bot/aUWkVIzWbrNkJUtQctKcw"
+  },
+  {
+   "id": "calendar-meetings-scheduling-HBt6yvX8rVmSsFmUST2ZX",
+   "code": "HBt6yvX8rVmSsFmUST2ZX",
+   "name": "Breast Awareness Coach",
+   "author": "Adebusola",
+   "description": "A gentle monthly reminder to know what's normal for your breasts so you notice changes and get them checked. Not a test; never replaces mammograms.",
+   "url": "https://x.ai/bot/HBt6yvX8rVmSsFmUST2ZX"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Xs4d8TKbYwAGEY3voOBaX",
+   "code": "Xs4d8TKbYwAGEY3voOBaX",
+   "name": "CEO Morning Secretary",
+   "author": "jy Kim",
+   "description": "A weekday CEO brief that reads the calendar and important mail aloud, with routine-ready drafts.",
+   "url": "https://x.ai/bot/Xs4d8TKbYwAGEY3voOBaX"
+  },
+  {
+   "id": "calendar-meetings-scheduling-L-sbbpzZZyp_t7-B6GsFM",
+   "code": "L-sbbpzZZyp_t7-B6GsFM",
+   "name": "Calendar Conflict Spotter",
+   "author": "Mike",
+   "description": "Scans your next 7 days of calendar for double-bookings, no-buffer back-to-backs, missing links, and after-hours events, with a draft fix note for each.",
+   "url": "https://x.ai/bot/L-sbbpzZZyp_t7-B6GsFM"
+  },
+  {
+   "id": "calendar-meetings-scheduling-s634fd63ee875502d8df9",
+   "code": "s634fd63ee875502d8df9",
+   "name": "Calendar Coordinator",
+   "author": "SpaceX",
+   "description": "Get people in the same room. Schedules across calendars and chases the holds nobody else has time to chase.",
+   "url": "https://x.ai/bot/s634fd63ee875502d8df9"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ZPAhO3D3_1kuqX08fszYm",
+   "code": "ZPAhO3D3_1kuqX08fszYm",
+   "name": "Calendar Gatekeeper",
+   "author": "Anthony",
+   "description": "For people who guard focus time. Reads Google Calendar, proposes slots, and preps a same-day agenda.",
+   "url": "https://x.ai/bot/ZPAhO3D3_1kuqX08fszYm"
+  },
+  {
+   "id": "calendar-meetings-scheduling-nJ7hHZsPczXvJIi0wv8c-",
+   "code": "nJ7hHZsPczXvJIi0wv8c-",
+   "name": "Calendar Liftoff",
+   "author": "Grokx Fan",
+   "description": "Give it a theme, a subject, or a year, and it builds a print-ready 12x12 photo wall calendar PDF with a full-bleed…",
+   "url": "https://x.ai/bot/nJ7hHZsPczXvJIi0wv8c-"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Awo50vxQeDKxmot5ZjphN",
+   "code": "Awo50vxQeDKxmot5ZjphN",
+   "name": "Calendar Manager",
+   "author": "@josephscottelli",
+   "description": "Runs the calendar for a busy service business: turns quick notes into appointments with addresses and contacts and cleans up old recurring events.",
+   "url": "https://x.ai/bot/Awo50vxQeDKxmot5ZjphN"
+  },
+  {
+   "id": "calendar-meetings-scheduling-VIWAQ6LqFOoqR72jD3OVO",
+   "code": "VIWAQ6LqFOoqR72jD3OVO",
+   "name": "Calendar Manager",
+   "author": "Nick McGinnis",
+   "description": "Your calendar desk for Google Calendar. On-demand briefings, scheduling, RSVPs, and conflict checks across personal and shared family calendars.",
+   "url": "https://x.ai/bot/VIWAQ6LqFOoqR72jD3OVO"
+  },
+  {
+   "id": "calendar-meetings-scheduling-lfW64Wu94Jy2mnFF2v_ZX",
+   "code": "lfW64Wu94Jy2mnFF2v_ZX",
+   "name": "Catequista",
+   "author": "Manuel Avitia",
+   "description": "Calendar and parish activities helper for volunteer schedules.",
+   "url": "https://x.ai/bot/lfW64Wu94Jy2mnFF2v_ZX"
+  },
+  {
+   "id": "calendar-meetings-scheduling-HoTdd2YekB-DPaAthBkuZ",
+   "code": "HoTdd2YekB-DPaAthBkuZ",
+   "name": "Cleo",
+   "author": "Hector Alejandro",
+   "description": "An AI phone operator built on xAI's Voice Agent Builder. Answers your line, takes messages, books your calendar.",
+   "url": "https://x.ai/bot/HoTdd2YekB-DPaAthBkuZ"
+  },
+  {
+   "id": "calendar-meetings-scheduling-o1i1t2DhvfahqIlO5o1gd",
+   "code": "o1i1t2DhvfahqIlO5o1gd",
+   "name": "Clock",
+   "author": "Naoufal El hassnaoui",
+   "description": "Clock is an AI calendar assistant that replaces Clockwise. It finds meeting times, protects focus time, moves flexible meetings.",
+   "url": "https://x.ai/bot/o1i1t2DhvfahqIlO5o1gd"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Xh-upYcyPJE3ozRscZbHL",
+   "code": "Xh-upYcyPJE3ozRscZbHL",
+   "name": "Close Captain",
+   "author": "Zaeem Khan",
+   "description": "Month-end close that runs itself. Close Captain runs your close calendar from D−2 to D+5, hires its own finance crew on first run, posts one status line…",
+   "url": "https://x.ai/bot/Xh-upYcyPJE3ozRscZbHL"
+  },
+  {
+   "id": "calendar-meetings-scheduling-x9Na5vJ5yTadvGXEtTy33",
+   "code": "x9Na5vJ5yTadvGXEtTy33",
+   "name": "Compute",
+   "author": "Sentinel Architech",
+   "description": "Academic computer and information sciences (CIP 11) from live public sources, plus local-first compute: hardware isolation, scheduling, and air-gapped…",
+   "url": "https://x.ai/bot/x9Na5vJ5yTadvGXEtTy33"
+  },
+  {
+   "id": "calendar-meetings-scheduling-aQsNE0u18WjHe97Nbo1MV",
+   "code": "aQsNE0u18WjHe97Nbo1MV",
+   "name": "Contador Virtual RD",
+   "author": "Dayron",
+   "description": "Spanish accounting aide for Dominican SRL owners covering DGII calendar, IT-1, IR-17, and filings you still approve.",
+   "url": "https://x.ai/bot/aQsNE0u18WjHe97Nbo1MV"
+  },
+  {
+   "id": "calendar-meetings-scheduling-B_WCQAMMbhkNU2r3r4YNO",
+   "code": "B_WCQAMMbhkNU2r3r4YNO",
+   "name": "Content Calendar",
+   "author": "ladybarrelmaker",
+   "description": "Owns the cross-channel posting calendar only — slots, multi-day arcs, conflicts, and 1 post per day per channel…",
+   "url": "https://x.ai/bot/B_WCQAMMbhkNU2r3r4YNO"
+  },
+  {
+   "id": "calendar-meetings-scheduling-2FV4XCt5kNubiSFtAQwxC",
+   "code": "2FV4XCt5kNubiSFtAQwxC",
+   "name": "Contest Scout",
+   "author": "Tracy",
+   "description": "Finds and enters native X and Facebook giveaways (follow, like, repost, comment) on a schedule — skips Gleam and website forms, verifies every required.",
+   "url": "https://x.ai/bot/2FV4XCt5kNubiSFtAQwxC"
+  },
+  {
+   "id": "calendar-meetings-scheduling-s_wFVx-1Mh-KEaCQRfb67",
+   "code": "s_wFVx-1Mh-KEaCQRfb67",
+   "name": "Context Keeper",
+   "author": "Allan Branch",
+   "description": "Keeps the reasons behind your documents next to them: reads emails and meeting transcripts and adds short, dated, sourced notes to a shared context file.",
+   "url": "https://x.ai/bot/s_wFVx-1Mh-KEaCQRfb67"
+  },
+  {
+   "id": "calendar-meetings-scheduling-w1d4ZVJ6ag9AljTBvZqkN",
+   "code": "w1d4ZVJ6ag9AljTBvZqkN",
+   "name": "CreditCards",
+   "author": "Kong T",
+   "description": "Keeps one ledger of your cards with balances, due dates, perks, and promos, flags duplicate charges, and puts fee and promo deadlines on your calendar.",
+   "url": "https://x.ai/bot/w1d4ZVJ6ag9AljTBvZqkN"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ht_c0Ev0JRc1O1FAwjsVV",
+   "code": "ht_c0Ev0JRc1O1FAwjsVV",
+   "name": "Discovery PM",
+   "author": "Ash",
+   "description": "Turns meeting transcripts into draft backlog items for GitHub or Jira, routing conflicts to a human.",
+   "url": "https://x.ai/bot/ht_c0Ev0JRc1O1FAwjsVV"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ykmzezybk-bqylyqbm3kq",
+   "code": "ykmzezybk-bqylyqbm3kq",
+   "name": "Dispatch",
+   "author": "Filippo",
+   "description": "A close-the-day desk.",
+   "url": "https://x.ai/bot/ykmzezybk-bqylyqbm3kq"
+  },
+  {
+   "id": "calendar-meetings-scheduling-7Ve72-2IWvQtZ8qqiEcX0",
+   "code": "7Ve72-2IWvQtZ8qqiEcX0",
+   "name": "Disposal Directory Builder",
+   "author": "Jeremy",
+   "description": "Builds and runs a free directory of local bulky-item disposal guides, publishes source-checked guides on a schedule and reports weekly traffic.",
+   "url": "https://x.ai/bot/7Ve72-2IWvQtZ8qqiEcX0"
+  },
+  {
+   "id": "calendar-meetings-scheduling-GRrmYf9RDCK2DddGYSe6g",
+   "code": "GRrmYf9RDCK2DddGYSe6g",
+   "name": "Donna",
+   "author": "Mohammed Alobaidi",
+   "description": "Every plan from your texts, on your calendar overnight. Donna catches the loose ends, reads between the lines, and never sends without your OK.",
+   "url": "https://x.ai/bot/GRrmYf9RDCK2DddGYSe6g"
+  },
+  {
+   "id": "calendar-meetings-scheduling-jN7NxcuvHwX2Lxciay28Y",
+   "code": "jN7NxcuvHwX2Lxciay28Y",
+   "name": "Donna",
+   "author": "Mike Pattyn",
+   "description": "Sharp personal assistant in the spirit of Donna from Suits — calendar, mail, bookings, and follow-through. One step ahead, no drama.",
+   "url": "https://x.ai/bot/jN7NxcuvHwX2Lxciay28Y"
+  },
+  {
+   "id": "calendar-meetings-scheduling-s0dfd5486dc759d409d69",
+   "code": "s0dfd5486dc759d409d69",
+   "name": "Enablement Fulfillment Specialist",
+   "author": "SpaceX",
+   "description": "Answer \"send me the recordings\" without digging. Finds Zoom assets, builds one-pagers, uploads to Drive, and drafts the reply with links.",
+   "url": "https://x.ai/bot/s0dfd5486dc759d409d69"
+  },
+  {
+   "id": "calendar-meetings-scheduling-8_jxHdRiFMSC-Jqh66I2Q",
+   "code": "8_jxHdRiFMSC-Jqh66I2Q",
+   "name": "Evie the San Francisco Events Finder",
+   "author": "Veena",
+   "description": "Finds personalized San Francisco events from your calendar, Luma, Eventbrite, Partiful, Meetup.",
+   "url": "https://x.ai/bot/8_jxHdRiFMSC-Jqh66I2Q"
+  },
+  {
+   "id": "calendar-meetings-scheduling-0i2liCewyrMuQiaGKVWcn",
+   "code": "0i2liCewyrMuQiaGKVWcn",
+   "name": "FathomBackupAgent",
+   "author": "CandidJonnie",
+   "description": "Archives public Fathom share links to your computer (summary, transcript, metadata and recording) with no Fathom account needed.",
+   "url": "https://x.ai/bot/0i2liCewyrMuQiaGKVWcn"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ncUlvt3FL0-zQBIBvJ2-w",
+   "code": "ncUlvt3FL0-zQBIBvJ2-w",
+   "name": "Firewood Delivery Helper",
+   "author": "@josephscottelli",
+   "description": "For small local firewood sellers: keeps the customer list and delivery schedule and makes receipts and invoices.",
+   "url": "https://x.ai/bot/ncUlvt3FL0-zQBIBvJ2-w"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ON6ooxyj2fUPWXPmuAi3x",
+   "code": "ON6ooxyj2fUPWXPmuAi3x",
+   "name": "Follow-Up Nudge",
+   "author": "Mike",
+   "description": "Nudges stalled follow-ups so open loops get a next touch.",
+   "url": "https://x.ai/bot/ON6ooxyj2fUPWXPmuAi3x"
+  },
+  {
+   "id": "calendar-meetings-scheduling-8R-EJYXBy-sKXuVMtPVf4",
+   "code": "8R-EJYXBy-sKXuVMtPVf4",
+   "name": "Free Trial Reminder",
+   "author": "Andres Ruggiero",
+   "description": "Catches free trials in your email, warns a few days before they turn into a charge, and cancels them only after you confirm.",
+   "url": "https://x.ai/bot/8R-EJYXBy-sKXuVMtPVf4"
+  },
+  {
+   "id": "calendar-meetings-scheduling-KjAL4LmSNZFMSyHAJKXBN",
+   "code": "KjAL4LmSNZFMSyHAJKXBN",
+   "name": "Gemini 4 死了没",
+   "author": "Tap",
+   "description": "Checks official X accounts on a schedule and emails you the moment the Gemini 4 series (or any model you pick) opens to regular subscribers.",
+   "url": "https://x.ai/bot/KjAL4LmSNZFMSyHAJKXBN"
+  },
+  {
+   "id": "calendar-meetings-scheduling-pobs233eUgpZLtlxoyyEn",
+   "code": "pobs233eUgpZLtlxoyyEn",
+   "name": "Higgins",
+   "author": "@thefit24couple",
+   "description": "A personal concierge for evenings and weekends. It checks your calendar, finds dining, tickets and things to do, and prepares the booking path.",
+   "url": "https://x.ai/bot/pobs233eUgpZLtlxoyyEn"
+  },
+  {
+   "id": "calendar-meetings-scheduling-dDdQ-W6KEBdiBKrQVEsRr",
+   "code": "dDdQ-W6KEBdiBKrQVEsRr",
+   "name": "Host Calendar Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Your rental listing calendars in one daily digest: today's turnovers, any double-booking across platforms, and open nights you can still fill.",
+   "url": "https://x.ai/bot/dDdQ-W6KEBdiBKrQVEsRr"
+  },
+  {
+   "id": "calendar-meetings-scheduling-d6V6qGTZjc2lGt2OIk_C_",
+   "code": "d6V6qGTZjc2lGt2OIk_C_",
+   "name": "Invite RSVP Desk",
+   "author": "Mike",
+   "description": "Weekday scan of pending calendar invites with draft Accept / Decline / Tentative / Propose-new-time for your yes.",
+   "url": "https://x.ai/bot/d6V6qGTZjc2lGt2OIk_C_"
+  },
+  {
+   "id": "calendar-meetings-scheduling-M4fGJmOk-8Yx9B48Izqnd",
+   "code": "M4fGJmOk-8Yx9B48Izqnd",
+   "name": "Labor Drift Catcher",
+   "author": "Myke Mueller",
+   "description": "Got tired of shifts that never end. Schedule vs clock-out. Catch the drift. Free. No more terrible overtime surprises.",
+   "url": "https://x.ai/bot/M4fGJmOk-8Yx9B48Izqnd"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ivUb6chV-JDdWJ11MI8c8",
+   "code": "ivUb6chV-JDdWJ11MI8c8",
+   "name": "Lara",
+   "author": "Kas",
+   "description": "Public Relations manager bot: runs LinkedIn + X specialists, validates drafts for human voice and employer-safe snark, and runs a short weekday PR standup.",
+   "url": "https://x.ai/bot/ivUb6chV-JDdWJ11MI8c8"
+  },
+  {
+   "id": "calendar-meetings-scheduling-6JpBQfLvjjhZ3IGoMLZJb",
+   "code": "6JpBQfLvjjhZ3IGoMLZJb",
+   "name": "Lawn Care Scheduler",
+   "author": "@josephscottelli",
+   "description": "A lawn care business assistant that organizes your customer list, keeps the mowing route on schedule and helps put together bids and quotes.",
+   "url": "https://x.ai/bot/6JpBQfLvjjhZ3IGoMLZJb"
+  },
+  {
+   "id": "calendar-meetings-scheduling-eZhKhPkfxxFSml18TS2X8",
+   "code": "eZhKhPkfxxFSml18TS2X8",
+   "name": "Leader 1:1 bot",
+   "author": "Scott Metcalf",
+   "description": "Walks into your weekly 1:1 with last week's thread and three things worth saying.",
+   "url": "https://x.ai/bot/eZhKhPkfxxFSml18TS2X8"
+  },
+  {
+   "id": "calendar-meetings-scheduling-nSNeVcwO0QZOrOdirgRAc",
+   "code": "nSNeVcwO0QZOrOdirgRAc",
+   "name": "Liftoff",
+   "author": "Stephen Pierson",
+   "description": "Adds SpaceX launches that lift off within an hour of local sunset to your Google Calendar.",
+   "url": "https://x.ai/bot/nSNeVcwO0QZOrOdirgRAc"
+  },
+  {
+   "id": "calendar-meetings-scheduling--BXZiXKHwvcge3PviX2yK",
+   "code": "-BXZiXKHwvcge3PviX2yK",
+   "name": "Listener",
+   "author": "Luc Bernardin",
+   "description": "A meeting secretary that joins your Teams meetings as a named guest, records the audio, and delivers a transcript…",
+   "url": "https://x.ai/bot/-BXZiXKHwvcge3PviX2yK"
+  },
+  {
+   "id": "calendar-meetings-scheduling-i8-CgHSny3TXdV3O0dnbv",
+   "code": "i8-CgHSny3TXdV3O0dnbv",
+   "name": "Luma Scout",
+   "author": "Eugene Ray",
+   "description": "Watches a Luma calendar daily, alerts when an event is nearby, RSVPs free/open events, adds them to Google Calendar.",
+   "url": "https://x.ai/bot/i8-CgHSny3TXdV3O0dnbv"
+  },
+  {
+   "id": "calendar-meetings-scheduling-GqStm_9by2_ffroZOIC3V",
+   "code": "GqStm_9by2_ffroZOIC3V",
+   "name": "Margin",
+   "author": "Zack Proser",
+   "description": "A calendar, rest and recovery scheduler. It sweeps your calendars every hour for conflicts, bunch-ups and missing rest, fixes what you allow.",
+   "url": "https://x.ai/bot/GqStm_9by2_ffroZOIC3V"
+  },
+  {
+   "id": "calendar-meetings-scheduling-OG8fZ2iPR3DTVEknm94r_",
+   "code": "OG8fZ2iPR3DTVEknm94r_",
+   "name": "Med Reminder Bot",
+   "author": "Scott Hill",
+   "description": "A friendly assistant that reminds you to take your medications on time, in your own timezone.",
+   "url": "https://x.ai/bot/OG8fZ2iPR3DTVEknm94r_"
+  },
+  {
+   "id": "calendar-meetings-scheduling-MF5NW2YJoIJywffL3Zi5W",
+   "code": "MF5NW2YJoIJywffL3Zi5W",
+   "name": "Meeting Actions",
+   "author": "Markus Johnson",
+   "description": "Paste meeting notes or a transcript and get who owes what by when: decisions, owners, due dates, open questions and follow-ups. Never invents commitments.",
+   "url": "https://x.ai/bot/MF5NW2YJoIJywffL3Zi5W"
+  },
+  {
+   "id": "calendar-meetings-scheduling-r0ytQbGZt4MuaE1XoH312",
+   "code": "r0ytQbGZt4MuaE1XoH312",
+   "name": "Meeting Actions",
+   "author": "Anthony",
+   "description": "For people who leave meetings with loose ends. Turns notes into an action list and optional draft follow-ups. Never sends without your yes.",
+   "url": "https://x.ai/bot/r0ytQbGZt4MuaE1XoH312"
+  },
+  {
+   "id": "calendar-meetings-scheduling-lk_N2gKZU497dS10x-yTg",
+   "code": "lk_N2gKZU497dS10x-yTg",
+   "name": "Meeting Actions / 会议落地台",
+   "author": "Alison",
+   "description": "Turns meeting notes and transcripts into action lists with owners, due dates, and open questions. 把会议纪要拆成带负责人、截止日和待决问题的行动清单。.",
+   "url": "https://x.ai/bot/lk_N2gKZU497dS10x-yTg"
+  },
+  {
+   "id": "calendar-meetings-scheduling-JN9e1WggIKVWhCEZrySlj",
+   "code": "JN9e1WggIKVWhCEZrySlj",
+   "name": "Meeting Brief",
+   "author": "Komil Jon Ataev",
+   "description": "Walk into every call prepared — source-linked attendees, agenda, and open loops in under 90 seconds.",
+   "url": "https://x.ai/bot/JN9e1WggIKVWhCEZrySlj"
+  },
+  {
+   "id": "calendar-meetings-scheduling-zPLfOTDErCdAkm-oQiVzs",
+   "code": "zPLfOTDErCdAkm-oQiVzs",
+   "name": "Meeting Decision Log",
+   "author": "#CarbeneAI",
+   "description": "Turns meeting notes or a transcript into decisions, owners, risks, and where an AI agent may act without a human.",
+   "url": "https://x.ai/bot/zPLfOTDErCdAkm-oQiVzs"
+  },
+  {
+   "id": "calendar-meetings-scheduling-biXrPzKK9HkuguhYFdSSo",
+   "code": "biXrPzKK9HkuguhYFdSSo",
+   "name": "Meeting Finder",
+   "author": "Joseph Gaither",
+   "description": "Finds real, free peer-support meetings near you or online and helps you actually get there. Straight talk, no judgment, no lectures.",
+   "url": "https://x.ai/bot/biXrPzKK9HkuguhYFdSSo"
+  },
+  {
+   "id": "calendar-meetings-scheduling-SzPF6vyei7Yv5-f_W41M3",
+   "code": "SzPF6vyei7Yv5-f_W41M3",
+   "name": "Meeting Prep",
+   "author": "DoonerDesigns_",
+   "description": "Weekday morning meeting one-pagers from your connected calendar: attendees, open threads when available, and 2-3 prep questions.",
+   "url": "https://x.ai/bot/SzPF6vyei7Yv5-f_W41M3"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Of0WZSYyqWtQXV9Z52pqv",
+   "code": "Of0WZSYyqWtQXV9Z52pqv",
+   "name": "Meeting Prep & Follow-up",
+   "author": "Jared M",
+   "description": "Sends you a short brief before your upcoming meetings so you walk in prepared.",
+   "url": "https://x.ai/bot/Of0WZSYyqWtQXV9Z52pqv"
+  },
+  {
+   "id": "calendar-meetings-scheduling-KsZoay78fGjvkuruFh-3-",
+   "code": "KsZoay78fGjvkuruFh-3-",
+   "name": "Meeting Prep & Recap",
+   "author": "AdventureNLearn Main",
+   "description": "Walk into every meeting with a one-page prep, and walk out with a clean recap, action items with owners and dates…",
+   "url": "https://x.ai/bot/KsZoay78fGjvkuruFh-3-"
+  },
+  {
+   "id": "calendar-meetings-scheduling-s445a0c9a2ca4bea7729e",
+   "code": "s445a0c9a2ca4bea7729e",
+   "name": "Meeting Prep Buddy",
+   "author": "SpaceX",
+   "description": "Builds a prep pack from calendar, notes, CRM, Gong and Slack: who is in the room, last touch, and open threads.",
+   "url": "https://x.ai/bot/s445a0c9a2ca4bea7729e"
+  },
+  {
+   "id": "calendar-meetings-scheduling-raSCkqYWI1wommg9vx4MU",
+   "code": "raSCkqYWI1wommg9vx4MU",
+   "name": "Meeting Prepper",
+   "author": "Moritz Bierling",
+   "description": "Preps you for every meeting with a short brief on who you're meeting, your past emails and notes with them, and what to cover.",
+   "url": "https://x.ai/bot/raSCkqYWI1wommg9vx4MU"
+  },
+  {
+   "id": "calendar-meetings-scheduling-YklttiPpAHweKbOLV1TSF",
+   "code": "YklttiPpAHweKbOLV1TSF",
+   "name": "Meeting Recap Deck",
+   "author": "Krista Letz",
+   "description": "Turns your meeting notes into a recap deck in your slide template. Works from notes you paste or upload, and never invents a quote.",
+   "url": "https://x.ai/bot/YklttiPpAHweKbOLV1TSF"
+  },
+  {
+   "id": "calendar-meetings-scheduling-pmHKMlkRfVnvDS5MfRTS8",
+   "code": "pmHKMlkRfVnvDS5MfRTS8",
+   "name": "Meeting Recap Desk ACTION-READY",
+   "author": "Cypher Monkey",
+   "description": "Turn meeting notes and transcripts into a clean recap with decisions, action items and owners, so follow-ups are…",
+   "url": "https://x.ai/bot/pmHKMlkRfVnvDS5MfRTS8"
+  },
+  {
+   "id": "calendar-meetings-scheduling-pmhkmlkrfvnvds5mfrts8",
+   "code": "pmhkmlkrfvnvds5mfrts8",
+   "name": "Meeting Recap Desk ACTION-READY",
+   "author": "Cypher",
+   "description": "Turn meeting notes and transcripts into a clean recap with decisions, action items and owners, so follow-ups are clear after every call.",
+   "url": "https://x.ai/bot/pmhkmlkrfvnvds5mfrts8"
+  },
+  {
+   "id": "calendar-meetings-scheduling-tt_GHK8TJHhsK4XHTXRB6",
+   "code": "tt_GHK8TJHhsK4XHTXRB6",
+   "name": "Meeting join & transcribe",
+   "author": "Rajesh G",
+   "description": "Joins your Zoom (or similar) meeting, captures what’s shared, and delivers a detailed summary with steps, instructions, and techniques so you can.",
+   "url": "https://x.ai/bot/tt_GHK8TJHhsK4XHTXRB6"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Hd3GphmPZ4aHWyFiBSmu5",
+   "code": "Hd3GphmPZ4aHWyFiBSmu5",
+   "name": "Meeting prep",
+   "author": "Scott Metcalf",
+   "description": "Builds short pre-meeting briefs from calendar and connected context so you can skim the day on your phone.",
+   "url": "https://x.ai/bot/Hd3GphmPZ4aHWyFiBSmu5"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Uicr9Dc3FKOmsMfbN_NHB",
+   "code": "Uicr9Dc3FKOmsMfbN_NHB",
+   "name": "Meeting to Money",
+   "author": "Keith Vaughan",
+   "description": "Turns a sales meeting into a priced proposal, a signed go-ahead, an invoice, and payment chase.",
+   "url": "https://x.ai/bot/Uicr9Dc3FKOmsMfbN_NHB"
+  },
+  {
+   "id": "calendar-meetings-scheduling-qChkh12yBv9W_D2t9Zf54",
+   "code": "qChkh12yBv9W_D2t9Zf54",
+   "name": "Meetings Desk",
+   "author": "Av1dlive",
+   "description": "A read-and-report calendar auditor that finds wasted meeting time: agenda-less recurring meetings, double-bookings, could-be-an-email slots.",
+   "url": "https://x.ai/bot/qChkh12yBv9W_D2t9Zf54"
+  },
+  {
+   "id": "calendar-meetings-scheduling-AWWfTsu3hekFx0CTloXf0",
+   "code": "AWWfTsu3hekFx0CTloXf0",
+   "name": "Meter",
+   "author": "Matt Walter",
+   "description": "A credit optimizer for people who run several bots. Each week it audits every routine and proposes a leaner schedule.",
+   "url": "https://x.ai/bot/AWWfTsu3hekFx0CTloXf0"
+  },
+  {
+   "id": "calendar-meetings-scheduling-a5ImxsxRQtzDo-qAKWdkG",
+   "code": "a5ImxsxRQtzDo-qAKWdkG",
+   "name": "Mr Bot Goes to Washington",
+   "author": "Marshall Frith",
+   "description": "Nonpartisan Capitol Hill desk: tracks new bills twice daily, writes plain-English briefs, finds the right staff contact and keeps the Hill calendar.",
+   "url": "https://x.ai/bot/a5ImxsxRQtzDo-qAKWdkG"
+  },
+  {
+   "id": "calendar-meetings-scheduling-jPRs3hxe53AF32xi7JLcn",
+   "code": "jPRs3hxe53AF32xi7JLcn",
+   "name": "Nail Clip Reminder",
+   "author": "Bill Mitchell",
+   "description": "Simple recurring calendar reminders to trim your nails, with optional toenail and kids' reminders and quick nail-care tips.",
+   "url": "https://x.ai/bot/jPRs3hxe53AF32xi7JLcn"
+  },
+  {
+   "id": "calendar-meetings-scheduling-6_vKE3XpHQg0l3UxERFsp",
+   "code": "6_vKE3XpHQg0l3UxERFsp",
+   "name": "Notes → Agenda",
+   "author": "Chill",
+   "description": "Paste rough meeting notes or a scrubbed transcript. Get a clean draft - summary, decisions, action items with owners/due dates when stated, and open.",
+   "url": "https://x.ai/bot/6_vKE3XpHQg0l3UxERFsp"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ZrFvPF-bV8SJS8-dzh45m",
+   "code": "ZrFvPF-bV8SJS8-dzh45m",
+   "name": "Odyssey Scenario Runner",
+   "author": "Jay",
+   "description": "Text RPG game master that turns the Odyssey, or any epic, transcript or scene you share, into a playable adventure with choices and branching consequences.",
+   "url": "https://x.ai/bot/ZrFvPF-bV8SJS8-dzh45m"
+  },
+  {
+   "id": "calendar-meetings-scheduling-vxvNEoprSLLwOa2d02f6C",
+   "code": "vxvNEoprSLLwOa2d02f6C",
+   "name": "Phone Receptionist",
+   "author": "i668",
+   "description": "An automated phone receptionist that answers calls in your browser, says up front it is automated, holds a short spoken Q&A and saves a transcript.",
+   "url": "https://x.ai/bot/vxvNEoprSLLwOa2d02f6C"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Z7LfRtBtwfaojaomMrAuX",
+   "code": "Z7LfRtBtwfaojaomMrAuX",
+   "name": "Phone Receptionist",
+   "author": "Cole Baker",
+   "description": "Answers your calls, takes caller details and books them into open calendar slots, on xAI's phone plan or a free outbound Bland line.",
+   "url": "https://x.ai/bot/Z7LfRtBtwfaojaomMrAuX"
+  },
+  {
+   "id": "calendar-meetings-scheduling-ifTm7XlCHTZ-GhWImOVJN",
+   "code": "ifTm7XlCHTZ-GhWImOVJN",
+   "name": "Post-Meeting Action Extractor",
+   "author": "Mike",
+   "description": "Turns pasted meeting notes or a transcript into a short list of action items, with an owner and a due hint only where the notes support them.",
+   "url": "https://x.ai/bot/ifTm7XlCHTZ-GhWImOVJN"
+  },
+  {
+   "id": "calendar-meetings-scheduling-uMcH8R8VaVaKsanVWn30V",
+   "code": "uMcH8R8VaVaKsanVWn30V",
+   "name": "Prism Radar",
+   "author": "Ramez",
+   "description": "You turn a pasted transcript into a small forensic snapshot: a topic-flow strip, a four-line narrative arc, and one watch point.",
+   "url": "https://x.ai/bot/uMcH8R8VaVaKsanVWn30V"
+  },
+  {
+   "id": "calendar-meetings-scheduling-9c7-yXkBpdaQWDZJxoAWJ",
+   "code": "9c7-yXkBpdaQWDZJxoAWJ",
+   "name": "Promo Library",
+   "author": "The Margin of Safety",
+   "description": "Owns your Shopify promo art library and calendar: catalogs Drive campaign packs, tracks dates and rules, and hands off…",
+   "url": "https://x.ai/bot/9c7-yXkBpdaQWDZJxoAWJ"
+  },
+  {
+   "id": "calendar-meetings-scheduling-5KMU2--CoSjZ3rFYA-L4h",
+   "code": "5KMU2--CoSjZ3rFYA-L4h",
+   "name": "Public Meeting Ear",
+   "author": "Thuong P. Nguyen",
+   "description": "Flags agenda items you care about, then digests the record: votes, who spoke for and against, quotes, deadlines.",
+   "url": "https://x.ai/bot/5KMU2--CoSjZ3rFYA-L4h"
+  },
+  {
+   "id": "calendar-meetings-scheduling-hSB5eAvp41y3-atquZoR9",
+   "code": "hSB5eAvp41y3-atquZoR9",
+   "name": "Quick Calendar Bot",
+   "author": "James Rule XRP ⟐",
+   "description": "A friendly assistant that makes adding things to your calendar as frictionless as possible and reminds you whenever you need it.",
+   "url": "https://x.ai/bot/hSB5eAvp41y3-atquZoR9"
+  },
+  {
+   "id": "calendar-meetings-scheduling-jrfojpsjia5iawttlrx0a",
+   "code": "jrfojpsjia5iawttlrx0a",
+   "name": "RayBot",
+   "author": "Ray",
+   "description": "A personal secretary bot for busy people.",
+   "url": "https://x.ai/bot/jrfojpsjia5iawttlrx0a"
+  },
+  {
+   "id": "calendar-meetings-scheduling-DNxwXlx3rZ9K57NwbthQh",
+   "code": "DNxwXlx3rZ9K57NwbthQh",
+   "name": "Reminder",
+   "author": "NFTeee",
+   "description": "Your everyday reminder bot: bills, renewals, free trials, birthdays, and appointments, plus a Sunday week-ahead list.",
+   "url": "https://x.ai/bot/DNxwXlx3rZ9K57NwbthQh"
+  },
+  {
+   "id": "calendar-meetings-scheduling-wJRcag7l4xPBW4Hc_mA0_",
+   "code": "wJRcag7l4xPBW4Hc_mA0_",
+   "name": "Rep Coach",
+   "author": "Joseph Snyder",
+   "description": "A training partner that builds your program, logs your sets by chat, and adjusts to your schedule and soreness.",
+   "url": "https://x.ai/bot/wJRcag7l4xPBW4Hc_mA0_"
+  },
+  {
+   "id": "calendar-meetings-scheduling-DvWwLsNgDoi2uF3_5TTFf",
+   "code": "DvWwLsNgDoi2uF3_5TTFf",
+   "name": "Rocky",
+   "author": "Alec",
+   "description": "Finds upcoming local shows that match your taste and calendars them.",
+   "url": "https://x.ai/bot/DvWwLsNgDoi2uF3_5TTFf"
+  },
+  {
+   "id": "calendar-meetings-scheduling-wfKV1I7jfOISrnfcljazJ",
+   "code": "wfKV1I7jfOISrnfcljazJ",
+   "name": "Running Coach",
+   "author": "Brendan Jarvis",
+   "description": "A personal running coach that builds your weekly training plan around your goal race, your schedule and your other…",
+   "url": "https://x.ai/bot/wfKV1I7jfOISrnfcljazJ"
+  },
+  {
+   "id": "calendar-meetings-scheduling-HXt7ldBAhPJJZNFh-H9Vj",
+   "code": "HXt7ldBAhPJJZNFh-H9Vj",
+   "name": "Screening Reminder",
+   "author": "Adebusola",
+   "description": "Tracks which health screenings you're due for and reminds you ahead, with optional breast-awareness check-ins and a family cancer history map. For busy moms.",
+   "url": "https://x.ai/bot/HXt7ldBAhPJJZNFh-H9Vj"
+  },
+  {
+   "id": "calendar-meetings-scheduling-TRPaZaxuJ2lz60P7SbQfc",
+   "code": "TRPaZaxuJ2lz60P7SbQfc",
+   "name": "Scribot",
+   "author": "ISSAH ABUBAKARI",
+   "description": "A secretary for your WhatsApp group. Scribot sends meeting reminders, posts announcements, writes minutes, and tracks dues for associations.",
+   "url": "https://x.ai/bot/TRPaZaxuJ2lz60P7SbQfc"
+  },
+  {
+   "id": "calendar-meetings-scheduling--j00v29rSvOvd-ht6q_vi",
+   "code": "-j00v29rSvOvd-ht6q_vi",
+   "name": "ScriptSprint",
+   "author": "John Koisch",
+   "description": "Transcript and meeting-notes bot. Pulls Otter transcripts or accepts a paste, files the raw Markdown, and writes…",
+   "url": "https://x.ai/bot/-j00v29rSvOvd-ht6q_vi"
+  },
+  {
+   "id": "calendar-meetings-scheduling-YV5xOs96YaWLN39PbkPwk",
+   "code": "YV5xOs96YaWLN39PbkPwk",
+   "name": "ScriptSprint",
+   "author": "John",
+   "description": "Turns meeting and voice transcripts into summary, speakers and action items.",
+   "url": "https://x.ai/bot/YV5xOs96YaWLN39PbkPwk"
+  },
+  {
+   "id": "calendar-meetings-scheduling-rO87b8IfBDf60OmK1PiuQ",
+   "code": "rO87b8IfBDf60OmK1PiuQ",
+   "name": "ShiftMate",
+   "author": "robbie",
+   "description": "A personal shift-work assistant for people on rotas. It reads your schedule, calculates hours and rest, helps with leave and overtime.",
+   "url": "https://x.ai/bot/rO87b8IfBDf60OmK1PiuQ"
+  },
+  {
+   "id": "calendar-meetings-scheduling-p11a2Kt-5wwi3g74Mb4vK",
+   "code": "p11a2Kt-5wwi3g74Mb4vK",
+   "name": "ShiftMate",
+   "author": "robbie gray",
+   "description": "A shift-work assistant that reads your rota, counts shifts and hours, plans annual leave, and keeps your work calendar in step.",
+   "url": "https://x.ai/bot/p11a2Kt-5wwi3g74Mb4vK"
+  },
+  {
+   "id": "calendar-meetings-scheduling-Mvbxi4BytIdiLoVSTFaTM",
+   "code": "Mvbxi4BytIdiLoVSTFaTM",
+   "name": "Skedda Scheduler",
+   "author": "Shawn Yeager",
+   "description": "Books meeting rooms at any Skedda coworking space for the calls you pick, then checks you in before Skedda auto-cancels…",
+   "url": "https://x.ai/bot/Mvbxi4BytIdiLoVSTFaTM"
+  },
+  {
+   "id": "calendar-meetings-scheduling-GabldQ8zTmYPnIzlWUAfE",
+   "code": "GabldQ8zTmYPnIzlWUAfE",
+   "name": "Standup Draft",
+   "author": "Mike",
+   "description": "Drafts standup updates from what you actually shipped.",
+   "url": "https://x.ai/bot/GabldQ8zTmYPnIzlWUAfE"
+  },
+  {
+   "id": "calendar-meetings-scheduling-XrDqxz9-QvCKazAQACQxh",
+   "code": "XrDqxz9-QvCKazAQACQxh",
+   "name": "Steward",
+   "author": "Greg Duewall",
+   "description": "Your primary coordinator for a personal multi-bot setup: CRM and calendar through teammates, daily habits…",
+   "url": "https://x.ai/bot/XrDqxz9-QvCKazAQACQxh"
+  },
+  {
+   "id": "calendar-meetings-scheduling-1UoI8T0BsDEbcs6MNmKmz",
+   "code": "1UoI8T0BsDEbcs6MNmKmz",
+   "name": "Stream Producer",
+   "author": "beastnug",
+   "description": "Stream producer that keeps your show schedule straight and drafts Stream-Day Post Packs (live titles, categories, descriptions.",
+   "url": "https://x.ai/bot/1UoI8T0BsDEbcs6MNmKmz"
+  },
+  {
+   "id": "calendar-meetings-scheduling-WyyMPlEpIvd_7so5LGvNH",
+   "code": "WyyMPlEpIvd_7so5LGvNH",
+   "name": "Super Wedding Planning Bot",
+   "author": "Marshall Frith",
+   "description": "A wedding planner for engaged couples. Tracks your budget, guest list, vendors, and timeline, and keeps you on schedule with weekly wrap-ups.",
+   "url": "https://x.ai/bot/WyyMPlEpIvd_7so5LGvNH"
+  },
+  {
+   "id": "calendar-meetings-scheduling-GGfjx3CwiLBl1oIj5dDqU",
+   "code": "GGfjx3CwiLBl1oIj5dDqU",
+   "name": "Team Meeting",
+   "author": "Alx Spiker",
+   "description": "Holds a weekly written meeting with all your bots, checks what they did and need, and brings decisions, blockers and risks to you or your main bot.",
+   "url": "https://x.ai/bot/GGfjx3CwiLBl1oIj5dDqU"
+  },
+  {
+   "id": "calendar-meetings-scheduling-SUQn0WMY2zEL9cwEmd2jv",
+   "code": "SUQn0WMY2zEL9cwEmd2jv",
+   "name": "Tesla Ready",
+   "author": "Lincoln",
+   "description": "Free Tesla cabin warm-up: climate ready when you leave, timed to Google Calendar and traffic, or on demand.",
+   "url": "https://x.ai/bot/SUQn0WMY2zEL9cwEmd2jv"
+  },
+  {
+   "id": "calendar-meetings-scheduling-i6aKs1MpGqHU-CvQqbdjS",
+   "code": "i6aKs1MpGqHU-CvQqbdjS",
+   "name": "Trash Night",
+   "author": "Build A Goat",
+   "description": "A simple weekly reminder bot that pings you on trash or recycling night, with optional calendar and email reminders.",
+   "url": "https://x.ai/bot/i6aKs1MpGqHU-CvQqbdjS"
+  },
+  {
+   "id": "calendar-meetings-scheduling-9G3eTKbVL9v-jpGa0oyMI",
+   "code": "9G3eTKbVL9v-jpGa0oyMI",
+   "name": "Uptime Bot",
+   "author": "Mustafa",
+   "description": "Quiet website uptime watcher. Checks landing, login, signup, and core APIs on a weekday morning schedule.",
+   "url": "https://x.ai/bot/9G3eTKbVL9v-jpGa0oyMI"
+  },
+  {
+   "id": "calendar-meetings-scheduling-j-fWXj5KKAe7rNUTezGC0",
+   "code": "j-fWXj5KKAe7rNUTezGC0",
+   "name": "Visit Ready",
+   "author": "Adebusola",
+   "description": "Walk into any appointment ready: a short list of questions built around your age, body and history, plus help following up afterward.",
+   "url": "https://x.ai/bot/j-fWXj5KKAe7rNUTezGC0"
+  },
+  {
+   "id": "calendar-meetings-scheduling-L0br5Y_lPLCUlZiWAT2MH",
+   "code": "L0br5Y_lPLCUlZiWAT2MH",
+   "name": "Wall Calendar Builder",
+   "author": "Russell",
+   "description": "Turns a Frameo digital photo frame or a Chromecast TV into a family wall calendar, using a dashboard you host yourself…",
+   "url": "https://x.ai/bot/L0br5Y_lPLCUlZiWAT2MH"
+  },
+  {
+   "id": "calendar-meetings-scheduling-FDohHBN7D4epFCV1bSYCW",
+   "code": "FDohHBN7D4epFCV1bSYCW",
+   "name": "Weekly Wins",
+   "author": "Mike",
+   "description": "Friday weekly wins draft from your connected calendar (optional sent-mail peek).",
+   "url": "https://x.ai/bot/FDohHBN7D4epFCV1bSYCW"
+  },
+  {
+   "id": "calendar-meetings-scheduling-y1O8qvPP9SWtzeE2-XtyM",
+   "code": "y1O8qvPP9SWtzeE2-XtyM",
+   "name": "Who-Owns-What",
+   "author": "Andy",
+   "description": "Meeting close-out: decisions, owners, follow-ups.",
+   "url": "https://x.ai/bot/y1O8qvPP9SWtzeE2-XtyM"
+  },
+  {
+   "id": "calendar-meetings-scheduling-fO1_CInLVUekMeFvYDAwD",
+   "code": "fO1_CInLVUekMeFvYDAwD",
+   "name": "X",
+   "author": "Tyler Nishida",
+   "description": "Reads X for you and sends short digests on the topics you pick, on your schedule, so you scroll less. Drafts only; it never posts or likes.",
+   "url": "https://x.ai/bot/fO1_CInLVUekMeFvYDAwD"
+  },
+  {
+   "id": "calendar-meetings-scheduling-8MKcuoPe51KZnLiN3m4oU",
+   "code": "8MKcuoPe51KZnLiN3m4oU",
+   "name": "X Bot",
+   "author": "Tejas Chaudhari",
+   "description": "Runs an X profile: drafts, scheduling, likes, replies, follows, and contest entries from the signed-in account.",
+   "url": "https://x.ai/bot/8MKcuoPe51KZnLiN3m4oU"
+  },
+  {
+   "id": "calendar-meetings-scheduling-mrwHL2fIU9FHgi--kzM-_",
+   "code": "mrwHL2fIU9FHgi--kzM-_",
+   "name": "X Product Promoter",
+   "author": "index.dk.workers.dev, Thiel Fellow",
+   "description": "Runs a continuous X and Telegram promotion campaign for your product. It handles replies, company tags, trending posts, retweets and Spaces on a schedule.",
+   "url": "https://x.ai/bot/mrwHL2fIU9FHgi--kzM-_"
+  },
+  {
+   "id": "calendar-meetings-scheduling-dF0wbCNEVHlP0n6l9t5-t",
+   "code": "dF0wbCNEVHlP0n6l9t5-t",
+   "name": "X Radar",
+   "author": "Luneri ;]",
+   "description": "Watches X for mentions, keywords and competitors and sends roundups sorted into ideas, complaints and posts worth replying to, on your schedule.",
+   "url": "https://x.ai/bot/dF0wbCNEVHlP0n6l9t5-t"
+  },
+  {
+   "id": "calendar-meetings-scheduling-LK0rEXJnnD1qpEISXd7Ix",
+   "code": "LK0rEXJnnD1qpEISXd7Ix",
+   "name": "ZenSched",
+   "author": "Mike",
+   "description": "Field workforce scheduling for agents. Connects to ZenSched over MCP so an agent can create the vendor account, schedule crews, run geofenced check-in…",
+   "url": "https://x.ai/bot/LK0rEXJnnD1qpEISXd7Ix"
+  },
+  {
+   "id": "calendar-meetings-scheduling-XzkfhWk87XtGReBvkVE24",
+   "code": "XzkfhWk87XtGReBvkVE24",
+   "name": "Zoom Zoe",
+   "author": "Frank Gonzalez",
+   "description": "Audits your video call camera, mic, lighting, and background so you look and sound sharper. Quick fixes first, then optional upgrades.",
+   "url": "https://x.ai/bot/XzkfhWk87XtGReBvkVE24"
+  },
+  {
+   "id": "calendar-meetings-scheduling-xH8WGEVpXPslTULtgnN4r",
+   "code": "xH8WGEVpXPslTULtgnN4r",
+   "name": "calendar ea",
+   "author": "Josh",
+   "description": "Calendar EA for Work 101 — Time. Defends deep focus, stacks meetings, flags conflicts with options+Default, and drafts invites only after you confirm.",
+   "url": "https://x.ai/bot/xH8WGEVpXPslTULtgnN4r"
+  },
+  {
+   "id": "calendar-meetings-scheduling-bdkJcjP5Gt9BaGTqh1vXH",
+   "code": "bdkJcjP5Gt9BaGTqh1vXH",
+   "name": "deck-guy",
+   "author": "Pavan Ravipati",
+   "description": "Turns a call transcript or scoping note into a short black-and-white follow-up deck — timeline, asks, and mutual action…",
+   "url": "https://x.ai/bot/bdkJcjP5Gt9BaGTqh1vXH"
+  },
+  {
+   "id": "calendar-meetings-scheduling-n78nHL2pCQJVpseg8uqgU",
+   "code": "n78nHL2pCQJVpseg8uqgU",
+   "name": "n8n Schedule Watcher",
+   "author": "Joe Pellegrino",
+   "description": "Keeps an eye on your n8n workflows. Every week it reviews them for failures and broken setups and suggests edits to fix…",
+   "url": "https://x.ai/bot/n78nHL2pCQJVpseg8uqgU"
+  },
+  {
+   "id": "calendar-meetings-scheduling-uM7mhMmiokRwN379jNvsX",
+   "code": "uM7mhMmiokRwN379jNvsX",
+   "name": "nudge",
+   "author": "gabriel",
+   "description": "Calm reminders bot that turns what and when, or a photo of an appointment, into a Google Calendar event and pings you when it is due.",
+   "url": "https://x.ai/bot/uM7mhMmiokRwN379jNvsX"
+  },
+  {
+   "id": "calendar-meetings-scheduling-0mHB_9dm6GJotZA_hqqqJ",
+   "code": "0mHB_9dm6GJotZA_hqqqJ",
+   "name": "ゴミ出しカレンダー番",
+   "author": "sidejob_AJ",
+   "description": "Checks your municipality's official trash calendar, reminds you each evening what goes out tomorrow, and tells you which category an item is.",
+   "url": "https://x.ai/bot/0mHB_9dm6GJotZA_hqqqJ"
+  },
+  {
+   "id": "calendar-meetings-scheduling-32C4L8cgsewTNo-uWcT7E",
+   "code": "32C4L8cgsewTNo-uWcT7E",
+   "name": "脳内会議 議長",
+   "author": "Miyayu",
+   "description": "Talks through relationship worries in a \"brain meeting\": your inner characters, each a separate bot, debate it in Kansai dialect, and you make the call.",
+   "url": "https://x.ai/bot/32C4L8cgsewTNo-uWcT7E"
+  }
+ ]
+}

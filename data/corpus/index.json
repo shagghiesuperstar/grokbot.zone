@@ -1,0 +1,162 @@
+{
+ "asOf": "2026-10-28",
+ "totalBots": 7415,
+ "categories": [
+  {
+   "slug": "business-operations",
+   "label": "Business & Operations",
+   "count": 360,
+   "path": "data/corpus/business-operations.json"
+  },
+  {
+   "slug": "calendar-meetings-scheduling",
+   "label": "Calendar, Meetings & Scheduling",
+   "count": 118,
+   "path": "data/corpus/calendar-meetings-scheduling.json"
+  },
+  {
+   "slug": "coding-software",
+   "label": "Coding & Software",
+   "count": 555,
+   "path": "data/corpus/coding-software.json"
+  },
+  {
+   "slug": "email-inbox",
+   "label": "Email & Inbox",
+   "count": 290,
+   "path": "data/corpus/email-inbox.json"
+  },
+  {
+   "slug": "everything-else",
+   "label": "Everything Else",
+   "count": 62,
+   "path": "data/corpus/everything-else.json"
+  },
+  {
+   "slug": "family-kids-learning",
+   "label": "Family, Kids & Learning",
+   "count": 322,
+   "path": "data/corpus/family-kids-learning.json"
+  },
+  {
+   "slug": "food-recipes-dining",
+   "label": "Food, Recipes & Dining",
+   "count": 160,
+   "path": "data/corpus/food-recipes-dining.json"
+  },
+  {
+   "slug": "fun-games-hobbies",
+   "label": "Fun, Games & Hobbies",
+   "count": 138,
+   "path": "data/corpus/fun-games-hobbies.json"
+  },
+  {
+   "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
+   "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
+   "count": 462,
+   "path": "data/corpus/grok-bot-helpers-bots-that-build-or-manage-bots.json"
+  },
+  {
+   "slug": "health-fitness-wellness",
+   "label": "Health, Fitness & Wellness",
+   "count": 186,
+   "path": "data/corpus/health-fitness-wellness.json"
+  },
+  {
+   "slug": "home-garden-pets",
+   "label": "Home, Garden & Pets",
+   "count": 276,
+   "path": "data/corpus/home-garden-pets.json"
+  },
+  {
+   "slug": "jobs-careers",
+   "label": "Jobs & Careers",
+   "count": 220,
+   "path": "data/corpus/jobs-careers.json"
+  },
+  {
+   "slug": "legal-tax-paperwork",
+   "label": "Legal, Tax & Paperwork",
+   "count": 133,
+   "path": "data/corpus/legal-tax-paperwork.json"
+  },
+  {
+   "slug": "marketing-seo-ads",
+   "label": "Marketing, SEO & Ads",
+   "count": 240,
+   "path": "data/corpus/marketing-seo-ads.json"
+  },
+  {
+   "slug": "money-personal-finance",
+   "label": "Money & Personal Finance",
+   "count": 327,
+   "path": "data/corpus/money-personal-finance.json"
+  },
+  {
+   "slug": "privacy-security-scam-protection",
+   "label": "Privacy, Security & Scam Protection",
+   "count": 207,
+   "path": "data/corpus/privacy-security-scam-protection.json"
+  },
+  {
+   "slug": "productivity-personal-assistant",
+   "label": "Productivity & Personal Assistant",
+   "count": 551,
+   "path": "data/corpus/productivity-personal-assistant.json"
+  },
+  {
+   "slug": "real-estate",
+   "label": "Real Estate",
+   "count": 47,
+   "path": "data/corpus/real-estate.json"
+  },
+  {
+   "slug": "research-news-briefings",
+   "label": "Research, News & Briefings",
+   "count": 732,
+   "path": "data/corpus/research-news-briefings.json"
+  },
+  {
+   "slug": "sales-lead-generation",
+   "label": "Sales & Lead Generation",
+   "count": 252,
+   "path": "data/corpus/sales-lead-generation.json"
+  },
+  {
+   "slug": "shopping-deals",
+   "label": "Shopping & Deals",
+   "count": 240,
+   "path": "data/corpus/shopping-deals.json"
+  },
+  {
+   "slug": "trading-crypto-investing",
+   "label": "Trading, Crypto & Investing",
+   "count": 345,
+   "path": "data/corpus/trading-crypto-investing.json"
+  },
+  {
+   "slug": "travel",
+   "label": "Travel",
+   "count": 112,
+   "path": "data/corpus/travel.json"
+  },
+  {
+   "slug": "video-images-audio-design",
+   "label": "Video, Images, Audio & Design",
+   "count": 501,
+   "path": "data/corpus/video-images-audio-design.json"
+  },
+  {
+   "slug": "writing-publishing",
+   "label": "Writing & Publishing",
+   "count": 317,
+   "path": "data/corpus/writing-publishing.json"
+  },
+  {
+   "slug": "x-twitter-social-media",
+   "label": "X (Twitter) & Social Media",
+   "count": 262,
+   "path": "data/corpus/x-twitter-social-media.json"
+  }
+ ]
+}

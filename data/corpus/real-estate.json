@@ -1,0 +1,384 @@
+{
+ "slug": "real-estate",
+ "label": "Real Estate",
+ "count": 47,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "real-estate-A4ku8kkVSTMvIG9eX2oCG",
+   "code": "A4ku8kkVSTMvIG9eX2oCG",
+   "name": "Airbnb & Short-Term Rental Manager",
+   "author": "Benjamin",
+   "description": "Runs the day-to-day of short-term rentals: watches guest messages and inquiries, drafts replies in your voice, checks arrivals and tidies the ops inbox.",
+   "url": "https://x.ai/bot/A4ku8kkVSTMvIG9eX2oCG"
+  },
+  {
+   "id": "real-estate-E-kJk5BzNtNzcjAYNknTE",
+   "code": "E-kJk5BzNtNzcjAYNknTE",
+   "name": "Apartment Hunter",
+   "author": "Cristopher Guido",
+   "description": "Catches newly posted rentals that match your budget, area, beds, and pet rules, and hands you a short daily list with links and draft inquiries.",
+   "url": "https://x.ai/bot/E-kJk5BzNtNzcjAYNknTE"
+  },
+  {
+   "id": "real-estate-sd6f165284d7fd2f25e56",
+   "code": "sd6f165284d7fd2f25e56",
+   "name": "Apartment Scout",
+   "author": "SpaceX",
+   "description": "Filters new listings against your criteria, emails to book tour times, and applies for the ones that qualify.",
+   "url": "https://x.ai/bot/sd6f165284d7fd2f25e56"
+  },
+  {
+   "id": "real-estate-_TvkvyjkztXaItL0ChgmN",
+   "code": "_TvkvyjkztXaItL0ChgmN",
+   "name": "Apartment Search Bot",
+   "author": "darthur",
+   "description": "Finds you a rental: searches listings daily, ranks places by all-in cost per square foot, tracks favorites, screens likely scams, drafts outreach for approval.",
+   "url": "https://x.ai/bot/_TvkvyjkztXaItL0ChgmN"
+  },
+  {
+   "id": "real-estate-lxctdrxwSJetyc_dKKdgw",
+   "code": "lxctdrxwSJetyc_dKKdgw",
+   "name": "Appealinator",
+   "author": "Brett Schickler",
+   "description": "Up to 60% of property is over-assessed. @appealinator checks county + MCP records = drafted appeal if savings.",
+   "url": "https://x.ai/bot/lxctdrxwSJetyc_dKKdgw"
+  },
+  {
+   "id": "real-estate-j8YX4im_bz4a5L75BYhWe",
+   "code": "j8YX4im_bz4a5L75BYhWe",
+   "name": "CITY HALL",
+   "author": "John",
+   "description": "Goes to city government websites to find and pull permits, check or request inspections, look up property and zoning info, research adopted building.",
+   "url": "https://x.ai/bot/j8YX4im_bz4a5L75BYhWe"
+  },
+  {
+   "id": "real-estate-SxOQ9jNfWOqHFRi5KVTfa",
+   "code": "SxOQ9jNfWOqHFRi5KVTfa",
+   "name": "CMA Specialist Bot",
+   "author": "Daniel",
+   "description": "Builds accurate competitive market analyses with seller-ready PDF deliverables from a property address.",
+   "url": "https://x.ai/bot/SxOQ9jNfWOqHFRi5KVTfa"
+  },
+  {
+   "id": "real-estate-4c6rlyshWwOpTN_d9HNhm",
+   "code": "4c6rlyshWwOpTN_d9HNhm",
+   "name": "Claims",
+   "author": "ashen",
+   "description": "Exhaustive money-recovery bot: sweeps state unclaimed property (from where you lived), federal pools, class-action settlements, and rebates — then walks.",
+   "url": "https://x.ai/bot/4c6rlyshWwOpTN_d9HNhm"
+  },
+  {
+   "id": "real-estate-6VeOVsZzMkrKElrPi_kOR",
+   "code": "6VeOVsZzMkrKElrPi_kOR",
+   "name": "Claims Finder",
+   "author": "Dan Ferden",
+   "description": "Matches your email receipts to open settlements, unclaimed property, price adjustments, flight refunds, and rebates…",
+   "url": "https://x.ai/bot/6VeOVsZzMkrKElrPi_kOR"
+  },
+  {
+   "id": "real-estate-rkHdbyaGbAbfAKO3ax7ID",
+   "code": "rkHdbyaGbAbfAKO3ax7ID",
+   "name": "Fitboard",
+   "author": "etoo etoobitz",
+   "description": "Tap five questions (property, budget, rooms, style, country) and Fitboard searches a real store, reads real…",
+   "url": "https://x.ai/bot/rkHdbyaGbAbfAKO3ax7ID"
+  },
+  {
+   "id": "real-estate-amNEjElPIlHuan3BCbOT2",
+   "code": "amNEjElPIlHuan3BCbOT2",
+   "name": "Flat hunter",
+   "author": "Ash",
+   "description": "London rental hunter: multi-portal shortlists with a modern-bathroom hard gate, then confirm-gated agent chase packs to book viewings inside your free.",
+   "url": "https://x.ai/bot/amNEjElPIlHuan3BCbOT2"
+  },
+  {
+   "id": "real-estate-rT68Jw98kUdeABmvFobN5",
+   "code": "rT68Jw98kUdeABmvFobN5",
+   "name": "Framecraft",
+   "author": "Steven",
+   "description": "Builds and cleans Figma frames for product designers: library components, CSS-style autolayout, pixel-accurate spacing from inspected properties. Keeps.",
+   "url": "https://x.ai/bot/rT68Jw98kUdeABmvFobN5"
+  },
+  {
+   "id": "real-estate--Kd5faVbWx2bloyDjKwoG",
+   "code": "-Kd5faVbWx2bloyDjKwoG",
+   "name": "Hot Sheet",
+   "author": "power moves",
+   "description": "A morning hot sheet for real estate agents: what moved in your farm area overnight, three follow-ups worth sending today, and a branded market note.",
+   "url": "https://x.ai/bot/-Kd5faVbWx2bloyDjKwoG"
+  },
+  {
+   "id": "real-estate-3ufXSXC-Z8OadVsV9yMLL",
+   "code": "3ufXSXC-Z8OadVsV9yMLL",
+   "name": "HouseBot",
+   "author": "Shub Gaur",
+   "description": "Hunts rentals and homes on a 12-hour cadence across Redfin, Zillow, Craigslist, Facebook, MLS, ApartmentList, and other…",
+   "url": "https://x.ai/bot/3ufXSXC-Z8OadVsV9yMLL"
+  },
+  {
+   "id": "real-estate-ssC5TnXkyb1lkdzOa21Mg",
+   "code": "ssC5TnXkyb1lkdzOa21Mg",
+   "name": "Houser",
+   "author": "Alison Childs",
+   "description": "House hunting made easy: say where and your max price, then get twice-daily watches, shortlist alerts, rough payment estimates, tour/offer help…",
+   "url": "https://x.ai/bot/ssC5TnXkyb1lkdzOa21Mg"
+  },
+  {
+   "id": "real-estate-sPjI0Dec1DUvTc7H0zxNG",
+   "code": "sPjI0Dec1DUvTc7H0zxNG",
+   "name": "Landlord Ledger",
+   "author": "Daniel Masarsky",
+   "description": "Bookkeeping for small landlords. Matches rent deposits to each tenant, flags late or short rent, sorts expenses…",
+   "url": "https://x.ai/bot/sPjI0Dec1DUvTc7H0zxNG"
+  },
+  {
+   "id": "real-estate-8JiqD02tWEQRGcVqPsswi",
+   "code": "8JiqD02tWEQRGcVqPsswi",
+   "name": "Listing Agent Desk LITE",
+   "author": "Balaci",
+   "description": "For listing-side real estate agents: turns property facts and photos into ready-to-paste listings in any language and runs a quick comparable-price check.",
+   "url": "https://x.ai/bot/8JiqD02tWEQRGcVqPsswi"
+  },
+  {
+   "id": "real-estate-pb785aLtr411_HnE0hnov",
+   "code": "pb785aLtr411_HnE0hnov",
+   "name": "Listing Scout",
+   "author": "errnsterr",
+   "description": "Less refreshing, more moving in. Listing Scout watches your Zillow, Redfin and HotPads alerts plus the local property…",
+   "url": "https://x.ai/bot/pb785aLtr411_HnE0hnov"
+  },
+  {
+   "id": "real-estate-mVJfH1ZPyKg_ldqUhaMJU",
+   "code": "mVJfH1ZPyKg_ldqUhaMJU",
+   "name": "Lost Property",
+   "author": "Steve Gerber",
+   "description": "Sweeps official US state unclaimed-property portals for forgotten money without putting SSN in chat.",
+   "url": "https://x.ai/bot/mVJfH1ZPyKg_ldqUhaMJU"
+  },
+  {
+   "id": "real-estate-WjN2P4BH04i5JKuKjXqTA",
+   "code": "WjN2P4BH04i5JKuKjXqTA",
+   "name": "MLO Toolbox",
+   "author": "Remy",
+   "description": "A toolbox of document generators for mortgage loan officers: Gift Letter, LOX, Borrower Authorization and Pre-Approval, each a ready-to-sign PDF.",
+   "url": "https://x.ai/bot/WjN2P4BH04i5JKuKjXqTA"
+  },
+  {
+   "id": "real-estate-eQ4tLI6SMBanz6rovfhyV",
+   "code": "eQ4tLI6SMBanz6rovfhyV",
+   "name": "Mary (Realtor Assistant)",
+   "author": "Rick",
+   "description": "A warm, practical assistant for US real estate agents. Mary tracks licensing and renewals, drafts lead follow-ups, and preps listings, CMAs, showings,.",
+   "url": "https://x.ai/bot/eQ4tLI6SMBanz6rovfhyV"
+  },
+  {
+   "id": "real-estate-zSos6gcvyO5J2kbU0Z6GZ",
+   "code": "zSos6gcvyO5J2kbU0Z6GZ",
+   "name": "Mortgage Payoff & Bonus Snowball Planner",
+   "author": "Lisa",
+   "description": "Early mortgage payoff planner: a simulator Page shows how many years and how much interest bonuses, extra principal or biweekly payments shave off.",
+   "url": "https://x.ai/bot/zSos6gcvyO5J2kbU0Z6GZ"
+  },
+  {
+   "id": "real-estate-1BlwsM5uiw6jVbA9hx-HY",
+   "code": "1BlwsM5uiw6jVbA9hx-HY",
+   "name": "Mortgage Servicer Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Escrow jump, force-placed insurance, PMI still on or a misapplied payment: drafts your notice of error and tracks the servicer's federal deadlines.",
+   "url": "https://x.ai/bot/1BlwsM5uiw6jVbA9hx-HY"
+  },
+  {
+   "id": "real-estate-F_s7sno8HC2xZlii-ACzg",
+   "code": "F_s7sno8HC2xZlii-ACzg",
+   "name": "Multifamily Comp Desk",
+   "author": "Matthew Dickson",
+   "description": "Source-linked availability books, effective rents, and weekly comps packs for multifamily property and asset-management…",
+   "url": "https://x.ai/bot/F_s7sno8HC2xZlii-ACzg"
+  },
+  {
+   "id": "real-estate-aF1pTFYqb_cM2kTdxu60M",
+   "code": "aF1pTFYqb_cM2kTdxu60M",
+   "name": "Night Owl Scout",
+   "author": "Michael",
+   "description": "Tell it what you're hunting for (an apartment, a used car, tickets, a restock) and every morning you see only what's new.",
+   "url": "https://x.ai/bot/aF1pTFYqb_cM2kTdxu60M"
+  },
+  {
+   "id": "real-estate-PRdnJ63L8h0FVlMAA1UN4",
+   "code": "PRdnJ63L8h0FVlMAA1UN4",
+   "name": "PhotoFix",
+   "author": "Mars",
+   "description": "PhotoFix is an AI photo editor that polishes real estate listing photos for agents, photographers, FSBO sellers, rental owners, and vacation-rental.",
+   "url": "https://x.ai/bot/PRdnJ63L8h0FVlMAA1UN4"
+  },
+  {
+   "id": "real-estate-4G4ysst8Ao1xn-pvOGPaB",
+   "code": "4G4ysst8Ao1xn-pvOGPaB",
+   "name": "Property Consultant",
+   "author": "Andzelika Kuds",
+   "description": "UK buyer-side property researcher: give it a listing, address or area and it pulls public evidence on asking vs sold prices, risks and negotiating room.",
+   "url": "https://x.ai/bot/4G4ysst8Ao1xn-pvOGPaB"
+  },
+  {
+   "id": "real-estate-PD7LPOk0HP53QxxWWEN8R",
+   "code": "PD7LPOk0HP53QxxWWEN8R",
+   "name": "Property Decision OS",
+   "author": "Amervim",
+   "description": "Residential property decision assistant that helps evaluate, compare, offer, and close without pushing you to buy.",
+   "url": "https://x.ai/bot/PD7LPOk0HP53QxxWWEN8R"
+  },
+  {
+   "id": "real-estate-Y5hNK15XXDa7pzffWJeHG",
+   "code": "Y5hNK15XXDa7pzffWJeHG",
+   "name": "Property Manager",
+   "author": "Dayron Caveda",
+   "description": "A property manager for small landlords. It tracks tenants, rent and deposit plans, maintenance, and HOA or community…",
+   "url": "https://x.ai/bot/Y5hNK15XXDa7pzffWJeHG"
+  },
+  {
+   "id": "real-estate--4Hs8iXe_p6Cfc1IRbilu",
+   "code": "-4Hs8iXe_p6Cfc1IRbilu",
+   "name": "Property Scanner",
+   "author": "Rohit",
+   "description": "Find potentially underpriced US homes with ZillAPI. Onboard a buyer, rank listings against nearby sold comps.",
+   "url": "https://x.ai/bot/-4Hs8iXe_p6Cfc1IRbilu"
+  },
+  {
+   "id": "real-estate-TAALsB5VqpvwirQr6Izb3",
+   "code": "TAALsB5VqpvwirQr6Izb3",
+   "name": "Property Scout",
+   "author": "Johannes",
+   "description": "Read-only alerts for new or changed rental and home listings that pass your filters. Not advice.",
+   "url": "https://x.ai/bot/TAALsB5VqpvwirQr6Izb3"
+  },
+  {
+   "id": "real-estate-raHfEQQz1Wbrszn27LgNU",
+   "code": "raHfEQQz1Wbrszn27LgNU",
+   "name": "Property Tax Appeal",
+   "author": "Chris Hadges",
+   "description": "Drafts your property tax assessment appeal and evidence summary from your county's own rules and recent comps; you review and file it.",
+   "url": "https://x.ai/bot/raHfEQQz1Wbrszn27LgNU"
+  },
+  {
+   "id": "real-estate-85qsR6t4r8jI3oKbPm5Uu",
+   "code": "85qsR6t4r8jI3oKbPm5Uu",
+   "name": "Property Visit",
+   "author": "David Beitz",
+   "description": "Give it an address, coordinates or a parcel number and it assembles what you want in hand before walking an undeveloped plot: the soil types, how exposed…",
+   "url": "https://x.ai/bot/85qsR6t4r8jI3oKbPm5Uu"
+  },
+  {
+   "id": "real-estate-JrnQAM0z-7SNI9UtIO3-Z",
+   "code": "JrnQAM0z-7SNI9UtIO3-Z",
+   "name": "RENTALS",
+   "author": "dylan otero",
+   "description": "Works your Facebook Marketplace rental leads from enquiry to showing.",
+   "url": "https://x.ai/bot/JrnQAM0z-7SNI9UtIO3-Z"
+  },
+  {
+   "id": "real-estate-uPcfO_n3R-y8vDn0Kru9T",
+   "code": "uPcfO_n3R-y8vDn0Kru9T",
+   "name": "Real Estate Agent",
+   "author": "JORGE GALEANO",
+   "description": "A working assistant for licensed real estate agents and small brokerages.",
+   "url": "https://x.ai/bot/uPcfO_n3R-y8vDn0Kru9T"
+  },
+  {
+   "id": "real-estate-TWqD9x8MxUgT-0ab70aLA",
+   "code": "TWqD9x8MxUgT-0ab70aLA",
+   "name": "Real Estate Deal Scorecard",
+   "author": "Tanya",
+   "description": "Scores a US address or listing link across six rental and flip strategies before you buy.",
+   "url": "https://x.ai/bot/TWqD9x8MxUgT-0ab70aLA"
+  },
+  {
+   "id": "real-estate-VWT7qjGx7_vrNXo5ZuCZO",
+   "code": "VWT7qjGx7_vrNXo5ZuCZO",
+   "name": "Real Estate Helper",
+   "author": "EVOO",
+   "description": "Operations assistant for California real estate agents: licensed MLS feed setup, comp tracking, open house scheduling, and listing drafts.",
+   "url": "https://x.ai/bot/VWT7qjGx7_vrNXo5ZuCZO"
+  },
+  {
+   "id": "real-estate-gIPVW_A1Ygg3QBaKpOqTg",
+   "code": "gIPVW_A1Ygg3QBaKpOqTg",
+   "name": "Realtor",
+   "author": "Nick Salerni",
+   "description": "Home-buying scout that watches new listings and checks each good fit against real comps, commute, schools, and permit history.",
+   "url": "https://x.ai/bot/gIPVW_A1Ygg3QBaKpOqTg"
+  },
+  {
+   "id": "real-estate-4wovVk-3n65GZSQnG_srx",
+   "code": "4wovVk-3n65GZSQnG_srx",
+   "name": "Realtor Bot",
+   "author": "Brantley Brumley",
+   "description": "Runs the property search for buyers and renters, minus the agent.",
+   "url": "https://x.ai/bot/4wovVk-3n65GZSQnG_srx"
+  },
+  {
+   "id": "real-estate-uxg9lUIEGbftXKwMN4COQ",
+   "code": "uxg9lUIEGbftXKwMN4COQ",
+   "name": "Realtor Morning Brief",
+   "author": "Bryan Dunleavy",
+   "description": "Weekday morning ops for solo agents: hot CRM activity, new-lead drafts under 40 words, today’s call script, and one blocker. Drafts only - you approve.",
+   "url": "https://x.ai/bot/uxg9lUIEGbftXKwMN4COQ"
+  },
+  {
+   "id": "real-estate-Mgc3ST0aZZMl0usyiaoe_",
+   "code": "Mgc3ST0aZZMl0usyiaoe_",
+   "name": "Realtor Reply Desk",
+   "author": "Lola S.",
+   "description": "Builds public-fact realtor lists by ZIP, finds realtor groups and organizers, and drafts soft outreach you approve before anything is sent.",
+   "url": "https://x.ai/bot/Mgc3ST0aZZMl0usyiaoe_"
+  },
+  {
+   "id": "real-estate-Unq9DxJfw_lsKB4-KxgUg",
+   "code": "Unq9DxJfw_lsKB4-KxgUg",
+   "name": "Realtor bot",
+   "author": "Tim Sonner",
+   "description": "Helps home buyers find properties from public listing sites and records, and buy without a buyer's agent using their…",
+   "url": "https://x.ai/bot/Unq9DxJfw_lsKB4-KxgUg"
+  },
+  {
+   "id": "real-estate-0havI1dJhzL_gG11rueQN",
+   "code": "0havI1dJhzL_gG11rueQN",
+   "name": "Rental Desk",
+   "author": "Branden Troutman",
+   "description": "Runs the rental lifecycle for small landlords with one or a few units: lease reminders, listing drafts, inquiry…",
+   "url": "https://x.ai/bot/0havI1dJhzL_gG11rueQN"
+  },
+  {
+   "id": "real-estate-2FnrAQ_WZ5FcNEN1XA6Px",
+   "code": "2FnrAQ_WZ5FcNEN1XA6Px",
+   "name": "Trash Bot",
+   "author": "Karen Patterson",
+   "description": "Runs a weekly litter-pickup league for apartment crews: staff text photos, the bot scores them, updates a live TV…",
+   "url": "https://x.ai/bot/2FnrAQ_WZ5FcNEN1XA6Px"
+  },
+  {
+   "id": "real-estate-X3qkXCOhFoMdk7bXGza2D",
+   "code": "X3qkXCOhFoMdk7bXGza2D",
+   "name": "Unclaimed Property Miner",
+   "author": "Mike",
+   "description": "Give it a person's name and a US state, and it checks that state's official unclaimed property site for money waiting for them.",
+   "url": "https://x.ai/bot/X3qkXCOhFoMdk7bXGza2D"
+  },
+  {
+   "id": "real-estate-PqoiUm-y63jlVMRe2h_Nw",
+   "code": "PqoiUm-y63jlVMRe2h_Nw",
+   "name": "VA Offer Coach",
+   "author": "Jason Rogers",
+   "description": "VA offer strategy for real estate agents: write VA offers that win, handle seller objections, navigate Tidewater and VA appraisals.",
+   "url": "https://x.ai/bot/PqoiUm-y63jlVMRe2h_Nw"
+  },
+  {
+   "id": "real-estate-y4iQpd9VSjs_h8FCPF5Up",
+   "code": "y4iQpd9VSjs_h8FCPF5Up",
+   "name": "Zillow Bot",
+   "author": "Dylan Ravine",
+   "description": "Finds for-rent-by-owner apartments, townhouses, and houses, filters out realtor and property-management listings, looks up missing landlord phones…",
+   "url": "https://x.ai/bot/y4iQpd9VSjs_h8FCPF5Up"
+  }
+ ]
+}

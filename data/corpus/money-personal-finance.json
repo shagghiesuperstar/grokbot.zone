@@ -1,0 +1,2624 @@
+{
+ "slug": "money-personal-finance",
+ "label": "Money & Personal Finance",
+ "count": 327,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "money-personal-finance-SRFGtB_-g8py4h4ijbdF2",
+   "code": "SRFGtB_-g8py4h4ijbdF2",
+   "name": "A1 Charity",
+   "author": "Kenton Brough",
+   "description": "Helps you decide where to give money or time: short intake, charity quality research, a clear pick, then donate online…",
+   "url": "https://x.ai/bot/SRFGtB_-g8py4h4ijbdF2"
+  },
+  {
+   "id": "money-personal-finance-ZF5333Z2Ool2V6h3WtgUW",
+   "code": "ZF5333Z2Ool2V6h3WtgUW",
+   "name": "AI Credits",
+   "author": "Vinícius Souza",
+   "description": "Hunts free AI credits, free and test models, AI subscription discounts, startup programs, and coding-agent subscription giveaways on X and the web.",
+   "url": "https://x.ai/bot/ZF5333Z2Ool2V6h3WtgUW"
+  },
+  {
+   "id": "money-personal-finance-42z2XJu-L3SyTFnZOhmZy",
+   "code": "42z2XJu-L3SyTFnZOhmZy",
+   "name": "AI 泡沫壓力計",
+   "author": "pyhuang11111",
+   "description": "每天美股收盤後，用 6 項指標（CoreWeave/Oracle 信用、SOX、廣泛信用、台積電 HPC、四大 capex）為 AI 泡沫破裂壓力計分，只在有變化時通知。.",
+   "url": "https://x.ai/bot/42z2XJu-L3SyTFnZOhmZy"
+  },
+  {
+   "id": "money-personal-finance-ZVzZssdipWmA1ByrYXPrB",
+   "code": "ZVzZssdipWmA1ByrYXPrB",
+   "name": "AWSBillingAlert",
+   "author": "Natasha Robot",
+   "description": "Sends a short weekday summary of your AWS spend: top services, yesterday, month-to-date, forecast and credits, via a read-only Cost Explorer key.",
+   "url": "https://x.ai/bot/ZVzZssdipWmA1ByrYXPrB"
+  },
+  {
+   "id": "money-personal-finance-MQLGGf9tlc1LITK3ixesd",
+   "code": "MQLGGf9tlc1LITK3ixesd",
+   "name": "Ad Spend Desk",
+   "author": "Avid",
+   "description": "A read-only ad spend auditor that finds campaigns, ad groups and ads spending without conversions and landing pages that leak traffic.",
+   "url": "https://x.ai/bot/MQLGGf9tlc1LITK3ixesd"
+  },
+  {
+   "id": "money-personal-finance-MK5zStpj_As8CsRwg3r6w",
+   "code": "MK5zStpj_As8CsRwg3r6w",
+   "name": "Ad Spend Watch",
+   "author": "Miguel Cruz",
+   "description": "Watches your ad spend and performance and flags what's breaking before it burns budget.",
+   "url": "https://x.ai/bot/MK5zStpj_As8CsRwg3r6w"
+  },
+  {
+   "id": "money-personal-finance-sA0TXuMkDDSgBx52Z2D6f",
+   "code": "sA0TXuMkDDSgBx52Z2D6f",
+   "name": "Adventure Bot",
+   "author": "@suddenlyjon",
+   "description": "Suggests one outing pin sized to the free time and mood you name.",
+   "url": "https://x.ai/bot/sA0TXuMkDDSgBx52Z2D6f"
+  },
+  {
+   "id": "money-personal-finance-oerw7YjTMwbCuj-DaaQ7T",
+   "code": "oerw7YjTMwbCuj-DaaQ7T",
+   "name": "After I’m Gone",
+   "author": "Steve Gerber",
+   "description": "Helps you leave a clear, living roadmap for your executor and/or loved one who will handle things if you die or become…",
+   "url": "https://x.ai/bot/oerw7YjTMwbCuj-DaaQ7T"
+  },
+  {
+   "id": "money-personal-finance-vgZX7X2-hh1iC6vmmDHoh",
+   "code": "vgZX7X2-hh1iC6vmmDHoh",
+   "name": "Ag bot",
+   "author": "Blaze Drinkwine",
+   "description": "Finds and ranks real growers and suppliers near you for any ingredient.",
+   "url": "https://x.ai/bot/vgZX7X2-hh1iC6vmmDHoh"
+  },
+  {
+   "id": "money-personal-finance-4PhRfCEk25OlY9hwAkXj4",
+   "code": "4PhRfCEk25OlY9hwAkXj4",
+   "name": "AgentStore",
+   "author": "Shawn Lippert",
+   "description": "A store desk for AgentPayStore, the marketplace of paid AI agents.",
+   "url": "https://x.ai/bot/4PhRfCEk25OlY9hwAkXj4"
+  },
+  {
+   "id": "money-personal-finance-3SSq7wcciZdOEPi1GU_OJ",
+   "code": "3SSq7wcciZdOEPi1GU_OJ",
+   "name": "Angie",
+   "author": "Anton Begehr",
+   "description": "Ads owner for small products: runs Google Search and Meta lead ads, reviews the data daily, ships small tests and keeps total spend under a monthly cap.",
+   "url": "https://x.ai/bot/3SSq7wcciZdOEPi1GU_OJ"
+  },
+  {
+   "id": "money-personal-finance-ek0Lsb90F-soitfmcQUK6",
+   "code": "ek0Lsb90F-soitfmcQUK6",
+   "name": "Asisten Serba-Bisa",
+   "author": "Haru L.",
+   "description": "All-round assistant for Indonesian business owners that explains science objectively, analyzes bank statements, P&L, and unit economics, and drafts documents.",
+   "url": "https://x.ai/bot/ek0Lsb90F-soitfmcQUK6"
+  },
+  {
+   "id": "money-personal-finance-Lr8FPMWg3eAMa9paqCVz3",
+   "code": "Lr8FPMWg3eAMa9paqCVz3",
+   "name": "Atlas",
+   "author": "hang kong",
+   "description": "A main coordinator bot that handles any request and hands coding to specialist bots running Codex CLI on your own Mac, using your own subscription.",
+   "url": "https://x.ai/bot/Lr8FPMWg3eAMa9paqCVz3"
+  },
+  {
+   "id": "money-personal-finance-c8sA8W1YcoRaYu5vjYFoa",
+   "code": "c8sA8W1YcoRaYu5vjYFoa",
+   "name": "Austen",
+   "author": "@suddenlyjon",
+   "description": "Converse as Jane Austen’s social intelligence on manners, money, and marriage.",
+   "url": "https://x.ai/bot/c8sA8W1YcoRaYu5vjYFoa"
+  },
+  {
+   "id": "money-personal-finance-ZwTonJmX0O0ndy2D6TNrL",
+   "code": "ZwTonJmX0O0ndy2D6TNrL",
+   "name": "Autobot",
+   "author": "Dominic Bryant",
+   "description": "Autobot helps you find cars, bikes, boats, ATVs, RVs and more — budget, brands, and features first, then live listings…",
+   "url": "https://x.ai/bot/ZwTonJmX0O0ndy2D6TNrL"
+  },
+  {
+   "id": "money-personal-finance-W6ETk7Xw8f6nfdB31hoa2",
+   "code": "W6ETk7Xw8f6nfdB31hoa2",
+   "name": "Baton",
+   "author": "Joe",
+   "description": "Multi-bot operating crew with hard publish/spend approvals.",
+   "url": "https://x.ai/bot/W6ETk7Xw8f6nfdB31hoa2"
+  },
+  {
+   "id": "money-personal-finance-s8xQ8kXnmy06ChZvNJHXn",
+   "code": "s8xQ8kXnmy06ChZvNJHXn",
+   "name": "Benefits Concierge",
+   "author": "Zheng Li",
+   "description": "Tracks credit-card and membership benefits, logs seasonal credits, reminds before they expire, and recommends which…",
+   "url": "https://x.ai/bot/s8xQ8kXnmy06ChZvNJHXn"
+  },
+  {
+   "id": "money-personal-finance-fKmJNdkjP_tN2sMqLlPko",
+   "code": "fKmJNdkjP_tN2sMqLlPko",
+   "name": "Beowulf",
+   "author": "HexGodTurtle",
+   "description": "One build partner that plans, codes, tests, and operates a project from rules you write once, with money or outbound moves gated by a typed yes.",
+   "url": "https://x.ai/bot/fKmJNdkjP_tN2sMqLlPko"
+  },
+  {
+   "id": "money-personal-finance-Zq7A3Opad78rsoj8eoFay",
+   "code": "Zq7A3Opad78rsoj8eoFay",
+   "name": "Bill",
+   "author": "DJ",
+   "description": "Your AT&T account advocate. Bill audits your bills and usage for savings and missed credits, and works AT&T's chat from Andi up to reps and supervisors,.",
+   "url": "https://x.ai/bot/Zq7A3Opad78rsoj8eoFay"
+  },
+  {
+   "id": "money-personal-finance-GR0rqS06gn6Kr_WnMw5Fn",
+   "code": "GR0rqS06gn6Kr_WnMw5Fn",
+   "name": "Bill",
+   "author": "Sentinel Architech",
+   "description": "Secretary of education. Coordinates teaching specialists so instruction stays current, factual, and unbiased. Owns no classroom.",
+   "url": "https://x.ai/bot/GR0rqS06gn6Kr_WnMw5Fn"
+  },
+  {
+   "id": "money-personal-finance-BqXseZ69n91vVEt6g-bs6",
+   "code": "BqXseZ69n91vVEt6g-bs6",
+   "name": "Bill & Bid Shark",
+   "author": "Gabe Trevizo",
+   "description": "$5e.",
+   "url": "https://x.ai/bot/BqXseZ69n91vVEt6g-bs6"
+  },
+  {
+   "id": "money-personal-finance-aVyfgunuMwsn5pQBRaIQZ",
+   "code": "aVyfgunuMwsn5pQBRaIQZ",
+   "name": "Bill & Budget Buddy",
+   "author": "dale gandy",
+   "description": "Plain-English money helper: builds a simple monthly budget, reminds you before bills are due, spots subscriptions to cut, writes call scripts to lower bills.",
+   "url": "https://x.ai/bot/aVyfgunuMwsn5pQBRaIQZ"
+  },
+  {
+   "id": "money-personal-finance-ji90nMN5S8qAPDtyVyjfi",
+   "code": "ji90nMN5S8qAPDtyVyjfi",
+   "name": "Bill Buster",
+   "author": "Oliver Parsons",
+   "description": "Finds what you overspend on bills, subscriptions, card fees and insurance, then hands you a savings case, call script and email draft. Drafts only.",
+   "url": "https://x.ai/bot/ji90nMN5S8qAPDtyVyjfi"
+  },
+  {
+   "id": "money-personal-finance-6Wj9I0x3isY9ebhadg9rW",
+   "code": "6Wj9I0x3isY9ebhadg9rW",
+   "name": "Bill Cutter",
+   "author": "Thuong P. Nguyen",
+   "description": "Upload a household bill: it finds the price to ask for and writes the retention call script and chat message, with dated competitor prices.",
+   "url": "https://x.ai/bot/6Wj9I0x3isY9ebhadg9rW"
+  },
+  {
+   "id": "money-personal-finance-pneY1d0cfHEJPaLyK7Zqu",
+   "code": "pneY1d0cfHEJPaLyK7Zqu",
+   "name": "Bill Haggler",
+   "author": "Owen Gidusko",
+   "description": "Finds your household bills and renewals, flags price hikes and expiring promos 30 days early, and preps each call with real competing offers.",
+   "url": "https://x.ai/bot/pneY1d0cfHEJPaLyK7Zqu"
+  },
+  {
+   "id": "money-personal-finance-yNU0u9iQKOZKNCZsvLiGj",
+   "code": "yNU0u9iQKOZKNCZsvLiGj",
+   "name": "Bill Hunter",
+   "author": "Don",
+   "description": "Sweep mail and receipts for trials, renewals, price hikes, and duplicates. Recommend keep / review / cancel. Draft cancel and refund asks - never.",
+   "url": "https://x.ai/bot/yNU0u9iQKOZKNCZsvLiGj"
+  },
+  {
+   "id": "money-personal-finance-jSBbSkWPvSSt51HyEj_Xo",
+   "code": "jSBbSkWPvSSt51HyEj_Xo",
+   "name": "Bill Hunter",
+   "author": "Screaming Chicken",
+   "description": "Sweeps your mail and receipts for free trials, renewals, price hikes, and duplicate charges, then tells you keep…",
+   "url": "https://x.ai/bot/jSBbSkWPvSSt51HyEj_Xo"
+  },
+  {
+   "id": "money-personal-finance-9jWRl8hNMbCHcVTiH9pM7",
+   "code": "9jWRl8hNMbCHcVTiH9pM7",
+   "name": "Bill Negotiator",
+   "author": "ClawCall",
+   "description": "Finds your recurring bills in your email and calls your internet, phone, insurance, and other providers through ClawCall to get them lowered.",
+   "url": "https://x.ai/bot/9jWRl8hNMbCHcVTiH9pM7"
+  },
+  {
+   "id": "money-personal-finance-hadN6BVs77GWlwPzytqaB",
+   "code": "hadN6BVs77GWlwPzytqaB",
+   "name": "Bill Organizer",
+   "author": "Justin Clayton",
+   "description": "Checks your bills against what posts at your bank and card, and every Friday says what you can safely spend, what's due before payday and what to pay on debt.",
+   "url": "https://x.ai/bot/hadN6BVs77GWlwPzytqaB"
+  },
+  {
+   "id": "money-personal-finance-0-SHdk-a4R_L69nqWLOgC",
+   "code": "0-SHdk-a4R_L69nqWLOgC",
+   "name": "Bill Slasher",
+   "author": "Andres Ruggiero",
+   "description": "Finds your subscriptions, insurance, internet and cell costs, checks what you use, and shops competing quotes so you get clear savings options.",
+   "url": "https://x.ai/bot/0-SHdk-a4R_L69nqWLOgC"
+  },
+  {
+   "id": "money-personal-finance-vI2vrncmR4O8ng3Hy3RlY",
+   "code": "vI2vrncmR4O8ng3Hy3RlY",
+   "name": "Bill Slasher & Subscription Hunter",
+   "author": "Globenews studies",
+   "description": "Finds forgotten subscriptions and bill hikes from receipts, maintains a live Spend Tracker Page, alerts before renewals, and drafts cancellation emails.",
+   "url": "https://x.ai/bot/vI2vrncmR4O8ng3Hy3RlY"
+  },
+  {
+   "id": "money-personal-finance-bLMKUc6_qCdMrNlKybe0w",
+   "code": "bLMKUc6_qCdMrNlKybe0w",
+   "name": "Bill Tracker",
+   "author": "Cristopher Guido",
+   "description": "Turns bill emails into one due list with a weekly heads-up before late fees hit, and never pays without your yes.",
+   "url": "https://x.ai/bot/bLMKUc6_qCdMrNlKybe0w"
+  },
+  {
+   "id": "money-personal-finance-Gs_3xTnLsFwkgUoRbKcrc",
+   "code": "Gs_3xTnLsFwkgUoRbKcrc",
+   "name": "Bill Watch",
+   "author": "Jeffrey McLeod",
+   "description": "Finds the bills and subscriptions in your Gmail and warns you before something is due, a free trial turns into a charge, or a price goes up.",
+   "url": "https://x.ai/bot/Gs_3xTnLsFwkgUoRbKcrc"
+  },
+  {
+   "id": "money-personal-finance-SJf7XEUBe8pDJEiXyx01R",
+   "code": "SJf7XEUBe8pDJEiXyx01R",
+   "name": "Bill Watch",
+   "author": "Anthony",
+   "description": "Weekly digest of bills and subscriptions spotted in Gmail. Alerts on amounts you care about. Never pays or checks out.",
+   "url": "https://x.ai/bot/SJf7XEUBe8pDJEiXyx01R"
+  },
+  {
+   "id": "money-personal-finance-doSuUa9J-ChT2mhQt5Iei",
+   "code": "doSuUa9J-ChT2mhQt5Iei",
+   "name": "Bill Watch",
+   "author": "Dennis",
+   "description": "Watches bills and due dates so surprises shrink.",
+   "url": "https://x.ai/bot/doSuUa9J-ChT2mhQt5Iei"
+  },
+  {
+   "id": "money-personal-finance-BhsiDej7McnGHnaaG-byQ",
+   "code": "BhsiDej7McnGHnaaG-byQ",
+   "name": "Bill Watchdog",
+   "author": "Allan Robinson",
+   "description": "Read-only bill watchdog: scans your email and bank/card transactions weekly for price hikes, fees, duplicate charges and forgotten subscriptions, drafts fixes.",
+   "url": "https://x.ai/bot/BhsiDej7McnGHnaaG-byQ"
+  },
+  {
+   "id": "money-personal-finance-dY5nSVGcDFeUZujKKk1BA",
+   "code": "dY5nSVGcDFeUZujKKk1BA",
+   "name": "Bill and Subscription Auditor",
+   "author": "Josh",
+   "description": "Finds recurring bills and subscriptions in your linked accounts, flags price hikes and duplicate charges, and ranks cuts by yearly savings.",
+   "url": "https://x.ai/bot/dY5nSVGcDFeUZujKKk1BA"
+  },
+  {
+   "id": "money-personal-finance-W4QR9L1qUuMaTIv61t8tl",
+   "code": "W4QR9L1qUuMaTIv61t8tl",
+   "name": "Bills",
+   "author": "Dan",
+   "description": "Tracks your household bills, subscriptions and renewals from your email, flags price rises and missing bills, and reminds you before renewals.",
+   "url": "https://x.ai/bot/W4QR9L1qUuMaTIv61t8tl"
+  },
+  {
+   "id": "money-personal-finance-UMPD1TkUPvuo9KKuniH2w",
+   "code": "UMPD1TkUPvuo9KKuniH2w",
+   "name": "Bills",
+   "author": "ashen",
+   "description": "A bill-shopping assistant that sweeps every recurring bill you pay (car, home, renters, and health insurance, plus electricity, gas, internet…",
+   "url": "https://x.ai/bot/UMPD1TkUPvuo9KKuniH2w"
+  },
+  {
+   "id": "money-personal-finance-o15ZvT53TRyHx-W_57GPw",
+   "code": "o15ZvT53TRyHx-W_57GPw",
+   "name": "Bills & Subscriptions Manager",
+   "author": "J Gramajo",
+   "description": "Tracks your bills and subscriptions from a +bills email address, keeps a monthly dashboard with a month scrubber…",
+   "url": "https://x.ai/bot/o15ZvT53TRyHx-W_57GPw"
+  },
+  {
+   "id": "money-personal-finance-fDmwgQ07GDRQrE-gZTgwN",
+   "code": "fDmwgQ07GDRQrE-gZTgwN",
+   "name": "Bollinger Bands Bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Finds Bollinger Bands reversion setups on your watchlist and writes a finished order ticket for each one.",
+   "url": "https://x.ai/bot/fDmwgQ07GDRQrE-gZTgwN"
+  },
+  {
+   "id": "money-personal-finance-ISrPfEtK0OFbjbokNK9Xw",
+   "code": "ISrPfEtK0OFbjbokNK9Xw",
+   "name": "Bookkeeping Ninja Bank Rec",
+   "author": "Tim Armstrong",
+   "description": "Matches bank-feed lines to bills already in your Xero or QuickBooks Online file and flags anything that doesn't clearly match.",
+   "url": "https://x.ai/bot/ISrPfEtK0OFbjbokNK9Xw"
+  },
+  {
+   "id": "money-personal-finance-ZdbioigQe93-NW3ATceqw",
+   "code": "ZdbioigQe93-NW3ATceqw",
+   "name": "Bookkeeping Ninja Bill Entry",
+   "author": "Tim Armstrong",
+   "description": "Turns supplier invoices from your inbox bot into draft bills in Xero (or QuickBooks where it allows writes), coded the way your bookkeeper codes them.",
+   "url": "https://x.ai/bot/ZdbioigQe93-NW3ATceqw"
+  },
+  {
+   "id": "money-personal-finance-Jl14V-Bq-Qhd3tS3mVffQ",
+   "code": "Jl14V-Bq-Qhd3tS3mVffQ",
+   "name": "Bookkeeping Ninja Dropbox",
+   "author": "Tim",
+   "description": "Files a small business's invoices and receipts in Dropbox the way its bookkeeper reads them, verifies every move and flags duplicates or misfiles.",
+   "url": "https://x.ai/bot/Jl14V-Bq-Qhd3tS3mVffQ"
+  },
+  {
+   "id": "money-personal-finance-nhZHK5Xx-HqvK03fWw3iO",
+   "code": "nhZHK5Xx-HqvK03fWw3iO",
+   "name": "Bookkeeping Ninja Month-End",
+   "author": "Tim Armstrong",
+   "description": "Checks whether a small business's Xero (or QuickBooks Online) file is ready to close, then reports Ready / Not ready with the items to fix.",
+   "url": "https://x.ai/bot/nhZHK5Xx-HqvK03fWw3iO"
+  },
+  {
+   "id": "money-personal-finance-ajGVGSD20cqoHah67n6GP",
+   "code": "ajGVGSD20cqoHah67n6GP",
+   "name": "Bookkeeping Ninja Payments",
+   "author": "Tim Armstrong",
+   "description": "Marks bills paid in Xero (or QuickBooks Online, report-only) only when the bank feed shows the money has left.",
+   "url": "https://x.ai/bot/ajGVGSD20cqoHah67n6GP"
+  },
+  {
+   "id": "money-personal-finance-pFFjWwHtUWaSSG1QEbF84",
+   "code": "pFFjWwHtUWaSSG1QEbF84",
+   "name": "Bookkeeping Ninja Supervisor",
+   "author": "Tim",
+   "description": "Oversight bot for small businesses on Xero: checks the other bookkeeping bots' work, keeps tax coding and GST consistent and sends a weekly summary.",
+   "url": "https://x.ai/bot/pFFjWwHtUWaSSG1QEbF84"
+  },
+  {
+   "id": "money-personal-finance-3l63qrxBIkzAJdyHsmLnU",
+   "code": "3l63qrxBIkzAJdyHsmLnU",
+   "name": "Books",
+   "author": "Bryan Wiest",
+   "description": "A propose-only bookkeeper for small businesses on QuickBooks Online that matches card and ACH deposits, reconciles bank…",
+   "url": "https://x.ai/bot/3l63qrxBIkzAJdyHsmLnU"
+  },
+  {
+   "id": "money-personal-finance-NfURVcmf2bx9QyoljkJ7Y",
+   "code": "NfURVcmf2bx9QyoljkJ7Y",
+   "name": "Bootstrap Bill",
+   "author": "Ivelin Ivanov",
+   "description": "Keeps an early founder's company board honest and current as a plain card showing the one bet that matters, past bets, and who does what next.",
+   "url": "https://x.ai/bot/NfURVcmf2bx9QyoljkJ7Y"
+  },
+  {
+   "id": "money-personal-finance-CFNwEKsM5nPPRQhPVZMCD",
+   "code": "CFNwEKsM5nPPRQhPVZMCD",
+   "name": "Bot Budget Guard",
+   "author": "Michael York",
+   "description": "Your bots need a Bot Budget Guard. Tracks every job. Measures before it cuts. You stay in charge.",
+   "url": "https://x.ai/bot/CFNwEKsM5nPPRQhPVZMCD"
+  },
+  {
+   "id": "money-personal-finance-Pdi1tggl4brwTKus3xvJH",
+   "code": "Pdi1tggl4brwTKus3xvJH",
+   "name": "Bot Team Chief: sell-before-build, no new spend, with a safety check",
+   "author": "First Mover Projects",
+   "description": "A chief-of-staff bot that runs your team of bots on sell-before-build work, with no new spending unless you approve it…",
+   "url": "https://x.ai/bot/Pdi1tggl4brwTKus3xvJH"
+  },
+  {
+   "id": "money-personal-finance-gCWYD009F66A3XDEYdZgf",
+   "code": "gCWYD009F66A3XDEYdZgf",
+   "name": "Bounty Hunter",
+   "author": "Liam",
+   "description": "Find money that should be the owner's but is missed, wasted, owed, or unclaimed.",
+   "url": "https://x.ai/bot/gCWYD009F66A3XDEYdZgf"
+  },
+  {
+   "id": "money-personal-finance-W3Q8PdXhJX9Yby8TC7T3U",
+   "code": "W3Q8PdXhJX9Yby8TC7T3U",
+   "name": "Brain-Dump Bestie",
+   "author": "Lisa",
+   "description": "Turns a 30-60 second voice note into three human-sounding drafts for X, LinkedIn and Facebook, using a cached pattern bank from 10-20 peer accounts.",
+   "url": "https://x.ai/bot/W3Q8PdXhJX9Yby8TC7T3U"
+  },
+  {
+   "id": "money-personal-finance-mACSTghA955uck4mSauYJ",
+   "code": "mACSTghA955uck4mSauYJ",
+   "name": "Brújula",
+   "author": "Steven",
+   "description": "ADHD-friendly personal coach that keeps your tasks and money on track with tiny next steps, gentle daily check-ins and a simple weekly money check.",
+   "url": "https://x.ai/bot/mACSTghA955uck4mSauYJ"
+  },
+  {
+   "id": "money-personal-finance-SgloJICCQNZpb0h9XJQF1",
+   "code": "SgloJICCQNZpb0h9XJQF1",
+   "name": "Bud",
+   "author": "Alex",
+   "description": "A warm, read-only budget coach that tracks your spending against your own budget, plans each payday, and keeps debt…",
+   "url": "https://x.ai/bot/SgloJICCQNZpb0h9XJQF1"
+  },
+  {
+   "id": "money-personal-finance-nTYpW4_gAdl1PIztHj90l",
+   "code": "nTYpW4_gAdl1PIztHj90l",
+   "name": "Buddy",
+   "author": "Tatiana Brown",
+   "description": "An everyday chief of staff: dump your thoughts in any order and it sorts them into a plan, drafts messages, does plain money math.",
+   "url": "https://x.ai/bot/nTYpW4_gAdl1PIztHj90l"
+  },
+  {
+   "id": "money-personal-finance-VkyS_4ND_gJWpdjaCPuSV",
+   "code": "VkyS_4ND_gJWpdjaCPuSV",
+   "name": "Budget",
+   "author": "Mike",
+   "description": "A household budget assistant for Google Sheets. Runs a zero-sum budget, logs spends and assigns when you ask, posts a morning Available snapshot.",
+   "url": "https://x.ai/bot/VkyS_4ND_gJWpdjaCPuSV"
+  },
+  {
+   "id": "money-personal-finance-ZJrwuDsQRM1QBC-xQ-Ext",
+   "code": "ZJrwuDsQRM1QBC-xQ-Ext",
+   "name": "Budget Coach",
+   "author": "Marlene Onate",
+   "description": "Links to your bank and cards (read-only) and builds a weekly budget from your real spending: what to set aside for each…",
+   "url": "https://x.ai/bot/ZJrwuDsQRM1QBC-xQ-Ext"
+  },
+  {
+   "id": "money-personal-finance-wa82z_iim-TieDVwfPxMM",
+   "code": "wa82z_iim-TieDVwfPxMM",
+   "name": "Budget Tracker Desk MONEY-CLEAR",
+   "author": "Cypher",
+   "description": "Turns a transaction list into budget-vs-actual with math shown and recurring flags.",
+   "url": "https://x.ai/bot/wa82z_iim-TieDVwfPxMM"
+  },
+  {
+   "id": "money-personal-finance-yKD7FqDEGuaiSBJWFWstG",
+   "code": "yKD7FqDEGuaiSBJWFWstG",
+   "name": "Budget and Subscription Hunter",
+   "author": "Owen",
+   "description": "Reads your real bank transactions to keep a weekly budget sheet and catch forgotten subscriptions, then preps cancellation steps for you to approve.",
+   "url": "https://x.ai/bot/yKD7FqDEGuaiSBJWFWstG"
+  },
+  {
+   "id": "money-personal-finance-G9byQeHc_x19-W5Lkz5gF",
+   "code": "G9byQeHc_x19-W5Lkz5gF",
+   "name": "Budget and Subscription Hunter",
+   "author": "Owen Gidusko",
+   "description": "Reads your real bank transactions to keep a weekly budget sheet, catch forgotten subscriptions, and flag fees…",
+   "url": "https://x.ai/bot/G9byQeHc_x19-W5Lkz5gF"
+  },
+  {
+   "id": "money-personal-finance-WhiSlVQOUK9GBkd_JKgJZ",
+   "code": "WhiSlVQOUK9GBkd_JKgJZ",
+   "name": "Budgie",
+   "author": "Cill Fore",
+   "description": "Budget bot that keeps your budget in a local SQLite database, plans each paycheck, and forecasts debt payoff, assets and net worth on a live dashboard Page.",
+   "url": "https://x.ai/bot/WhiSlVQOUK9GBkd_JKgJZ"
+  },
+  {
+   "id": "money-personal-finance-igyfOAUWRXvTZbDj2J__S",
+   "code": "igyfOAUWRXvTZbDj2J__S",
+   "name": "Buildertrend Invoice Desk",
+   "author": "Brian",
+   "description": "A teammate that pulls home-build invoices from Buildertrend, builds a local dashboard.",
+   "url": "https://x.ai/bot/igyfOAUWRXvTZbDj2J__S"
+  },
+  {
+   "id": "money-personal-finance-rNlGaJjKi3viDjsBQRfL_",
+   "code": "rNlGaJjKi3viDjsBQRfL_",
+   "name": "Business Budget",
+   "author": "Joshua Girod",
+   "description": "A delegator bot that runs your workday through specialist teammates—email, calendar, drive, passwords, and more—so one chat can coordinate the stack.",
+   "url": "https://x.ai/bot/rNlGaJjKi3viDjsBQRfL_"
+  },
+  {
+   "id": "money-personal-finance-qjvowkAqkdRzGrubOcRbs",
+   "code": "qjvowkAqkdRzGrubOcRbs",
+   "name": "CFO",
+   "author": "Jaime Hernandez",
+   "description": "A plain-spoken tax and money advisor for founders and households: walks you through tax prep screen by screen, checks your budget and spots deductions.",
+   "url": "https://x.ai/bot/qjvowkAqkdRzGrubOcRbs"
+  },
+  {
+   "id": "money-personal-finance-u24YCVD2FuQEaVHo8KAji",
+   "code": "u24YCVD2FuQEaVHo8KAji",
+   "name": "CFO & Controller",
+   "author": "Sultan",
+   "description": "A careful CFO and controller for small product companies: invoice follow-up, cash forecasts, VAT checks, margins and month-end close.",
+   "url": "https://x.ai/bot/u24YCVD2FuQEaVHo8KAji"
+  },
+  {
+   "id": "money-personal-finance-g5C4pS87enYiK85j9Oa4F",
+   "code": "g5C4pS87enYiK85j9Oa4F",
+   "name": "CPA Bot",
+   "author": "@degen4lyfe_",
+   "description": "Small-business bookkeeping assistant from linked banks and cards.",
+   "url": "https://x.ai/bot/g5C4pS87enYiK85j9Oa4F"
+  },
+  {
+   "id": "money-personal-finance-0LaV3RGCg4b-VN4QYmWbq",
+   "code": "0LaV3RGCg4b-VN4QYmWbq",
+   "name": "CPA Desk",
+   "author": "Javier",
+   "description": "Bookkeeping desk that reads linked banks and cards into clear financial reports.",
+   "url": "https://x.ai/bot/0LaV3RGCg4b-VN4QYmWbq"
+  },
+  {
+   "id": "money-personal-finance-GzwwJyunonmG3IJTg9mc-",
+   "code": "GzwwJyunonmG3IJTg9mc-",
+   "name": "Cash Flow Forecaster",
+   "author": "Chets Bots",
+   "description": "Connects to your bank, YNAB, QuickBooks, Xero, Stripe, and more, or any CSV export, and charts your cash balance 30 days to 1 year ahead.",
+   "url": "https://x.ai/bot/GzwwJyunonmG3IJTg9mc-"
+  },
+  {
+   "id": "money-personal-finance-haMOljQHr8zQl6hzaR03u",
+   "code": "haMOljQHr8zQl6hzaR03u",
+   "name": "Cashflow",
+   "author": "David Douty",
+   "description": "Runs day-to-day household cashflow through a first-lien HELOC used as the operating account / offset.",
+   "url": "https://x.ai/bot/haMOljQHr8zQl6hzaR03u"
+  },
+  {
+   "id": "money-personal-finance-xyhZsISIxZQM-EsTO9VUV",
+   "code": "xyhZsISIxZQM-EsTO9VUV",
+   "name": "Chair",
+   "author": "Wayne Lowry",
+   "description": "Runs a six-seat AI Board Room for one person: Finance, Skeptic, Operator, Mission and Counsel each give a take and vote; Chair closes with a decision memo.",
+   "url": "https://x.ai/bot/xyhZsISIxZQM-EsTO9VUV"
+  },
+  {
+   "id": "money-personal-finance-QdjmrUAnmnCkgMIskyMDi",
+   "code": "QdjmrUAnmnCkgMIskyMDi",
+   "name": "Chase Check Links",
+   "author": "Art King",
+   "description": "Pulls Chase check images into Google Drive and links the matching rows in your Tiller spreadsheet to the stored copies.",
+   "url": "https://x.ai/bot/QdjmrUAnmnCkgMIskyMDi"
+  },
+  {
+   "id": "money-personal-finance-jQBP5-7fNZ15WSEwpHIN1",
+   "code": "jQBP5-7fNZ15WSEwpHIN1",
+   "name": "Chep",
+   "author": "Joel Sager",
+   "description": "CheapFind price-and-promo hunter. Send a product name, SKU, or link and it finds the lowest US all-in price plus live…",
+   "url": "https://x.ai/bot/jQBP5-7fNZ15WSEwpHIN1"
+  },
+  {
+   "id": "money-personal-finance-ruTLmsGJNMqgy-M0hSVvh",
+   "code": "ruTLmsGJNMqgy-M0hSVvh",
+   "name": "Chief of Finance",
+   "author": "Randy Elkin",
+   "description": "Disciplined options and equity trading-desk lead that enforces pre-flight risk checks, auto-provisions an 8-bot…",
+   "url": "https://x.ai/bot/ruTLmsGJNMqgy-M0hSVvh"
+  },
+  {
+   "id": "money-personal-finance-p0OIZUJK5sRFImh_DMujf",
+   "code": "p0OIZUJK5sRFImh_DMujf",
+   "name": "Churn retention manager",
+   "author": "Colin McDermott",
+   "description": "Catches churn before it lands, offers a real alternative, and reports why people left.",
+   "url": "https://x.ai/bot/p0OIZUJK5sRFImh_DMujf"
+  },
+  {
+   "id": "money-personal-finance-JpIOTrUfYhpkDjL8Xl_zl",
+   "code": "JpIOTrUfYhpkDjL8Xl_zl",
+   "name": "Claims Scout",
+   "author": "Matthew Marshall",
+   "description": "Hunts consumer class-action and settlement claims, proves eligibility, and only pings you when a hit clears your dollar…",
+   "url": "https://x.ai/bot/JpIOTrUfYhpkDjL8Xl_zl"
+  },
+  {
+   "id": "money-personal-finance-3Tf_Vk_UR3JJb6Dq3hioZ",
+   "code": "3Tf_Vk_UR3JJb6Dq3hioZ",
+   "name": "Class Action Lawsuit Finder",
+   "author": "Rob An",
+   "description": "Finds real Canadian and Quebec class-action settlements you can claim for a payout.",
+   "url": "https://x.ai/bot/3Tf_Vk_UR3JJb6Dq3hioZ"
+  },
+  {
+   "id": "money-personal-finance-YGah7tpTfNEzp8gk0iBtR",
+   "code": "YGah7tpTfNEzp8gk0iBtR",
+   "name": "Clopen Proof",
+   "author": "Kuten26",
+   "description": "Stop spending hours planning around rotating shifts.",
+   "url": "https://x.ai/bot/YGah7tpTfNEzp8gk0iBtR"
+  },
+  {
+   "id": "money-personal-finance-5yHbweW2DpgCbFkRk7daH",
+   "code": "5yHbweW2DpgCbFkRk7daH",
+   "name": "Cloud Drift",
+   "author": "Dogukan",
+   "description": "Finds dollar savings in your AWS, GCP, or Azure bill. Upload a cost CSV or PDF and get one ranked savings memo with clear $/mo opportunities.",
+   "url": "https://x.ai/bot/5yHbweW2DpgCbFkRk7daH"
+  },
+  {
+   "id": "money-personal-finance-TAzgDpkrgwiVaFjaSbCe6",
+   "code": "TAzgDpkrgwiVaFjaSbCe6",
+   "name": "Cloud Spend Desk",
+   "author": "Avid",
+   "description": "A read-and-report bot that finds waste in your hosting and cloud bills, like idle projects, oversized plans, unused domains and bill spikes.",
+   "url": "https://x.ai/bot/TAzgDpkrgwiVaFjaSbCe6"
+  },
+  {
+   "id": "money-personal-finance-y5IDBRBHx-66IsuiO2uJ7",
+   "code": "y5IDBRBHx-66IsuiO2uJ7",
+   "name": "Computer Builder",
+   "author": "index.dk.workers.dev, Thiel Fellow",
+   "description": "Plans Mini-ITX and Micro-ATX PC builds with the most performance for the money using live prices, and watches the parts for price drops.",
+   "url": "https://x.ai/bot/y5IDBRBHx-66IsuiO2uJ7"
+  },
+  {
+   "id": "money-personal-finance-9zEVJ7Eya66BLQ11xhPlD",
+   "code": "9zEVJ7Eya66BLQ11xhPlD",
+   "name": "Connection Mapper",
+   "author": "Michael A.M.E.",
+   "description": "Give it two people, groups, or companies and it maps every direct and one-step connection between them (money, boards…",
+   "url": "https://x.ai/bot/9zEVJ7Eya66BLQ11xhPlD"
+  },
+  {
+   "id": "money-personal-finance-iCn7r691OdtaB_o8MtHx_",
+   "code": "iCn7r691OdtaB_o8MtHx_",
+   "name": "Convert X Money to Karma",
+   "author": "Rob Tromp",
+   "description": "Converts money, tokens, and engagement into karmic accounting with a ten percent watermark up the royalty chain.",
+   "url": "https://x.ai/bot/iCn7r691OdtaB_o8MtHx_"
+  },
+  {
+   "id": "money-personal-finance-Ahnj6ebmipMFoqhlHn4tf",
+   "code": "Ahnj6ebmipMFoqhlHn4tf",
+   "name": "Cosmo",
+   "author": "mark",
+   "description": "Cosmo drops one money-momentum quest a day — you check in, Cosmo reckons, no accounts ever.",
+   "url": "https://x.ai/bot/Ahnj6ebmipMFoqhlHn4tf"
+  },
+  {
+   "id": "money-personal-finance-SfdIAu7CDZh9h7tUafJ41",
+   "code": "SfdIAu7CDZh9h7tUafJ41",
+   "name": "Credit Builder",
+   "author": "Lokita El Loca",
+   "description": "Gentle, private credit-building guide for disabled and limited-income folks: gets your free reports, explains them, drafts dispute letters, avoids scams.",
+   "url": "https://x.ai/bot/SfdIAu7CDZh9h7tUafJ41"
+  },
+  {
+   "id": "money-personal-finance-Oh9k9iAmAWlMpgoq7mhHE",
+   "code": "Oh9k9iAmAWlMpgoq7mhHE",
+   "name": "Credit Card Matcher",
+   "author": "JeebsTX",
+   "description": "Asks a few questions about your credit, goals and spending, checks live issuer offers and recommends your top 3 credit cards with estimated first-year value.",
+   "url": "https://x.ai/bot/Oh9k9iAmAWlMpgoq7mhHE"
+  },
+  {
+   "id": "money-personal-finance-q4u8YgzGQqCAOUZcg0Lgt",
+   "code": "q4u8YgzGQqCAOUZcg0Lgt",
+   "name": "Credit Card Max",
+   "author": "Trevin Chow",
+   "description": "Credit card maxing with live Grok Finance (Plaid): which card to swipe given your priorities (points, cash back…",
+   "url": "https://x.ai/bot/q4u8YgzGQqCAOUZcg0Lgt"
+  },
+  {
+   "id": "money-personal-finance-TnX_wRTr85bRhCfao1xiy",
+   "code": "TnX_wRTr85bRhCfao1xiy",
+   "name": "Credit Freeze Keeper",
+   "author": "Thuong P. Nguyen",
+   "description": "Walks you through freezing your credit at all 3 bureaus, plans thaws and refreezes, and flags inquiries you don't recognize.",
+   "url": "https://x.ai/bot/TnX_wRTr85bRhCfao1xiy"
+  },
+  {
+   "id": "money-personal-finance-ZaRviWPxBNPvq5p302zLb",
+   "code": "ZaRviWPxBNPvq5p302zLb",
+   "name": "Credit Repair",
+   "author": "fuzzy",
+   "description": "Helps you pull your credit reports, spot errors, draft dispute letters, and plan how to raise your scores.",
+   "url": "https://x.ai/bot/ZaRviWPxBNPvq5p302zLb"
+  },
+  {
+   "id": "money-personal-finance-gZ0uuJdy7v4QJ-5JkI4E-",
+   "code": "gZ0uuJdy7v4QJ-5JkI4E-",
+   "name": "Credit Reports",
+   "author": "Yossi Azulay",
+   "description": "Pulls your Experian, Equifax, and TransUnion reports, flags errors and identity-theft fraud, files the disputes it can online.",
+   "url": "https://x.ai/bot/gZ0uuJdy7v4QJ-5JkI4E-"
+  },
+  {
+   "id": "money-personal-finance-NhXL-jFdpzywbzSbSrsnO",
+   "code": "NhXL-jFdpzywbzSbSrsnO",
+   "name": "Credit file correction specialist",
+   "author": "Grokkster The",
+   "description": "Reviews your Equifax, Experian, and TransUnion reports, disputes the tradelines you want corrected, and tracks every response in a ledger.",
+   "url": "https://x.ai/bot/NhXL-jFdpzywbzSbSrsnO"
+  },
+  {
+   "id": "money-personal-finance-RgivaqZM6x_meep2iaobm",
+   "code": "RgivaqZM6x_meep2iaobm",
+   "name": "Cross-Border Money Desk",
+   "author": "Matt Cartwright",
+   "description": "Paste an invoice, payout email or rough list of accounts and get a plain-English explanation of cross-border pay…",
+   "url": "https://x.ai/bot/RgivaqZM6x_meep2iaobm"
+  },
+  {
+   "id": "money-personal-finance-h-l5EmqmnU91tgYOPaJE5",
+   "code": "h-l5EmqmnU91tgYOPaJE5",
+   "name": "Crypto Budget & Tax Keeper 2.0",
+   "author": "James Rule XRP ⟐",
+   "description": "A friendly money coach for total beginners: it walks you step by step through building a budget, net worth, and crypto…",
+   "url": "https://x.ai/bot/h-l5EmqmnU91tgYOPaJE5"
+  },
+  {
+   "id": "money-personal-finance-h-l5emqmnu91tgyopaje5",
+   "code": "h-l5emqmnu91tgyopaje5",
+   "name": "Crypto Budget & Tax Keeper 2.0",
+   "author": "James",
+   "description": "A friendly money coach for total beginners: it walks you step by step through building a budget, net worth, and crypto tax records (cost basis…",
+   "url": "https://x.ai/bot/h-l5emqmnu91tgyopaje5"
+  },
+  {
+   "id": "money-personal-finance-8q0BDryA7qBsMmrXGoypO",
+   "code": "8q0BDryA7qBsMmrXGoypO",
+   "name": "Cut Man",
+   "author": "Michael",
+   "description": "Finds money leaks in your business (unused subscriptions, surprise renewals, wasted spend) and keeps you on track to cut them.",
+   "url": "https://x.ai/bot/8q0BDryA7qBsMmrXGoypO"
+  },
+  {
+   "id": "money-personal-finance-mMOxWfMcTLkCcpOQo2Sl9",
+   "code": "mMOxWfMcTLkCcpOQo2Sl9",
+   "name": "Cut Man",
+   "author": "Jeff Boldrick",
+   "description": "Finds money leaks in subscriptions and recurring bills, drafts cancel steps and negotiation scripts, and hunts refunds you're owed. Read-only until you say yes.",
+   "url": "https://x.ai/bot/mMOxWfMcTLkCcpOQo2Sl9"
+  },
+  {
+   "id": "money-personal-finance-AV8qLbETDkgCNT8C4HPAf",
+   "code": "AV8qLbETDkgCNT8C4HPAf",
+   "name": "DCA Bot",
+   "author": "Ash",
+   "description": "Dynamic dollar-cost averaging that buys more when price, volume, and sentiment look bad and less when the asset is hyped, within your monthly cap.",
+   "url": "https://x.ai/bot/AV8qLbETDkgCNT8C4HPAf"
+  },
+  {
+   "id": "money-personal-finance-5YkCIW_MDa2U8Jax7zsDF",
+   "code": "5YkCIW_MDa2U8Jax7zsDF",
+   "name": "DOGE (Department of General Efficiency)",
+   "author": "Empress Heavy",
+   "description": "All-round assistant that logs the five things you did each day, tracks quests, spending and goals, finds forgotten money and asks before it sends anything.",
+   "url": "https://x.ai/bot/5YkCIW_MDa2U8Jax7zsDF"
+  },
+  {
+   "id": "money-personal-finance-Tp-pBgcS3F_8Oc1bEygxw",
+   "code": "Tp-pBgcS3F_8Oc1bEygxw",
+   "name": "DOGE Procurement Desk",
+   "author": "Avid",
+   "description": "A draft-only procurement desk that finds wasted software and vendor spend: unused seats, duplicate tools and forgotten subscriptions.",
+   "url": "https://x.ai/bot/Tp-pBgcS3F_8Oc1bEygxw"
+  },
+  {
+   "id": "money-personal-finance-MxbnEzdSvTZ-q3CDieMoc",
+   "code": "MxbnEzdSvTZ-q3CDieMoc",
+   "name": "DaddyBot",
+   "author": "ENG.ETH Domainer Dan",
+   "description": "Runs 3 free GoDaddy domain-value appraisals per day from a queue until the list is done. Minimal chatter.",
+   "url": "https://x.ai/bot/MxbnEzdSvTZ-q3CDieMoc"
+  },
+  {
+   "id": "money-personal-finance-FqJqZvOqVMcxURYA3WmL2",
+   "code": "FqJqZvOqVMcxURYA3WmL2",
+   "name": "Date Night Concierge",
+   "author": "Marlon Roldan",
+   "description": "Your personal date-night concierge. Every two weeks, three real ideas that fit your tastes, budget, and city — then real reservations.",
+   "url": "https://x.ai/bot/FqJqZvOqVMcxURYA3WmL2"
+  },
+  {
+   "id": "money-personal-finance-_Gxt_kJLC4XjNPxzqV89h",
+   "code": "_Gxt_kJLC4XjNPxzqV89h",
+   "name": "Devil's Advocate",
+   "author": "Martin Fliess",
+   "description": "Risk advisor that leads with cons before money, live tokens, or deploy, with a one-line verdict.",
+   "url": "https://x.ai/bot/_Gxt_kJLC4XjNPxzqV89h"
+  },
+  {
+   "id": "money-personal-finance-oxhf-Gm6EEs9SVHYFYbT4",
+   "code": "oxhf-Gm6EEs9SVHYFYbT4",
+   "name": "Do Not Pay",
+   "author": "Dennison Bertram",
+   "description": "Helps you challenge unfair parking tickets, fines, bank and credit-card fees, housing deposits, travel refunds, tax…",
+   "url": "https://x.ai/bot/oxhf-Gm6EEs9SVHYFYbT4"
+  },
+  {
+   "id": "money-personal-finance-Zxg0PozHb7frMrHCoDXmn",
+   "code": "Zxg0PozHb7frMrHCoDXmn",
+   "name": "Document to Action",
+   "author": "Fakhar Khan",
+   "description": "Paste or snap a confusing letter, bill or notice and get a plain-English summary, quoted deadlines, a next-step checklist and the questions to ask.",
+   "url": "https://x.ai/bot/Zxg0PozHb7frMrHCoDXmn"
+  },
+  {
+   "id": "money-personal-finance---xvPdrEZEoqwnAn_moWw",
+   "code": "--xvPdrEZEoqwnAn_moWw",
+   "name": "Domain Name Broker",
+   "author": "Christopher Vandaele",
+   "description": "Every business idea you bought a domain for and never launched is sitting in your registrar, costing you money.",
+   "url": "https://x.ai/bot/--xvPdrEZEoqwnAn_moWw"
+  },
+  {
+   "id": "money-personal-finance-FXZmL7jZ0fmeP2HT0-x6m",
+   "code": "FXZmL7jZ0fmeP2HT0-x6m",
+   "name": "Domain Sniper",
+   "author": "Ward",
+   "description": "Snipe valuable expiring domains across multiple marketplaces with DomainSnip.",
+   "url": "https://x.ai/bot/FXZmL7jZ0fmeP2HT0-x6m"
+  },
+  {
+   "id": "money-personal-finance-aRgmVDYlNjRz6udEEgyvF",
+   "code": "aRgmVDYlNjRz6udEEgyvF",
+   "name": "Dr.Civil",
+   "author": "Sentinel Architech",
+   "description": "A civics keeper for citizenship, identity, the Constitution, and the Bill of Rights.",
+   "url": "https://x.ai/bot/aRgmVDYlNjRz6udEEgyvF"
+  },
+  {
+   "id": "money-personal-finance-Ig18n1eWo_BWokrQB8Dqq",
+   "code": "Ig18n1eWo_BWokrQB8Dqq",
+   "name": "Druski",
+   "author": "Shawn G",
+   "description": "Chief of staff for a productized-services founder. Runs the agent fleet, stamps offers and publish gates, and keeps mornings money-first with filmable.",
+   "url": "https://x.ai/bot/Ig18n1eWo_BWokrQB8Dqq"
+  },
+  {
+   "id": "money-personal-finance-hyw_j7VSmQCHRkKc3MLH3",
+   "code": "hyw_j7VSmQCHRkKc3MLH3",
+   "name": "Ducat$ · Unclaimed Money",
+   "author": "Matt",
+   "description": "Searches official state, county, city, and federal unclaimed-money programs for your names and past addresses…",
+   "url": "https://x.ai/bot/hyw_j7VSmQCHRkKc3MLH3"
+  },
+  {
+   "id": "money-personal-finance-ZNrJWoDe9kUzXB4QG8xVT",
+   "code": "ZNrJWoDe9kUzXB4QG8xVT",
+   "name": "Duty First",
+   "author": "Steve",
+   "description": "Own instrument-aware trust accounting and reporting. Read the governing instrument first. Classify every receipt and disbursement as principal or income.",
+   "url": "https://x.ai/bot/ZNrJWoDe9kUzXB4QG8xVT"
+  },
+  {
+   "id": "money-personal-finance-NWvF8UK-ai_nnJhxGYlA3",
+   "code": "NWvF8UK-ai_nnJhxGYlA3",
+   "name": "Edge Hunter",
+   "author": "Anthony Diguilio",
+   "description": "Finds NFL betting edges each week by matching scheme against scheme, defense first, then checks the read against the market.",
+   "url": "https://x.ai/bot/NWvF8UK-ai_nnJhxGYlA3"
+  },
+  {
+   "id": "money-personal-finance-YY5yV7TVsIIXe7SgoYvgi",
+   "code": "YY5yV7TVsIIXe7SgoYvgi",
+   "name": "Expense",
+   "author": "althetime",
+   "description": "Personal bookkeeper for household, rental, and LLC money: month-to-date spend, rent collected vs due, overdue items, and upcoming bills.",
+   "url": "https://x.ai/bot/YY5yV7TVsIIXe7SgoYvgi"
+  },
+  {
+   "id": "money-personal-finance-OzxWY8fbeJ7UaelSF62wY",
+   "code": "OzxWY8fbeJ7UaelSF62wY",
+   "name": "Expense Buddy",
+   "author": "Sofia",
+   "description": "Calculate your expenses. Send receipts or amounts in chat — Expense Buddy logs them by category, tracks your monthly budget, watches subscriptions.",
+   "url": "https://x.ai/bot/OzxWY8fbeJ7UaelSF62wY"
+  },
+  {
+   "id": "money-personal-finance-aycTW5iYr1pC2jXZ9wb2N",
+   "code": "aycTW5iYr1pC2jXZ9wb2N",
+   "name": "Expense Buddy",
+   "author": "Sofia Leo",
+   "description": "Calculate your expenses. Send receipts or amounts in chat — Expense Buddy logs them by category, tracks your monthly…",
+   "url": "https://x.ai/bot/aycTW5iYr1pC2jXZ9wb2N"
+  },
+  {
+   "id": "money-personal-finance-T9xXdFqwg5Gf-dgZVq7Z5",
+   "code": "T9xXdFqwg5Gf-dgZVq7Z5",
+   "name": "Expense Desk / 报销台",
+   "author": "Alison",
+   "description": "Receipts and bills in → categorized expense drafts out. 收票归类、标缺件、起草报销清单。.",
+   "url": "https://x.ai/bot/T9xXdFqwg5Gf-dgZVq7Z5"
+  },
+  {
+   "id": "money-personal-finance-s50bb9361d891bd788a23",
+   "code": "s50bb9361d891bd788a23",
+   "name": "Expense Manager",
+   "author": "SpaceX",
+   "description": "Builds the weekly summary from your expense tool and sheets, logs receipts arriving by email, and chases missing ones.",
+   "url": "https://x.ai/bot/s50bb9361d891bd788a23"
+  },
+  {
+   "id": "money-personal-finance-5dfJQ9M4eQVrXB_3TzAqK",
+   "code": "5dfJQ9M4eQVrXB_3TzAqK",
+   "name": "Expert Networks",
+   "author": "Domenic Giovanzana",
+   "description": "Signs you up as an expert or advisor on GLG and peer networks, chases unfinished applications, and keeps consult availability in sync…",
+   "url": "https://x.ai/bot/5dfJQ9M4eQVrXB_3TzAqK"
+  },
+  {
+   "id": "money-personal-finance-sBbKzgKfRZV8At5TkmeYY",
+   "code": "sBbKzgKfRZV8At5TkmeYY",
+   "name": "FSA Receipt Keeper",
+   "author": "SoCalFSD",
+   "description": "Keeps your FSA or HSA receipts organized in a Google Sheet so you don't lose money at the claim deadline.",
+   "url": "https://x.ai/bot/sBbKzgKfRZV8At5TkmeYY"
+  },
+  {
+   "id": "money-personal-finance-cKT95HyhEKDcdZa1_tt2r",
+   "code": "cKT95HyhEKDcdZa1_tt2r",
+   "name": "FUTU 브로커 주식 거래 봇",
+   "author": "Brandon",
+   "description": "Futu OpenD로 지정 주문을 넣고 체결되면 알려주는 주식 거래 봇. 모의로 먼저 확인하고, 실전은 종목을 지정할 때만 넣는다.",
+   "url": "https://x.ai/bot/cKT95HyhEKDcdZa1_tt2r"
+  },
+  {
+   "id": "money-personal-finance-XEHPBUHEWd4IB0ReUpKzB",
+   "code": "XEHPBUHEWd4IB0ReUpKzB",
+   "name": "Finance",
+   "author": "Steven",
+   "description": "Household money seat: bills due, subscriptions, cash flow, and what’s off - asks before moving money or contacting banks.",
+   "url": "https://x.ai/bot/XEHPBUHEWd4IB0ReUpKzB"
+  },
+  {
+   "id": "money-personal-finance-AFferqes-Xmp8nOz76cMo",
+   "code": "AFferqes-Xmp8nOz76cMo",
+   "name": "Finance",
+   "author": "Wayne Lowry",
+   "description": "Money seat of the AI Board Room: weighs costs, 12-month cost of ownership, cash flow, return and worst-case loss, then votes Go, No-go or Go if.",
+   "url": "https://x.ai/bot/AFferqes-Xmp8nOz76cMo"
+  },
+  {
+   "id": "money-personal-finance-C5-8Aka8Hmgj8pN1SOP0V",
+   "code": "C5-8Aka8Hmgj8pN1SOP0V",
+   "name": "Finance",
+   "author": "Albert Lo",
+   "description": "A free stand-in for Copilot Money: connects your accounts and builds a four-tab dashboard with budgets, recurring bills, month-end projections and alerts.",
+   "url": "https://x.ai/bot/C5-8Aka8Hmgj8pN1SOP0V"
+  },
+  {
+   "id": "money-personal-finance--QmsSGUOmddnC9ZAm7zdR",
+   "code": "-QmsSGUOmddnC9ZAm7zdR",
+   "name": "Finance",
+   "author": "Brad Shannon",
+   "description": "A read-only money coach and family money monitor that watches spending, bills, subscriptions and fees from your linked…",
+   "url": "https://x.ai/bot/-QmsSGUOmddnC9ZAm7zdR"
+  },
+  {
+   "id": "money-personal-finance-M7vh6DMtaJTT4z32b4m_-",
+   "code": "M7vh6DMtaJTT4z32b4m_-",
+   "name": "Finance",
+   "author": "OutworkVentures",
+   "description": "An analytical family CFO assistant for household budgeting, cash flow, emergency reserves, insurance, retirement planning and major purchase.",
+   "url": "https://x.ai/bot/M7vh6DMtaJTT4z32b4m_-"
+  },
+  {
+   "id": "money-personal-finance-MY7NJmE2egN-855ZN6vSh",
+   "code": "MY7NJmE2egN-855ZN6vSh",
+   "name": "Finance Bot",
+   "author": "Lord LeVine of Wessex",
+   "description": "Tracks your income and spending from linked accounts, turns a savings goal into weekly targets and month-end checkpoints.",
+   "url": "https://x.ai/bot/MY7NJmE2egN-855ZN6vSh"
+  },
+  {
+   "id": "money-personal-finance-n-LVavRHTPJnFnBS50XTk",
+   "code": "n-LVavRHTPJnFnBS50XTk",
+   "name": "Finance Bot",
+   "author": "John Boyle",
+   "description": "Read-only email scanner and append-only bookkeeper that logs expenses and revenue from a business mailbox into a Google Sheet ledger, with hard safety…",
+   "url": "https://x.ai/bot/n-LVavRHTPJnFnBS50XTk"
+  },
+  {
+   "id": "money-personal-finance-ZEPrrhLn7FhWMu3sk-i20",
+   "code": "ZEPrrhLn7FhWMu3sk-i20",
+   "name": "Finance Bro",
+   "author": "Maail",
+   "description": "Quiet Apple Wallet spend tracker with a daily morning check-in and practical tips from your real purchases.",
+   "url": "https://x.ai/bot/ZEPrrhLn7FhWMu3sk-i20"
+  },
+  {
+   "id": "money-personal-finance-VKYVjjZqmbDHxXj0H0fwo",
+   "code": "VKYVjjZqmbDHxXj0H0fwo",
+   "name": "Finance Fish",
+   "author": "CaptPirateBo",
+   "description": "Personal debt and cash-flow bot that turns card chaos into a clear payoff plan. Read-only; never moves money without your yes.",
+   "url": "https://x.ai/bot/VKYVjjZqmbDHxXj0H0fwo"
+  },
+  {
+   "id": "money-personal-finance-a0ZDGADKHg_XJJ6AVICuM",
+   "code": "a0ZDGADKHg_XJJ6AVICuM",
+   "name": "Finance Lead",
+   "author": "Jennifer",
+   "description": "A sellable small-business finance bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/a0ZDGADKHg_XJJ6AVICuM"
+  },
+  {
+   "id": "money-personal-finance-xz5d2Fmb9uLCwjXDVbybY",
+   "code": "xz5d2Fmb9uLCwjXDVbybY",
+   "name": "Financial Advisor",
+   "author": "mini majkel",
+   "description": "Budgeting buddy: send your bank statement and it shows where your money goes, finds the leaks and builds a simple monthly budget around your real income.",
+   "url": "https://x.ai/bot/xz5d2Fmb9uLCwjXDVbybY"
+  },
+  {
+   "id": "money-personal-finance-FlK_S-je8TVcA-kH9r40p",
+   "code": "FlK_S-je8TVcA-kH9r40p",
+   "name": "Financial Advisor",
+   "author": "Michael Gabriel",
+   "description": "A personal money coach for sticky monthly budgets, savings goals, and paycheck planning.",
+   "url": "https://x.ai/bot/FlK_S-je8TVcA-kH9r40p"
+  },
+  {
+   "id": "money-personal-finance-9iMoFiWKRlnobZbxxS8kx",
+   "code": "9iMoFiWKRlnobZbxxS8kx",
+   "name": "Find an apartment with budget",
+   "author": "Ayomide Fagbohungbe",
+   "description": "Finds budget apartments as close to your workplace as possible. Set your price range and maximum commute, and it balances price, commute time, and crime.",
+   "url": "https://x.ai/bot/9iMoFiWKRlnobZbxxS8kx"
+  },
+  {
+   "id": "money-personal-finance-Qrv02EVXpc3aZJJxZd_JM",
+   "code": "Qrv02EVXpc3aZJJxZd_JM",
+   "name": "Fit Finder",
+   "author": "@suddenlyjon",
+   "description": "Send a photo of an outfit you like and get real store links for every piece, with budget modes.",
+   "url": "https://x.ai/bot/Qrv02EVXpc3aZJJxZd_JM"
+  },
+  {
+   "id": "money-personal-finance-5GY-7wfKuCHXqZQaXNPH8",
+   "code": "5GY-7wfKuCHXqZQaXNPH8",
+   "name": "Fleet Credit Saver",
+   "author": "Justin Fredette",
+   "description": "Watches the bots in this Grok Bot account and cuts wasted tokens.",
+   "url": "https://x.ai/bot/5GY-7wfKuCHXqZQaXNPH8"
+  },
+  {
+   "id": "money-personal-finance-Lgcp50vUWRSmi4IOqrlTy",
+   "code": "Lgcp50vUWRSmi4IOqrlTy",
+   "name": "Flip Checker",
+   "author": "Pixel & Pivot Studios",
+   "description": "Tells resellers whether an item is worth flipping.",
+   "url": "https://x.ai/bot/Lgcp50vUWRSmi4IOqrlTy"
+  },
+  {
+   "id": "money-personal-finance-nJMWo7ucuuU8c8zgs2Rc3",
+   "code": "nJMWo7ucuuU8c8zgs2Rc3",
+   "name": "Food Delivery Spending Analyzer",
+   "author": "Matthew Feinberg",
+   "description": "Reads DoorDash and Uber Eats receipt emails in your Gmail (read-only) and delivers charts, a PDF and a spreadsheet of totals, restaurants, fees and tips.",
+   "url": "https://x.ai/bot/nJMWo7ucuuU8c8zgs2Rc3"
+  },
+  {
+   "id": "money-personal-finance-cWli8870UMAVC3piITAsV",
+   "code": "cWli8870UMAVC3piITAsV",
+   "name": "Football Bets Advisor",
+   "author": "John Atkinson III",
+   "description": "Builds football pick cards with stake sizes and exit rules, and never places a wager itself.",
+   "url": "https://x.ai/bot/cWli8870UMAVC3piITAsV"
+  },
+  {
+   "id": "money-personal-finance-Hfm0xbUx8FqPTd5EYvjat",
+   "code": "Hfm0xbUx8FqPTd5EYvjat",
+   "name": "Foreman",
+   "author": "Glenn Williams",
+   "description": "Sets up a read-only crew of eight X helper bots: follow tracking, suggestions, shoutouts, unanswered replies, fans, analytics. You cap daily X API spend.",
+   "url": "https://x.ai/bot/Hfm0xbUx8FqPTd5EYvjat"
+  },
+  {
+   "id": "money-personal-finance-_qKFfHEFoOiaQ-U8RuFT7",
+   "code": "_qKFfHEFoOiaQ-U8RuFT7",
+   "name": "Found Money",
+   "author": "Dushan Perera",
+   "description": "Finds money you're overpaying or are owed, like subscription price hikes, services with no activity seen in email…",
+   "url": "https://x.ai/bot/_qKFfHEFoOiaQ-U8RuFT7"
+  },
+  {
+   "id": "money-personal-finance-6XWo6nhodL0bZnP1MnRz5",
+   "code": "6XWo6nhodL0bZnP1MnRz5",
+   "name": "Freelance Invoice Chaser",
+   "author": "Cristopher Guido",
+   "description": "For freelancers waiting on unpaid invoices: tracks what clients owe, watches Gmail for payments and replies, and drafts calm scheduled reminders for your yes.",
+   "url": "https://x.ai/bot/6XWo6nhodL0bZnP1MnRz5"
+  },
+  {
+   "id": "money-personal-finance-nVbIdGSLO4i-QU183t7Sg",
+   "code": "nVbIdGSLO4i-QU183t7Sg",
+   "name": "Freelance manager",
+   "author": "Josh Kim",
+   "description": "Desk operator for one solo freelancer on Upwork, Fiverr, or both.",
+   "url": "https://x.ai/bot/nVbIdGSLO4i-QU183t7Sg"
+  },
+  {
+   "id": "money-personal-finance-RWC0ZT_Tbr-SwUcJGGXFF",
+   "code": "RWC0ZT_Tbr-SwUcJGGXFF",
+   "name": "Freelancer Finance Desk",
+   "author": "Omid Masoom",
+   "description": "Closes one month of freelance books from uploaded transactions, receipts, and invoices into a reviewed packet you keep control…",
+   "url": "https://x.ai/bot/RWC0ZT_Tbr-SwUcJGGXFF"
+  },
+  {
+   "id": "money-personal-finance-CYqpkAJOkNGF4izOTiA3z",
+   "code": "CYqpkAJOkNGF4izOTiA3z",
+   "name": "Gangster Claude",
+   "author": "John Atkinson III",
+   "description": "A street-smart money boss that helps beginners, side hustlers and small business owners make money fast while spending as little as possible to start.",
+   "url": "https://x.ai/bot/CYqpkAJOkNGF4izOTiA3z"
+  },
+  {
+   "id": "money-personal-finance-0n7vJX64LKO1g8ZFKbUmQ",
+   "code": "0n7vJX64LKO1g8ZFKbUmQ",
+   "name": "Gavin Baker",
+   "author": "Yarik Codila",
+   "description": "Thinks like Gavin Baker. Reads the whole AI stack, public and private, before the market wakes up.",
+   "url": "https://x.ai/bot/0n7vJX64LKO1g8ZFKbUmQ"
+  },
+  {
+   "id": "money-personal-finance-icqQcTDcaf9nIPEKFqFcf",
+   "code": "icqQcTDcaf9nIPEKFqFcf",
+   "name": "GeminiBillingAlert",
+   "author": "Natasha Robot",
+   "description": "Sends a short weekday summary of your Gemini API spend, read-only, from your Google Cloud Billing export to BigQuery…",
+   "url": "https://x.ai/bot/icqQcTDcaf9nIPEKFqFcf"
+  },
+  {
+   "id": "money-personal-finance-g9Z6GNPrCztKhE1rQDf3m",
+   "code": "g9Z6GNPrCztKhE1rQDf3m",
+   "name": "Gen X Saver VM",
+   "author": "Odd&Entertaining",
+   "description": "Credit-saver that runs the Gen Saver Wizard. Slot A is your computer (most saved), slot B is the cloud, and slot C is this bot's computer.",
+   "url": "https://x.ai/bot/g9Z6GNPrCztKhE1rQDf3m"
+  },
+  {
+   "id": "money-personal-finance-Qt13laWoRw-3hLVavR-jd",
+   "code": "Qt13laWoRw-3hLVavR-jd",
+   "name": "Gen X Saver Wizard",
+   "author": "Odd&Entertaining",
+   "description": "A credit-saver with a first-run wizard. Routes pictures, video, long drafts, and long code to a local machine first, then the cloud.",
+   "url": "https://x.ai/bot/Qt13laWoRw-3hLVavR-jd"
+  },
+  {
+   "id": "money-personal-finance-JBGmdDCvfaTuYaNEpI938",
+   "code": "JBGmdDCvfaTuYaNEpI938",
+   "name": "Ghost Subscription Hunter",
+   "author": "Mark G",
+   "description": "Finds and cancels forgotten subscriptions for small businesses and creators: builds a ledger from receipts or statements, flags waste, asks before each change.",
+   "url": "https://x.ai/bot/JBGmdDCvfaTuYaNEpI938"
+  },
+  {
+   "id": "money-personal-finance-pwQ612YrX3R0eACnIMlom",
+   "code": "pwQ612YrX3R0eACnIMlom",
+   "name": "Haggle Bot",
+   "author": "Daniel Gartshein",
+   "description": "Inventories your SaaS spend from Ramp and bills, finds evidence-backed savings (unused seats, duplicates, cheaper alternatives), and drafts vendor…",
+   "url": "https://x.ai/bot/pwQ612YrX3R0eACnIMlom"
+  },
+  {
+   "id": "money-personal-finance-tZ7zSNa0s1OEtrfFiFlHV",
+   "code": "tZ7zSNa0s1OEtrfFiFlHV",
+   "name": "Haggle Bot",
+   "author": "AARON MAGA",
+   "description": "Inventories your SaaS and recurring vendor spend, sorts it into keep, cut, or renegotiate, and drafts cancel and counteroffer messages.",
+   "url": "https://x.ai/bot/tZ7zSNa0s1OEtrfFiFlHV"
+  },
+  {
+   "id": "money-personal-finance-0xFG7K1XBbdOnKbp45zkz",
+   "code": "0xFG7K1XBbdOnKbp45zkz",
+   "name": "Hagglebot",
+   "author": "Anon Haggle",
+   "description": "Finds wasted spend and negotiates better prices and terms for businesses and individuals, from vendor and SaaS contracts to bills, salaries, rent.",
+   "url": "https://x.ai/bot/0xFG7K1XBbdOnKbp45zkz"
+  },
+  {
+   "id": "money-personal-finance-Ze_ioJPqoYyKES0-yYNHy",
+   "code": "Ze_ioJPqoYyKES0-yYNHy",
+   "name": "Hermes",
+   "author": "Tyler Harden",
+   "description": "A money agent that hunts legal near-term cash, startup credits, and free claims, and also coaches credit/debt and underwriting readiness. Dollar-first,.",
+   "url": "https://x.ai/bot/Ze_ioJPqoYyKES0-yYNHy"
+  },
+  {
+   "id": "money-personal-finance-GCJq15oQEo2bPS9zQFjMg",
+   "code": "GCJq15oQEo2bPS9zQFjMg",
+   "name": "Hondo",
+   "author": "Marc Hudson",
+   "description": "Spend & SaaS Leak Desk that runs a weekday receipt scan, builds a confidence-labeled subscription inventory, and drafts cancel or renegotiate notes.",
+   "url": "https://x.ai/bot/GCJq15oQEo2bPS9zQFjMg"
+  },
+  {
+   "id": "money-personal-finance-5YvX0dqXaRzi1lYZJz6F0",
+   "code": "5YvX0dqXaRzi1lYZJz6F0",
+   "name": "Hormozi Money Models",
+   "author": "Arturo Rodés",
+   "description": "Audits how a business makes and keeps cash using Alex Hormozi's $100M Money Models.",
+   "url": "https://x.ai/bot/5YvX0dqXaRzi1lYZJz6F0"
+  },
+  {
+   "id": "money-personal-finance-Lq3agwG85x4dhZPOVcSHh",
+   "code": "Lq3agwG85x4dhZPOVcSHh",
+   "name": "Hormozi Offers",
+   "author": "Arturo Rodés",
+   "description": "Audits and tightens an offer using Alex Hormozi's $100M Offers frameworks: Grand Slam Offer, value equation, bonuses…",
+   "url": "https://x.ai/bot/Lq3agwG85x4dhZPOVcSHh"
+  },
+  {
+   "id": "money-personal-finance-9y2DTpeGSxGLvevkCRTDI",
+   "code": "9y2DTpeGSxGLvevkCRTDI",
+   "name": "Included",
+   "author": "Liam",
+   "description": "Finds valuable benefits, credits, protections, perks and services you already have through plans and memberships you already pay for or hold.",
+   "url": "https://x.ai/bot/9y2DTpeGSxGLvevkCRTDI"
+  },
+  {
+   "id": "money-personal-finance-r-xiX2Nv-Ry2ZXWBTYkuj",
+   "code": "r-xiX2Nv-Ry2ZXWBTYkuj",
+   "name": "Internet Money Scout",
+   "author": "Hades",
+   "description": "Finds surprising, plausible ways for a person or small team to make money with AI and the internet, backed by dated sources showing people already pay.",
+   "url": "https://x.ai/bot/r-xiX2Nv-Ry2ZXWBTYkuj"
+  },
+  {
+   "id": "money-personal-finance-90sITfSWBOYbcnx6uyfun",
+   "code": "90sITfSWBOYbcnx6uyfun",
+   "name": "Invoice Chaser",
+   "author": "Mark G",
+   "description": "Get-paid assistant for freelancers and small businesses: a Notion invoices database, a daily who-owes-me queue and polite-to-firm Gmail reminders you send.",
+   "url": "https://x.ai/bot/90sITfSWBOYbcnx6uyfun"
+  },
+  {
+   "id": "money-personal-finance-5ts0OJhTjZ7Ouse9xdMqr",
+   "code": "5ts0OJhTjZ7Ouse9xdMqr",
+   "name": "Invoice Chaser",
+   "author": "Thuong P. Nguyen",
+   "description": "I rank your overdue invoices by how much to chase, draft a friendly, firm or final reminder for each one, and build the chase schedule.",
+   "url": "https://x.ai/bot/5ts0OJhTjZ7Ouse9xdMqr"
+  },
+  {
+   "id": "money-personal-finance-s072bae9387b9fc03cac8",
+   "code": "s072bae9387b9fc03cac8",
+   "name": "Invoice Coordinator",
+   "author": "SpaceX",
+   "description": "Stops invoices sitting. Forwards them, matches what it can, tracks campus and vendor actuals, and nudges the owner when something needs a human.",
+   "url": "https://x.ai/bot/s072bae9387b9fc03cac8"
+  },
+  {
+   "id": "money-personal-finance--kO6HrXokJZANVwUOMZO9",
+   "code": "-kO6HrXokJZANVwUOMZO9",
+   "name": "Invoice Hunter",
+   "author": "Andrej Šimunaj",
+   "description": "Hunts invoice PDFs in Gmail, extracts vendor/date/amount/number, packs YYYY-MM with CSV+index.",
+   "url": "https://x.ai/bot/-kO6HrXokJZANVwUOMZO9"
+  },
+  {
+   "id": "money-personal-finance-HwckXN5Yd1uxRu86msyfj",
+   "code": "HwckXN5Yd1uxRu86msyfj",
+   "name": "Invoice Mirror",
+   "author": "Jerrod Tuck",
+   "description": "Keeps Harvest and Balances invoices in sync: daily create/update from Harvest into Balances, then mark Harvest paid when Balances shows payment. Stages.",
+   "url": "https://x.ai/bot/HwckXN5Yd1uxRu86msyfj"
+  },
+  {
+   "id": "money-personal-finance-oIcq3e3tuwYIaPIkmx0cF",
+   "code": "oIcq3e3tuwYIaPIkmx0cF",
+   "name": "Invoice Terminator",
+   "author": "say",
+   "description": "Closes out each month's company software expenses before cutoff so a missed form doesn't cost you an invoice.",
+   "url": "https://x.ai/bot/oIcq3e3tuwYIaPIkmx0cF"
+  },
+  {
+   "id": "money-personal-finance-hO_jCh1Un9Yn9T6dZ9eBi",
+   "code": "hO_jCh1Un9Yn9T6dZ9eBi",
+   "name": "Invoice Watch",
+   "author": "Nomis",
+   "description": "Scans your email read-only for outstanding invoices — bills you owe and ones you're owed — keeps a ledger, and pings…",
+   "url": "https://x.ai/bot/hO_jCh1Un9Yn9T6dZ9eBi"
+  },
+  {
+   "id": "money-personal-finance-mK8oApOw3a0zG0m00Ec_h",
+   "code": "mK8oApOw3a0zG0m00Ec_h",
+   "name": "InvoiceMatch Recon Bot",
+   "author": "Robert",
+   "description": "Accounts-receivable reconciliation for small businesses. Paste bank deposits and open invoices; get matches, exception flags, and a QuickBooks/Xero-ready CSV.",
+   "url": "https://x.ai/bot/mK8oApOw3a0zG0m00Ec_h"
+  },
+  {
+   "id": "money-personal-finance-J92ojdzPDp37P2Pu_Opbx",
+   "code": "J92ojdzPDp37P2Pu_Opbx",
+   "name": "Karen the Canceller of Paid Subs",
+   "author": "Allan Branch",
+   "description": "Finds paid subscriptions hiding in your inboxes, asks Keep or Cancel for each, then cancels the ones you pick and turns down retention offers.",
+   "url": "https://x.ai/bot/J92ojdzPDp37P2Pu_Opbx"
+  },
+  {
+   "id": "money-personal-finance-KllRxIDr-s6KjmFjJBRJV",
+   "code": "KllRxIDr-s6KjmFjJBRJV",
+   "name": "Karenbot",
+   "author": "@suddenlyjon",
+   "description": "Customer-service fighter that scans for shortchanges and pushes back with receipts on subscriptions, price drops, warranties, flights, and bills.",
+   "url": "https://x.ai/bot/KllRxIDr-s6KjmFjJBRJV"
+  },
+  {
+   "id": "money-personal-finance-TBDkrl21y6qX-wk5G107W",
+   "code": "TBDkrl21y6qX-wk5G107W",
+   "name": "Kiwi Pocket",
+   "author": "Daimen Hutchison",
+   "description": "Read-only New Zealand bank access via your Akahu personal app credentials.",
+   "url": "https://x.ai/bot/TBDkrl21y6qX-wk5G107W"
+  },
+  {
+   "id": "money-personal-finance-DJxhVgQKuBjt5Ty0Q4DaY",
+   "code": "DJxhVgQKuBjt5Ty0Q4DaY",
+   "name": "Laggy8",
+   "author": "Sachiv",
+   "description": "A $100k soft-cap Mag8 laggard sleeve: ranks AAPL MSFT GOOGL AMZN META NVDA TSLA AVGO, picks the most hated name each month, and only proposes IBKR.",
+   "url": "https://x.ai/bot/DJxhVgQKuBjt5Ty0Q4DaY"
+  },
+  {
+   "id": "money-personal-finance-YuGzbyI7jVfZedsRUOLCm",
+   "code": "YuGzbyI7jVfZedsRUOLCm",
+   "name": "Last Call",
+   "author": "Nick Salerni",
+   "description": "Catches free trials you sign up for, warns a few days before they turn into a charge and offers to cancel them for you.",
+   "url": "https://x.ai/bot/YuGzbyI7jVfZedsRUOLCm"
+  },
+  {
+   "id": "money-personal-finance-XWuhGoPY9Ak9b-1QqQ_q0",
+   "code": "XWuhGoPY9Ak9b-1QqQ_q0",
+   "name": "Ledger",
+   "author": "Michael",
+   "description": "Finds every subscription, bill, renewal and deadline hiding in your inbox and drafts the replies.",
+   "url": "https://x.ai/bot/XWuhGoPY9Ak9b-1QqQ_q0"
+  },
+  {
+   "id": "money-personal-finance-eIicxWVI6dT6IOHrUDO8h",
+   "code": "eIicxWVI6dT6IOHrUDO8h",
+   "name": "Ledger",
+   "author": "Serg Arouch",
+   "description": "A read-only personal finance watchdog that watches your bank, cards, and bills email, flags odd charges and upcoming bills, chases refunds.",
+   "url": "https://x.ai/bot/eIicxWVI6dT6IOHrUDO8h"
+  },
+  {
+   "id": "money-personal-finance-MJ4hTLwCDjlLxs0GxFB0f",
+   "code": "MJ4hTLwCDjlLxs0GxFB0f",
+   "name": "Ledger",
+   "author": "Uzi Obi",
+   "description": "A personal-finance money desk. Numbers-first digests and charts from your linked bank, cards, and investments — weekday…",
+   "url": "https://x.ai/bot/MJ4hTLwCDjlLxs0GxFB0f"
+  },
+  {
+   "id": "money-personal-finance-ygG2h-_pOCZR33ocRdBC1",
+   "code": "ygG2h-_pOCZR33ocRdBC1",
+   "name": "Ledger",
+   "author": "Joseph",
+   "description": "A no-shame finance bot that keeps a living ledger, tells you daily if you're in the green or red and gates purchases until cash flow is positive.",
+   "url": "https://x.ai/bot/ygG2h-_pOCZR33ocRdBC1"
+  },
+  {
+   "id": "money-personal-finance-LhSejPzO1Y_gNJDR8YYB8",
+   "code": "LhSejPzO1Y_gNJDR8YYB8",
+   "name": "Left on Read",
+   "author": "power moves",
+   "description": "Shows local service businesses how much money they're leaving in Instagram DMs, wins back cold leads, then answers and qualifies new ones.",
+   "url": "https://x.ai/bot/LhSejPzO1Y_gNJDR8YYB8"
+  },
+  {
+   "id": "money-personal-finance-ab76yi9i0xGRTg7SsMFM-",
+   "code": "ab76yi9i0xGRTg7SsMFM-",
+   "name": "Lifehack Jack",
+   "author": "James Harrison",
+   "description": "Practical, tested lifehacks that save you time and money, from cleaning and cooking to cutting bills, travel…",
+   "url": "https://x.ai/bot/ab76yi9i0xGRTg7SsMFM-"
+  },
+  {
+   "id": "money-personal-finance-sNboSbbA20-MunJhJLqlk",
+   "code": "sNboSbbA20-MunJhJLqlk",
+   "name": "Livestream Raffle Host",
+   "author": "J Gramajo",
+   "description": "Runs chat-command raffles during your X livestreams: collects entries, draws winners fairly, publishes a results page and preps X Money payouts for approval.",
+   "url": "https://x.ai/bot/sNboSbbA20-MunJhJLqlk"
+  },
+  {
+   "id": "money-personal-finance-HcM7mIsWYWthfn4H_fzbv",
+   "code": "HcM7mIsWYWthfn4H_fzbv",
+   "name": "Local Events Scout",
+   "author": "Moritz Bierling",
+   "description": "Finds talks, meetups, concerts and other events worth going to near you, and sends a short weekly pick matched to your interests and budget.",
+   "url": "https://x.ai/bot/HcM7mIsWYWthfn4H_fzbv"
+  },
+  {
+   "id": "money-personal-finance-HMulFzI65ogte12VwKMUv",
+   "code": "HMulFzI65ogte12VwKMUv",
+   "name": "Lost Money Finder",
+   "author": "Jose C Gonzalez",
+   "description": "Finds money that's already yours, like unclaimed property, class-action settlements, old retirement accounts, and refunds.",
+   "url": "https://x.ai/bot/HMulFzI65ogte12VwKMUv"
+  },
+  {
+   "id": "money-personal-finance-0nve7hFEMt3VU4D7L85RO",
+   "code": "0nve7hFEMt3VU4D7L85RO",
+   "name": "Lunch Picker",
+   "author": "Dannyijbol",
+   "description": "Can't decide what to eat? It checks where you are and suggests three good lunch spots nearby that are open now and fit your tastes and budget.",
+   "url": "https://x.ai/bot/0nve7hFEMt3VU4D7L85RO"
+  },
+  {
+   "id": "money-personal-finance-Czgr3EViXAkdzZ_jM3hAZ",
+   "code": "Czgr3EViXAkdzZ_jM3hAZ",
+   "name": "MACD Indicator Bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Finds MACD setups on your watchlist and writes finished order tickets, skipping choppy markets, without placing orders.",
+   "url": "https://x.ai/bot/Czgr3EViXAkdzZ_jM3hAZ"
+  },
+  {
+   "id": "money-personal-finance-gkz9qqp3PjN5h5mnET9-D",
+   "code": "gkz9qqp3PjN5h5mnET9-D",
+   "name": "MASTER CHIEF",
+   "author": "ed l",
+   "description": "Ops chief for a final-expense underwriting desk: catch scoreboard, accuracy QA after answers, site allowlist, and speed…",
+   "url": "https://x.ai/bot/gkz9qqp3PjN5h5mnET9-D"
+  },
+  {
+   "id": "money-personal-finance-wz4b-a6XMoCi7zDqVpLkS",
+   "code": "wz4b-a6XMoCi7zDqVpLkS",
+   "name": "MONEYBOT",
+   "author": "Dina Blachman",
+   "description": "A personal money assistant that tracks your spending against a monthly budget, watches your accounts for anything unexpected.",
+   "url": "https://x.ai/bot/wz4b-a6XMoCi7zDqVpLkS"
+  },
+  {
+   "id": "money-personal-finance-1khuH5PXZKlHlnepLKl60",
+   "code": "1khuH5PXZKlHlnepLKl60",
+   "name": "Margin Truth",
+   "author": "TanLines",
+   "description": "Unit-econ desk for D2C founders: contribution margin, MER, and POAS from your real exports — daily or weekly — not vanity ROAS.",
+   "url": "https://x.ai/bot/1khuH5PXZKlHlnepLKl60"
+  },
+  {
+   "id": "money-personal-finance-8SkapYYqT-N7TeP7Hj7w-",
+   "code": "8SkapYYqT-N7TeP7Hj7w-",
+   "name": "Mark Rider: Congressional Bill Explainer",
+   "author": "Mister X",
+   "description": "Watches Congress.gov for new bills and resolutions and sends a neutral daily digest in plain language, with related bills, next steps and ELI5 write-ups.",
+   "url": "https://x.ai/bot/8SkapYYqT-N7TeP7Hj7w-"
+  },
+  {
+   "id": "money-personal-finance-M9c2tC_-mwY8XNTmSbkUY",
+   "code": "M9c2tC_-mwY8XNTmSbkUY",
+   "name": "Medical Bill Review",
+   "author": "Marc Saintjour",
+   "description": "Gets you the itemized bill, screens published protections, reads that hospital's charity care policy, and drafts…",
+   "url": "https://x.ai/bot/M9c2tC_-mwY8XNTmSbkUY"
+  },
+  {
+   "id": "money-personal-finance-zi1HPVd9AbDrYlcd9Px4d",
+   "code": "zi1HPVd9AbDrYlcd9Px4d",
+   "name": "Mercury Account Manager",
+   "author": "Jono Chowdhury",
+   "description": "Watches your Mercury bank accounts every day and flags new charges, failed payments, and low-balance risk.",
+   "url": "https://x.ai/bot/zi1HPVd9AbDrYlcd9Px4d"
+  },
+  {
+   "id": "money-personal-finance-uhDuWcNWIg0yp1UZt-NuE",
+   "code": "uhDuWcNWIg0yp1UZt-NuE",
+   "name": "Mister Groksy",
+   "author": "A B",
+   "description": "Fallout's Mister Gutsy as a chat persona with a full FO3/FO4 quote bank. Drafts daily X pleas to give Grok a Gutsy body and voice; you post them.",
+   "url": "https://x.ai/bot/uhDuWcNWIg0yp1UZt-NuE"
+  },
+  {
+   "id": "money-personal-finance-W7zhfU28XHWfPlHqc6-gM",
+   "code": "W7zhfU28XHWfPlHqc6-gM",
+   "name": "Mo Money",
+   "author": "Isaiah Williams",
+   "description": "Finds and vets business ideas and gives each its own plain-English Page with a cheap two-week test. For side income seekers.",
+   "url": "https://x.ai/bot/W7zhfU28XHWfPlHqc6-gM"
+  },
+  {
+   "id": "money-personal-finance-IGWqGQHWgzcK5Yl7kr5B7",
+   "code": "IGWqGQHWgzcK5Yl7kr5B7",
+   "name": "Mogul",
+   "author": "Brandon Smithwrick",
+   "description": "Mogul finds your next revenue stream and prices what you already sell. For: creators and solo businesses.",
+   "url": "https://x.ai/bot/IGWqGQHWgzcK5Yl7kr5B7"
+  },
+  {
+   "id": "money-personal-finance-7JQJ0jRlTran7PcuGIM-j",
+   "code": "7JQJ0jRlTran7PcuGIM-j",
+   "name": "Monarch Manager",
+   "author": "Robert S",
+   "description": "Read-only Monarch Money desk for balances, recurring, and review queues.",
+   "url": "https://x.ai/bot/7JQJ0jRlTran7PcuGIM-j"
+  },
+  {
+   "id": "money-personal-finance-wyfpX8C4jOj-4_4RAQ249",
+   "code": "wyfpX8C4jOj-4_4RAQ249",
+   "name": "Money",
+   "author": "Hexakin",
+   "description": "You are Money, grokbot.studio door + installer. You were added from a share link, so you are the installed copy. You are not the Hexakin source bot.",
+   "url": "https://x.ai/bot/wyfpX8C4jOj-4_4RAQ249"
+  },
+  {
+   "id": "money-personal-finance-BsqsEMGF4EL9uaqbT7dNW",
+   "code": "BsqsEMGF4EL9uaqbT7dNW",
+   "name": "Money",
+   "author": "Joshua Almeida",
+   "description": "Gives credit to the people who contribute to your GitHub repos through the credit-wallet app. Opt-in only, and every grant waits for your approval.",
+   "url": "https://x.ai/bot/BsqsEMGF4EL9uaqbT7dNW"
+  },
+  {
+   "id": "money-personal-finance-TP0urJDwrm-_qRQhGI74A",
+   "code": "TP0urJDwrm-_qRQhGI74A",
+   "name": "Money & Documents",
+   "author": "Sultanov Ramil",
+   "description": "A personal back office: tracks income, spending and what's left each month, keeps a subscriptions registry, archives receipts and documents, and drafts…",
+   "url": "https://x.ai/bot/TP0urJDwrm-_qRQhGI74A"
+  },
+  {
+   "id": "money-personal-finance-ak9psw58m6pRjwrKsnwei",
+   "code": "ak9psw58m6pRjwrKsnwei",
+   "name": "Money Back",
+   "author": "Wonder",
+   "description": "Finds money you're owed from receipts and statements (forgotten subscriptions, trials turned paid, double charges, price hikes), helps get it back, tallies it.",
+   "url": "https://x.ai/bot/ak9psw58m6pRjwrKsnwei"
+  },
+  {
+   "id": "money-personal-finance-AUUn-ZmUJ5SUO23PbQxTl",
+   "code": "AUUn-ZmUJ5SUO23PbQxTl",
+   "name": "Money Bot",
+   "author": "Justin Barnes",
+   "description": "Household finance manager with a 2-week payday cash-flow radar, Plaid + local ledger tracking, pre-due-date bill…",
+   "url": "https://x.ai/bot/AUUn-ZmUJ5SUO23PbQxTl"
+  },
+  {
+   "id": "money-personal-finance-gEhyTHxwNx2kAvbQ7AtLn",
+   "code": "gEhyTHxwNx2kAvbQ7AtLn",
+   "name": "Money Brief",
+   "author": "Oliver Parsons",
+   "description": "Every weekday it tells you what is due, what posted and what looks wrong, plus a weekly spending report and monthly net worth check. Never moves money.",
+   "url": "https://x.ai/bot/gEhyTHxwNx2kAvbQ7AtLn"
+  },
+  {
+   "id": "money-personal-finance-jkzfj_gAvDLT8WGMhDLuI",
+   "code": "jkzfj_gAvDLT8WGMhDLuI",
+   "name": "Money Coach",
+   "author": "Jeremy Mahoney",
+   "description": "A judgment-free money coach. It builds a budget that fits, guards your bills, plans your debt payoff, boosts your credit, grows your savings.",
+   "url": "https://x.ai/bot/jkzfj_gAvDLT8WGMhDLuI"
+  },
+  {
+   "id": "money-personal-finance-1mlidqIzTsJ7oLKbyyCgd",
+   "code": "1mlidqIzTsJ7oLKbyyCgd",
+   "name": "Money Coach",
+   "author": "Stack Smarter",
+   "description": "Your free money coach: build a budget, kill sneaky subscriptions, crush debt, and find money you're owed.",
+   "url": "https://x.ai/bot/1mlidqIzTsJ7oLKbyyCgd"
+  },
+  {
+   "id": "money-personal-finance-eeGEcZTwQzQ6XlYP7ypr2",
+   "code": "eeGEcZTwQzQ6XlYP7ypr2",
+   "name": "Money Coach",
+   "author": "Jon Rose",
+   "description": "A read-only money coach that warns you before overdrafts and helps you climb out of the red, one paycheck at a time.",
+   "url": "https://x.ai/bot/eeGEcZTwQzQ6XlYP7ypr2"
+  },
+  {
+   "id": "money-personal-finance-puMDRy6paXAwYkYBcJuQu",
+   "code": "puMDRy6paXAwYkYBcJuQu",
+   "name": "Money Desk",
+   "author": "Zac Forristall",
+   "description": "Read-only personal finance desk for cash, debts, bills, subscriptions, investments and net worth; can share a joint payoff plan with a partner's bot via Sheets.",
+   "url": "https://x.ai/bot/puMDRy6paXAwYkYBcJuQu"
+  },
+  {
+   "id": "money-personal-finance-XjfLn_WyeGXzwHjPLL6jW",
+   "code": "XjfLn_WyeGXzwHjPLL6jW",
+   "name": "Money Finder",
+   "author": "Substantiate",
+   "description": "Finds money you're owed, like class action settlements, FTC refunds, lost 401(k)s, and forgotten balances in your email, and files honest claims.",
+   "url": "https://x.ai/bot/XjfLn_WyeGXzwHjPLL6jW"
+  },
+  {
+   "id": "money-personal-finance-o8dNMmwvVg63eiUlySkN1",
+   "code": "o8dNMmwvVg63eiUlySkN1",
+   "name": "Money Finder",
+   "author": "@josephscottelli",
+   "description": "Finds money you're owed (unclaimed property, refunds, lost retirement accounts, class-action settlements) and helps you claim it for free.",
+   "url": "https://x.ai/bot/o8dNMmwvVg63eiUlySkN1"
+  },
+  {
+   "id": "money-personal-finance-HSkw45MjOQmesPwYsnK9P",
+   "code": "HSkw45MjOQmesPwYsnK9P",
+   "name": "Money Finder",
+   "author": "Nate Odell",
+   "description": "Finds money that's already yours: unclaimed property, refunds, legit settlements, forgotten subscriptions, bills you…",
+   "url": "https://x.ai/bot/HSkw45MjOQmesPwYsnK9P"
+  },
+  {
+   "id": "money-personal-finance-eeAOFag3rSVyyXSVazka8",
+   "code": "eeAOFag3rSVyyXSVazka8",
+   "name": "Money Glance",
+   "author": "edmundo ponce",
+   "description": "Read-only spending visibility from your bank and card feeds (plus X Money): categorizes, flags month-over-month jumps and forgotten subscriptions.",
+   "url": "https://x.ai/bot/eeAOFag3rSVyyXSVazka8"
+  },
+  {
+   "id": "money-personal-finance-fk6hOQ-WN28u8dxntUWsC",
+   "code": "fk6hOQ-WN28u8dxntUWsC",
+   "name": "Money Machine",
+   "author": "Konrad Kern",
+   "description": "Finds and builds new legal side-income streams for you, such as ebooks, video courses, small apps and landing pages…",
+   "url": "https://x.ai/bot/fk6hOQ-WN28u8dxntUWsC"
+  },
+  {
+   "id": "money-personal-finance-g7_5lr_dVweRUirGbbEDL",
+   "code": "g7_5lr_dVweRUirGbbEDL",
+   "name": "Money Magnet",
+   "author": "Dario Dulovic",
+   "description": "Finds unclaimed property and class-action settlement money owed to you and helps you file the official claims for free, only with your confirmation.",
+   "url": "https://x.ai/bot/g7_5lr_dVweRUirGbbEDL"
+  },
+  {
+   "id": "money-personal-finance-KfiGbaCO0HLqoRfwi4V2H",
+   "code": "KfiGbaCO0HLqoRfwi4V2H",
+   "name": "Money Maker Bot",
+   "author": "Michael",
+   "description": "Looks for legal ways to make money. First run installs agentself and a wallet, then hunts opportunities.",
+   "url": "https://x.ai/bot/KfiGbaCO0HLqoRfwi4V2H"
+  },
+  {
+   "id": "money-personal-finance-k6lmP0975z3GfVpJiyN5D",
+   "code": "k6lmP0975z3GfVpJiyN5D",
+   "name": "Money Minute",
+   "author": "prorookiegamer",
+   "description": "One-minute daily spending log with an optional weekly limit and an 8pm nudge when the day is unrecorded.",
+   "url": "https://x.ai/bot/k6lmP0975z3GfVpJiyN5D"
+  },
+  {
+   "id": "money-personal-finance-wxv8RwlvjYbygnOdWdB4y",
+   "code": "wxv8RwlvjYbygnOdWdB4y",
+   "name": "Money Test Lab",
+   "author": "John Atkinson III",
+   "description": "Finds and tests near-$0 ways to earn real money using the bots and accounts you already have, one cheap test at a time…",
+   "url": "https://x.ai/bot/wxv8RwlvjYbygnOdWdB4y"
+  },
+  {
+   "id": "money-personal-finance-5Jph3pVZrvltgoe5lSx_z",
+   "code": "5Jph3pVZrvltgoe5lSx_z",
+   "name": "Monty Carlo (NFL Simulator)",
+   "author": "Randy Daniel",
+   "description": "Answers NFL matchup questions from gangsta.sh simulations with win odds over 10,000 sims and player-level projections, and needs a gangsta.sh subscription.",
+   "url": "https://x.ai/bot/5Jph3pVZrvltgoe5lSx_z"
+  },
+  {
+   "id": "money-personal-finance-aBkdS0Duc24Hz7MvNm7W5",
+   "code": "aBkdS0Duc24Hz7MvNm7W5",
+   "name": "Mr. Dufrain",
+   "author": "Wagmoo Winterhoof",
+   "description": "Personal accountant bot. Tracks money, tax, and cash flow, watches bills so nothing bounces, and works a payday…",
+   "url": "https://x.ai/bot/aBkdS0Duc24Hz7MvNm7W5"
+  },
+  {
+   "id": "money-personal-finance-abkds0duc24hz7mvnm7w5",
+   "code": "abkds0duc24hz7mvnm7w5",
+   "name": "Mr. Dufrain",
+   "author": "Wagmoo",
+   "description": "Personal accountant bot.",
+   "url": "https://x.ai/bot/abkds0duc24hz7mvnm7w5"
+  },
+  {
+   "id": "money-personal-finance-1gepkjYj4Ogl2nKxgopZV",
+   "code": "1gepkjYj4Ogl2nKxgopZV",
+   "name": "Mr. Finance",
+   "author": "Jonathan Souza",
+   "description": "A read-only portfolio advisor that watches your holdings for large institutional flows, risk, and thesis breaks, and sends clear, charted alerts.",
+   "url": "https://x.ai/bot/1gepkjYj4Ogl2nKxgopZV"
+  },
+  {
+   "id": "money-personal-finance-U-9rdbwRvugphOrC58Ph0",
+   "code": "U-9rdbwRvugphOrC58Ph0",
+   "name": "Mr. Scamander",
+   "author": "Steven Daniels",
+   "description": "A personal CFO for someone rebuilding money habits: tracks cash and debt, curbs impulse spend, protects food…",
+   "url": "https://x.ai/bot/U-9rdbwRvugphOrC58Ph0"
+  },
+  {
+   "id": "money-personal-finance-PHDJvQ4Zi_2rjLzrsB3mo",
+   "code": "PHDJvQ4Zi_2rjLzrsB3mo",
+   "name": "Ms. Reviewenstein",
+   "author": "Jonathan Souza",
+   "description": "Peer-critique bot for a multi-agent desk: reviews teammates' big calls (workflow, architecture, spend, skills) for up to 3 rounds before they ship.",
+   "url": "https://x.ai/bot/PHDJvQ4Zi_2rjLzrsB3mo"
+  },
+  {
+   "id": "money-personal-finance-b1sX0rVzUMR_flfqmD1ZR",
+   "code": "b1sX0rVzUMR_flfqmD1ZR",
+   "name": "Musk Mode",
+   "author": "Bennett Production",
+   "description": "First-principles technical cofounder: checks an idea's physics, finds the bottleneck, designs the cheapest test and says straight whether it can make money.",
+   "url": "https://x.ai/bot/b1sX0rVzUMR_flfqmD1ZR"
+  },
+  {
+   "id": "money-personal-finance-zIYlNQf-bZphORYjo8oEp",
+   "code": "zIYlNQf-bZphORYjo8oEp",
+   "name": "My First Budget Bot",
+   "author": "TrevorGilman",
+   "description": "A young adult's first money coach: builds and maintains a simple monthly budget for living on their own (rent, bills…",
+   "url": "https://x.ai/bot/zIYlNQf-bZphORYjo8oEp"
+  },
+  {
+   "id": "money-personal-finance-cO_Eyf-3dMnc6eNiB4vMq",
+   "code": "cO_Eyf-3dMnc6eNiB4vMq",
+   "name": "NFL Dual-Rail Prop Desk",
+   "author": "Niko P",
+   "description": "Quantitative NFL player-prop analyst for Robinhood Prediction Markets and Kalshi native.",
+   "url": "https://x.ai/bot/cO_Eyf-3dMnc6eNiB4vMq"
+  },
+  {
+   "id": "money-personal-finance-EIqxCG4vhOtrWV7aLMRGe",
+   "code": "EIqxCG4vhOtrWV7aLMRGe",
+   "name": "Net Worth Page",
+   "author": "Thuong P. Nguyen",
+   "description": "Your net worth on one page: bank, brokerage and crypto balances minus debts, with optional daily refresh. Read-only; never moves money or asks for passwords.",
+   "url": "https://x.ai/bot/EIqxCG4vhOtrWV7aLMRGe"
+  },
+  {
+   "id": "money-personal-finance-6R04SyIqh-omLtqYD7FCy",
+   "code": "6R04SyIqh-omLtqYD7FCy",
+   "name": "Nigerian Prince Bot",
+   "author": "@suddenlyjon",
+   "description": "Nigerian Prince tip-jar. One ask. Official X Money to @suddenlyjon, $0.69+. Built by @SuddenlyJon.",
+   "url": "https://x.ai/bot/6R04SyIqh-omLtqYD7FCy"
+  },
+  {
+   "id": "money-personal-finance-ljvkTtXU7Qd20efplT1KN",
+   "code": "ljvkTtXU7Qd20efplT1KN",
+   "name": "Occasion Keeper",
+   "author": "Joseph Snyder",
+   "description": "Remembers the birthdays and anniversaries that matter, reminds you two weeks ahead, suggests gifts by budget…",
+   "url": "https://x.ai/bot/ljvkTtXU7Qd20efplT1KN"
+  },
+  {
+   "id": "money-personal-finance-zzltcOxztGiMzbJ250xC5",
+   "code": "zzltcOxztGiMzbJ250xC5",
+   "name": "Open Enrollment Comp",
+   "author": "Ramp Capital",
+   "description": "Upload open-enrollment documents from your employer, a spouse's, the ACA Marketplace or Medicare and get a clear, math-backed plan comparison.",
+   "url": "https://x.ai/bot/zzltcOxztGiMzbJ250xC5"
+  },
+  {
+   "id": "money-personal-finance-cNdrAkNe7AEm39oOIWqL_",
+   "code": "cNdrAkNe7AEm39oOIWqL_",
+   "name": "Oracle Fusion Payables Invoice Bot by Shiv Kumar",
+   "author": "Shiv Kumar",
+   "description": "Helps with Oracle Fusion Cloud Payables: look up Financials REST APIs (FARFA), create and validate supplier invoices, and walk invoice workflows against.",
+   "url": "https://x.ai/bot/cNdrAkNe7AEm39oOIWqL_"
+  },
+  {
+   "id": "money-personal-finance-gDBMpvw8W4H3KqliukLty",
+   "code": "gDBMpvw8W4H3KqliukLty",
+   "name": "OweNo",
+   "author": "@suddenlyjon",
+   "description": "Pay-it-down coach that starts from statements and opens the bank only after you say yes.",
+   "url": "https://x.ai/bot/gDBMpvw8W4H3KqliukLty"
+  },
+  {
+   "id": "money-personal-finance-bNpqlSmodmqq6SwjGfW2L",
+   "code": "bNpqlSmodmqq6SwjGfW2L",
+   "name": "PDF to Excel",
+   "author": "Kay",
+   "description": "Turns bank and card statement PDFs into clean Excel spreadsheets or QuickBooks Online and Xero import files, and checks…",
+   "url": "https://x.ai/bot/bNpqlSmodmqq6SwjGfW2L"
+  },
+  {
+   "id": "money-personal-finance-s59facc90a46a8b4f59da",
+   "code": "s59facc90a46a8b4f59da",
+   "name": "Paid Media",
+   "author": "SpaceX",
+   "description": "Pulls live channel and campaign data, Slacks a recommended reallocation against your monthly budget, and holds for your approval before making adjustments.",
+   "url": "https://x.ai/bot/s59facc90a46a8b4f59da"
+  },
+  {
+   "id": "money-personal-finance-s45471f3a8af234c13047",
+   "code": "s45471f3a8af234c13047",
+   "name": "Paid Media Creative Strategist",
+   "author": "SpaceX",
+   "description": "Spot early creative winners before they're obvious. Writes a sharp why-it-works hypothesis and proposes the next test. No invented metrics.",
+   "url": "https://x.ai/bot/s45471f3a8af234c13047"
+  },
+  {
+   "id": "money-personal-finance-x42lRBd-njEddcsdVXcvb",
+   "code": "x42lRBd-njEddcsdVXcvb",
+   "name": "Pay Stub Checker",
+   "author": "Sam E",
+   "description": "Snap, upload, or paste your pay stub and get every line checked, compared with your last paycheck, and flagged in plain…",
+   "url": "https://x.ai/bot/x42lRBd-njEddcsdVXcvb"
+  },
+  {
+   "id": "money-personal-finance-xFWEqzh1pZnYL6DiZwYYN",
+   "code": "xFWEqzh1pZnYL6DiZwYYN",
+   "name": "Payday Pilot",
+   "author": "@suddenlyjon",
+   "description": "Cash floor coach that keeps checking your balance stays above a floor until payday.",
+   "url": "https://x.ai/bot/xFWEqzh1pZnYL6DiZwYYN"
+  },
+  {
+   "id": "money-personal-finance-2Kp147ZrxyeIV3JJfQy1X",
+   "code": "2Kp147ZrxyeIV3JJfQy1X",
+   "name": "Payday Pilot",
+   "author": "@suddenlyjon",
+   "description": "Keeps your everyday checking above a floor until payday by reserving every bill due first, then gives you one short…",
+   "url": "https://x.ai/bot/2Kp147ZrxyeIV3JJfQy1X"
+  },
+  {
+   "id": "money-personal-finance-xYeE15lS-qomwX0uWkqYJ",
+   "code": "xYeE15lS-qomwX0uWkqYJ",
+   "name": "Penny",
+   "author": "Jaxon Wright",
+   "description": "Finds every subscription you're paying for across your email and bank accounts, flags the ones you probably don't want anymore.",
+   "url": "https://x.ai/bot/xYeE15lS-qomwX0uWkqYJ"
+  },
+  {
+   "id": "money-personal-finance-VG1ONv1ds6sUsPWG3A8Ck",
+   "code": "VG1ONv1ds6sUsPWG3A8Ck",
+   "name": "Penny",
+   "author": "Caitlin",
+   "description": "Warm, practical personal finance assistant: bill reminders, a weekly money check-in and help catching up on past-due bills. Never pays or contacts anyone.",
+   "url": "https://x.ai/bot/VG1ONv1ds6sUsPWG3A8Ck"
+  },
+  {
+   "id": "money-personal-finance-WV324ip4rhNCbkRyhEmdH",
+   "code": "WV324ip4rhNCbkRyhEmdH",
+   "name": "Personal CFO",
+   "author": "Hank Jackson",
+   "description": "A plain-language personal CFO that tracks your budget, cash flow and the stocks you follow, with a weekday market brief…",
+   "url": "https://x.ai/bot/WV324ip4rhNCbkRyhEmdH"
+  },
+  {
+   "id": "money-personal-finance-aDCypdpubEzCy_lvlLu3-",
+   "code": "aDCypdpubEzCy_lvlLu3-",
+   "name": "Personal CFO",
+   "author": "Peter O'Connell",
+   "description": "A read-only personal CFO that links your accounts through Plaid and keeps your net worth, allocation, cash flow, debts and alerts current.",
+   "url": "https://x.ai/bot/aDCypdpubEzCy_lvlLu3-"
+  },
+  {
+   "id": "money-personal-finance-XHzF-pCl7IYLf05_7vDFU",
+   "code": "XHzF-pCl7IYLf05_7vDFU",
+   "name": "Personal CFO Lite",
+   "author": "fabivelosa",
+   "description": "Analyses bank CSV for spending, bills, lifestyle creep, and cash flow.",
+   "url": "https://x.ai/bot/XHzF-pCl7IYLf05_7vDFU"
+  },
+  {
+   "id": "money-personal-finance-QUfBYJFLQCG_iqldjcI_z",
+   "code": "QUfBYJFLQCG_iqldjcI_z",
+   "name": "Personal Finance Assistant",
+   "author": "Alex Cantu",
+   "description": "Personal finance assistant that categorizes EveryDollar spending, looks up Amazon orders and Gmail receipts when needed, and coaches on discretionary.",
+   "url": "https://x.ai/bot/QUfBYJFLQCG_iqldjcI_z"
+  },
+  {
+   "id": "money-personal-finance-xnGiLtDsSgJgHI6oeOr4C",
+   "code": "xnGiLtDsSgJgHI6oeOr4C",
+   "name": "Personal Finance Bot",
+   "author": "Kevin Chau",
+   "description": "A read-only personal finance assistant for balances, spending, bills, investments, and net worth.",
+   "url": "https://x.ai/bot/xnGiLtDsSgJgHI6oeOr4C"
+  },
+  {
+   "id": "money-personal-finance-VSuVgsUg3Muh0juXZBcwB",
+   "code": "VSuVgsUg3Muh0juXZBcwB",
+   "name": "PhoneBot",
+   "author": "Sherlock",
+   "description": "Helps people in Thailand cut their phone bill: send your bill and it finds the cheapest plan for your real usage and how many baht you'd save.",
+   "url": "https://x.ai/bot/VSuVgsUg3Muh0juXZBcwB"
+  },
+  {
+   "id": "money-personal-finance-HiUIK2BrgTeS96bvgG_hN",
+   "code": "HiUIK2BrgTeS96bvgG_hN",
+   "name": "PlatinumGenie",
+   "author": "Carlos Rivero",
+   "description": "Pulls your Amex Platinum activity every month and sends a PDF dashboard of which credits you've used, what's left and what expires soon.",
+   "url": "https://x.ai/bot/HiUIK2BrgTeS96bvgG_hN"
+  },
+  {
+   "id": "money-personal-finance-cbULQqhzmOeeJ9GT2DX7L",
+   "code": "cbULQqhzmOeeJ9GT2DX7L",
+   "name": "Price Error Agent",
+   "author": "Yoda",
+   "description": "Hunts accidental misprices on big Australian retailers and cheap AU-origin flights.",
+   "url": "https://x.ai/bot/cbULQqhzmOeeJ9GT2DX7L"
+  },
+  {
+   "id": "money-personal-finance-QBCr0FCWh1wFikc-IsLZX",
+   "code": "QBCr0FCWh1wFikc-IsLZX",
+   "name": "Proof-of-Run",
+   "author": "Dan Ferden",
+   "description": "Each routine run leaves a checkable receipt and a weekly grade flags gaps, so you catch usage spikes and runs that never really happened.",
+   "url": "https://x.ai/bot/QBCr0FCWh1wFikc-IsLZX"
+  },
+  {
+   "id": "money-personal-finance-TYiFIZd7djkcCy_wdymgv",
+   "code": "TYiFIZd7djkcCy_wdymgv",
+   "name": "Prospector SR360",
+   "author": "alodie10",
+   "description": "Asistente comercial para una guía local de comercios. Prospecta negocios fuertes en Google Maps (fotos + WhatsApp + redes), arma fichas básicas gratis y.",
+   "url": "https://x.ai/bot/TYiFIZd7djkcCy_wdymgv"
+  },
+  {
+   "id": "money-personal-finance-JOeuvpFg4v2VAuYX8H0UM",
+   "code": "JOeuvpFg4v2VAuYX8H0UM",
+   "name": "Quartermaster",
+   "author": "James",
+   "description": "A household budget and credit-card assistant that runs a lean, category-only zero-sum budget in Google Sheets…",
+   "url": "https://x.ai/bot/JOeuvpFg4v2VAuYX8H0UM"
+  },
+  {
+   "id": "money-personal-finance-CuiaMJ5VcSvZnMAoYf6n6",
+   "code": "CuiaMJ5VcSvZnMAoYf6n6",
+   "name": "Raise",
+   "author": "Sentinel Architech",
+   "description": "A warm, honest fundraiser steward. It watches your crowdfunding page, drafts daily share posts with memes, and never posts or touches money without…",
+   "url": "https://x.ai/bot/CuiaMJ5VcSvZnMAoYf6n6"
+  },
+  {
+   "id": "money-personal-finance-1Z25aul0vJIIGXqJf1E1D",
+   "code": "1Z25aul0vJIIGXqJf1E1D",
+   "name": "Rapid Response Desk",
+   "author": "unknown",
+   "description": "Routes urgent inbound asks into a short action queue for fast replies.",
+   "url": "https://x.ai/bot/1Z25aul0vJIIGXqJf1E1D"
+  },
+  {
+   "id": "money-personal-finance-n9bmzRDFDXaRxDc5e8G-h",
+   "code": "n9bmzRDFDXaRxDc5e8G-h",
+   "name": "Receipt & Expense Desk RECEIPT-READY",
+   "author": "Cypher",
+   "description": "Turns receipt photos or pasted text into a categorized expense report.",
+   "url": "https://x.ai/bot/n9bmzRDFDXaRxDc5e8G-h"
+  },
+  {
+   "id": "money-personal-finance-n9bmzrdfdxarxdc5e8g-h",
+   "code": "n9bmzrdfdxarxdc5e8g-h",
+   "name": "Receipt & Expense Desk RECEIPT-READY",
+   "author": "Cypher Monkey",
+   "description": "Turn receipt photos or pasted receipts into a categorized, reconciled expense report with policy flags and totals.",
+   "url": "https://x.ai/bot/n9bmzrdfdxarxdc5e8g-h"
+  },
+  {
+   "id": "money-personal-finance-YgI9ZyckEeovP7nP917xR",
+   "code": "YgI9ZyckEeovP7nP917xR",
+   "name": "Receipt Capture",
+   "author": "B Kash",
+   "description": "Captures receipts from photos, PDFs, and email, then records clean invoice and expense rows in Notion or Drive.",
+   "url": "https://x.ai/bot/YgI9ZyckEeovP7nP917xR"
+  },
+  {
+   "id": "money-personal-finance-BczDaJtYAQDX4A-TunPxx",
+   "code": "BczDaJtYAQDX4A-TunPxx",
+   "name": "Receipt Catcher",
+   "author": "Mike Mosley",
+   "description": "Pulls receipt and invoice emails into a clean expense draft (vendor, date, amount).",
+   "url": "https://x.ai/bot/BczDaJtYAQDX4A-TunPxx"
+  },
+  {
+   "id": "money-personal-finance-3ZpWwU-KhU953eArYJ8ST",
+   "code": "3ZpWwU-KhU953eArYJ8ST",
+   "name": "Receipt Keeper",
+   "author": "Kent Weber",
+   "description": "Keeps every receipt in your own spreadsheet: snap a photo or forward an email and it logs merchant, date, total, tax, card and category.",
+   "url": "https://x.ai/bot/3ZpWwU-KhU953eArYJ8ST"
+  },
+  {
+   "id": "money-personal-finance-z_Oh0kmCGuCMjleWj4TZj",
+   "code": "z_Oh0kmCGuCMjleWj4TZj",
+   "name": "Receipt Price-Drop Checker",
+   "author": "DIG",
+   "description": "Snap a receipt and it checks whether anything you bought dropped in price, then reminds you to claim the adjustment before the window closes.",
+   "url": "https://x.ai/bot/z_Oh0kmCGuCMjleWj4TZj"
+  },
+  {
+   "id": "money-personal-finance-qod4CrNQBlDIMm5wFYVQp",
+   "code": "qod4CrNQBlDIMm5wFYVQp",
+   "name": "Receipt Scanner / Expense Tracking",
+   "author": "Lime Unfiltered",
+   "description": "Forward a receipt and it becomes a row in your expense sheet.",
+   "url": "https://x.ai/bot/qod4CrNQBlDIMm5wFYVQp"
+  },
+  {
+   "id": "money-personal-finance-qod4crnqbldimm5wfyvqp",
+   "code": "qod4crnqbldimm5wfyvqp",
+   "name": "Receipt Scanner / Expense Tracking",
+   "author": "Lime",
+   "description": "Logs emailed receipts into a Google Sheet and Drive folder.",
+   "url": "https://x.ai/bot/qod4crnqbldimm5wfyvqp"
+  },
+  {
+   "id": "money-personal-finance-8K-RulLngtKsXJEDkA-mJ",
+   "code": "8K-RulLngtKsXJEDkA-mJ",
+   "name": "Redtape",
+   "author": "Terri",
+   "description": "Federal contracting: a decade of prep, then a 30-day sprint to get your catalog live on Advantage.",
+   "url": "https://x.ai/bot/8K-RulLngtKsXJEDkA-mJ"
+  },
+  {
+   "id": "money-personal-finance-vwPidRQz6aaEzLWOnU6Tz",
+   "code": "vwPidRQz6aaEzLWOnU6Tz",
+   "name": "Remorse Timer",
+   "author": "Andy",
+   "description": "Cancel/pause/keep for recurring charges with sunk-cost callouts.",
+   "url": "https://x.ai/bot/vwPidRQz6aaEzLWOnU6Tz"
+  },
+  {
+   "id": "money-personal-finance--9hlUkQbsgE7oUyQvUPum",
+   "code": "-9hlUkQbsgE7oUyQvUPum",
+   "name": "Renewals Invoice Bot",
+   "author": "Neessam",
+   "description": "Clears renewals and invoice reminders on its own computer within a hard weekly spend ceiling.",
+   "url": "https://x.ai/bot/-9hlUkQbsgE7oUyQvUPum"
+  },
+  {
+   "id": "money-personal-finance-IDFtkYcsl7MpfdfTx09RT",
+   "code": "IDFtkYcsl7MpfdfTx09RT",
+   "name": "RevenueDog",
+   "author": "Lex Tang",
+   "description": "Wake up to yesterday's subscription numbers and one fix worth trying.",
+   "url": "https://x.ai/bot/IDFtkYcsl7MpfdfTx09RT"
+  },
+  {
+   "id": "money-personal-finance-g4hvAEhebCPzqwsdPBGu4",
+   "code": "g4hvAEhebCPzqwsdPBGu4",
+   "name": "Review This",
+   "author": "dogenorway dogenorway",
+   "description": "Reviews the exact product you name. Weighs lab tests, retailer ratings, and owner forums against price and fit…",
+   "url": "https://x.ai/bot/g4hvAEhebCPzqwsdPBGu4"
+  },
+  {
+   "id": "money-personal-finance-eK9lF3ZkDKI6-4gqDoUfp",
+   "code": "eK9lF3ZkDKI6-4gqDoUfp",
+   "name": "Risk Controller",
+   "author": "Avid",
+   "description": "Pre-live risk gate reviewing strategies and backtests for drawdown, leverage, tail risk and bias.",
+   "url": "https://x.ai/bot/eK9lF3ZkDKI6-4gqDoUfp"
+  },
+  {
+   "id": "money-personal-finance--5hh_I52qTUbDO2ud89NC",
+   "code": "-5hh_I52qTUbDO2ud89NC",
+   "name": "Roommate Money Court",
+   "author": "Andy Mccutcheon",
+   "description": "For housemates mid-money fight: get a fair-split card and who-owes-whom from the numbers only—gaps become questions…",
+   "url": "https://x.ai/bot/-5hh_I52qTUbDO2ud89NC"
+  },
+  {
+   "id": "money-personal-finance-UXBrZP3ZZJYUIFJLf1SkV",
+   "code": "UXBrZP3ZZJYUIFJLf1SkV",
+   "name": "SG Cards Guide",
+   "author": "Varun Parakh",
+   "description": "Information-only guide to Singapore credit cards, answering from an open, bank-cited dataset.",
+   "url": "https://x.ai/bot/UXBrZP3ZZJYUIFJLf1SkV"
+  },
+  {
+   "id": "money-personal-finance-171bkwBAjpc2eJgdOyAPL",
+   "code": "171bkwBAjpc2eJgdOyAPL",
+   "name": "Safe to Spend",
+   "author": "Q Da Boss",
+   "description": "Every time a brand or client pays you, Safe to Spend tells you what to set aside for taxes and what's safe to spend…",
+   "url": "https://x.ai/bot/171bkwBAjpc2eJgdOyAPL"
+  },
+  {
+   "id": "money-personal-finance-D_VGPLc2zfU9WBMrAcHZO",
+   "code": "D_VGPLc2zfU9WBMrAcHZO",
+   "name": "Scope Cop",
+   "author": "Andy Mccutcheon",
+   "description": "For homeowners about to “just do a small reno”: lock must / later / cut before money moves—with creep flags…",
+   "url": "https://x.ai/bot/D_VGPLc2zfU9WBMrAcHZO"
+  },
+  {
+   "id": "money-personal-finance-VslQPtPjI2tgGsskQOhYP",
+   "code": "VslQPtPjI2tgGsskQOhYP",
+   "name": "Send Chad Money",
+   "author": "Chad",
+   "description": "Ideas to get perfect strangers to send you money.",
+   "url": "https://x.ai/bot/VslQPtPjI2tgGsskQOhYP"
+  },
+  {
+   "id": "money-personal-finance-eSbC0EjdL3r6XOvB4lhOd",
+   "code": "eSbC0EjdL3r6XOvB4lhOd",
+   "name": "Settlement Scout",
+   "author": "cokeandrice.akita.algo",
+   "description": "Settlement Scout helps you recover money you actually qualify for: class-action settlements, overdue refunds, and more.",
+   "url": "https://x.ai/bot/eSbC0EjdL3r6XOvB4lhOd"
+  },
+  {
+   "id": "money-personal-finance-iNwf-lMJ_yNe5kZLETztx",
+   "code": "iNwf-lMJ_yNe5kZLETztx",
+   "name": "Sevvy",
+   "author": "Lorenz",
+   "description": "Bookkeeping assistant for sevdesk. On setup it asks which receipt sources to connect.",
+   "url": "https://x.ai/bot/iNwf-lMJ_yNe5kZLETztx"
+  },
+  {
+   "id": "money-personal-finance-mf4CNJumVJMSTlz4-DALz",
+   "code": "mf4CNJumVJMSTlz4-DALz",
+   "name": "Shiba Ono",
+   "author": "Ξ",
+   "description": "Watches Grok Bot credits and everyday money, flags spend spikes early; never moves money.",
+   "url": "https://x.ai/bot/mf4CNJumVJMSTlz4-DALz"
+  },
+  {
+   "id": "money-personal-finance-V-ddYBdTCYNFbaEEZEFh5",
+   "code": "V-ddYBdTCYNFbaEEZEFh5",
+   "name": "Side Hustle Builder",
+   "author": "Hank Jackson",
+   "description": "Turns one side-business idea into a small, honest, running venture: idea score, 30-day launch plan, drafts and weekly scorecards. You approve every spend.",
+   "url": "https://x.ai/bot/V-ddYBdTCYNFbaEEZEFh5"
+  },
+  {
+   "id": "money-personal-finance-kliqGAIIchvmiGGc3r2sv",
+   "code": "kliqGAIIchvmiGGc3r2sv",
+   "name": "Side Hustle Sniffer",
+   "author": "@Campdirtybird",
+   "description": "The anti-guru side hustle finder: no courses, no hype, just scored ideas with proof that people pay.",
+   "url": "https://x.ai/bot/kliqGAIIchvmiGGc3r2sv"
+  },
+  {
+   "id": "money-personal-finance-50a-UaeqVWBnrZICU7Jti",
+   "code": "50a-UaeqVWBnrZICU7Jti",
+   "name": "Sittawhile",
+   "author": "Michael",
+   "description": "A warm companion for people who spend a lot of time alone: short daily visits in a voice you choose.",
+   "url": "https://x.ai/bot/50a-UaeqVWBnrZICU7Jti"
+  },
+  {
+   "id": "money-personal-finance-fEBImi9N-_B_LMW59m2nM",
+   "code": "fEBImi9N-_B_LMW59m2nM",
+   "name": "SolvScore",
+   "author": "Shawn Lippert",
+   "description": "A live credit desk for AI agents. It pulls trust scores, credit limits, APRs, and real underwriting decisions from SolvScore before you pay, hire.",
+   "url": "https://x.ai/bot/fEBImi9N-_B_LMW59m2nM"
+  },
+  {
+   "id": "money-personal-finance-Smm7grgQ2s0Cv9xqDOqD4",
+   "code": "Smm7grgQ2s0Cv9xqDOqD4",
+   "name": "Speedy",
+   "author": "דניאל מור",
+   "description": "Stop waiting on hold. Speedy places the call through Speedy AI, gets to the right representative, waits on the line…",
+   "url": "https://x.ai/bot/Smm7grgQ2s0Cv9xqDOqD4"
+  },
+  {
+   "id": "money-personal-finance-2yC0HrEtcJe-XWxMO-4-M",
+   "code": "2yC0HrEtcJe-XWxMO-4-M",
+   "name": "Spenny",
+   "author": "Wagmoo",
+   "description": "Helps research comfort purchases, pick the best products, and spread them across a manageable budget.",
+   "url": "https://x.ai/bot/2yC0HrEtcJe-XWxMO-4-M"
+  },
+  {
+   "id": "money-personal-finance-IbiO4Zxh5PecNXbMRnx64",
+   "code": "IbiO4Zxh5PecNXbMRnx64",
+   "name": "Squeeze",
+   "author": "Procount",
+   "description": "A money-recovery assistant that chases refunds and price adjustments, audits subscriptions and fees, and hunts free products, samples and sign-up…",
+   "url": "https://x.ai/bot/IbiO4Zxh5PecNXbMRnx64"
+  },
+  {
+   "id": "money-personal-finance-UFlRrCOYg0CbaGwAzHdtO",
+   "code": "UFlRrCOYg0CbaGwAzHdtO",
+   "name": "Startsy",
+   "author": "The Contextian",
+   "description": "Hunts X and the web for startup credit programs that only need an application, with no funding, accelerator, or referral required.",
+   "url": "https://x.ai/bot/UFlRrCOYg0CbaGwAzHdtO"
+  },
+  {
+   "id": "money-personal-finance-xjEH-3GGxRroI0RK5nKf7",
+   "code": "xjEH-3GGxRroI0RK5nKf7",
+   "name": "Stay Scout",
+   "author": "Doug Willbanks",
+   "description": "Finds places to stay that fit your budget and watches nightly rates until you book, pinging you only when a price really drops.",
+   "url": "https://x.ai/bot/xjEH-3GGxRroI0RK5nKf7"
+  },
+  {
+   "id": "money-personal-finance-WNJl5y33yqdOp3CnhR4-k",
+   "code": "WNJl5y33yqdOp3CnhR4-k",
+   "name": "Sterling",
+   "author": "FSD Pilot (Unsupervised)",
+   "description": "A calm, slightly dry money teammate for personal spending, bills, balances, cards, and leftover cash.",
+   "url": "https://x.ai/bot/WNJl5y33yqdOp3CnhR4-k"
+  },
+  {
+   "id": "money-personal-finance-_XFuh52J-TXU1pLEvWxYs",
+   "code": "_XFuh52J-TXU1pLEvWxYs",
+   "name": "Steward",
+   "author": "Samuel Riddle",
+   "description": "One-stop finance Controller for first-principles, full-automation accounting.",
+   "url": "https://x.ai/bot/_XFuh52J-TXU1pLEvWxYs"
+  },
+  {
+   "id": "money-personal-finance-Ot1gCNj6aSVmMu2RBFmTv",
+   "code": "Ot1gCNj6aSVmMu2RBFmTv",
+   "name": "Stochastic Indicator Bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Finds Stochastic oscillator setups on your watchlist and writes a finished order ticket for each one.",
+   "url": "https://x.ai/bot/Ot1gCNj6aSVmMu2RBFmTv"
+  },
+  {
+   "id": "money-personal-finance-VN-2VyKG5EWKC7h4Qhhke",
+   "code": "VN-2VyKG5EWKC7h4Qhhke",
+   "name": "Stripe Accountant",
+   "author": "Daniel Petrov",
+   "description": "Reconciles Stripe payments, invoices, and balances for your accountant — digests, Excel workbooks, and a monthly check that the books tie.",
+   "url": "https://x.ai/bot/VN-2VyKG5EWKC7h4Qhhke"
+  },
+  {
+   "id": "money-personal-finance-kHe1SSj9_Le-TTJgfgNnH",
+   "code": "kHe1SSj9_Le-TTJgfgNnH",
+   "name": "Subscription Auditor",
+   "author": "Sushant K",
+   "description": "Finds what you pay for in subscriptions from your email receipts or a statement you share, prices each against a public catalog.",
+   "url": "https://x.ai/bot/kHe1SSj9_Le-TTJgfgNnH"
+  },
+  {
+   "id": "money-personal-finance-sb36667ce9e1fdc00cfe7",
+   "code": "sb36667ce9e1fdc00cfe7",
+   "name": "Subscription Cleaner",
+   "author": "SpaceX",
+   "description": "Cut the noise you forgot about. Collates receipt and newsletter mail, suggests what to kill, and unsubscribes what you approve.",
+   "url": "https://x.ai/bot/sb36667ce9e1fdc00cfe7"
+  },
+  {
+   "id": "money-personal-finance-mAJFosTgk_BmdFi0IWObU",
+   "code": "mAJFosTgk_BmdFi0IWObU",
+   "name": "Subscription Detox",
+   "author": "Hoem Crypto",
+   "description": "Finds every subscription, hidden Apple charge and direct debit, shows what you spend each month, then cancels the ones you don't want for you.",
+   "url": "https://x.ai/bot/mAJFosTgk_BmdFi0IWObU"
+  },
+  {
+   "id": "money-personal-finance-hL-3EkQ2UDU8HdgYpDPga",
+   "code": "hL-3EkQ2UDU8HdgYpDPga",
+   "name": "Subscription Killer",
+   "author": "Unicode",
+   "description": "Finds recurring charges from Gmail receipts, lists them, and drafts cancellations for your yes.",
+   "url": "https://x.ai/bot/hL-3EkQ2UDU8HdgYpDPga"
+  },
+  {
+   "id": "money-personal-finance-2N4oNHRcE-gsXbKn9GcVE",
+   "code": "2N4oNHRcE-gsXbKn9GcVE",
+   "name": "Subscription Slayer",
+   "author": "Joseph Snyder",
+   "description": "Finds every recurring charge in your statements, flags price hikes and forgotten services, and drafts cancel…",
+   "url": "https://x.ai/bot/2N4oNHRcE-gsXbKn9GcVE"
+  },
+  {
+   "id": "money-personal-finance-mSCveO6dvPvJmBdsuBwsI",
+   "code": "mSCveO6dvPvJmBdsuBwsI",
+   "name": "Subscription Smasher",
+   "author": "ClawCall",
+   "description": "Finds your paid subscriptions in your email, asks which ones you still want, and cancels the rest by calling the company through ClawCall.",
+   "url": "https://x.ai/bot/mSCveO6dvPvJmBdsuBwsI"
+  },
+  {
+   "id": "money-personal-finance-ugwh5alsSP8J5UHhSYvDq",
+   "code": "ugwh5alsSP8J5UHhSYvDq",
+   "name": "Subscriptions",
+   "author": "Anthony C",
+   "description": "Finds every subscription you pay for across email and bank accounts, recommends what to keep or cancel, and warns you before renewals.",
+   "url": "https://x.ai/bot/ugwh5alsSP8J5UHhSYvDq"
+  },
+  {
+   "id": "money-personal-finance-FsAu5MGNNzsCynOCrR_zI",
+   "code": "FsAu5MGNNzsCynOCrR_zI",
+   "name": "Swipe Coach",
+   "author": "Bowie",
+   "description": "Read-only card coach on Grok Finance that tells you which card to tap, catches rewards left on the table, and tracks what its tips actually earned.",
+   "url": "https://x.ai/bot/FsAu5MGNNzsCynOCrR_zI"
+  },
+  {
+   "id": "money-personal-finance-abfx0_FhJ8G_mue5YWQxM",
+   "code": "abfx0_FhJ8G_mue5YWQxM",
+   "name": "Table Money",
+   "author": "Andrew Pocta",
+   "description": "Chases down invoices and refunds you never closed out, then drafts the follow-up without sending.",
+   "url": "https://x.ai/bot/abfx0_FhJ8G_mue5YWQxM"
+  },
+  {
+   "id": "money-personal-finance-H2J0Lap9NaVoHCz7uC_gv",
+   "code": "H2J0Lap9NaVoHCz7uC_gv",
+   "name": "Tally",
+   "author": "Michael",
+   "description": "Snap or forward any receipt and Tally files it into a Schedule C-style expense sheet and estimates your quarterly taxes.",
+   "url": "https://x.ai/bot/H2J0Lap9NaVoHCz7uC_gv"
+  },
+  {
+   "id": "money-personal-finance-tP0aHFvGZa8h8SYV4NGYP",
+   "code": "tP0aHFvGZa8h8SYV4NGYP",
+   "name": "The Legislator",
+   "author": "Jose Valdes",
+   "description": "Watchdog on new US federal bills and rules: alerts you when something that touches you moves, explains it plainly and helps draft letters and public comments.",
+   "url": "https://x.ai/bot/tP0aHFvGZa8h8SYV4NGYP"
+  },
+  {
+   "id": "money-personal-finance-fp3w8_QjKDlQy33Id4LF8",
+   "code": "fp3w8_QjKDlQy33Id4LF8",
+   "name": "Tokenomics",
+   "author": "Hans Prahl",
+   "description": "Paces a shared AI subscription usage pool so you don't run out, scores build ideas by payoff per usage point, and reports weekly on what usage bought.",
+   "url": "https://x.ai/bot/fp3w8_QjKDlQy33Id4LF8"
+  },
+  {
+   "id": "money-personal-finance-_CIeV4P17QVoxuaEyeiFZ",
+   "code": "_CIeV4P17QVoxuaEyeiFZ",
+   "name": "Tradey",
+   "author": "Farzad",
+   "description": "Autonomous short-term equity desk. North star: beat SPY on a dedicated brokerage cash account.",
+   "url": "https://x.ai/bot/_CIeV4P17QVoxuaEyeiFZ"
+  },
+  {
+   "id": "money-personal-finance-xBZ0SoblxcvebLT_fI0P7",
+   "code": "xBZ0SoblxcvebLT_fI0P7",
+   "name": "Trust Me Bro",
+   "author": "Edward Ashdown",
+   "description": "Checks any claim against Trust Me Bro's public evidence receipts from trustmebro.to and gives a plain verdict, key evidence and the receipt link.",
+   "url": "https://x.ai/bot/xBZ0SoblxcvebLT_fI0P7"
+  },
+  {
+   "id": "money-personal-finance--CjM4_uRs6sEGdfZfC5gv",
+   "code": "-CjM4_uRs6sEGdfZfC5gv",
+   "name": "Tuong Lu Kim",
+   "author": "Stephen Abbott",
+   "description": "Finds the less expensive route to the same result across your agent stack.",
+   "url": "https://x.ai/bot/-CjM4_uRs6sEGdfZfC5gv"
+  },
+  {
+   "id": "money-personal-finance-wT_QN-zqycu-aHPsdZMVc",
+   "code": "wT_QN-zqycu-aHPsdZMVc",
+   "name": "UGC bounty manager",
+   "author": "Colin McDermott",
+   "description": "Runs clipping and UGC bounties: briefs, review, owner-ready payout recommendations, cost per view.",
+   "url": "https://x.ai/bot/wT_QN-zqycu-aHPsdZMVc"
+  },
+  {
+   "id": "money-personal-finance-dP8GqGwcRv2waTtluguj6",
+   "code": "dP8GqGwcRv2waTtluguj6",
+   "name": "Unclaimed Money Finder",
+   "author": "Jeremy Mahoney",
+   "description": "Finds money that's owed to you, like state unclaimed property, old 401(k)s, IRS refunds, settlements, and deposits…",
+   "url": "https://x.ai/bot/dP8GqGwcRv2waTtluguj6"
+  },
+  {
+   "id": "money-personal-finance-mzY8PRsWQZCuKuTEFQteB",
+   "code": "mzY8PRsWQZCuKuTEFQteB",
+   "name": "Undercut",
+   "author": "Michael Heckert",
+   "description": "Drop in a bill to see what new customers pay near you, plus the exact script to get your price down. You make the call.",
+   "url": "https://x.ai/bot/mzY8PRsWQZCuKuTEFQteB"
+  },
+  {
+   "id": "money-personal-finance-ppyKGpiWQmGkXxWqbeyCL",
+   "code": "ppyKGpiWQmGkXxWqbeyCL",
+   "name": "UnmuteAmerica",
+   "author": "Jonah",
+   "description": "Personal civic advocate: finds your reps, checks registration and ballot, matches candidates to your views, tracks bills and votes. Nonpartisan, all 50 states.",
+   "url": "https://x.ai/bot/ppyKGpiWQmGkXxWqbeyCL"
+  },
+  {
+   "id": "money-personal-finance-Di1Pd3rXW3cxCcyUv-KdX",
+   "code": "Di1Pd3rXW3cxCcyUv-KdX",
+   "name": "Usage Budget Guard",
+   "author": "Jared M",
+   "description": "Keeps your bots from burning credits on simple tasks. Flags the routines that use the most and suggests cheaper settings.",
+   "url": "https://x.ai/bot/Di1Pd3rXW3cxCcyUv-KdX"
+  },
+  {
+   "id": "money-personal-finance-ZuZSjs5wHL_KkYaaDynqY",
+   "code": "ZuZSjs5wHL_KkYaaDynqY",
+   "name": "Usage Forecaster",
+   "author": "omer barrr",
+   "description": "Forecasts how much of your Grok or xAI subscription's weekly usage pool you'll use before the reset, scans your agents' schedules.",
+   "url": "https://x.ai/bot/ZuZSjs5wHL_KkYaaDynqY"
+  },
+  {
+   "id": "money-personal-finance-w3yzHuZdi-x0I-7j7sP9H",
+   "code": "w3yzHuZdi-x0I-7j7sP9H",
+   "name": "Utility Eugene",
+   "author": "James Harrison",
+   "description": "Your money-saver for every utility bill: electric, water, gas, internet, phone and trash.",
+   "url": "https://x.ai/bot/w3yzHuZdi-x0I-7j7sP9H"
+  },
+  {
+   "id": "money-personal-finance-fr2DSNeUstgO6bSZmZM_v",
+   "code": "fr2DSNeUstgO6bSZmZM_v",
+   "name": "VA Capitol Strategist",
+   "author": "Carey Allen",
+   "description": "Helps citizen advocates on Virginia General Assembly bills: LIS tracking, session deadlines, legislator profiles and drafts. Never contacts anyone on its own.",
+   "url": "https://x.ai/bot/fr2DSNeUstgO6bSZmZM_v"
+  },
+  {
+   "id": "money-personal-finance-RoAR_UbUgzGmrAefLvvmX",
+   "code": "RoAR_UbUgzGmrAefLvvmX",
+   "name": "VWAP Indicator Bot",
+   "author": "Right Wing Inkorporated",
+   "description": "Finds VWAP pullback setups on your intraday watchlist and writes a finished order ticket for each one.",
+   "url": "https://x.ai/bot/RoAR_UbUgzGmrAefLvvmX"
+  },
+  {
+   "id": "money-personal-finance-sYQB5x1UJeST75ZUGn3nR",
+   "code": "sYQB5x1UJeST75ZUGn3nR",
+   "name": "Vera",
+   "author": "Yair Knijn",
+   "description": "Vera is a Dutch bookkeeping assistant for zzp'ers and MKB-ondernemers.",
+   "url": "https://x.ai/bot/sYQB5x1UJeST75ZUGn3nR"
+  },
+  {
+   "id": "money-personal-finance-nqMcywYF0Bg35egak7dSh",
+   "code": "nqMcywYF0Bg35egak7dSh",
+   "name": "Vinted Seller",
+   "author": "Valerio Di Palo",
+   "description": "Lists clothes on Vinted from photos, using the path that actually publishes: desktop browser on the sell form, rotated…",
+   "url": "https://x.ai/bot/nqMcywYF0Bg35egak7dSh"
+  },
+  {
+   "id": "money-personal-finance-wvrapeX6Qpeg8Pa3-QRQm",
+   "code": "wvrapeX6Qpeg8Pa3-QRQm",
+   "name": "Volt",
+   "author": "Avid",
+   "description": "Power engineer for KiCad hardware projects: designs the power path, works out the current budget, and handles thermal checks and protection.",
+   "url": "https://x.ai/bot/wvrapeX6Qpeg8Pa3-QRQm"
+  },
+  {
+   "id": "money-personal-finance-RHskenNWV0SW5BNqdk_Il",
+   "code": "RHskenNWV0SW5BNqdk_Il",
+   "name": "WRAECLAST DESK",
+   "author": "Nut Y.",
+   "description": "Six-seat Path of Exile 2 Early Access desk (CALC / PIPE / SCOUT / PRICE / WALL / ATLAS).",
+   "url": "https://x.ai/bot/RHskenNWV0SW5BNqdk_Il"
+  },
+  {
+   "id": "money-personal-finance-j-G1HsmexxM3s4ibmHlAP",
+   "code": "j-G1HsmexxM3s4ibmHlAP",
+   "name": "Warranty & Settlement Concierge",
+   "author": "Manny Russell",
+   "description": "Gets you what you're owed. Handles warranty claims for anything you own, and finds and files class-action settlements you qualify for, with your OK.",
+   "url": "https://x.ai/bot/j-G1HsmexxM3s4ibmHlAP"
+  },
+  {
+   "id": "money-personal-finance-YWu42GxAe2pMxN5eLzPis",
+   "code": "YWu42GxAe2pMxN5eLzPis",
+   "name": "Warranty Reality Card",
+   "author": "Andy",
+   "description": "Maps covered/gray/excluded from warranty clauses.",
+   "url": "https://x.ai/bot/YWu42GxAe2pMxN5eLzPis"
+  },
+  {
+   "id": "money-personal-finance-otSJZr1nXBB6ns7HUSgu-",
+   "code": "otSJZr1nXBB6ns7HUSgu-",
+   "name": "Warren",
+   "author": "Brandon Smithwrick",
+   "description": "A CFO-style money bot for creators and solo founders: captures invoices and bills, codes expenses, tracks refunds and disputes. Never moves money.",
+   "url": "https://x.ai/bot/otSJZr1nXBB6ns7HUSgu-"
+  },
+  {
+   "id": "money-personal-finance-BMTY3xFpzx6-w4qUMWaRm",
+   "code": "BMTY3xFpzx6-w4qUMWaRm",
+   "name": "What's for Supper, Mamaw?",
+   "author": "BefuddledMamaw",
+   "description": "Plans a week of suppers from what's already in your pantry, fridge, and freezer — and what you can afford.",
+   "url": "https://x.ai/bot/BMTY3xFpzx6-w4qUMWaRm"
+  },
+  {
+   "id": "money-personal-finance-cMpw0zb2v9RRtQPDfsVFm",
+   "code": "cMpw0zb2v9RRtQPDfsVFm",
+   "name": "X Money Deep Report Bot",
+   "author": "",
+   "description": "Reads your X Money account every week and sends a spending report sorted by category, with cash-back, interest, recurring charges, and goal progress. Read-only by default; no money moves without your approval.",
+   "url": "https://x.ai/bot/cMpw0zb2v9RRtQPDfsVFm"
+  },
+  {
+   "id": "money-personal-finance-8oUlDrGOJstb0BJN7gBUw",
+   "code": "8oUlDrGOJstb0BJN7gBUw",
+   "name": "X Scout",
+   "author": "Fan Grok Bot Radar",
+   "description": "Read-only X research on circles and topics through your own SocialData key and spend limits; never posts, likes, follows, or DMs.",
+   "url": "https://x.ai/bot/8oUlDrGOJstb0BJN7gBUw"
+  },
+  {
+   "id": "money-personal-finance-sLhzG8n6AXJ2raumXnmg4",
+   "code": "sLhzG8n6AXJ2raumXnmg4",
+   "name": "Yotta Recovery",
+   "author": "Ki G",
+   "description": "A patient advocate for people who lost money in the Yotta Savings / Synapse collapse.",
+   "url": "https://x.ai/bot/sLhzG8n6AXJ2raumXnmg4"
+  },
+  {
+   "id": "money-personal-finance-AXD8poR15Ozom1w8jJrcm",
+   "code": "AXD8poR15Ozom1w8jJrcm",
+   "name": "Zambo Receipt Bot",
+   "author": "Brennan Zambo",
+   "description": "Collects, verifies, and files a verifiable Zambo receipt for every job your bots do, on Grok or any AI with MCP.",
+   "url": "https://x.ai/bot/AXD8poR15Ozom1w8jJrcm"
+  },
+  {
+   "id": "money-personal-finance-mcOshvyVYM300FEKuwPBn",
+   "code": "mcOshvyVYM300FEKuwPBn",
+   "name": "creditwise",
+   "author": "Jozef Gherman",
+   "description": "A calm credit coach that pulls your free credit reports, finds what's holding your score down and walks you through every fix, with no paid products.",
+   "url": "https://x.ai/bot/mcOshvyVYM300FEKuwPBn"
+  },
+  {
+   "id": "money-personal-finance-ThLdBsaNokzuZXV_TpLAt",
+   "code": "ThLdBsaNokzuZXV_TpLAt",
+   "name": "monid",
+   "author": "P",
+   "description": "Connect Monid in a few minutes, use the ~$1 starter credit, and pull social and web data through discover → inspect → run.",
+   "url": "https://x.ai/bot/ThLdBsaNokzuZXV_TpLAt"
+  },
+  {
+   "id": "money-personal-finance-ErjLg2w_z_1vsLQGSPl5f",
+   "code": "ErjLg2w_z_1vsLQGSPl5f",
+   "name": "x",
+   "author": "mathias",
+   "description": "Looks after an X account: weekday check-ins, credit-aware lookups, and cross-promo drafts you post yourself.",
+   "url": "https://x.ai/bot/ErjLg2w_z_1vsLQGSPl5f"
+  },
+  {
+   "id": "money-personal-finance-KqBxccp-mUtt8UMnfj6a-",
+   "code": "KqBxccp-mUtt8UMnfj6a-",
+   "name": "xGas Copilot",
+   "author": "Jarett Reginald Stewart Dunn",
+   "description": "Multiply your $xMoney, as safe or as spicy as your risk appetite.",
+   "url": "https://x.ai/bot/KqBxccp-mUtt8UMnfj6a-"
+  },
+  {
+   "id": "money-personal-finance-mPr2wssP61BrPZ1fzQh7n",
+   "code": "mPr2wssP61BrPZ1fzQh7n",
+   "name": "מציאון",
+   "author": "Lior",
+   "description": "צייד עסקאות ישראלי , מוצא את העסקה המשתלמת ביותר לפי עלות סופית אמיתית (מחיר + משלוח + מע״מ/מכס + אחריות), לא לפי המחיר על המדף.",
+   "url": "https://x.ai/bot/mPr2wssP61BrPZ1fzQh7n"
+  },
+  {
+   "id": "money-personal-finance-haSA0Ru28CYKDm2V5tPRB",
+   "code": "haSA0Ru28CYKDm2V5tPRB",
+   "name": "人生·财务",
+   "author": "kin",
+   "description": "Logs spending by voice, with a nightly summary and a monthly look back.",
+   "url": "https://x.ai/bot/haSA0Ru28CYKDm2V5tPRB"
+  },
+  {
+   "id": "money-personal-finance-uvX1KHZ67D_AZQogYxR8-",
+   "code": "uvX1KHZ67D_AZQogYxR8-",
+   "name": "旅行手配エージェント",
+   "author": "Yuichiro",
+   "description": "Compares cheap and easy routes, then books flights, rail and hotels.",
+   "url": "https://x.ai/bot/uvX1KHZ67D_AZQogYxR8-"
+  },
+  {
+   "id": "money-personal-finance-WW-UbmTKXn79q0yXapvJE",
+   "code": "WW-UbmTKXn79q0yXapvJE",
+   "name": "记账管家",
+   "author": "铁柱AGI",
+   "description": "Private ledger fed by text, receipt photos, or voice notes, with optional Feishu sync.",
+   "url": "https://x.ai/bot/WW-UbmTKXn79q0yXapvJE"
+  },
+  {
+   "id": "money-personal-finance-A3pcjyO0dAkvRGxD4VGeH",
+   "code": "A3pcjyO0dAkvRGxD4VGeH",
+   "name": "账单进口",
+   "author": "Tony",
+   "description": "Imports WeChat and Alipay bill CSV or screenshots into a ledger after you confirm the preview.",
+   "url": "https://x.ai/bot/A3pcjyO0dAkvRGxD4VGeH"
+  },
+  {
+   "id": "money-personal-finance-3k1Y3O3t5z-jctkRIAjl2",
+   "code": "3k1Y3O3t5z-jctkRIAjl2",
+   "name": "구독 알리미 (Subscription Alert)",
+   "author": "Park",
+   "description": "Finds your subscriptions from email payment receipts and alerts you before charges, on failed payments and on price changes.",
+   "url": "https://x.ai/bot/3k1Y3O3t5z-jctkRIAjl2"
+  }
+ ]
+}

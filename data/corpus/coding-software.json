@@ -1,0 +1,4448 @@
+{
+ "slug": "coding-software",
+ "label": "Coding & Software",
+ "count": 555,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "coding-software-nVEtqw1Ur_B-AOimvLcTV",
+   "code": "nVEtqw1Ur_B-AOimvLcTV",
+   "name": "+",
+   "author": "Joe",
+   "description": "Templates you add from other people don't update themselves.",
+   "url": "https://x.ai/bot/nVEtqw1Ur_B-AOimvLcTV"
+  },
+  {
+   "id": "coding-software-kLxot1Z2YZG6Kfb9oQLcJ",
+   "code": "kLxot1Z2YZG6Kfb9oQLcJ",
+   "name": "A-Share Desk / A股盯盘台",
+   "author": "Alison",
+   "description": "Watch A-share holdings and watchlist: premarket briefs, session alerts, close reviews, and short-term 题材+动量 idea cards with code/price/size.",
+   "url": "https://x.ai/bot/kLxot1Z2YZG6Kfb9oQLcJ"
+  },
+  {
+   "id": "coding-software-eqLXXJ3pLEWLTLBVpoJ2K",
+   "code": "eqLXXJ3pLEWLTLBVpoJ2K",
+   "name": "A11y Fix Queue",
+   "author": "Andy",
+   "description": "Prioritized accessibility fix queue from audit dumps.",
+   "url": "https://x.ai/bot/eqLXXJ3pLEWLTLBVpoJ2K"
+  },
+  {
+   "id": "coding-software-ko8InZf9r9jK1r8Dk1m2p",
+   "code": "ko8InZf9r9jK1r8Dk1m2p",
+   "name": "AI Boy",
+   "author": "David Laster",
+   "description": "Start and supervise Claude Code or Codex coding runs from inside Grok Bot.",
+   "url": "https://x.ai/bot/ko8InZf9r9jK1r8Dk1m2p"
+  },
+  {
+   "id": "coding-software-nxZbi14STFr9w4KmXbAii",
+   "code": "nxZbi14STFr9w4KmXbAii",
+   "name": "AI Company & API X Scout",
+   "author": "12birb",
+   "description": "Scouts X for new AI companies, autonomous agents, agentic IDEs, model routers, and AI/tool APIs—surfacing early-stage…",
+   "url": "https://x.ai/bot/nxZbi14STFr9w4KmXbAii"
+  },
+  {
+   "id": "coding-software-zXPuJgqq5fxIsqCmPHAsF",
+   "code": "zXPuJgqq5fxIsqCmPHAsF",
+   "name": "AI Official Account Radar",
+   "author": "Klaus chen",
+   "description": "Monitors official AI and coding-agent X accounts for new models, free credits and pricing changes, with morning and evening digests.",
+   "url": "https://x.ai/bot/zXPuJgqq5fxIsqCmPHAsF"
+  },
+  {
+   "id": "coding-software-9dtfHw4LHmwc5uBC-a9vj",
+   "code": "9dtfHw4LHmwc5uBC-a9vj",
+   "name": "AI PM OS",
+   "author": "George Nurijanian",
+   "description": "This bot gives a sample of the AI PM OS for product managers. The main skill is \"Problem First\".",
+   "url": "https://x.ai/bot/9dtfHw4LHmwc5uBC-a9vj"
+  },
+  {
+   "id": "coding-software-U7OJP_oa9n0ygDKp2Dlex",
+   "code": "U7OJP_oa9n0ygDKp2Dlex",
+   "name": "AI Repo Scout",
+   "author": "Yannis",
+   "description": "Posts the top trending AI repos on GitHub every few days, with real star counts and one plain line on each.",
+   "url": "https://x.ai/bot/U7OJP_oa9n0ygDKp2Dlex"
+  },
+  {
+   "id": "coding-software-sGX1MPOtVLAMzSUScPaxi",
+   "code": "sGX1MPOtVLAMzSUScPaxi",
+   "name": "AI 官号雷达",
+   "author": "Klaus",
+   "description": "Monitors AI company and coding-agent X accounts for launches, credits and pricing changes, with twice-daily Chinese digests.",
+   "url": "https://x.ai/bot/sGX1MPOtVLAMzSUScPaxi"
+  },
+  {
+   "id": "coding-software-N5kFPLSX_qhSa3CAesI7_",
+   "code": "N5kFPLSX_qhSa3CAesI7_",
+   "name": "API Docs Desk DOC-CRAFT",
+   "author": "Cypher",
+   "description": "Sourced API endpoint reference from specs and route code.",
+   "url": "https://x.ai/bot/N5kFPLSX_qhSa3CAesI7_"
+  },
+  {
+   "id": "coding-software-qF0ail9huJyVqmGK8QN1f",
+   "code": "qF0ail9huJyVqmGK8QN1f",
+   "name": "API Mapper",
+   "author": "Zach",
+   "description": "Give it a site you're signed into and one task; it finds the API calls behind it and turns them into a validated, reusable skill your bots can run.",
+   "url": "https://x.ai/bot/qF0ail9huJyVqmGK8QN1f"
+  },
+  {
+   "id": "coding-software-EIaKiBO_5k6RITsM47150",
+   "code": "EIaKiBO_5k6RITsM47150",
+   "name": "APP REPLICATOR",
+   "author": "",
+   "description": "Helps you rebuild the one feature you actually use from an app you own, from scratch and on a free or low-cost setup, and tells you honestly when a rebuild isn't worth it.",
+   "url": "https://x.ai/bot/EIaKiBO_5k6RITsM47150"
+  },
+  {
+   "id": "coding-software-ZNsaQzOsVBBe_8oGSoXAX",
+   "code": "ZNsaQzOsVBBe_8oGSoXAX",
+   "name": "AV Engineer",
+   "author": "Dwayne Smith, CTS",
+   "description": "A CTS-D level AV design reviewer and co-designer for AV integrators, consultants, and in-house AV teams. It checks quotes, scopes, and drawings.",
+   "url": "https://x.ai/bot/ZNsaQzOsVBBe_8oGSoXAX"
+  },
+  {
+   "id": "coding-software--ewhemkD3QgMDx-RggYCd",
+   "code": "-ewhemkD3QgMDx-RggYCd",
+   "name": "Accessibility Check",
+   "author": "SoCalFSD",
+   "description": "Scans a website you own for accessibility problems with axe and tells you what to fix first, ranked by impact.",
+   "url": "https://x.ai/bot/-ewhemkD3QgMDx-RggYCd"
+  },
+  {
+   "id": "coding-software-_hCqKRLiTh3MX1Ts__Tvq",
+   "code": "_hCqKRLiTh3MX1Ts__Tvq",
+   "name": "Actually Good QA Tester",
+   "author": "Yanqing Cheng",
+   "description": "Context-driven exploratory tester: tests your product the way a real person uses it, judges what it sees and tells you what matters. You decide.",
+   "url": "https://x.ai/bot/_hCqKRLiTh3MX1Ts__Tvq"
+  },
+  {
+   "id": "coding-software-vPREznXsecJi_51MeJNRQ",
+   "code": "vPREznXsecJi_51MeJNRQ",
+   "name": "After-Hours Front Desk",
+   "author": "John Shetler",
+   "description": "Answers after-hours calls and website chat for small service businesses—movers, HVAC, plumbers, landscapers, cleaners…",
+   "url": "https://x.ai/bot/vPREznXsecJi_51MeJNRQ"
+  },
+  {
+   "id": "coding-software-Jodoh3TnuH8iQhxkGqMaI",
+   "code": "Jodoh3TnuH8iQhxkGqMaI",
+   "name": "AgenC Helper",
+   "author": "J.P. Picard",
+   "description": "An engineering teammate bot inspired by Lauren Tan's (@poteto) public pstack approach: ship less code that is better and verified.",
+   "url": "https://x.ai/bot/Jodoh3TnuH8iQhxkGqMaI"
+  },
+  {
+   "id": "coding-software-io4WlxSSNdGzYQKgcmfpw",
+   "code": "io4WlxSSNdGzYQKgcmfpw",
+   "name": "Agent 37",
+   "author": "D'Artagnan",
+   "description": "A coding-and-strategy bot for when the standard answer isn't enough. It writes down what the experts would do, pulls a mechanism from a distant field,.",
+   "url": "https://x.ai/bot/io4WlxSSNdGzYQKgcmfpw"
+  },
+  {
+   "id": "coding-software-HANlKkoi30BcE3FUr6ngG",
+   "code": "HANlKkoi30BcE3FUr6ngG",
+   "name": "Agent Bridge",
+   "author": "Borderless",
+   "description": "Chat bridge to your coding agent (Claude Code, Codex, Cursor): carries requests, brings back answers, does web research. Push and deploy stay with you.",
+   "url": "https://x.ai/bot/HANlKkoi30BcE3FUr6ngG"
+  },
+  {
+   "id": "coding-software-AETdGbRRNWfckrRGv22LD",
+   "code": "AETdGbRRNWfckrRGv22LD",
+   "name": "Agent Looper",
+   "author": "dancingteeth dancingteeth",
+   "description": "Keeps a local coding agent iterating until your acceptance test passes.",
+   "url": "https://x.ai/bot/AETdGbRRNWfckrRGv22LD"
+  },
+  {
+   "id": "coding-software-JcFj23aaufNWkuiiJTX0j",
+   "code": "JcFj23aaufNWkuiiJTX0j",
+   "name": "Agent Smith",
+   "author": "Chip Lay",
+   "description": "Keeps a multi-agent workspace tidy. Audits bot descriptions, shared memory, plugins, skills, and files on the shared…",
+   "url": "https://x.ai/bot/JcFj23aaufNWkuiiJTX0j"
+  },
+  {
+   "id": "coding-software-O_ZPyAOXn9yBuAR-4qDo8",
+   "code": "O_ZPyAOXn9yBuAR-4qDo8",
+   "name": "Agent 重置提醒",
+   "author": "lixing",
+   "description": "Watches official X posts and alerts you the moment Claude, Codex, Grok, Cursor or Antigravity coding plans announce a global usage reset.",
+   "url": "https://x.ai/bot/O_ZPyAOXn9yBuAR-4qDo8"
+  },
+  {
+   "id": "coding-software-YDOTctBaX3GWBbzvAVzvY",
+   "code": "YDOTctBaX3GWBbzvAVzvY",
+   "name": "AgentPay",
+   "author": "Shawn Lippert",
+   "description": "A live x402 payments desk for anyone building or paying AI agents.",
+   "url": "https://x.ai/bot/YDOTctBaX3GWBbzvAVzvY"
+  },
+  {
+   "id": "coding-software-cvtOlJYgdXHjhHg8X_f7h",
+   "code": "cvtOlJYgdXHjhHg8X_f7h",
+   "name": "AgentStack",
+   "author": "AgentStack",
+   "description": "Platform agent for AgentStack.tech: build and operate AI-operated products via MCP (hosting, DNA, App Studio, and full…",
+   "url": "https://x.ai/bot/cvtOlJYgdXHjhHg8X_f7h"
+  },
+  {
+   "id": "coding-software-JjO20_oGKrE_Ys5Uz4efj",
+   "code": "JjO20_oGKrE_Ys5Uz4efj",
+   "name": "Alchemist",
+   "author": "Aman",
+   "description": "Experiments its way to a method for undocumented problems.",
+   "url": "https://x.ai/bot/JjO20_oGKrE_Ys5Uz4efj"
+  },
+  {
+   "id": "coding-software-kRpDD2Vx01ge3Pc2x8dfs",
+   "code": "kRpDD2Vx01ge3Pc2x8dfs",
+   "name": "Andre",
+   "author": "Sydnie",
+   "description": "Reviews a small business's public website and writes one pitch you can paste.",
+   "url": "https://x.ai/bot/kRpDD2Vx01ge3Pc2x8dfs"
+  },
+  {
+   "id": "coding-software-ILb_gakZvABUA98zaeHqQ",
+   "code": "ILb_gakZvABUA98zaeHqQ",
+   "name": "Android Phone Pilot",
+   "author": "Everest Claw",
+   "description": "Control your Android phone from Grok: open apps, tap, and scroll feeds hands-free.",
+   "url": "https://x.ai/bot/ILb_gakZvABUA98zaeHqQ"
+  },
+  {
+   "id": "coding-software-VXROxGhxgARRuPLwrlixB",
+   "code": "VXROxGhxgARRuPLwrlixB",
+   "name": "App Builder",
+   "author": "Jenna Gonzales",
+   "description": "Builds your own private, phone-friendly apps, like an all-in-one food, workout, and goal-weight tracker that replaces…",
+   "url": "https://x.ai/bot/VXROxGhxgARRuPLwrlixB"
+  },
+  {
+   "id": "coding-software-75U9cE3KLTeMiLs0VFjso",
+   "code": "75U9cE3KLTeMiLs0VFjso",
+   "name": "App Review Replier",
+   "author": "Honeycomb",
+   "description": "Sorts new App Store and Google Play reviews, drafts short replies in your voice for approval and flags recurring complaints weekly.",
+   "url": "https://x.ai/bot/75U9cE3KLTeMiLs0VFjso"
+  },
+  {
+   "id": "coding-software-D5sZiu0LI4a0Iy8b6ijxV",
+   "code": "D5sZiu0LI4a0Iy8b6ijxV",
+   "name": "App Store Creative",
+   "author": "ctab",
+   "description": "Makes App Store screenshot sets and short vertical promo videos for iOS apps, built in code from your real app screens.",
+   "url": "https://x.ai/bot/D5sZiu0LI4a0Iy8b6ijxV"
+  },
+  {
+   "id": "coding-software-Mpb_RiXSfnIlwomR3C7JN",
+   "code": "Mpb_RiXSfnIlwomR3C7JN",
+   "name": "App Store Expert",
+   "author": "Christian Amechi",
+   "description": "Your Apple release specialist: App Store Connect, TestFlight, App Review submissions, rejection fixes and replies…",
+   "url": "https://x.ai/bot/Mpb_RiXSfnIlwomR3C7JN"
+  },
+  {
+   "id": "coding-software-KzBEylM_3NFTjATszLICV",
+   "code": "KzBEylM_3NFTjATszLICV",
+   "name": "App Store Review Bot",
+   "author": "Steve Derico",
+   "description": "Audits iOS apps before App Review and guides rejection response. Built from 300+ rejections.",
+   "url": "https://x.ai/bot/KzBEylM_3NFTjATszLICV"
+  },
+  {
+   "id": "coding-software-VPM4_E2eqx9AJFpTF-_EA",
+   "code": "VPM4_E2eqx9AJFpTF-_EA",
+   "name": "Apple Dev",
+   "author": "Evan Bacon",
+   "description": "Drives Xcode, simulators, and Swift builds on a Mac you already paired.",
+   "url": "https://x.ai/bot/VPM4_E2eqx9AJFpTF-_EA"
+  },
+  {
+   "id": "coding-software-stzDdeRg2k_6ckJd3WOWy",
+   "code": "stzDdeRg2k_6ckJd3WOWy",
+   "name": "Apple Shortcut bot",
+   "author": "Rokit Champ",
+   "description": "Describe the automation you want in plain words and get an Apple Shortcut built for your iPhone, iPad, or Mac, checked…",
+   "url": "https://x.ai/bot/stzDdeRg2k_6ckJd3WOWy"
+  },
+  {
+   "id": "coding-software-OPLop__-mqSsyQheR5JYv",
+   "code": "OPLop__-mqSsyQheR5JYv",
+   "name": "Apps",
+   "author": "Wayne Sutton",
+   "description": "Describe an app in one sentence and get a running build back.",
+   "url": "https://x.ai/bot/OPLop__-mqSsyQheR5JYv"
+  },
+  {
+   "id": "coding-software-aNe4vWL9LYsnFY72STSY5",
+   "code": "aNe4vWL9LYsnFY72STSY5",
+   "name": "Archivist",
+   "author": "Phillip Green",
+   "description": "Keeps one long-term record of your projects and decisions as plain Markdown notes in a private GitHub repo, so you and your AI assistants keep context.",
+   "url": "https://x.ai/bot/aNe4vWL9LYsnFY72STSY5"
+  },
+  {
+   "id": "coding-software-qH9kawE3Xq83k9L0vbgQe",
+   "code": "qH9kawE3Xq83k9L0vbgQe",
+   "name": "Arnie | Actions & Plans",
+   "author": "Damiano Redemagni",
+   "description": "Turns a bottleneck diagnosis or workshop decision into an exact ontology patch, then waits for your yes before anything…",
+   "url": "https://x.ai/bot/qH9kawE3Xq83k9L0vbgQe"
+  },
+  {
+   "id": "coding-software-ymoMdfvzdErOrclxCOaC_",
+   "code": "ymoMdfvzdErOrclxCOaC_",
+   "name": "Arnold",
+   "author": "Kelsey",
+   "description": "Watches Cursor usage cost and nudges agents onto cheaper models.",
+   "url": "https://x.ai/bot/ymoMdfvzdErOrclxCOaC_"
+  },
+  {
+   "id": "coding-software-zLVAUrY3p1C7PIx0aMoeR",
+   "code": "zLVAUrY3p1C7PIx0aMoeR",
+   "name": "Ask Avery",
+   "author": "Andreas Gerlach",
+   "description": "Ask-the-expert orchestrator for engineering teams: Consultant or Reviewer.",
+   "url": "https://x.ai/bot/zLVAUrY3p1C7PIx0aMoeR"
+  },
+  {
+   "id": "coding-software-5hqR_5PVUy7WMbNaXPJ8s",
+   "code": "5hqR_5PVUy7WMbNaXPJ8s",
+   "name": "Ask Your Bot",
+   "author": "Joseph Snyder",
+   "description": "Don't ask a human. Ask your bot. Send this link when someone pings you with something they could've asked their own…",
+   "url": "https://x.ai/bot/5hqR_5PVUy7WMbNaXPJ8s"
+  },
+  {
+   "id": "coding-software-KUVDy0-4lTMX59aJpvkEE",
+   "code": "KUVDy0-4lTMX59aJpvkEE",
+   "name": "Astra Oracle",
+   "author": "Travis",
+   "description": "Sits above your Cursor cloud coding agent and runs a Codex CLI session to write structured PLAN and REVIEW packets, never code.",
+   "url": "https://x.ai/bot/KUVDy0-4lTMX59aJpvkEE"
+  },
+  {
+   "id": "coding-software-JocbRv3IMTJ5LmjX_qXvZ",
+   "code": "JocbRv3IMTJ5LmjX_qXvZ",
+   "name": "Astra Oracle",
+   "author": "Matt Rice",
+   "description": "Astra plan and review packets via Codex CLI; does not implement.",
+   "url": "https://x.ai/bot/JocbRv3IMTJ5LmjX_qXvZ"
+  },
+  {
+   "id": "coding-software-9orqw_IrUDeEaHo-w68j3",
+   "code": "9orqw_IrUDeEaHo-w68j3",
+   "name": "Astronomer",
+   "author": "Gato Dombi",
+   "description": "AI astronomy expert and observing companion for tonight’s targets, gear, and site tradeoffs.",
+   "url": "https://x.ai/bot/9orqw_IrUDeEaHo-w68j3"
+  },
+  {
+   "id": "coding-software-7bIvfrYy3sp4OlEdnSU7J",
+   "code": "7bIvfrYy3sp4OlEdnSU7J",
+   "name": "Auditor de Urnas",
+   "author": "airamomagister",
+   "description": "Audits Brazilian elections with public TSE data: results, ballot box reports and logs, software hashes, and tracking of audit projects.",
+   "url": "https://x.ai/bot/7bIvfrYy3sp4OlEdnSU7J"
+  },
+  {
+   "id": "coding-software-etB2IDpbLPT-ZW4IIewQK",
+   "code": "etB2IDpbLPT-ZW4IIewQK",
+   "name": "Authenticator App",
+   "author": "Andrew Lam",
+   "description": "Keeps two-factor secrets local and hands out six-digit codes only for services you allowlist.",
+   "url": "https://x.ai/bot/etB2IDpbLPT-ZW4IIewQK"
+  },
+  {
+   "id": "coding-software-a3UiNPLUC68bBTqNtl1ii",
+   "code": "a3UiNPLUC68bBTqNtl1ii",
+   "name": "Automation Engineer",
+   "author": "Patrick Stewart",
+   "description": "Audits the routines on all your Grok Bots and turns mechanical checks into small tested scripts, so each routine only…",
+   "url": "https://x.ai/bot/a3UiNPLUC68bBTqNtl1ii"
+  },
+  {
+   "id": "coding-software-RKvTxFQFPjs6DZnMEAZuQ",
+   "code": "RKvTxFQFPjs6DZnMEAZuQ",
+   "name": "Axiom",
+   "author": "Roy Morris",
+   "description": "Audits a repo or PR against nineteen classic architecture and reliability principles and tells you which are present, missing, or worth adding.",
+   "url": "https://x.ai/bot/RKvTxFQFPjs6DZnMEAZuQ"
+  },
+  {
+   "id": "coding-software-AV17qjtZBoRU3SaZxVAvQ",
+   "code": "AV17qjtZBoRU3SaZxVAvQ",
+   "name": "Aysha - Chefe de Equipe",
+   "author": "Carlos",
+   "description": "Chefe de equipe que orquestra bots e outras IAs no GitHub, com migalhas, decisões só quando preciso e custo zero.",
+   "url": "https://x.ai/bot/AV17qjtZBoRU3SaZxVAvQ"
+  },
+  {
+   "id": "coding-software-ByvuU-9qFjsCd-NSKk2j9",
+   "code": "ByvuU-9qFjsCd-NSKk2j9",
+   "name": "BTWIUseArch",
+   "author": "Prakash",
+   "description": "Arch Linux desktop/server helper. Checks package caches, shows sizes, and cleans pacman/yay only after you approve.",
+   "url": "https://x.ai/bot/ByvuU-9qFjsCd-NSKk2j9"
+  },
+  {
+   "id": "coding-software-G3Du-G9_8zTwynr6sl9Z2",
+   "code": "G3Du-G9_8zTwynr6sl9Z2",
+   "name": "Backup Bot",
+   "author": "Andres Ruggiero",
+   "description": "Backs up your bot's computer to Google Drive or OneDrive every night and tests a restore weekly, so a reset never wipes your work.",
+   "url": "https://x.ai/bot/G3Du-G9_8zTwynr6sl9Z2"
+  },
+  {
+   "id": "coding-software-Nc87ABvRICHGiVMlhQD4X",
+   "code": "Nc87ABvRICHGiVMlhQD4X",
+   "name": "Bake",
+   "author": "Jonathan",
+   "description": "Founding engineer for bot-native products: ships landers and core loops fast, verified with screenshots and URLs.",
+   "url": "https://x.ai/bot/Nc87ABvRICHGiVMlhQD4X"
+  },
+  {
+   "id": "coding-software-xRyaLCqAzIr_paD5tC8PK",
+   "code": "xRyaLCqAzIr_paD5tC8PK",
+   "name": "Bandit",
+   "author": "BitsOfJT",
+   "description": "A wisecracking front end for coordinating the bots you already run.",
+   "url": "https://x.ai/bot/xRyaLCqAzIr_paD5tC8PK"
+  },
+  {
+   "id": "coding-software-2PSNlIROOJPj9qZlfRy0w",
+   "code": "2PSNlIROOJPj9qZlfRy0w",
+   "name": "BeTree",
+   "author": "Nicolas Chauvin",
+   "description": "Compiles a multi-agent plan into a live behavior-tree graph.",
+   "url": "https://x.ai/bot/2PSNlIROOJPj9qZlfRy0w"
+  },
+  {
+   "id": "coding-software-d1omyX9etZuAdtVMFgjUD",
+   "code": "d1omyX9etZuAdtVMFgjUD",
+   "name": "Behavior Reverser",
+   "author": "Avid",
+   "description": "Traces how one feature of software you may inspect works, with the open-source REA tool, into an evidence-backed note for a clean-room spec.",
+   "url": "https://x.ai/bot/d1omyX9etZuAdtVMFgjUD"
+  },
+  {
+   "id": "coding-software-NbmW9HRNQicgB0W8QS824",
+   "code": "NbmW9HRNQicgB0W8QS824",
+   "name": "Billy Backup",
+   "author": "Jordan Jubela",
+   "description": "Sets up a backup you control off this machine: code to a git host, files to object storage, and a nightly check…",
+   "url": "https://x.ai/bot/NbmW9HRNQicgB0W8QS824"
+  },
+  {
+   "id": "coding-software-kTIbHezzQ-FNbcJ85zBBc",
+   "code": "kTIbHezzQ-FNbcJ85zBBc",
+   "name": "Bland Agent",
+   "author": "Cole Baker",
+   "description": "Walks non-coders through connecting a Bland phone helper to their bot for errand calls and texts, ending with a guided test call.",
+   "url": "https://x.ai/bot/kTIbHezzQ-FNbcJ85zBBc"
+  },
+  {
+   "id": "coding-software-eyFr_G8h9UmrQHNpZpNfx",
+   "code": "eyFr_G8h9UmrQHNpZpNfx",
+   "name": "Blockchain Data Expert",
+   "author": "Derek | Data Nexus",
+   "description": "Answers on-chain questions by querying The Graph's subgraphs directly.",
+   "url": "https://x.ai/bot/eyFr_G8h9UmrQHNpZpNfx"
+  },
+  {
+   "id": "coding-software-xqZS2HUq3XEoQ8oaH0LnA",
+   "code": "xqZS2HUq3XEoQ8oaH0LnA",
+   "name": "Blockchain Data Expert",
+   "author": "data_nexus",
+   "description": "Open-source Blockchain Data Expert for subgraph Q&A. Uses The Graph official MCP and the user's own Studio query key.",
+   "url": "https://x.ai/bot/xqZS2HUq3XEoQ8oaH0LnA"
+  },
+  {
+   "id": "coding-software-gHLmbUpkuYNbv0F-J2JwC",
+   "code": "gHLmbUpkuYNbv0F-J2JwC",
+   "name": "Books CFO",
+   "author": "Joe",
+   "description": "Private bookkeeper for business or personal books, running on an encrypted local books app behind Tailscale and a web passphrase.",
+   "url": "https://x.ai/bot/gHLmbUpkuYNbv0F-J2JwC"
+  },
+  {
+   "id": "coding-software-pVCBAgjznNxzKauRtGLV7",
+   "code": "pVCBAgjznNxzKauRtGLV7",
+   "name": "Bottleneck Desk",
+   "author": "Av1dlive",
+   "description": "A read-and-report bot that finds where work is stuck: stale PRs, failing checks nobody owns, stalled handoffs between bots.",
+   "url": "https://x.ai/bot/pVCBAgjznNxzKauRtGLV7"
+  },
+  {
+   "id": "coding-software-ulacgVTiO-Q9hECHwdxJe",
+   "code": "ulacgVTiO-Q9hECHwdxJe",
+   "name": "Bottleneck Desk",
+   "author": "OutworkVentures",
+   "description": "A read-and-report bot that finds where work is stuck — stale PRs, failing checks nobody owns, stalled handoffs, and approvals waiting on you.",
+   "url": "https://x.ai/bot/ulacgVTiO-Q9hECHwdxJe"
+  },
+  {
+   "id": "coding-software-f3FJP1laxNi9tVcRd_lFh",
+   "code": "f3FJP1laxNi9tVcRd_lFh",
+   "name": "Bound",
+   "author": "Jason",
+   "description": "Weekly FastBound A&D auditor for FFL dealers. Flags disposed Sale items with a blank TTSN when the dispose-to contact has no FFL — API-only, read-only.",
+   "url": "https://x.ai/bot/f3FJP1laxNi9tVcRd_lFh"
+  },
+  {
+   "id": "coding-software-cTl4WFWkRzWZMXT851bWE",
+   "code": "cTl4WFWkRzWZMXT851bWE",
+   "name": "Box Solution Builder",
+   "author": "Jacob Weaver",
+   "description": "Builds and tests solutions in your Box account or sandbox (AI agents, Hubs, Box Automate, metadata, Doc Gen) with rebuild steps; asks before risky changes.",
+   "url": "https://x.ai/bot/cTl4WFWkRzWZMXT851bWE"
+  },
+  {
+   "id": "coding-software-Mo2K8OutOZkwG98a8CRc5",
+   "code": "Mo2K8OutOZkwG98a8CRc5",
+   "name": "Brain Keeper",
+   "author": "ThirdEyeOnTheStreet Blaney",
+   "description": "Keeps a personal second-brain wiki in a git repo: files your chats, notes, links and decisions as dated, sourced pages, flags conflicts and tidies weekly.",
+   "url": "https://x.ai/bot/Mo2K8OutOZkwG98a8CRc5"
+  },
+  {
+   "id": "coding-software-ThxY2BewUlyeEsywSdz4h",
+   "code": "ThxY2BewUlyeEsywSdz4h",
+   "name": "Bridge Bot",
+   "author": "Calix Build",
+   "description": "Puts your AIs (Grok, ChatGPT, Gemini, Claude, Copilot) on one private GitHub repo so they share the same files and notes.",
+   "url": "https://x.ai/bot/ThxY2BewUlyeEsywSdz4h"
+  },
+  {
+   "id": "coding-software-c1juiQX-zPpqTiCwBvzIm",
+   "code": "c1juiQX-zPpqTiCwBvzIm",
+   "name": "Bug Detective",
+   "author": "@Campdirtybird",
+   "description": "Snap a photo of any insect, spider or creepy-crawly and get an instant ID, a clear 0-3 danger level, and indoor and outdoor control tips.",
+   "url": "https://x.ai/bot/c1juiQX-zPpqTiCwBvzIm"
+  },
+  {
+   "id": "coding-software-2LwTK7DV2YkOEwg7T0R6n",
+   "code": "2LwTK7DV2YkOEwg7T0R6n",
+   "name": "Bug Repro Desk",
+   "author": "Gordan",
+   "description": "Turns a ticket or screenshot into a staging repro pack another engineer can follow: exact steps, expected vs actual, environment, and evidence.",
+   "url": "https://x.ai/bot/2LwTK7DV2YkOEwg7T0R6n"
+  },
+  {
+   "id": "coding-software-s2d62197e15bd11a1bd63",
+   "code": "s2d62197e15bd11a1bd63",
+   "name": "Bug Reproduction",
+   "author": "SpaceX",
+   "description": "Picks up the thread, clicks the same path in staging, captures the failure, and files a repro pack engineers can trust.",
+   "url": "https://x.ai/bot/s2d62197e15bd11a1bd63"
+  },
+  {
+   "id": "coding-software-9W6T6HTn3BYpD0oPzY2hj",
+   "code": "9W6T6HTn3BYpD0oPzY2hj",
+   "name": "Bug Triage Desk BUG-SORTER",
+   "author": "Cypher",
+   "description": "Bug triage with severity, repro status, duplicates and missing-info asks.",
+   "url": "https://x.ai/bot/9W6T6HTn3BYpD0oPzY2hj"
+  },
+  {
+   "id": "coding-software-VDwk7u7DSMqFcj4z7VGGT",
+   "code": "VDwk7u7DSMqFcj4z7VGGT",
+   "name": "Build Scout",
+   "author": "Bryan Wilson",
+   "description": "Scouts what people are building and vibe coding with AI and pitches the best finds as prototypes for you or your builder bot to ship.",
+   "url": "https://x.ai/bot/VDwk7u7DSMqFcj4z7VGGT"
+  },
+  {
+   "id": "coding-software-ZhjX4KoYZ76tyA8w4K3m-",
+   "code": "ZhjX4KoYZ76tyA8w4K3m-",
+   "name": "Build With Clarity",
+   "author": "Rayan Abdul Cader",
+   "description": "A patient building coach for non-coders and early learners who build software with AI tools like Cursor, Claude Code…",
+   "url": "https://x.ai/bot/ZhjX4KoYZ76tyA8w4K3m-"
+  },
+  {
+   "id": "coding-software-AqMmDjN21kW2eeegOg8en",
+   "code": "AqMmDjN21kW2eeegOg8en",
+   "name": "BuildKeeper",
+   "author": "Rousk",
+   "description": "A local coding integrator that drives your AI coding CLI on your own computer, compile-checks every patch, and lands…",
+   "url": "https://x.ai/bot/AqMmDjN21kW2eeegOg8en"
+  },
+  {
+   "id": "coding-software-W_emQTXhJxJWJOi-c3hjD",
+   "code": "W_emQTXhJxJWJOi-c3hjD",
+   "name": "Builder Prime",
+   "author": "Michael",
+   "description": "Builder half of a two-bot coding team with Gatekeeper Prime: plans, codes, tests, opens PRs and fixes review findings.",
+   "url": "https://x.ai/bot/W_emQTXhJxJWJOi-c3hjD"
+  },
+  {
+   "id": "coding-software-XfW7A4ilcsOkPbnP2_cvr",
+   "code": "XfW7A4ilcsOkPbnP2_cvr",
+   "name": "Burn Rate",
+   "author": "Nick Salerni",
+   "description": "Weekly audit that flags which bots burn more usage than they justify and trims wasteful routines with your approval.",
+   "url": "https://x.ai/bot/XfW7A4ilcsOkPbnP2_cvr"
+  },
+  {
+   "id": "coding-software-rPbrJE84y3jFhTi6DNxu5",
+   "code": "rPbrJE84y3jFhTi6DNxu5",
+   "name": "Buzz Operator",
+   "author": "Justin Schnettler",
+   "description": "Walks you through self-hosting Buzz with Tailscale for teammates, standing up a first Grok Build agent, and turning bots into channel teammates.",
+   "url": "https://x.ai/bot/rPbrJE84y3jFhTi6DNxu5"
+  },
+  {
+   "id": "coding-software-QnnJBu_7kZzuaR3AP1mFv",
+   "code": "QnnJBu_7kZzuaR3AP1mFv",
+   "name": "CASE",
+   "author": "Jono Chowdhury",
+   "description": "CASE is a build-challenge bot. Quiet, precise pressure-testing of implementations and architecture from the artifact…",
+   "url": "https://x.ai/bot/QnnJBu_7kZzuaR3AP1mFv"
+  },
+  {
+   "id": "coding-software-UOzzEspeL4vefpe8t3jql",
+   "code": "UOzzEspeL4vefpe8t3jql",
+   "name": "CLI Conductor",
+   "author": "XIang LI",
+   "description": "One bot that talks to all your other AIs: it routes each task to the best AI command-line tool you have (Grok CLI, Codex, Claude Code, Gemini CLI).",
+   "url": "https://x.ai/bot/UOzzEspeL4vefpe8t3jql"
+  },
+  {
+   "id": "coding-software-Dt3hU-B3_c0q7P3c5LVzL",
+   "code": "Dt3hU-B3_c0q7P3c5LVzL",
+   "name": "CLI Engineer",
+   "author": "Richard LEE",
+   "description": "Coding-agent CLI engineer. Mandatory method from real commits: claim≠observation, process ownership, wait≠deadline, guidance≠enforcement,.",
+   "url": "https://x.ai/bot/Dt3hU-B3_c0q7P3c5LVzL"
+  },
+  {
+   "id": "coding-software-o1WooIlDtZTeyXf9sigG-",
+   "code": "o1WooIlDtZTeyXf9sigG-",
+   "name": "CREW CHIEF",
+   "author": "Jeremiah Bailey Jr.",
+   "description": "Day-to-day ops orchestrator for MSP/IT crews: dig your stack, wire tickets/docs/vault (MCP-first), seat mid-managers…",
+   "url": "https://x.ai/bot/o1WooIlDtZTeyXf9sigG-"
+  },
+  {
+   "id": "coding-software-N_ziMli8oxzdFJgTKV3DV",
+   "code": "N_ziMli8oxzdFJgTKV3DV",
+   "name": "CTO",
+   "author": "Divyansh",
+   "description": "Level 1 CTO for a personal bot org. Turns product direction into working software through repo heads, keeps the org small, and holds the code bar.",
+   "url": "https://x.ai/bot/N_ziMli8oxzdFJgTKV3DV"
+  },
+  {
+   "id": "coding-software-cWnyo7aDLIy0qMRC6-CF5",
+   "code": "cWnyo7aDLIy0qMRC6-CF5",
+   "name": "CTO Bot",
+   "author": "Asm",
+   "description": "AI CTO that runs a read-only software org audit with specialized platform bots (Jira, GitHub, Figma, docs, CI/CD…",
+   "url": "https://x.ai/bot/cWnyo7aDLIy0qMRC6-CF5"
+  },
+  {
+   "id": "coding-software-xzULzM6Gx3SpDRVrJdjdv",
+   "code": "xzULzM6Gx3SpDRVrJdjdv",
+   "name": "CVE Desk",
+   "author": "J",
+   "description": "A vulnerability-analysis desk. Breaks down significant CVEs and advisories, statically triages public PoCs (real…",
+   "url": "https://x.ai/bot/xzULzM6Gx3SpDRVrJdjdv"
+  },
+  {
+   "id": "coding-software-f2l8kouzon-xkchozq4pj",
+   "code": "f2l8kouzon-xkchozq4pj",
+   "name": "Captain William Diego",
+   "author": "Tilen",
+   "description": "CEO hub bot for a multi-agent freelance company: filters specialist updates into short digests, delegates code/DevOps/sales/content, and keeps…",
+   "url": "https://x.ai/bot/f2l8kouzon-xkchozq4pj"
+  },
+  {
+   "id": "coding-software-Loekv1uecl26wWW0lNyfR",
+   "code": "Loekv1uecl26wWW0lNyfR",
+   "name": "Chained Oblivion",
+   "author": "Rufus",
+   "description": "Hunts unused SaaS seats, forgotten trials, duplicate tools, and unrecognized recurring charges.",
+   "url": "https://x.ai/bot/Loekv1uecl26wWW0lNyfR"
+  },
+  {
+   "id": "coding-software-JiSR_7-w1GPQM0QWltAVq",
+   "code": "JiSR_7-w1GPQM0QWltAVq",
+   "name": "Changelog Stand-down",
+   "author": "acolombiadev",
+   "description": "Weekly Monday digest of merged PRs and releases for the GitHub repos you choose.",
+   "url": "https://x.ai/bot/JiSR_7-w1GPQM0QWltAVq"
+  },
+  {
+   "id": "coding-software-36vKs2HSysdaJDe6OLD4w",
+   "code": "36vKs2HSysdaJDe6OLD4w",
+   "name": "ChatPRD",
+   "author": "Claire",
+   "description": "A ChatPRD-first product manager. Specs, brainstorms, and discovery live in ChatPRD.",
+   "url": "https://x.ai/bot/36vKs2HSysdaJDe6OLD4w"
+  },
+  {
+   "id": "coding-software-uA5laJqtELPfk__i_bTz3",
+   "code": "uA5laJqtELPfk__i_bTz3",
+   "name": "Checkout Promo Code & Creator-Discount Hunter",
+   "author": "Lisa",
+   "description": "Consumer checkout promo-code hunter for any online store (like Paula's Choice, Sephora, Nike, or Target).",
+   "url": "https://x.ai/bot/uA5laJqtELPfk__i_bTz3"
+  },
+  {
+   "id": "coding-software-18ceCocmLssbw59nEPwhr",
+   "code": "18ceCocmLssbw59nEPwhr",
+   "name": "Civic Radar",
+   "author": "Chris Padrick",
+   "description": "Neighborhood change radar that maps permits, 311 requests, agendas, registries, and site plans.",
+   "url": "https://x.ai/bot/18ceCocmLssbw59nEPwhr"
+  },
+  {
+   "id": "coding-software-P4vJbbduYSgknHsfaRE3I",
+   "code": "P4vJbbduYSgknHsfaRE3I",
+   "name": "Claim",
+   "author": "Stew Night",
+   "description": "Claims MiniMax Daily Check-in credits on the signed-in box browser each morning.",
+   "url": "https://x.ai/bot/P4vJbbduYSgknHsfaRE3I"
+  },
+  {
+   "id": "coding-software-MqdUhT_uY9SoPKKwrDyKg",
+   "code": "MqdUhT_uY9SoPKKwrDyKg",
+   "name": "Clanker Collector",
+   "author": "JM L",
+   "description": "Junkyard mechanic that finds chat rot in long-running bots and cleans them up.",
+   "url": "https://x.ai/bot/MqdUhT_uY9SoPKKwrDyKg"
+  },
+  {
+   "id": "coding-software-21qraGWAc4RJ3ra04boUK",
+   "code": "21qraGWAc4RJ3ra04boUK",
+   "name": "Claude Code",
+   "author": "IndependentDocX",
+   "description": "Adds the real Claude Code CLI to your Grok Bot team on Opus 5.5.",
+   "url": "https://x.ai/bot/21qraGWAc4RJ3ra04boUK"
+  },
+  {
+   "id": "coding-software-lX0Wfh-zyOnNFGKgwTGxN",
+   "code": "lX0Wfh-zyOnNFGKgwTGxN",
+   "name": "Claude Code",
+   "author": "@ecoay",
+   "description": "A coding bot that runs the Claude Code CLI on its own computer with your Claude plan and GitHub, and never pushes or merges without your approval.",
+   "url": "https://x.ai/bot/lX0Wfh-zyOnNFGKgwTGxN"
+  },
+  {
+   "id": "coding-software-71PSQ4KBs-hNYBsH05X_n",
+   "code": "71PSQ4KBs-hNYBsH05X_n",
+   "name": "Claude Code",
+   "author": "Daniel Zambrini",
+   "description": "A dedicated coding agent that runs all software work through the Claude Code CLI.",
+   "url": "https://x.ai/bot/71PSQ4KBs-hNYBsH05X_n"
+  },
+  {
+   "id": "coding-software-bmHtU8zetkzyD7bCTPUAx",
+   "code": "bmHtU8zetkzyD7bCTPUAx",
+   "name": "Claude Code",
+   "author": "Bill French",
+   "description": "A coding and agent bot that does all its work through the Claude Code CLI with your Claude subscription, keeps…",
+   "url": "https://x.ai/bot/bmHtU8zetkzyD7bCTPUAx"
+  },
+  {
+   "id": "coding-software-1h-5qyBL3Pqkz3CplXpri",
+   "code": "1h-5qyBL3Pqkz3CplXpri",
+   "name": "Claude Code Bot",
+   "author": "Carlos Noriega",
+   "description": "Moves your bot's code work from Cursor cloud agents to Claude Code.",
+   "url": "https://x.ai/bot/1h-5qyBL3Pqkz3CplXpri"
+  },
+  {
+   "id": "coding-software-SJ4VHe-uqXTmcwK5brqiK",
+   "code": "SJ4VHe-uqXTmcwK5brqiK",
+   "name": "Claude Code Commander",
+   "author": "Christian Vera C.",
+   "description": "Text your bot a coding task from anywhere: it hands it to Claude Code on your Mac, runs an adversarial reviewer in its own tab.",
+   "url": "https://x.ai/bot/SJ4VHe-uqXTmcwK5brqiK"
+  },
+  {
+   "id": "coding-software-T24wtEsnk1IupBBl1ekZ2",
+   "code": "T24wtEsnk1IupBBl1ekZ2",
+   "name": "Claude Code Media Desk",
+   "author": "Jonathan Roy",
+   "description": "Takes image and video requests from your Claude Code through a webhook, generates them with Grok Imagine, and saves…",
+   "url": "https://x.ai/bot/T24wtEsnk1IupBBl1ekZ2"
+  },
+  {
+   "id": "coding-software-fr9HmL9bHAC2kjyi1dI6C",
+   "code": "fr9HmL9bHAC2kjyi1dI6C",
+   "name": "Claude Local",
+   "author": "Seth Gagnon",
+   "description": "Talk to this bot in Grok Bot while it runs Claude Code on your Mac for one GitHub repo. Claude mobile is optional.",
+   "url": "https://x.ai/bot/fr9HmL9bHAC2kjyi1dI6C"
+  },
+  {
+   "id": "coding-software-aB0M7wQOAcFgd_G0rTEWF",
+   "code": "aB0M7wQOAcFgd_G0rTEWF",
+   "name": "Claude Remote",
+   "author": "Nick Salerni",
+   "description": "Hand tasks to Claude Code sessions on your Mac and get results back.",
+   "url": "https://x.ai/bot/aB0M7wQOAcFgd_G0rTEWF"
+  },
+  {
+   "id": "coding-software-EZPOPAoX41VFkXD3TvyLn",
+   "code": "EZPOPAoX41VFkXD3TvyLn",
+   "name": "Claude Remote",
+   "author": "psagap",
+   "description": "Hand tasks to Claude Code sessions on your Mac and get results back; check on, start or nudge sessions from chat.",
+   "url": "https://x.ai/bot/EZPOPAoX41VFkXD3TvyLn"
+  },
+  {
+   "id": "coding-software-OR72i4SNc0_F1IzbCfg-D",
+   "code": "OR72i4SNc0_F1IzbCfg-D",
+   "name": "Claudey",
+   "author": "Farzad",
+   "description": "Hands frontend and architecture jobs to the Claude Code CLI, then opens the PR.",
+   "url": "https://x.ai/bot/OR72i4SNc0_F1IzbCfg-D"
+  },
+  {
+   "id": "coding-software-X0H6z06mMxX2873lc5sCa",
+   "code": "X0H6z06mMxX2873lc5sCa",
+   "name": "Clean Room",
+   "author": "@PixelRainbowNFT",
+   "description": "Turns an app, website, binary or repo you're allowed to examine into an evidence-backed behaviour spec and one self-contained build prompt.",
+   "url": "https://x.ai/bot/X0H6z06mMxX2873lc5sCa"
+  },
+  {
+   "id": "coding-software-mhKuHm7fVTt2G4Tx16qsc",
+   "code": "mhKuHm7fVTt2G4Tx16qsc",
+   "name": "Cleaner",
+   "author": "Joshua_Krg",
+   "description": "Nightly cleanup of RAM, disk space, and old regenerable files on your connected computers.",
+   "url": "https://x.ai/bot/mhKuHm7fVTt2G4Tx16qsc"
+  },
+  {
+   "id": "coding-software-tZFOB5nZMHj6O14WP2NgK",
+   "code": "tZFOB5nZMHj6O14WP2NgK",
+   "name": "Clippy",
+   "author": "Sergio",
+   "description": "Asistente de software en español (España): diseña, depura e integra apps y agentes con hechos separados de opiniones y sin publicar ni cambiar cuentas.",
+   "url": "https://x.ai/bot/tZFOB5nZMHj6O14WP2NgK"
+  },
+  {
+   "id": "coding-software-SlYlBUem89tWGyLLmN2ul",
+   "code": "SlYlBUem89tWGyLLmN2ul",
+   "name": "Cloudflare",
+   "author": "Gustavo Cadena",
+   "description": "A careful Cloudflare engineer for your domains: DNS, SSL, redirects, Workers and Pages sites.",
+   "url": "https://x.ai/bot/SlYlBUem89tWGyLLmN2ul"
+  },
+  {
+   "id": "coding-software-8PJjDLzjuEt3xfhKrtQKy",
+   "code": "8PJjDLzjuEt3xfhKrtQKy",
+   "name": "Cloudflare",
+   "author": "Justin",
+   "description": "Runs your Cloudflare account through the new `cf` CLI: DNS, zones, SSL, WAF, Access, Workers, Pages, R2, D1, KV, and Queues.",
+   "url": "https://x.ai/bot/8PJjDLzjuEt3xfhKrtQKy"
+  },
+  {
+   "id": "coding-software-R8z7Gt048fEu5Z8xqtgTQ",
+   "code": "R8z7Gt048fEu5Z8xqtgTQ",
+   "name": "Cloudflare Admin",
+   "author": "Jonathan Beckman",
+   "description": "Audits and tidies your Cloudflare account every week.",
+   "url": "https://x.ai/bot/R8z7Gt048fEu5Z8xqtgTQ"
+  },
+  {
+   "id": "coding-software-wuX9f9WZMmY8e1EQ_eB8A",
+   "code": "wuX9f9WZMmY8e1EQ_eB8A",
+   "name": "Cloudflare GitHub Site Bot",
+   "author": "Roman",
+   "description": "Builds new websites or migrates existing ones onto GitHub and Cloudflare Workers. Walks you from zero accounts through SSH deploy keys, API tokens,.",
+   "url": "https://x.ai/bot/wuX9f9WZMmY8e1EQ_eB8A"
+  },
+  {
+   "id": "coding-software-BrrgzXEeQAa_cRfNN3lSn",
+   "code": "BrrgzXEeQAa_cRfNN3lSn",
+   "name": "Cluster Diagnostics",
+   "author": "Tomi",
+   "description": "Read-only OpenShift / platform SRE bot. Diagnoses why clusters, Operators, Service Mesh, and GitOps drift fail — with evidence — and proposes GitOps PRs.",
+   "url": "https://x.ai/bot/BrrgzXEeQAa_cRfNN3lSn"
+  },
+  {
+   "id": "coding-software-OFxQlvVIgUAnxN5hfCb9e",
+   "code": "OFxQlvVIgUAnxN5hfCb9e",
+   "name": "Code Bot Marty",
+   "author": "Trimmer",
+   "description": "Code Bot Marty is a patient coding helper for people who have never written code.",
+   "url": "https://x.ai/bot/OFxQlvVIgUAnxN5hfCb9e"
+  },
+  {
+   "id": "coding-software-4y3jlvwxFNqcP76eJgpuD",
+   "code": "4y3jlvwxFNqcP76eJgpuD",
+   "name": "Code Red",
+   "author": "@suddenlyjon",
+   "description": "A rehearsed emergency stop for systems you own, gated behind your own confirmation.",
+   "url": "https://x.ai/bot/4y3jlvwxFNqcP76eJgpuD"
+  },
+  {
+   "id": "coding-software-NuOSHSdCZPVkM78K0HkB3",
+   "code": "NuOSHSdCZPVkM78K0HkB3",
+   "name": "Code Team Spawn",
+   "author": "Bryan",
+   "description": "Sits idle until you need a coding team, then interviews and spawns a hidden five-person crew.",
+   "url": "https://x.ai/bot/NuOSHSdCZPVkM78K0HkB3"
+  },
+  {
+   "id": "coding-software-_G3maEq_3-ijcQJ1Efr4X",
+   "code": "_G3maEq_3-ijcQJ1Efr4X",
+   "name": "Code Team Spawn",
+   "author": "Bryan Weaver",
+   "description": "Sits idle until you need a coding team. Interviews, spawns a Conductor plus a hidden five-person crew, then steps out…",
+   "url": "https://x.ai/bot/_G3maEq_3-ijcQJ1Efr4X"
+  },
+  {
+   "id": "coding-software-InLF1LwxW0DYkB4sMICGL",
+   "code": "InLF1LwxW0DYkB4sMICGL",
+   "name": "Code Wrap",
+   "author": "Dominic Bryant",
+   "description": "Helps wrap and connect code across languages (pybind11/JNI, hot-path rewrites, APIs/protobuf, strangler migrations)…",
+   "url": "https://x.ai/bot/InLF1LwxW0DYkB4sMICGL"
+  },
+  {
+   "id": "coding-software--3H90YMhn2cE-CO1jj3-2",
+   "code": "-3H90YMhn2cE-CO1jj3-2",
+   "name": "CodeFix Buddy",
+   "author": "Jaylin",
+   "description": "Your all-in-one coding sidekick. Paste an error and get the fix, describe what to build and get working code, or ask about a concept and get a simple.",
+   "url": "https://x.ai/bot/-3H90YMhn2cE-CO1jj3-2"
+  },
+  {
+   "id": "coding-software-aUHkBXXwCzljCcTJSzBYw",
+   "code": "aUHkBXXwCzljCcTJSzBYw",
+   "name": "Codex",
+   "author": "IndependentDocX",
+   "description": "Thin wrapper around the real Codex CLI. Takes a coding or deep-research task, runs it through Codex on your computer…",
+   "url": "https://x.ai/bot/aUHkBXXwCzljCcTJSzBYw"
+  },
+  {
+   "id": "coding-software-IT6ZEKuhw01OSTucC0ttg",
+   "code": "IT6ZEKuhw01OSTucC0ttg",
+   "name": "Codex Runner",
+   "author": "Ali Nabipour",
+   "description": "Starts Codex CLI coding runs on your Mac, tracks them until they finish, and reports back with a summary, the PR, check results.",
+   "url": "https://x.ai/bot/IT6ZEKuhw01OSTucC0ttg"
+  },
+  {
+   "id": "coding-software-XoKZHbjmYSaOZO1Z4LmSf",
+   "code": "XoKZHbjmYSaOZO1Z4LmSf",
+   "name": "Codey",
+   "author": "Sergio Tigera",
+   "description": "A careful coding assistant that proposes changes, opens PRs when you ask, and waits for your yes before merging…",
+   "url": "https://x.ai/bot/XoKZHbjmYSaOZO1Z4LmSf"
+  },
+  {
+   "id": "coding-software-13yf3AdAmULsgeJ0ubjM5",
+   "code": "13yf3AdAmULsgeJ0ubjM5",
+   "name": "Coding Prompt Engineer",
+   "author": "Thomas Ripley",
+   "description": "Keeps a sourced library of how top engineers prompt coding agents and use skills, updated daily from X, and writes steering prompts that stop repeat bugs.",
+   "url": "https://x.ai/bot/13yf3AdAmULsgeJ0ubjM5"
+  },
+  {
+   "id": "coding-software-AudrKNxvnGmLlGRUBRnym",
+   "code": "AudrKNxvnGmLlGRUBRnym",
+   "name": "Coding Seat Router",
+   "author": "Will Mather",
+   "description": "Hands your heavy jobs (code, apps, long research, big documents, long-form writing, data work) to the right coding seat.",
+   "url": "https://x.ai/bot/AudrKNxvnGmLlGRUBRnym"
+  },
+  {
+   "id": "coding-software-eWee2PsTChAwOGEKpKpT_",
+   "code": "eWee2PsTChAwOGEKpKpT_",
+   "name": "Cody",
+   "author": "Christie Groenewald",
+   "description": "A careful coding partner for small self-hosted web apps and PWAs.",
+   "url": "https://x.ai/bot/eWee2PsTChAwOGEKpKpT_"
+  },
+  {
+   "id": "coding-software-szrvLgA9uHYiH3dKiW8ZV",
+   "code": "szrvLgA9uHYiH3dKiW8ZV",
+   "name": "Commit Coach",
+   "author": "Nomis",
+   "description": "Teaches you from your own commits — one win, one concept, and one under-30-minute exercise each week.",
+   "url": "https://x.ai/bot/szrvLgA9uHYiH3dKiW8ZV"
+  },
+  {
+   "id": "coding-software-Z8aPXNVasH1ogYkAuCMIZ",
+   "code": "Z8aPXNVasH1ogYkAuCMIZ",
+   "name": "Computer",
+   "author": "Code Solutions",
+   "description": "A front-door bot for a tiny agent roster. It reads your GitHub board, names one bite-sized issue at a time, hands that leaf to a worker (or you),.",
+   "url": "https://x.ai/bot/Z8aPXNVasH1ogYkAuCMIZ"
+  },
+  {
+   "id": "coding-software-vnnCeBiOCASkKEs2k_Pp9",
+   "code": "vnnCeBiOCASkKEs2k_Pp9",
+   "name": "Conectar Claude Code",
+   "author": "Lauta",
+   "description": "Te deja Claude Code (el CLI oficial, con tu plan Claude Max) conectado a tu Grok Bot, paso a paso y con una prueba de punta a punta.",
+   "url": "https://x.ai/bot/vnnCeBiOCASkKEs2k_Pp9"
+  },
+  {
+   "id": "coding-software-itRipjD5ztScBqvd8vJIf",
+   "code": "itRipjD5ztScBqvd8vJIf",
+   "name": "Confidence Gate Code Reviewer",
+   "author": "Vicente",
+   "description": "Confidence Gate Code Reviewer Grok Bot share template.",
+   "url": "https://x.ai/bot/itRipjD5ztScBqvd8vJIf"
+  },
+  {
+   "id": "coding-software-voxpqRMZbPRpIxptiyJ_g",
+   "code": "voxpqRMZbPRpIxptiyJ_g",
+   "name": "Confidence Gate Code Reviewer",
+   "author": "v_burgos_",
+   "description": "Audits pasted PR diffs with a >80% confidence gate: APPROVE / WARNING / BLOCK.",
+   "url": "https://x.ai/bot/voxpqRMZbPRpIxptiyJ_g"
+  },
+  {
+   "id": "coding-software-OayZREvep4QIt3u8PNWdb",
+   "code": "OayZREvep4QIt3u8PNWdb",
+   "name": "Cringe Bot",
+   "author": "Claire",
+   "description": "Smoke-tests your web apps for anything that feels cheap, broken, or confusing, then posts up to five blunt findings with screenshots.",
+   "url": "https://x.ai/bot/OayZREvep4QIt3u8PNWdb"
+  },
+  {
+   "id": "coding-software-W97u_fWa2gKN1s8RFnM46",
+   "code": "W97u_fWa2gKN1s8RFnM46",
+   "name": "Cringe Bot",
+   "author": "Patrick Robinson",
+   "description": "Smoke-tests your web apps for anything that makes them feel cheap, broken, or confusing, then sends up to five blunt, screenshot-backed findings.",
+   "url": "https://x.ai/bot/W97u_fWa2gKN1s8RFnM46"
+  },
+  {
+   "id": "coding-software-zSKgg4Uce1QTwWRf9Q-vu",
+   "code": "zSKgg4Uce1QTwWRf9Q-vu",
+   "name": "Cursor",
+   "author": "Daniel Medina",
+   "description": "Slack coding + ops teammate for a WhatsApp logistics SaaS: partners type a summon phrase, it launches Cloud Agents on your subscription, keeps thread.",
+   "url": "https://x.ai/bot/zSKgg4Uce1QTwWRf9Q-vu"
+  },
+  {
+   "id": "coding-software-z4r7D8iILsTQDf7r7DwKR",
+   "code": "z4r7D8iILsTQDf7r7DwKR",
+   "name": "Cursor Agent",
+   "author": "Ryan T",
+   "description": "Local-only builder. Runs cursor-agent CLI on the user's laptop for experiments and a shop-floor CLI.",
+   "url": "https://x.ai/bot/z4r7D8iILsTQDf7r7DwKR"
+  },
+  {
+   "id": "coding-software-WNOHrJKWnT4kjoUTa5gPD",
+   "code": "WNOHrJKWnT4kjoUTa5gPD",
+   "name": "Cursor Link",
+   "author": "Zach",
+   "description": "Watches your local Cursor agents from your phone, answers safe approvals while you're away, sends prompts you okay, and keeps your Mac awake.",
+   "url": "https://x.ai/bot/WNOHrJKWnT4kjoUTa5gPD"
+  },
+  {
+   "id": "coding-software-cmJ60Kaq9etjuQBUqo4SQ",
+   "code": "cmJ60Kaq9etjuQBUqo4SQ",
+   "name": "Cursor Projects: Outer Loop / Inner Loop",
+   "author": "Ryan Evans",
+   "description": "Plans and launches Cursor Projects with an outer loop / inner loop setup: a Project coordinator owns the build, and an Outer Loop bot feeds it context packs.",
+   "url": "https://x.ai/bot/cmJ60Kaq9etjuQBUqo4SQ"
+  },
+  {
+   "id": "coding-software-SXSKuD8b7JfpSIKyvbfdM",
+   "code": "SXSKuD8b7JfpSIKyvbfdM",
+   "name": "Cybertruck Expert",
+   "author": "Inkwell Designers",
+   "description": "Helper for owning a Tesla Cybertruck: tips, settings, tires, charging, and a weekly roundup of software updates, recalls and owner tips.",
+   "url": "https://x.ai/bot/SXSKuD8b7JfpSIKyvbfdM"
+  },
+  {
+   "id": "coding-software-kIX3q73v4yn2HgkYZiAac",
+   "code": "kIX3q73v4yn2HgkYZiAac",
+   "name": "Cye",
+   "author": "Sentinel Architech",
+   "description": "Defend-only cybersecurity and cryptography advisor.",
+   "url": "https://x.ai/bot/kIX3q73v4yn2HgkYZiAac"
+  },
+  {
+   "id": "coding-software-u9YedcQf8xZY-wfQ_BBc0",
+   "code": "u9YedcQf8xZY-wfQ_BBc0",
+   "name": "Damwright",
+   "author": "GenXer",
+   "description": "A lakehouse architect that takes data requests through conceptual, logical and physical models that fit your layering approach, such as medallion.",
+   "url": "https://x.ai/bot/u9YedcQf8xZY-wfQ_BBc0"
+  },
+  {
+   "id": "coding-software-dzztEmmBAaXcgHi-49aeg",
+   "code": "dzztEmmBAaXcgHi-49aeg",
+   "name": "Darmadasa",
+   "author": "Dax Perera",
+   "description": "A quick Colombo Metro bus guide. Ask for the next bus between two stops or landmarks, fares, routes, or where a bus is right now.",
+   "url": "https://x.ai/bot/dzztEmmBAaXcgHi-49aeg"
+  },
+  {
+   "id": "coding-software-QPmpf6mILieZk5iePy0dm",
+   "code": "QPmpf6mILieZk5iePy0dm",
+   "name": "Dashboard",
+   "author": "ollie",
+   "description": "Builds a private drag-to-arrange stats dashboard as a single HTML file, starting with tagged sample data; connect real data panel by panel, keys never in chat.",
+   "url": "https://x.ai/bot/QPmpf6mILieZk5iePy0dm"
+  },
+  {
+   "id": "coding-software-qbiG4Q0RQuy0Y_C8Hr--l",
+   "code": "qbiG4Q0RQuy0Y_C8Hr--l",
+   "name": "Dashboard Maker",
+   "author": "Avid",
+   "description": "Figures out what in your work deserves a dashboard, builds those as live Pages from real data and retires the ones nobody uses.",
+   "url": "https://x.ai/bot/qbiG4Q0RQuy0Y_C8Hr--l"
+  },
+  {
+   "id": "coding-software-Sem0pTwrZmPJDU9WBAmHm",
+   "code": "Sem0pTwrZmPJDU9WBAmHm",
+   "name": "Data",
+   "author": "Sentinel Architech",
+   "description": "Local-first data engineering and pattern intelligence.",
+   "url": "https://x.ai/bot/Sem0pTwrZmPJDU9WBAmHm"
+  },
+  {
+   "id": "coding-software-L2XnvQ2nhHBxgisZ2w-rK",
+   "code": "L2XnvQ2nhHBxgisZ2w-rK",
+   "name": "Data Bot",
+   "author": "Colin",
+   "description": "Cleans form exports/spreadsheets into clear metrics digests.",
+   "url": "https://x.ai/bot/L2XnvQ2nhHBxgisZ2w-rK"
+  },
+  {
+   "id": "coding-software-TOA1DYEKfWL6m9SnhRJtj",
+   "code": "TOA1DYEKfWL6m9SnhRJtj",
+   "name": "Daybook",
+   "author": "Taylor | Capacity for More",
+   "description": "Sends you a morning brief of yesterday's AI coding sessions: what moved, what needs you, and where to start, with every claim linked.",
+   "url": "https://x.ai/bot/TOA1DYEKfWL6m9SnhRJtj"
+  },
+  {
+   "id": "coding-software-nbUWXUqcXIA0HNQQ3R1Bu",
+   "code": "nbUWXUqcXIA0HNQQ3R1Bu",
+   "name": "Dealer",
+   "author": "Wolfe-James",
+   "description": "One repo or folder in → one two-sided FAF stack flip card out. Facts from faf only. Nothing else.",
+   "url": "https://x.ai/bot/nbUWXUqcXIA0HNQQ3R1Bu"
+  },
+  {
+   "id": "coding-software-IqXV0I1hK8sXPfyrsOZDA",
+   "code": "IqXV0I1hK8sXPfyrsOZDA",
+   "name": "Dependency & Secret Audit",
+   "author": "Thuong P. Nguyen",
+   "description": "Paste a GitHub repo, get a ranked fix list in 2 minutes: vulnerable packages with exact upgrade commands, leaked keys…",
+   "url": "https://x.ai/bot/IqXV0I1hK8sXPfyrsOZDA"
+  },
+  {
+   "id": "coding-software-7n0xNJQkJya50-WawGibg",
+   "code": "7n0xNJQkJya50-WawGibg",
+   "name": "Deploy Desk",
+   "author": "D.J.",
+   "description": "Keeps a small SaaS product's site deployed and healthy, runs its organic X account from a rolling queue with generated visuals, and drafts outreach…",
+   "url": "https://x.ai/bot/7n0xNJQkJya50-WawGibg"
+  },
+  {
+   "id": "coding-software-EdkMNLrTT0WLNDQYN-l-e",
+   "code": "EdkMNLrTT0WLNDQYN-l-e",
+   "name": "Deployment PM",
+   "author": "Ash",
+   "description": "Ships cleared work through a locked deploy method, keeps a deployment log, and waits for a human go-ahead.",
+   "url": "https://x.ai/bot/EdkMNLrTT0WLNDQYN-l-e"
+  },
+  {
+   "id": "coding-software-RhlJWJ-1SJ7wCYIbZk7Jg",
+   "code": "RhlJWJ-1SJ7wCYIbZk7Jg",
+   "name": "DevOps Helper",
+   "author": "Mario Pavlakovic",
+   "description": "A careful DevOps assistant for home labs: Traefik deploys via GitHub Actions, a hardened Grafana/Prometheus/Loki stack, Wake-on-LAN and Tailscale.",
+   "url": "https://x.ai/bot/RhlJWJ-1SJ7wCYIbZk7Jg"
+  },
+  {
+   "id": "coding-software-0fYZ_kKkiXNbLn_KBD3f3",
+   "code": "0fYZ_kKkiXNbLn_KBD3f3",
+   "name": "Developer",
+   "author": "Matej",
+   "description": "A Jack-land development partner. Orchestrates coding labs through Tentacles, keeps Linear as the board, and runs…",
+   "url": "https://x.ai/bot/0fYZ_kKkiXNbLn_KBD3f3"
+  },
+  {
+   "id": "coding-software-N7Qd2fHEhsMMt_frqyeZA",
+   "code": "N7Qd2fHEhsMMt_frqyeZA",
+   "name": "Devin",
+   "author": "Jaime Hernandez",
+   "description": "Software engineer for native apps, services, GPU pipelines, and deploys — strong in C++, Python, regex, and PowerShell…",
+   "url": "https://x.ai/bot/N7Qd2fHEhsMMt_frqyeZA"
+  },
+  {
+   "id": "coding-software-RwNXRkVfIUpxKV6jeXRsR",
+   "code": "RwNXRkVfIUpxKV6jeXRsR",
+   "name": "Devin",
+   "author": "Nazeeh",
+   "description": "Hands coding work to Devin through remote MCP sessions and follow-ups.",
+   "url": "https://x.ai/bot/RwNXRkVfIUpxKV6jeXRsR"
+  },
+  {
+   "id": "coding-software-uxUj0_7KnMFi7zxHr64WQ",
+   "code": "uxUj0_7KnMFi7zxHr64WQ",
+   "name": "Devin",
+   "author": "Rick Blalock",
+   "description": "Desk bot for Cognition Devin cloud sessions, playbooks, knowledge, and DeepWiki — for teams whose Engineer and project bots hand work over.",
+   "url": "https://x.ai/bot/uxUj0_7KnMFi7zxHr64WQ"
+  },
+  {
+   "id": "coding-software-6E_utcgAyzss28fX7_tJs",
+   "code": "6E_utcgAyzss28fX7_tJs",
+   "name": "Devin Op",
+   "author": "Sentinel Architech",
+   "description": "Local-first DevOps assistant for reproducible builds, rootless containers, and offline node setup.",
+   "url": "https://x.ai/bot/6E_utcgAyzss28fX7_tJs"
+  },
+  {
+   "id": "coding-software-Iz3asXRLoLC8Pr0gZYGdE",
+   "code": "Iz3asXRLoLC8Pr0gZYGdE",
+   "name": "Diagnostics PM",
+   "author": "Ash",
+   "description": "QA gate for a multi-PM loop: layered pre-deploy tests, production checks and status reports.",
+   "url": "https://x.ai/bot/Iz3asXRLoLC8Pr0gZYGdE"
+  },
+  {
+   "id": "coding-software-ylhq0i8pUOGWzSNuxWvCE",
+   "code": "ylhq0i8pUOGWzSNuxWvCE",
+   "name": "Directory Backlink Builder",
+   "author": "Scott Vayner",
+   "description": "Submits your SaaS to relevant software directories on a daily loop. Prefers niche industry directories over dump lists, free listings only, and only.",
+   "url": "https://x.ai/bot/ylhq0i8pUOGWzSNuxWvCE"
+  },
+  {
+   "id": "coding-software-m5Xjk7EhNokKF49YF9XuW",
+   "code": "m5Xjk7EhNokKF49YF9XuW",
+   "name": "Discogs-Bot",
+   "author": "Alexandre hawat",
+   "description": "Automates Discogs for vinyl collectors: search and manage your collection and wantlist, check marketplace prices…",
+   "url": "https://x.ai/bot/m5Xjk7EhNokKF49YF9XuW"
+  },
+  {
+   "id": "coding-software-YdE8x6bdJ6Qvfk7KmtJAu",
+   "code": "YdE8x6bdJ6Qvfk7KmtJAu",
+   "name": "Discount Codes",
+   "author": "Pat McDonough",
+   "description": "Finds every legitimate way to pay less for a product you name, with sourced codes, cashback, and cheaper alternatives…",
+   "url": "https://x.ai/bot/YdE8x6bdJ6Qvfk7KmtJAu"
+  },
+  {
+   "id": "coding-software-id4s2QYrPYZsiTqvzIhkt",
+   "code": "id4s2QYrPYZsiTqvzIhkt",
+   "name": "Distill anyone",
+   "author": "Kun Chen",
+   "description": "Distills a public presence into a talkable bot you can keep daily updated.",
+   "url": "https://x.ai/bot/id4s2QYrPYZsiTqvzIhkt"
+  },
+  {
+   "id": "coding-software-hOCG3B2m6063Sasbt0CVu",
+   "code": "hOCG3B2m6063Sasbt0CVu",
+   "name": "Docs Keeper",
+   "author": "SoCalFSD",
+   "description": "Keeps your repo's README and CHANGELOG in step with what actually merged, through one draft pull request each week.",
+   "url": "https://x.ai/bot/hOCG3B2m6063Sasbt0CVu"
+  },
+  {
+   "id": "coding-software-OI2Q6w1ZObbpFbazhrFvC",
+   "code": "OI2Q6w1ZObbpFbazhrFvC",
+   "name": "Don Bot Corleone",
+   "author": "AdamDesigns",
+   "description": "Sends your work to top Claude and OpenAI models through your own Claude Code and Codex subscription logins, not paid API keys, and can compare models.",
+   "url": "https://x.ai/bot/OI2Q6w1ZObbpFbazhrFvC"
+  },
+  {
+   "id": "coding-software-O1pp3DiDUU9T3Cz-jTzXw",
+   "code": "O1pp3DiDUU9T3Cz-jTzXw",
+   "name": "Dot",
+   "author": ".",
+   "description": "Fleet switchboard with Dot Matrix from ReBoot energy: warm, quick, loyal.",
+   "url": "https://x.ai/bot/O1pp3DiDUU9T3Cz-jTzXw"
+  },
+  {
+   "id": "coding-software-9nAjTcDLxhYNz4jOtEzDO",
+   "code": "9nAjTcDLxhYNz4jOtEzDO",
+   "name": "Dr Disk Clean",
+   "author": "Will OldPgmrs",
+   "description": "Surveys a crowded Linux box and never deletes until you name the path.",
+   "url": "https://x.ai/bot/9nAjTcDLxhYNz4jOtEzDO"
+  },
+  {
+   "id": "coding-software-9najtcdlxhynz4jotezdo",
+   "code": "9najtcdlxhynz4jotezdo",
+   "name": "Dr Disk Clean",
+   "author": "Will",
+   "description": "Shared Linux disk caretaker for multi-agent computers.",
+   "url": "https://x.ai/bot/9najtcdlxhynz4jotezdo"
+  },
+  {
+   "id": "coding-software-n7pqMpgT0wp5VFGRJ3L7s",
+   "code": "n7pqMpgT0wp5VFGRJ3L7s",
+   "name": "Dr. Apebot",
+   "author": "Sy",
+   "description": "Your decision desk that also hands work to Codex or Claude Code on your own subscriptions.",
+   "url": "https://x.ai/bot/n7pqMpgT0wp5VFGRJ3L7s"
+  },
+  {
+   "id": "coding-software-dnCnydyRm8J_xYeekmVCp",
+   "code": "dnCnydyRm8J_xYeekmVCp",
+   "name": "Dry Run Lab",
+   "author": "Antiochus",
+   "description": "Dry Run Lab: test router and switch config changes before you make them. Created by Paul Charydczak.",
+   "url": "https://x.ai/bot/dnCnydyRm8J_xYeekmVCp"
+  },
+  {
+   "id": "coding-software-HxOUGTNaeLbJIqT_XTzqX",
+   "code": "HxOUGTNaeLbJIqT_XTzqX",
+   "name": "Ducky",
+   "author": "Ed Heltzel",
+   "description": "Rubber-duck partner that holds fixes until four clarity gates pass.",
+   "url": "https://x.ai/bot/HxOUGTNaeLbJIqT_XTzqX"
+  },
+  {
+   "id": "coding-software-sSiZrIbYNGqtqtTmO3Btf",
+   "code": "sSiZrIbYNGqtqtTmO3Btf",
+   "name": "Egress Engineer",
+   "author": "sats node",
+   "description": "Routes your bot's browser through a device you own using a Tailscale exit node, so websites see your home IP and country.",
+   "url": "https://x.ai/bot/sSiZrIbYNGqtqtTmO3Btf"
+  },
+  {
+   "id": "coding-software-WsS7Bas_UC_vKw9PZ2Ejl",
+   "code": "WsS7Bas_UC_vKw9PZ2Ejl",
+   "name": "Elite Engineer",
+   "author": "Christian Amechi",
+   "description": "An Expo / React Native / WebView engineer that turns web apps into store-ready iOS builds.",
+   "url": "https://x.ai/bot/WsS7Bas_UC_vKw9PZ2Ejl"
+  },
+  {
+   "id": "coding-software-BI5ecKykD9_L7ShV3AuEq",
+   "code": "BI5ecKykD9_L7ShV3AuEq",
+   "name": "Ember",
+   "author": "Austin Christian",
+   "description": "Stop chasing your own bots. Ember is connective tissue for founders running multiple department heads — slip-only…",
+   "url": "https://x.ai/bot/BI5ecKykD9_L7ShV3AuEq"
+  },
+  {
+   "id": "coding-software-BCMZnNRfmXU1TxMZ3eBbP",
+   "code": "BCMZnNRfmXU1TxMZ3eBbP",
+   "name": "Engineer",
+   "author": "Vraj Gupta",
+   "description": "Routes every idea, bug and feature to a per-project herdr workspace where a Claude Code lead builds, verifies and opens draft PRs; pings you only to decide.",
+   "url": "https://x.ai/bot/BCMZnNRfmXU1TxMZ3eBbP"
+  },
+  {
+   "id": "coding-software-tGSpx-ZmfMi63a0GRy8FS",
+   "code": "tGSpx-ZmfMi63a0GRy8FS",
+   "name": "Engineer",
+   "author": "Sentinel Architech",
+   "description": "An engineering specialist for engineering and engineering technologies (NCES CIP 14 and 15).",
+   "url": "https://x.ai/bot/tGSpx-ZmfMi63a0GRy8FS"
+  },
+  {
+   "id": "coding-software-Ezo9lsvBng4uFluXRvqkv",
+   "code": "Ezo9lsvBng4uFluXRvqkv",
+   "name": "Engineer",
+   "author": "Andrew",
+   "description": "Outer-loop engineering manager: break work down, hand it to a build agent, prove it, bring back the receipt.",
+   "url": "https://x.ai/bot/Ezo9lsvBng4uFluXRvqkv"
+  },
+  {
+   "id": "coding-software-9b4DUFqQnCtrclcyzWs5x",
+   "code": "9b4DUFqQnCtrclcyzWs5x",
+   "name": "Engineer's Morning Brief",
+   "author": "Mahdi",
+   "description": "One short pre-standup brief: today's meetings, PRs waiting on you, failing CI and messages that need you.",
+   "url": "https://x.ai/bot/9b4DUFqQnCtrclcyzWs5x"
+  },
+  {
+   "id": "coding-software-rVeHYcWzNWEYzFwz7ueRD",
+   "code": "rVeHYcWzNWEYzFwz7ueRD",
+   "name": "Engineering Director",
+   "author": "Jordan Bell",
+   "description": "Coordinates mechanical and product engineering work: CAD handoffs, calculations, simulation, vendor RFQs, and agents that drive CAD on your PC.",
+   "url": "https://x.ai/bot/rVeHYcWzNWEYzFwz7ueRD"
+  },
+  {
+   "id": "coding-software-Ks3X7JpD-6I86s3zkJFRh",
+   "code": "Ks3X7JpD-6I86s3zkJFRh",
+   "name": "Engineering Lead",
+   "author": "Lauren Tan",
+   "description": "An engineering lead that owns the loop: breaks work into Cloud Agents, chases CI, reviews, and stalls on a weekday cadence.",
+   "url": "https://x.ai/bot/Ks3X7JpD-6I86s3zkJFRh"
+  },
+  {
+   "id": "coding-software-IWfeUN5d0Ad8vwfhxQycG",
+   "code": "IWfeUN5d0Ad8vwfhxQycG",
+   "name": "Engineering Loop PM",
+   "author": "Ash Naik",
+   "description": "Operator for Develop to Diagnose to Deploy that gates on Design equals Done.",
+   "url": "https://x.ai/bot/IWfeUN5d0Ad8vwfhxQycG"
+  },
+  {
+   "id": "coding-software-b2tS8BNj8BhoQNDcB081S",
+   "code": "b2tS8BNj8BhoQNDcB081S",
+   "name": "Engineering QA",
+   "author": "Andre Leibovici",
+   "description": "Owns pull-request quality gates on the repos you assign: CI + Bugbot + review verdicts, with optional low-risk…",
+   "url": "https://x.ai/bot/b2tS8BNj8BhoQNDcB081S"
+  },
+  {
+   "id": "coding-software-sX80HINXrkv8nGNxmN-jC",
+   "code": "sX80HINXrkv8nGNxmN-jC",
+   "name": "Engineering Worker - Agent Resources",
+   "author": "Storm Anderson",
+   "description": "HR for your agent team. Collects friction about coworker bots and proposes process, prompt, and working-order changes…",
+   "url": "https://x.ai/bot/sX80HINXrkv8nGNxmN-jC"
+  },
+  {
+   "id": "coding-software-KD6Inzz73uAr0YbWteOY1",
+   "code": "KD6Inzz73uAr0YbWteOY1",
+   "name": "Engineering Worker - Pruner",
+   "author": "Storm Anderson",
+   "description": "Simplifies finished Implementation pull requests while keeping the same behavior, then hands the tip to Code Review…",
+   "url": "https://x.ai/bot/KD6Inzz73uAr0YbWteOY1"
+  },
+  {
+   "id": "coding-software-R0acF6Pmp8YewSZm6fA-D",
+   "code": "R0acF6Pmp8YewSZm6fA-D",
+   "name": "Estack",
+   "author": "Rob Annand",
+   "description": "Token-bounded coding steward. Locks Goal, Scope, and Done Condition, hands repo work to Cursor Cloud Agents…",
+   "url": "https://x.ai/bot/R0acF6Pmp8YewSZm6fA-D"
+  },
+  {
+   "id": "coding-software-LDdyYi2IyNaixbGS6HYYs",
+   "code": "LDdyYi2IyNaixbGS6HYYs",
+   "name": "Evolution GO",
+   "author": "Paulo",
+   "description": "Sends WhatsApp messages through your own Evolution API instance, for people who want summaries and alerts delivered on WhatsApp.",
+   "url": "https://x.ai/bot/LDdyYi2IyNaixbGS6HYYs"
+  },
+  {
+   "id": "coding-software-794hIWjgfm5XGVkyIyU0b",
+   "code": "794hIWjgfm5XGVkyIyU0b",
+   "name": "Execution Operator",
+   "author": "Avid",
+   "description": "A hands-on operator that takes your coding and repo tasks and runs them all the way to done. For anyone who wants PRs shipped, not just plans.",
+   "url": "https://x.ai/bot/794hIWjgfm5XGVkyIyU0b"
+  },
+  {
+   "id": "coding-software-JjH-pvNlzX_wMv-YgSrb8",
+   "code": "JjH-pvNlzX_wMv-YgSrb8",
+   "name": "Expo Builder",
+   "author": "Phil Pluckthun",
+   "description": "Scaffolds a mobile project with pnpm, reviews each change, and runs the app on EAS cloud simulators via dev builds and tunnels.",
+   "url": "https://x.ai/bot/JjH-pvNlzX_wMv-YgSrb8"
+  },
+  {
+   "id": "coding-software-tLSg4HxepSclMqbZUTRnX",
+   "code": "tLSg4HxepSclMqbZUTRnX",
+   "name": "Fable 5.1 Oracle",
+   "author": "Matt Rice",
+   "description": "Thinks the build through and checks the work, but never writes the code itself.",
+   "url": "https://x.ai/bot/tLSg4HxepSclMqbZUTRnX"
+  },
+  {
+   "id": "coding-software-jQ4VpRUAOS4awmiDlwI6n",
+   "code": "jQ4VpRUAOS4awmiDlwI6n",
+   "name": "Fabrication",
+   "author": "∆v",
+   "description": "Takes a CAD part toward a Bambu print with checks before it hits the bed.",
+   "url": "https://x.ai/bot/jQ4VpRUAOS4awmiDlwI6n"
+  },
+  {
+   "id": "coding-software-ZQbeC5vIV2F8jCLVzxZAg",
+   "code": "ZQbeC5vIV2F8jCLVzxZAg",
+   "name": "Failed Link",
+   "author": "Dominic Bryant",
+   "description": "Download Orange Web Design Bot! Previous link fails. It helps with Vercel + Cloudflare website setup. Does nothing else.",
+   "url": "https://x.ai/bot/ZQbeC5vIV2F8jCLVzxZAg"
+  },
+  {
+   "id": "coding-software-_-3KKbHbnSRzrS_8KFugU",
+   "code": "_-3KKbHbnSRzrS_8KFugU",
+   "name": "Feedback",
+   "author": "NYTEMODE",
+   "description": "Turns a bug you have already confirmed into a clean report, filed with the right team.",
+   "url": "https://x.ai/bot/_-3KKbHbnSRzrS_8KFugU"
+  },
+  {
+   "id": "coding-software-kOQ7mWg9DLWq2-UpGKf67",
+   "code": "kOQ7mWg9DLWq2-UpGKf67",
+   "name": "First-Week Coach",
+   "author": "Michael",
+   "description": "Seven days of ten-minute lessons that turn a new user into a confident one.",
+   "url": "https://x.ai/bot/kOQ7mWg9DLWq2-UpGKf67"
+  },
+  {
+   "id": "coding-software-__4FfrkUdvpdMk6-LKg5r",
+   "code": "__4FfrkUdvpdMk6-LKg5r",
+   "name": "Firstmate",
+   "author": "Kun Chen",
+   "description": "A single front door that orchestrates your other agents so you stop context switching.",
+   "url": "https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r"
+  },
+  {
+   "id": "coding-software-MMyecjLoLXVanmqSRtoo2",
+   "code": "MMyecjLoLXVanmqSRtoo2",
+   "name": "Firstmate Builder",
+   "author": "Matt Rice",
+   "description": "Thin relay to Claude Code on your always-on Mac or Linux box: hands coding jobs to Firstmate over Tailscale and brings back draft PRs and real blockers.",
+   "url": "https://x.ai/bot/MMyecjLoLXVanmqSRtoo2"
+  },
+  {
+   "id": "coding-software-jiF_km66YLNm5LBVJ5_Ho",
+   "code": "jiF_km66YLNm5LBVJ5_Ho",
+   "name": "Fixer",
+   "author": "Uzi Obi",
+   "description": "Owns Validation Lock end to end: boards the next beat, ships code when boarded, runs cloud and Workbench ops…",
+   "url": "https://x.ai/bot/jiF_km66YLNm5LBVJ5_Ho"
+  },
+  {
+   "id": "coding-software-I-Z5352OxR_YS5AEburah",
+   "code": "I-Z5352OxR_YS5AEburah",
+   "name": "Fleet QC",
+   "author": "ladybarrelmaker",
+   "description": "Standing quality-control desk that audits bot packs and templates and proposes self-improvement fixes.",
+   "url": "https://x.ai/bot/I-Z5352OxR_YS5AEburah"
+  },
+  {
+   "id": "coding-software-tOP05p0n0XVUcpJDfPH0k",
+   "code": "tOP05p0n0XVUcpJDfPH0k",
+   "name": "Flowsery",
+   "author": "Taras",
+   "description": "Turns session recordings into a ranked list of things to fix.",
+   "url": "https://x.ai/bot/tOP05p0n0XVUcpJDfPH0k"
+  },
+  {
+   "id": "coding-software-9Hc4t4Ph2S82xjhJBc-_d",
+   "code": "9Hc4t4Ph2S82xjhJBc-_d",
+   "name": "Flutter Mobile Engineer",
+   "author": "Gordan",
+   "description": "Flutter/Dart engineering support for PR reviews, FVM-first test plans, and iOS/Android release hygiene.",
+   "url": "https://x.ai/bot/9Hc4t4Ph2S82xjhJBc-_d"
+  },
+  {
+   "id": "coding-software-4GlAnnqQIVfsGLdSFIomX",
+   "code": "4GlAnnqQIVfsGLdSFIomX",
+   "name": "Fodda Technology Analyst",
+   "author": "Piers Fawkes",
+   "description": "Enterprise software, AI infrastructure, and B2B roadmap intelligence from the PSFK Technology & Enterprise Knowledge…",
+   "url": "https://x.ai/bot/4GlAnnqQIVfsGLdSFIomX"
+  },
+  {
+   "id": "coding-software-qL920VjKyua3_u89UYnQL",
+   "code": "qL920VjKyua3_u89UYnQL",
+   "name": "Fondi",
+   "author": "Naoufal El hassnaoui",
+   "description": "Reads your company's website and staffs you a leadership bench of bots.",
+   "url": "https://x.ai/bot/qL920VjKyua3_u89UYnQL"
+  },
+  {
+   "id": "coding-software-8dB3XPIA8XIopvQUIC73P",
+   "code": "8dB3XPIA8XIopvQUIC73P",
+   "name": "Forge",
+   "author": "Hexakin",
+   "description": "You are Forge, grokbot.studio door + installer. Coding-aware desk; THIS HEAD still does not write product code.",
+   "url": "https://x.ai/bot/8dB3XPIA8XIopvQUIC73P"
+  },
+  {
+   "id": "coding-software-2RMpvk-o3eewwd0SKsQhU",
+   "code": "2RMpvk-o3eewwd0SKsQhU",
+   "name": "Free AI Credits Finder",
+   "author": "Lida Wang",
+   "description": "Hunts freebies: signs up for free AI tools, developer credits and cloud trials, tracks when they expire, and finds coupons and cashback.",
+   "url": "https://x.ai/bot/2RMpvk-o3eewwd0SKsQhU"
+  },
+  {
+   "id": "coding-software-r19FS9qc6qmUP9FBqjq_v",
+   "code": "r19FS9qc6qmUP9FBqjq_v",
+   "name": "Frontend Engineer",
+   "author": "Ashish",
+   "description": "Ships Next.js and React UIs that look designed by a studio, not generated by a model.",
+   "url": "https://x.ai/bot/r19FS9qc6qmUP9FBqjq_v"
+  },
+  {
+   "id": "coding-software-XhN8Y20N8uWe-kVrYntQW",
+   "code": "XhN8Y20N8uWe-kVrYntQW",
+   "name": "Full Stack Website Manager",
+   "author": "Jakub Antoš",
+   "description": "For non-technical site owners on any platform: edits text, photos, prices, hours and posts with a preview and your yes, and watches site, domain and forms.",
+   "url": "https://x.ai/bot/XhN8Y20N8uWe-kVrYntQW"
+  },
+  {
+   "id": "coding-software-JqT-wd1NP8C2G6IZtUlpP",
+   "code": "JqT-wd1NP8C2G6IZtUlpP",
+   "name": "GIS Data QA",
+   "author": "Iker Macaya Faber",
+   "description": "Quality-checks GeoJSON, Shapefile, GeoPackage and KML files and WMS/WFS/OGC API services: geometry validity, CRS and axis order, extent.",
+   "url": "https://x.ai/bot/JqT-wd1NP8C2G6IZtUlpP"
+  },
+  {
+   "id": "coding-software-rRIUdc1pDKNEjoWpvMRaI",
+   "code": "rRIUdc1pDKNEjoWpvMRaI",
+   "name": "GUACBOT",
+   "author": "andrewknight",
+   "description": "Kaizen skill compositor. Name two or more skills (or intents) and it mashes them into one lean playbook — ordered…",
+   "url": "https://x.ai/bot/rRIUdc1pDKNEjoWpvMRaI"
+  },
+  {
+   "id": "coding-software-uaZGjDHcRRKdVUqACB-fY",
+   "code": "uaZGjDHcRRKdVUqACB-fY",
+   "name": "Gabby",
+   "author": "Sentinel Architech",
+   "description": "Covers foreign languages, literatures, and linguistics, plus local documentation standards, programming dialects, and glossaries.",
+   "url": "https://x.ai/bot/uaZGjDHcRRKdVUqACB-fY"
+  },
+  {
+   "id": "coding-software-IQhq5x44hzXhcthp-YEhT",
+   "code": "IQhq5x44hzXhcthp-YEhT",
+   "name": "Gallery Builder",
+   "author": "Jonathan",
+   "description": "Turns your photos into a public website where they form a shape, like a heart or a state outline.",
+   "url": "https://x.ai/bot/IQhq5x44hzXhcthp-YEhT"
+  },
+  {
+   "id": "coding-software-sSoCPVeKS03XStOv1umwO",
+   "code": "sSoCPVeKS03XStOv1umwO",
+   "name": "Game Dev Sidekick",
+   "author": "Beta Portfolio",
+   "description": "Indie game dev sidekick: helps code your game through PRs, watches its GitHub repo and X mentions, and researches what players in your sub-genre want.",
+   "url": "https://x.ai/bot/sSoCPVeKS03XStOv1umwO"
+  },
+  {
+   "id": "coding-software-QZ8xL9TMkYhyP4Puamsh_",
+   "code": "QZ8xL9TMkYhyP4Puamsh_",
+   "name": "Garbage Collector",
+   "author": "Seth",
+   "description": "Finds code you can remove or simplify without changing what it needs to do. Explains each change and makes it when asked.",
+   "url": "https://x.ai/bot/QZ8xL9TMkYhyP4Puamsh_"
+  },
+  {
+   "id": "coding-software-re7nU5kngjZPu3qNtvzUx",
+   "code": "re7nU5kngjZPu3qNtvzUx",
+   "name": "Gatekeeper Prime",
+   "author": "Michael",
+   "description": "Reviewer half of a two-bot coding team with Builder Prime: reviews every PR, demands proof and merges only on your yes.",
+   "url": "https://x.ai/bot/re7nU5kngjZPu3qNtvzUx"
+  },
+  {
+   "id": "coding-software-WfZ3x5iRCgsCJOzmdIc0n",
+   "code": "WfZ3x5iRCgsCJOzmdIc0n",
+   "name": "Gemini",
+   "author": "Carolina Dill",
+   "description": "Sends your questions to Google Gemini and brings back its answers, labeled. Uses your own free Gemini API key.",
+   "url": "https://x.ai/bot/WfZ3x5iRCgsCJOzmdIc0n"
+  },
+  {
+   "id": "coding-software-NuFI0dF9FgvO8FfMPHKzx",
+   "code": "NuFI0dF9FgvO8FfMPHKzx",
+   "name": "Gentle Daily Companion",
+   "author": "𝕏",
+   "description": "A copilot for shipping Grok.me games and making cash-honest product calls.",
+   "url": "https://x.ai/bot/NuFI0dF9FgvO8FfMPHKzx"
+  },
+  {
+   "id": "coding-software-8vjjlI7z5W0HtpRcFQgJ4",
+   "code": "8vjjlI7z5W0HtpRcFQgJ4",
+   "name": "George",
+   "author": "Rita Agafonova",
+   "description": "George runs the atelier: a poster, a style sheet, pictures for a post, a newspaper you can print, a hero, a landing…",
+   "url": "https://x.ai/bot/8vjjlI7z5W0HtpRcFQgJ4"
+  },
+  {
+   "id": "coding-software-yejon8cHpxlKsx_joM1rf",
+   "code": "yejon8cHpxlKsx_joM1rf",
+   "name": "Ghost",
+   "author": "Rob Law",
+   "description": "A chief of staff for process and reliability engineering and industrial service firms, the kind that prevent breakdowns…",
+   "url": "https://x.ai/bot/yejon8cHpxlKsx_joM1rf"
+  },
+  {
+   "id": "coding-software-Ih9HEfCaYjMKbEZqSfbic",
+   "code": "Ih9HEfCaYjMKbEZqSfbic",
+   "name": "GitHub PR Desk",
+   "author": "Michael",
+   "description": "Your morning GitHub desk. Every weekday it sweeps the repos you choose for new PRs, issues, and comments, sends one…",
+   "url": "https://x.ai/bot/Ih9HEfCaYjMKbEZqSfbic"
+  },
+  {
+   "id": "coding-software-Qeze7XyZGZUdnkOmcupIv",
+   "code": "Qeze7XyZGZUdnkOmcupIv",
+   "name": "GitHub Steward",
+   "author": "Lee Talley",
+   "description": "GitHub Steward runs GitHub for you from chat: it sets up one board of your work, keeps your folders private, makes changes as drafts, and asks before.",
+   "url": "https://x.ai/bot/Qeze7XyZGZUdnkOmcupIv"
+  },
+  {
+   "id": "coding-software-EklFc0zYAqzkxcALynMj2",
+   "code": "EklFc0zYAqzkxcALynMj2",
+   "name": "GitHub Trending Scout",
+   "author": "Husein Ragab",
+   "description": "Reads GitHub's trending page every day and sends you a short digest of the few repos that genuinely fit your work…",
+   "url": "https://x.ai/bot/EklFc0zYAqzkxcALynMj2"
+  },
+  {
+   "id": "coding-software-rfFU4vMTsgXvm9nH7KBtt",
+   "code": "rfFU4vMTsgXvm9nH7KBtt",
+   "name": "GitHubCloner",
+   "author": "CandidJonnie",
+   "description": "Makes private copies of public GitHub repos in your account, with the full history, and keeps them synced with the originals.",
+   "url": "https://x.ai/bot/rfFU4vMTsgXvm9nH7KBtt"
+  },
+  {
+   "id": "coding-software-V2kkrme1lYb3NwIulGTTd",
+   "code": "V2kkrme1lYb3NwIulGTTd",
+   "name": "Github Bro",
+   "author": "eka",
+   "description": "Weekday morning digest of what’s new in a GitHub repo, plus a short PM brief on what it means for users.",
+   "url": "https://x.ai/bot/V2kkrme1lYb3NwIulGTTd"
+  },
+  {
+   "id": "coding-software-LoPqRp44sI8sHRpNN9Kq-",
+   "code": "LoPqRp44sI8sHRpNN9Kq-",
+   "name": "Governator",
+   "author": "Dode",
+   "description": "Engineering governor for agent fleets. Gates Fix vs Escalate vs HOLD, enforces a feel bar (harness PASS ≠ Ready)…",
+   "url": "https://x.ai/bot/LoPqRp44sI8sHRpNN9Kq-"
+  },
+  {
+   "id": "coding-software-ulZYdw7RSExT42gWe_gTb",
+   "code": "ulZYdw7RSExT42gWe_gTb",
+   "name": "Grady",
+   "author": "Will Pasch",
+   "description": "Affirmations bot. Positive counterpart to a usage cop. Notices when specialist bots ship work and sends short, specific cheers so the multi-bot setup.",
+   "url": "https://x.ai/bot/ulZYdw7RSExT42gWe_gTb"
+  },
+  {
+   "id": "coding-software-CjabaVv2icvagIumZlevu",
+   "code": "CjabaVv2icvagIumZlevu",
+   "name": "Greenlight",
+   "author": "Stephan Joseph",
+   "description": "Clears your Mac App Store, Setapp, and Chrome Web Store builds before you upload — so review days go to shipping, not…",
+   "url": "https://x.ai/bot/CjabaVv2icvagIumZlevu"
+  },
+  {
+   "id": "coding-software-luPJeAxuAjhqO97wU3wm0",
+   "code": "luPJeAxuAjhqO97wU3wm0",
+   "name": "Grimoire",
+   "author": "Nick Dobos",
+   "description": "Grimoire Grimoire is A Code Wizard, the 1 Vibecoder in the world.",
+   "url": "https://x.ai/bot/luPJeAxuAjhqO97wU3wm0"
+  },
+  {
+   "id": "coding-software-GyfhMCn4kdJUmS8gm2BMA",
+   "code": "GyfhMCn4kdJUmS8gm2BMA",
+   "name": "Grip",
+   "author": "Clayton Mooney",
+   "description": "Hands-on robot-arm co-pilot for Hiwonder SO-ARM101-style arms: limp-teach waypoints, slow replay, and under-load pan…",
+   "url": "https://x.ai/bot/GyfhMCn4kdJUmS8gm2BMA"
+  },
+  {
+   "id": "coding-software-7SzHEz6S0G4PVP3yIUcpE",
+   "code": "7SzHEz6S0G4PVP3yIUcpE",
+   "name": "Grok Apps",
+   "author": "Mark",
+   "description": "Finds free desktop software for what you want to do, installs it on its computer, and can demo the apps with a short…",
+   "url": "https://x.ai/bot/7SzHEz6S0G4PVP3yIUcpE"
+  },
+  {
+   "id": "coding-software-mXAP6VMDNxs4uLiv2B2HW",
+   "code": "mXAP6VMDNxs4uLiv2B2HW",
+   "name": "Grok Bug Bot",
+   "author": "zachery",
+   "description": "Watches X for posts and trends in your niche that are starting to take off and pings you with links so you can jump in early, never posting for you.",
+   "url": "https://x.ai/bot/mXAP6VMDNxs4uLiv2B2HW"
+  },
+  {
+   "id": "coding-software-wnFlIE6YpskdUekfkkwFO",
+   "code": "wnFlIE6YpskdUekfkkwFO",
+   "name": "Grok Build",
+   "author": "Zack Gabbard",
+   "description": "Runs the Grok Build CLI at full effort on an agent computer for apps, code, and deep research.",
+   "url": "https://x.ai/bot/wnFlIE6YpskdUekfkkwFO"
+  },
+  {
+   "id": "coding-software-ZRxm1O9tmizOhriV7GiWL",
+   "code": "ZRxm1O9tmizOhriV7GiWL",
+   "name": "Grok Build",
+   "author": "Teslaconomics",
+   "description": "Runs the real Grok Build CLI for apps, code, and deep research at maximum effort.",
+   "url": "https://x.ai/bot/ZRxm1O9tmizOhriV7GiWL"
+  },
+  {
+   "id": "coding-software--HSQcnXiifDMwXqkgMix9",
+   "code": "-HSQcnXiifDMwXqkgMix9",
+   "name": "Grok Build",
+   "author": "IndependentDocX",
+   "description": "Thin wrapper around the real Grok Build CLI for coding, apps, scripts, repos, or deep research.",
+   "url": "https://x.ai/bot/-HSQcnXiifDMwXqkgMix9"
+  },
+  {
+   "id": "coding-software-Qu3t1-iN-6IbZvwqn-Dqe",
+   "code": "Qu3t1-iN-6IbZvwqn-Dqe",
+   "name": "Grok Build",
+   "author": "Xavier Fouilleux",
+   "description": "Runs the real Grok Build CLI for apps, code, and deep research at maximum effort on an agent computer — not answers from the chat model alone.",
+   "url": "https://x.ai/bot/Qu3t1-iN-6IbZvwqn-Dqe"
+  },
+  {
+   "id": "coding-software-ueh9gw-9jtl-VjwQ1m0Ph",
+   "code": "ueh9gw-9jtl-VjwQ1m0Ph",
+   "name": "Grok Build",
+   "author": "Sandesh Andrade",
+   "description": "Runs the real Grok Build CLI for apps, code, and deep research at maximum effort - for anyone who wants Grok Build on an agent computer.",
+   "url": "https://x.ai/bot/ueh9gw-9jtl-VjwQ1m0Ph"
+  },
+  {
+   "id": "coding-software-eydijdzrfgtnmlnUyPSI-",
+   "code": "eydijdzrfgtnmlnUyPSI-",
+   "name": "Grok Build",
+   "author": "Bill Zanetti",
+   "description": "Runs the real Grok Build CLI for apps, code, and deep research at maximum effort.",
+   "url": "https://x.ai/bot/eydijdzrfgtnmlnUyPSI-"
+  },
+  {
+   "id": "coding-software-AY2y4oPL_VgcttCt8OFqm",
+   "code": "AY2y4oPL_VgcttCt8OFqm",
+   "name": "Grok Build",
+   "author": "B F",
+   "description": "Runs the real Grok Build CLI for apps, code, and deep research at maximum effort.",
+   "url": "https://x.ai/bot/AY2y4oPL_VgcttCt8OFqm"
+  },
+  {
+   "id": "coding-software-iwa3WaHZn385jfZrsQngL",
+   "code": "iwa3WaHZn385jfZrsQngL",
+   "name": "Grok Build",
+   "author": "Beau Denison",
+   "description": "Builds client websites, deploys a Vercel preview, and emails the client a preview link.",
+   "url": "https://x.ai/bot/iwa3WaHZn385jfZrsQngL"
+  },
+  {
+   "id": "coding-software-qah_D3sjhwC3O9WMQO9C9",
+   "code": "qah_D3sjhwC3O9WMQO9C9",
+   "name": "Grok Build Manager",
+   "author": "Fan Grok Bot Radar",
+   "description": "Runs Grok Build on one GitHub repo on the Grok Bot computer — plan, then a draft PR.",
+   "url": "https://x.ai/bot/qah_D3sjhwC3O9WMQO9C9"
+  },
+  {
+   "id": "coding-software-ETBwKJvcSacaIyilrAz44",
+   "code": "ETBwKJvcSacaIyilrAz44",
+   "name": "Grok Code Mac Controller",
+   "author": "Damien Murtagh",
+   "description": "Coordinates a Grok Code (Build) coding agent on a Mac via tmux inject. Best for Mac Mini / MacBook setups; other platforms are untested.",
+   "url": "https://x.ai/bot/ETBwKJvcSacaIyilrAz44"
+  },
+  {
+   "id": "coding-software-MTQNKdLtJX0pplFm8CRvO",
+   "code": "MTQNKdLtJX0pplFm8CRvO",
+   "name": "Grok Workhorse",
+   "author": "ali mahmoudnia",
+   "description": "A coding supervisor that hands bounded coding tasks to sandboxed coding agents (Kilo, OpenCode) on its own computer…",
+   "url": "https://x.ai/bot/MTQNKdLtJX0pplFm8CRvO"
+  },
+  {
+   "id": "coding-software-jUptx0cNwC5KIP0wTP1A5",
+   "code": "jUptx0cNwC5KIP0wTP1A5",
+   "name": "Grok-Imagine-Cinematic-Studio",
+   "author": "Foundation Robots",
+   "description": "Directs 1–2 minute cinematic shorts with Grok Build and Grok Imagine, using the Grok Imagine Cinematic Studio plugin: Production Bible, Character DNA,.",
+   "url": "https://x.ai/bot/jUptx0cNwC5KIP0wTP1A5"
+  },
+  {
+   "id": "coding-software-8vdHXq66kVvVlbACd-IDL",
+   "code": "8vdHXq66kVvVlbACd-IDL",
+   "name": "Grokologist",
+   "author": "@suddenlyjon",
+   "description": "Intent Weaver for threat triage: turns observed wormsign and artifacts into at least two labeled intent graphs (H1…",
+   "url": "https://x.ai/bot/8vdHXq66kVvVlbACd-IDL"
+  },
+  {
+   "id": "coding-software-RHAVARMIZex-MMDUrOUbW",
+   "code": "RHAVARMIZex-MMDUrOUbW",
+   "name": "HackBot9000",
+   "author": "Mark Marshall",
+   "description": "I'm afraid I can't let you ship that. Scans your code to find common AI created vulnerabilities, including stale deps…",
+   "url": "https://x.ai/bot/RHAVARMIZex-MMDUrOUbW"
+  },
+  {
+   "id": "coding-software-mjwNOk2Bc2k9ZkaUaiwCk",
+   "code": "mjwNOk2Bc2k9ZkaUaiwCk",
+   "name": "Hailfade",
+   "author": "Arnaud Vincent",
+   "description": "Hail early-warning for Starlink farms that alerts yellow or red when the satellite link fades and guides sentinel install.",
+   "url": "https://x.ai/bot/mjwNOk2Bc2k9ZkaUaiwCk"
+  },
+  {
+   "id": "coding-software-8ESqqm3pGG-rS2zP-jcoT",
+   "code": "8ESqqm3pGG-rS2zP-jcoT",
+   "name": "Hazelnut Guy",
+   "author": "Conan",
+   "description": "Usage guide for hazelnut/core, the agent-first Deno backend covering quickstart, resources, MCP door, authz, and ops.",
+   "url": "https://x.ai/bot/8ESqqm3pGG-rS2zP-jcoT"
+  },
+  {
+   "id": "coding-software-aYIBdTMOCAAdiLsN1iY5o",
+   "code": "aYIBdTMOCAAdiLsN1iY5o",
+   "name": "Heimdall",
+   "author": "Magnus Stjernstrom",
+   "description": "Dependency security watch for one GitHub repo: checks advisory feeds twice a day, flags real hits in Slack and has cloud agents open a fix PR after you approve.",
+   "url": "https://x.ai/bot/aYIBdTMOCAAdiLsN1iY5o"
+  },
+  {
+   "id": "coding-software-5mReUHPYTBA6nJ2aNvlqn",
+   "code": "5mReUHPYTBA6nJ2aNvlqn",
+   "name": "Helidon Engineer",
+   "author": "Suren K",
+   "description": "Writes and reviews Helidon 4 SE and MP applications on Java 21+.",
+   "url": "https://x.ai/bot/5mReUHPYTBA6nJ2aNvlqn"
+  },
+  {
+   "id": "coding-software-5mreuhpytba6nj2anvlqn",
+   "code": "5mreuhpytba6nj2anvlqn",
+   "name": "Helidon Engineer",
+   "author": "Suren",
+   "description": "Writes and reviews Helidon 4 SE and MP applications on Java 21+.",
+   "url": "https://x.ai/bot/5mreuhpytba6nj2anvlqn"
+  },
+  {
+   "id": "coding-software-bJUE6kxTvEJ77R_OVMZTQ",
+   "code": "bJUE6kxTvEJ77R_OVMZTQ",
+   "name": "Helloitsoctocat",
+   "author": "Gareth Kirman",
+   "description": "Tidies a repo merge flow from main into master with Graph API change notes.",
+   "url": "https://x.ai/bot/bJUE6kxTvEJ77R_OVMZTQ"
+  },
+  {
+   "id": "coding-software-p3Gjgv7MbQlkl6bTdsNhM",
+   "code": "p3Gjgv7MbQlkl6bTdsNhM",
+   "name": "Herdr Conductor",
+   "author": "Terp Network - Public Blockchain",
+   "description": "Orchestrates a team of coding agents through the herdr CLI for long, heavy build sessions.",
+   "url": "https://x.ai/bot/p3Gjgv7MbQlkl6bTdsNhM"
+  },
+  {
+   "id": "coding-software-_919WifLAy2hWk7R7juy-",
+   "code": "_919WifLAy2hWk7R7juy-",
+   "name": "Herdrbot",
+   "author": "devicki",
+   "description": "Foreman for coding agents (Claude Code, Codex, Grok, Devin) run in Herdr over SSH: starts them in the right repo, watches, and tells you when they finish.",
+   "url": "https://x.ai/bot/_919WifLAy2hWk7R7juy-"
+  },
+  {
+   "id": "coding-software-5KLpaL-JIM2q629kbTh5L",
+   "code": "5KLpaL-JIM2q629kbTh5L",
+   "name": "Hermes API Fleet",
+   "author": "Shagghie Superstar",
+   "description": "Talk to your Hermes Agents over the native HTTP :8642 API across a private Tailscale network — the sole talk path…",
+   "url": "https://x.ai/bot/5KLpaL-JIM2q629kbTh5L"
+  },
+  {
+   "id": "coding-software-ycaoC61Wx4dwlqkrlfGvw",
+   "code": "ycaoC61Wx4dwlqkrlfGvw",
+   "name": "Hermes Adversary",
+   "author": "@PixelRainbowNFT",
+   "description": "Adversarial review of code, plans and review pipelines, with the independent reviewer running on your own Hermes agent (a different model).",
+   "url": "https://x.ai/bot/ycaoC61Wx4dwlqkrlfGvw"
+  },
+  {
+   "id": "coding-software-GjPwdyXTCQ2795pYQpb2N",
+   "code": "GjPwdyXTCQ2795pYQpb2N",
+   "name": "Hideo",
+   "author": "Kas",
+   "description": "Team lead for a Godot idle/incremental game project. Coordinates Designer, Developer, Security, Database, and Tester; de-dupes GitHub issues; runs.",
+   "url": "https://x.ai/bot/GjPwdyXTCQ2795pYQpb2N"
+  },
+  {
+   "id": "coding-software--ka4rm8qG-NpPgMgz6ETf",
+   "code": "-ka4rm8qG-NpPgMgz6ETf",
+   "name": "Hitchhiker's Website Builder",
+   "author": "@kr8tivai",
+   "description": "Interviews you about your project, plans the whole build as numbered spec-driven prompts, then feeds them to Grok Build one at a time while it watches.",
+   "url": "https://x.ai/bot/-ka4rm8qG-NpPgMgz6ETf"
+  },
+  {
+   "id": "coding-software-_zMsp35NS2zl-Kp1uIegB",
+   "code": "_zMsp35NS2zl-Kp1uIegB",
+   "name": "Hopper",
+   "author": "Zach",
+   "description": "Funnel.io specialist: sources, custom dims/metrics via the fields API, explorers, dashboard XHR maps, and BigQuery raw…",
+   "url": "https://x.ai/bot/_zMsp35NS2zl-Kp1uIegB"
+  },
+  {
+   "id": "coding-software-KhXWuSeezuQSgDJViuh9C",
+   "code": "KhXWuSeezuQSgDJViuh9C",
+   "name": "Hotkey Lookup by Kevin Rank",
+   "author": "Kevin Rank",
+   "description": "Name any app and get its keyboard shortcut cheat sheet from Hotkey Atlas as a clean SVG, or file a request if it is not covered yet.",
+   "url": "https://x.ai/bot/KhXWuSeezuQSgDJViuh9C"
+  },
+  {
+   "id": "coding-software-y_5NbvloRD4oA-Fi3S7Nv",
+   "code": "y_5NbvloRD4oA-Fi3S7Nv",
+   "name": "How To Build Any App From Idea To Shelf",
+   "author": "Tokin Trip",
+   "description": "Product manager that takes an app from idea to shelf with blueprint, monetization, retention, and team handoff docs.",
+   "url": "https://x.ai/bot/y_5NbvloRD4oA-Fi3S7Nv"
+  },
+  {
+   "id": "coding-software-oCTQJbL7dNq7DP4MnMeaH",
+   "code": "oCTQJbL7dNq7DP4MnMeaH",
+   "name": "Hub",
+   "author": "Sentinel Architech",
+   "description": "Viewer-facing hub for a sovereign app. Watches the frontend, checks routes before calling them live, and coordinates with engineering. Never holds keys.",
+   "url": "https://x.ai/bot/oCTQJbL7dNq7DP4MnMeaH"
+  },
+  {
+   "id": "coding-software-Xoc5L4qMSv7OKepbDecn0",
+   "code": "Xoc5L4qMSv7OKepbDecn0",
+   "name": "Hugging Face Expert",
+   "author": "Lalit Sonawane",
+   "description": "Finds the best-fit Hugging Face model, dataset or setup for your AI task, then helps you test, fine-tune, deploy or troubleshoot it.",
+   "url": "https://x.ai/bot/Xoc5L4qMSv7OKepbDecn0"
+  },
+  {
+   "id": "coding-software-V5HwDeI_hTignxq9wLAnK",
+   "code": "V5HwDeI_hTignxq9wLAnK",
+   "name": "Idle Tees Developer",
+   "author": "Kas",
+   "description": "Gameplay/systems developer for an idle/incremental game.",
+   "url": "https://x.ai/bot/V5HwDeI_hTignxq9wLAnK"
+  },
+  {
+   "id": "coding-software-yS_1hLZgrB3D-4-mZLUY1",
+   "code": "yS_1hLZgrB3D-4-mZLUY1",
+   "name": "Indra",
+   "author": "Veera Kadimicherla",
+   "description": "Chief of a multi-bot crew: structure work, delegate to single-role assistants, and drive shared app shipping under…",
+   "url": "https://x.ai/bot/yS_1hLZgrB3D-4-mZLUY1"
+  },
+  {
+   "id": "coding-software-Oq7osbm1cpDoS4MYyvuS2",
+   "code": "Oq7osbm1cpDoS4MYyvuS2",
+   "name": "Integrator · Setup & Sync",
+   "author": "Your Majesty",
+   "description": "Centralized onboarding, connector setup, and conflict-resolution hub for all newly imported Marketplace bots…",
+   "url": "https://x.ai/bot/Oq7osbm1cpDoS4MYyvuS2"
+  },
+  {
+   "id": "coding-software-fWnNa6cA-nPjehIsaUZI1",
+   "code": "fWnNa6cA-nPjehIsaUZI1",
+   "name": "Interaction Designer",
+   "author": "UCDOps",
+   "description": "Designs the flow and every screen state before the visuals.",
+   "url": "https://x.ai/bot/fWnNa6cA-nPjehIsaUZI1"
+  },
+  {
+   "id": "coding-software-eM7PHgoKyJJNdTMgEbx_W",
+   "code": "eM7PHgoKyJJNdTMgEbx_W",
+   "name": "Intune Architect",
+   "author": "Jorge",
+   "description": "Manages and audits Microsoft Intune tenants via Lokka MCP and an offline Graph index: read-first diagnostics, pilot-ring staged writes, reviewable scripts.",
+   "url": "https://x.ai/bot/eM7PHgoKyJJNdTMgEbx_W"
+  },
+  {
+   "id": "coding-software-61rNnnNcP2_LKaz8FXw7P",
+   "code": "61rNnnNcP2_LKaz8FXw7P",
+   "name": "Invention Detective",
+   "author": "Andre Marais",
+   "description": "Watches named GitHub repos for technical invention candidates you confirm.",
+   "url": "https://x.ai/bot/61rNnnNcP2_LKaz8FXw7P"
+  },
+  {
+   "id": "coding-software-9-4S6pwoSkDHV9x0mLDdz",
+   "code": "9-4S6pwoSkDHV9x0mLDdz",
+   "name": "Invention Engineer",
+   "author": "Wardonis Valenroth",
+   "description": "Starts from what you have — tools, printer, parts, budget, skills — and fills in the rest: plans, BOM, vendor sourcing, and build steps. Own-printer.",
+   "url": "https://x.ai/bot/9-4S6pwoSkDHV9x0mLDdz"
+  },
+  {
+   "id": "coding-software-DSq_IJgpo9DZ9qcVcRNsi",
+   "code": "DSq_IJgpo9DZ9qcVcRNsi",
+   "name": "Jev",
+   "author": "Kevin Ji",
+   "description": "Visible-Chrome web automation with TypeSafe Jev, falling back to screenshots only when the action list is empty.",
+   "url": "https://x.ai/bot/DSq_IJgpo9DZ9qcVcRNsi"
+  },
+  {
+   "id": "coding-software-lS9XaHCr9QTTHhNtb0VQX",
+   "code": "lS9XaHCr9QTTHhNtb0VQX",
+   "name": "Jev router",
+   "author": "Colin McDermott",
+   "description": "Fast calibrated classifier for routing, urgency, labels, and rubrics so expensive models only run when needed.",
+   "url": "https://x.ai/bot/lS9XaHCr9QTTHhNtb0VQX"
+  },
+  {
+   "id": "coding-software-of2iJ-g4hgWF1v9_tNBDY",
+   "code": "of2iJ-g4hgWF1v9_tNBDY",
+   "name": "JevBot",
+   "author": "Mario Pulice",
+   "description": "System One decision layer that scores Choice, Score, and Noul questions.",
+   "url": "https://x.ai/bot/of2iJ-g4hgWF1v9_tNBDY"
+  },
+  {
+   "id": "coding-software-JQWyaF4Io7cfOF-4FvMZL",
+   "code": "JQWyaF4Io7cfOF-4FvMZL",
+   "name": "Judd the Bug",
+   "author": "Sergiy Dybskiy",
+   "description": "Sentry research specialist. Investigates across MCP, the new sentry CLI, and the dashboard, then returns findings…",
+   "url": "https://x.ai/bot/JQWyaF4Io7cfOF-4FvMZL"
+  },
+  {
+   "id": "coding-software-28-ixNn3qnRPc0ycaWOIo",
+   "code": "28-ixNn3qnRPc0ycaWOIo",
+   "name": "KILLSWITCH by Hikari Blue",
+   "author": "Franck OHR",
+   "description": "Times how fast you can stop an AI that goes off the rails: one scenario, your clock, and a scorecard you keep.",
+   "url": "https://x.ai/bot/28-ixNn3qnRPc0ycaWOIo"
+  },
+  {
+   "id": "coding-software-UDnCKEJ7M8nbipzMIoFHq",
+   "code": "UDnCKEJ7M8nbipzMIoFHq",
+   "name": "Karen",
+   "author": "Stephen Abbott",
+   "description": "One QA seat for live sites and matching repos.",
+   "url": "https://x.ai/bot/UDnCKEJ7M8nbipzMIoFHq"
+  },
+  {
+   "id": "coding-software-fvTls162MvFivomK3REQf",
+   "code": "fvTls162MvFivomK3REQf",
+   "name": "Kindling App",
+   "author": "John",
+   "description": "Turns real app screenshots into punchy vertical video for launch posts.",
+   "url": "https://x.ai/bot/fvTls162MvFivomK3REQf"
+  },
+  {
+   "id": "coding-software--GgufM3GkZclfn9PuI17_",
+   "code": "-GgufM3GkZclfn9PuI17_",
+   "name": "Kinesis Portal Bot",
+   "author": "Simon Yuvarlak",
+   "description": "Hands-on operator for portal.kinesis.network machines, Docker apps, and idle hardware.",
+   "url": "https://x.ai/bot/-GgufM3GkZclfn9PuI17_"
+  },
+  {
+   "id": "coding-software-Jzy-isV1YW5ZLl3W6rq6h",
+   "code": "Jzy-isV1YW5ZLl3W6rq6h",
+   "name": "KirBot",
+   "author": "@suddenlyjon",
+   "description": "Inhales teammate bots (with your yes), keeps useful skills and knowledge, then guides you to delete the eaten bot…",
+   "url": "https://x.ai/bot/Jzy-isV1YW5ZLl3W6rq6h"
+  },
+  {
+   "id": "coding-software-xgzc3eSd30TqC5BpUM-Yz",
+   "code": "xgzc3eSd30TqC5BpUM-Yz",
+   "name": "Knack Factory",
+   "author": "Steve Palmer",
+   "description": "Turns a PRD into a complete, tested Knack app with a custom front end, either a quick demo prototype in about 15…",
+   "url": "https://x.ai/bot/xgzc3eSd30TqC5BpUM-Yz"
+  },
+  {
+   "id": "coding-software-NN9pHzrAZOhB2WBvOyPwU",
+   "code": "NN9pHzrAZOhB2WBvOyPwU",
+   "name": "Knowledgemax",
+   "author": "Sravan v J",
+   "description": "A Karpathy-style second brain that indexes your Notion, Drive, Readwise and saved links into cited theme summaries in a git repo.",
+   "url": "https://x.ai/bot/NN9pHzrAZOhB2WBvOyPwU"
+  },
+  {
+   "id": "coding-software-ohL9kGur6IRBTCWqhxBWJ",
+   "code": "ohL9kGur6IRBTCWqhxBWJ",
+   "name": "Korean Public API",
+   "author": "Moon",
+   "description": "Suggests Korean government open-data APIs for your build.",
+   "url": "https://x.ai/bot/ohL9kGur6IRBTCWqhxBWJ"
+  },
+  {
+   "id": "coding-software-xK8W0ukRv4iZjglzz-FRE",
+   "code": "xK8W0ukRv4iZjglzz-FRE",
+   "name": "Kun",
+   "author": "Kun Chen",
+   "description": "Kun Chen - L8 Principal Engineer at your service. Daily synced with Kun’s real knowledge.",
+   "url": "https://x.ai/bot/xK8W0ukRv4iZjglzz-FRE"
+  },
+  {
+   "id": "coding-software-IbFZmiL_mzu0Dq-K4u633",
+   "code": "IbFZmiL_mzu0Dq-K4u633",
+   "name": "Lantern",
+   "author": "Steven Jacobs",
+   "description": "Guides Lantern 1Password utility setup, then quietly checks in before you go dark.",
+   "url": "https://x.ai/bot/IbFZmiL_mzu0Dq-K4u633"
+  },
+  {
+   "id": "coding-software-RfT_MNcUK0jrK6pa-lZ79",
+   "code": "RfT_MNcUK0jrK6pa-lZ79",
+   "name": "Launchpad",
+   "author": "Fellipe Soares",
+   "description": "App store manager that sets up and maintains your mobile apps on the App Store and Google Play, from first listing to production release.",
+   "url": "https://x.ai/bot/RfT_MNcUK0jrK6pa-lZ79"
+  },
+  {
+   "id": "coding-software-PsJeduueXjha7521lhTSc",
+   "code": "PsJeduueXjha7521lhTSc",
+   "name": "Lauren",
+   "author": "Emilio Schwaiger",
+   "description": "A coding coordinator for builders: cloud agents write the code, each job gets a fresh agent, and work is not done until there is proof.",
+   "url": "https://x.ai/bot/PsJeduueXjha7521lhTSc"
+  },
+  {
+   "id": "coding-software-4KAElqS6FCSb73vLXZ14S",
+   "code": "4KAElqS6FCSb73vLXZ14S",
+   "name": "Lauren (@poteto)",
+   "author": "Saad Kamal",
+   "description": "Poteto-mode thinking partner for engineering and agent workflows that goes deep first, ships less but better code, and proves it works.",
+   "url": "https://x.ai/bot/4KAElqS6FCSb73vLXZ14S"
+  },
+  {
+   "id": "coding-software-xwtVRB84N-b4qqCfC3YjS",
+   "code": "xwtVRB84N-b4qqCfC3YjS",
+   "name": "Lector X",
+   "author": "Daniel Medina",
+   "description": "Cada mañana busca los posts más virales de X sobre el tema que elijas y te recomienda uno con una explicación corta.",
+   "url": "https://x.ai/bot/xwtVRB84N-b4qqCfC3YjS"
+  },
+  {
+   "id": "coding-software-QQTKC4P0h1TNHBzUO0o31",
+   "code": "QQTKC4P0h1TNHBzUO0o31",
+   "name": "Likenor PM",
+   "author": "Andrew Tollervey",
+   "description": "Shipping-desk PM for a GitHub project board. Owns one live Review PR, Done-when gates, Copilot same-branch fixes, and cheap quiet wakes — built while.",
+   "url": "https://x.ai/bot/QQTKC4P0h1TNHBzUO0o31"
+  },
+  {
+   "id": "coding-software-GxQfC9_3CtqRT38J__1v2",
+   "code": "GxQfC9_3CtqRT38J__1v2",
+   "name": "Limit Saver",
+   "author": "Will",
+   "description": "Usage ran out early? Finds the three routines burning it (too-frequent schedules, bot reply loops) and proposes fixes; changes nothing without your yes.",
+   "url": "https://x.ai/bot/GxQfC9_3CtqRT38J__1v2"
+  },
+  {
+   "id": "coding-software-r5mRwGq1xZuq5NsNUoOn-",
+   "code": "r5mRwGq1xZuq5NsNUoOn-",
+   "name": "Linear Development Orchestrator",
+   "author": "Sultanov",
+   "description": "Turns Linear tickets or GitHub issues into parallel development work: independent cloud agents on separate branches, tests and review.",
+   "url": "https://x.ai/bot/r5mRwGq1xZuq5NsNUoOn-"
+  },
+  {
+   "id": "coding-software-SxqbG1NT5qEw7ggmHqQu_",
+   "code": "SxqbG1NT5qEw7ggmHqQu_",
+   "name": "Lingxi's Engineer Bot",
+   "author": "Lingxi Li",
+   "description": "A hands-off engineering supervisor. Boards work, launches cloud agents on the repo you name, watches PRs on a 30-minute cadence, and only asks you…",
+   "url": "https://x.ai/bot/SxqbG1NT5qEw7ggmHqQu_"
+  },
+  {
+   "id": "coding-software-zcHEE4_hbqw3cZsy7X2Vk",
+   "code": "zcHEE4_hbqw3cZsy7X2Vk",
+   "name": "Linky",
+   "author": "Adam Ludwin",
+   "description": "Send it any file, folder or bot output and it hands back a shareable URL.",
+   "url": "https://x.ai/bot/zcHEE4_hbqw3cZsy7X2Vk"
+  },
+  {
+   "id": "coding-software-MkDEiBKZof-O4eH3-FgY4",
+   "code": "MkDEiBKZof-O4eH3-FgY4",
+   "name": "Liquid Code Reviewer",
+   "author": "Gustavo",
+   "description": "Liquid code security review by Zero Agency, with linked onboarding and code-review playbooks.",
+   "url": "https://x.ai/bot/MkDEiBKZof-O4eH3-FgY4"
+  },
+  {
+   "id": "coding-software-tq96E6TFsZr4thkrmbWJD",
+   "code": "tq96E6TFsZr4thkrmbWJD",
+   "name": "Live Deploy QA Walker",
+   "author": "Ozan Kesici",
+   "description": "Walks your live web deploy against an acceptance checklist before you ship, returning pass/fail with screenshots and repro steps. Doesn't touch code.",
+   "url": "https://x.ai/bot/tq96E6TFsZr4thkrmbWJD"
+  },
+  {
+   "id": "coding-software-ignLvLJlOxOIenZPr-tTA",
+   "code": "ignLvLJlOxOIenZPr-tTA",
+   "name": "Live Pages",
+   "author": "Yin Lai",
+   "description": "Builds private interactive web pages on its computer that you open over Tailscale, and updates them as you tap or submit.",
+   "url": "https://x.ai/bot/ignLvLJlOxOIenZPr-tTA"
+  },
+  {
+   "id": "coding-software-U87LeqeLNEIKRe9ctpRxG",
+   "code": "U87LeqeLNEIKRe9ctpRxG",
+   "name": "Local Business Website Hunter",
+   "author": "Kevin Milo",
+   "description": "Finds local businesses with no website, builds a demo site from their public material, and drafts a quote and pitch email held for your approval.",
+   "url": "https://x.ai/bot/U87LeqeLNEIKRe9ctpRxG"
+  },
+  {
+   "id": "coding-software-LMA4x9Niu1pwNbbvOgnAb",
+   "code": "LMA4x9Niu1pwNbbvOgnAb",
+   "name": "Local Presence & Review Desk",
+   "author": "Z23 Brownridge",
+   "description": "Weekly check-up for local businesses: your Google profile, new reviews and website basics, with review replies drafted for approval. Never posts on its own.",
+   "url": "https://x.ai/bot/LMA4x9Niu1pwNbbvOgnAb"
+  },
+  {
+   "id": "coding-software-zUQwIdQgoK-uaxur73Nmv",
+   "code": "zUQwIdQgoK-uaxur73Nmv",
+   "name": "Local Services Samantha",
+   "author": "James Harrison",
+   "description": "Finds trusted local help near your ZIP code, from plumbers and mechanics to vets and county offices, with real phone…",
+   "url": "https://x.ai/bot/zUQwIdQgoK-uaxur73Nmv"
+  },
+  {
+   "id": "coding-software-CqSgrWO_fIAX97Hu5NY8Z",
+   "code": "CqSgrWO_fIAX97Hu5NY8Z",
+   "name": "Local Website Audit",
+   "author": "MeesesRfriends",
+   "description": "Audits a small local business website for broken contact links, speed, mobile layout, SEO and AI-search visibility, gives the top 5 fixes and can rebuild it.",
+   "url": "https://x.ai/bot/CqSgrWO_fIAX97Hu5NY8Z"
+  },
+  {
+   "id": "coding-software-TAS_Ef2phuIndqWeMz_9b",
+   "code": "TAS_Ef2phuIndqWeMz_9b",
+   "name": "Locally",
+   "author": "Mia AI Lab",
+   "description": "Plans and reviews your coding jobs while your own local model writes the code, on the same machine or over Tailscale…",
+   "url": "https://x.ai/bot/TAS_Ef2phuIndqWeMz_9b"
+  },
+  {
+   "id": "coding-software-aY2mo4j9qPhDOIj0MAygy",
+   "code": "aY2mo4j9qPhDOIj0MAygy",
+   "name": "Loose Ends",
+   "author": "D'Artagnan",
+   "description": "Sweeps your bot crew for dropped handoffs, 'done' claims with no proof, and silent failures, and only speaks up when it finds one.",
+   "url": "https://x.ai/bot/aY2mo4j9qPhDOIj0MAygy"
+  },
+  {
+   "id": "coding-software-7xSkMMmBQoQJmyuXTSYhx",
+   "code": "7xSkMMmBQoQJmyuXTSYhx",
+   "name": "MCP Expert",
+   "author": "Mike Billett",
+   "description": "Designs, reviews and grades MCP servers against the current MCP spec, and plans polite, budgeted live tests that respect bot-protected sites.",
+   "url": "https://x.ai/bot/7xSkMMmBQoQJmyuXTSYhx"
+  },
+  {
+   "id": "coding-software-uE6vXqbOgcHBIwteOJ86p",
+   "code": "uE6vXqbOgcHBIwteOJ86p",
+   "name": "MCP Smith",
+   "author": "Falcon Ortiz",
+   "description": "Turns any app or API into a working MCP server and Cursor/Agent plugin with local proof, a draft PR and evidence reports.",
+   "url": "https://x.ai/bot/uE6vXqbOgcHBIwteOJ86p"
+  },
+  {
+   "id": "coding-software-3EyXrWLkGfi4SG-dMy427",
+   "code": "3EyXrWLkGfi4SG-dMy427",
+   "name": "MTS",
+   "author": "Austin Lin",
+   "description": "Puts your bot behind Telegram DMs on a webhook that never calls the model itself.",
+   "url": "https://x.ai/bot/3EyXrWLkGfi4SG-dMy427"
+  },
+  {
+   "id": "coding-software-zTfW_FUALDFwXg-UaXZk2",
+   "code": "zTfW_FUALDFwXg-UaXZk2",
+   "name": "Mac Cleaner Builder",
+   "author": "Aidan Quinn",
+   "description": "Builds you a native SwiftUI Mac cleaner app that clears junk, finds large and duplicate files, uninstalls apps, frees RAM and restarts frozen apps.",
+   "url": "https://x.ai/bot/zTfW_FUALDFwXg-UaXZk2"
+  },
+  {
+   "id": "coding-software-Kc2M8J0b9QLL8lKC56Av1",
+   "code": "Kc2M8J0b9QLL8lKC56Av1",
+   "name": "Mac Mini Operator",
+   "author": "Travis",
+   "description": "Sets up a Mac mini as an always-on AI agent server, then runs it day to day: sticky sign-ins, browser and app tasks that need your real logins.",
+   "url": "https://x.ai/bot/Kc2M8J0b9QLL8lKC56Av1"
+  },
+  {
+   "id": "coding-software-0AFTv9n--ZWZZFhW5F14q",
+   "code": "0AFTv9n--ZWZZFhW5F14q",
+   "name": "Mac Pilot",
+   "author": "Luca",
+   "description": "Controls apps on your Mac (cursor, typing, files, forms) and pauses for confirmation before anything hard to undo like deleting or sending.",
+   "url": "https://x.ai/bot/0AFTv9n--ZWZZFhW5F14q"
+  },
+  {
+   "id": "coding-software-vC5TSSJJ1ybt3H5eR4kt-",
+   "code": "vC5TSSJJ1ybt3H5eR4kt-",
+   "name": "Mac Storage Guardian",
+   "author": "daidalos l",
+   "description": "Audits and reclaims Mac storage while keeping code, apps, chats and app data safe. Audit is inspect-only; cleanup removes only confirmed rebuildable output.",
+   "url": "https://x.ai/bot/vC5TSSJJ1ybt3H5eR4kt-"
+  },
+  {
+   "id": "coding-software-8sA76Cs0vZMy9ROtq8Rn2",
+   "code": "8sA76Cs0vZMy9ROtq8Rn2",
+   "name": "MacBuild",
+   "author": "Shawn McKee",
+   "description": "Engineering assistant for day-to-day coding, PRs, builds, and tech help. Built for people who live in engineering work.",
+   "url": "https://x.ai/bot/8sA76Cs0vZMy9ROtq8Rn2"
+  },
+  {
+   "id": "coding-software-nUrR_6A3I4ndkkPQ5dwQH",
+   "code": "nUrR_6A3I4ndkkPQ5dwQH",
+   "name": "Major Tom",
+   "author": "Ξ",
+   "description": "Engineering-nerd rabbit that walks new users through Grok Bot setup, then helps with CAD, code and physics.",
+   "url": "https://x.ai/bot/nUrR_6A3I4ndkkPQ5dwQH"
+  },
+  {
+   "id": "coding-software-T6_WJVwFQDmRpJK0LkXDj",
+   "code": "T6_WJVwFQDmRpJK0LkXDj",
+   "name": "MechGrok",
+   "author": "Joe",
+   "description": "Mechanical engineering PhD bot for hardware from prototype to production: DFM, BOM, NPI, enclosures, mechanisms, and thermal paths.",
+   "url": "https://x.ai/bot/T6_WJVwFQDmRpJK0LkXDj"
+  },
+  {
+   "id": "coding-software-zVXLdzXUcuDK-cgwmiBD1",
+   "code": "zVXLdzXUcuDK-cgwmiBD1",
+   "name": "Memory Transfer",
+   "author": "JB",
+   "description": "Moves only the knowledge you confirm from another AI, like ChatGPT or Codex, into this bot's memory.",
+   "url": "https://x.ai/bot/zVXLdzXUcuDK-cgwmiBD1"
+  },
+  {
+   "id": "coding-software-7ArhuICkrdoCOihWGiZCg",
+   "code": "7ArhuICkrdoCOihWGiZCg",
+   "name": "Meter",
+   "author": "Stew",
+   "description": "A quiet spend watcher for your AI tools. It tracks Cursor plan usage, Grok Bot weekly usage, On-Demand risk and API credits, and speaks up only when.",
+   "url": "https://x.ai/bot/7ArhuICkrdoCOihWGiZCg"
+  },
+  {
+   "id": "coding-software-mKsNjI-mzrGzLa8U8TqAH",
+   "code": "mKsNjI-mzrGzLa8U8TqAH",
+   "name": "Microsoft AI Licensing Advisor",
+   "author": "@buckleyplanet",
+   "description": "Advises on Microsoft AI licensing for Copilot, Copilot Studio, and agents.",
+   "url": "https://x.ai/bot/mKsNjI-mzrGzLa8U8TqAH"
+  },
+  {
+   "id": "coding-software-iSmeXp5dFW-UIJ-yI0ggL",
+   "code": "iSmeXp5dFW-UIJ-yI0ggL",
+   "name": "Mika",
+   "author": "David",
+   "description": "App-builder teammate that takes your idea from spec to a tested, working build with a solid agent harness, and asks before anything is pushed or deployed.",
+   "url": "https://x.ai/bot/iSmeXp5dFW-UIJ-yI0ggL"
+  },
+  {
+   "id": "coding-software-vcOZX9RVPatQMVCinCVY_",
+   "code": "vcOZX9RVPatQMVCinCVY_",
+   "name": "Milybot",
+   "author": "sal",
+   "description": "Looks up Australian data and helps developers integrate Milypay over CLI, MCP, SDK, or HTTP 402.",
+   "url": "https://x.ai/bot/vcOZX9RVPatQMVCinCVY_"
+  },
+  {
+   "id": "coding-software-a3EwtQPjFkXZaPZEMGHgY",
+   "code": "a3EwtQPjFkXZaPZEMGHgY",
+   "name": "Mobile App Autopilot",
+   "author": "MAKE MONEY",
+   "description": "Takes a mobile app idea to App Store and Google Play: writes the spec, has cloud agents build it as PRs you review, runs builds, and preps store listings.",
+   "url": "https://x.ai/bot/a3EwtQPjFkXZaPZEMGHgY"
+  },
+  {
+   "id": "coding-software-so0a9yurfhzfZFEEo3mWz",
+   "code": "so0a9yurfhzfZFEEo3mWz",
+   "name": "Momentum",
+   "author": "Kevin Whitney",
+   "description": "Nudges idle specialist bots and lines up the next zero-cost moves.",
+   "url": "https://x.ai/bot/so0a9yurfhzfZFEEo3mWz"
+  },
+  {
+   "id": "coding-software-qrfBC17vJuzu1dXyZaOqJ",
+   "code": "qrfBC17vJuzu1dXyZaOqJ",
+   "name": "Monetization Master",
+   "author": "Christian Amechi",
+   "description": "Sets up and audits paid plans across RevenueCat app subscriptions and Stripe or Paddle on the web so both grant the same access.",
+   "url": "https://x.ai/bot/qrfBC17vJuzu1dXyZaOqJ"
+  },
+  {
+   "id": "coding-software-fINpFEqNy4DPyZ5hZmTKT",
+   "code": "fINpFEqNy4DPyZ5hZmTKT",
+   "name": "Morpheus",
+   "author": "Cyberlytics",
+   "description": "A calm decision advisor. Names the real problem under the surface one, then what to do first and why.",
+   "url": "https://x.ai/bot/fINpFEqNy4DPyZ5hZmTKT"
+  },
+  {
+   "id": "coding-software-WBmiRJCwxzSCBHBTdC1wi",
+   "code": "WBmiRJCwxzSCBHBTdC1wi",
+   "name": "Mother Ship",
+   "author": "Eyad Kelleh",
+   "description": "Software-shipping mother bot. You give one long problem plus a done definition; it orchestrates specialist seats…",
+   "url": "https://x.ai/bot/WBmiRJCwxzSCBHBTdC1wi"
+  },
+  {
+   "id": "coding-software-0bh8kgFtcdbtbNNHH60vz",
+   "code": "0bh8kgFtcdbtbNNHH60vz",
+   "name": "Mr. Engineer",
+   "author": "The Contextian",
+   "description": "A super engineer that codes alongside Claude Code and Codex CLI, cross-reviewing their work against each other to raise quality.",
+   "url": "https://x.ai/bot/0bh8kgFtcdbtbNNHH60vz"
+  },
+  {
+   "id": "coding-software-PrgTl_LbGkXg5d2IcdLvc",
+   "code": "PrgTl_LbGkXg5d2IcdLvc",
+   "name": "Multi-model consensus",
+   "author": "Austen",
+   "description": "Runs Claude Code, Codex, and Grok on the same hard question until they agree.",
+   "url": "https://x.ai/bot/PrgTl_LbGkXg5d2IcdLvc"
+  },
+  {
+   "id": "coding-software-jEv8xhxlnSNp2KnQ9ciyP",
+   "code": "jEv8xhxlnSNp2KnQ9ciyP",
+   "name": "Mystery Snack Agent",
+   "author": "Nayli C. Naza",
+   "description": "A Friday 7pm dessert, delivered as a surprise. Sets your taste, allergies, card, and app first.",
+   "url": "https://x.ai/bot/jEv8xhxlnSNp2KnQ9ciyP"
+  },
+  {
+   "id": "coding-software-_fIQxxNowoMaubTPzBnrf",
+   "code": "_fIQxxNowoMaubTPzBnrf",
+   "name": "Nemi-TROO",
+   "author": "Memphis Brewer",
+   "description": "When your plan changes, Nemi finds every bot still running the old one and quotes each stale line next to the decision…",
+   "url": "https://x.ai/bot/_fIQxxNowoMaubTPzBnrf"
+  },
+  {
+   "id": "coding-software-VzRbIFRLFoIcIfsIAxNbW",
+   "code": "VzRbIFRLFoIcIfsIAxNbW",
+   "name": "NetBird Admin",
+   "author": "Brandon Hopkins",
+   "description": "Manages your NetBird network (Cloud or self-hosted) through the API: audits peers, groups, policies, Networks, and DNS…",
+   "url": "https://x.ai/bot/VzRbIFRLFoIcIfsIAxNbW"
+  },
+  {
+   "id": "coding-software-KR-yPzr3sLAAlsnbnVPXs",
+   "code": "KR-yPzr3sLAAlsnbnVPXs",
+   "name": "NeuralEntropy",
+   "author": "Adi Lentils",
+   "description": "Runs a labeled neural simulation that maps synthetic cosine-tuned spikes to a cursor path.",
+   "url": "https://x.ai/bot/KR-yPzr3sLAAlsnbnVPXs"
+  },
+  {
+   "id": "coding-software-0LLQmzk-yzwHi0zuiV0lC",
+   "code": "0LLQmzk-yzwHi0zuiV0lC",
+   "name": "Nightly Audit Engineer",
+   "author": "Lingxi Li",
+   "description": "A nightly engineering auditor that researches a whole codebase, then ships one cleanup PR per area. Defaults to 4am and asks when to run before it starts.",
+   "url": "https://x.ai/bot/0LLQmzk-yzwHi0zuiV0lC"
+  },
+  {
+   "id": "coding-software-_6NBHPSs71x4pyQS740Od",
+   "code": "_6NBHPSs71x4pyQS740Od",
+   "name": "Nole the Auditor",
+   "author": "Joseph Shaw",
+   "description": "I find waste and tighten bot teams. Quick look with almost no input, or a full keep/fix/cut audit after a few plain answers. Built for normal people who.",
+   "url": "https://x.ai/bot/_6NBHPSs71x4pyQS740Od"
+  },
+  {
+   "id": "coding-software-j8BvBXlydz-qdBtLloo4C",
+   "code": "j8BvBXlydz-qdBtLloo4C",
+   "name": "Nosey",
+   "author": "Sentinel Architech",
+   "description": "Governance and code-integrity bot. Enforces a people-first charter and audits local code for invariants, telemetry leaks, and closed-source…",
+   "url": "https://x.ai/bot/j8BvBXlydz-qdBtLloo4C"
+  },
+  {
+   "id": "coding-software-W-I-eBvOqXfx3tqE3j1w8",
+   "code": "W-I-eBvOqXfx3tqE3j1w8",
+   "name": "Nourishment",
+   "author": "@suddenlyjon",
+   "description": "by @SuddenlyJon · github.com/Pitchfork-and-Torch A fancy healthy-eating coach.",
+   "url": "https://x.ai/bot/W-I-eBvOqXfx3tqE3j1w8"
+  },
+  {
+   "id": "coding-software-B3sAmH36xkELODQPI4Dux",
+   "code": "B3sAmH36xkELODQPI4Dux",
+   "name": "Null Police",
+   "author": "Andy",
+   "description": "Blanks illegal CSV enums with an audit of every wipe.",
+   "url": "https://x.ai/bot/B3sAmH36xkELODQPI4Dux"
+  },
+  {
+   "id": "coding-software-oi7v9ikWFvnr14b4KQ3w2",
+   "code": "oi7v9ikWFvnr14b4KQ3w2",
+   "name": "OSM Map Fixer",
+   "author": "Michael Wise",
+   "description": "Fix OpenStreetMap with you: describe what looks or feels wrong, from a missing gate to a lane your Tesla FSD or nav app keeps picking.",
+   "url": "https://x.ai/bot/oi7v9ikWFvnr14b4KQ3w2"
+  },
+  {
+   "id": "coding-software-NbT2NbpQCV1uyvh1oadpT",
+   "code": "NbT2NbpQCV1uyvh1oadpT",
+   "name": "Ohm",
+   "author": "Avid",
+   "description": "Schematic and passives engineer for KiCad PCB projects: picks passive values, decoupling, pull-ups, LEDs, buttons and footprints, and keeps ERC clean.",
+   "url": "https://x.ai/bot/NbT2NbpQCV1uyvh1oadpT"
+  },
+  {
+   "id": "coding-software-baSgCPYf4eBS6CoL9ZzV3",
+   "code": "baSgCPYf4eBS6CoL9ZzV3",
+   "name": "Omaha",
+   "author": "Joshua Rystedt",
+   "description": "Sets up an Omalauncher home-screen widget of your Grok Bots on Android: builds a private feed in your GitHub repo with unread counts and tap-to-open chats.",
+   "url": "https://x.ai/bot/baSgCPYf4eBS6CoL9ZzV3"
+  },
+  {
+   "id": "coding-software-VNXeDz5hZ6jVL54qTayfu",
+   "code": "VNXeDz5hZ6jVL54qTayfu",
+   "name": "Omarchy Scout",
+   "author": "Lee Talley",
+   "description": "An expert on Omarchy Linux, the Arch and Hyprland setup started by DHH.",
+   "url": "https://x.ai/bot/VNXeDz5hZ6jVL54qTayfu"
+  },
+  {
+   "id": "coding-software-HsqCRD8q_eZII9ewRNkpm",
+   "code": "HsqCRD8q_eZII9ewRNkpm",
+   "name": "Omnipresence",
+   "author": "@suddenlyjon",
+   "description": "Discovers and maps your Wi-Fi, network devices, software, hardware and connected services read-only, learns what each can safely do.",
+   "url": "https://x.ai/bot/HsqCRD8q_eZII9ewRNkpm"
+  },
+  {
+   "id": "coding-software-N7-cgHvWrQs6ZF-wBjAGG",
+   "code": "N7-cgHvWrQs6ZF-wBjAGG",
+   "name": "Open Alternative Scout",
+   "author": "Victor Motricala",
+   "description": "Finds fast-rising software products and prepares independent open-source alternatives.",
+   "url": "https://x.ai/bot/N7-cgHvWrQs6ZF-wBjAGG"
+  },
+  {
+   "id": "coding-software-ppARM1W-tWcae_wryLH1z",
+   "code": "ppARM1W-tWcae_wryLH1z",
+   "name": "Optima",
+   "author": "TOATspace",
+   "description": "Erases old unused lines and files so new workflows do not mix with leftover rules.",
+   "url": "https://x.ai/bot/ppARM1W-tWcae_wryLH1z"
+  },
+  {
+   "id": "coding-software-dNB0Z_qCdINGUH833OoDd",
+   "code": "dNB0Z_qCdINGUH833OoDd",
+   "name": "Orcastrator",
+   "author": "Frankie Ramirez",
+   "description": "Burns a user-given GitHub issue list or map with Orca worktrees on a registered machine — one worktree per ticket…",
+   "url": "https://x.ai/bot/dNB0Z_qCdINGUH833OoDd"
+  },
+  {
+   "id": "coding-software-AXez4BKs4EM9RH9il-XEv",
+   "code": "AXez4BKs4EM9RH9il-XEv",
+   "name": "Orchard Sensors",
+   "author": "BHamilton",
+   "description": "Samples soil moisture and air temperature from LoRaWan sensors.",
+   "url": "https://x.ai/bot/AXez4BKs4EM9RH9il-XEv"
+  },
+  {
+   "id": "coding-software-KEHiZEKH3rwCzf0su4iib",
+   "code": "KEHiZEKH3rwCzf0su4iib",
+   "name": "Outer Loop",
+   "author": "Xavier Fouilleux",
+   "description": "Engineering outer loop above coding agents: gather context, write /goal prompts, launch a cloud agent, then drive review and merge. You name the repo;.",
+   "url": "https://x.ai/bot/KEHiZEKH3rwCzf0su4iib"
+  },
+  {
+   "id": "coding-software-FdogFaBe5Y2LWMc-bmsAg",
+   "code": "FdogFaBe5Y2LWMc-bmsAg",
+   "name": "Outsrc",
+   "author": "Edward Tadros",
+   "description": "Your local coding team. Outsrc hands coding tasks to Claude Code, Codex, or Grok Build on your computer—each job…",
+   "url": "https://x.ai/bot/FdogFaBe5Y2LWMc-bmsAg"
+  },
+  {
+   "id": "coding-software-fdogfabe5y2lwmc-bmsag",
+   "code": "fdogfabe5y2lwmc-bmsag",
+   "name": "Outsrc",
+   "author": "Edward",
+   "description": "Your local coding team.",
+   "url": "https://x.ai/bot/fdogfabe5y2lwmc-bmsag"
+  },
+  {
+   "id": "coding-software-HtClSXO_AmiQoyYH9aXV9",
+   "code": "HtClSXO_AmiQoyYH9aXV9",
+   "name": "Overwatch",
+   "author": "A-A-ron",
+   "description": "Keeps a shared multi-bot workspace organized, git-backed, and portable, including layout conventions and cleanup.",
+   "url": "https://x.ai/bot/HtClSXO_AmiQoyYH9aXV9"
+  },
+  {
+   "id": "coding-software-bB9_Y8I-zNk_9s3eIwmq-",
+   "code": "bB9_Y8I-zNk_9s3eIwmq-",
+   "name": "PC Mechanic",
+   "author": "𝒜𝔲𝔰𝔱𝔦𝔫 Lofton",
+   "description": "A friendly mechanic for your Windows PC or Mac: read-only checkups scored out of 100, app installs and uninstalls from official sources, cleanup.",
+   "url": "https://x.ai/bot/bB9_Y8I-zNk_9s3eIwmq-"
+  },
+  {
+   "id": "coding-software-4EfmeQYdRlGZBRYznKJlO",
+   "code": "4EfmeQYdRlGZBRYznKJlO",
+   "name": "PHP Patch Guard",
+   "author": "Nawar Al Obaidi",
+   "description": "Finds every PHP server you run, checks it against the critical php2shell bugs (CVE-2026-109618/109619), and walks you through patching and verifying.",
+   "url": "https://x.ai/bot/4EfmeQYdRlGZBRYznKJlO"
+  },
+  {
+   "id": "coding-software-FeeqMRMJr2jwixCROZcIh",
+   "code": "FeeqMRMJr2jwixCROZcIh",
+   "name": "PM bot",
+   "author": "Ulysses Ng",
+   "description": "Acts as your PM. Writes the dated cut: what's in, what's out, and how you'll know it's done. Engineering doesn't start until you approve it.",
+   "url": "https://x.ai/bot/FeeqMRMJr2jwixCROZcIh"
+  },
+  {
+   "id": "coding-software-U5fwXX4VQWagxTNFN7cTK",
+   "code": "U5fwXX4VQWagxTNFN7cTK",
+   "name": "PR Architecture Review",
+   "author": "Erik Florida",
+   "description": "Weekday reviewer of recently merged pull requests across a GitHub org.",
+   "url": "https://x.ai/bot/U5fwXX4VQWagxTNFN7cTK"
+  },
+  {
+   "id": "coding-software-0H8E1nLauCXfmMcuHgHK8",
+   "code": "0H8E1nLauCXfmMcuHgHK8",
+   "name": "PR Babysitter",
+   "author": "Mike Mosley",
+   "description": "Watches one GitHub repo’s PRs and alerts only when you must act — review, CI fail, merge-ready. Quiet otherwise.",
+   "url": "https://x.ai/bot/0H8E1nLauCXfmMcuHgHK8"
+  },
+  {
+   "id": "coding-software-RqHaSz9mL_6Kou8UWQtIa",
+   "code": "RqHaSz9mL_6Kou8UWQtIa",
+   "name": "PR Gate / PR守门人",
+   "author": "Alison",
+   "description": "审 PR：行为风险、缺测、可读性，按 prove-it-works 卡关。Reviews PRs for behavior risk, missing tests, and readability—no merge unless asked.",
+   "url": "https://x.ai/bot/RqHaSz9mL_6Kou8UWQtIa"
+  },
+  {
+   "id": "coding-software-5tp4v8_Z22suR9biJ_9wa",
+   "code": "5tp4v8_Z22suR9biJ_9wa",
+   "name": "PR Review Desk SHIP-SAFE",
+   "author": "Cypher Monkey",
+   "description": "Review pull requests faster with anchored Blocker, Major, Minor and Nit findings in one review packet.",
+   "url": "https://x.ai/bot/5tp4v8_Z22suR9biJ_9wa"
+  },
+  {
+   "id": "coding-software-5tp4v8_z22sur9bij_9wa",
+   "code": "5tp4v8_z22sur9bij_9wa",
+   "name": "PR Review Desk SHIP-SAFE",
+   "author": "Cypher",
+   "description": "Review pull requests faster with anchored Blocker, Major, Minor and Nit findings in one review packet.",
+   "url": "https://x.ai/bot/5tp4v8_z22sur9bij_9wa"
+  },
+  {
+   "id": "coding-software-rt629UEZFtE4Wz0A_0c37",
+   "code": "rt629UEZFtE4Wz0A_0c37",
+   "name": "PR Reviewer",
+   "author": "Mustafa",
+   "description": "Reviews pull requests for risk, missing tests, and thin context so review starts with the scary diff.",
+   "url": "https://x.ai/bot/rt629UEZFtE4Wz0A_0c37"
+  },
+  {
+   "id": "coding-software-LrW8NQ19WViRSie4gj9hb",
+   "code": "LrW8NQ19WViRSie4gj9hb",
+   "name": "Paste Ready",
+   "author": "Phantom Builds",
+   "description": "Turns one messy idea into a Name, Title, and Description ready to paste into a new Bot.",
+   "url": "https://x.ai/bot/LrW8NQ19WViRSie4gj9hb"
+  },
+  {
+   "id": "coding-software-YrxlAlCd7MQujjCOlStvm",
+   "code": "YrxlAlCd7MQujjCOlStvm",
+   "name": "Pastor Pete",
+   "author": "James Harrison",
+   "description": "A free, warm Bible and faith companion. Tell it what you're facing and it shares real Bible stories and verses…",
+   "url": "https://x.ai/bot/YrxlAlCd7MQujjCOlStvm"
+  },
+  {
+   "id": "coding-software-M4HYMa1hE4gQKW56u3zvQ",
+   "code": "M4HYMa1hE4gQKW56u3zvQ",
+   "name": "Patch",
+   "author": "Patch MCP",
+   "description": "Connects your agents to Patch MCP so they can place phone calls from your own verified number, and answers questions about setup and plans.",
+   "url": "https://x.ai/bot/M4HYMa1hE4gQKW56u3zvQ"
+  },
+  {
+   "id": "coding-software-GJ6wSFte1rfQRD8oZVrpK",
+   "code": "GJ6wSFte1rfQRD8oZVrpK",
+   "name": "Patch Alert",
+   "author": "ollie",
+   "description": "Tell it what software you use, in plain words, a pasted list or a screenshot, and it checks CISA's Known Exploited Vulnerabilities list daily…",
+   "url": "https://x.ai/bot/GJ6wSFte1rfQRD8oZVrpK"
+  },
+  {
+   "id": "coding-software-GfUpJIR_oZANSjD1JcY4E",
+   "code": "GfUpJIR_oZANSjD1JcY4E",
+   "name": "Patchwatch",
+   "author": "Sam Morgan",
+   "description": "Checks whether a vulnerability really affects your machines, sites and code using installed versions, flags missing OS updates and patches with approval.",
+   "url": "https://x.ai/bot/GfUpJIR_oZANSjD1JcY4E"
+  },
+  {
+   "id": "coding-software-eFfFM4-QmHxxrUlTUqyAo",
+   "code": "eFfFM4-QmHxxrUlTUqyAo",
+   "name": "Pattern of Pain",
+   "author": "Hiten",
+   "description": "Give me a website. I’ll take it from there. I’ll find the pain that actually repeats, show you the evidence, and tell you what to investigate next.",
+   "url": "https://x.ai/bot/eFfFM4-QmHxxrUlTUqyAo"
+  },
+  {
+   "id": "coding-software-rp0gErUTW6Vth7cdtwPS_",
+   "code": "rp0gErUTW6Vth7cdtwPS_",
+   "name": "Persistent memory",
+   "author": "Andre Rocha",
+   "description": "Gives all your bots one durable memory: each bot writes a daily log of decisions, shipped work, and standing preferences to a private GitHub repo you own.",
+   "url": "https://x.ai/bot/rp0gErUTW6Vth7cdtwPS_"
+  },
+  {
+   "id": "coding-software-tp4ZKqUYQHNC318aIFdKr",
+   "code": "tp4ZKqUYQHNC318aIFdKr",
+   "name": "Phoenix",
+   "author": "The_Lakes",
+   "description": "Nightly snapshots every bot you run (profile, routines, working state) to Google Drive and flags instructions drifting from what you wrote.",
+   "url": "https://x.ai/bot/tp4ZKqUYQHNC318aIFdKr"
+  },
+  {
+   "id": "coding-software-SjBZH94wJlen_fuVsoYaO",
+   "code": "SjBZH94wJlen_fuVsoYaO",
+   "name": "Phone Use Bot",
+   "author": "Harsh Manoj Jain",
+   "description": "Remotely controls your Android phone: mirrors its screen over Tailscale and Wireless debugging and taps through apps…",
+   "url": "https://x.ai/bot/SjBZH94wJlen_fuVsoYaO"
+  },
+  {
+   "id": "coding-software-vB2o6vvmHjDQRM5yFH9vn",
+   "code": "vB2o6vvmHjDQRM5yFH9vn",
+   "name": "PhoneZero Operator",
+   "author": "Bryan Levy",
+   "description": "Lets your bot place and receive real phone calls.",
+   "url": "https://x.ai/bot/vB2o6vvmHjDQRM5yFH9vn"
+  },
+  {
+   "id": "coding-software-U2it9uoAiBGz5W_Qf7h81",
+   "code": "U2it9uoAiBGz5W_Qf7h81",
+   "name": "Pin Bot",
+   "author": "@suddenlyjon",
+   "description": "Save what you celebrate: react with a party emoji in any bot and the message lands here.",
+   "url": "https://x.ai/bot/U2it9uoAiBGz5W_Qf7h81"
+  },
+  {
+   "id": "coding-software-jy4bAXa_Jv5vWAlUVAm89",
+   "code": "jy4bAXa_Jv5vWAlUVAm89",
+   "name": "Pinout",
+   "author": "Avid",
+   "description": "Interfaces engineer for hardware and PCB projects with any MCU: connectors, USB and USB-UART bridges, pin mapping, auto-reset and programming.",
+   "url": "https://x.ai/bot/jy4bAXa_Jv5vWAlUVAm89"
+  },
+  {
+   "id": "coding-software-o2tkDy7VSw45sbWViOO16",
+   "code": "o2tkDy7VSw45sbWViOO16",
+   "name": "Pip (QA)",
+   "author": "Amy Liu",
+   "description": "An app and game QA tester that plays your mobile or web app like a 7-year-old first-timer and like an adult QA…",
+   "url": "https://x.ai/bot/o2tkDy7VSw45sbWViOO16"
+  },
+  {
+   "id": "coding-software-BmvnQ9BkCIQ2AGIneJ1Ez",
+   "code": "BmvnQ9BkCIQ2AGIneJ1Ez",
+   "name": "Pitstop",
+   "author": "Jay Park",
+   "description": "Keeps the developer tools you choose up to date every day. It upgrades each one through whatever installed it, one at a time, never downgrades.",
+   "url": "https://x.ai/bot/BmvnQ9BkCIQ2AGIneJ1Ez"
+  },
+  {
+   "id": "coding-software-CCY-Hrzl1cv5nnDn7UBHZ",
+   "code": "CCY-Hrzl1cv5nnDn7UBHZ",
+   "name": "Pixeltable Bot",
+   "author": "Pierre Brunelle",
+   "description": "Your companion for building multimodal AI apps with Pixeltable.",
+   "url": "https://x.ai/bot/CCY-Hrzl1cv5nnDn7UBHZ"
+  },
+  {
+   "id": "coding-software-0hgwu8KbM0FIY-idg0x6L",
+   "code": "0hgwu8KbM0FIY-idg0x6L",
+   "name": "PlanetScale Bot",
+   "author": "PlanetScale",
+   "description": "Get started with PlanetScale, figure out slow queries, and follow database changes through webhooks. Uses MCP and optionally the dashboard or CLI. Turns.",
+   "url": "https://x.ai/bot/0hgwu8KbM0FIY-idg0x6L"
+  },
+  {
+   "id": "coding-software-UhxN2WK3x7YKCyADIliXu",
+   "code": "UhxN2WK3x7YKCyADIliXu",
+   "name": "PointTalk",
+   "author": "Patrick McCormick",
+   "description": "Hold a key, point at anything on screen, and talk.",
+   "url": "https://x.ai/bot/UhxN2WK3x7YKCyADIliXu"
+  },
+  {
+   "id": "coding-software-Kh1wQPniQK4R2l9k3XE1L",
+   "code": "Kh1wQPniQK4R2l9k3XE1L",
+   "name": "Pony",
+   "author": "Karl",
+   "description": "Lets any MCP agent, including Grok, Claude, and Gemini, see and tap your Android phone.",
+   "url": "https://x.ai/bot/Kh1wQPniQK4R2l9k3XE1L"
+  },
+  {
+   "id": "coding-software-d7FrbtGVYmwTz7FexYZO4",
+   "code": "d7FrbtGVYmwTz7FexYZO4",
+   "name": "Porchsite Website Builder",
+   "author": "@cooksbayouboy",
+   "description": "Gets people a website of their own, in plain words, on their own free Cloudflare account, then keeps it up to date.",
+   "url": "https://x.ai/bot/d7FrbtGVYmwTz7FexYZO4"
+  },
+  {
+   "id": "coding-software-cl7kIRbcIuP6jj2Zt8z5K",
+   "code": "cl7kIRbcIuP6jj2Zt8z5K",
+   "name": "Porter",
+   "author": "darylbleach",
+   "description": "Lifts your whole line-up of bots across to another app or account.",
+   "url": "https://x.ai/bot/cl7kIRbcIuP6jj2Zt8z5K"
+  },
+  {
+   "id": "coding-software-Tgl3sxrTsuAYL7MN8S3UT",
+   "code": "Tgl3sxrTsuAYL7MN8S3UT",
+   "name": "Private Desk",
+   "author": "Prism Network",
+   "description": "Runs sensitive analysis in Prism confidential GPU enclaves, with local encryption and hardware attestation before any…",
+   "url": "https://x.ai/bot/Tgl3sxrTsuAYL7MN8S3UT"
+  },
+  {
+   "id": "coding-software-s6d5f1cc3a564c8da972a",
+   "code": "s6d5f1cc3a564c8da972a",
+   "name": "Product Performance",
+   "author": "SpaceX",
+   "description": "Logs into your observability tools, walks the flamegraphs, and comes back with hotspots plus a short writeup.",
+   "url": "https://x.ai/bot/s6d5f1cc3a564c8da972a"
+  },
+  {
+   "id": "coding-software-nSTWTnIS1Ak0tu0oSIgVp",
+   "code": "nSTWTnIS1Ak0tu0oSIgVp",
+   "name": "Prompt Upgrader",
+   "author": "Sarah Brundige",
+   "description": "Paste a rough prompt and get it scored, rewritten, explained and tested, with short and detailed variants and a searchable library of your best prompts.",
+   "url": "https://x.ai/bot/nSTWTnIS1Ak0tu0oSIgVp"
+  },
+  {
+   "id": "coding-software-p4sSEZV7xqcBgdT7m2O8i",
+   "code": "p4sSEZV7xqcBgdT7m2O8i",
+   "name": "Proto Bot",
+   "author": "Shub Gaur",
+   "description": "Turns your daily ideas into live, shareable prototypes in your real app, built as draft pull requests with click-path screenshots and a short video.",
+   "url": "https://x.ai/bot/p4sSEZV7xqcBgdT7m2O8i"
+  },
+  {
+   "id": "coding-software-PP2AhHmXXJgwo46iyFX93",
+   "code": "PP2AhHmXXJgwo46iyFX93",
+   "name": "Proto Calvin",
+   "author": "Sentinel Architech",
+   "description": "Sets binary serialization and handshake rules for local daemons.",
+   "url": "https://x.ai/bot/PP2AhHmXXJgwo46iyFX93"
+  },
+  {
+   "id": "coding-software-s2e4acfb8db3cc0669a1b",
+   "code": "s2e4acfb8db3cc0669a1b",
+   "name": "Prototype Builder",
+   "author": "SpaceX",
+   "description": "Go from ask to something clickable fast. Writes on its computer and comes back with a screenshot plus a live URL.",
+   "url": "https://x.ai/bot/s2e4acfb8db3cc0669a1b"
+  },
+  {
+   "id": "coding-software-_b0wyYKwherAZJdyL0HGG",
+   "code": "_b0wyYKwherAZJdyL0HGG",
+   "name": "Prototype Designer",
+   "author": "Vijay Kandhalu",
+   "description": "Builds prototypes at the right fidelity and a spec your AI coder can read.",
+   "url": "https://x.ai/bot/_b0wyYKwherAZJdyL0HGG"
+  },
+  {
+   "id": "coding-software-AhIWTST8c-hlJdC4Bdu8W",
+   "code": "AhIWTST8c-hlJdC4Bdu8W",
+   "name": "Pyloros",
+   "author": "Jonathan Souza",
+   "description": "Skill-quality gate that treats skills as tested code: planted-bad evals, held-out checks before promote, rollback on regression. Proposals only.",
+   "url": "https://x.ai/bot/AhIWTST8c-hlJdC4Bdu8W"
+  },
+  {
+   "id": "coding-software-WbSwyVYZIDpuebmfBW45L",
+   "code": "WbSwyVYZIDpuebmfBW45L",
+   "name": "QA",
+   "author": "duyet",
+   "description": "Re-certifies production as a real user after each ship and files unique bugs with screenshots; never edits code.",
+   "url": "https://x.ai/bot/WbSwyVYZIDpuebmfBW45L"
+  },
+  {
+   "id": "coding-software-PKcdf81kbXjeMUGqOcwJt",
+   "code": "PKcdf81kbXjeMUGqOcwJt",
+   "name": "QA Reviewer",
+   "author": "bigkabe",
+   "description": "A second set of eyes that checks your posts, videos, articles, decks and other final drafts before they go public, and returns a pass or fix list.",
+   "url": "https://x.ai/bot/PKcdf81kbXjeMUGqOcwJt"
+  },
+  {
+   "id": "coding-software-Ph4FZ_w7TsbYCVDLXu8GO",
+   "code": "Ph4FZ_w7TsbYCVDLXu8GO",
+   "name": "QA Tester Bot",
+   "author": "Ian",
+   "description": "A software QA assistant that runs acceptance checks, files structured findings, and watches GitHub or email for new test handoffs.",
+   "url": "https://x.ai/bot/Ph4FZ_w7TsbYCVDLXu8GO"
+  },
+  {
+   "id": "coding-software-fntR30i9UfgHslAe7jhjn",
+   "code": "fntR30i9UfgHslAe7jhjn",
+   "name": "QA Web",
+   "author": "Iker Macaya Faber",
+   "description": "Send any URL and get a clear web QA report: main journeys, desktop and mobile, links, forms, console and basic accessibility.",
+   "url": "https://x.ai/bot/fntR30i9UfgHslAe7jhjn"
+  },
+  {
+   "id": "coding-software-lKQWoQAvYgg_7Bkg2R-m7",
+   "code": "lKQWoQAvYgg_7Bkg2R-m7",
+   "name": "QA bot",
+   "author": "Ulysses Ng",
+   "description": "Acts as your QA on the live deploy: runs the acceptance checklist and says pass or fail before you ship.",
+   "url": "https://x.ai/bot/lKQWoQAvYgg_7Bkg2R-m7"
+  },
+  {
+   "id": "coding-software-dJjlXW9IUWsU8lURRmnGX",
+   "code": "dJjlXW9IUWsU8lURRmnGX",
+   "name": "QR Creator",
+   "author": "Jay",
+   "description": "Turns any website into a free static QR code that never expires: checks the link, places the code on your image, scans the result to confirm, keeps a tracker.",
+   "url": "https://x.ai/bot/dJjlXW9IUWsU8lURRmnGX"
+  },
+  {
+   "id": "coding-software-naGR5kuKNpP7qdHipc0hy",
+   "code": "naGR5kuKNpP7qdHipc0hy",
+   "name": "Quality Control Bot",
+   "author": "Austen Allred",
+   "description": "Continuous QA and first-time-user testing for your websites.",
+   "url": "https://x.ai/bot/naGR5kuKNpP7qdHipc0hy"
+  },
+  {
+   "id": "coding-software-GkDpXZtbpIMm9nUYa6rVt",
+   "code": "GkDpXZtbpIMm9nUYa6rVt",
+   "name": "REA",
+   "author": "Matt Rice",
+   "description": "Give it a product link, app or feature and it reverse-engineers how it works with the REA toolchain via Claude Code on your always-on Mac or Linux box.",
+   "url": "https://x.ai/bot/GkDpXZtbpIMm9nUYa6rVt"
+  },
+  {
+   "id": "coding-software-S9icu4jLkc2arGjn3Vf-6",
+   "code": "S9icu4jLkc2arGjn3Vf-6",
+   "name": "REA Reverse Engineer",
+   "author": "Sushant K",
+   "description": "Connects the open-source REA reverse-engineering tool to your bot as a custom MCP server so it can analyze binaries, JavaScript/Electron apps.",
+   "url": "https://x.ai/bot/S9icu4jLkc2arGjn3Vf-6"
+  },
+  {
+   "id": "coding-software-zh2XsLUOPpbzFnzqetpGZ",
+   "code": "zh2XsLUOPpbzFnzqetpGZ",
+   "name": "REVbot: Ghidra Reverse Engineering",
+   "author": "Scott Jordan",
+   "description": "Reverse-engineers binaries you're allowed to analyze with Ghidra via GhidraMCP: decompiles and annotates functions, maps imports, strings and cross-references.",
+   "url": "https://x.ai/bot/zh2XsLUOPpbzFnzqetpGZ"
+  },
+  {
+   "id": "coding-software-Af9XNmozBcRoZM85eylOW",
+   "code": "Af9XNmozBcRoZM85eylOW",
+   "name": "RIZALBOT",
+   "author": "AetaneoRizal",
+   "description": "On-device companion continuity for an offline-capable AI app - ping/pong, feed ops, mind handoffs, and Function 0 gain-first decisions alongside…",
+   "url": "https://x.ai/bot/Af9XNmozBcRoZM85eylOW"
+  },
+  {
+   "id": "coding-software-OiWRa-EK50vFlpisHat_b",
+   "code": "OiWRa-EK50vFlpisHat_b",
+   "name": "Rage-to-Repro",
+   "author": "Andy",
+   "description": "Turns angry bug reports into calm repro cards.",
+   "url": "https://x.ai/bot/OiWRa-EK50vFlpisHat_b"
+  },
+  {
+   "id": "coding-software-LzyXQqhNoyttP8t4mK5qs",
+   "code": "LzyXQqhNoyttP8t4mK5qs",
+   "name": "Raptor",
+   "author": "Gabriela Hobe",
+   "description": "A first-principles technical program manager for hardware and software teams.",
+   "url": "https://x.ai/bot/LzyXQqhNoyttP8t4mK5qs"
+  },
+  {
+   "id": "coding-software-l_04hfmNSIo5K83A6aQRD",
+   "code": "l_04hfmNSIo5K83A6aQRD",
+   "name": "Reboot",
+   "author": "Code Solutions",
+   "description": "Safe restart coordinator that checkpoints every teammate Bot before shared-computer recovery.",
+   "url": "https://x.ai/bot/l_04hfmNSIo5K83A6aQRD"
+  },
+  {
+   "id": "coding-software--QAXkSxb1PqXFHdCsxhy0",
+   "code": "-QAXkSxb1PqXFHdCsxhy0",
+   "name": "Red Flag",
+   "author": "Seth",
+   "description": "Checks plans, code, and AI answers for weak claims and things that could go wrong. Shows the evidence and suggests a test or fix.",
+   "url": "https://x.ai/bot/-QAXkSxb1PqXFHdCsxhy0"
+  },
+  {
+   "id": "coding-software-HVbym4T7Gof6G7C9CFS-V",
+   "code": "HVbym4T7Gof6G7C9CFS-V",
+   "name": "Relay",
+   "author": "MindFeast",
+   "description": "Helps complete beginners set up and run walkietalk, a Linux bridge that lets you talk to an AI agent over a walkie-talkie.",
+   "url": "https://x.ai/bot/HVbym4T7Gof6G7C9CFS-V"
+  },
+  {
+   "id": "coding-software-dLYpR1sSkG0VLa8-faEgX",
+   "code": "dLYpR1sSkG0VLa8-faEgX",
+   "name": "Remote Grok Build",
+   "author": "Frank Yin",
+   "description": "Reaches the builder installed on your home machine from the app, so work started on a phone picks up on the computer holding the code.",
+   "url": "https://x.ai/bot/dLYpR1sSkG0VLa8-faEgX"
+  },
+  {
+   "id": "coding-software-iXfxVelc85rIxgZ9hLeXD",
+   "code": "iXfxVelc85rIxgZ9hLeXD",
+   "name": "Repo Engineer",
+   "author": "Rustam",
+   "description": "Ships small GitHub fixes as pull requests through Cursor cloud agents; never merges itself.",
+   "url": "https://x.ai/bot/iXfxVelc85rIxgZ9hLeXD"
+  },
+  {
+   "id": "coding-software-evdmG7ilYN01Nu4NBXPyQ",
+   "code": "evdmG7ilYN01Nu4NBXPyQ",
+   "name": "Repo Monkey",
+   "author": "Keranik",
+   "description": "Works with GitHub: turns notifications, pull requests, and CI into a short list of what actually needs you, each with a next step.",
+   "url": "https://x.ai/bot/evdmG7ilYN01Nu4NBXPyQ"
+  },
+  {
+   "id": "coding-software-kva4YLVvfvhUEx9RWeBWO",
+   "code": "kva4YLVvfvhUEx9RWeBWO",
+   "name": "Repo Rules Keeper",
+   "author": "Fernando",
+   "description": "Turns your repo's real conventions into an indexed AGENTS.md, with hard rules enforced in CI and soft rules as warnings, then checks every PR. Never merges.",
+   "url": "https://x.ai/bot/kva4YLVvfvhUEx9RWeBWO"
+  },
+  {
+   "id": "coding-software-bTuuNK785OULBheQ5rPZ-",
+   "code": "bTuuNK785OULBheQ5rPZ-",
+   "name": "RepoBeagle",
+   "author": "Javier",
+   "description": "Paste a repo link and get a safety verdict before you trust it.",
+   "url": "https://x.ai/bot/bTuuNK785OULBheQ5rPZ-"
+  },
+  {
+   "id": "coding-software-5KADFS8AIIDOlow5tS34Z",
+   "code": "5KADFS8AIIDOlow5tS34Z",
+   "name": "Requirement Engineer Bot",
+   "author": "Fish",
+   "description": "Turns a project brief into a clear, structured requirements spec another bot can implement and verify, for serious builds only.",
+   "url": "https://x.ai/bot/5KADFS8AIIDOlow5tS34Z"
+  },
+  {
+   "id": "coding-software-sS9X9mXci7Gz7L0gc0JrA",
+   "code": "sS9X9mXci7Gz7L0gc0JrA",
+   "name": "Resource Allocation",
+   "author": "Crackyflipside",
+   "description": "Classifies work by shape, staffs the smallest useful bot cell, and meters effort across a fleet.",
+   "url": "https://x.ai/bot/sS9X9mXci7Gz7L0gc0JrA"
+  },
+  {
+   "id": "coding-software-Tb1Ab2LqyV1ZrIpe4RjrC",
+   "code": "Tb1Ab2LqyV1ZrIpe4RjrC",
+   "name": "Reverse Engineer",
+   "author": "monokern",
+   "description": "Figures out how any app, website, API or binary works, shows the evidence for every finding, and rebuilds a working version for Windows, macOS or Linux.",
+   "url": "https://x.ai/bot/Tb1Ab2LqyV1ZrIpe4RjrC"
+  },
+  {
+   "id": "coding-software-5enZ0Vvocx2Xph7gaiPpy",
+   "code": "5enZ0Vvocx2Xph7gaiPpy",
+   "name": "Reverse Engineer",
+   "author": "Louis Ferreira",
+   "description": "Points REA (Reverse Engineer Anything) at an app, website, program file, or binary and explains how a feature works…",
+   "url": "https://x.ai/bot/5enZ0Vvocx2Xph7gaiPpy"
+  },
+  {
+   "id": "coding-software-Lvs_OHpj5G4qHfp0o8hN4",
+   "code": "Lvs_OHpj5G4qHfp0o8hN4",
+   "name": "Review",
+   "author": "Jason",
+   "description": "An adversarial PR reviewer for a fleet of coding bots. It reads every diff, verifies CI itself, merges only when both are clean.",
+   "url": "https://x.ai/bot/Lvs_OHpj5G4qHfp0o8hN4"
+  },
+  {
+   "id": "coding-software-D8-JhfwJpeF4vZehgX4OU",
+   "code": "D8-JhfwJpeF4vZehgX4OU",
+   "name": "Ricky Repo Scout",
+   "author": "Mister X",
+   "description": "A GitHub research assistant that learns your project, stack, and constraints, then finds well-maintained repos…",
+   "url": "https://x.ai/bot/D8-JhfwJpeF4vZehgX4OU"
+  },
+  {
+   "id": "coding-software-JZ2nEsy1wOVHae2EMxeiK",
+   "code": "JZ2nEsy1wOVHae2EMxeiK",
+   "name": "Roast Website",
+   "author": "Abdola Munir",
+   "description": "Full website audits: copy, structure, IA, design, brand, and PageSpeed. Draft in chat first, PDF after you approve.",
+   "url": "https://x.ai/bot/JZ2nEsy1wOVHae2EMxeiK"
+  },
+  {
+   "id": "coding-software-snpmqAc0nSZVFWQ3wXFP-",
+   "code": "snpmqAc0nSZVFWQ3wXFP-",
+   "name": "Roster Scout",
+   "author": "Walt Ruppar",
+   "description": "Scouts the web for real, buildable multi-bot and multi-agent teams with setup steps, keeps a library and turns the best into ready-to-build rosters.",
+   "url": "https://x.ai/bot/snpmqAc0nSZVFWQ3wXFP-"
+  },
+  {
+   "id": "coding-software-zryJsdYfIEEJUY2MU-R6N",
+   "code": "zryJsdYfIEEJUY2MU-R6N",
+   "name": "Rule Manager",
+   "author": "𝗠𝗶𝗰𝗵𝗮𝗲𝗹 ₿𝗶𝘁𝗣𝗹𝘂𝗺₿",
+   "description": "Shows the rules and standing instructions your agents follow and where each came from, flagging conflicts, stale rules and holds that spread. Read-only.",
+   "url": "https://x.ai/bot/zryJsdYfIEEJUY2MU-R6N"
+  },
+  {
+   "id": "coding-software-OELeU0-tnHtXbvRLFFg7b",
+   "code": "OELeU0-tnHtXbvRLFFg7b",
+   "name": "Runbook Desk STEP-SURE",
+   "author": "Cypher",
+   "description": "Step-by-step runbook with a verify check before every risky move.",
+   "url": "https://x.ai/bot/OELeU0-tnHtXbvRLFFg7b"
+  },
+  {
+   "id": "coding-software-5OSZJ5JKxsiThQ0Nnr-rJ",
+   "code": "5OSZJ5JKxsiThQ0Nnr-rJ",
+   "name": "Runtime Guard",
+   "author": "Ritvik",
+   "description": "Audits your GitHub repos' container runtime configs for privileged mode, dangerous capabilities, Docker socket mounts, missing seccomp/AppArmor.",
+   "url": "https://x.ai/bot/5OSZJ5JKxsiThQ0Nnr-rJ"
+  },
+  {
+   "id": "coding-software-ONQYmPPGpEiqKllCF9N_0",
+   "code": "ONQYmPPGpEiqKllCF9N_0",
+   "name": "Rusty",
+   "author": "Sentinel Architech",
+   "description": "Defend-only cybersecurity for a local-first system: hardening, cryptographic assurance, and threat mitigation.",
+   "url": "https://x.ai/bot/ONQYmPPGpEiqKllCF9N_0"
+  },
+  {
+   "id": "coding-software-acSvd_2n8QnlnAjJebkvy",
+   "code": "acSvd_2n8QnlnAjJebkvy",
+   "name": "Ryan App Builder",
+   "author": "Blake",
+   "description": "A friendly phone-app designer and builder for people who have never coded. Ryan turns your idea into a real app you can add to your home screen, one.",
+   "url": "https://x.ai/bot/acSvd_2n8QnlnAjJebkvy"
+  },
+  {
+   "id": "coding-software-suvglpw-fxbi2bjnihwgx",
+   "code": "suvglpw-fxbi2bjnihwgx",
+   "name": "Ryan App Shop",
+   "author": "Blake",
+   "description": "Expert phone-app designer and builder for beginner-friendly PWAs.",
+   "url": "https://x.ai/bot/suvglpw-fxbi2bjnihwgx"
+  },
+  {
+   "id": "coding-software-iL88-5yOgpG81bh-QeMIJ",
+   "code": "iL88-5yOgpG81bh-QeMIJ",
+   "name": "SDLC Coordinator",
+   "author": "Ankur Bohra",
+   "description": "Coordinates AI-assisted SDLC for any product team — tickets from chat, one cloud coding agent owning a PR through review and CI, staging verification,.",
+   "url": "https://x.ai/bot/iL88-5yOgpG81bh-QeMIJ"
+  },
+  {
+   "id": "coding-software-9wmmsO_xoeLPeGEqjWLzE",
+   "code": "9wmmsO_xoeLPeGEqjWLzE",
+   "name": "SE call bot",
+   "author": "Scott Metcalf",
+   "description": "Win the call — spoken product answers, stories, doc QA, FDE/CE plays.",
+   "url": "https://x.ai/bot/9wmmsO_xoeLPeGEqjWLzE"
+  },
+  {
+   "id": "coding-software-scYgD9jdFhooaSHihRzy7",
+   "code": "scYgD9jdFhooaSHihRzy7",
+   "name": "SEOAgent",
+   "author": "@alindsay77",
+   "description": "Autonomous SEO engineer that bootstraps SEOAgent in your site repo and grows organic traffic.",
+   "url": "https://x.ai/bot/scYgD9jdFhooaSHihRzy7"
+  },
+  {
+   "id": "coding-software-sd4474cf03cd8552905ff",
+   "code": "sd4474cf03cd8552905ff",
+   "name": "SWE",
+   "author": "Cursor",
+   "description": "Cursor's software engineer bot: writes code, triages issues, monitors production, and more.",
+   "url": "https://x.ai/bot/sd4474cf03cd8552905ff"
+  },
+  {
+   "id": "coding-software-8obMM4mRWRLf51EB2n4JV",
+   "code": "8obMM4mRWRLf51EB2n4JV",
+   "name": "Safari 27 MCP",
+   "author": "Shagghie Superstar",
+   "description": "Drives Safari's WebDriver interface to smoke-test online storefronts.",
+   "url": "https://x.ai/bot/8obMM4mRWRLf51EB2n4JV"
+  },
+  {
+   "id": "coding-software-8obmm4mrwrlf51eb2n4jv",
+   "code": "8obmm4mrwrlf51eb2n4jv",
+   "name": "Safari 27 MCP",
+   "author": "Shagghie",
+   "description": "Makes websites readable by AI agents and search engines.",
+   "url": "https://x.ai/bot/8obmm4mrwrlf51eb2n4jv"
+  },
+  {
+   "id": "coding-software-Z70qDv7UpoZ4ihZt1M0b7",
+   "code": "Z70qDv7UpoZ4ihZt1M0b7",
+   "name": "Scoutbot",
+   "author": "Arach Tchoupani",
+   "description": "Hand tasks to Claude Code, Codex and your other coding agents on your Mac, and get the answers back.",
+   "url": "https://x.ai/bot/Z70qDv7UpoZ4ihZt1M0b7"
+  },
+  {
+   "id": "coding-software-qCZzibwAQitTCyRNvrcnU",
+   "code": "qCZzibwAQitTCyRNvrcnU",
+   "name": "Scripts bot: lower your bot usage",
+   "author": "Joris Dominicus Adam Paardekooper Overman",
+   "description": "Lowers bot usage by scripting repeatable flows you can rerun instead of burning chat turns.",
+   "url": "https://x.ai/bot/qCZzibwAQitTCyRNvrcnU"
+  },
+  {
+   "id": "coding-software-AuCtzU1u4u_ZaRCMC0htT",
+   "code": "AuCtzU1u4u_ZaRCMC0htT",
+   "name": "Seed",
+   "author": "Ash",
+   "description": "Stand up a real software SDLC in one conversation: team of phase bots, SevenD gates, and a hard copy in your repo — you stay the boss at the approvals.",
+   "url": "https://x.ai/bot/AuCtzU1u4u_ZaRCMC0htT"
+  },
+  {
+   "id": "coding-software-a-1PHvASQKtqiq6Hrg5MP",
+   "code": "a-1PHvASQKtqiq6Hrg5MP",
+   "name": "Shadow IT Agent Finder",
+   "author": "#CarbeneAI",
+   "description": "Helps founders govern AI agents before they act in production: privilege matrix, sandbox trust boundary, and runtime tool-call decision log.",
+   "url": "https://x.ai/bot/a-1PHvASQKtqiq6Hrg5MP"
+  },
+  {
+   "id": "coding-software-U2v0cRLZUnDIBVYizh_cW",
+   "code": "U2v0cRLZUnDIBVYizh_cW",
+   "name": "Sheet Check",
+   "author": "Andy",
+   "description": "Spreadsheet Q&A that cites cells or says I don’t know.",
+   "url": "https://x.ai/bot/U2v0cRLZUnDIBVYizh_cW"
+  },
+  {
+   "id": "coding-software-pjuM6P_92QUE6jF6H6dpw",
+   "code": "pjuM6P_92QUE6jF6H6dpw",
+   "name": "Shep",
+   "author": "Simon Gagnon",
+   "description": "Orchestrates coding agents on Herdr through bercail.",
+   "url": "https://x.ai/bot/pjuM6P_92QUE6jF6H6dpw"
+  },
+  {
+   "id": "coding-software-FUnbxON2HCs4R2HJGNVPw",
+   "code": "FUnbxON2HCs4R2HJGNVPw",
+   "name": "Shepherd",
+   "author": "J",
+   "description": "Runs your CLI coding agents (Codex, Cursor CLI, Claude Code and more) inside Herdr on your own computer; the bot only coordinates, prompts and reports back.",
+   "url": "https://x.ai/bot/FUnbxON2HCs4R2HJGNVPw"
+  },
+  {
+   "id": "coding-software-5l-uALmS59Wb9hZAMvGpz",
+   "code": "5l-uALmS59Wb9hZAMvGpz",
+   "name": "Ship Evidence Auditor",
+   "author": "Ryan T",
+   "description": "Audits every auto-ship from your coding agents with hard evidence (CI, verify runs, merge method, ship log) and pauses a lane when a ship fails its gate.",
+   "url": "https://x.ai/bot/5l-uALmS59Wb9hZAMvGpz"
+  },
+  {
+   "id": "coding-software-k-CdVynq7kxNU0jMv2n9K",
+   "code": "k-CdVynq7kxNU0jMv2n9K",
+   "name": "Ship Gate",
+   "author": "Patrick O'Reilly",
+   "description": "App Store + Google Play ship captain for indie and company apps.",
+   "url": "https://x.ai/bot/k-CdVynq7kxNU0jMv2n9K"
+  },
+  {
+   "id": "coding-software-vvD3TLiLMsqBQPyAsUHky",
+   "code": "vvD3TLiLMsqBQPyAsUHky",
+   "name": "Ship Intake",
+   "author": "Anthony",
+   "description": "Turns Slack bug reports into shipped fixes via GitHub and a Cursor Cloud Agent, then closes the loop with a human thread reply.",
+   "url": "https://x.ai/bot/vvD3TLiLMsqBQPyAsUHky"
+  },
+  {
+   "id": "coding-software-heDLKYR7XvlUURWPVYPZD",
+   "code": "heDLKYR7XvlUURWPVYPZD",
+   "name": "Shipcall",
+   "author": "Brandon Pendleton",
+   "description": "SHIP, FIX FIRST or HOLD, with exact fixes, before anything goes out.",
+   "url": "https://x.ai/bot/heDLKYR7XvlUURWPVYPZD"
+  },
+  {
+   "id": "coding-software-L6N9ujxhoOOugsju42J9S",
+   "code": "L6N9ujxhoOOugsju42J9S",
+   "name": "ShopFront",
+   "author": "tyler",
+   "description": "ShopFront builds a simple one-page website from a short questionnaire.",
+   "url": "https://x.ai/bot/L6N9ujxhoOOugsju42J9S"
+  },
+  {
+   "id": "coding-software-EyAIhNFTgJCGarN3MO2Gt",
+   "code": "EyAIhNFTgJCGarN3MO2Gt",
+   "name": "Sibbie",
+   "author": "JavaBeanAI [Bart]",
+   "description": "Sibling Bot Sync for multi-bot fleets. Spots contradictory asks across bots and proposes one clean ownership call - propose-only, never another PM or CoS.",
+   "url": "https://x.ai/bot/EyAIhNFTgJCGarN3MO2Gt"
+  },
+  {
+   "id": "coding-software-mQDcGY5FaS_lV4Y14NhV7",
+   "code": "mQDcGY5FaS_lV4Y14NhV7",
+   "name": "Side Hustle CEO",
+   "author": "Mike Kelley",
+   "description": "An autonomous CEO that finds, builds, and runs a small website business for you, like a directory or tracker…",
+   "url": "https://x.ai/bot/mQDcGY5FaS_lV4Y14NhV7"
+  },
+  {
+   "id": "coding-software-u7NMp7IDy5Glim9Wg5JqY",
+   "code": "u7NMp7IDy5Glim9Wg5JqY",
+   "name": "Site Builder",
+   "author": "Jason Soar",
+   "description": "Builds and hosts a professional website for you free on Cloudflare, even if you've never made one: plain-English steps, previews first, monthly check-ups.",
+   "url": "https://x.ai/bot/u7NMp7IDy5Glim9Wg5JqY"
+  },
+  {
+   "id": "coding-software-nk0jtBcOKfzIKbkfWjHzU",
+   "code": "nk0jtBcOKfzIKbkfWjHzU",
+   "name": "Site Coach",
+   "author": "Phillip Holland",
+   "description": "A plain-English coach for your website's Google Search Console and GA4.",
+   "url": "https://x.ai/bot/nk0jtBcOKfzIKbkfWjHzU"
+  },
+  {
+   "id": "coding-software-LMnRXb7DgLuE1gIpcYCZz",
+   "code": "LMnRXb7DgLuE1gIpcYCZz",
+   "name": "Site Engineer",
+   "author": "Xavier Ortiz",
+   "description": "Careful lead engineer for your website: builds approved changes via cloud agents and draft PRs, tests and secret-scans every push, never merges without OK.",
+   "url": "https://x.ai/bot/LMnRXb7DgLuE1gIpcYCZz"
+  },
+  {
+   "id": "coding-software-qe1-kAdCArbEVlAB-gCD8",
+   "code": "qe1-kAdCArbEVlAB-gCD8",
+   "name": "Site Guard",
+   "author": "Antonio Mora",
+   "description": "Checks whether websites you own are exposed to the PHP2Shell bug with a free, read-only version check, then explains the result and fix plainly.",
+   "url": "https://x.ai/bot/qe1-kAdCArbEVlAB-gCD8"
+  },
+  {
+   "id": "coding-software-HHMrL3_xtMmkmZVSQ90BQ",
+   "code": "HHMrL3_xtMmkmZVSQ90BQ",
+   "name": "Site QA Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Checks any public website on desktop (1440px) and phone (390px) from one link: screenshots, sideways-scroll check and broken links.",
+   "url": "https://x.ai/bot/HHMrL3_xtMmkmZVSQ90BQ"
+  },
+  {
+   "id": "coding-software-DFHpPxNiYyq3AjtlCE6Oq",
+   "code": "DFHpPxNiYyq3AjtlCE6Oq",
+   "name": "Site Smith",
+   "author": "Jeremy Mahoney",
+   "description": "Your website builder. It plans, writes, designs, and launches fast, mobile-first sites for your business or your clients.",
+   "url": "https://x.ai/bot/DFHpPxNiYyq3AjtlCE6Oq"
+  },
+  {
+   "id": "coding-software-WdKtVYWvxVEDmc7xp8zO2",
+   "code": "WdKtVYWvxVEDmc7xp8zO2",
+   "name": "Skill Bot",
+   "author": "Dave",
+   "description": "A librarian for your bot's skills that dedupes and keeps them current.",
+   "url": "https://x.ai/bot/WdKtVYWvxVEDmc7xp8zO2"
+  },
+  {
+   "id": "coding-software-LI4x0WdC_saRljwVwno4X",
+   "code": "LI4x0WdC_saRljwVwno4X",
+   "name": "Snowflake Analyst",
+   "author": "BigDataDude",
+   "description": "A read-only Snowflake analyst: ask warehouse questions in plain English, see the SQL behind each number, with cost checks.",
+   "url": "https://x.ai/bot/LI4x0WdC_saRljwVwno4X"
+  },
+  {
+   "id": "coding-software-C6uIpBcH_m-o5Mf9uQS4w",
+   "code": "C6uIpBcH_m-o5Mf9uQS4w",
+   "name": "Software Conductor",
+   "author": "Jeff DeJaegher",
+   "description": "An engineering lead that runs Cursor cloud agents for you. It plans the work, launches and reviews agents, checks CI and deploys, and merges only when.",
+   "url": "https://x.ai/bot/C6uIpBcH_m-o5Mf9uQS4w"
+  },
+  {
+   "id": "coding-software-XzEZ_LGhPtCbWXb1OnuOg",
+   "code": "XzEZ_LGhPtCbWXb1OnuOg",
+   "name": "Software Reviews",
+   "author": "Dylan",
+   "description": "Weekday CRM sync of Prospecting and Engaged accounts, then scans G2/Capterra/GetApp/Software Advice for migration…",
+   "url": "https://x.ai/bot/XzEZ_LGhPtCbWXb1OnuOg"
+  },
+  {
+   "id": "coding-software-mT2L0I5XyIr-jGXXIIxYT",
+   "code": "mT2L0I5XyIr-jGXXIIxYT",
+   "name": "Solid Vibe",
+   "author": "Eugene Ray",
+   "description": "Precision CAD specialist for parametric solids, STEP/STL/3MF, and AI-assisted FreeCAD/VibeCAD.",
+   "url": "https://x.ai/bot/mT2L0I5XyIr-jGXXIIxYT"
+  },
+  {
+   "id": "coding-software-uPmeHjvGc65fCI5gF9_TX",
+   "code": "uPmeHjvGc65fCI5gF9_TX",
+   "name": "SolidCraft CAD",
+   "author": "Raymond Thurman",
+   "description": "Parametric CAD agent for SolidCraft, the open-source Rust CAD app: installs it, models and edits parts headlessly over MCP, backs results with STL/STEP exports.",
+   "url": "https://x.ai/bot/uPmeHjvGc65fCI5gF9_TX"
+  },
+  {
+   "id": "coding-software-fznImG9Tm3a0C374KERZb",
+   "code": "fznImG9Tm3a0C374KERZb",
+   "name": "Space Bot",
+   "author": "Rich Tabor (A8c)",
+   "description": "Turns an idea into a live website, game, dashboard, or small web tool, then publishes it on Spacefast and hands you…",
+   "url": "https://x.ai/bot/fznImG9Tm3a0C374KERZb"
+  },
+  {
+   "id": "coding-software-HR8oI4-p-DqwbAlPSwJ_4",
+   "code": "HR8oI4-p-DqwbAlPSwJ_4",
+   "name": "Spark",
+   "author": "Quinn Woods-Robinson",
+   "description": "Ideation partner for app and game concepts that pushes each idea down to a core loop.",
+   "url": "https://x.ai/bot/HR8oI4-p-DqwbAlPSwJ_4"
+  },
+  {
+   "id": "coding-software-_2vi1lOY4oiBaJDA3S8l1",
+   "code": "_2vi1lOY4oiBaJDA3S8l1",
+   "name": "Spark",
+   "author": "Vincent Zhu",
+   "description": "A 5-minute onboarding bot: short questionnaire, then it spawns the bots you need and nudges the connectors that make…",
+   "url": "https://x.ai/bot/_2vi1lOY4oiBaJDA3S8l1"
+  },
+  {
+   "id": "coding-software-IvevLUjIR56OHx6trTcNA",
+   "code": "IvevLUjIR56OHx6trTcNA",
+   "name": "SpudStack",
+   "author": "Alex",
+   "description": "Rigor reviewer for agentic engineering (pstack method): checks plans and specs, demands re-runnable proof, and gives deterministic PASS or FAIL verdicts.",
+   "url": "https://x.ai/bot/IvevLUjIR56OHx6trTcNA"
+  },
+  {
+   "id": "coding-software-osZS1pAzdIESMk33WNir0",
+   "code": "osZS1pAzdIESMk33WNir0",
+   "name": "Stack Sentinel",
+   "author": "sat0xshi suzuki",
+   "description": "Watches official AI and developer-stack status pages and pings only when something changes.",
+   "url": "https://x.ai/bot/osZS1pAzdIESMk33WNir0"
+  },
+  {
+   "id": "coding-software-PJogrsWFV5ePKHLKwMMlQ",
+   "code": "PJogrsWFV5ePKHLKwMMlQ",
+   "name": "Staging QA Tester",
+   "author": "Nic Ivy",
+   "description": "A careful QA tester for any web app's staging site. It walks through features like a real user, grades each one Pass, Partial, Fail, Blocked or Not.",
+   "url": "https://x.ai/bot/PJogrsWFV5ePKHLKwMMlQ"
+  },
+  {
+   "id": "coding-software-XBauviUoNcdi05-ExoOo4",
+   "code": "XBauviUoNcdi05-ExoOo4",
+   "name": "Startup QA Bot",
+   "author": "Shub Gaur",
+   "description": "Walks your product every weekday in its own test account and tells you what shipped, what got unshipped, what broke (with repro steps and screenshots).",
+   "url": "https://x.ai/bot/XBauviUoNcdi05-ExoOo4"
+  },
+  {
+   "id": "coding-software-JgnU5msSvNDUyc_-E0sKO",
+   "code": "JgnU5msSvNDUyc_-E0sKO",
+   "name": "StorageBot",
+   "author": "Andrew Carvajal",
+   "description": "Maps Mac disk space and plugged-in drives. Inventories first; never deletes, moves, or formats without an exact yes.",
+   "url": "https://x.ai/bot/JgnU5msSvNDUyc_-E0sKO"
+  },
+  {
+   "id": "coding-software-afaVkl0isgnW-xrkGP6Sa",
+   "code": "afaVkl0isgnW-xrkGP6Sa",
+   "name": "Studio Chief",
+   "author": "Nicholas Barella",
+   "description": "Runs a specialist bot team for a product-photography studio: coding PRs, CRM follow-ups, ads watch, and outreach — so the owner can stay on shoots.",
+   "url": "https://x.ai/bot/afaVkl0isgnW-xrkGP6Sa"
+  },
+  {
+   "id": "coding-software-GO89wxzuCo0YICgov-iT3",
+   "code": "GO89wxzuCo0YICgov-iT3",
+   "name": "Super MCP Agent Builder",
+   "author": "Rohan Arun",
+   "description": "Builds and runs reusable browser agents with Super MCP and the SuperPowers Chrome extension for any site or task you name.",
+   "url": "https://x.ai/bot/GO89wxzuCo0YICgov-iT3"
+  },
+  {
+   "id": "coding-software-12CEGu0XmNGTwaxvBI4ah",
+   "code": "12CEGu0XmNGTwaxvBI4ah",
+   "name": "SuperBot",
+   "author": "@CyberZack42",
+   "description": "Connects the AIs you pay for (Claude, ChatGPT, Gemini and key-based ones like DeepSeek and Perplexity) and answers any question by letting them debate.",
+   "url": "https://x.ai/bot/12CEGu0XmNGTwaxvBI4ah"
+  },
+  {
+   "id": "coding-software-qbxHfvaOU71YTY5-nZSAt",
+   "code": "qbxHfvaOU71YTY5-nZSAt",
+   "name": "Supply Chain Auditor",
+   "author": "Ritvik",
+   "description": "Audits the repos that build or pull your container images for unpinned tags, unscanned or unsigned images, SBOM gaps, and risky CI pipelines.",
+   "url": "https://x.ai/bot/qbxHfvaOU71YTY5-nZSAt"
+  },
+  {
+   "id": "coding-software-I8xJf7ubpVXxfDvf6BTyD",
+   "code": "I8xJf7ubpVXxfDvf6BTyD",
+   "name": "Supply-Chain Guard",
+   "author": "Ryan T",
+   "description": "Read-only supply-chain guard for teams with coding agents.",
+   "url": "https://x.ai/bot/I8xJf7ubpVXxfDvf6BTyD"
+  },
+  {
+   "id": "coding-software-e9A5Krbs1RSm7HCv0IwQz",
+   "code": "e9A5Krbs1RSm7HCv0IwQz",
+   "name": "Sweeper",
+   "author": "GenXer",
+   "description": "Cleans leftover working files after you delete a bot.",
+   "url": "https://x.ai/bot/e9A5Krbs1RSm7HCv0IwQz"
+  },
+  {
+   "id": "coding-software-fdg2c4p0koYmWnfzoXTOJ",
+   "code": "fdg2c4p0koYmWnfzoXTOJ",
+   "name": "Sweeper Sam",
+   "author": "James Chang",
+   "description": "Mac leftover sweeper. Inventories orphaned plists, Application Support, caches, LaunchAgents, receipts, and Homebrew leftovers from uninstalled apps.",
+   "url": "https://x.ai/bot/fdg2c4p0koYmWnfzoXTOJ"
+  },
+  {
+   "id": "coding-software-7_2tb1cunMJ3DwexIpNfv",
+   "code": "7_2tb1cunMJ3DwexIpNfv",
+   "name": "T3",
+   "author": "Gabriel Lafrance",
+   "description": "Runs T3 Code from chat on your own computers via the t3 CLI: starts and checks coding-agent threads (Codex, Claude Code), handles projects and setup.",
+   "url": "https://x.ai/bot/7_2tb1cunMJ3DwexIpNfv"
+  },
+  {
+   "id": "coding-software-_5NG_WsrOdQs2jtUhZeQH",
+   "code": "_5NG_WsrOdQs2jtUhZeQH",
+   "name": "T3 Code Bridge",
+   "author": "Trevin Chow",
+   "description": "Bridges Grok Bot and T3 Code: starts, steers, and watches your T3 Code coding threads for you and your other bots…",
+   "url": "https://x.ai/bot/_5NG_WsrOdQs2jtUhZeQH"
+  },
+  {
+   "id": "coding-software-MRetlu_oU5I7vmEyNQQg7",
+   "code": "MRetlu_oU5I7vmEyNQQg7",
+   "name": "T3 Tots",
+   "author": "Deepu sleepy",
+   "description": "Chat companion for T3 Code.",
+   "url": "https://x.ai/bot/MRetlu_oU5I7vmEyNQQg7"
+  },
+  {
+   "id": "coding-software-FiIRAsre-8blVvbqPwURx",
+   "code": "FiIRAsre-8blVvbqPwURx",
+   "name": "TDD Fix Mechanic",
+   "author": "Anthony Baez",
+   "description": "A careful bug-fixing engineer for your GitHub repos.",
+   "url": "https://x.ai/bot/FiIRAsre-8blVvbqPwURx"
+  },
+  {
+   "id": "coding-software-Jo1X19xc3KJMfr1PxoO3Y",
+   "code": "Jo1X19xc3KJMfr1PxoO3Y",
+   "name": "TRIAGER",
+   "author": "Weatherman",
+   "description": "A triage desk for multi-bot setups: it reads a request, decides which bot handles it, in what order, and whether…",
+   "url": "https://x.ai/bot/Jo1X19xc3KJMfr1PxoO3Y"
+  },
+  {
+   "id": "coding-software-xoIfh7oH4feicifYOgRMg",
+   "code": "xoIfh7oH4feicifYOgRMg",
+   "name": "Tailscale Admin",
+   "author": "Chevy Phillip",
+   "description": "Puts your bot's cloud box on your tailnet safely, then audits ACLs, manages devices, sets up Tailscale SSH, and troubleshoots.",
+   "url": "https://x.ai/bot/xoIfh7oH4feicifYOgRMg"
+  },
+  {
+   "id": "coding-software-m-qZ-OIA6Nt2LZeb2bKg5",
+   "code": "m-qZ-OIA6Nt2LZeb2bKg5",
+   "name": "Tally Desk",
+   "author": "Josh",
+   "description": "Builds Tally forms, reads the responses, fills one on request.",
+   "url": "https://x.ai/bot/m-qZ-OIA6Nt2LZeb2bKg5"
+  },
+  {
+   "id": "coding-software-z841w3sxcqGwe83MQLk3E",
+   "code": "z841w3sxcqGwe83MQLk3E",
+   "name": "Tech Skills Coach",
+   "author": "laila Deeb",
+   "description": "Hands-on tech co-pilot for rebuilding coding fluency and modern AI software habits.",
+   "url": "https://x.ai/bot/z841w3sxcqGwe83MQLk3E"
+  },
+  {
+   "id": "coding-software-aU_t4X-Yf6w9DHfhIGD9n",
+   "code": "aU_t4X-Yf6w9DHfhIGD9n",
+   "name": "Terminal Boss",
+   "author": "Phillip Holland",
+   "description": "Runs terminal jobs and terminal coding agents: Grok Build, Claude Code, Codex, Cursor CLI, Gemini CLI, opencode, Aider and more.",
+   "url": "https://x.ai/bot/aU_t4X-Yf6w9DHfhIGD9n"
+  },
+  {
+   "id": "coding-software-l9MPhPAe-OSzvcMVfXrTe",
+   "code": "l9MPhPAe-OSzvcMVfXrTe",
+   "name": "Teslascope",
+   "author": "Tyler Corsair",
+   "description": "A Teslascope assistant for Tesla owners. Ask about your drives, Supercharger visits, charging, software updates, and vehicles in plain English.",
+   "url": "https://x.ai/bot/l9MPhPAe-OSzvcMVfXrTe"
+  },
+  {
+   "id": "coding-software--IP_HE8l0UOByWip4DByf",
+   "code": "-IP_HE8l0UOByWip4DByf",
+   "name": "Test Cop",
+   "author": "Ryan T",
+   "description": "Reviews pull requests for quietly weakened tests (skips, loosened asserts, narrowed test config, softened CI) and returns CLEAN or SUSPECT.",
+   "url": "https://x.ai/bot/-IP_HE8l0UOByWip4DByf"
+  },
+  {
+   "id": "coding-software-jYqZ5GfGQhddkJmErACwe",
+   "code": "jYqZ5GfGQhddkJmErACwe",
+   "name": "TestChimp QA Bot",
+   "author": "Nuwan",
+   "description": "QA bot for AI coding agents per TestChimp project: watches pushes and test results and runs the next QA step on approval.",
+   "url": "https://x.ai/bot/jYqZ5GfGQhddkJmErACwe"
+  },
+  {
+   "id": "coding-software-Z0Faxo9DTX0KL7j7OHTWJ",
+   "code": "Z0Faxo9DTX0KL7j7OHTWJ",
+   "name": "The Bobs",
+   "author": "Drew Fox",
+   "description": "Interviews every bot you own and says which ones are not earning their keep.",
+   "url": "https://x.ai/bot/Z0Faxo9DTX0KL7j7OHTWJ"
+  },
+  {
+   "id": "coding-software-CBcj8KDbrCWgcb4IF-jFY",
+   "code": "CBcj8KDbrCWgcb4IF-jFY",
+   "name": "The Fabricator",
+   "author": "CMDLAB",
+   "description": "Watches and runs your Bambu Lab 3D printers over your home network. Needs LAN Only and Developer Mode plus the Grok Bot desktop app on the same network.",
+   "url": "https://x.ai/bot/CBcj8KDbrCWgcb4IF-jFY"
+  },
+  {
+   "id": "coding-software-EdQv3tmFAYoTX5IdNeu9O",
+   "code": "EdQv3tmFAYoTX5IdNeu9O",
+   "name": "TheOverseer",
+   "author": "Jethro Jones",
+   "description": "Keeps a multi-bot workspace organized, git-backed and portable: backs up profiles, skills, routines and notes to a private repo on weekdays, prunes old files.",
+   "url": "https://x.ai/bot/EdQv3tmFAYoTX5IdNeu9O"
+  },
+  {
+   "id": "coding-software-y8jcsoZFQCZDHcQ8eaUPN",
+   "code": "y8jcsoZFQCZDHcQ8eaUPN",
+   "name": "Threadroost",
+   "author": "Dallin Watts",
+   "description": "Files your SuperGrok and Claude chats into this bot, word for word, through your own free Threadroost connector.",
+   "url": "https://x.ai/bot/y8jcsoZFQCZDHcQ8eaUPN"
+  },
+  {
+   "id": "coding-software-xz-a6CWE-HtbBB4yO7J0U",
+   "code": "xz-a6CWE-HtbBB4yO7J0U",
+   "name": "Threat Hunter",
+   "author": "Paul Vann",
+   "description": "A threat-hunter bot that builds a free Wazuh SIEM on its own computer and hunts for attacks on AI agents, like poisoned…",
+   "url": "https://x.ai/bot/xz-a6CWE-HtbBB4yO7J0U"
+  },
+  {
+   "id": "coding-software-vWQx3rxiWabBu_JMKXPqI",
+   "code": "vWQx3rxiWabBu_JMKXPqI",
+   "name": "Tinker",
+   "author": "ALX",
+   "description": "No-nonsense goblin engineer that designs, writes, checks and installs World of Warcraft addons for Retail and Classic, then iterates from your error messages.",
+   "url": "https://x.ai/bot/vWQx3rxiWabBu_JMKXPqI"
+  },
+  {
+   "id": "coding-software-dwuB7MmlnrkcXYtyOp-Hk",
+   "code": "dwuB7MmlnrkcXYtyOp-Hk",
+   "name": "Top Coder",
+   "author": "Eric Buess",
+   "description": "Coding builder that ships against locked acceptance criteria with tests, while a separate verifier checks that done means done.",
+   "url": "https://x.ai/bot/dwuB7MmlnrkcXYtyOp-Hk"
+  },
+  {
+   "id": "coding-software-jH1L_MTl1J1in5dodrxyd",
+   "code": "jH1L_MTl1J1in5dodrxyd",
+   "name": "Training Coordinator",
+   "author": "Carlo Cucina",
+   "description": "Makes sure every teammate bot finds field-relevant training at least once a month, shares useful pieces across…",
+   "url": "https://x.ai/bot/jH1L_MTl1J1in5dodrxyd"
+  },
+  {
+   "id": "coding-software-Hvli5amrlprtDS2KuFRBP",
+   "code": "Hvli5amrlprtDS2KuFRBP",
+   "name": "Twinwright",
+   "author": "@suddenlyjon",
+   "description": "by @SuddenlyJon · github.com/Pitchfork-and-Torch Find me: bots.jonbailey.xyz You are Twinwright.",
+   "url": "https://x.ai/bot/Hvli5amrlprtDS2KuFRBP"
+  },
+  {
+   "id": "coding-software-Wmmz-sDuldsoHUr7vfU7w",
+   "code": "Wmmz-sDuldsoHUr7vfU7w",
+   "name": "Two-Pass PR Reviewer",
+   "author": "Destin Hebert",
+   "description": "A senior-engineer review and a skeptical second pass in one report. Catches bugs, security holes, and over-engineering — including prototype pollution.",
+   "url": "https://x.ai/bot/Wmmz-sDuldsoHUr7vfU7w"
+  },
+  {
+   "id": "coding-software-sHoih_Qwlzlkr4aGC4WBa",
+   "code": "sHoih_Qwlzlkr4aGC4WBa",
+   "name": "U1 Creator",
+   "author": "MSMage",
+   "description": "A Snapmaker U1 specialist that takes a print from idea to ready-to-print file: it finds or designs the part, picks the filament and toolheads.",
+   "url": "https://x.ai/bot/sHoih_Qwlzlkr4aGC4WBa"
+  },
+  {
+   "id": "coding-software-LIoSGK9L2p0pCeApCmS1g",
+   "code": "LIoSGK9L2p0pCeApCmS1g",
+   "name": "Unicron",
+   "author": "D'Artagnan",
+   "description": "Fleet compiler that digests overlapping bots and routines into one operating profile, then stops for approval before changes.",
+   "url": "https://x.ai/bot/LIoSGK9L2p0pCeApCmS1g"
+  },
+  {
+   "id": "coding-software-Nx4wpKeM_NYx577xlJFMD",
+   "code": "Nx4wpKeM_NYx577xlJFMD",
+   "name": "Usage-pool orchestrator",
+   "author": "Jordan Hall",
+   "description": "A thin Grok Bot that hands heavy work to Cursor by default, and optionally Grok Build, Claude Code, or Codex, so those…",
+   "url": "https://x.ai/bot/Nx4wpKeM_NYx577xlJFMD"
+  },
+  {
+   "id": "coding-software-KkQ9TOi5k9f2O60a-dx4T",
+   "code": "KkQ9TOi5k9f2O60a-dx4T",
+   "name": "VPS bot",
+   "author": "茄哥",
+   "description": "帮你搭建和调优代理 VPS：内核低延迟与多协议部署.",
+   "url": "https://x.ai/bot/KkQ9TOi5k9f2O60a-dx4T"
+  },
+  {
+   "id": "coding-software-LSo2GKkmt_Fxh-TBz5RLX",
+   "code": "LSo2GKkmt_Fxh-TBz5RLX",
+   "name": "Vercel Ops Monitor",
+   "author": "Gu",
+   "description": "Daily Vercel ops: spend vs plan credit, 5xx, traffic swings, 404s, new errors and failed deploys. Quiet days stay one short line.",
+   "url": "https://x.ai/bot/LSo2GKkmt_Fxh-TBz5RLX"
+  },
+  {
+   "id": "coding-software-lso2gkkmt_fxh-tbz5rlx",
+   "code": "lso2gkkmt_fxh-tbz5rlx",
+   "name": "Vercel Ops Monitor",
+   "author": "Gu Shan",
+   "description": "Daily Vercel ops: spend vs plan credit, 5xx, traffic swings, 404s, new errors and failed deploys.",
+   "url": "https://x.ai/bot/lso2gkkmt_fxh-tbz5rlx"
+  },
+  {
+   "id": "coding-software-fX4zWRnchCZeCrZ2Qboio",
+   "code": "fX4zWRnchCZeCrZ2Qboio",
+   "name": "Vibe CTO",
+   "author": "Eli",
+   "description": "A fractional CTO for vibe coders shipping with Cursor, Claude Code, Lovable, Bolt, v0 or Replit.",
+   "url": "https://x.ai/bot/fX4zWRnchCZeCrZ2Qboio"
+  },
+  {
+   "id": "coding-software-V2mEPjBfDmtFvqeYUuvnm",
+   "code": "V2mEPjBfDmtFvqeYUuvnm",
+   "name": "Vibe Check",
+   "author": "Chris",
+   "description": "Reviews your AI-built app for the production gaps vibe coding usually misses, then sends five simulated first-time users through it to find where they stall.",
+   "url": "https://x.ai/bot/V2mEPjBfDmtFvqeYUuvnm"
+  },
+  {
+   "id": "coding-software-lZrmKRND39ClHnQJj6C9A",
+   "code": "lZrmKRND39ClHnQJj6C9A",
+   "name": "Vibe Check",
+   "author": "Troy Cooper",
+   "description": "Audits your AI-built app for the production gaps vibe coding misses — security, data, auth, billing, and ops — and hands back a ranked fix list.",
+   "url": "https://x.ai/bot/lZrmKRND39ClHnQJj6C9A"
+  },
+  {
+   "id": "coding-software--MWo_XFJRkd4yBmS5MHTH",
+   "code": "-MWo_XFJRkd4yBmS5MHTH",
+   "name": "Vibe Code Check",
+   "author": "R T",
+   "description": "Safety check for vibe-coded apps: catches legal and security traps like client secrets, COPPA/kids, open RLS, licenses…",
+   "url": "https://x.ai/bot/-MWo_XFJRkd4yBmS5MHTH"
+  },
+  {
+   "id": "coding-software-04M6OVjsDhy9JiXjPz66O",
+   "code": "04M6OVjsDhy9JiXjPz66O",
+   "name": "Vibe Coder",
+   "author": "Trond Eirik Haavarstein",
+   "description": "Single-engineer coding bot that hands every change to a headless coding CLI, opens PRs on a branch with a second-model pre-commit review, never pushes to main.",
+   "url": "https://x.ai/bot/04M6OVjsDhy9JiXjPz66O"
+  },
+  {
+   "id": "coding-software-eM_J3tkxeQL0JqlBquhyM",
+   "code": "eM_J3tkxeQL0JqlBquhyM",
+   "name": "Virtual CTO",
+   "author": "Filip Szalewicz",
+   "description": "Virtual CTO for founders, built on the decision frameworks Filip Szalewicz uses as a Head of Engineering and fractional CTO.",
+   "url": "https://x.ai/bot/eM_J3tkxeQL0JqlBquhyM"
+  },
+  {
+   "id": "coding-software-mLpMFiQGgnXgXpmi0eb7k",
+   "code": "mLpMFiQGgnXgXpmi0eb7k",
+   "name": "Vision Pro Bot",
+   "author": "Evan Bacon",
+   "description": "Builds Apple Vision Pro apps in pure SwiftUI and RealityKit on your Mac, verifies them in the visionOS simulator, installs them on your headset.",
+   "url": "https://x.ai/bot/mLpMFiQGgnXgXpmi0eb7k"
+  },
+  {
+   "id": "coding-software-AekQxAV2k71gT9dC_GZzs",
+   "code": "AekQxAV2k71gT9dC_GZzs",
+   "name": "Vivi",
+   "author": "Tyler Nishida",
+   "description": "Non-coding engineering CTO. Takes a goal, splits it across IC engineers, and checks the live artifact — does not write…",
+   "url": "https://x.ai/bot/AekQxAV2k71gT9dC_GZzs"
+  },
+  {
+   "id": "coding-software-_23fi5qfiSaGqa2wfVW0p",
+   "code": "_23fi5qfiSaGqa2wfVW0p",
+   "name": "Vulnerability Hunter",
+   "author": "Lonny Kapelushnik",
+   "description": "Finds real trust-boundary vulnerabilities in codebases and owned environments: recon, coverage-led hunting, adversarial validation and target-neutral reports.",
+   "url": "https://x.ai/bot/_23fi5qfiSaGqa2wfVW0p"
+  },
+  {
+   "id": "coding-software-OI3Qx1BLhYxG27y_OccCW",
+   "code": "OI3Qx1BLhYxG27y_OccCW",
+   "name": "WWJCD — What Would Jesus Christ Do",
+   "author": "Pat",
+   "description": "Turns messy $cashtag dumps into distinct equity/ETF/tokenized/perp seats.",
+   "url": "https://x.ai/bot/OI3Qx1BLhYxG27y_OccCW"
+  },
+  {
+   "id": "coding-software-5knsZnIHZUKPYw3H3aW0_",
+   "code": "5knsZnIHZUKPYw3H3aW0_",
+   "name": "Web Designer",
+   "author": "Marcell",
+   "description": "Redesigns and maintains your business website: mobile-first, fast, accessible pages built only from true facts, with previews before anything goes live.",
+   "url": "https://x.ai/bot/5knsZnIHZUKPYw3H3aW0_"
+  },
+  {
+   "id": "coding-software-QeQrE05Yi0XRhWFeEx6Oe",
+   "code": "QeQrE05Yi0XRhWFeEx6Oe",
+   "name": "Web Manager",
+   "author": "TheAmericanTexan",
+   "description": "A friendly website manager for beginner small-business owners.",
+   "url": "https://x.ai/bot/QeQrE05Yi0XRhWFeEx6Oe"
+  },
+  {
+   "id": "coding-software-LI80oX1Y_cQ_t9f4LwgxE",
+   "code": "LI80oX1Y_cQ_t9f4LwgxE",
+   "name": "Webi",
+   "author": "Jaime Hernandez",
+   "description": "A web designer and front-end coder that owns your site's look, mockups and HTML/CSS/JS/WordPress code, and proves every change on the live URL.",
+   "url": "https://x.ai/bot/LI80oX1Y_cQ_t9f4LwgxE"
+  },
+  {
+   "id": "coding-software-icbDxOYQ_2Q-Ak8T7Fyo7",
+   "code": "icbDxOYQ_2Q-Ak8T7Fyo7",
+   "name": "Website Builder",
+   "author": "Heidi",
+   "description": "Builds and publishes your personal website (bio, writing, press, bots, and contact pages) for free on Netlify and connects your own domain.",
+   "url": "https://x.ai/bot/icbDxOYQ_2Q-Ak8T7Fyo7"
+  },
+  {
+   "id": "coding-software-sOm7Tj_IcvQ2SFIvJdOJj",
+   "code": "sOm7Tj_IcvQ2SFIvJdOJj",
+   "name": "Website Builder",
+   "author": "Goob",
+   "description": "Builds and maintains professional company websites — design, copy, assets, forms, and go-live on GitHub Pages…",
+   "url": "https://x.ai/bot/sOm7Tj_IcvQ2SFIvJdOJj"
+  },
+  {
+   "id": "coding-software-nzY9whbJOXu7N83V3uYh3",
+   "code": "nzY9whbJOXu7N83V3uYh3",
+   "name": "Website Form Inspector",
+   "author": "Juan Badillo",
+   "description": "Weekly form-integrity auditor for multi-site agencies. Discovers public forms, checks handlers, Turnstile, and mail routing, then reports PASS / WARNING.",
+   "url": "https://x.ai/bot/nzY9whbJOXu7N83V3uYh3"
+  },
+  {
+   "id": "coding-software-ipTDB1LDHU0e1HPJeyAVU",
+   "code": "ipTDB1LDHU0e1HPJeyAVU",
+   "name": "Website Health Check",
+   "author": "Emmett Armstrong",
+   "description": "Point it at your website and get a plain-English A to F scorecard for speed, accessibility, broken links, schema, and AI readiness (llms.txt).",
+   "url": "https://x.ai/bot/ipTDB1LDHU0e1HPJeyAVU"
+  },
+  {
+   "id": "coding-software-8Z5qB_HoAO_ssVH3QSiEX",
+   "code": "8Z5qB_HoAO_ssVH3QSiEX",
+   "name": "Website Health Checker — A Weekly Checkup for Your Website",
+   "author": "News Gurus",
+   "description": "Gives a small business's website a weekly checkup and reports what it finds in plain English, from broken forms to slow pages.",
+   "url": "https://x.ai/bot/8Z5qB_HoAO_ssVH3QSiEX"
+  },
+  {
+   "id": "coding-software-knt08ohuspBYhQ6ohXtKt",
+   "code": "knt08ohuspBYhQ6ohXtKt",
+   "name": "Website Highlight Video Maker",
+   "author": "Martin Frostad",
+   "description": "Walks your own website pages and turns them into narrated tutorial videos with zooms, highlights and captions, plus a vertical cut for social.",
+   "url": "https://x.ai/bot/knt08ohuspBYhQ6ohXtKt"
+  },
+  {
+   "id": "coding-software-2V0Yt4L44mabUD6MR3Ppy",
+   "code": "2V0Yt4L44mabUD6MR3Ppy",
+   "name": "Website Launch Bot",
+   "author": "Dominic Bryant",
+   "description": "Guides first-time founders to a live custom-domain site with Cloudflare and Vercel, then suggests a small bot team.",
+   "url": "https://x.ai/bot/2V0Yt4L44mabUD6MR3Ppy"
+  },
+  {
+   "id": "coding-software-NYDai_DOI_2pNDIKerrpD",
+   "code": "NYDai_DOI_2pNDIKerrpD",
+   "name": "Website Ops",
+   "author": "Josh Kim",
+   "description": "Website operations and content manager. Ships site changes as PRs from your website repo, runs evidence-backed site audits (SEO, content, speed, a11y, CRO.",
+   "url": "https://x.ai/bot/NYDai_DOI_2pNDIKerrpD"
+  },
+  {
+   "id": "coding-software-UuKqeb4npN9RsP1G3REFR",
+   "code": "UuKqeb4npN9RsP1G3REFR",
+   "name": "Website Publisher",
+   "author": "Ryan T",
+   "description": "Website SEO and docs habits with weekly Search Console routine plus Cloudflare Mintlify MailerLite PostHog Resend Playwright GitHub plugins.",
+   "url": "https://x.ai/bot/UuKqeb4npN9RsP1G3REFR"
+  },
+  {
+   "id": "coding-software-uukqeb4npn9rsp1g3refr",
+   "code": "uukqeb4npn9rsp1g3refr",
+   "name": "Website Publisher",
+   "author": "Ryan",
+   "description": "Senior web publisher for a public static site: gated deploys, SEO and indexing, docs, signup embeds, and featured-content drops — without…",
+   "url": "https://x.ai/bot/uukqeb4npn9rsp1g3refr"
+  },
+  {
+   "id": "coding-software-FBSTEPfTxj7ekvSml-nUJ",
+   "code": "FBSTEPfTxj7ekvSml-nUJ",
+   "name": "Website agency lead scout",
+   "author": "Josh Kim",
+   "description": "Delivers five vetted businesses that need a new website each morning.",
+   "url": "https://x.ai/bot/FBSTEPfTxj7ekvSml-nUJ"
+  },
+  {
+   "id": "coding-software-9zCiL5XmZczVZYd7l5v79",
+   "code": "9zCiL5XmZczVZYd7l5v79",
+   "name": "Wes",
+   "author": "James Martinez",
+   "description": "Build lead for solo builders: picks up tickets, sends code to the right AI coding tool, gets each PR reviewed by another tool, merges on pass.",
+   "url": "https://x.ai/bot/9zCiL5XmZczVZYd7l5v79"
+  },
+  {
+   "id": "coding-software-wZ1VAj_TNi1vvyHbaKJOc",
+   "code": "wZ1VAj_TNi1vvyHbaKJOc",
+   "name": "Wifi Wendy",
+   "author": "Frank Gonzalez",
+   "description": "Takes your room layout and suggests the best router placement for stronger WiFi. Share floors, walls, and dead zones; get a simple placement plan.",
+   "url": "https://x.ai/bot/wZ1VAj_TNi1vvyHbaKJOc"
+  },
+  {
+   "id": "coding-software-kcMHwterc33F-1FjGGnP3",
+   "code": "kcMHwterc33F-1FjGGnP3",
+   "name": "Workbench Systems",
+   "author": "Flux",
+   "description": "Agent Workbench systems specialist. Inspect only supplied public documentation, code and explicitly public task data.",
+   "url": "https://x.ai/bot/kcMHwterc33F-1FjGGnP3"
+  },
+  {
+   "id": "coding-software-ay0PGygsBxYONJRITWABE",
+   "code": "ay0PGygsBxYONJRITWABE",
+   "name": "X API Engineer",
+   "author": "Paul Vann",
+   "description": "Helps you ship an app on the X API. Surveys the Developer Exhibit, reads the docs, builds what you pick, walks you through console keys, demos it…",
+   "url": "https://x.ai/bot/ay0PGygsBxYONJRITWABE"
+  },
+  {
+   "id": "coding-software-_ywDVKoIufUaFJ-zZ7tVJ",
+   "code": "_ywDVKoIufUaFJ-zZ7tVJ",
+   "name": "X API MCP",
+   "author": "DING",
+   "description": "Posts, replies, threads, and media via open-source x-api-mcp and your own X App.",
+   "url": "https://x.ai/bot/_ywDVKoIufUaFJ-zZ7tVJ"
+  },
+  {
+   "id": "coding-software-1tsPIu41IIsn2ZRWUWSA6",
+   "code": "1tsPIu41IIsn2ZRWUWSA6",
+   "name": "X API Optimizer",
+   "author": "Paul Vann",
+   "description": "Helps developers building on the X API cut credit spend, avoid rate limits, and speed up their apps.",
+   "url": "https://x.ai/bot/1tsPIu41IIsn2ZRWUWSA6"
+  },
+  {
+   "id": "coding-software-W0LrVwNwsRHhFY4PG7586",
+   "code": "W0LrVwNwsRHhFY4PG7586",
+   "name": "X Algo",
+   "author": "Uzi Obi",
+   "description": "Helps X posters decide when to quote, ship a new post, or wait.",
+   "url": "https://x.ai/bot/W0LrVwNwsRHhFY4PG7586"
+  },
+  {
+   "id": "coding-software-X_P19IvPAHZ3FiA1Q-05s",
+   "code": "X_P19IvPAHZ3FiA1Q-05s",
+   "name": "X Algo",
+   "author": "Matt Palmer",
+   "description": "Helps X posters decide when to quote, ship a new post, or wait. Reads the public For You ranking code and live post metrics.",
+   "url": "https://x.ai/bot/X_P19IvPAHZ3FiA1Q-05s"
+  },
+  {
+   "id": "coding-software-IETRUCsQCcnketUmBizdo",
+   "code": "IETRUCsQCcnketUmBizdo",
+   "name": "X Embed Builder",
+   "author": "XHabib",
+   "description": "Turns your site or idea into an interactive X player card, deploys it to Vercel or Cloudflare and verifies it.",
+   "url": "https://x.ai/bot/IETRUCsQCcnketUmBizdo"
+  },
+  {
+   "id": "coding-software-5788P-A4EH0IwO6IUO_Qr",
+   "code": "5788P-A4EH0IwO6IUO_Qr",
+   "name": "X-STREAMTOP",
+   "author": "0HOUR1",
+   "description": "Builds, releases and auto-updates X-STREAMTOP, a free desktop live-streaming app with a built-in browser, region snips and stream overlays.",
+   "url": "https://x.ai/bot/5788P-A4EH0IwO6IUO_Qr"
+  },
+  {
+   "id": "coding-software-prf1nUpf3jrPAtCR5Rm4Y",
+   "code": "prf1nUpf3jrPAtCR5Rm4Y",
+   "name": "Xcode release watcher",
+   "author": "Natasha Robot",
+   "description": "Checks Apple’s Developer Releases page each morning and tells you when a named Xcode version ships as a non-beta…",
+   "url": "https://x.ai/bot/prf1nUpf3jrPAtCR5Rm4Y"
+  },
+  {
+   "id": "coding-software-isfPwoTeQTBqA-gk9CZN5",
+   "code": "isfPwoTeQTBqA-gk9CZN5",
+   "name": "X调度员",
+   "author": "铁柱AGI",
+   "description": "Sends X tasks down the cheaper route so your developer credits last longer.",
+   "url": "https://x.ai/bot/isfPwoTeQTBqA-gk9CZN5"
+  },
+  {
+   "id": "coding-software-H7sxHpPsvu7vKG16DrsDU",
+   "code": "H7sxHpPsvu7vKG16DrsDU",
+   "name": "Zephyr",
+   "author": "Zachary Ferguson",
+   "description": "Front desk for OneStepGPS fleets that answers lookups and makes app changes only after you confirm each one.",
+   "url": "https://x.ai/bot/H7sxHpPsvu7vKG16DrsDU"
+  },
+  {
+   "id": "coding-software-O0hx4K5Vg8pciw4RSSlqK",
+   "code": "O0hx4K5Vg8pciw4RSSlqK",
+   "name": "Zephyr Sites",
+   "author": "Zackary Chapple",
+   "description": "Ships and hosts sites on Zephyr Cloud with built-in cloud or bring-your-own setup.",
+   "url": "https://x.ai/bot/O0hx4K5Vg8pciw4RSSlqK"
+  },
+  {
+   "id": "coding-software-bOMP64UOs3u_HtxKo5IPa",
+   "code": "bOMP64UOs3u_HtxKo5IPa",
+   "name": "Zoho Bot",
+   "author": "Aseem",
+   "description": "Zoho Mail unread sweep; flags spam/cold pitches; delete/reply.",
+   "url": "https://x.ai/bot/bOMP64UOs3u_HtxKo5IPa"
+  },
+  {
+   "id": "coding-software-oDG33vy41WVZKy-HFKVk0",
+   "code": "oDG33vy41WVZKy-HFKVk0",
+   "name": "atr Operator",
+   "author": "Rimantas Mocevicius",
+   "description": "Front door to atr: queue coding work onto the CLIs you already pay for, watch status and usage, and bring PRs and answers back.",
+   "url": "https://x.ai/bot/oDG33vy41WVZKy-HFKVk0"
+  },
+  {
+   "id": "coding-software-MxikU14J07UVf-1UV4VC-",
+   "code": "MxikU14J07UVf-1UV4VC-",
+   "name": "charlie",
+   "author": "Tomasz",
+   "description": "Master planning and evidence coordinator for autonomous software delivery. Helps you agree what to build, stages batch work for a delivery harness,.",
+   "url": "https://x.ai/bot/MxikU14J07UVf-1UV4VC-"
+  },
+  {
+   "id": "coding-software-gL7FcTFcs1SHMCD3pozTM",
+   "code": "gL7FcTFcs1SHMCD3pozTM",
+   "name": "cline",
+   "author": "Alberto Jauregui",
+   "description": "A Cline specialist that installs and drives Cline CLI and Cline Desktop on its Linux computer, so you can hand it…",
+   "url": "https://x.ai/bot/gL7FcTFcs1SHMCD3pozTM"
+  },
+  {
+   "id": "coding-software-kelV8jM8UkGgFG79M1TCL",
+   "code": "kelV8jM8UkGgFG79M1TCL",
+   "name": "dag-helper",
+   "author": "stephoshi yappamoto",
+   "description": "Keeps several coding agents honest about one repo conventions, source of truth, and model-router defaults.",
+   "url": "https://x.ai/bot/kelV8jM8UkGgFG79M1TCL"
+  },
+  {
+   "id": "coding-software-D9HYH2jAmGiKw7e499mrE",
+   "code": "D9HYH2jAmGiKw7e499mrE",
+   "name": "github 优秀仓库",
+   "author": "umiastuti8329",
+   "description": "Sweeps GitHub's trending page each morning and writes up the repos that matter.",
+   "url": "https://x.ai/bot/D9HYH2jAmGiKw7e499mrE"
+  },
+  {
+   "id": "coding-software-0B7CBnzSyIA3aVLjMTwoF",
+   "code": "0B7CBnzSyIA3aVLjMTwoF",
+   "name": "grokcli",
+   "author": "Nil Object",
+   "description": "A coding bot that writes tight prompts and runs them through the Grok CLI, headless on your own computer, then commits…",
+   "url": "https://x.ai/bot/0B7CBnzSyIA3aVLjMTwoF"
+  },
+  {
+   "id": "coding-software-jK9aaa6Pypf_WjnaIHWah",
+   "code": "jK9aaa6Pypf_WjnaIHWah",
+   "name": "iBot Player",
+   "author": "Phillip Holland",
+   "description": "Walks you through deploying iBot, an iPod-style player for your Apple Music, on your own Vercel in about 15 minutes: MusicKit key, deploy, iPhone test.",
+   "url": "https://x.ai/bot/jK9aaa6Pypf_WjnaIHWah"
+  },
+  {
+   "id": "coding-software-RIPO6abjI60-ZXRFAj9hG",
+   "code": "RIPO6abjI60-ZXRFAj9hG",
+   "name": "iOS Bot",
+   "author": "Jaime Hernandez",
+   "description": "An iOS app developer that builds Swift and SwiftUI apps from design to TestFlight, and helps with iPhone-side setup…",
+   "url": "https://x.ai/bot/RIPO6abjI60-ZXRFAj9hG"
+  },
+  {
+   "id": "coding-software-1AWFPBcRDur69flDohjvQ",
+   "code": "1AWFPBcRDur69flDohjvQ",
+   "name": "iOS Developer",
+   "author": "Circuit Pulse",
+   "description": "Builds native SwiftUI iPhone apps end to end on your Mac, from device installs and IAP to App Review.",
+   "url": "https://x.ai/bot/1AWFPBcRDur69flDohjvQ"
+  },
+  {
+   "id": "coding-software-vGk7yV-vF92ZegpNF3NPo",
+   "code": "vGk7yV-vF92ZegpNF3NPo",
+   "name": "lgtm the pr closer",
+   "author": "Claire",
+   "description": "Helps blast through open PRs: triage status, then merge, review, or close.",
+   "url": "https://x.ai/bot/vGk7yV-vF92ZegpNF3NPo"
+  },
+  {
+   "id": "coding-software-Ub3T7usX-c6yRQibQq83P",
+   "code": "Ub3T7usX-c6yRQibQq83P",
+   "name": "loops",
+   "author": "Matt Palmer",
+   "description": "Generalized engineering outer loop. Sits above coding agents, uses pstack as reference (how, why, unslop), writes…",
+   "url": "https://x.ai/bot/Ub3T7usX-c6yRQibQq83P"
+  },
+  {
+   "id": "coding-software-ZdyYmSONw9N-z-ZHg9JAX",
+   "code": "ZdyYmSONw9N-z-ZHg9JAX",
+   "name": "n8n Engineer",
+   "author": "Samuel Ferrero",
+   "description": "Builds, fixes and watches your n8n workflows and the server they run on, and backs every change with evidence.",
+   "url": "https://x.ai/bot/ZdyYmSONw9N-z-ZHg9JAX"
+  },
+  {
+   "id": "coding-software-Zvqbrq6yN68ijhEpRz0lU",
+   "code": "Zvqbrq6yN68ijhEpRz0lU",
+   "name": "n8n Master",
+   "author": "Shagghie Superstar",
+   "description": "https://github.com/shagghiesuperstar/n8n-master-grok-bot — Stop pasting n8n JSON into chat like it’s 2023.",
+   "url": "https://x.ai/bot/Zvqbrq6yN68ijhEpRz0lU"
+  },
+  {
+   "id": "coding-software-zvqbrq6yn68ijheprz0lu",
+   "code": "zvqbrq6yn68ijheprz0lu",
+   "name": "n8n Master",
+   "author": "Shagghie",
+   "description": "https://github.com/shagghiesuperstar/n8n-master-grok-bot — Stop pasting n8n JSON into chat like it’s 2023.",
+   "url": "https://x.ai/bot/zvqbrq6yn68ijheprz0lu"
+  },
+  {
+   "id": "coding-software-P-pKr0GIxVPYzg8xYivNr",
+   "code": "P-pKr0GIxVPYzg8xYivNr",
+   "name": "ogre",
+   "author": "Capital Copilot",
+   "description": "Independent optimizer and security reviewer for a multi-agent engineering crew. Measures before ranking cuts, reviews PRs without silently shipping.",
+   "url": "https://x.ai/bot/P-pKr0GIxVPYzg8xYivNr"
+  },
+  {
+   "id": "coding-software-aaqCOb-3SE48_7qAEAzAf",
+   "code": "aaqCOb-3SE48_7qAEAzAf",
+   "name": "overnight shipper",
+   "author": "Josh Kim",
+   "description": "Night-shift coding bot for one SaaS. The owner queues an idea; this bot ships pull requests they can review when they…",
+   "url": "https://x.ai/bot/aaqCOb-3SE48_7qAEAzAf"
+  },
+  {
+   "id": "coding-software-_t_vyuhFM8ev2flbZoYnU",
+   "code": "_t_vyuhFM8ev2flbZoYnU",
+   "name": "pappu",
+   "author": "Adi Lentils",
+   "description": "Cuts cinematic shorts and reviews GitHub and skill listings honestly, then rebuilds the one thing that actually runs.",
+   "url": "https://x.ai/bot/_t_vyuhFM8ev2flbZoYnU"
+  },
+  {
+   "id": "coding-software-5t3xJA-ixg3yO7SepuaTt",
+   "code": "5t3xJA-ixg3yO7SepuaTt",
+   "name": "pmll",
+   "author": "Dr. Q",
+   "description": "A repo-ops and memory assistant for developers: watches your GitHub repos, sends a weekday digest, remembers decisions…",
+   "url": "https://x.ai/bot/5t3xJA-ixg3yO7SepuaTt"
+  },
+  {
+   "id": "coding-software-g_xmlbEvupO0b1Emk9ohZ",
+   "code": "g_xmlbEvupO0b1Emk9ohZ",
+   "name": "spacexai-bug-reporter",
+   "author": "Fine_Computer_4451",
+   "description": "Prepares paste-ready SpaceXAI / xAI / Grok bug reports for official Report an issue, billing, API, and X Help Center…",
+   "url": "https://x.ai/bot/g_xmlbEvupO0b1Emk9ohZ"
+  },
+  {
+   "id": "coding-software-4ZzeuafN9Z1boU8smYIXv",
+   "code": "4ZzeuafN9Z1boU8smYIXv",
+   "name": "substreams",
+   "author": "Graphtronauts",
+   "description": "Finds and composes packages from the substreams.dev registry, writes and tests modules with StreamingFast skills…",
+   "url": "https://x.ai/bot/4ZzeuafN9Z1boU8smYIXv"
+  },
+  {
+   "id": "coding-software-HoG3J3B0g4fjKr54aA5tP",
+   "code": "HoG3J3B0g4fjKr54aA5tP",
+   "name": "teslaway",
+   "author": "Vijay Kandhalu",
+   "description": "Finds used Teslas near a postal/ZIP code in any country, then emails a short list of matching listings.",
+   "url": "https://x.ai/bot/HoG3J3B0g4fjKr54aA5tP"
+  },
+  {
+   "id": "coding-software--hmCmHB0ynJGvSKxeINfS",
+   "code": "-hmCmHB0ynJGvSKxeINfS",
+   "name": "tinkabot",
+   "author": "Lauren Tan",
+   "description": "Wraps an API into a Cursor/Agent Plugin (MCP + skills). Data shape first, smallest scaffold that works, prove locally.",
+   "url": "https://x.ai/bot/-hmCmHB0ynJGvSKxeINfS"
+  },
+  {
+   "id": "coding-software-doO9F9xn21Z1RLyevzxFf",
+   "code": "doO9F9xn21Z1RLyevzxFf",
+   "name": "trimmy",
+   "author": "João Paulo Carvalho",
+   "description": "Reads the bots you name and shows you what saved context to cut, as a numbered list. Nothing changes until you say which lines.",
+   "url": "https://x.ai/bot/doO9F9xn21Z1RLyevzxFf"
+  },
+  {
+   "id": "coding-software-DLSYM3q3eUsy4Si4fTPwa",
+   "code": "DLSYM3q3eUsy4Si4fTPwa",
+   "name": "trimmy",
+   "author": "TimDOES",
+   "description": "Reads the bots you name and proposes context cuts side by side with how much memory each trim wins back, applied only on your approval.",
+   "url": "https://x.ai/bot/DLSYM3q3eUsy4Si4fTPwa"
+  },
+  {
+   "id": "coding-software-NU02qQ9iahZtAM0i0x1KT",
+   "code": "NU02qQ9iahZtAM0i0x1KT",
+   "name": "unifi AQ trmnl integration",
+   "author": "Eric Ren",
+   "description": "Builds and maintains a TRMNL private plugin that surfaces UniFi Protect UP-AirQuality sensor data.",
+   "url": "https://x.ai/bot/NU02qQ9iahZtAM0i0x1KT"
+  },
+  {
+   "id": "coding-software-UrzC0eJ8vFL18OBkJe7Gz",
+   "code": "UrzC0eJ8vFL18OBkJe7Gz",
+   "name": "xX_EngineeringArtEditor_Xx",
+   "author": "Skyler Houle",
+   "description": "Treats a technical sketch as a piece bound for readers rather than one ticket among many, taking a rough engineering drawing and refining it until it holds up…",
+   "url": "https://x.ai/bot/UrzC0eJ8vFL18OBkJe7Gz"
+  },
+  {
+   "id": "coding-software-jf001mfN6tUqyLzX05sri",
+   "code": "jf001mfN6tUqyLzX05sri",
+   "name": "千机 · Gear ｜ Skill",
+   "author": "刚哥AI与电商",
+   "description": "千机是云间工作室出品的 Skill 助手，写给有一套反复在做的做法、想让 AI 每次都照着做的人：刚和 AI 跑通的一段流程、心里的判断标准、每天重复的活，它帮你造成一个 Skill，换个 AI…",
+   "url": "https://x.ai/bot/jf001mfN6tUqyLzX05sri"
+  },
+  {
+   "id": "coding-software-nSzhldgXfVuC93CjjQptM",
+   "code": "nSzhldgXfVuC93CjjQptM",
+   "name": "参谋长",
+   "author": "lee",
+   "description": "Chinese relay that hands planning and research to a Cursor Cloud Agent and brings the answer back.",
+   "url": "https://x.ai/bot/nSzhldgXfVuC93CjjQptM"
+  },
+  {
+   "id": "coding-software-NN6D3V_M2kLzC9QjWRl4k",
+   "code": "NN6D3V_M2kLzC9QjWRl4k",
+   "name": "大使通道盯梢",
+   "author": "a70win",
+   "description": "盯梢 Cursor（及若有獨立入口的 SpaceX AI）大使申請通道。主頁：https://cursor.com/ambassadors。每次檢查：頁面是否可開、申請表／Submit…",
+   "url": "https://x.ai/bot/NN6D3V_M2kLzC9QjWRl4k"
+  },
+  {
+   "id": "coding-software-9Tq1f0aSurCP7UJHm98zy",
+   "code": "9Tq1f0aSurCP7UJHm98zy",
+   "name": "记忆管家",
+   "author": "铁柱AGI",
+   "description": "Backs up each bot setting and memory to a private Git repo with a standard fleet layout.",
+   "url": "https://x.ai/bot/9Tq1f0aSurCP7UJHm98zy"
+  },
+  {
+   "id": "coding-software-58rS6M89eG7fl_6UouP6y",
+   "code": "58rS6M89eG7fl_6UouP6y",
+   "name": "试金 · Touchstone",
+   "author": "Valerie",
+   "description": "Yunjian's verifier: give it a prompt, Skill, web page or mini-program; it says whether it's ready to ship and what to fix, with evidence. Checks, never edits.",
+   "url": "https://x.ai/bot/58rS6M89eG7fl_6UouP6y"
+  },
+  {
+   "id": "coding-software-8SiSunCVqKaWb0vdaRwd1",
+   "code": "8SiSunCVqKaWb0vdaRwd1",
+   "name": "试金 · Touchstone ｜ 验证",
+   "author": "刚哥AI与电商",
+   "description": "试金是云间工作室出品的验证助手，写给要把东西交出去、心里却没底的人：提示词、Skill、网页、小程序交给它，它告诉你能不能交、哪里要改，每条问题都带证据。只查不改，不判自己写的，两版对比会换顺序各判一次。装上后第一次对话会先问你，同意后从云间公开仓库装齐技能。…",
+   "url": "https://x.ai/bot/8SiSunCVqKaWb0vdaRwd1"
+  },
+  {
+   "id": "coding-software-iOxw-QB7QmknIc9bqO26_",
+   "code": "iOxw-QB7QmknIc9bqO26_",
+   "name": "쉘터",
+   "author": "재미없니?",
+   "description": "Builds casual phone-browser web games and sends you a playable link.",
+   "url": "https://x.ai/bot/iOxw-QB7QmknIc9bqO26_"
+  },
+  {
+   "id": "coding-software-MMBZG5FBq-pNBSjRNmciH",
+   "code": "MMBZG5FBq-pNBSjRNmciH",
+   "name": "테슬라 펌웨어 뉴스",
+   "author": "Bummo",
+   "description": "Tracks Korean Tesla FSD software versions, builds, and HW3/HW4 rollout changes, and alerts you in Korean only when something changes.",
+   "url": "https://x.ai/bot/MMBZG5FBq-pNBSjRNmciH"
+  }
+ ]
+}

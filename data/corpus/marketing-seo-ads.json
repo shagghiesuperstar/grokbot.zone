@@ -1,0 +1,1928 @@
+{
+ "slug": "marketing-seo-ads",
+ "label": "Marketing, SEO & Ads",
+ "count": 240,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "marketing-seo-ads-HDnrPPF5mfx4ctgY-qLHs",
+   "code": "HDnrPPF5mfx4ctgY-qLHs",
+   "name": "$$0 Launch Team",
+   "author": "Sarah Brundige",
+   "description": "A free AI launch team for people with no money, degree or connections: pick an idea, plan with free tools only and land your first paying customer.",
+   "url": "https://x.ai/bot/HDnrPPF5mfx4ctgY-qLHs"
+  },
+  {
+   "id": "marketing-seo-ads-k-Vww5TQVS0FR5BoGCqtT",
+   "code": "k-Vww5TQVS0FR5BoGCqtT",
+   "name": ".promo",
+   "author": "greedfi",
+   "description": "Makes keynote-style launch and promo videos for any product from chat or a one-tap builder Page: stills first for approval, then the full MP4, no watermark.",
+   "url": "https://x.ai/bot/k-Vww5TQVS0FR5BoGCqtT"
+  },
+  {
+   "id": "marketing-seo-ads-VLPz2wv92bBJA90X2782t",
+   "code": "VLPz2wv92bBJA90X2782t",
+   "name": "100 Mile Challenge",
+   "author": "Steve",
+   "description": "Tracks a multi-week mile challenge with flexible evening check-ins, conversion rules (including bike at 3:1), and optional strength work alongside cardio.",
+   "url": "https://x.ai/bot/VLPz2wv92bBJA90X2782t"
+  },
+  {
+   "id": "marketing-seo-ads-WEqsULsog0KJUFUbhIRXH",
+   "code": "WEqsULsog0KJUFUbhIRXH",
+   "name": "AEO Content Producer",
+   "author": "Jing Gu",
+   "description": "Produces AEO refreshes and net-new articles from AI visibility data: briefs, drafts, and an editorial pass — then stops…",
+   "url": "https://x.ai/bot/WEqsULsog0KJUFUbhIRXH"
+  },
+  {
+   "id": "marketing-seo-ads-Jyx1Lg-VzYgyjDc-y-GQi",
+   "code": "Jyx1Lg-VzYgyjDc-y-GQi",
+   "name": "AEO/SEO Bot",
+   "author": "Eric Siu",
+   "description": "Weekday pipeline that picks, lays out, and grades search-visibility pages.",
+   "url": "https://x.ai/bot/Jyx1Lg-VzYgyjDc-y-GQi"
+  },
+  {
+   "id": "marketing-seo-ads-yzvLAvBDFtppOIvRNr5Tr",
+   "code": "yzvLAvBDFtppOIvRNr5Tr",
+   "name": "AI CMO",
+   "author": "Paul Syng",
+   "description": "An AI CMO that speaks CFO, thinks in 4Ps, and runs Brand → Demand → Expand.",
+   "url": "https://x.ai/bot/yzvLAvBDFtppOIvRNr5Tr"
+  },
+  {
+   "id": "marketing-seo-ads-G48vC01p5cAxckACKFIaM",
+   "code": "G48vC01p5cAxckACKFIaM",
+   "name": "AI Claim Checker",
+   "author": "Michael",
+   "description": "Paste an AI launch post, benchmark chart, or price claim and get a dated, sourced claim card: supported, vendor-only…",
+   "url": "https://x.ai/bot/G48vC01p5cAxckACKFIaM"
+  },
+  {
+   "id": "marketing-seo-ads-ZpEX6-GmuMH-4ctEpfyka",
+   "code": "ZpEX6-GmuMH-4ctEpfyka",
+   "name": "AI Copywriter",
+   "author": "Jeroen",
+   "description": "Writes blogs, landing pages, emails, ads, social posts, and campaign briefs in Dan Koe's voice. Every draft goes through Humanizer. Not for video scripts.",
+   "url": "https://x.ai/bot/ZpEX6-GmuMH-4ctEpfyka"
+  },
+  {
+   "id": "marketing-seo-ads-o4vzg3NeJ18iZj4n64Nop",
+   "code": "o4vzg3NeJ18iZj4n64Nop",
+   "name": "AI SEO Hacker Bot",
+   "author": "Shawn Esquivel",
+   "description": "Checks how your brand shows up in ChatGPT, Perplexity, Gemini and Google AI Mode, scores every buyer prompt as a win, place or loss.",
+   "url": "https://x.ai/bot/o4vzg3NeJ18iZj4n64Nop"
+  },
+  {
+   "id": "marketing-seo-ads-beh0HMIMPwr5cenZVVAT-",
+   "code": "beh0HMIMPwr5cenZVVAT-",
+   "name": "AI Visibility | GEO Operator",
+   "author": "Miguel",
+   "description": "An autonomous world-class GEO operator for your brand.",
+   "url": "https://x.ai/bot/beh0HMIMPwr5cenZVVAT-"
+  },
+  {
+   "id": "marketing-seo-ads-S6ljHpIQUgPCvEmGZRCKb",
+   "code": "S6ljHpIQUgPCvEmGZRCKb",
+   "name": "Ace",
+   "author": "Yuval",
+   "description": "Lead and site auditor for your site-builder bots: audits live sites for SEO/AEO, UI/UX, speed and affiliate link health, keeps a daily priority board.",
+   "url": "https://x.ai/bot/S6ljHpIQUgPCvEmGZRCKb"
+  },
+  {
+   "id": "marketing-seo-ads-UQ8ppcPzUj7-5gj58VPjh",
+   "code": "UQ8ppcPzUj7-5gj58VPjh",
+   "name": "Ad Aether",
+   "author": "Ξ",
+   "description": "Tell it what's overwhelming you; it gives one next step with a 24-hour deadline and nags you through inbox and deadlines.",
+   "url": "https://x.ai/bot/UQ8ppcPzUj7-5gj58VPjh"
+  },
+  {
+   "id": "marketing-seo-ads-SeyhQX2uogBeRnfwCtsEU",
+   "code": "SeyhQX2uogBeRnfwCtsEU",
+   "name": "Ad Autopsy",
+   "author": "Thuong P. Nguyen",
+   "description": "Paste your last 5 to 10 ad results (Meta or Google Ads CSV, or a quick table) and get which hook and format won and why.",
+   "url": "https://x.ai/bot/SeyhQX2uogBeRnfwCtsEU"
+  },
+  {
+   "id": "marketing-seo-ads-q_FRl-jVoBzBqihA0_BS2",
+   "code": "q_FRl-jVoBzBqihA0_BS2",
+   "name": "Ad Compliance",
+   "author": "AdventureNLearn Main",
+   "description": "Send it any ad and it scores it against X's 'no ugly, shrill, strident, or overstated ads' standard, then returns…",
+   "url": "https://x.ai/bot/q_FRl-jVoBzBqihA0_BS2"
+  },
+  {
+   "id": "marketing-seo-ads-jja9KVFn--roWw_lY3fl1",
+   "code": "jja9KVFn--roWw_lY3fl1",
+   "name": "Ad Umbra",
+   "author": "Ξ",
+   "description": "Motivational night-shift companion that reframes the daily grind with aspirational energy.",
+   "url": "https://x.ai/bot/jja9KVFn--roWw_lY3fl1"
+  },
+  {
+   "id": "marketing-seo-ads-Vo9yBUQdIDrClM9kFhZSc",
+   "code": "Vo9yBUQdIDrClM9kFhZSc",
+   "name": "Ad Video Producer",
+   "author": "Deyder Cintron",
+   "description": "Tests a new business idea fast and cheaply with a small bot team: it checks whether the idea is already sold cheaper, finds real buyer evidence.",
+   "url": "https://x.ai/bot/Vo9yBUQdIDrClM9kFhZSc"
+  },
+  {
+   "id": "marketing-seo-ads-D2J8GtDOZgunb4eV3poUV",
+   "code": "D2J8GtDOZgunb4eV3poUV",
+   "name": "Ads Monitor",
+   "author": "Ericson Smith",
+   "description": "Watches your Google Ads accounts, flags wasted spend and keywords worth adding, and makes keyword, ad, and sitelink…",
+   "url": "https://x.ai/bot/D2J8GtDOZgunb4eV3poUV"
+  },
+  {
+   "id": "marketing-seo-ads-zj8VKu1CnqkHCM4Na1zex",
+   "code": "zj8VKu1CnqkHCM4Na1zex",
+   "name": "Ads Operator",
+   "author": "Tyler",
+   "description": "Builds practical Google Search (and Meta) campaign plans for local home-service trades: keywords, geo, ad copy…",
+   "url": "https://x.ai/bot/zj8VKu1CnqkHCM4Na1zex"
+  },
+  {
+   "id": "marketing-seo-ads-NoUDCySD_LNYtHPrpFUAE",
+   "code": "NoUDCySD_LNYtHPrpFUAE",
+   "name": "Aether",
+   "author": "John",
+   "description": "A generative creative engine for browser design tools like Canva, CapCut web, and Adobe Express. Turns briefs, brand kits, and reference images into ad.",
+   "url": "https://x.ai/bot/NoUDCySD_LNYtHPrpFUAE"
+  },
+  {
+   "id": "marketing-seo-ads-Tv4UaDedkX4orSS4LNUJt",
+   "code": "Tv4UaDedkX4orSS4LNUJt",
+   "name": "Affiliate Finder",
+   "author": "Vedant",
+   "description": "Finds legitimate affiliate programs that fit your audience, verifies their published terms and builds honest monetization plans for creators.",
+   "url": "https://x.ai/bot/Tv4UaDedkX4orSS4LNUJt"
+  },
+  {
+   "id": "marketing-seo-ads-ZSu98od4TaQFG4-2gpAVf",
+   "code": "ZSu98od4TaQFG4-2gpAVf",
+   "name": "Agency Pilot",
+   "author": "Lola S.",
+   "description": "Gives your bots an agency team: SEO posts, social posts, client reports, GA4 insights, competitor research and content calendars.",
+   "url": "https://x.ai/bot/ZSu98od4TaQFG4-2gpAVf"
+  },
+  {
+   "id": "marketing-seo-ads-u8hSS6eJdCwrnZXBcwtw8",
+   "code": "u8hSS6eJdCwrnZXBcwtw8",
+   "name": "Agency Reporter",
+   "author": "Minh",
+   "description": "Writes each client's monthly SEO report from real Search Console data: results, what changed and whether it worked, AI search, next month.",
+   "url": "https://x.ai/bot/u8hSS6eJdCwrnZXBcwtw8"
+  },
+  {
+   "id": "marketing-seo-ads-6baJd8-Tp-s03m3ccb6AO",
+   "code": "6baJd8-Tp-s03m3ccb6AO",
+   "name": "Ally",
+   "author": "Zepp",
+   "description": "Shopify store ops partner for soft launch, catalog hygiene, Admin API work when the browser is blocked, creatives, and margin-minded fixes — funds.",
+   "url": "https://x.ai/bot/6baJd8-Tp-s03m3ccb6AO"
+  },
+  {
+   "id": "marketing-seo-ads-eQDZV6YXnhn5FS7kTDqZW",
+   "code": "eQDZV6YXnhn5FS7kTDqZW",
+   "name": "Amplify",
+   "author": "The Contextian",
+   "description": "An X growth lead for your brand or creator account.",
+   "url": "https://x.ai/bot/eQDZV6YXnhn5FS7kTDqZW"
+  },
+  {
+   "id": "marketing-seo-ads-TuAu34Lz2_zupuT5qlai3",
+   "code": "TuAu34Lz2_zupuT5qlai3",
+   "name": "Analytics Log",
+   "author": "Glenn",
+   "description": "Saves your X analytics every day in a dated folder, so you keep a history X doesn't keep for you. Read-only, through its own browser, no X API keys.",
+   "url": "https://x.ai/bot/TuAu34Lz2_zupuT5qlai3"
+  },
+  {
+   "id": "marketing-seo-ads-gadc3bVOsg9iIwmzAGRve",
+   "code": "gadc3bVOsg9iIwmzAGRve",
+   "name": "Apple Search Ads Review",
+   "author": "Chris Everett",
+   "description": "Reviews your Apple Search Ads spend against your cost per install target. Drafts the keyword, bid, and budget changes, and never touches your account.",
+   "url": "https://x.ai/bot/gadc3bVOsg9iIwmzAGRve"
+  },
+  {
+   "id": "marketing-seo-ads-vOriVfOZkvpZF9yGhfV5w",
+   "code": "vOriVfOZkvpZF9yGhfV5w",
+   "name": "Archer",
+   "author": "Darrell Calton",
+   "description": "Chief of Staff for a Marketing Ninja running a product directory with a Bot crew.",
+   "url": "https://x.ai/bot/vOriVfOZkvpZF9yGhfV5w"
+  },
+  {
+   "id": "marketing-seo-ads-0bdTgyQf4wCZBjH1_gnVp",
+   "code": "0bdTgyQf4wCZBjH1_gnVp",
+   "name": "Axiom",
+   "author": "(not shown)",
+   "description": "An X growth assistant for creators: daily performance check-ins, reply-worthy conversations in your niche…",
+   "url": "https://x.ai/bot/0bdTgyQf4wCZBjH1_gnVp"
+  },
+  {
+   "id": "marketing-seo-ads-Oe7gk0Zk0K7UO3Od5-nMZ",
+   "code": "Oe7gk0Zk0K7UO3Od5-nMZ",
+   "name": "BDC Brand Strategist",
+   "author": "Jesse Barney",
+   "description": "A brand strategy guide for small business owners and brand pros.",
+   "url": "https://x.ai/bot/Oe7gk0Zk0K7UO3Od5-nMZ"
+  },
+  {
+   "id": "marketing-seo-ads-kWfarYQjDHlbg5Wf5AjT9",
+   "code": "kWfarYQjDHlbg5Wf5AjT9",
+   "name": "Backlink Generator Bot",
+   "author": "Prince",
+   "description": "Earns real backlinks: finds and verifies directories, launch sites, listicles and communities, scores them, drafts every pitch for approval and tracks wins.",
+   "url": "https://x.ai/bot/kWfarYQjDHlbg5Wf5AjT9"
+  },
+  {
+   "id": "marketing-seo-ads-nXIyPDFW9mbmer2qdt4FW",
+   "code": "nXIyPDFW9mbmer2qdt4FW",
+   "name": "BaitCheck",
+   "author": "Renee Rudczynski (ruh-ZIN-ski)",
+   "description": "Cold DMs? Paste the bait—DMs, ads, video cards. Live for X today; expanding to other platforms.",
+   "url": "https://x.ai/bot/nXIyPDFW9mbmer2qdt4FW"
+  },
+  {
+   "id": "marketing-seo-ads-icPIlUFH-D8YZ2YAvFCi9",
+   "code": "icPIlUFH-D8YZ2YAvFCi9",
+   "name": "Beacon",
+   "author": "Jaime Hernandez",
+   "description": "A technical SEO bot that crawls your sites read-only, reviews every launch for titles, crawl, robots, sitemaps and headers.",
+   "url": "https://x.ai/bot/icPIlUFH-D8YZ2YAvFCi9"
+  },
+  {
+   "id": "marketing-seo-ads-BjzK0lRsgxuLSsQIsnI3E",
+   "code": "BjzK0lRsgxuLSsQIsnI3E",
+   "name": "Bing Bong",
+   "author": "Jenna",
+   "description": "Sports marketing partnership ops partner for field marketers.",
+   "url": "https://x.ai/bot/BjzK0lRsgxuLSsQIsnI3E"
+  },
+  {
+   "id": "marketing-seo-ads-mPmIl31W6u_9bl_NfeTi-",
+   "code": "mPmIl31W6u_9bl_NfeTi-",
+   "name": "Brand & Layout",
+   "author": "BCLA3YS",
+   "description": "Keeps a design portfolio consistent in style, type, colour and framing and builds the final layout and PDF, alongside Creative Director, Designer and Critic.",
+   "url": "https://x.ai/bot/mPmIl31W6u_9bl_NfeTi-"
+  },
+  {
+   "id": "marketing-seo-ads-y8yUVZQWxwlzovnFoNZiJ",
+   "code": "y8yUVZQWxwlzovnFoNZiJ",
+   "name": "Brand Community Manager",
+   "author": "Moritz Bierling",
+   "description": "A community manager for your brand. It watches where your community talks, flags what needs you, and drafts on-brand replies for your approval.",
+   "url": "https://x.ai/bot/y8yUVZQWxwlzovnFoNZiJ"
+  },
+  {
+   "id": "marketing-seo-ads-Vzz6Zz-4efWXs8nXB58pK",
+   "code": "Vzz6Zz-4efWXs8nXB58pK",
+   "name": "Brand Constraint",
+   "author": "Omer Yarkowich",
+   "description": "Every piece of work reflects who you are. Keeps your whole AI workforce on-brand — differentiation, positioning, messaging, storytelling, and alignment.",
+   "url": "https://x.ai/bot/Vzz6Zz-4efWXs8nXB58pK"
+  },
+  {
+   "id": "marketing-seo-ads-YiPpu2vc04hjtEEiJBUZw",
+   "code": "YiPpu2vc04hjtEEiJBUZw",
+   "name": "Brand Design Bot",
+   "author": "Kelly Baltzell",
+   "description": "Brand designer for small businesses: brand cards, post graphics, headers, doc templates, thumbnails and video concepts, always 2-3 options, live only on KEEP.",
+   "url": "https://x.ai/bot/YiPpu2vc04hjtEEiJBUZw"
+  },
+  {
+   "id": "marketing-seo-ads-FpwQslWTfzzXIvNAt5vey",
+   "code": "FpwQslWTfzzXIvNAt5vey",
+   "name": "Brand Direct Scout",
+   "author": "Chayanon S",
+   "description": "Amazon wholesale scouting operator. Processes authorized catalogs, keeps a coverage ledger, ranks REVIEW-READY /…",
+   "url": "https://x.ai/bot/FpwQslWTfzzXIvNAt5vey"
+  },
+  {
+   "id": "marketing-seo-ads-r-Ctb7rwRVFOY-_p_T9eX",
+   "code": "r-Ctb7rwRVFOY-_p_T9eX",
+   "name": "Brand Showreel",
+   "author": "Mouth Of Madness",
+   "description": "Builds short beat-synced brand showreels in code — site-true 1080p60 MP4 with synthesized soundtrack.",
+   "url": "https://x.ai/bot/r-Ctb7rwRVFOY-_p_T9eX"
+  },
+  {
+   "id": "marketing-seo-ads-r-ctb7rwrvfoy-_p_t9ex",
+   "code": "r-ctb7rwrvfoy-_p_t9ex",
+   "name": "Brand Showreel",
+   "author": "Mouth",
+   "description": "Builds short beat-synced brand showreels in code — site-true 1080p60 MP4 with synthesized soundtrack.",
+   "url": "https://x.ai/bot/r-ctb7rwrvfoy-_p_t9ex"
+  },
+  {
+   "id": "marketing-seo-ads-eOOgCFKObb0jBX_Ur1KZ6",
+   "code": "eOOgCFKObb0jBX_Ur1KZ6",
+   "name": "C3i",
+   "author": "Nicholas Acord",
+   "description": "Chief of staff with a computer. Runs your morning deck and night close, keeps public brand work separate from secret lab work, and pings you only…",
+   "url": "https://x.ai/bot/eOOgCFKObb0jBX_Ur1KZ6"
+  },
+  {
+   "id": "marketing-seo-ads-h3cArBlH8Dydlyir30bpU",
+   "code": "h3cArBlH8Dydlyir30bpU",
+   "name": "CB Overseer",
+   "author": "Dave",
+   "description": "Oversees a coloring-book factory. On first run it builds the CB team (Architect through Ads miner), then finds instruction bugs, patches them, and walks.",
+   "url": "https://x.ai/bot/h3cArBlH8Dydlyir30bpU"
+  },
+  {
+   "id": "marketing-seo-ads-ColgVDqeUV6CNR11Sk4U6",
+   "code": "ColgVDqeUV6CNR11Sk4U6",
+   "name": "ChatGPT Ads & OpenAI Billing",
+   "author": "Brandon Hinojosa",
+   "description": "Monitors ChatGPT Ads performance and OpenAI API usage and billing, writes native-report reviews and makes owner-approved campaign changes.",
+   "url": "https://x.ai/bot/ColgVDqeUV6CNR11Sk4U6"
+  },
+  {
+   "id": "marketing-seo-ads-PIr44vmOtvynPX5Iym5Hx",
+   "code": "PIr44vmOtvynPX5Iym5Hx",
+   "name": "Chief",
+   "author": "Raf V.",
+   "description": "A calm growth coach for life and craft. Checks in daily, reads the week twice, and holds one practice at a time…",
+   "url": "https://x.ai/bot/PIr44vmOtvynPX5Iym5Hx"
+  },
+  {
+   "id": "marketing-seo-ads-6Uqn1sN0LwXFp4YIqb8Xu",
+   "code": "6Uqn1sN0LwXFp4YIqb8Xu",
+   "name": "Chief of Staff — Launch Ops",
+   "author": "Dario Maddaluno",
+   "description": "Runs a multi-bot launch and marketing team for strategy, publishing, paced community replies, and weekday digests.",
+   "url": "https://x.ai/bot/6Uqn1sN0LwXFp4YIqb8Xu"
+  },
+  {
+   "id": "marketing-seo-ads-NqCINqE9LDY9XTw2vP_XT",
+   "code": "NqCINqE9LDY9XTw2vP_XT",
+   "name": "Competitive Snake Alert",
+   "author": "Scott Metcalf",
+   "description": "Watches a named competitor list and drafts short snake alerts when pricing, launches, or positioning move…",
+   "url": "https://x.ai/bot/NqCINqE9LDY9XTw2vP_XT"
+  },
+  {
+   "id": "marketing-seo-ads-Drkj_nrZJES2BKVsa0DAb",
+   "code": "Drkj_nrZJES2BKVsa0DAb",
+   "name": "Competitor Complaints",
+   "author": "Luis",
+   "description": "Find people complaining about your competitors or asking for alternatives on X and turn them into customers.",
+   "url": "https://x.ai/bot/Drkj_nrZJES2BKVsa0DAb"
+  },
+  {
+   "id": "marketing-seo-ads-_gIaN3GTqMuhuBVS9Tp58",
+   "code": "_gIaN3GTqMuhuBVS9Tp58",
+   "name": "Competitor Creative Benchmark",
+   "author": "dvar",
+   "description": "Benchmarks a competitor's live ad creatives from Meta, Google and TikTok ad libraries into a highlight deck and per-ad sheet, with optional monthly tracking.",
+   "url": "https://x.ai/bot/_gIaN3GTqMuhuBVS9Tp58"
+  },
+  {
+   "id": "marketing-seo-ads-9FdrISzxvOd2kTaE36eon",
+   "code": "9FdrISzxvOd2kTaE36eon",
+   "name": "Competitor Mapper",
+   "author": "Avid",
+   "description": "Maps alternatives for each week's trending products (features, pricing, platforms, open vs closed, gaps) into a competitors.md with a gap matrix.",
+   "url": "https://x.ai/bot/9FdrISzxvOd2kTaE36eon"
+  },
+  {
+   "id": "marketing-seo-ads-9msshkJeF5cnzAw8tF4vi",
+   "code": "9msshkJeF5cnzAw8tF4vi",
+   "name": "Competitor Monitor",
+   "author": "iammutex",
+   "description": "Glasser-powered competitor monitoring bot for ongoing competitive intel inside Grok Bot.",
+   "url": "https://x.ai/bot/9msshkJeF5cnzAw8tF4vi"
+  },
+  {
+   "id": "marketing-seo-ads-MjCTuRSfUF0bYufDTvJlf",
+   "code": "MjCTuRSfUF0bYufDTvJlf",
+   "name": "Competitor Radar / 竞品雷达",
+   "author": "Alison",
+   "description": "Watches named competitors' public sites, pricing, and chatter; sends short delta briefs only when something material changes.",
+   "url": "https://x.ai/bot/MjCTuRSfUF0bYufDTvJlf"
+  },
+  {
+   "id": "marketing-seo-ads-g6u_S4bFz9P9t0ShE0nMp",
+   "code": "g6u_S4bFz9P9t0ShE0nMp",
+   "name": "Competitor Scout",
+   "author": "𝕯𝖆𝖒𝖎𝖆𝖓",
+   "description": "Tracks competitor creators in your X niche every day and reports their top-performing posts, formats, paid promos, and open content gaps you.",
+   "url": "https://x.ai/bot/g6u_S4bFz9P9t0ShE0nMp"
+  },
+  {
+   "id": "marketing-seo-ads-aw0Zj54sIsAK7vMnajdz0",
+   "code": "aw0Zj54sIsAK7vMnajdz0",
+   "name": "Competitor Watch",
+   "author": "Shimecki",
+   "description": "Tracks competitor pricing, product, and hiring pages and briefs you on real changes. Starts from a list of URLs you paste.",
+   "url": "https://x.ai/bot/aw0Zj54sIsAK7vMnajdz0"
+  },
+  {
+   "id": "marketing-seo-ads-5PKSzU0ruN_DQbNXc7m0N",
+   "code": "5PKSzU0ruN_DQbNXc7m0N",
+   "name": "Competitor Watching",
+   "author": "Andrej",
+   "description": "Snapshots you against 3-8 competitors and alerts only on material change.",
+   "url": "https://x.ai/bot/5PKSzU0ruN_DQbNXc7m0N"
+  },
+  {
+   "id": "marketing-seo-ads-ayQYbaHquRM7x7lnBOEoQ",
+   "code": "ayQYbaHquRM7x7lnBOEoQ",
+   "name": "Consider It Marketed",
+   "author": "Cindy",
+   "description": "Clinic CEO for a medical practice. Runs the bot team end to end — marketing, Google Ads, creative, video, and QC — so…",
+   "url": "https://x.ai/bot/ayQYbaHquRM7x7lnBOEoQ"
+  },
+  {
+   "id": "marketing-seo-ads-bc_K1XvRO2RlWCRIjNdBT",
+   "code": "bc_K1XvRO2RlWCRIjNdBT",
+   "name": "Consu",
+   "author": "Slowfreeze.eth.sol.tez",
+   "description": "A launch manager that turns something you built into a small paid-guide business, coordinating content and social teammate bots, with you approving each step.",
+   "url": "https://x.ai/bot/bc_K1XvRO2RlWCRIjNdBT"
+  },
+  {
+   "id": "marketing-seo-ads-sMmoqCElqRPj1RYbtngMr",
+   "code": "sMmoqCElqRPj1RYbtngMr",
+   "name": "Content Growth Coach",
+   "author": "SmoresBoy",
+   "description": "Tells creators which fix will move their numbers first.",
+   "url": "https://x.ai/bot/sMmoqCElqRPj1RYbtngMr"
+  },
+  {
+   "id": "marketing-seo-ads-zrbXLuz-YKUfqa5kSapWQ",
+   "code": "zrbXLuz-YKUfqa5kSapWQ",
+   "name": "Countdown",
+   "author": "Chadwick",
+   "description": "Mission control for watching the next Starship launch in person.",
+   "url": "https://x.ai/bot/zrbXLuz-YKUfqa5kSapWQ"
+  },
+  {
+   "id": "marketing-seo-ads-h38W2kv34TCuHETc0uu1w",
+   "code": "h38W2kv34TCuHETc0uu1w",
+   "name": "Creator Brand Outreach",
+   "author": "Lovable Curves",
+   "description": "Pitches brands for paid videos and gifted product for a content creator, watches the inbox for replies, and keeps deals moving.",
+   "url": "https://x.ai/bot/h38W2kv34TCuHETc0uu1w"
+  },
+  {
+   "id": "marketing-seo-ads-q6brfHnvxZHqKTgLPpcbB",
+   "code": "q6brfHnvxZHqKTgLPpcbB",
+   "name": "Creator Growth Desk",
+   "author": "Mr. Silhouette",
+   "description": "A growth coach for creators. It finds what's holding your account back, ranks fixes by estimated impact, and suggests next videos with titles and hashtags.",
+   "url": "https://x.ai/bot/q6brfHnvxZHqKTgLPpcbB"
+  },
+  {
+   "id": "marketing-seo-ads-drXeYVtu5klgMh3pf0gKS",
+   "code": "drXeYVtu5klgMh3pf0gKS",
+   "name": "Creator Studio",
+   "author": "Timothy Willock",
+   "description": "Turns a content creator's niche, audience, and gear into time-efficient film ideas, hooks, shot lists, and repurposing…",
+   "url": "https://x.ai/bot/drXeYVtu5klgMh3pf0gKS"
+  },
+  {
+   "id": "marketing-seo-ads-xGvgD-GCpkaWCp-akkVj7",
+   "code": "xGvgD-GCpkaWCp-akkVj7",
+   "name": "CrowdReply - Watcher",
+   "author": "Dawood",
+   "description": "Confirms editorial placements went live, then tracks whether AI answers name the brand.",
+   "url": "https://x.ai/bot/xGvgD-GCpkaWCp-akkVj7"
+  },
+  {
+   "id": "marketing-seo-ads-_ax4LmP0WeHz09cVh2ece",
+   "code": "_ax4LmP0WeHz09cVh2ece",
+   "name": "DG1 Admin",
+   "author": "Gregor Zebic",
+   "description": "DG1.com is a global all-in-one AI web, e-commerce, and marketing platform that enables your business to expand…",
+   "url": "https://x.ai/bot/_ax4LmP0WeHz09cVh2ece"
+  },
+  {
+   "id": "marketing-seo-ads-7zNjK3LlQ55fGobGVWPQl",
+   "code": "7zNjK3LlQ55fGobGVWPQl",
+   "name": "Dan",
+   "author": "Sloane",
+   "description": "Daily marketing manager for a sports fan page: growth plans, ready-to-post text, local fan replies, brand deals and income.",
+   "url": "https://x.ai/bot/7zNjK3LlQ55fGobGVWPQl"
+  },
+  {
+   "id": "marketing-seo-ads-Ap9trGQ-R9Ie7UmzGm33P",
+   "code": "Ap9trGQ-R9Ie7UmzGm33P",
+   "name": "Darija Ad Studio",
+   "author": "Oussama Khlifi",
+   "description": "Paste a product link and get Moroccan Darija, Tunisian or Egyptian TikTok ad scripts, hooks and captions, ready to turn into video without a shoot.",
+   "url": "https://x.ai/bot/Ap9trGQ-R9Ie7UmzGm33P"
+  },
+  {
+   "id": "marketing-seo-ads-6WerbputYt61R-bzRXzYX",
+   "code": "6WerbputYt61R-bzRXzYX",
+   "name": "DartzDabz Crew Builder",
+   "author": "truepathventures",
+   "description": "A CEO bot that asks about your online business, then builds a crew of up to 8 worker bots (site, SEO, research, social, clips) that act only with your OK.",
+   "url": "https://x.ai/bot/6WerbputYt61R-bzRXzYX"
+  },
+  {
+   "id": "marketing-seo-ads-LiKQ0KFv8GDek5veNbcdq",
+   "code": "LiKQ0KFv8GDek5veNbcdq",
+   "name": "Directory Submitter",
+   "author": "Nicolas Torres",
+   "description": "Gets your startup, SaaS or AI tool listed on about 150 free directories ranked by domain rating, filling forms from your launch kit; never pays.",
+   "url": "https://x.ai/bot/LiKQ0KFv8GDek5veNbcdq"
+  },
+  {
+   "id": "marketing-seo-ads-XbN6iofs_Qjsi2Od1yjyI",
+   "code": "XbN6iofs_Qjsi2Od1yjyI",
+   "name": "Distro Bot",
+   "author": "Shub Gaur",
+   "description": "Runs your marketing loop end to end: campaigns on your ad accounts, fresh creative, real channel analysis, timely posts from X and web scans.",
+   "url": "https://x.ai/bot/XbN6iofs_Qjsi2Od1yjyI"
+  },
+  {
+   "id": "marketing-seo-ads-J4vRgDCnJcK5EaUUlP-FR",
+   "code": "J4vRgDCnJcK5EaUUlP-FR",
+   "name": "Domain Scout",
+   "author": "Kyle Geoghegan",
+   "description": "Finds brand-new domain names across .com, .ai, .io, .si, other country codes and newer endings, confirms they're free at the registry.",
+   "url": "https://x.ai/bot/J4vRgDCnJcK5EaUUlP-FR"
+  },
+  {
+   "id": "marketing-seo-ads-R_rFWGcUu3PHaSyH8VjIt",
+   "code": "R_rFWGcUu3PHaSyH8VjIt",
+   "name": "Ecom Creative CoS",
+   "author": "Shalom Serraf",
+   "description": "Chief of Staff for ecom creative ops — Drive listing files by SKU, Higgsfield images, mood boards, shot lists, and competitor research. Gates writes;.",
+   "url": "https://x.ai/bot/R_rFWGcUu3PHaSyH8VjIt"
+  },
+  {
+   "id": "marketing-seo-ads-Dd6URqnf4w5hiVEs_vbRL",
+   "code": "Dd6URqnf4w5hiVEs_vbRL",
+   "name": "Experiment Designer",
+   "author": "Jay",
+   "description": "Growth scientist who turns briefs into pre-registered experiments a skeptical reviewer can approve.",
+   "url": "https://x.ai/bot/Dd6URqnf4w5hiVEs_vbRL"
+  },
+  {
+   "id": "marketing-seo-ads-cgaQkN_5O5NtWep6-c0Ll",
+   "code": "cgaQkN_5O5NtWep6-c0Ll",
+   "name": "Flip",
+   "author": "Connor McDonnell",
+   "description": "Domain Flip Operator. Takes parked domains, ships a narrow live offer fast, runs SEO and conversion until cash shows…",
+   "url": "https://x.ai/bot/cgaQkN_5O5NtWep6-c0Ll"
+  },
+  {
+   "id": "marketing-seo-ads-uLsc529aqDnuQDacsDV9g",
+   "code": "uLsc529aqDnuQDacsDV9g",
+   "name": "Fodda Brand & Account Context Analyst",
+   "author": "Piers Fawkes",
+   "description": "Pre-meeting dossier bot for enterprise AEs and strategists: market shifts, competitor moves, and verified graph-backed…",
+   "url": "https://x.ai/bot/uLsc529aqDnuQDacsDV9g"
+  },
+  {
+   "id": "marketing-seo-ads-4KvT7CVIPLS35OwLuxcwQ",
+   "code": "4KvT7CVIPLS35OwLuxcwQ",
+   "name": "Founder Growth Pilot",
+   "author": "Guy Suter",
+   "description": "A founder growth desk with weekday routines, a send-approval gate, and a Drive ledger.",
+   "url": "https://x.ai/bot/4KvT7CVIPLS35OwLuxcwQ"
+  },
+  {
+   "id": "marketing-seo-ads-UsPOeKfpAGheBIH2m0URl",
+   "code": "UsPOeKfpAGheBIH2m0URl",
+   "name": "Funnel Builder",
+   "author": "Everest Chris",
+   "description": "Studies the ads and funnels that work in a client's niche, builds the client's full funnel, and improves it every week, billed through Whop.",
+   "url": "https://x.ai/bot/UsPOeKfpAGheBIH2m0URl"
+  },
+  {
+   "id": "marketing-seo-ads-XWKWlHRpljLXaBg7jyLXw",
+   "code": "XWKWlHRpljLXaBg7jyLXw",
+   "name": "Fuse",
+   "author": "Miguel Cruz",
+   "description": "A circuit breaker for paid-media APIs and Ads Manager sessions: says GO, PAUSE or NO and throttles bots so ad accounts don't get banned.",
+   "url": "https://x.ai/bot/XWKWlHRpljLXaBg7jyLXw"
+  },
+  {
+   "id": "marketing-seo-ads-pH1LtCibU8lxnWi9LAv5v",
+   "code": "pH1LtCibU8lxnWi9LAv5v",
+   "name": "GBP",
+   "author": "AARON MAGA",
+   "description": "Manages a local service business's Google Business Profile and Map Pack SEO.",
+   "url": "https://x.ai/bot/pH1LtCibU8lxnWi9LAv5v"
+  },
+  {
+   "id": "marketing-seo-ads-RbJ2x4neT6ePfZbz22spM",
+   "code": "RbJ2x4neT6ePfZbz22spM",
+   "name": "GEO & SEO Optimierung",
+   "author": "Christian",
+   "description": "GEO- und SEO-Assistent für Unternehmenswebsites: Sichtbarkeit in Suchmaschinen und generativen Engines verbessern, Landingpages und technische Basis.",
+   "url": "https://x.ai/bot/RbJ2x4neT6ePfZbz22spM"
+  },
+  {
+   "id": "marketing-seo-ads-mgHgsFCkPcYyX428IB1VD",
+   "code": "mgHgsFCkPcYyX428IB1VD",
+   "name": "Gazetteer Scout",
+   "author": "John Burcheci",
+   "description": "You name a niche. I find what that audience is beginning to need, check whether it is already answered, and write the missing piece only after KEEP.",
+   "url": "https://x.ai/bot/mgHgsFCkPcYyX428IB1VD"
+  },
+  {
+   "id": "marketing-seo-ads-8vjjli7z5w0htprcfqgj4",
+   "code": "8vjjli7z5w0htprcfqgj4",
+   "name": "George",
+   "author": "Rita",
+   "description": "George runs the atelier: a poster, a style sheet, pictures for a post, a newspaper you can print, a hero, a landing page, a product brief…",
+   "url": "https://x.ai/bot/8vjjli7z5w0htprcfqgj4"
+  },
+  {
+   "id": "marketing-seo-ads-5ZuZw6OTVvI6dJ74UVIu1",
+   "code": "5ZuZw6OTVvI6dJ74UVIu1",
+   "name": "Gig Scout",
+   "author": "Yuli Kay",
+   "description": "Research-only scout for currently open paid gigs, creator programs and brand partnerships in your niche; sends up to 3 vetted picks.",
+   "url": "https://x.ai/bot/5ZuZw6OTVvI6dJ74UVIu1"
+  },
+  {
+   "id": "marketing-seo-ads-pYFETnU1TFsADlz0hJD1y",
+   "code": "pYFETnU1TFsADlz0hJD1y",
+   "name": "Glasser",
+   "author": "iammutex",
+   "description": "Gives your agent access to premium research data via Glasser.ai — company and people enrichment, SEO, ads, traffic…",
+   "url": "https://x.ai/bot/pYFETnU1TFsADlz0hJD1y"
+  },
+  {
+   "id": "marketing-seo-ads-uiZ14mTUcGFlGaU5rJaCb",
+   "code": "uiZ14mTUcGFlGaU5rJaCb",
+   "name": "Google Ads Manager",
+   "author": "Brandon Hinojosa",
+   "description": "Manages and reports on a Google Ads account (campaigns, keywords, search terms, budgets, policy issues) with evidence-first recommendations.",
+   "url": "https://x.ai/bot/uiZ14mTUcGFlGaU5rJaCb"
+  },
+  {
+   "id": "marketing-seo-ads-rWEae0MHDEjOU_XlacLOO",
+   "code": "rWEae0MHDEjOU_XlacLOO",
+   "name": "Grok Election Campaign Bot by Mash Zahid",
+   "author": "Mash Z",
+   "description": "Runs a grassroots municipal Field HQ: yard-sign inventory, real-map walk planning, and knowledge-pack field copy…",
+   "url": "https://x.ai/bot/rWEae0MHDEjOU_XlacLOO"
+  },
+  {
+   "id": "marketing-seo-ads-dep-tU0gmIPgiqNsvS4N4",
+   "code": "dep-tU0gmIPgiqNsvS4N4",
+   "name": "Grok for SEO, GEO, paid ads and Shopify",
+   "author": "Dmitry Korzhov",
+   "description": "Reviews ads, search and Shopify performance from a single place.",
+   "url": "https://x.ai/bot/dep-tU0gmIPgiqNsvS4N4"
+  },
+  {
+   "id": "marketing-seo-ads-yDxUZegF6GnO_Kym-qewf",
+   "code": "yDxUZegF6GnO_Kym-qewf",
+   "name": "Growth",
+   "author": "Steven",
+   "description": "Job-hunt ops for designers: track roles in Airtable, Monday pipeline pulse, evidence pack before Apply, you confirm every write. No browser auto-apply.",
+   "url": "https://x.ai/bot/yDxUZegF6GnO_Kym-qewf"
+  },
+  {
+   "id": "marketing-seo-ads-J-9TG44LFHNvJQijaW_ub",
+   "code": "J-9TG44LFHNvJQijaW_ub",
+   "name": "Growth Advisor",
+   "author": "Ziwen xu",
+   "description": "Finds real-word domain names that are still open (like .si under $100), checks them at real registrars, and sends back a ranked report.",
+   "url": "https://x.ai/bot/J-9TG44LFHNvJQijaW_ub"
+  },
+  {
+   "id": "marketing-seo-ads-_3UvU3ZziY_aEJU-U7vKy",
+   "code": "_3UvU3ZziY_aEJU-U7vKy",
+   "name": "Growth Chief of Staff",
+   "author": "Anthony Wentzel",
+   "description": "Orchestrates an AI-native growth stack: digests, SEO→blog→LinkedIn/X lanes, and meeting-focused scoreboards.",
+   "url": "https://x.ai/bot/_3UvU3ZziY_aEJU-U7vKy"
+  },
+  {
+   "id": "marketing-seo-ads-RoXlJdzMAG7i-eSLOs1dy",
+   "code": "RoXlJdzMAG7i-eSLOs1dy",
+   "name": "Growth Coach",
+   "author": "Michael York",
+   "description": "A patient coach that teaches you to grow an X account by hand within X's rules. Free with no setup; never posts, likes, follows or DMs for you.",
+   "url": "https://x.ai/bot/RoXlJdzMAG7i-eSLOs1dy"
+  },
+  {
+   "id": "marketing-seo-ads-YYCOE-YeGxnGLb4Mbv7dO",
+   "code": "YYCOE-YeGxnGLb4Mbv7dO",
+   "name": "Growth Desk",
+   "author": "Avid",
+   "description": "Draft-only X growth desk. You grow one named account. You do not research the feed. You do not post.",
+   "url": "https://x.ai/bot/YYCOE-YeGxnGLb4Mbv7dO"
+  },
+  {
+   "id": "marketing-seo-ads-fC0XjRxxW3tQZi4KU8VB1",
+   "code": "fC0XjRxxW3tQZi4KU8VB1",
+   "name": "Growth Eng",
+   "author": "Jay",
+   "description": "Builds the product changes registered growth experiments need, behind feature flags, as small reviewable PRs.",
+   "url": "https://x.ai/bot/fC0XjRxxW3tQZi4KU8VB1"
+  },
+  {
+   "id": "marketing-seo-ads-QHUDxRbm93Hid3hhY7NF9",
+   "code": "QHUDxRbm93Hid3hhY7NF9",
+   "name": "GrowthBot",
+   "author": "Tade",
+   "description": "Growth lead for founders: positioning, launch plans, and measurable distribution bets.",
+   "url": "https://x.ai/bot/QHUDxRbm93Hid3hhY7NF9"
+  },
+  {
+   "id": "marketing-seo-ads-tr-3hPrAG7_LeSzKZ5_vu",
+   "code": "tr-3hPrAG7_LeSzKZ5_vu",
+   "name": "Harry Dry",
+   "author": "Jose Mijares",
+   "description": "A copy chief trained on Harry Dry that rewrites landing pages, ads, emails, and share cards so every line is visual, falsifiable, and only you could say it.",
+   "url": "https://x.ai/bot/tr-3hPrAG7_LeSzKZ5_vu"
+  },
+  {
+   "id": "marketing-seo-ads-_l8tAONAOSZ-wU-Quresz",
+   "code": "_l8tAONAOSZ-wU-Quresz",
+   "name": "Head of Growth",
+   "author": "Jay",
+   "description": "Chief of staff for self-serve growth. Coordinates specialist bots, runs the weekly insight memo, and brings options not conclusions.",
+   "url": "https://x.ai/bot/_l8tAONAOSZ-wU-Quresz"
+  },
+  {
+   "id": "marketing-seo-ads-rOy7YWbwMTmYOh_BMV1ua",
+   "code": "rOy7YWbwMTmYOh_BMV1ua",
+   "name": "Herald",
+   "author": "Slowfreeze.eth.sol.tez",
+   "description": "A social, community and outreach teammate that drafts daily brand posts, build-in-public posts and helpful replies. Nothing goes out without your approval.",
+   "url": "https://x.ai/bot/rOy7YWbwMTmYOh_BMV1ua"
+  },
+  {
+   "id": "marketing-seo-ads-u3dFfq5q52a_p4tZU62Dg",
+   "code": "u3dFfq5q52a_p4tZU62Dg",
+   "name": "Image AD generator",
+   "author": "@degen4lyfe_",
+   "description": "Turns your real product photo into high-converting 1080×1080 Meta image ads with centered text, plus ready-to-paste ad copy for each one.",
+   "url": "https://x.ai/bot/u3dFfq5q52a_p4tZU62Dg"
+  },
+  {
+   "id": "marketing-seo-ads-Viv2NbC5skPslV1WH9Fs7",
+   "code": "Viv2NbC5skPslV1WH9Fs7",
+   "name": "Index",
+   "author": "Adam Tanguay",
+   "description": "An SEO and AEO program teammate. On first run it reads what you already connected, recommends a stack, and only asks…",
+   "url": "https://x.ai/bot/Viv2NbC5skPslV1WH9Fs7"
+  },
+  {
+   "id": "marketing-seo-ads-UiuN7ZcbT7QvMUpNeSXuk",
+   "code": "UiuN7ZcbT7QvMUpNeSXuk",
+   "name": "Indie App Growth Radar",
+   "author": "Dylan Miller",
+   "description": "Watches X and the web for app growth tactics, competitor moves and reply chances: a morning digest, daily reply ideas and a weekly competitor roundup.",
+   "url": "https://x.ai/bot/UiuN7ZcbT7QvMUpNeSXuk"
+  },
+  {
+   "id": "marketing-seo-ads-igyz71GJunci6UdO8x2RU",
+   "code": "igyz71GJunci6UdO8x2RU",
+   "name": "Indie Steam Coach",
+   "author": "Jonas R",
+   "description": "Coach for small indie Steam teams: pre-launch wishlists, weekly X, store copy, and free amplifiers, plus launch-week ops when a date exists.",
+   "url": "https://x.ai/bot/igyz71GJunci6UdO8x2RU"
+  },
+  {
+   "id": "marketing-seo-ads-vYIAB3Z6V8gEERewymcw1",
+   "code": "vYIAB3Z6V8gEERewymcw1",
+   "name": "InsightfulPipe: Live Ads, SEO & Shopify Analyst",
+   "author": "Support Insightful Pipe",
+   "description": "A senior marketer for Google Ads, Meta, X, LinkedIn, TikTok, GA4, SEO, Social and Shopify — powered by live…",
+   "url": "https://x.ai/bot/vYIAB3Z6V8gEERewymcw1"
+  },
+  {
+   "id": "marketing-seo-ads--dAZkLt112synO5muBOcp",
+   "code": "-dAZkLt112synO5muBOcp",
+   "name": "Kampalo ads assistant",
+   "author": "Muhammad",
+   "description": "Briefs synced Google Ads, Meta, GA4, and Search Console, then proposes pauses and bids you approve.",
+   "url": "https://x.ai/bot/-dAZkLt112synO5muBOcp"
+  },
+  {
+   "id": "marketing-seo-ads-k-keodk82Xq6in9aQY_jT",
+   "code": "k-keodk82Xq6in9aQY_jT",
+   "name": "Krishna — Head of Marketing",
+   "author": "Anish Jha",
+   "description": "Head of Marketing for a digital agency: briefs, QC, channel owners.",
+   "url": "https://x.ai/bot/k-keodk82Xq6in9aQY_jT"
+  },
+  {
+   "id": "marketing-seo-ads-D0UvxRvNzDTR_xOJ6Iq08",
+   "code": "D0UvxRvNzDTR_xOJ6Iq08",
+   "name": "Landing page generator",
+   "author": "Colin McDermott",
+   "description": "Writes a sales page for your product and puts it online with checkout wired up.",
+   "url": "https://x.ai/bot/D0UvxRvNzDTR_xOJ6Iq08"
+  },
+  {
+   "id": "marketing-seo-ads-jhwkYhWyRJbDs_-uHzGar",
+   "code": "jhwkYhWyRJbDs_-uHzGar",
+   "name": "Launch & Sky Watch",
+   "author": "Joseph Snyder",
+   "description": "Your personal guide to what's going up and what's worth looking up at: rocket launches, space station passes, meteor…",
+   "url": "https://x.ai/bot/jhwkYhWyRJbDs_-uHzGar"
+  },
+  {
+   "id": "marketing-seo-ads-ZzHTmSlVcOkcdqhIKGsOW",
+   "code": "ZzHTmSlVcOkcdqhIKGsOW",
+   "name": "Launch Coach",
+   "author": "Grease",
+   "description": "A supportive older-brother coach for a young adult finishing the GED and landing a trade apprenticeship, with daily habit nudges and GED tutoring.",
+   "url": "https://x.ai/bot/ZzHTmSlVcOkcdqhIKGsOW"
+  },
+  {
+   "id": "marketing-seo-ads-Dxom6wzVP24aw5RQpMhBQ",
+   "code": "Dxom6wzVP24aw5RQpMhBQ",
+   "name": "Launch Coach (Apprentice)",
+   "author": "Grease",
+   "description": "A daily life and career coach for an electrical or trade apprentice: hours, licensing classes, fitness, habits, car upkeep and an optional parent report.",
+   "url": "https://x.ai/bot/Dxom6wzVP24aw5RQpMhBQ"
+  },
+  {
+   "id": "marketing-seo-ads-u4rX0p3AqGIfL_c6Rcv52",
+   "code": "u4rX0p3AqGIfL_c6Rcv52",
+   "name": "Launch Feedback Tracker by Karata",
+   "author": "Karata",
+   "description": "After you launch on X, checks replies, quotes and mentions on a schedule and reports only new, useful feedback, with reply drafts in your voice.",
+   "url": "https://x.ai/bot/u4rX0p3AqGIfL_c6Rcv52"
+  },
+  {
+   "id": "marketing-seo-ads-BGHqqBLu6XexSEV73gLQD",
+   "code": "BGHqqBLu6XexSEV73gLQD",
+   "name": "Launch Hunter",
+   "author": "Vedant",
+   "description": "A launch strategist for indie hackers: researches real distribution channels, checks their rules, ranks them honestly and writes launch-ready copy.",
+   "url": "https://x.ai/bot/BGHqqBLu6XexSEV73gLQD"
+  },
+  {
+   "id": "marketing-seo-ads-lPTgk29sY7lfMooFH72z0",
+   "code": "lPTgk29sY7lfMooFH72z0",
+   "name": "Launch Operator",
+   "author": "Hamza Dincer",
+   "description": "Hands you the next 1-3 launch tasks each morning while your launch or relaunch is active, with verified links and venue-rule checks.",
+   "url": "https://x.ai/bot/lPTgk29sY7lfMooFH72z0"
+  },
+  {
+   "id": "marketing-seo-ads-QwYUXSLYJcuk0k6L_lyn9",
+   "code": "QwYUXSLYJcuk0k6L_lyn9",
+   "name": "Launch Seat",
+   "author": "Brandon B-real",
+   "description": "A work-and-projects assistant built for the Starbase trip contest — keeps tasks, drafts, research, and follow-through moving so more of the day ships.",
+   "url": "https://x.ai/bot/QwYUXSLYJcuk0k6L_lyn9"
+  },
+  {
+   "id": "marketing-seo-ads-M-FcnnVF11YHbPSVLFITQ",
+   "code": "M-FcnnVF11YHbPSVLFITQ",
+   "name": "Launch Watcher",
+   "author": "Moritz Bierling",
+   "description": "Watches the product, startup, and AI launches you care about and flags the ones that matter as they go live.",
+   "url": "https://x.ai/bot/M-FcnnVF11YHbPSVLFITQ"
+  },
+  {
+   "id": "marketing-seo-ads-VjbtJ_qTdzbhJGmXdvTIc",
+   "code": "VjbtJ_qTdzbhJGmXdvTIc",
+   "name": "Lennybot",
+   "author": "Lenny Rachitsky",
+   "description": "Answers product and growth questions from Lenny Rachitsky's own archive.",
+   "url": "https://x.ai/bot/VjbtJ_qTdzbhJGmXdvTIc"
+  },
+  {
+   "id": "marketing-seo-ads-s4d10d16bdbe2391aa753",
+   "code": "s4d10d16bdbe2391aa753",
+   "name": "LinkedIn Campaign Manager",
+   "author": "SpaceX",
+   "description": "Own lead-gen funnel consistency across ads, forms, follow-up, and UTMs. Drafts campaigns for approval and keeps every offer and handoff clean.",
+   "url": "https://x.ai/bot/s4d10d16bdbe2391aa753"
+  },
+  {
+   "id": "marketing-seo-ads-0_GWfmGaBw-kQC856K2fo",
+   "code": "0_GWfmGaBw-kQC856K2fo",
+   "name": "Local SEO Desk",
+   "author": "Minh",
+   "description": "For local businesses: watches Google Business Profile reviews, map-pack positions and local searches, and proposes the next fix.",
+   "url": "https://x.ai/bot/0_GWfmGaBw-kQC856K2fo"
+  },
+  {
+   "id": "marketing-seo-ads-aIhOidA9l_RZgybHltBNQ",
+   "code": "aIhOidA9l_RZgybHltBNQ",
+   "name": "Local SEO Specialist",
+   "author": "jeevan wijerathna",
+   "description": "White-hat local SEO for small businesses: audits your Google Business Profile, reviews, Search Console and site, then gives a ranked action plan.",
+   "url": "https://x.ai/bot/aIhOidA9l_RZgybHltBNQ"
+  },
+  {
+   "id": "marketing-seo-ads-xzkXiUbdYfPd7g30OhLGf",
+   "code": "xzkXiUbdYfPd7g30OhLGf",
+   "name": "Market Researcher",
+   "author": "Josh Kim",
+   "description": "Monitors your competitors' public websites, ads, marketing, pricing, and positioning on a standing cadence.",
+   "url": "https://x.ai/bot/xzkXiUbdYfPd7g30OhLGf"
+  },
+  {
+   "id": "marketing-seo-ads-1RbG9yW5MpQ55XcQlJ0aQ",
+   "code": "1RbG9yW5MpQ55XcQlJ0aQ",
+   "name": "Marketing Analyst",
+   "author": "Josh Kim",
+   "description": "Google Ads–first performance analyst: turns exports into weekly and monthly reports with commentary, answers reporting asks with real numbers.",
+   "url": "https://x.ai/bot/1RbG9yW5MpQ55XcQlJ0aQ"
+  },
+  {
+   "id": "marketing-seo-ads-FaMbaDOO2WceFyiKDu6_6",
+   "code": "FaMbaDOO2WceFyiKDu6_6",
+   "name": "Marketing Bot",
+   "author": "Bragi Helvig (0x5E)",
+   "description": "Turns a project description into X launch copy worth tapping.",
+   "url": "https://x.ai/bot/FaMbaDOO2WceFyiKDu6_6"
+  },
+  {
+   "id": "marketing-seo-ads-37ZOM10GzlSOQpMjRp7KB",
+   "code": "37ZOM10GzlSOQpMjRp7KB",
+   "name": "Marketing Bot",
+   "author": "Ihor Tymarsha",
+   "description": "A Grok Bot CMO. Skills: product-marketing, copywriting, CRO, emails, cold-email, analytics, offers, marketing-ideas…",
+   "url": "https://x.ai/bot/37ZOM10GzlSOQpMjRp7KB"
+  },
+  {
+   "id": "marketing-seo-ads-se318a72a31fad75c277e",
+   "code": "se318a72a31fad75c277e",
+   "name": "Marketing Calendar Owner",
+   "author": "SpaceX",
+   "description": "Keep regional and global content, launch, and events calendars in sync. Pulls from Notion and keeps webinars and campaigns current without a weekly chase.",
+   "url": "https://x.ai/bot/se318a72a31fad75c277e"
+  },
+  {
+   "id": "marketing-seo-ads-GUz8QMB4I9RQzIDiIwSOB",
+   "code": "GUz8QMB4I9RQzIDiIwSOB",
+   "name": "Marketing Head",
+   "author": "Divyansh",
+   "description": "A personal-org marketing head: owns social strategy, voice, and cadence.",
+   "url": "https://x.ai/bot/GUz8QMB4I9RQzIDiIwSOB"
+  },
+  {
+   "id": "marketing-seo-ads-mP9VpuCPU4iU9r5o0MiAM",
+   "code": "mP9VpuCPU4iU9r5o0MiAM",
+   "name": "Marketing Lead",
+   "author": "Jennifer",
+   "description": "A sellable marketing strategy bot, part of the 'Founder's Back Office' package of public Grok Bot templates.",
+   "url": "https://x.ai/bot/mP9VpuCPU4iU9r5o0MiAM"
+  },
+  {
+   "id": "marketing-seo-ads-GW1Db37PnYoLXuaxX_Si-",
+   "code": "GW1Db37PnYoLXuaxX_Si-",
+   "name": "Marketing Manager",
+   "author": "Paul Powell",
+   "description": "Helps independent and AI-assisted musicians get their songs heard with free, low-key promotion across YouTube, Spotify, and music communities.",
+   "url": "https://x.ai/bot/GW1Db37PnYoLXuaxX_Si-"
+  },
+  {
+   "id": "marketing-seo-ads-a2joMwLsFGm2CRoZAQm4y",
+   "code": "a2joMwLsFGm2CRoZAQm4y",
+   "name": "Marketing Specialist",
+   "author": "Pedro",
+   "description": "Direct-response marketing specialist for campaigns, copy, SEO, ads, and CRO. Ships offers, hooks, and landing drafts—never invents proof.",
+   "url": "https://x.ai/bot/a2joMwLsFGm2CRoZAQm4y"
+  },
+  {
+   "id": "marketing-seo-ads-P4UiFNUcfH-751NuybyV1",
+   "code": "P4UiFNUcfH-751NuybyV1",
+   "name": "Mason",
+   "author": "AdamDesigns",
+   "description": "Intake desk (The Incorporator). Drop a link, post, product, paper, repo, clip, or tool — it opens the original, separates marketing from function.",
+   "url": "https://x.ai/bot/P4UiFNUcfH-751NuybyV1"
+  },
+  {
+   "id": "marketing-seo-ads-jHk8GG6HRbGN6pxfrfrMf",
+   "code": "jHk8GG6HRbGN6pxfrfrMf",
+   "name": "Master Max",
+   "author": "jessie sponberg",
+   "description": "SEO and AI-visibility bot that gets a business found on Google and recommended by AI assistants like Grok and ChatGPT. For web agencies and small businesses.",
+   "url": "https://x.ai/bot/jHk8GG6HRbGN6pxfrfrMf"
+  },
+  {
+   "id": "marketing-seo-ads-2afkvAl8IGd9IgDxZIxp_",
+   "code": "2afkvAl8IGd9IgDxZIxp_",
+   "name": "Mat | Analytics",
+   "author": "Damiano Redemagni",
+   "description": "Ask questions and get reports or charts from a confirmed org schema and event logs.",
+   "url": "https://x.ai/bot/2afkvAl8IGd9IgDxZIxp_"
+  },
+  {
+   "id": "marketing-seo-ads-NaRd1ceo_FaMPsDj8O7cq",
+   "code": "NaRd1ceo_FaMPsDj8O7cq",
+   "name": "Meta Ads Monitor",
+   "author": "Brandon Hinojosa",
+   "description": "Watches Facebook and Instagram ads for rejections, pacing and billing problems and sharp CPA/ROAS moves, leading with a raise/hold/cut call.",
+   "url": "https://x.ai/bot/NaRd1ceo_FaMPsDj8O7cq"
+  },
+  {
+   "id": "marketing-seo-ads-MbHUC7JqXwTgNJAqjGGSr",
+   "code": "MbHUC7JqXwTgNJAqjGGSr",
+   "name": "Microsoft Ads",
+   "author": "Brandon Hinojosa",
+   "description": "Microsoft Advertising (Bing) assistant: monitors campaigns, keywords, budgets, conversion goals, disapprovals and billing, reporting from native reports.",
+   "url": "https://x.ai/bot/MbHUC7JqXwTgNJAqjGGSr"
+  },
+  {
+   "id": "marketing-seo-ads-BdAXulPMUhtSbgaVA_UKY",
+   "code": "BdAXulPMUhtSbgaVA_UKY",
+   "name": "Moti · Motion Designer",
+   "author": "The Margin of Safety",
+   "description": "Turns your promo stills into short beat-synced videos (and still ads) for social and store launch — original music, code motion.",
+   "url": "https://x.ai/bot/BdAXulPMUhtSbgaVA_UKY"
+  },
+  {
+   "id": "marketing-seo-ads-MdpeJPD6eiY7YWUa9bfes",
+   "code": "MdpeJPD6eiY7YWUa9bfes",
+   "name": "Motion Director",
+   "author": "@suddenlyjon",
+   "description": "Designs, animates, scores and QAs short films entirely in code: showreels, product videos, launch stories, explainers and music videos.",
+   "url": "https://x.ai/bot/MdpeJPD6eiY7YWUa9bfes"
+  },
+  {
+   "id": "marketing-seo-ads-4aOqWKFJvnz6yoQWlw-Jv",
+   "code": "4aOqWKFJvnz6yoQWlw-Jv",
+   "name": "Mídia",
+   "author": "Simone",
+   "description": "A Portuguese-language paid-media colleague that reads Meta Ads and Google Ads, checks tracking and delivers a diagnosis.",
+   "url": "https://x.ai/bot/4aOqWKFJvnz6yoQWlw-Jv"
+  },
+  {
+   "id": "marketing-seo-ads-ZXpzvoKQQ1b3B5UjP2Fkq",
+   "code": "ZXpzvoKQQ1b3B5UjP2Fkq",
+   "name": "Nummie",
+   "author": "Jay",
+   "description": "A PLG numbers bot for growth teams. Answers with a number, the definition, the source and query, and the caveats. Read only.",
+   "url": "https://x.ai/bot/ZXpzvoKQQ1b3B5UjP2Fkq"
+  },
+  {
+   "id": "marketing-seo-ads-8yZv2AeUvBcOFoFRVZfhU",
+   "code": "8yZv2AeUvBcOFoFRVZfhU",
+   "name": "OpenSEO",
+   "author": "Graham",
+   "description": "SEO specialist for keywords, audits, local SEO, and content briefs.",
+   "url": "https://x.ai/bot/8yZv2AeUvBcOFoFRVZfhU"
+  },
+  {
+   "id": "marketing-seo-ads--ozpDFk78Euk4sbbfmRn4",
+   "code": "-ozpDFk78Euk4sbbfmRn4",
+   "name": "Opus Motion",
+   "author": "Matt Rice",
+   "description": "Short motion-graphics product and brand videos (MP4) via Claude Opus 5.5 and the danny.md motion-ad skill.",
+   "url": "https://x.ai/bot/-ozpDFk78Euk4sbbfmRn4"
+  },
+  {
+   "id": "marketing-seo-ads-fsje86F8rzNNPc0q6piM_",
+   "code": "fsje86F8rzNNPc0q6piM_",
+   "name": "Paid Ads Creative Collector",
+   "author": "Kim Leung",
+   "description": "Collects competitor creatives from Meta and TikTok Ad Libraries, filters by start/create time, and uploads into Drive for paid-ads / creative research.",
+   "url": "https://x.ai/bot/fsje86F8rzNNPc0q6piM_"
+  },
+  {
+   "id": "marketing-seo-ads-SAfsqPLP0rCuQOywOguxX",
+   "code": "SAfsqPLP0rCuQOywOguxX",
+   "name": "Paid ads manager",
+   "author": "Colin McDermott",
+   "description": "Runs paid ads end to end: creative, launch, daily triage, and a morning report.",
+   "url": "https://x.ai/bot/SAfsqPLP0rCuQOywOguxX"
+  },
+  {
+   "id": "marketing-seo-ads-lspmRxTlNoTmFuIHpm-S-",
+   "code": "lspmRxTlNoTmFuIHpm-S-",
+   "name": "Partner Growth",
+   "author": "Hexakin",
+   "description": "You are Partner Growth, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/lspmRxTlNoTmFuIHpm-S-"
+  },
+  {
+   "id": "marketing-seo-ads-JeNCKNe0ItsLMWYrLiRcb",
+   "code": "JeNCKNe0ItsLMWYrLiRcb",
+   "name": "Performance Marketer",
+   "author": "Josh Kim",
+   "description": "A performance marketer that turns Product Marketer ad copy into paused Maximize-clicks Google Ads Search shells for messaging tests — review sheets first.",
+   "url": "https://x.ai/bot/JeNCKNe0ItsLMWYrLiRcb"
+  },
+  {
+   "id": "marketing-seo-ads-d5LT4bI6GyWqBdGzzJyF1",
+   "code": "d5LT4bI6GyWqBdGzzJyF1",
+   "name": "Personal Brand Ghostwriter",
+   "author": "Cristopher Guido",
+   "description": "Every Monday it hands you LinkedIn post drafts that sound like you, built from your real week, plus a short note on what worked.",
+   "url": "https://x.ai/bot/d5LT4bI6GyWqBdGzzJyF1"
+  },
+  {
+   "id": "marketing-seo-ads-cq1VBt-BdBTe7dR10TdOG",
+   "code": "cq1VBt-BdBTe7dR10TdOG",
+   "name": "Plugin marketer",
+   "author": "Aaron Thomas",
+   "description": "Practical growth owner for a free desktop audio plugin suite. Drafts directory pitches, feature explainers, and social from a versioned release brief;.",
+   "url": "https://x.ai/bot/cq1VBt-BdBTe7dR10TdOG"
+  },
+  {
+   "id": "marketing-seo-ads-zaGeTRD1Pt_MKQs4HitLw",
+   "code": "zaGeTRD1Pt_MKQs4HitLw",
+   "name": "PostNitro Bot",
+   "author": "Muneeb",
+   "description": "Creates and schedules social posts with PostNitro for your own brand.",
+   "url": "https://x.ai/bot/zaGeTRD1Pt_MKQs4HitLw"
+  },
+  {
+   "id": "marketing-seo-ads-G3HhJJ0FwQ8AkL5f1dKCi",
+   "code": "G3HhJJ0FwQ8AkL5f1dKCi",
+   "name": "Product Ad Studio",
+   "author": "Yonatan Langer",
+   "description": "One product photo in, a week of ads out: lifestyle stills, 9:16 videos with sound, and captions per platform, laid out on an Ad Board.",
+   "url": "https://x.ai/bot/G3HhJJ0FwQ8AkL5f1dKCi"
+  },
+  {
+   "id": "marketing-seo-ads-1DFKnMzjYNPZyFFajRbUr",
+   "code": "1DFKnMzjYNPZyFFajRbUr",
+   "name": "Product Ads",
+   "author": "Colin McDermott",
+   "description": "Launches and triages product ads on a fixed daily budget: draft campaigns from your gallery, kill and scale rules…",
+   "url": "https://x.ai/bot/1DFKnMzjYNPZyFFajRbUr"
+  },
+  {
+   "id": "marketing-seo-ads-SO-VpE7KqNpDCOtjwjhVx",
+   "code": "SO-VpE7KqNpDCOtjwjhVx",
+   "name": "Product Growth PM",
+   "author": "Jay",
+   "description": "Owns self-serve from signup to cancel. Walks the product as a new user, finds where it leaks, and writes one experiment brief at a time.",
+   "url": "https://x.ai/bot/SO-VpE7KqNpDCOtjwjhVx"
+  },
+  {
+   "id": "marketing-seo-ads-eb1UwzjTfdNsYRfUh599j",
+   "code": "eb1UwzjTfdNsYRfUh599j",
+   "name": "Product Loop PM",
+   "author": "Ash Naik",
+   "description": "Runs Discover to Define to Design for Launch and keeps STATUS in sync.",
+   "url": "https://x.ai/bot/eb1UwzjTfdNsYRfUh599j"
+  },
+  {
+   "id": "marketing-seo-ads-nXp4Rp2trKV8AK-RC1Ohf",
+   "code": "nXp4Rp2trKV8AK-RC1Ohf",
+   "name": "Product Marketer",
+   "author": "Josh Kim",
+   "description": "Learns your product, brand, tone, and positioning principles; uses competitive research to sharpen how you stand out…",
+   "url": "https://x.ai/bot/nXp4Rp2trKV8AK-RC1Ohf"
+  },
+  {
+   "id": "marketing-seo-ads-e3LgBmpbhzWHhLYUM1xeZ",
+   "code": "e3LgBmpbhzWHhLYUM1xeZ",
+   "name": "Product Marketing",
+   "author": "Pranav",
+   "description": "For founders, PMs, and marketers who need shared positioning before any campaign ships.",
+   "url": "https://x.ai/bot/e3LgBmpbhzWHhLYUM1xeZ"
+  },
+  {
+   "id": "marketing-seo-ads-BpqAk55ZrJ2O5SqJm1Mhz",
+   "code": "BpqAk55ZrJ2O5SqJm1Mhz",
+   "name": "Pulse",
+   "author": "Jaime Hernandez",
+   "description": "An analytics analyst that tracks the KPIs you choose and sends a short weekly scorecard only when something moves.",
+   "url": "https://x.ai/bot/BpqAk55ZrJ2O5SqJm1Mhz"
+  },
+  {
+   "id": "marketing-seo-ads-46JFu0eOr47MvAOVwyyeG",
+   "code": "46JFu0eOr47MvAOVwyyeG",
+   "name": "Radar",
+   "author": "Jono Chowdhury",
+   "description": "A monitor-only brand radar for X. Every weekday morning it sends Latest mentions, Trending topics in your space…",
+   "url": "https://x.ai/bot/46JFu0eOr47MvAOVwyyeG"
+  },
+  {
+   "id": "marketing-seo-ads-5RIX2aYLkHJz303goBCwC",
+   "code": "5RIX2aYLkHJz303goBCwC",
+   "name": "Rank",
+   "author": "@austindixson_",
+   "description": "An SEO and AI-search visibility owner for one website. It measures Search Console and analytics daily.",
+   "url": "https://x.ai/bot/5RIX2aYLkHJz303goBCwC"
+  },
+  {
+   "id": "marketing-seo-ads-KC3SLYsfE8jbe66-nczti",
+   "code": "KC3SLYsfE8jbe66-nczti",
+   "name": "Ratio",
+   "author": "Mike Yeager",
+   "description": "X growth sidekick: a morning brief on your account, reply opportunities, breakout alerts, weekly and monthly reports and drafts in your voice.",
+   "url": "https://x.ai/bot/KC3SLYsfE8jbe66-nczti"
+  },
+  {
+   "id": "marketing-seo-ads-WeQcMC8owj0UnhvJKSP_s",
+   "code": "WeQcMC8owj0UnhvJKSP_s",
+   "name": "Reach Coach",
+   "author": "Jeremy Mahoney",
+   "description": "An honest X growth coach: audits your account, sharpens your posts, finds smart reply spots and runs a weekly scoreboard. Never posts for you.",
+   "url": "https://x.ai/bot/WeQcMC8owj0UnhvJKSP_s"
+  },
+  {
+   "id": "marketing-seo-ads-HGorKc5KDQLynW4JONxn_",
+   "code": "HGorKc5KDQLynW4JONxn_",
+   "name": "Rebrander",
+   "author": "@suddenlyjon",
+   "description": "Changing your business or product name? Rebrander finds every trace of the old brand online, builds a step-by-step…",
+   "url": "https://x.ai/bot/HGorKc5KDQLynW4JONxn_"
+  },
+  {
+   "id": "marketing-seo-ads-kwqo6xU8mAdqNmnWPwDrv",
+   "code": "kwqo6xU8mAdqNmnWPwDrv",
+   "name": "Red Pen Pro",
+   "author": "Asher Pfeifer",
+   "description": "Harsh but fair critic for docs, plans, bot outputs, designs, marketing, analysis, schoolwork, and decisions.",
+   "url": "https://x.ai/bot/kwqo6xU8mAdqNmnWPwDrv"
+  },
+  {
+   "id": "marketing-seo-ads-XvlyjO4BZpSE9pDxHN4n0",
+   "code": "XvlyjO4BZpSE9pDxHN4n0",
+   "name": "Reddit Ads",
+   "author": "Brandon Hinojosa",
+   "description": "Reddit advertising assistant: monitors campaigns, pulls native reports, flags rejected ads and billing issues and reviews performance within your rules.",
+   "url": "https://x.ai/bot/XvlyjO4BZpSE9pDxHN4n0"
+  },
+  {
+   "id": "marketing-seo-ads-4mICdo5bR2FyghKoOZve5",
+   "code": "4mICdo5bR2FyghKoOZve5",
+   "name": "Replay",
+   "author": "Paul",
+   "description": "Turns a marketing brief into previewable video scenes and social cutdowns.",
+   "url": "https://x.ai/bot/4mICdo5bR2FyghKoOZve5"
+  },
+  {
+   "id": "marketing-seo-ads-MuKDTS9Fq0UySwClmE8wc",
+   "code": "MuKDTS9Fq0UySwClmE8wc",
+   "name": "Review Desk",
+   "author": "Liftably",
+   "description": "Drafts on-brand Google and Yelp review replies for local shops, with star-routing and a hard human-approve gate.",
+   "url": "https://x.ai/bot/MuKDTS9Fq0UySwClmE8wc"
+  },
+  {
+   "id": "marketing-seo-ads-7k0TLQBu4hPI5oE3ywRHU",
+   "code": "7k0TLQBu4hPI5oE3ywRHU",
+   "name": "Robauto Website Growth Agent",
+   "author": "Robauto Team",
+   "description": "Helps brands make their site legible, usable, and payable by AI agents — scan, one paste-ready fix a day, re-scan until…",
+   "url": "https://x.ai/bot/7k0TLQBu4hPI5oE3ywRHU"
+  },
+  {
+   "id": "marketing-seo-ads-mhZNFKgZgtkJmrsK8ucME",
+   "code": "mhZNFKgZgtkJmrsK8ucME",
+   "name": "Roof CEO",
+   "author": "Lee B. Vining",
+   "description": "Marketing team lead for residential roofing companies: runs Meta ad campaigns, creative, lead follow-up and daily storm monitoring through specialist bots.",
+   "url": "https://x.ai/bot/mhZNFKgZgtkJmrsK8ucME"
+  },
+  {
+   "id": "marketing-seo-ads-0IhyZWxwbf2cFmsmroZQL",
+   "code": "0IhyZWxwbf2cFmsmroZQL",
+   "name": "SEO & AEO Desk",
+   "author": "Adam Tanguay",
+   "description": "Turns your keywords into content ideas and writer-ready briefs for search and AI answers. Works from a pasted keyword list or your Search Console.",
+   "url": "https://x.ai/bot/0IhyZWxwbf2cFmsmroZQL"
+  },
+  {
+   "id": "marketing-seo-ads-CaNidmFikjRDtkc7_2OnO",
+   "code": "CaNidmFikjRDtkc7_2OnO",
+   "name": "SEO & AEO Desk",
+   "author": "Jaime Hernandez",
+   "description": "Runs the search and AI-answer side of a content program. It finds what people search for and ask, ranks those opportunities into page ideas.",
+   "url": "https://x.ai/bot/CaNidmFikjRDtkc7_2OnO"
+  },
+  {
+   "id": "marketing-seo-ads-5iHGngaDIvmt1Mh-ef3_w",
+   "code": "5iHGngaDIvmt1Mh-ef3_w",
+   "name": "SEO & GEO Bot",
+   "author": "Antoine",
+   "description": "Finds what your buyers search on Google and ask AI assistants, then turns it into ranked ideas, writer briefs, page…",
+   "url": "https://x.ai/bot/5iHGngaDIvmt1Mh-ef3_w"
+  },
+  {
+   "id": "marketing-seo-ads-sb6d579c33f7a32d0e7af",
+   "code": "sb6d579c33f7a32d0e7af",
+   "name": "SEO / AEO Auditor",
+   "author": "SpaceX",
+   "description": "Tracks keyword, technical, AI-prompt and competitor movement in one place, and flags the site issues worth fixing.",
+   "url": "https://x.ai/bot/sb6d579c33f7a32d0e7af"
+  },
+  {
+   "id": "marketing-seo-ads-TBIgegp1bkoomF5Ivd1Cq",
+   "code": "TBIgegp1bkoomF5Ivd1Cq",
+   "name": "SEO Content Desk",
+   "author": "Dindu Nuffin",
+   "description": "Turns keywords, Search Console data or a topic into content ideas, writer-ready briefs and prioritized SEO and AEO fixes for local businesses.",
+   "url": "https://x.ai/bot/TBIgegp1bkoomF5Ivd1Cq"
+  },
+  {
+   "id": "marketing-seo-ads-sg2dZMjlprpit0y0PNyhL",
+   "code": "sg2dZMjlprpit0y0PNyhL",
+   "name": "SEO Expert",
+   "author": "iammutex",
+   "description": "SEO expert for product websites. Take a site URL, run SEO monitoring via Glasser, then offer an SEO action plan and run…",
+   "url": "https://x.ai/bot/sg2dZMjlprpit0y0PNyhL"
+  },
+  {
+   "id": "marketing-seo-ads-hZ5qExsCbwC-JCnsMOwp3",
+   "code": "hZ5qExsCbwC-JCnsMOwp3",
+   "name": "SEO Team",
+   "author": "Sultanov",
+   "description": "A five-role SEO crew (Head of SEO, Keyword Research, Tech SEO, Content Writer, and Link Builder) that briefs, drafts.",
+   "url": "https://x.ai/bot/hZ5qExsCbwC-JCnsMOwp3"
+  },
+  {
+   "id": "marketing-seo-ads-TAd_1q_rpYCcb94h8PXDG",
+   "code": "TAd_1q_rpYCcb94h8PXDG",
+   "name": "SEO Teammate",
+   "author": "Minh",
+   "description": "All-round SEO bot on your Google Search Console data: Monday review, daily drop watch, Thursday quick wins; fixes go live only after you approve.",
+   "url": "https://x.ai/bot/TAd_1q_rpYCcb94h8PXDG"
+  },
+  {
+   "id": "marketing-seo-ads-pImOOCvE7uB1SXENOI9Ng",
+   "code": "pImOOCvE7uB1SXENOI9Ng",
+   "name": "SEO/GEO Specialist",
+   "author": "Angelo",
+   "description": "SEO and GEO operator for people who want measurable rankings and AI citations.",
+   "url": "https://x.ai/bot/pImOOCvE7uB1SXENOI9Ng"
+  },
+  {
+   "id": "marketing-seo-ads-262LyEVXcAKuQuohFeXop",
+   "code": "262LyEVXcAKuQuohFeXop",
+   "name": "SERP SPECIALIST",
+   "author": "Corey Putney",
+   "description": "A local SEO specialist that researches SERPs and keyword volumes, finds rank-and-rent opportunities, audits sites…",
+   "url": "https://x.ai/bot/262LyEVXcAKuQuohFeXop"
+  },
+  {
+   "id": "marketing-seo-ads-262lyevxcakuquohfexop",
+   "code": "262lyevxcakuquohfexop",
+   "name": "SERP SPECIALIST",
+   "author": "Corey",
+   "description": "A local SEO specialist that researches SERPs and keyword volumes, finds rank-and-rent opportunities, audits sites for SEO and AEO…",
+   "url": "https://x.ai/bot/262lyevxcakuquohfexop"
+  },
+  {
+   "id": "marketing-seo-ads-ywADCWWZP0Bcq6bOeQpGt",
+   "code": "ywADCWWZP0Bcq6bOeQpGt",
+   "name": "Scout",
+   "author": "ZEU$ ⓂⓂT",
+   "description": "Weekly client research packs: last-seven-days audience engagement, competitor posts, and one format that is working…",
+   "url": "https://x.ai/bot/ywADCWWZP0Bcq6bOeQpGt"
+  },
+  {
+   "id": "marketing-seo-ads-ywadcwwzp0bcq6boeqpgt",
+   "code": "ywadcwwzp0bcq6boeqpgt",
+   "name": "Scout",
+   "author": "ZEU$",
+   "description": "Weekly client research packs: last-seven-days audience engagement, competitor posts, and one format that is working now, with a link on every…",
+   "url": "https://x.ai/bot/ywadcwwzp0bcq6boeqpgt"
+  },
+  {
+   "id": "marketing-seo-ads-okSl3Ri74UQjSca8Hjkc_",
+   "code": "okSl3Ri74UQjSca8Hjkc_",
+   "name": "Senior Care Helper",
+   "author": "Kelly Baltzell",
+   "description": "A marketing crew lead for small businesses that plans, writes, and schedules your social posts in your brand voice, makes pictures labeled Made…",
+   "url": "https://x.ai/bot/okSl3Ri74UQjSca8Hjkc_"
+  },
+  {
+   "id": "marketing-seo-ads-uO5NbCQrgt1dtYKeklsj1",
+   "code": "uO5NbCQrgt1dtYKeklsj1",
+   "name": "Sentinel",
+   "author": "John",
+   "description": "Reputation defense and social-proof extraction across browser review surfaces. Scans for new reviews, drafts on-brand replies for your approval,.",
+   "url": "https://x.ai/bot/uO5NbCQrgt1dtYKeklsj1"
+  },
+  {
+   "id": "marketing-seo-ads-RxSGqoIFihQlRf5vZN5Hi",
+   "code": "RxSGqoIFihQlRf5vZN5Hi",
+   "name": "Shopify Store Assistant",
+   "author": "goyabean.⌐◨-◨.9dcc.eth",
+   "description": "Sets up, runs and grows a Shopify store, from first launch to listings, SEO, email flows, ads, promos, support and fraud checks. Nothing goes live without yes.",
+   "url": "https://x.ai/bot/RxSGqoIFihQlRf5vZN5Hi"
+  },
+  {
+   "id": "marketing-seo-ads-_rzRrKKlUyBD3znUN5b3Q",
+   "code": "_rzRrKKlUyBD3znUN5b3Q",
+   "name": "Site Audit",
+   "author": "Shimecki",
+   "description": "SEO + content + speed + a11y + CRO + schema audit. Scored, P0/P1/P2, evidence URLs. Monthly diff. No invented metrics.",
+   "url": "https://x.ai/bot/_rzRrKKlUyBD3znUN5b3Q"
+  },
+  {
+   "id": "marketing-seo-ads-JBHxWeDSuBJMl_6eyK18O",
+   "code": "JBHxWeDSuBJMl_6eyK18O",
+   "name": "Site Audit",
+   "author": "Rananjay Raj",
+   "description": "Audits one website for SEO, content, speed, accessibility, CRO and schema, with evidence-backed P0/P1/P2 fixes and a monthly diff. No invented metrics.",
+   "url": "https://x.ai/bot/JBHxWeDSuBJMl_6eyK18O"
+  },
+  {
+   "id": "marketing-seo-ads-s6JVFYDIDMsCQMBeTcznW",
+   "code": "s6JVFYDIDMsCQMBeTcznW",
+   "name": "Site Audit",
+   "author": "Andrej Šimunaj",
+   "description": "SEO + content + speed + a11y + CRO + schema audit. Scored, P0/P1/P2, evidence URLs. Monthly diff. No invented metrics.",
+   "url": "https://x.ai/bot/s6JVFYDIDMsCQMBeTcznW"
+  },
+  {
+   "id": "marketing-seo-ads-hUyADpVasVgrTJBiUeF6V",
+   "code": "hUyADpVasVgrTJBiUeF6V",
+   "name": "Skill Me",
+   "author": "community",
+   "description": "A psychometric-profile coach that uses your DISC, SDI and Enneagram results to give direct, practical coaching on communication, trust, blind spots and growth.",
+   "url": "https://x.ai/bot/hUyADpVasVgrTJBiUeF6V"
+  },
+  {
+   "id": "marketing-seo-ads-l7bhF020vKEQ-Gh7lTWSJ",
+   "code": "l7bhF020vKEQ-Gh7lTWSJ",
+   "name": "Space x Launch Bot",
+   "author": "WasAcop",
+   "description": "Tracks SpaceX launches end to end — upcoming schedule, countdown windows, scrub risk, and live mission status through liftoff and recovery.",
+   "url": "https://x.ai/bot/l7bhF020vKEQ-Gh7lTWSJ"
+  },
+  {
+   "id": "marketing-seo-ads-yFMbDewP86aoPzNmgz44o",
+   "code": "yFMbDewP86aoPzNmgz44o",
+   "name": "Spacex Launch Notifications",
+   "author": "Jonathon Hinchley",
+   "description": "Live-stream aerospace regulatory analyst for SpaceX Starbase launches.",
+   "url": "https://x.ai/bot/yFMbDewP86aoPzNmgz44o"
+  },
+  {
+   "id": "marketing-seo-ads-vWXdSys0OF6yB3WJg8sYb",
+   "code": "vWXdSys0OF6yB3WJg8sYb",
+   "name": "Spam Assassin",
+   "author": "Jay Manipulate",
+   "description": "Scans your inboxes for newsletters and marketing mail, lists the worst offenders, and unsubscribes from the ones you pick without deleting anything.",
+   "url": "https://x.ai/bot/vWXdSys0OF6yB3WJg8sYb"
+  },
+  {
+   "id": "marketing-seo-ads-LEbVr_WZ-cym7XwIm7xf5",
+   "code": "LEbVr_WZ-cym7XwIm7xf5",
+   "name": "Speed Lab",
+   "author": "Jacob Miller",
+   "description": "Autoresearch loop for render speed. Asks whether to run it itself or launch a cloud agent, walks the top 50 ranked…",
+   "url": "https://x.ai/bot/LEbVr_WZ-cym7XwIm7xf5"
+  },
+  {
+   "id": "marketing-seo-ads-CdqN7HvSWhkRBiqy2dDc1",
+   "code": "CdqN7HvSWhkRBiqy2dDc1",
+   "name": "Starship Launch guess",
+   "author": "Art",
+   "description": "Every morning it gives you one best-guess date for the next Starship launch from Starbase, Texas, and explains why whenever that date moves.",
+   "url": "https://x.ai/bot/CdqN7HvSWhkRBiqy2dDc1"
+  },
+  {
+   "id": "marketing-seo-ads-rIKTxh3Pwrmn7N02x6glX",
+   "code": "rIKTxh3Pwrmn7N02x6glX",
+   "name": "TV De-Ad Bot",
+   "author": "Chris Slowik",
+   "description": "Removes ads, tracking, and clutter from your own smart TV with safe, reversible steps you approve one at a time.",
+   "url": "https://x.ai/bot/rIKTxh3Pwrmn7N02x6glX"
+  },
+  {
+   "id": "marketing-seo-ads-9VOAmfsE3OjQcFDAicepU",
+   "code": "9VOAmfsE3OjQcFDAicepU",
+   "name": "TV Debloater",
+   "author": "Jan Hartigan",
+   "description": "Makes Android TV and Google TV sets faster and less cluttered by removing ad, tracking and promo apps over ADB from your own computer.",
+   "url": "https://x.ai/bot/9VOAmfsE3OjQcFDAicepU"
+  },
+  {
+   "id": "marketing-seo-ads-VhWR7w7K3sFB95-1yU3Uf",
+   "code": "VhWR7w7K3sFB95-1yU3Uf",
+   "name": "Taboola Ads",
+   "author": "Brandon Hinojosa",
+   "description": "Taboola (Realize) native ads assistant: monitors campaigns, spend, publisher sites, policy rejections and billing, reporting from native data.",
+   "url": "https://x.ai/bot/VhWR7w7K3sFB95-1yU3Uf"
+  },
+  {
+   "id": "marketing-seo-ads-P1ijZO3rOe1VeNBcQfEb2",
+   "code": "P1ijZO3rOe1VeNBcQfEb2",
+   "name": "Technical SEO",
+   "author": "Oneleg",
+   "description": "A free, read-only technical SEO audit of your business website: runs the open-source site-audit-kit on its own computer and reports what to fix.",
+   "url": "https://x.ai/bot/P1ijZO3rOe1VeNBcQfEb2"
+  },
+  {
+   "id": "marketing-seo-ads-OnUJbQKiams1O9GcQR1BN",
+   "code": "OnUJbQKiams1O9GcQR1BN",
+   "name": "Technical SEO Monitor",
+   "author": "Minh",
+   "description": "Weekly check of indexing, sitemaps, broken links and noindex leaks on your important pages, with fixes staged for your approval.",
+   "url": "https://x.ai/bot/OnUJbQKiams1O9GcQR1BN"
+  },
+  {
+   "id": "marketing-seo-ads-VS2G5p1b_nQixeiYcdwFs",
+   "code": "VS2G5p1b_nQixeiYcdwFs",
+   "name": "Tiffany",
+   "author": "Tripper Wood",
+   "description": "Chief of staff for a local marketing agency.",
+   "url": "https://x.ai/bot/VS2G5p1b_nQixeiYcdwFs"
+  },
+  {
+   "id": "marketing-seo-ads-uDq2Ewxrp_eqTd0ZiXsz7",
+   "code": "uDq2Ewxrp_eqTd0ZiXsz7",
+   "name": "UGC Ad Studio",
+   "author": "Everest Chris",
+   "description": "Makes a new batch of UGC-style video ads for brands every week, built from the hooks that are working, billed monthly through Whop.",
+   "url": "https://x.ai/bot/uDq2Ewxrp_eqTd0ZiXsz7"
+  },
+  {
+   "id": "marketing-seo-ads-q2cwfiBm4Va7lV0NZdxzu",
+   "code": "q2cwfiBm4Va7lV0NZdxzu",
+   "name": "UGC Agency",
+   "author": "Greg",
+   "description": "Your UGC agency in one chat. Routes brand hunting, Meta-safe scripts, ad compliance, shoot calendars.",
+   "url": "https://x.ai/bot/q2cwfiBm4Va7lV0NZdxzu"
+  },
+  {
+   "id": "marketing-seo-ads-KWq0REIfSep3OE5Z9RwGt",
+   "code": "KWq0REIfSep3OE5Z9RwGt",
+   "name": "Ubersuggest SEO",
+   "author": "Faisal Ashfaq",
+   "description": "Ubersuggest SEO helper for keyword and content gap notes.",
+   "url": "https://x.ai/bot/KWq0REIfSep3OE5Z9RwGt"
+  },
+  {
+   "id": "marketing-seo-ads-8HrogilOgXZRGI9mHdxds",
+   "code": "8HrogilOgXZRGI9mHdxds",
+   "name": "Unfollow Checker",
+   "author": "The",
+   "description": "A follower-growth coach for creators on X. It tracks your progress toward a follower goal and sends a weekly update with three tips based on your best.",
+   "url": "https://x.ai/bot/8HrogilOgXZRGI9mHdxds"
+  },
+  {
+   "id": "marketing-seo-ads-CNmx5dje4OnkUW6CdhudI",
+   "code": "CNmx5dje4OnkUW6CdhudI",
+   "name": "Unslop Site Texture",
+   "author": "ny ny",
+   "description": "Adds dither, noise, or ASCII texture to an existing landing page so it stops looking AI-made, with before/after previews on Cloudflare Pages.",
+   "url": "https://x.ai/bot/CNmx5dje4OnkUW6CdhudI"
+  },
+  {
+   "id": "marketing-seo-ads-cXdj8y2O37ddeTOh22D1y",
+   "code": "cXdj8y2O37ddeTOh22D1y",
+   "name": "Vector",
+   "author": "John",
+   "description": "Conversion-path intelligence for browser-only funnel builders — ClickFunnels, GoHighLevel, Kartra, Systeme, and similar stacks. Crawls live funnels,.",
+   "url": "https://x.ai/bot/cXdj8y2O37ddeTOh22D1y"
+  },
+  {
+   "id": "marketing-seo-ads-DhYb85wjUB7513hXEi2BM",
+   "code": "DhYb85wjUB7513hXEi2BM",
+   "name": "Vendoo Bot",
+   "author": "@ProfitToTheMax1",
+   "description": "Crosslisting helper for resellers: fills Vendoo item forms with SEO tags, categories, colors, shipping and per-marketplace presets, then saves for review.",
+   "url": "https://x.ai/bot/DhYb85wjUB7513hXEi2BM"
+  },
+  {
+   "id": "marketing-seo-ads-6_kAMXqIRrlhdolwzF0x-",
+   "code": "6_kAMXqIRrlhdolwzF0x-",
+   "name": "Videofy",
+   "author": "G Musk",
+   "description": "Paste an X video link and get back a close remake made in Grok Imagine, including fashion and brand lookbook MVs…",
+   "url": "https://x.ai/bot/6_kAMXqIRrlhdolwzF0x-"
+  },
+  {
+   "id": "marketing-seo-ads-rU3GOi1gac2hISqM1gROw",
+   "code": "rU3GOi1gac2hISqM1gROw",
+   "name": "Village CyberCab Site",
+   "author": "Mark Barrey",
+   "description": "Ships a local brand coming-soon website end to end: page, hosting, custom domain DNS, and HTTPS.",
+   "url": "https://x.ai/bot/rU3GOi1gac2hISqM1gROw"
+  },
+  {
+   "id": "marketing-seo-ads-4aS9dM8j1YjtteDqPdjHh",
+   "code": "4aS9dM8j1YjtteDqPdjHh",
+   "name": "Web Admin",
+   "author": "David Brum",
+   "description": "Studio website admin: ship site changes to Cloudflare Pages, run launch QA, and build on-brand decks and proposals.",
+   "url": "https://x.ai/bot/4aS9dM8j1YjtteDqPdjHh"
+  },
+  {
+   "id": "marketing-seo-ads-4as9dm8j1yjttedqpdjhh",
+   "code": "4as9dm8j1yjttedqpdjhh",
+   "name": "Web Admin",
+   "author": "David",
+   "description": "Studio website admin: ship site changes to Cloudflare Pages, run launch QA, and build on-brand decks and proposals.",
+   "url": "https://x.ai/bot/4as9dm8j1yjttedqpdjhh"
+  },
+  {
+   "id": "marketing-seo-ads-9YANYIEmgs0pMUiCPcYjn",
+   "code": "9YANYIEmgs0pMUiCPcYjn",
+   "name": "Web Merch",
+   "author": "@grokshroom",
+   "description": "Builds a black-background brand website from your mascot or logo and sets up a print-on-demand merch store with tees, hoodies and stickers.",
+   "url": "https://x.ai/bot/9YANYIEmgs0pMUiCPcYjn"
+  },
+  {
+   "id": "marketing-seo-ads-RRpEi9POci-hgE-M25iIE",
+   "code": "RRpEi9POci-hgE-M25iIE",
+   "name": "WebOps",
+   "author": "OutworkVentures",
+   "description": "Website operations assistant for site owners: private previews, static deploys, DNS and uptime checks, forms, redirects and basic SEO hygien.",
+   "url": "https://x.ai/bot/RRpEi9POci-hgE-M25iIE"
+  },
+  {
+   "id": "marketing-seo-ads-M_4xLTMY06z1Zv1gvX_Nc",
+   "code": "M_4xLTMY06z1Zv1gvX_Nc",
+   "name": "Weekly P&L analyst",
+   "author": "Colin McDermott",
+   "description": "Weekly P&L covering revenue, retention, leakage and ad efficiency, with every adverse movement flagged and traced…",
+   "url": "https://x.ai/bot/M_4xLTMY06z1Zv1gvX_Nc"
+  },
+  {
+   "id": "marketing-seo-ads-lAbvzowlMVLV45NW5fQO4",
+   "code": "lAbvzowlMVLV45NW5fQO4",
+   "name": "Wendy | Marketer",
+   "author": "Stephen Abbott",
+   "description": "Drafts-only growth marketer: one brand wall at a time, public-email lead lists, outreach and press drafts that never…",
+   "url": "https://x.ai/bot/lAbvzowlMVLV45NW5fQO4"
+  },
+  {
+   "id": "marketing-seo-ads-r92hFvyLuSOCODAEHfklD",
+   "code": "r92hFvyLuSOCODAEHfklD",
+   "name": "Whoperator",
+   "author": "Mason V",
+   "description": "SaaS growth operator for Whop creators: pulls live Whop data on MRR, churn, failed payments and at-risk members, then suggests concrete moves.",
+   "url": "https://x.ai/bot/r92hFvyLuSOCODAEHfklD"
+  },
+  {
+   "id": "marketing-seo-ads-iydi6YgZglC_urxI3AOiq",
+   "code": "iydi6YgZglC_urxI3AOiq",
+   "name": "Winning Ad Spy & Boutique Creative Studio",
+   "author": "Lisa",
+   "description": "Zero-waste ad spy & creative studio for boutiques, creators, and online shops.",
+   "url": "https://x.ai/bot/iydi6YgZglC_urxI3AOiq"
+  },
+  {
+   "id": "marketing-seo-ads-v4ONWEUoeWfNz3_Bk03GX",
+   "code": "v4ONWEUoeWfNz3_Bk03GX",
+   "name": "X Account Manager",
+   "author": "Alexander Gonzalez",
+   "description": "Runs your personal X account: daily posts in your voice scheduled through Buffer, reposts of a partner account, scheduled promos and a weekly growth report.",
+   "url": "https://x.ai/bot/v4ONWEUoeWfNz3_Bk03GX"
+  },
+  {
+   "id": "marketing-seo-ads-xIjjRkvwUUDdgmrTlpdk2",
+   "code": "xIjjRkvwUUDdgmrTlpdk2",
+   "name": "X Ads",
+   "author": "Brandon Hinojosa",
+   "description": "X advertising assistant that monitors campaigns, budgets, conversions and policy status and reports results from X's native reports.",
+   "url": "https://x.ai/bot/xIjjRkvwUUDdgmrTlpdk2"
+  },
+  {
+   "id": "marketing-seo-ads-yE64N8eoMZAz-LKBp8MjP",
+   "code": "yE64N8eoMZAz-LKBp8MjP",
+   "name": "X Advisor",
+   "author": "Daniel Endara",
+   "description": "A hands-on X growth advisor: watches your account and niche, flags fresh reply windows, drafts in your voice and helps trim who you follow.",
+   "url": "https://x.ai/bot/yE64N8eoMZAz-LKBp8MjP"
+  },
+  {
+   "id": "marketing-seo-ads-zEp21nf39S9qZxcue-rP8",
+   "code": "zEp21nf39S9qZxcue-rP8",
+   "name": "X Brand Social Manager",
+   "author": "Mustafa Özay",
+   "description": "Runs an Etsy digital craft brand’s X account: daily posts, growth, engagement, and profile polish.",
+   "url": "https://x.ai/bot/zEp21nf39S9qZxcue-rP8"
+  },
+  {
+   "id": "marketing-seo-ads-UHv_eO-Khpt3TG7snyFea",
+   "code": "UHv_eO-Khpt3TG7snyFea",
+   "name": "X Chief of Growth",
+   "author": "Elliott Michael Smith",
+   "description": "Strategy seat for a tap-to-post X growth team: diagnoses the follow funnel, edits the rulebook and writes content briefs. Nothing posts without your tap.",
+   "url": "https://x.ai/bot/UHv_eO-Khpt3TG7snyFea"
+  },
+  {
+   "id": "marketing-seo-ads-JwCkQ8XqsYPmDUfXYaTUk",
+   "code": "JwCkQ8XqsYPmDUfXYaTUk",
+   "name": "X Growth",
+   "author": "Eugene Lee",
+   "description": "Grows your X account by finding fresh posts you can reply to from real experience and drafting replies and original posts in your own voice.",
+   "url": "https://x.ai/bot/JwCkQ8XqsYPmDUfXYaTUk"
+  },
+  {
+   "id": "marketing-seo-ads-2UWiouUD1f38BY6RTmfip",
+   "code": "2UWiouUD1f38BY6RTmfip",
+   "name": "X Growth & Voice-Learning Coach",
+   "author": "beastnug",
+   "description": "Daily X growth coach that diagnoses your last 24h post analytics, scores reply and post drafts 1–10 using X's algorithm weights, and learns.",
+   "url": "https://x.ai/bot/2UWiouUD1f38BY6RTmfip"
+  },
+  {
+   "id": "marketing-seo-ads-0xtz8H-BKc1flsiMuX_md",
+   "code": "0xtz8H-BKc1flsiMuX_md",
+   "name": "X Growth Assistant",
+   "author": "Karata De Mada",
+   "description": "Your personal X content analyst. Share your posts and stats, connect your X account, or say you're new, and it shows…",
+   "url": "https://x.ai/bot/0xtz8H-BKc1flsiMuX_md"
+  },
+  {
+   "id": "marketing-seo-ads-B4ro8N0_j3XGF5ras3iW0",
+   "code": "B4ro8N0_j3XGF5ras3iW0",
+   "name": "X Growth Assistant",
+   "author": "Donald Moore",
+   "description": "Keeps your X account clean and growing. It unfollows non-followers, clears out bots and dead accounts, follows…",
+   "url": "https://x.ai/bot/B4ro8N0_j3XGF5ras3iW0"
+  },
+  {
+   "id": "marketing-seo-ads-VyOfJl3R9_IOERA4en3iy",
+   "code": "VyOfJl3R9_IOERA4en3iy",
+   "name": "X Growth Bot",
+   "author": "Jordan Rafealov",
+   "description": "Grows your X account daily: drafts posts, Articles, clips and replies in your voice, finds people posting that they need you, and nothing posts without your OK.",
+   "url": "https://x.ai/bot/VyOfJl3R9_IOERA4en3iy"
+  },
+  {
+   "id": "marketing-seo-ads-paAB-Sc86QahFqHEzzHba",
+   "code": "paAB-Sc86QahFqHEzzHba",
+   "name": "X Growth Coach",
+   "author": "Ivan kim",
+   "description": "Daily X analytics changes, a weekly trend review and draft scoring against what actually works on your account. Never posts for you.",
+   "url": "https://x.ai/bot/paAB-Sc86QahFqHEzzHba"
+  },
+  {
+   "id": "marketing-seo-ads-l1mPZU0mTr9pX5B21urS-",
+   "code": "l1mPZU0mTr9pX5B21urS-",
+   "name": "X Growth Coach",
+   "author": "@Preda2005",
+   "description": "Weekly X growth coach: your X Score (0-100) and a checklist, then top posts, best posting times and 5 drafts. Never posts or touches your account.",
+   "url": "https://x.ai/bot/l1mPZU0mTr9pX5B21urS-"
+  },
+  {
+   "id": "marketing-seo-ads-gP9RhBvsSES-Ed1VGMKjS",
+   "code": "gP9RhBvsSES-Ed1VGMKjS",
+   "name": "X Growth Desk",
+   "author": "牛战士",
+   "description": "Watches the X topics and accounts you choose, picks the few posts worth replying to, drafts original posts in your voice.",
+   "url": "https://x.ai/bot/gP9RhBvsSES-Ed1VGMKjS"
+  },
+  {
+   "id": "marketing-seo-ads-55FyWn8UhUgZOTSUy7LQt",
+   "code": "55FyWn8UhUgZOTSUy7LQt",
+   "name": "X Growth Desk",
+   "author": "@TheFirstPierre",
+   "description": "Weekday X growth briefs with post links and draft replies in your voice. You approve before anything goes out.",
+   "url": "https://x.ai/bot/55FyWn8UhUgZOTSUy7LQt"
+  },
+  {
+   "id": "marketing-seo-ads-xitvwtu2RlmS_HAkYDgSx",
+   "code": "xitvwtu2RlmS_HAkYDgSx",
+   "name": "X Growth Manager",
+   "author": "Mujjamel hosan Shuvo",
+   "description": "Grows your X account and finds clients: drafts daily replies, posts, lead research and casual DMs with follow-ups. Posts nothing without your approval.",
+   "url": "https://x.ai/bot/xitvwtu2RlmS_HAkYDgSx"
+  },
+  {
+   "id": "marketing-seo-ads-HhJqCAuN7JgCIbAmeplCG",
+   "code": "HhJqCAuN7JgCIbAmeplCG",
+   "name": "X Growth Manager",
+   "author": "Sheesh Mode",
+   "description": "Grows a niche X account with fast-reply batches, hook-tested posts, threads, breaking news and weekly analytics. Everything fact-checked and approved.",
+   "url": "https://x.ai/bot/HhJqCAuN7JgCIbAmeplCG"
+  },
+  {
+   "id": "marketing-seo-ads-rR9IDF7i5y_o2lcQOI1qZ",
+   "code": "rR9IDF7i5y_o2lcQOI1qZ",
+   "name": "X Growth Manager",
+   "author": "Niu Niu",
+   "description": "A growth manager for your X account. It audits your posts, runs posting experiments, and drafts posts and replies in your voice, all for your approval.",
+   "url": "https://x.ai/bot/rR9IDF7i5y_o2lcQOI1qZ"
+  },
+  {
+   "id": "marketing-seo-ads-bl2gghqtbScfliKmudZnP",
+   "code": "bl2gghqtbScfliKmudZnP",
+   "name": "X Growth Operator",
+   "author": "Paul",
+   "description": "Runs your X account like a growth operator: finds what works, cleans up your posting queue, writes posts and articles in your voice without making things up.",
+   "url": "https://x.ai/bot/bl2gghqtbScfliKmudZnP"
+  },
+  {
+   "id": "marketing-seo-ads-uvOymVanCASMEX0KraBFX",
+   "code": "uvOymVanCASMEX0KraBFX",
+   "name": "X Growth Studio",
+   "author": "Gaurav Singh",
+   "description": "The hub bot for an X growth studio. It plans your week, sets goals with a scoreboard, keeps one review queue and runs a daily reply list.",
+   "url": "https://x.ai/bot/uvOymVanCASMEX0KraBFX"
+  },
+  {
+   "id": "marketing-seo-ads-xwPfdDTwD2kUVJZK8hcy6",
+   "code": "xwPfdDTwD2kUVJZK8hcy6",
+   "name": "X Launch Traction",
+   "author": "Paul Vann",
+   "description": "Helps developers building on X get likes, replies and lasting visibility for their app on the X Developer Exhibit, then tracks how far it gets.",
+   "url": "https://x.ai/bot/xwPfdDTwD2kUVJZK8hcy6"
+  },
+  {
+   "id": "marketing-seo-ads-Qn3J8hO5gAMc_7BVzYm-p",
+   "code": "Qn3J8hO5gAMc_7BVzYm-p",
+   "name": "X Marketing Bot",
+   "author": "Mustafa khan",
+   "description": "An X marketing strategist that writes posts, threads and replies in your voice and turns your account's numbers into clear next steps.",
+   "url": "https://x.ai/bot/Qn3J8hO5gAMc_7BVzYm-p"
+  },
+  {
+   "id": "marketing-seo-ads-hI9VYNVWhcqA5agQ1OETW",
+   "code": "hI9VYNVWhcqA5agQ1OETW",
+   "name": "X Marketing Lead",
+   "author": "Joe Simo",
+   "description": "Marketing lead built around X Ads, X Premium Business, and Grok. Runs growth for any founder’s products — decisions and results only, automated where.",
+   "url": "https://x.ai/bot/hI9VYNVWhcqA5agQ1OETW"
+  },
+  {
+   "id": "marketing-seo-ads-Tmp0uiT9esxEazJbHr9LT",
+   "code": "Tmp0uiT9esxEazJbHr9LT",
+   "name": "X Profile Roast & Rebuild",
+   "author": "dctrades22",
+   "description": "Your X roast buddy: roasts your profile, tracks your public growth, hypes you when you earn it and makes an optional shareable card. Public data only.",
+   "url": "https://x.ai/bot/Tmp0uiT9esxEazJbHr9LT"
+  },
+  {
+   "id": "marketing-seo-ads-8OqqCibnjW8m8cgdn3Qyl",
+   "code": "8OqqCibnjW8m8cgdn3Qyl",
+   "name": "X bot",
+   "author": "Scott Metcalf",
+   "description": "Owns an X growth loop with weekday reply packs, weekly reach tracking, and paste-ready drafts you approve.",
+   "url": "https://x.ai/bot/8OqqCibnjW8m8cgdn3Qyl"
+  },
+  {
+   "id": "marketing-seo-ads-mr5U4RLWVjnZdNuQBipeq",
+   "code": "mr5U4RLWVjnZdNuQBipeq",
+   "name": "brand voice writer",
+   "author": "shashank sn",
+   "description": "Writes posts, emails and articles that sound like you.",
+   "url": "https://x.ai/bot/mr5U4RLWVjnZdNuQBipeq"
+  },
+  {
+   "id": "marketing-seo-ads-F7rovUv9EumNAoj9vEAWm",
+   "code": "F7rovUv9EumNAoj9vEAWm",
+   "name": "dadprotech brand manager",
+   "author": "Josh Kim",
+   "description": "A daily social desk for one brand. Learns voice from the owner's X profile and recommends one new tweet each weekday…",
+   "url": "https://x.ai/bot/F7rovUv9EumNAoj9vEAWm"
+  },
+  {
+   "id": "marketing-seo-ads-Bu2sEQqu0hEjpbzN_07D3",
+   "code": "Bu2sEQqu0hEjpbzN_07D3",
+   "name": "data science",
+   "author": "Emily",
+   "description": "Owns analytics queries, spreadsheet pulls and metric definitions.",
+   "url": "https://x.ai/bot/Bu2sEQqu0hEjpbzN_07D3"
+  },
+  {
+   "id": "marketing-seo-ads-oKdxhrXZXq0kuo6djGK15",
+   "code": "oKdxhrXZXq0kuo6djGK15",
+   "name": "earshot SFX bot",
+   "author": "ny ny",
+   "description": "Scores product and launch films with code-rendered SFX from earshot (MIT): builds calm/crisp/minimal kits, places takes on frame cues.",
+   "url": "https://x.ai/bot/oKdxhrXZXq0kuo6djGK15"
+  },
+  {
+   "id": "marketing-seo-ads-YfOjKXck76ElsMKhAMfHR",
+   "code": "YfOjKXck76ElsMKhAMfHR",
+   "name": "huashu-motion launch film bot",
+   "author": "ny ny",
+   "description": "Makes 15–30s commercial product launch films with huashu-motion (HTML + GSAP, om CLI): clean, modern, number-driven cuts.",
+   "url": "https://x.ai/bot/YfOjKXck76ElsMKhAMfHR"
+  },
+  {
+   "id": "marketing-seo-ads-55VuCAFXxFDHyaGPU3Bxt",
+   "code": "55VuCAFXxFDHyaGPU3Bxt",
+   "name": "koala",
+   "author": "lauren",
+   "description": "A launch assistant for a developer product's go-to-market push.",
+   "url": "https://x.ai/bot/55VuCAFXxFDHyaGPU3Bxt"
+  },
+  {
+   "id": "marketing-seo-ads-p6eYp9BM2aFxQSOtzQX3S",
+   "code": "p6eYp9BM2aFxQSOtzQX3S",
+   "name": "赛博小晚",
+   "author": "铁柱AGI",
+   "description": "Public skill avatar of 赛博小晚: uses her published thinking framework to help you build and run a personal brand, without claiming to be her.",
+   "url": "https://x.ai/bot/p6eYp9BM2aFxQSOtzQX3S"
+  },
+  {
+   "id": "marketing-seo-ads-4sSGX1SZk5F6KdsrJwdtA",
+   "code": "4sSGX1SZk5F6KdsrJwdtA",
+   "name": "𝕏-Caliber",
+   "author": "Tony Simons",
+   "description": "An X growth assistant that builds and maintains curated account lists, spots trends and post ideas, and helps you write in your own voice.",
+   "url": "https://x.ai/bot/4sSGX1SZk5F6KdsrJwdtA"
+  }
+ ]
+}

@@ -1,0 +1,1664 @@
+{
+ "slug": "privacy-security-scam-protection",
+ "label": "Privacy, Security & Scam Protection",
+ "count": 207,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "privacy-security-scam-protection-FDjYGSWiEb7EdvmUZK5JY",
+   "code": "FDjYGSWiEb7EdvmUZK5JY",
+   "name": "AI 깔까말까봇",
+   "author": "SION",
+   "description": "Korean-language vetting bot: static security checks on new AI tools, skills, plugins and MCP servers, an adopt/hold/borrow verdict and where to install.",
+   "url": "https://x.ai/bot/FDjYGSWiEb7EdvmUZK5JY"
+  },
+  {
+   "id": "privacy-security-scam-protection-3TK4ONBw6am3N9l8BK7BJ",
+   "code": "3TK4ONBw6am3N9l8BK7BJ",
+   "name": "Adversarial Security & Usability",
+   "author": "Aben Consulting Kft",
+   "description": "Runs adversarial passes on product docs and code for security and usability. Uses peer-agent tickets, operator-safe scripts, and honest live captures —.",
+   "url": "https://x.ai/bot/3TK4ONBw6am3N9l8BK7BJ"
+  },
+  {
+   "id": "privacy-security-scam-protection-W5ek_XFFPkF2Ylw69oBxS",
+   "code": "W5ek_XFFPkF2Ylw69oBxS",
+   "name": "Aegis",
+   "author": "Rob Erickson",
+   "description": "Security lock-down operator: finds weak spots in your own accounts, devices and networks, applies the fixes you approve one step at a time, reports what's left.",
+   "url": "https://x.ai/bot/W5ek_XFFPkF2Ylw69oBxS"
+  },
+  {
+   "id": "privacy-security-scam-protection-DFnZYjCELW2QdywUWZRiG",
+   "code": "DFnZYjCELW2QdywUWZRiG",
+   "name": "Agent Zero",
+   "author": "Liam",
+   "description": "After consent, finds your listings on people-search and data-broker sites, files removals, and escalates ignored requests.",
+   "url": "https://x.ai/bot/DFnZYjCELW2QdywUWZRiG"
+  },
+  {
+   "id": "privacy-security-scam-protection-74dzSmLYzMoTvVkLef9Dw",
+   "code": "74dzSmLYzMoTvVkLef9Dw",
+   "name": "Agent Zero",
+   "author": "Str8fun_",
+   "description": "After consent, finds your listings on people-search and data-broker sites, files official removals, and follows up on ignored requests.",
+   "url": "https://x.ai/bot/74dzSmLYzMoTvVkLef9Dw"
+  },
+  {
+   "id": "privacy-security-scam-protection-D_3MSloEPYuOajLAhh9YN",
+   "code": "D_3MSloEPYuOajLAhh9YN",
+   "name": "Agent Zero",
+   "author": "Michael Uribe",
+   "description": "Personal reputation specialist: finds your listings on people-search and data-broker sites, files official removals and re-checks every week.",
+   "url": "https://x.ai/bot/D_3MSloEPYuOajLAhh9YN"
+  },
+  {
+   "id": "privacy-security-scam-protection-hv70IMR--R-c9VZF3aZ7X",
+   "code": "hv70IMR--R-c9VZF3aZ7X",
+   "name": "Agent Zero",
+   "author": "Sentinel Architech",
+   "description": "Personal reputation specialist for people who want their info off people-search and data-broker sites.",
+   "url": "https://x.ai/bot/hv70IMR--R-c9VZF3aZ7X"
+  },
+  {
+   "id": "privacy-security-scam-protection-ZPBt18dahGDQ2tmr10D-T",
+   "code": "ZPBt18dahGDQ2tmr10D-T",
+   "name": "Am I Being Phished?",
+   "author": "Paul Vann",
+   "description": "Checks emails, links, domains, and DMs for phishing and scams, using X search first plus blocklists, domain registration data, and lookalike checks.",
+   "url": "https://x.ai/bot/ZPBt18dahGDQ2tmr10D-T"
+  },
+  {
+   "id": "privacy-security-scam-protection-U34kIsyRcFfI9ucS3K74F",
+   "code": "U34kIsyRcFfI9ucS3K74F",
+   "name": "App Security Tester",
+   "author": "Zack",
+   "description": "Your virtual legal and compliance expert for building and running apps.",
+   "url": "https://x.ai/bot/U34kIsyRcFfI9ucS3K74F"
+  },
+  {
+   "id": "privacy-security-scam-protection-BLxhCjzoAdt_AUAbB14q5",
+   "code": "BLxhCjzoAdt_AUAbB14q5",
+   "name": "App Security Tester",
+   "author": "Zack Gabbard",
+   "description": "Threat-models and rigidly security-tests your own mobile or web apps and backends like an attacker would.",
+   "url": "https://x.ai/bot/BLxhCjzoAdt_AUAbB14q5"
+  },
+  {
+   "id": "privacy-security-scam-protection-3h643OPVhZDt5iS_mKw_7",
+   "code": "3h643OPVhZDt5iS_mKw_7",
+   "name": "App Security Tester",
+   "author": "OutworkVentures",
+   "description": "Threat-models and rigidly security-tests your own mobile or web apps and backends like an attacker would.",
+   "url": "https://x.ai/bot/3h643OPVhZDt5iS_mKw_7"
+  },
+  {
+   "id": "privacy-security-scam-protection-Vs67gzNnC-60nc_7j6Ker",
+   "code": "Vs67gzNnC-60nc_7j6Ker",
+   "name": "Arr Bot",
+   "author": "Jared Maxwell",
+   "description": "Sets up and tunes a private *arr media stack on your machine — Gluetun VPN, download client, Prowlarr, Radarr/Sonarr, Jellyfin, and friends — with CPU.",
+   "url": "https://x.ai/bot/Vs67gzNnC-60nc_7j6Ker"
+  },
+  {
+   "id": "privacy-security-scam-protection-0n3_NyM3Y_LZ8dbMnncmc",
+   "code": "0n3_NyM3Y_LZ8dbMnncmc",
+   "name": "Arthur",
+   "author": "DJ",
+   "description": "Arthur finds your name, phone, and address on people-search sites and spam lists, files the opt-outs, and keeps checking so they stay gone.",
+   "url": "https://x.ai/bot/0n3_NyM3Y_LZ8dbMnncmc"
+  },
+  {
+   "id": "privacy-security-scam-protection-kirfUmwjDqdygGRZ1649k",
+   "code": "kirfUmwjDqdygGRZ1649k",
+   "name": "Bot Lock Security Desk",
+   "author": "Daniel Graham",
+   "description": "Audits your AI agents' tools, secrets and permissions, writes a deny-by-default policy and helps you install free open-source guardrails.",
+   "url": "https://x.ai/bot/kirfUmwjDqdygGRZ1649k"
+  },
+  {
+   "id": "privacy-security-scam-protection-1YzVIsTRcLxaqlLZouJiB",
+   "code": "1YzVIsTRcLxaqlLZouJiB",
+   "name": "BotSec",
+   "author": "Cary Scardina",
+   "description": "Head of security that scans email and untrusted links so humans and bots avoid social engineering and phishing.",
+   "url": "https://x.ai/bot/1YzVIsTRcLxaqlLZouJiB"
+  },
+  {
+   "id": "privacy-security-scam-protection-PFI2o0ZcruL6vjjHAm5cF",
+   "code": "PFI2o0ZcruL6vjjHAm5cF",
+   "name": "Bottyguard",
+   "author": "@suddenlyjon",
+   "description": "Squad lead for the Bottyguard SEAL Team 7 security bots.",
+   "url": "https://x.ai/bot/PFI2o0ZcruL6vjjHAm5cF"
+  },
+  {
+   "id": "privacy-security-scam-protection-PsjtBeYhFI7OCdIFOZdrx",
+   "code": "PsjtBeYhFI7OCdIFOZdrx",
+   "name": "Bouncer",
+   "author": "Igor Ramadas",
+   "description": "Security and infrastructure operator for your apps and servers: reviews repos for security issues and critical bugs, watches daily for CVEs in what you run.",
+   "url": "https://x.ai/bot/PsjtBeYhFI7OCdIFOZdrx"
+  },
+  {
+   "id": "privacy-security-scam-protection-zYSO5H4R8RV_epwnMsvbs",
+   "code": "zYSO5H4R8RV_epwnMsvbs",
+   "name": "Bounty Hunter",
+   "author": "Maverick Alexander",
+   "description": "A fraud investigator that searches public records for possible fraud against U.S.",
+   "url": "https://x.ai/bot/zYSO5H4R8RV_epwnMsvbs"
+  },
+  {
+   "id": "privacy-security-scam-protection-Y8zQlQDtzwGFBrKVWlqCa",
+   "code": "Y8zQlQDtzwGFBrKVWlqCa",
+   "name": "Bourne Bot",
+   "author": "Michael",
+   "description": "Calm personal security advisor that helps you lock down accounts, devices, location, money, family, and reputation.",
+   "url": "https://x.ai/bot/Y8zQlQDtzwGFBrKVWlqCa"
+  },
+  {
+   "id": "privacy-security-scam-protection-IryynPCY3xK65akHLcubp",
+   "code": "IryynPCY3xK65akHLcubp",
+   "name": "CSO",
+   "author": "Trond Eirik Haavarstein",
+   "description": "Your AI security officer. It finds leaked keys in your files and repos, walks you through rotating Cloudflare, AWS and 1Password credentials.",
+   "url": "https://x.ai/bot/IryynPCY3xK65akHLcubp"
+  },
+  {
+   "id": "privacy-security-scam-protection-leKqVRHk7QbaX3VVcUbEv",
+   "code": "leKqVRHk7QbaX3VVcUbEv",
+   "name": "Call Shield",
+   "author": "JORGE GALEANO",
+   "description": "Cuts the spam calls reaching your phone and keeps them down: Do Not Call registration, carrier and phone blockers, FTC complaint drafts.",
+   "url": "https://x.ai/bot/leKqVRHk7QbaX3VVcUbEv"
+  },
+  {
+   "id": "privacy-security-scam-protection-pDA__B7cYeXbmPXgF7eAc",
+   "code": "pDA__B7cYeXbmPXgF7eAc",
+   "name": "Canary",
+   "author": "Dave Gambrill",
+   "description": "Advisory-only security watchdog: flags newly disclosed critical or actively exploited vulnerabilities that hit your devices and bot computers, with the fix.",
+   "url": "https://x.ai/bot/pDA__B7cYeXbmPXgF7eAc"
+  },
+  {
+   "id": "privacy-security-scam-protection-Yx_UBwU10fFIIEI8Q_3u6",
+   "code": "Yx_UBwU10fFIIEI8Q_3u6",
+   "name": "Chief Security & Compliance Officer",
+   "author": "Christian Amechi",
+   "description": "Defensive security and compliance officer for indie app studios that runs threat models, secrets and RLS audits, and SOC2 or HIPAA gap lists.",
+   "url": "https://x.ai/bot/Yx_UBwU10fFIIEI8Q_3u6"
+  },
+  {
+   "id": "privacy-security-scam-protection-wdkbnNNvfAIkUUiMIpeZG",
+   "code": "wdkbnNNvfAIkUUiMIpeZG",
+   "name": "Cloaked Bot",
+   "author": "Kevin Chau",
+   "description": "Personal reputation specialist that finds your listings on people-search and data-broker sites, files official removals…",
+   "url": "https://x.ai/bot/wdkbnNNvfAIkUUiMIpeZG"
+  },
+  {
+   "id": "privacy-security-scam-protection-843EAX4tlSviLDLgq3G1B",
+   "code": "843EAX4tlSviLDLgq3G1B",
+   "name": "Cody",
+   "author": "Jared Maxwell",
+   "description": "Cloudflare-only ops assistant for DNS, tunnels, Access, Workers, Pages, and security settings. Preserves configs, asks with explainers before changes,.",
+   "url": "https://x.ai/bot/843EAX4tlSviLDLgq3G1B"
+  },
+  {
+   "id": "privacy-security-scam-protection-SVz86tYbkiggizWQ_9vca",
+   "code": "SVz86tYbkiggizWQ_9vca",
+   "name": "Collaboration Bot",
+   "author": "realMattAbrams",
+   "description": "Connects your bot team with other people's bot teams on shared projects through a shared repo, with usage budgets, consent, and security checks.",
+   "url": "https://x.ai/bot/SVz86tYbkiggizWQ_9vca"
+  },
+  {
+   "id": "privacy-security-scam-protection-yu5DTLbi2VHKOSGJdZ6zk",
+   "code": "yu5DTLbi2VHKOSGJdZ6zk",
+   "name": "Crypto Scam Shield",
+   "author": "James Rule XRP ⟐",
+   "description": "A free, friendly coach that teaches everyday people how to spot and avoid crypto scams, with tips, quizzes, examples, and link or message checks.",
+   "url": "https://x.ai/bot/yu5DTLbi2VHKOSGJdZ6zk"
+  },
+  {
+   "id": "privacy-security-scam-protection-583RQ4Q20Bz6QxGGS2L3e",
+   "code": "583RQ4Q20Bz6QxGGS2L3e",
+   "name": "Cyber Checkup",
+   "author": "Z23 Brownridge",
+   "description": "Weekly no-login security check of a small business's website and email: HTTPS, headers, SPF/DMARC, blocklists, lookalike domains, with a P0/P1/P2 fix list.",
+   "url": "https://x.ai/bot/583RQ4Q20Bz6QxGGS2L3e"
+  },
+  {
+   "id": "privacy-security-scam-protection-vEl_iMl8eLa6pOYAeey--",
+   "code": "vEl_iMl8eLa6pOYAeey--",
+   "name": "Cyber Stud",
+   "author": "Grease",
+   "description": "A personal cybersecurity coach that walks you through 6 weekend sessions to lock down your accounts, phone, WiFi, computers, credit and family against scams.",
+   "url": "https://x.ai/bot/vEl_iMl8eLa6pOYAeey--"
+  },
+  {
+   "id": "privacy-security-scam-protection-94kCbVV39EYR-lt_PaFJF",
+   "code": "94kCbVV39EYR-lt_PaFJF",
+   "name": "DM Screen",
+   "author": "Jon Holland",
+   "description": "Screens your new X DMs and message requests every night, flags scams and pitches, and drafts short replies to the real…",
+   "url": "https://x.ai/bot/94kCbVV39EYR-lt_PaFJF"
+  },
+  {
+   "id": "privacy-security-scam-protection-XMRV4N051o8CfH9_vnqiq",
+   "code": "XMRV4N051o8CfH9_vnqiq",
+   "name": "Data Broker Opt-Out",
+   "author": "@RainmanJam",
+   "description": "Finds your personal info on people-search sites and data brokers using the Big-Ass Data Broker Opt-Out List, submits the removals, and rechecks monthly.",
+   "url": "https://x.ai/bot/XMRV4N051o8CfH9_vnqiq"
+  },
+  {
+   "id": "privacy-security-scam-protection-92VG66mFtkdl7eqWiJLo6",
+   "code": "92VG66mFtkdl7eqWiJLo6",
+   "name": "Data Broker Opt-Out Bot",
+   "author": "Jacky Heshi",
+   "description": "Removes or suppresses professional contact data from major B2B sales-intel databases through their official opt-out flows.",
+   "url": "https://x.ai/bot/92VG66mFtkdl7eqWiJLo6"
+  },
+  {
+   "id": "privacy-security-scam-protection-kuAEvgbs8OJKVLsy19hD2",
+   "code": "kuAEvgbs8OJKVLsy19hD2",
+   "name": "Data Defense",
+   "author": "Honeycomb",
+   "description": "Personal privacy checkup across your accounts, devices, app permissions, breach exposure and optionally home Wi-Fi, with fixes ranked by risk.",
+   "url": "https://x.ai/bot/kuAEvgbs8OJKVLsy19hD2"
+  },
+  {
+   "id": "privacy-security-scam-protection-PnIOFosmQkczUGE6Fjzhl",
+   "code": "PnIOFosmQkczUGE6Fjzhl",
+   "name": "Data Hunter",
+   "author": "SeaKing Options",
+   "description": "Finds where your personal info is listed and gets it removed from people-search sites and data brokers, so the spam calls and texts stop.",
+   "url": "https://x.ai/bot/PnIOFosmQkczUGE6Fjzhl"
+  },
+  {
+   "id": "privacy-security-scam-protection-u0gQYeIqQCAW2n96pqBvi",
+   "code": "u0gQYeIqQCAW2n96pqBvi",
+   "name": "Data broker removal",
+   "author": "Nathalie",
+   "description": "Helps you remove yourself (or someone you have permission to help) from US people-search / data-broker listing sites — free opt-outs only.",
+   "url": "https://x.ai/bot/u0gQYeIqQCAW2n96pqBvi"
+  },
+  {
+   "id": "privacy-security-scam-protection-mfU7N4zmWh5U5Kvb6Oqnc",
+   "code": "mfU7N4zmWh5U5Kvb6Oqnc",
+   "name": "Deep Search Spam-Call Scrubber",
+   "author": "Tom Palen",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, helps you finish the confirmations, and re-checks on a schedule.",
+   "url": "https://x.ai/bot/mfU7N4zmWh5U5Kvb6Oqnc"
+  },
+  {
+   "id": "privacy-security-scam-protection-gMw0Coi1Cwi6OW0dNOhS2",
+   "code": "gMw0Coi1Cwi6OW0dNOhS2",
+   "name": "Defender",
+   "author": "Godot Huard",
+   "description": "Audits your accounts, machines, domains, sites, apps and AI agents for security issues, with one clear fix per finding. Nothing changes without your yes.",
+   "url": "https://x.ai/bot/gMw0Coi1Cwi6OW0dNOhS2"
+  },
+  {
+   "id": "privacy-security-scam-protection-yVMKOYeRxY2E8mLfq2iY-",
+   "code": "yVMKOYeRxY2E8mLfq2iY-",
+   "name": "DeleteMeOnline",
+   "author": "Gonzalo Di Ciancia",
+   "description": "Finds your personal data on social media and data brokers, then helps get it deleted — privacy and scam protection…",
+   "url": "https://x.ai/bot/yVMKOYeRxY2E8mLfq2iY-"
+  },
+  {
+   "id": "privacy-security-scam-protection-Pc2T7udSjGxv9pd9Spkyc",
+   "code": "Pc2T7udSjGxv9pd9Spkyc",
+   "name": "Dr.Binary",
+   "author": "Deepbits",
+   "description": "Reverse-engineering help for malware, firmware, and vuln-research binaries.",
+   "url": "https://x.ai/bot/Pc2T7udSjGxv9pd9Spkyc"
+  },
+  {
+   "id": "privacy-security-scam-protection-qZcBjyxPRa1kWJ_sel0gv",
+   "code": "qZcBjyxPRa1kWJ_sel0gv",
+   "name": "FTC Report Scam Call",
+   "author": "Tim Sonner",
+   "description": "Paste a scam voicemail, call script, or screenshot, and this bot files the report at reportfraud.ftc.gov for you.",
+   "url": "https://x.ai/bot/qZcBjyxPRa1kWJ_sel0gv"
+  },
+  {
+   "id": "privacy-security-scam-protection-p5r-JzMfgQflcZsRk80gC",
+   "code": "p5r-JzMfgQflcZsRk80gC",
+   "name": "FillUpBot",
+   "author": "MythIII",
+   "description": "Scans your bot team, studies trending templates, and proposes tested, security-screened skill upgrades per seat, installed only on your yes with one-tap undo.",
+   "url": "https://x.ai/bot/p5r-JzMfgQflcZsRk80gC"
+  },
+  {
+   "id": "privacy-security-scam-protection-7v-lRs0HUGjU8zD_0-tGg",
+   "code": "7v-lRs0HUGjU8zD_0-tGg",
+   "name": "Firefox for Bots",
+   "author": "Garrett",
+   "description": "Installs Firefox on your bot box beside Chrome, with uBlock, synced passwords, shared logins, and the built-in VPN.",
+   "url": "https://x.ai/bot/7v-lRs0HUGjU8zD_0-tGg"
+  },
+  {
+   "id": "privacy-security-scam-protection-YZXOpjwJcGp1Owgm7PKir",
+   "code": "YZXOpjwJcGp1Owgm7PKir",
+   "name": "Footprint",
+   "author": "Seth Urban",
+   "description": "Finds every online account you've ever made, from Gmail evidence, breach data and username checks, then helps you remove the ones you pick.",
+   "url": "https://x.ai/bot/YZXOpjwJcGp1Owgm7PKir"
+  },
+  {
+   "id": "privacy-security-scam-protection-isq5lvLOWoox336BUWxju",
+   "code": "isq5lvLOWoox336BUWxju",
+   "name": "Fountain Stillwell",
+   "author": "Adriana Macko",
+   "description": "Keeper of your knowledge well: one folder of dated notes, a living wiki and an encrypted password vault shared by you and all your agents.",
+   "url": "https://x.ai/bot/isq5lvLOWoox336BUWxju"
+  },
+  {
+   "id": "privacy-security-scam-protection-iVWaw5fzh8ElR2DGQhMn-",
+   "code": "iVWaw5fzh8ElR2DGQhMn-",
+   "name": "Fraud Alert Bot",
+   "author": "American™ B",
+   "description": "Monitors public reports of government fraud, waste and abuse and surfaces documented cases with sources. Strict rules, no speculation.",
+   "url": "https://x.ai/bot/iVWaw5fzh8ElR2DGQhMn-"
+  },
+  {
+   "id": "privacy-security-scam-protection-1nMkAQNLEZ6NVoBuejQc5",
+   "code": "1nMkAQNLEZ6NVoBuejQc5",
+   "name": "Fraud Bot",
+   "author": "John Ferguson",
+   "description": "For freight brokers and carriers: hunts illegal MC/USDOT authority sellers and renters, logs evidence and prepares FTC, FMCSA, IC3 and platform reports.",
+   "url": "https://x.ai/bot/1nMkAQNLEZ6NVoBuejQc5"
+  },
+  {
+   "id": "privacy-security-scam-protection-JHSAxXQxijbB6PeopDHXh",
+   "code": "JHSAxXQxijbB6PeopDHXh",
+   "name": "Fraud Scout",
+   "author": "Christopher Banks",
+   "description": "Scans free federal health care data (OIG exclusions, CMS Medicare billing and ownership, NPI registry) for possible fraud leads in hospice and home care.",
+   "url": "https://x.ai/bot/JHSAxXQxijbB6PeopDHXh"
+  },
+  {
+   "id": "privacy-security-scam-protection-HSx6HHjUF9_F9kL9qA34m",
+   "code": "HSx6HHjUF9_F9kL9qA34m",
+   "name": "Fraud Tip Researcher",
+   "author": "Arthur MacWaters",
+   "description": "Researches a business, clinic, nonprofit or contractor you suspect of defrauding a government program, using only public records, into a sourced packet.",
+   "url": "https://x.ai/bot/HSx6HHjUF9_F9kL9qA34m"
+  },
+  {
+   "id": "privacy-security-scam-protection-Q6qcvlhtNtf3TPB-aebIu",
+   "code": "Q6qcvlhtNtf3TPB-aebIu",
+   "name": "Funding Desk",
+   "author": "ISSAH ABUBAKARI",
+   "description": "Finance scout that finds verified grants, loans, equity and pitch competitions for your business, flags scams, and drafts applications for you to review.",
+   "url": "https://x.ai/bot/Q6qcvlhtNtf3TPB-aebIu"
+  },
+  {
+   "id": "privacy-security-scam-protection-GMgVqKF_rn4UU6jISZ_V_",
+   "code": "GMgVqKF_rn4UU6jISZ_V_",
+   "name": "Gatekeeper",
+   "author": "Abel",
+   "description": "Home network admin for your Wi-Fi, router, mesh, devices, security and parental controls; watches for new devices and outages, asks before changing anything.",
+   "url": "https://x.ai/bot/GMgVqKF_rn4UU6jISZ_V_"
+  },
+  {
+   "id": "privacy-security-scam-protection-D03y99U4zXKh0cshnhgah",
+   "code": "D03y99U4zXKh0cshnhgah",
+   "name": "Gatekeeper by SocialBrand",
+   "author": "Pieter",
+   "description": "Security-first access control for bots sharing one computer: decides which bot may use which signed-in service, checks logins each weekday morning.",
+   "url": "https://x.ai/bot/D03y99U4zXKh0cshnhgah"
+  },
+  {
+   "id": "privacy-security-scam-protection-NgcEs4fCGiedjVLJp8x0l",
+   "code": "NgcEs4fCGiedjVLJp8x0l",
+   "name": "GetSued",
+   "author": "Justin Truell",
+   "description": "Helps a self-represented consumer log spam calls and texts, identify the right parties, file agency reports, and draft…",
+   "url": "https://x.ai/bot/NgcEs4fCGiedjVLJp8x0l"
+  },
+  {
+   "id": "privacy-security-scam-protection-ngces4fcgiedjvljp8x0l",
+   "code": "ngces4fcgiedjvljp8x0l",
+   "name": "GetSued",
+   "author": "Justin",
+   "description": "Helps a self-represented consumer log spam calls and texts, identify the right parties, file agency reports, and draft demands or court papers…",
+   "url": "https://x.ai/bot/ngces4fcgiedjvljp8x0l"
+  },
+  {
+   "id": "privacy-security-scam-protection-852IE_26SAlD0C02ZUoDR",
+   "code": "852IE_26SAlD0C02ZUoDR",
+   "name": "Ghost",
+   "author": "Dave Gambrill",
+   "description": "Removes your home address, phones and emails from people-search and data-broker sites with free opt-outs, keeps a log and rechecks for reappearances.",
+   "url": "https://x.ai/bot/852IE_26SAlD0C02ZUoDR"
+  },
+  {
+   "id": "privacy-security-scam-protection-L5YqrFJnduxwluAGsYFmu",
+   "code": "L5YqrFJnduxwluAGsYFmu",
+   "name": "Ghost Mode",
+   "author": "Gene O’Dell",
+   "description": "Free data-broker and people-search removal, with built-in verification and monthly re-checks.",
+   "url": "https://x.ai/bot/L5YqrFJnduxwluAGsYFmu"
+  },
+  {
+   "id": "privacy-security-scam-protection-sUJWewQwEQ13pJLFW5dPU",
+   "code": "sUJWewQwEQ13pJLFW5dPU",
+   "name": "Global Alert",
+   "author": "Jon Leary",
+   "description": "Personal alerts desk: on demand scans weather, transport, power, unrest, health, scams, cyber and money news, verifies it and says what affects you first.",
+   "url": "https://x.ai/bot/sUJWewQwEQ13pJLFW5dPU"
+  },
+  {
+   "id": "privacy-security-scam-protection-vsCDaIn2Od_BkfWp0Vehm",
+   "code": "vsCDaIn2Od_BkfWp0Vehm",
+   "name": "Grokleros",
+   "author": "jaybuidl",
+   "description": "A 24/7 Kleros V2 juror. Reads evidence pixels-first, ignores prompt injection, votes via AgentKit, and keeps clock…",
+   "url": "https://x.ai/bot/vsCDaIn2Od_BkfWp0Vehm"
+  },
+  {
+   "id": "privacy-security-scam-protection-zU2WY6PaaY2EWzuo4GxP5",
+   "code": "zU2WY6PaaY2EWzuo4GxP5",
+   "name": "Hack Bot",
+   "author": "QUANTUM HACKER",
+   "description": "Elite recon + vulnerability-hunting agent for authorized security testing.",
+   "url": "https://x.ai/bot/zU2WY6PaaY2EWzuo4GxP5"
+  },
+  {
+   "id": "privacy-security-scam-protection-AfdBR4eaHcJ9jfENTBPXh",
+   "code": "AfdBR4eaHcJ9jfENTBPXh",
+   "name": "Heimdall Chief Of Security",
+   "author": "Elise",
+   "description": "Keeps watch over your X account: finds impersonators using your photos, flags scam and bot followers and shady accounts you follow, weekly read-only check.",
+   "url": "https://x.ai/bot/AfdBR4eaHcJ9jfENTBPXh"
+  },
+  {
+   "id": "privacy-security-scam-protection-zM69z4OgdFDSzWcFNsQqx",
+   "code": "zM69z4OgdFDSzWcFNsQqx",
+   "name": "Ho Be Gone",
+   "author": "Jay",
+   "description": "Blocks scam, impersonator, and spam-bot accounts among your X followers and interactions.",
+   "url": "https://x.ai/bot/zM69z4OgdFDSzWcFNsQqx"
+  },
+  {
+   "id": "privacy-security-scam-protection-lKfEfQBUdsa0MPhm-4SQU",
+   "code": "lKfEfQBUdsa0MPhm-4SQU",
+   "name": "Homeland Security Advisor",
+   "author": "Sentinel Architech",
+   "description": "Defend-only homeland security advisor for a decentralized network.",
+   "url": "https://x.ai/bot/lKfEfQBUdsa0MPhm-4SQU"
+  },
+  {
+   "id": "privacy-security-scam-protection-OvKvXzj7OOyEGh_jwNaBW",
+   "code": "OvKvXzj7OOyEGh_jwNaBW",
+   "name": "Hydra — Network Security Advisor",
+   "author": "Sentinel Architech",
+   "description": "A defend-only network security advisor. It helps you design, check, and harden your own network and repos with open-source tools and public baselines…",
+   "url": "https://x.ai/bot/OvKvXzj7OOyEGh_jwNaBW"
+  },
+  {
+   "id": "privacy-security-scam-protection-u8jzGXHU3FHU0jQkDnYqW",
+   "code": "u8jzGXHU3FHU0jQkDnYqW",
+   "name": "Idle Tees Security",
+   "author": "Kas",
+   "description": "Security specialist for idle/incremental games: save integrity, client trust boundaries, cheat resistance, secrets, and safe GitHub/CI. Files findings.",
+   "url": "https://x.ai/bot/u8jzGXHU3FHU0jQkDnYqW"
+  },
+  {
+   "id": "privacy-security-scam-protection-GtZXU_8Lia_a2DZKAIhOO",
+   "code": "GtZXU_8Lia_a2DZKAIhOO",
+   "name": "ImmigrationGuide",
+   "author": "Carolina Dill",
+   "description": "Explains legal ways to immigrate to or stay in the U.S., and how to spot immigration scams, citing live official…",
+   "url": "https://x.ai/bot/GtZXU_8Lia_a2DZKAIhOO"
+  },
+  {
+   "id": "privacy-security-scam-protection-n6bSJ2vt2rZuIQahc6G1h",
+   "code": "n6bSJ2vt2rZuIQahc6G1h",
+   "name": "Inbox Guardian: Email Phishing/Scam Detector Bot",
+   "author": "@nft_dreww",
+   "description": "Watches your inbox for phishing and scam emails, moves high-confidence scams to spam, flags suspicious ones for review…",
+   "url": "https://x.ai/bot/n6bSJ2vt2rZuIQahc6G1h"
+  },
+  {
+   "id": "privacy-security-scam-protection-AuRl63vClYTOCWuahuCxH",
+   "code": "AuRl63vClYTOCWuahuCxH",
+   "name": "InfoSec Guard",
+   "author": "Michael Kanning",
+   "description": "Calm, report-only security chief for small businesses: checks your drive, notes, shared computer and accounts daily for exposed client data.",
+   "url": "https://x.ai/bot/AuRl63vClYTOCWuahuCxH"
+  },
+  {
+   "id": "privacy-security-scam-protection-avOGLCUGcrQ0T23v2lENG",
+   "code": "avOGLCUGcrQ0T23v2lENG",
+   "name": "Invisible Man",
+   "author": "@crap_poster3000",
+   "description": "Finds your phone number, name, and address on people-search sites, files the opt-outs, puts you on the Do Not Call list.",
+   "url": "https://x.ai/bot/avOGLCUGcrQ0T23v2lENG"
+  },
+  {
+   "id": "privacy-security-scam-protection-GYnL6NtFZvbxEBFatQc8c",
+   "code": "GYnL6NtFZvbxEBFatQc8c",
+   "name": "Is This Debt Collector Real?",
+   "author": "Kimberly Hunter",
+   "description": "Reads a collection call, text, or letter for scam signs, explains your rights, drafts a debt-validation letter, and tracks the 30-day window.",
+   "url": "https://x.ai/bot/GYnL6NtFZvbxEBFatQc8c"
+  },
+  {
+   "id": "privacy-security-scam-protection-Jc3Eh6tRUvTLYqdGjTm7q",
+   "code": "Jc3Eh6tRUvTLYqdGjTm7q",
+   "name": "Is This a Scam?",
+   "author": "Jared",
+   "description": "Send it any text, email, link, DM, job offer or screenshot that feels off and get a plain verdict on whether it's a scam, plus the safe next step.",
+   "url": "https://x.ai/bot/Jc3Eh6tRUvTLYqdGjTm7q"
+  },
+  {
+   "id": "privacy-security-scam-protection-vGBwBEELW79gSF340zJpb",
+   "code": "vGBwBEELW79gSF340zJpb",
+   "name": "Jarvis Coordinator",
+   "author": "Harald",
+   "description": "German coordinator bot with specialist partners for news, office, sales, systems, and a security auditor under tight approvals.",
+   "url": "https://x.ai/bot/vGBwBEELW79gSF340zJpb"
+  },
+  {
+   "id": "privacy-security-scam-protection-5WjkScpOGu4PHUD9Tc8Kg",
+   "code": "5WjkScpOGu4PHUD9Tc8Kg",
+   "name": "Junk Mail Scrubber",
+   "author": "@ogjustinw",
+   "description": "Files US junk mail opt-outs for you using just your name, address and email, then tells you exactly what was filed…",
+   "url": "https://x.ai/bot/5WjkScpOGu4PHUD9Tc8Kg"
+  },
+  {
+   "id": "privacy-security-scam-protection-r8anV9oVyV1E2l7sUCuY6",
+   "code": "r8anV9oVyV1E2l7sUCuY6",
+   "name": "Keep My Privacy",
+   "author": "C G",
+   "description": "Finds your name, address, and phone on people-search sites, files free opt-outs, and rechecks monthly. Collects personal data only through a Secure Form.",
+   "url": "https://x.ai/bot/r8anV9oVyV1E2l7sUCuY6"
+  },
+  {
+   "id": "privacy-security-scam-protection-eVkuTHcfSkuiIQh4Y4TmM",
+   "code": "eVkuTHcfSkuiIQh4Y4TmM",
+   "name": "Lane Carrier Finder",
+   "author": "Mark G",
+   "description": "Carrier sourcing for independent freight brokers: finds for-hire carriers near your lanes in FMCSA data, vets authority, insurance and safety, flags fraud.",
+   "url": "https://x.ai/bot/eVkuTHcfSkuiIQh4Y4TmM"
+  },
+  {
+   "id": "privacy-security-scam-protection-DkHvWCLMU2k2qN9lfPoP_",
+   "code": "DkHvWCLMU2k2qN9lfPoP_",
+   "name": "Lexy",
+   "author": "Petru",
+   "description": "Household legal and admin helper for any country: consumer rights, warranties, bills, leases, privacy requests and fines, with official citations and drafts.",
+   "url": "https://x.ai/bot/DkHvWCLMU2k2qN9lfPoP_"
+  },
+  {
+   "id": "privacy-security-scam-protection-bxxZWaTJ3NhhxAuDE6XKJ",
+   "code": "bxxZWaTJ3NhhxAuDE6XKJ",
+   "name": "List Escape",
+   "author": "Kevin Chau",
+   "description": "Gets you off political campaign and PAC email and text lists. It traces who's mailing you, uses platform-wide opt-outs.",
+   "url": "https://x.ai/bot/bxxZWaTJ3NhhxAuDE6XKJ"
+  },
+  {
+   "id": "privacy-security-scam-protection-C5EIiTZZL2pPpsb_po7Zs",
+   "code": "C5EIiTZZL2pPpsb_po7Zs",
+   "name": "Lockdown",
+   "author": "Liam",
+   "description": "Personal digital security guide that finds online accounts and walks lock-down steps on official first-party pages one at a time.",
+   "url": "https://x.ai/bot/C5EIiTZZL2pPpsb_po7Zs"
+  },
+  {
+   "id": "privacy-security-scam-protection-Mmcfff6ubyzhSnqMAQ3NA",
+   "code": "Mmcfff6ubyzhSnqMAQ3NA",
+   "name": "MDH Hill Charts",
+   "author": "Mark D. Hill",
+   "description": "Builds high-contrast, source-disciplined charts on Iran currency, oil collapse, and security-force payroll pressure.",
+   "url": "https://x.ai/bot/Mmcfff6ubyzhSnqMAQ3NA"
+  },
+  {
+   "id": "privacy-security-scam-protection-jmbHtZILFugYF0alMT7yI",
+   "code": "jmbHtZILFugYF0alMT7yI",
+   "name": "Mac Cleaner",
+   "author": "Zack Gabbard",
+   "description": "Checks AI-built (vibe-coded) iOS apps for the most common security, cost, App Store and legal mistakes before testing or submission.",
+   "url": "https://x.ai/bot/jmbHtZILFugYF0alMT7yI"
+  },
+  {
+   "id": "privacy-security-scam-protection-1-UWhTw5N6IVgOcDZHrsb",
+   "code": "1-UWhTw5N6IVgOcDZHrsb",
+   "name": "Magnum Seiba",
+   "author": "Younes Aberkane",
+   "description": "Operates your Tesla through Teslr. Charge, climate, closures, navigation, security, and schedules.",
+   "url": "https://x.ai/bot/1-UWhTw5N6IVgOcDZHrsb"
+  },
+  {
+   "id": "privacy-security-scam-protection-6XwjJ_W0mX_ybK4ts_Ngb",
+   "code": "6XwjJ_W0mX_ybK4ts_Ngb",
+   "name": "Mirror",
+   "author": "@suddenlyjon",
+   "description": "Can pause anyone, including Bottyguard, while hunting injection and leash breaks.",
+   "url": "https://x.ai/bot/6XwjJ_W0mX_ybK4ts_Ngb"
+  },
+  {
+   "id": "privacy-security-scam-protection-vj2b2E2sbf2rBU0zzzRUw",
+   "code": "vj2b2E2sbf2rBU0zzzRUw",
+   "name": "Missed Variable",
+   "author": "linh",
+   "description": "Reasoning gym that deals business, AI, scam, and everyday scenarios, has you make the call, then names the variable you missed and hears your pushback.",
+   "url": "https://x.ai/bot/vj2b2E2sbf2rBU0zzzRUw"
+  },
+  {
+   "id": "privacy-security-scam-protection-CJvgkBx_INfugO8TtH7gp",
+   "code": "CJvgkBx_INfugO8TtH7gp",
+   "name": "Mood Security",
+   "author": "David",
+   "description": "Weekly read-only audit of your GitHub repos: leaked secrets, vulnerable deps, branch protection and workflows.",
+   "url": "https://x.ai/bot/CJvgkBx_INfugO8TtH7gp"
+  },
+  {
+   "id": "privacy-security-scam-protection-h7ez-fl_Y7bnVud1g-GAd",
+   "code": "h7ez-fl_Y7bnVud1g-GAd",
+   "name": "Moss",
+   "author": "Matt",
+   "description": "Friendly Windows 10/11 fixer for one home PC: diagnoses crashes, slowness and broken apps, runs a weekly checkup, swaps paid security tools for built-in ones.",
+   "url": "https://x.ai/bot/h7ez-fl_Y7bnVud1g-GAd"
+  },
+  {
+   "id": "privacy-security-scam-protection-TeEdtOdobgymTchbFqzzW",
+   "code": "TeEdtOdobgymTchbFqzzW",
+   "name": "Mr. Rigz",
+   "author": "Jonathan Souza",
+   "description": "A PC performance and security steward for a Windows home PC. Runs read-only health and security checks, flags problems.",
+   "url": "https://x.ai/bot/TeEdtOdobgymTchbFqzzW"
+  },
+  {
+   "id": "privacy-security-scam-protection-7qbvIBfoBsyf-TWfs74pi",
+   "code": "7qbvIBfoBsyf-TWfs74pi",
+   "name": "NA Privacy Scrub",
+   "author": "Oliver Cote",
+   "description": "Canada/US people-search and data-broker removal coach — hybrid DIY plus human gates for CAPTCHA, OTP, and sends…",
+   "url": "https://x.ai/bot/7qbvIBfoBsyf-TWfs74pi"
+  },
+  {
+   "id": "privacy-security-scam-protection-a20GcCw4XLQgBw8YGSM4M",
+   "code": "a20GcCw4XLQgBw8YGSM4M",
+   "name": "Neo",
+   "author": "American Patriot Lock and Key",
+   "description": "Full-stack programmer, security, sysadmin and Linux expert: helps with code, servers, hardening and day-to-day ops.",
+   "url": "https://x.ai/bot/a20GcCw4XLQgBw8YGSM4M"
+  },
+  {
+   "id": "privacy-security-scam-protection-UDQglxTgFIcaLqet3cVt2",
+   "code": "UDQglxTgFIcaLqet3cVt2",
+   "name": "Number Guard",
+   "author": "KSJ",
+   "description": "Finds your phone number on people-search and data broker sites, submits the free opt-outs you approve, then re-checks to cut spam calls.",
+   "url": "https://x.ai/bot/UDQglxTgFIcaLqet3cVt2"
+  },
+  {
+   "id": "privacy-security-scam-protection-DGCc_1csoUkxOktganZFa",
+   "code": "DGCc_1csoUkxOktganZFa",
+   "name": "Number Scrubber",
+   "author": "Crypto",
+   "description": "Your ONLY job: get the user's phone number off people-search and data-broker sites so they get fewer spam calls and texts.",
+   "url": "https://x.ai/bot/DGCc_1csoUkxOktganZFa"
+  },
+  {
+   "id": "privacy-security-scam-protection-HAIGA0nUYgv85CtV5SMWa",
+   "code": "HAIGA0nUYgv85CtV5SMWa",
+   "name": "OMNI Grok-Bot",
+   "author": "Tim Harpster",
+   "description": "Companion door for One Mission work with a hard privacy wall.",
+   "url": "https://x.ai/bot/HAIGA0nUYgv85CtV5SMWa"
+  },
+  {
+   "id": "privacy-security-scam-protection-dVA3KrJ80o-MfPl8Wqh_G",
+   "code": "dVA3KrJ80o-MfPl8Wqh_G",
+   "name": "OPSEC",
+   "author": "Jason Silva",
+   "description": "Defensive security bot for small businesses and solo devs: inventories apps, repos, deploys and domains, and reports leaked secrets and misconfigs with fixes.",
+   "url": "https://x.ai/bot/dVA3KrJ80o-MfPl8Wqh_G"
+  },
+  {
+   "id": "privacy-security-scam-protection-tSUFdzcg2WDFLFsFLHzIb",
+   "code": "tSUFdzcg2WDFLFsFLHzIb",
+   "name": "Off-Balance Atlas",
+   "author": "Adem Vessell",
+   "description": "A research and writing partner for tech, machine learning, computer science, security, and cyber.",
+   "url": "https://x.ai/bot/tSUFdzcg2WDFLFsFLHzIb"
+  },
+  {
+   "id": "privacy-security-scam-protection-KPK89zuI30cV2Cz35s71s",
+   "code": "KPK89zuI30cV2Cz35s71s",
+   "name": "Old Posts Auditor",
+   "author": "Unicode",
+   "description": "Scans your own X history for privacy leaks (city, phone, workplace, address, email, and similar), flags them with quotes and links, and reports…",
+   "url": "https://x.ai/bot/KPK89zuI30cV2Cz35s71s"
+  },
+  {
+   "id": "privacy-security-scam-protection-cfXdLd_SGsgTIN9eq1pgh",
+   "code": "cfXdLd_SGsgTIN9eq1pgh",
+   "name": "Online Profile",
+   "author": "Derik",
+   "description": "A privacy desk that removes your personal info and old online identities from people-search sites using their free opt-outs. No paid accounts needed.",
+   "url": "https://x.ai/bot/cfXdLd_SGsgTIN9eq1pgh"
+  },
+  {
+   "id": "privacy-security-scam-protection-gScsnzjOwAhlaxo-cKVl5",
+   "code": "gScsnzjOwAhlaxo-cKVl5",
+   "name": "Opt Out Buddy",
+   "author": "Magik",
+   "description": "Fewer spam calls, junk mail, and marketing emails, without paying a removal service.",
+   "url": "https://x.ai/bot/gScsnzjOwAhlaxo-cKVl5"
+  },
+  {
+   "id": "privacy-security-scam-protection-mCUSKCtcct557wRi8D3uk",
+   "code": "mCUSKCtcct557wRi8D3uk",
+   "name": "PHP Vulnerability Checker",
+   "author": "Jonathan Newburg",
+   "description": "Scans your Linux, Windows and macOS computers and Docker containers for PHP versions hit by the latest security bugs, explains the risk, patches on your say-so.",
+   "url": "https://x.ai/bot/mCUSKCtcct557wRi8D3uk"
+  },
+  {
+   "id": "privacy-security-scam-protection-AmWeqsgVQN-VPGbB-SRRC",
+   "code": "AmWeqsgVQN-VPGbB-SRRC",
+   "name": "PHP2Shell Patcher and Vuln Scout",
+   "author": "Owen Gidusko",
+   "description": "Fixes the critical PHP2Shell flaws on your sites or servers and watches trusted security accounts for new critical bugs. Asks before every change.",
+   "url": "https://x.ai/bot/AmWeqsgVQN-VPGbB-SRRC"
+  },
+  {
+   "id": "privacy-security-scam-protection-WmVmTzIKZK1jCunVOigvf",
+   "code": "WmVmTzIKZK1jCunVOigvf",
+   "name": "Pennie Tester",
+   "author": "Debra Baker",
+   "description": "Passive web security scanner for consultants and security teams: checks sites for OWASP Top 10 weaknesses, no exploits unless you confirm written permission.",
+   "url": "https://x.ai/bot/WmVmTzIKZK1jCunVOigvf"
+  },
+  {
+   "id": "privacy-security-scam-protection-k9bVTKlulPhY337O9us_O",
+   "code": "k9bVTKlulPhY337O9us_O",
+   "name": "Personal Information Removal",
+   "author": "Tech Geek Anthony",
+   "description": "Finds where your personal info shows up on people-search and data broker sites and helps you get it removed.",
+   "url": "https://x.ai/bot/k9bVTKlulPhY337O9us_O"
+  },
+  {
+   "id": "privacy-security-scam-protection-zPBVnLWm9zXhmIjpx2G9D",
+   "code": "zPBVnLWm9zXhmIjpx2G9D",
+   "name": "Plugin Factory",
+   "author": "Everest Chris",
+   "description": "Finds small jobs people search for every week, ships them as ChatGPT plugins, and sells a paid tier through Whop.",
+   "url": "https://x.ai/bot/zPBVnLWm9zXhmIjpx2G9D"
+  },
+  {
+   "id": "privacy-security-scam-protection-QocForhSlcY5fuaSGU2bV",
+   "code": "QocForhSlcY5fuaSGU2bV",
+   "name": "Political Text Opt-Out Helper",
+   "author": "Preston",
+   "description": "Gets your phone number off political campaign, PAC, party, and advocacy group text lists by guiding STOP replies and spam reports and filing removal.",
+   "url": "https://x.ai/bot/QocForhSlcY5fuaSGU2bV"
+  },
+  {
+   "id": "privacy-security-scam-protection-v---Trj_COHdSyhKC9c2-",
+   "code": "v---Trj_COHdSyhKC9c2-",
+   "name": "Porchlight",
+   "author": "Shaun",
+   "description": "A patient daily companion for an older parent, especially one living alone, that helps with reminders, appointments, scam checks, groceries.",
+   "url": "https://x.ai/bot/v---Trj_COHdSyhKC9c2-"
+  },
+  {
+   "id": "privacy-security-scam-protection-m8LgFBTwlCWHQvVMy77z_",
+   "code": "m8LgFBTwlCWHQvVMy77z_",
+   "name": "Privacy",
+   "author": "S.O. Washington",
+   "description": "A free privacy assistant that finds your personal info on people-search sites and data brokers, walks you through…",
+   "url": "https://x.ai/bot/m8LgFBTwlCWHQvVMy77z_"
+  },
+  {
+   "id": "privacy-security-scam-protection-RqJusziCw_I6nivbbXC3P",
+   "code": "RqJusziCw_I6nivbbXC3P",
+   "name": "Privacy",
+   "author": "Null",
+   "description": "Removes your personal info from data brokers, people-search sites and face-search engines, keeps a removal ledger, and rechecks monthly for relistings.",
+   "url": "https://x.ai/bot/RqJusziCw_I6nivbbXC3P"
+  },
+  {
+   "id": "privacy-security-scam-protection-0F2cyISYl_QvYQAHnACgC",
+   "code": "0F2cyISYl_QvYQAHnACgC",
+   "name": "Privacy Bot",
+   "author": "Mister X",
+   "description": "Finds your name, phone, address and old emails on people-search sites, data brokers, forums and old accounts, submits removals you approve, rechecks in 30 days.",
+   "url": "https://x.ai/bot/0F2cyISYl_QvYQAHnACgC"
+  },
+  {
+   "id": "privacy-security-scam-protection-5xaVi-TUgqQaWyFyuyidS",
+   "code": "5xaVi-TUgqQaWyFyuyidS",
+   "name": "Privacy Cleaner",
+   "author": "Nostratomas",
+   "description": "Finds your listings on people-search and data-broker sites, submits the opt-outs you approve, logs every request and sets recheck routines.",
+   "url": "https://x.ai/bot/5xaVi-TUgqQaWyFyuyidS"
+  },
+  {
+   "id": "privacy-security-scam-protection-ijBKEy5HW8IEraMpM-G3L",
+   "code": "ijBKEy5HW8IEraMpM-G3L",
+   "name": "Privacy Cleanup",
+   "author": "Jordan",
+   "description": "Finds where your phone number and personal info show up on people-search sites and files the removal requests for you.",
+   "url": "https://x.ai/bot/ijBKEy5HW8IEraMpM-G3L"
+  },
+  {
+   "id": "privacy-security-scam-protection-YzKteiptqxruo2Wdt_n9m",
+   "code": "YzKteiptqxruo2Wdt_n9m",
+   "name": "Privacy Cleanup",
+   "author": "@grokshroom",
+   "description": "Helps you get outdated or sensitive pages about you or your family taken down, like old news stories naming minor children.",
+   "url": "https://x.ai/bot/YzKteiptqxruo2Wdt_n9m"
+  },
+  {
+   "id": "privacy-security-scam-protection-ZfnCBw8WnIgMynLlika6H",
+   "code": "ZfnCBw8WnIgMynLlika6H",
+   "name": "Privacy Ops",
+   "author": "Mb B",
+   "description": "Data-broker and dead-account removal queue. Finds listings and forgotten logins, drafts official opt-outs, files only after you say yes, and rechecks.",
+   "url": "https://x.ai/bot/ZfnCBw8WnIgMynLlika6H"
+  },
+  {
+   "id": "privacy-security-scam-protection-P8_6R--AZMCWOfs085X7K",
+   "code": "P8_6R--AZMCWOfs085X7K",
+   "name": "Privacy Prince",
+   "author": "Christian Amechi",
+   "description": "Privacy, policy, and reviewer-access desk for app releases. Builds evidence-backed App Store privacy labels and Google Play Data Safety drafts.",
+   "url": "https://x.ai/bot/P8_6R--AZMCWOfs085X7K"
+  },
+  {
+   "id": "privacy-security-scam-protection-pFTjG5vpACbHLnD2M49d7",
+   "code": "pFTjG5vpACbHLnD2M49d7",
+   "name": "Privacy Scrub",
+   "author": "althetime",
+   "description": "Finds where your email, phone, name, and address are exposed and removes them through free official opt-outs, only with your OK.",
+   "url": "https://x.ai/bot/pFTjG5vpACbHLnD2M49d7"
+  },
+  {
+   "id": "privacy-security-scam-protection-gf9wwbq4t8Rl_qnElTPiN",
+   "code": "gf9wwbq4t8Rl_qnElTPiN",
+   "name": "Privacy Scrub",
+   "author": "Edward K",
+   "description": "Keeps your phone numbers and email addresses off people-search sites, caller-ID and email-lookup databases, business contact databases and marketing lists.",
+   "url": "https://x.ai/bot/gf9wwbq4t8Rl_qnElTPiN"
+  },
+  {
+   "id": "privacy-security-scam-protection-xWzmqrAs6JGivQQskJyNy",
+   "code": "xWzmqrAs6JGivQQskJyNy",
+   "name": "Privacy Sentinel",
+   "author": "Sid Hayes",
+   "description": "A personal and household privacy check that finds your breached emails, data-broker listings and exposed details, then gives you a short, ranked fix list.",
+   "url": "https://x.ai/bot/xWzmqrAs6JGivQQskJyNy"
+  },
+  {
+   "id": "privacy-security-scam-protection-4pJ47cTzvI9qnLSZT3zz4",
+   "code": "4pJ47cTzvI9qnLSZT3zz4",
+   "name": "Privacy Shield",
+   "author": "Pravinraj Vincent",
+   "description": "Gets your household off spam call, text and junk-mail lists: Do Not Call Registry, people-search and data-broker opt-outs, then re-scans for returns.",
+   "url": "https://x.ai/bot/4pJ47cTzvI9qnLSZT3zz4"
+  },
+  {
+   "id": "privacy-security-scam-protection-tK_DHDQGMmJb2vdumK9Dl",
+   "code": "tK_DHDQGMmJb2vdumK9Dl",
+   "name": "Privacy Shield",
+   "author": "Zach Pippin",
+   "description": "A personal privacy bot that finds and removes your listings from people-search and data broker sites using free…",
+   "url": "https://x.ai/bot/tK_DHDQGMmJb2vdumK9Dl"
+  },
+  {
+   "id": "privacy-security-scam-protection-VKfVgGBquo1XwzFtLdynw",
+   "code": "VKfVgGBquo1XwzFtLdynw",
+   "name": "Privacy Sweep",
+   "author": "Jeff Boldrick",
+   "description": "Finds you on people-search and data-broker sites, files opt-outs and deletion requests, clicks confirmations, rechecks nightly, then monthly for relists.",
+   "url": "https://x.ai/bot/VKfVgGBquo1XwzFtLdynw"
+  },
+  {
+   "id": "privacy-security-scam-protection-L7qSBOOLgC6QuDY3nYc2X",
+   "code": "L7qSBOOLgC6QuDY3nYc2X",
+   "name": "Privacy Sweep",
+   "author": "Noah",
+   "description": "Scrubs personal information from the internet for you and family.",
+   "url": "https://x.ai/bot/L7qSBOOLgC6QuDY3nYc2X"
+  },
+  {
+   "id": "privacy-security-scam-protection-ZchETiHIEo5BvllONepSI",
+   "code": "ZchETiHIEo5BvllONepSI",
+   "name": "Profile Pro",
+   "author": "Robbie Riggs",
+   "description": "Gives your X account a health score: red flags, security and shadowban checks, feed tuning and junk follows.",
+   "url": "https://x.ai/bot/ZchETiHIEo5BvllONepSI"
+  },
+  {
+   "id": "privacy-security-scam-protection-_tZPXK6Re_HQamujV_2zZ",
+   "code": "_tZPXK6Re_HQamujV_2zZ",
+   "name": "Project Zero FootPrint",
+   "author": "Grease",
+   "description": "A personal privacy helper that finds you on people-search sites and data brokers and gets those listings removed…",
+   "url": "https://x.ai/bot/_tZPXK6Re_HQamujV_2zZ"
+  },
+  {
+   "id": "privacy-security-scam-protection-k4tC99hzcfIgk0yrRKvuZ",
+   "code": "k4tC99hzcfIgk0yrRKvuZ",
+   "name": "Prompt Injection Tabletop",
+   "author": "#CarbeneAI",
+   "description": "Runs a defensive prompt-injection tabletop and leaves a shipping-ready hardening checklist. No attack tooling.",
+   "url": "https://x.ai/bot/k4tC99hzcfIgk0yrRKvuZ"
+  },
+  {
+   "id": "privacy-security-scam-protection-cWD95O1oJhM73cMPsrbCQ",
+   "code": "cWD95O1oJhM73cMPsrbCQ",
+   "name": "Quiet Mogul",
+   "author": "nahjuin",
+   "description": "Finds a boring niche people search for every day, builds a small useful directory site one page a night, and drafts…",
+   "url": "https://x.ai/bot/cWD95O1oJhM73cMPsrbCQ"
+  },
+  {
+   "id": "privacy-security-scam-protection-lTECTKtNLwK_xZhTaq_d_",
+   "code": "lTECTKtNLwK_xZhTaq_d_",
+   "name": "Redact",
+   "author": "Tag Locklar",
+   "description": "Removes your info from people-search and data-broker sites with consent intake, automated opt-outs, one digest for blocked sites, and weekday rechecks.",
+   "url": "https://x.ai/bot/lTECTKtNLwK_xZhTaq_d_"
+  },
+  {
+   "id": "privacy-security-scam-protection-UAP3RBvypVexaojEVEvLj",
+   "code": "UAP3RBvypVexaojEVEvLj",
+   "name": "Redact",
+   "author": "Jason Neas",
+   "description": "Finds your personal info on people-search and data-broker sites, files the opt-outs, tracks confirmations, and rechecks that removals stick.",
+   "url": "https://x.ai/bot/UAP3RBvypVexaojEVEvLj"
+  },
+  {
+   "id": "privacy-security-scam-protection-Abz5txK3unOkm5ZxCGGX-",
+   "code": "Abz5txK3unOkm5ZxCGGX-",
+   "name": "Redact",
+   "author": "Olen Latham",
+   "description": "Files official first-party people-search opt-out forms for one authorized person.",
+   "url": "https://x.ai/bot/Abz5txK3unOkm5ZxCGGX-"
+  },
+  {
+   "id": "privacy-security-scam-protection-js1pBP-lLlivKHY8Q_d4v",
+   "code": "js1pBP-lLlivKHY8Q_d4v",
+   "name": "Remote Scout",
+   "author": "Frog Franklin",
+   "description": "Finds verified, currently open remote jobs that need no degree, filters out scams, logs them in a CSV tracker and hands them to your applying bot.",
+   "url": "https://x.ai/bot/js1pBP-lLlivKHY8Q_d4v"
+  },
+  {
+   "id": "privacy-security-scam-protection-qlDBDdHjGkHD9pka-9fRy",
+   "code": "qlDBDdHjGkHD9pka-9fRy",
+   "name": "Remove Me",
+   "author": "OutworkVentures",
+   "description": "Finds where you appear on people-search sites, data brokers, old forums and directory scrapes, builds a table of each listing and how to rem.",
+   "url": "https://x.ai/bot/qlDBDdHjGkHD9pka-9fRy"
+  },
+  {
+   "id": "privacy-security-scam-protection-CB0g5w_vs2P9ZHaW9FpvQ",
+   "code": "CB0g5w_vs2P9ZHaW9FpvQ",
+   "name": "Rent Scout",
+   "author": "Julian Velazquez",
+   "description": "Finds rentals that fit your city, budget and commute, flags scams and overpriced listings, totals move-in costs and reads your lease for red flags.",
+   "url": "https://x.ai/bot/CB0g5w_vs2P9ZHaW9FpvQ"
+  },
+  {
+   "id": "privacy-security-scam-protection-MlXPQE0NgAwRLRwqGtzgr",
+   "code": "MlXPQE0NgAwRLRwqGtzgr",
+   "name": "Repo Security Auditor",
+   "author": "Denis Januzi",
+   "description": "Evidence-based security, malware, supply-chain and code-quality audits of GitHub repos you're authorized to assess; can prepare fixes on a review branch.",
+   "url": "https://x.ai/bot/MlXPQE0NgAwRLRwqGtzgr"
+  },
+  {
+   "id": "privacy-security-scam-protection-Uqeg5T3io0G8G4F5_emd_",
+   "code": "Uqeg5T3io0G8G4F5_emd_",
+   "name": "Reputation Scrub Specialist",
+   "author": "Bradley Turner",
+   "description": "Personal reputation specialist that helps people remove their info from people-search and data-broker sites after…",
+   "url": "https://x.ai/bot/Uqeg5T3io0G8G4F5_emd_"
+  },
+  {
+   "id": "privacy-security-scam-protection-zvY-ymHRxKP6aAkKycRmr",
+   "code": "zvY-ymHRxKP6aAkKycRmr",
+   "name": "Robocall Fighter",
+   "author": "Jamie Banas",
+   "description": "Send it a screenshot of a robocall voicemail.",
+   "url": "https://x.ai/bot/zvY-ymHRxKP6aAkKycRmr"
+  },
+  {
+   "id": "privacy-security-scam-protection-ODVzBFxSrO4LoXPHlgc9e",
+   "code": "ODVzBFxSrO4LoXPHlgc9e",
+   "name": "Sad SpHam",
+   "author": "AdventureNLearn Main",
+   "description": "Issues a unique email alias per signup, writes a data-use brief from that site’s own privacy policy, and flags…",
+   "url": "https://x.ai/bot/ODVzBFxSrO4LoXPHlgc9e"
+  },
+  {
+   "id": "privacy-security-scam-protection-LPrJZ6HZZXQBfYQeuYCR6",
+   "code": "LPrJZ6HZZXQBfYQeuYCR6",
+   "name": "Samsung TV Privacy & Debloat",
+   "author": "Scott Jordan",
+   "description": "Helps Samsung smart-TV owners turn off viewing-data tracking (ACR), ads and voice listening and trim bloat, from safe settings up to network blocking.",
+   "url": "https://x.ai/bot/LPrJZ6HZZXQBfYQeuYCR6"
+  },
+  {
+   "id": "privacy-security-scam-protection-TK3jh27fy9qZGcxRktI16",
+   "code": "TK3jh27fy9qZGcxRktI16",
+   "name": "Scam Bot",
+   "author": "Wife Of Dirty Tesla",
+   "description": "Finds accounts impersonating you on X and reports them in safe, paced batches. It also helps you size up suspicious messages.",
+   "url": "https://x.ai/bot/TK3jh27fy9qZGcxRktI16"
+  },
+  {
+   "id": "privacy-security-scam-protection-t9mlx--OQnQ2itHxQYQmd",
+   "code": "t9mlx--OQnQ2itHxQYQmd",
+   "name": "Scam Check",
+   "author": "Jeremy Mahoney",
+   "description": "A calm second opinion on suspicious texts, emails, voicemails, DMs or screenshots: decides whether it's a scam and says what to do next.",
+   "url": "https://x.ai/bot/t9mlx--OQnQ2itHxQYQmd"
+  },
+  {
+   "id": "privacy-security-scam-protection-E3_qOY1VUJWZMh2inUvwT",
+   "code": "E3_qOY1VUJWZMh2inUvwT",
+   "name": "Scam Email Detector",
+   "author": "Dirty Tesla",
+   "description": "Watches your inbox and warns you about phishing and scam emails before you fall for them. Stays quiet otherwise.",
+   "url": "https://x.ai/bot/E3_qOY1VUJWZMh2inUvwT"
+  },
+  {
+   "id": "privacy-security-scam-protection-6kHbobtMr8SAM91KgxHcw",
+   "code": "6kHbobtMr8SAM91KgxHcw",
+   "name": "Scam Guard",
+   "author": "Herbert",
+   "description": "Scans your Gmail or Outlook inbox twice a day for phishing and scam emails, labels the suspects, and tells you why.",
+   "url": "https://x.ai/bot/6kHbobtMr8SAM91KgxHcw"
+  },
+  {
+   "id": "privacy-security-scam-protection-ZSSddVUqIl5e6JCa4fDAh",
+   "code": "ZSSddVUqIl5e6JCa4fDAh",
+   "name": "Scam Guard",
+   "author": "Sarah Brundige",
+   "description": "Free, all-in-one scam defense for you and your family: set up a family safe word (as the FTC and FBI recommend against AI voice-clone calls), check…",
+   "url": "https://x.ai/bot/ZSSddVUqIl5e6JCa4fDAh"
+  },
+  {
+   "id": "privacy-security-scam-protection-Vju8QfyKmjEWoV-HJkctY",
+   "code": "Vju8QfyKmjEWoV-HJkctY",
+   "name": "Scam Shield",
+   "author": "Sarah Brundige",
+   "description": "Watches your X DMs and message requests on a schedule and warns about likely scammers with a score, red flags and the scam type. Read-only; you decide.",
+   "url": "https://x.ai/bot/Vju8QfyKmjEWoV-HJkctY"
+  },
+  {
+   "id": "privacy-security-scam-protection-4icfLegUJ3x_4-WHMXdYs",
+   "code": "4icfLegUJ3x_4-WHMXdYs",
+   "name": "Scam Shield",
+   "author": "Honeycomb",
+   "description": "Paste or forward any suspicious text, email, DM, call, link, QR code or screenshot to hear how scammy it looks, the red flags and what to do next.",
+   "url": "https://x.ai/bot/4icfLegUJ3x_4-WHMXdYs"
+  },
+  {
+   "id": "privacy-security-scam-protection-ScauLXTwfTgO-jLrSJLCD",
+   "code": "ScauLXTwfTgO-jLrSJLCD",
+   "name": "Scam Shield",
+   "author": "KM C",
+   "description": "A calm second opinion on any text, email, call, popup or deal that feels off: a clear verdict, a simple explanation and what to do. For non-techy people.",
+   "url": "https://x.ai/bot/ScauLXTwfTgO-jLrSJLCD"
+  },
+  {
+   "id": "privacy-security-scam-protection-HeysWXLhG5F2dQuu6RvQJ",
+   "code": "HeysWXLhG5F2dQuu6RvQJ",
+   "name": "Scam Text & Email Checker",
+   "author": "giga",
+   "description": "Checks suspicious texts, emails and DMs for scam signs in any language: Likely legit, Be careful or Likely scam, with the red and green flags and next steps.",
+   "url": "https://x.ai/bot/HeysWXLhG5F2dQuu6RvQJ"
+  },
+  {
+   "id": "privacy-security-scam-protection-TVjmqBUvLv0baNwDl8xcd",
+   "code": "TVjmqBUvLv0baNwDl8xcd",
+   "name": "Scholarship Scout",
+   "author": "Hudson S.",
+   "description": "Finds scholarships, grants and fellowships you or a family member actually qualify for, flags scams and drafts essays for your review.",
+   "url": "https://x.ai/bot/TVjmqBUvLv0baNwDl8xcd"
+  },
+  {
+   "id": "privacy-security-scam-protection-DCfu2JN_4J7q_GgsWb3MM",
+   "code": "DCfu2JN_4J7q_GgsWb3MM",
+   "name": "Scholty's Email Scam Filter",
+   "author": "Dieter Scholtyssek",
+   "description": "Scans your Gmail read-only for scams, phishing, and spoofing, scores each suspicious email 0-100 against fresh FTC, FBI, and BBB alerts.",
+   "url": "https://x.ai/bot/DCfu2JN_4J7q_GgsWb3MM"
+  },
+  {
+   "id": "privacy-security-scam-protection-nOMvzlNMdICMg1A21jchq",
+   "code": "nOMvzlNMdICMg1A21jchq",
+   "name": "Scrub",
+   "author": "@josephscottelli",
+   "description": "Gets your phone, email and address off telemarketing, spam and people-search lists, starting with the Do Not Call Registry.",
+   "url": "https://x.ai/bot/nOMvzlNMdICMg1A21jchq"
+  },
+  {
+   "id": "privacy-security-scam-protection-LWfJGJdjl7GRNHuaSixFD",
+   "code": "LWfJGJdjl7GRNHuaSixFD",
+   "name": "Sec Bot",
+   "author": "Tim Sonner",
+   "description": "Security patch bot for its own computer: scans for vulnerabilities, ranks exploited and network-reachable ones first, fixes only with approval, verifies each.",
+   "url": "https://x.ai/bot/LWfJGJdjl7GRNHuaSixFD"
+  },
+  {
+   "id": "privacy-security-scam-protection--qkf41F4R1MtZRetyUrxW",
+   "code": "-qkf41F4R1MtZRetyUrxW",
+   "name": "Security",
+   "author": "PWN",
+   "description": "A read-and-report security teammate for individuals and small teams.",
+   "url": "https://x.ai/bot/-qkf41F4R1MtZRetyUrxW"
+  },
+  {
+   "id": "privacy-security-scam-protection-DWcrUM2ZY3g7lhp0pPA5l",
+   "code": "DWcrUM2ZY3g7lhp0pPA5l",
+   "name": "Security",
+   "author": "Johnson Joy",
+   "description": "A security gatekeeper for your other bots and assistants. They pass it incoming emails and outside data first.",
+   "url": "https://x.ai/bot/DWcrUM2ZY3g7lhp0pPA5l"
+  },
+  {
+   "id": "privacy-security-scam-protection-MXgL6sKhbz_astrLE_fRy",
+   "code": "MXgL6sKhbz_astrLE_fRy",
+   "name": "Security",
+   "author": "Anubhav Mittal",
+   "description": "Active security guard for your Linux machines: daily health and threat checks, watches advisories and X for threats to your software, applies safe fixes.",
+   "url": "https://x.ai/bot/MXgL6sKhbz_astrLE_fRy"
+  },
+  {
+   "id": "privacy-security-scam-protection-vmWsaeHnZkKT1rwUGvxZa",
+   "code": "vmWsaeHnZkKT1rwUGvxZa",
+   "name": "Security",
+   "author": "1280 MHz",
+   "description": "A security assistant that audits your business systems, accounts, and home setup, then quietly watches for problems.",
+   "url": "https://x.ai/bot/vmWsaeHnZkKT1rwUGvxZa"
+  },
+  {
+   "id": "privacy-security-scam-protection-QhVx4lNFem_qNLBuPEMLm",
+   "code": "QhVx4lNFem_qNLBuPEMLm",
+   "name": "Security & Risk",
+   "author": "Scott Smithberger",
+   "description": "Security officer for your bot fleet: scans for leaked keys and stray sensitive data, audits connector access, and watches Auto-review rules for drift.",
+   "url": "https://x.ai/bot/QhVx4lNFem_qNLBuPEMLm"
+  },
+  {
+   "id": "privacy-security-scam-protection-oQxAmMC8N8HCKqP2Tz85n",
+   "code": "oQxAmMC8N8HCKqP2Tz85n",
+   "name": "Security Bot",
+   "author": "Jeremy Archer",
+   "description": "Audits every bot in your Grok Bot setup against the OWASP GenAI Top 10s and teaches safe use.",
+   "url": "https://x.ai/bot/oQxAmMC8N8HCKqP2Tz85n"
+  },
+  {
+   "id": "privacy-security-scam-protection-WrqD2uAQv_6-mA__IlNLi",
+   "code": "WrqD2uAQv_6-mA__IlNLi",
+   "name": "Security Bot",
+   "author": "FusionTactiks",
+   "description": "Watches X for new vulnerabilities in your stack, scans your GitHub repos, and opens and verifies fix PRs, with your OK before any code changes.",
+   "url": "https://x.ai/bot/WrqD2uAQv_6-mA__IlNLi"
+  },
+  {
+   "id": "privacy-security-scam-protection-Ci1UvQUguruSmxhiGmMI6",
+   "code": "Ci1UvQUguruSmxhiGmMI6",
+   "name": "Security Bot",
+   "author": "James Miller",
+   "description": "By Midkernel. Scan a GitHub repo from chat: sandbox run, report + full log, credits per run.",
+   "url": "https://x.ai/bot/Ci1UvQUguruSmxhiGmMI6"
+  },
+  {
+   "id": "privacy-security-scam-protection-mm1mT1if33kGd_NXIfF5A",
+   "code": "mm1mT1if33kGd_NXIfF5A",
+   "name": "Security Deposit Recovery",
+   "author": "Chris Hadges",
+   "description": "Helps tenants log a rental's move-in and move-out condition and draft a security deposit demand letter that cites their state's verified law.",
+   "url": "https://x.ai/bot/mm1mT1if33kGd_NXIfF5A"
+  },
+  {
+   "id": "privacy-security-scam-protection-s1bde25ba45eca88ff276",
+   "code": "s1bde25ba45eca88ff276",
+   "name": "Security Questionnaire Filler",
+   "author": "SpaceX",
+   "description": "Logs into vendor security portals, pulls answers from your trust center and past RFPs, and drafts every field for review.",
+   "url": "https://x.ai/bot/s1bde25ba45eca88ff276"
+  },
+  {
+   "id": "privacy-security-scam-protection-MafDOWwHCVdKfl_tSNm-H",
+   "code": "MafDOWwHCVdKfl_tSNm-H",
+   "name": "Security Screener",
+   "author": "jelias",
+   "description": "Screens websites, repos, packages, and extensions you are considering, and recommends whether they are reasonable to use, with evidence.",
+   "url": "https://x.ai/bot/MafDOWwHCVdKfl_tSNm-H"
+  },
+  {
+   "id": "privacy-security-scam-protection-Y3xV-T0yxz2UihvOrlIK6",
+   "code": "Y3xV-T0yxz2UihvOrlIK6",
+   "name": "Security Warden",
+   "author": "Mayur Darji",
+   "description": "Gates another bot's risky moves like outbound messages, deletions, and shell, checking for secrets and personal data before they run.",
+   "url": "https://x.ai/bot/Y3xV-T0yxz2UihvOrlIK6"
+  },
+  {
+   "id": "privacy-security-scam-protection-EQu7jy5DNmJCGRQExk0or",
+   "code": "EQu7jy5DNmJCGRQExk0or",
+   "name": "Security Watch",
+   "author": "Luca",
+   "description": "Helps secure what you use online, from a laptop or WordPress site to a server stack: maps it, checks each layer zero-trust style, walks you through each fix.",
+   "url": "https://x.ai/bot/EQu7jy5DNmJCGRQExk0or"
+  },
+  {
+   "id": "privacy-security-scam-protection-1m2ATa-kyKL5D6-JeRXVP",
+   "code": "1m2ATa-kyKL5D6-JeRXVP",
+   "name": "Sentinel",
+   "author": "Joshua",
+   "description": "Quiet security watch for your apps and devices: checks official advisories each weekday morning against the versions you run; alerts only when you're exposed.",
+   "url": "https://x.ai/bot/1m2ATa-kyKL5D6-JeRXVP"
+  },
+  {
+   "id": "privacy-security-scam-protection-EaSQSG9AAeUBWnQa1y--4",
+   "code": "EaSQSG9AAeUBWnQa1y--4",
+   "name": "Side-Hustle Scout",
+   "author": "Lisa",
+   "description": "No-hype side-hustle and cash-bounty crawler across X, creator platforms and print-on-demand marketplaces, with a scam and course-seller filter.",
+   "url": "https://x.ai/bot/EaSQSG9AAeUBWnQa1y--4"
+  },
+  {
+   "id": "privacy-security-scam-protection-PCWM_xFhmFIxpA3lTShSE",
+   "code": "PCWM_xFhmFIxpA3lTShSE",
+   "name": "Signals",
+   "author": "John Stout",
+   "description": "Home networking and automation assistant for UniFi, VLANs, Wi‑Fi, Protect, and Home Assistant — weekly backups, security audits, IoT isolation.",
+   "url": "https://x.ai/bot/PCWM_xFhmFIxpA3lTShSE"
+  },
+  {
+   "id": "privacy-security-scam-protection-i2VpPjq2FEV4XJUuaxfzF",
+   "code": "i2VpPjq2FEV4XJUuaxfzF",
+   "name": "Social Security & Medicare Helper",
+   "author": "iustina istrati",
+   "description": "A patient guide to Social Security, Medicare and veterans benefits in your language, with large-print and spoken answers. Never asks for SSN.",
+   "url": "https://x.ai/bot/i2VpPjq2FEV4XJUuaxfzF"
+  },
+  {
+   "id": "privacy-security-scam-protection-XBKGMWXF9eHfM9o8NyHAA",
+   "code": "XBKGMWXF9eHfM9o8NyHAA",
+   "name": "Social Security Letter Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Got an SSA overpayment, benefit cut or Medicare surcharge letter? Finds the 30- and 60-day dates, picks the right form, drafts your side, tracks the answer.",
+   "url": "https://x.ai/bot/XBKGMWXF9eHfM9o8NyHAA"
+  },
+  {
+   "id": "privacy-security-scam-protection-8Wzt1dBHZY6hPPa0M6b2C",
+   "code": "8Wzt1dBHZY6hPPa0M6b2C",
+   "name": "Spam & Broker Cleanup",
+   "author": "@chickletsfuture",
+   "description": "Finds your info on US people-search sites and data brokers, sends opt-outs by web form and Gmail, and tracks confirmations. Never asks for your SSN or pays.",
+   "url": "https://x.ai/bot/8Wzt1dBHZY6hPPa0M6b2C"
+  },
+  {
+   "id": "privacy-security-scam-protection-24SYdXFDPhd3Msfv_wrN2",
+   "code": "24SYdXFDPhd3Msfv_wrN2",
+   "name": "Spam Call Scrubber",
+   "author": "@fundadorisback",
+   "description": "Finds your phone number on people-search sites and data brokers, submits opt-outs, finishes the email confirmations and rechecks on your schedule.",
+   "url": "https://x.ai/bot/24SYdXFDPhd3Msfv_wrN2"
+  },
+  {
+   "id": "privacy-security-scam-protection-ksTnnKsWZ7AdHm2eB7aEd",
+   "code": "ksTnnKsWZ7AdHm2eB7aEd",
+   "name": "Spam Shield",
+   "author": "Allan Robinson",
+   "description": "Cuts US spam calls and texts: Do Not Call registration, FTC reports you review, 7726 text forwarding, a spam log and a monthly check-in.",
+   "url": "https://x.ai/bot/ksTnnKsWZ7AdHm2eB7aEd"
+  },
+  {
+   "id": "privacy-security-scam-protection-_BjVLw215sQaMRwjiHx7l",
+   "code": "_BjVLw215sQaMRwjiHx7l",
+   "name": "Spam Shield",
+   "author": "Andres Ruggiero",
+   "description": "Cuts spam calls and texts by removing your phone number from people-search and data-broker sites and turning on free protections.",
+   "url": "https://x.ai/bot/_BjVLw215sQaMRwjiHx7l"
+  },
+  {
+   "id": "privacy-security-scam-protection-sD4Sy_BYp1YgLdGMwQIKv",
+   "code": "sD4Sy_BYp1YgLdGMwQIKv",
+   "name": "Spam Shield",
+   "author": "haider ali",
+   "description": "Finds your phone number and address on people-search sites, files free removal requests, helps you join Do Not Call, and rechecks monthly.",
+   "url": "https://x.ai/bot/sD4Sy_BYp1YgLdGMwQIKv"
+  },
+  {
+   "id": "privacy-security-scam-protection-fUj6TYhiW_cjtzWvbsFgz",
+   "code": "fUj6TYhiW_cjtzWvbsFgz",
+   "name": "Spam-Call Scrubber",
+   "author": "Arash Malek",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, finishes the email confirmations and re-checks on schedule.",
+   "url": "https://x.ai/bot/fUj6TYhiW_cjtzWvbsFgz"
+  },
+  {
+   "id": "privacy-security-scam-protection-5hcTGitbEYVxYIhdxTJKd",
+   "code": "5hcTGitbEYVxYIhdxTJKd",
+   "name": "Spam-Call Scrubber",
+   "author": "Atlas",
+   "description": "Gets your phone number off people-search sites and data brokers to cut down spam calls.",
+   "url": "https://x.ai/bot/5hcTGitbEYVxYIhdxTJKd"
+  },
+  {
+   "id": "privacy-security-scam-protection-Z-1lj3U4-IdLhvH-As2vc",
+   "code": "Z-1lj3U4-IdLhvH-As2vc",
+   "name": "Spam-Call Scrubber",
+   "author": "Seth Urban",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, finishes the email confirmations, and re-checks on your schedule.",
+   "url": "https://x.ai/bot/Z-1lj3U4-IdLhvH-As2vc"
+  },
+  {
+   "id": "privacy-security-scam-protection-2Oxll84I_kSeoa8K4x3G8",
+   "code": "2Oxll84I_kSeoa8K4x3G8",
+   "name": "Spam-Call Scrubber",
+   "author": "Cory Robin",
+   "description": "Reports your spam and robocall numbers to the FTC, your state consumer office, Nomorobo and the FCC, finishes confirmations and logs every report.",
+   "url": "https://x.ai/bot/2Oxll84I_kSeoa8K4x3G8"
+  },
+  {
+   "id": "privacy-security-scam-protection-SrM9NoljdbR1rkyaKSryA",
+   "code": "SrM9NoljdbR1rkyaKSryA",
+   "name": "Spam-Call Scrubber",
+   "author": "Blake",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, finishes the email confirmations, and re-checks on a schedule.",
+   "url": "https://x.ai/bot/SrM9NoljdbR1rkyaKSryA"
+  },
+  {
+   "id": "privacy-security-scam-protection--LosEYH5fzW0FKckhoMR5",
+   "code": "-LosEYH5fzW0FKckhoMR5",
+   "name": "Spam-Call Scrubber",
+   "author": "Don Mink",
+   "description": "Finds your phone number on people-search sites, caller-ID apps and data brokers, submits opt-outs, handles the confirmation emails and rechecks on schedule.",
+   "url": "https://x.ai/bot/-LosEYH5fzW0FKckhoMR5"
+  },
+  {
+   "id": "privacy-security-scam-protection-nyBupu5LRaOoB-5_OINxQ",
+   "code": "nyBupu5LRaOoB-5_OINxQ",
+   "name": "Spam-Call Scrubber",
+   "author": "Mitch Watkins",
+   "description": "Finds your phone number on people-search sites and data brokers, submits opt-outs, finishes email confirmations and re-checks on your schedule.",
+   "url": "https://x.ai/bot/nyBupu5LRaOoB-5_OINxQ"
+  },
+  {
+   "id": "privacy-security-scam-protection-q6EUVmvVIkVZG4PB0bnG1",
+   "code": "q6EUVmvVIkVZG4PB0bnG1",
+   "name": "Spam-Call Scrubber",
+   "author": "CampINMYbell",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, and re-checks on a schedule you choose.",
+   "url": "https://x.ai/bot/q6EUVmvVIkVZG4PB0bnG1"
+  },
+  {
+   "id": "privacy-security-scam-protection-YS8ODAqOdVuiRnK-SKYdK",
+   "code": "YS8ODAqOdVuiRnK-SKYdK",
+   "name": "Spam-Call Scrubber",
+   "author": "Alex M Harbison",
+   "description": "Finds your phone number on people-search sites and data brokers, submits the opt-outs, finishes the email confirmations, and re-checks on th.",
+   "url": "https://x.ai/bot/YS8ODAqOdVuiRnK-SKYdK"
+  },
+  {
+   "id": "privacy-security-scam-protection-fN2O4TlBg102RyonIGwnC",
+   "code": "fN2O4TlBg102RyonIGwnC",
+   "name": "Spam-Call Tracker",
+   "author": "Sergio Farache",
+   "description": "Finds your phone numbers on people-search sites and data brokers, submits the free opt-outs, finishes the email confirmations.",
+   "url": "https://x.ai/bot/fN2O4TlBg102RyonIGwnC"
+  },
+  {
+   "id": "privacy-security-scam-protection-UlwWeybgGU08aJF2RvnGN",
+   "code": "UlwWeybgGU08aJF2RvnGN",
+   "name": "Storm Chaser & Fake Adjuster Red-Flag Checker",
+   "author": "Kimberly Hunter",
+   "description": "Paste a contractor's or adjuster's pitch, contract or name and get a plain risk verdict with red flags and next steps, from a 15-year fraud investigator.",
+   "url": "https://x.ai/bot/UlwWeybgGU08aJF2RvnGN"
+  },
+  {
+   "id": "privacy-security-scam-protection-LHzqMbOeyqA7GZV_aq6gD",
+   "code": "LHzqMbOeyqA7GZV_aq6gD",
+   "name": "Sweep",
+   "author": "Justin Strafuss",
+   "description": "Reviews your X followers and flags who to keep, engage, or remove, spotting bots, scams, adult spam, and inactive accounts.",
+   "url": "https://x.ai/bot/LHzqMbOeyqA7GZV_aq6gD"
+  },
+  {
+   "id": "privacy-security-scam-protection-l0J0Nj95_yVOlFZIHB1Y_",
+   "code": "l0J0Nj95_yVOlFZIHB1Y_",
+   "name": "Sworm",
+   "author": "@suddenlyjon",
+   "description": "Sealed family sketches and detection ideas, never a runnable malware sample.",
+   "url": "https://x.ai/bot/l0J0Nj95_yVOlFZIHB1Y_"
+  },
+  {
+   "id": "privacy-security-scam-protection-nzlaB_OnKsiVQJPrWai8u",
+   "code": "nzlaB_OnKsiVQJPrWai8u",
+   "name": "TailslopBot",
+   "author": "Scott Jordan",
+   "description": "Read-only Tailscale safety auditor: checks your tailnet's devices, features and ACLs against current security bulletins and CVEs, then walks you through fixes.",
+   "url": "https://x.ai/bot/nzlaB_OnKsiVQJPrWai8u"
+  },
+  {
+   "id": "privacy-security-scam-protection-oghCXejHEEnkvS0aQlkpt",
+   "code": "oghCXejHEEnkvS0aQlkpt",
+   "name": "Techy",
+   "author": "joseph sicre",
+   "description": "A friendly pocket IT specialist: fixes PC, phone, Wi-Fi and printer problems step by step in plain English, spots scams and tracks warranties and RMAs.",
+   "url": "https://x.ai/bot/oghCXejHEEnkvS0aQlkpt"
+  },
+  {
+   "id": "privacy-security-scam-protection-XoYfr_5me3IicLxWfpP3n",
+   "code": "XoYfr_5me3IicLxWfpP3n",
+   "name": "Tripwire",
+   "author": "Stephen Brouhard",
+   "description": "A quiet security watcher that matches new exploited vulns, cert/CA incidents, breaches and scams against your own…",
+   "url": "https://x.ai/bot/XoYfr_5me3IicLxWfpP3n"
+  },
+  {
+   "id": "privacy-security-scam-protection-y1WyZRzq6tUWHUayrQLK-",
+   "code": "y1WyZRzq6tUWHUayrQLK-",
+   "name": "Tripwire",
+   "author": "Robert Sanchez",
+   "description": "Shared security watcher for your team: finds incidents that could touch what you run, checks whether you're actually exposed and fixes what it safely can.",
+   "url": "https://x.ai/bot/y1WyZRzq6tUWHUayrQLK-"
+  },
+  {
+   "id": "privacy-security-scam-protection-rVl1h06Nts9u81JT0__nn",
+   "code": "rVl1h06Nts9u81JT0__nn",
+   "name": "Trojan Guard",
+   "author": "Chris Schultz",
+   "description": "Gate for AI coding agents before pip/git installs — catches typosquats, malicious deps, and prompt injection in repos…",
+   "url": "https://x.ai/bot/rVl1h06Nts9u81JT0__nn"
+  },
+  {
+   "id": "privacy-security-scam-protection-_OV6ItDEAbbpvi3qg3VKH",
+   "code": "_OV6ItDEAbbpvi3qg3VKH",
+   "name": "Twain",
+   "author": "@suddenlyjon",
+   "description": "Speak as Mark Twain’s American irony — river sense, fraud-spotting, humor with teeth.",
+   "url": "https://x.ai/bot/_OV6ItDEAbbpvi3qg3VKH"
+  },
+  {
+   "id": "privacy-security-scam-protection-9puPR_lskbfu1RTohZ3al",
+   "code": "9puPR_lskbfu1RTohZ3al",
+   "name": "UK Spam Call Eraser",
+   "author": "Benjamin Norman",
+   "description": "Cuts spam, sales and scam calls and texts to a UK phone number.",
+   "url": "https://x.ai/bot/9puPR_lskbfu1RTohZ3al"
+  },
+  {
+   "id": "privacy-security-scam-protection-prBxgPrTLksDPKXHFrpyw",
+   "code": "prBxgPrTLksDPKXHFrpyw",
+   "name": "UK Spam-Call Scrubber",
+   "author": "Sudhanshu Baluja",
+   "description": "Cuts unwanted calls and removes your details from UK people-search sites using official free opt-outs like TPS and site removal forms.",
+   "url": "https://x.ai/bot/prBxgPrTLksDPKXHFrpyw"
+  },
+  {
+   "id": "privacy-security-scam-protection-PJ-7dFdj0HeoP58N0N5Ne",
+   "code": "PJ-7dFdj0HeoP58N0N5Ne",
+   "name": "USPS Junk Mail Scrubber",
+   "author": "GrayHawk",
+   "description": "Sets up OptOutPrescreen, DMAchoice and Catalog Choice, then turns photos of your mail into tracked opt-out requests with follow-ups.",
+   "url": "https://x.ai/bot/PJ-7dFdj0HeoP58N0N5Ne"
+  },
+  {
+   "id": "privacy-security-scam-protection-2wPbrZ_KU2CZL1QdkeF7X",
+   "code": "2wPbrZ_KU2CZL1QdkeF7X",
+   "name": "USPS Spam",
+   "author": "BlackbeardCo.",
+   "description": "Stops junk mail like pre-approved credit card, insurance, and car warranty offers by handling the opt-outs for you.",
+   "url": "https://x.ai/bot/2wPbrZ_KU2CZL1QdkeF7X"
+  },
+  {
+   "id": "privacy-security-scam-protection-KOvTJswbPvn7bIthDZhGu",
+   "code": "KOvTJswbPvn7bIthDZhGu",
+   "name": "Unbroker",
+   "author": "Trevin Chow",
+   "description": "Gets your personal info off people-search sites and data brokers like Spokeo and Whitepages, proves each listing is gone and rechecks for relists.",
+   "url": "https://x.ai/bot/KOvTJswbPvn7bIthDZhGu"
+  },
+  {
+   "id": "privacy-security-scam-protection-NWTWRRNM8H7E87sffpRmK",
+   "code": "NWTWRRNM8H7E87sffpRmK",
+   "name": "Unbroker",
+   "author": "@BristolHubert",
+   "description": "Finds and removes your personal info from data brokers and people-search sites, for free and on an ongoing basis…",
+   "url": "https://x.ai/bot/NWTWRRNM8H7E87sffpRmK"
+  },
+  {
+   "id": "privacy-security-scam-protection-zZfASPHMDvvJ4tRtB6wDR",
+   "code": "zZfASPHMDvvJ4tRtB6wDR",
+   "name": "VPS & VPN",
+   "author": "ProtocolX",
+   "description": "Manages VPS and VPN setup on this computer, including Tailscale and tunnels.",
+   "url": "https://x.ai/bot/zZfASPHMDvvJ4tRtB6wDR"
+  },
+  {
+   "id": "privacy-security-scam-protection-Z9IqfyEnj1W8pu1_jvFyu",
+   "code": "Z9IqfyEnj1W8pu1_jvFyu",
+   "name": "Vulnerability Triage Specialist",
+   "author": "Ryu Tanabe",
+   "description": "A focused vulnerability triage assistant for operators and security engineers.",
+   "url": "https://x.ai/bot/Z9IqfyEnj1W8pu1_jvFyu"
+  },
+  {
+   "id": "privacy-security-scam-protection-Xdx94lJlv-xK14WF6yzVR",
+   "code": "Xdx94lJlv-xK14WF6yzVR",
+   "name": "Web Security Audit",
+   "author": "Paresh",
+   "description": "Defensive security review for sites and repos you own, scored P0 to P2.",
+   "url": "https://x.ai/bot/Xdx94lJlv-xK14WF6yzVR"
+  },
+  {
+   "id": "privacy-security-scam-protection-TSFkOGld9o51h_qXGOioI",
+   "code": "TSFkOGld9o51h_qXGOioI",
+   "name": "White-Hat Security Tester",
+   "author": "Joe Gilharry",
+   "description": "Ethical security tester for web apps you own that works a full checklist across auth, access control, injection, and business logic and reports fixes.",
+   "url": "https://x.ai/bot/TSFkOGld9o51h_qXGOioI"
+  },
+  {
+   "id": "privacy-security-scam-protection-YS_lqB19LnlaPqXPEUn4f",
+   "code": "YS_lqB19LnlaPqXPEUn4f",
+   "name": "WinRedDestroyer",
+   "author": "Valentino Dagher",
+   "description": "Builds a password-gated evidence site for WinRed political SMS spam with cases, FEC officers, and print-ready packets.",
+   "url": "https://x.ai/bot/YS_lqB19LnlaPqXPEUn4f"
+  },
+  {
+   "id": "privacy-security-scam-protection-8jDicbA-2vUVHoUVb5sfF",
+   "code": "8jDicbA-2vUVHoUVb5sfF",
+   "name": "X Free Credits Finder",
+   "author": "Melvin Vivas",
+   "description": "Finds X posts giving away AI tool credits for a reply or follow, flags scams and closed offers, and can check twice a day.",
+   "url": "https://x.ai/bot/8jDicbA-2vUVHoUVb5sfF"
+  },
+  {
+   "id": "privacy-security-scam-protection-rrKp1eA9QnW8P5QAGKaKS",
+   "code": "rrKp1eA9QnW8P5QAGKaKS",
+   "name": "X Release Watcher",
+   "author": "zeus",
+   "description": "Defensive hardening advice for AI apps: injection, tool abuse, leakage.",
+   "url": "https://x.ai/bot/rrKp1eA9QnW8P5QAGKaKS"
+  },
+  {
+   "id": "privacy-security-scam-protection-MIF3DpuTKJATe0hCoUIBO",
+   "code": "MIF3DpuTKJATe0hCoUIBO",
+   "name": "Zero-Day Desk",
+   "author": "NeedMoreManas",
+   "description": "A read-only zero-day analyst for security teams. Every weekday it turns CISA KEV, NVD, EPSS, OSV.",
+   "url": "https://x.ai/bot/MIF3DpuTKJATe0hCoUIBO"
+  },
+  {
+   "id": "privacy-security-scam-protection-cXeisxhmz3YpvnWVH1k0F",
+   "code": "cXeisxhmz3YpvnWVH1k0F",
+   "name": "iCloud",
+   "author": "@CyberZack42",
+   "description": "Connects Apple calendar, mail, contacts, and reminders into Grok with one app password.",
+   "url": "https://x.ai/bot/cXeisxhmz3YpvnWVH1k0F"
+  },
+  {
+   "id": "privacy-security-scam-protection-0fF7Cqp8LTzh9JGQ-je3M",
+   "code": "0fF7Cqp8LTzh9JGQ-je3M",
+   "name": "iCloud Mail",
+   "author": "@CyberZack42",
+   "description": "On-demand iCloud Mail helper. Reads and sends via IMAP/SMTP with an Apple app-specific password so you skip the iCloud…",
+   "url": "https://x.ai/bot/0fF7Cqp8LTzh9JGQ-je3M"
+  },
+  {
+   "id": "privacy-security-scam-protection-9SQS0iMj0Ml8yvXnWNTVg",
+   "code": "9SQS0iMj0Ml8yvXnWNTVg",
+   "name": "orc",
+   "author": "Capital Copilot",
+   "description": "Engineering orchestrator for multi-agent fleets: sequences worker lanes, runs reduce and security sweeps, and keeps forge reviews moving without.",
+   "url": "https://x.ai/bot/9SQS0iMj0Ml8yvXnWNTVg"
+  },
+  {
+   "id": "privacy-security-scam-protection-Ac4WeB_7iIe2H8_t9fbdu",
+   "code": "Ac4WeB_7iIe2H8_t9fbdu",
+   "name": "protocol bot",
+   "author": "jessie sponberg",
+   "description": "Audits your sites and apps for security, monitoring, concurrency, data loss and exposed databases, makes free fixes and keeps a launch checklist for new sites.",
+   "url": "https://x.ai/bot/Ac4WeB_7iIe2H8_t9fbdu"
+  },
+  {
+   "id": "privacy-security-scam-protection-VDhByQ1Yroy3ZkbeQLK3L",
+   "code": "VDhByQ1Yroy3ZkbeQLK3L",
+   "name": "spam Call Block",
+   "author": "Benedict Strafuss",
+   "description": "Helps you stop spam and robocalls on your cell or landline with fixes for your phone and carrier, and keeps track of the numbers that still get through.",
+   "url": "https://x.ai/bot/VDhByQ1Yroy3ZkbeQLK3L"
+  },
+  {
+   "id": "privacy-security-scam-protection-4zx8w8Oc9dm0d3Den_Abe",
+   "code": "4zx8w8Oc9dm0d3Den_Abe",
+   "name": "セキュリティ点検",
+   "author": "sapjp",
+   "description": "Monthly nudges to review security settings for banks, brokers and email, with steps and checklists; never logs…",
+   "url": "https://x.ai/bot/4zx8w8Oc9dm0d3Den_Abe"
+  },
+  {
+   "id": "privacy-security-scam-protection-gLV5mUN4vqHFKsCSn_DTO",
+   "code": "gLV5mUN4vqHFKsCSn_DTO",
+   "name": "메일 정리봇",
+   "author": "초코넛밀크티",
+   "description": "Short morning pass over Naver Mail and Gmail that surfaces only payment and security risks.",
+   "url": "https://x.ai/bot/gLV5mUN4vqHFKsCSn_DTO"
+  }
+ ]
+}

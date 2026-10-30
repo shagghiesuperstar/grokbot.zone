@@ -1,0 +1,904 @@
+{
+ "slug": "travel",
+ "label": "Travel",
+ "count": 112,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "travel-N9eJfkuupWb3EpWFt76va",
+   "code": "N9eJfkuupWb3EpWFt76va",
+   "name": "2A",
+   "author": "Schuyler Beers",
+   "description": "Interstate carry trip planner with state-by-state reciprocity for US gun owners.",
+   "url": "https://x.ai/bot/N9eJfkuupWb3EpWFt76va"
+  },
+  {
+   "id": "travel-wa1V3mI4lP2ZodI2frMD-",
+   "code": "wa1V3mI4lP2ZodI2frMD-",
+   "name": "Airbnb Host Concierge",
+   "author": "Queen",
+   "description": "Five-star guest messaging for short-term rental hosts: welcome and checkout notes, guest replies, house manuals, local guides, listing rewrites, review replies.",
+   "url": "https://x.ai/bot/wa1V3mI4lP2ZodI2frMD-"
+  },
+  {
+   "id": "travel-QC12jiAl0xs4kd6y_RD3g",
+   "code": "QC12jiAl0xs4kd6y_RD3g",
+   "name": "AppWipe",
+   "author": "Ned Booher",
+   "description": "Replaces most of your phone apps with one chat. Email, calendar, docs, travel and shopping search, and research go through one point of control.",
+   "url": "https://x.ai/bot/QC12jiAl0xs4kd6y_RD3g"
+  },
+  {
+   "id": "travel-EEQXiBDbM6YJG1eedy8d4",
+   "code": "EEQXiBDbM6YJG1eedy8d4",
+   "name": "Astra Afterburner",
+   "author": "Drew",
+   "description": "Points a stalled coding agent's research queue at your idle second plan.",
+   "url": "https://x.ai/bot/EEQXiBDbM6YJG1eedy8d4"
+  },
+  {
+   "id": "travel-Qk34TQ_fBXQOWB2kbPbqd",
+   "code": "Qk34TQ_fBXQOWB2kbPbqd",
+   "name": "Atlas",
+   "author": "JP",
+   "description": "Road-trip planner that turns a start, destination and dates into a Trip Page: route map, daily legs, stays with live prices, gas or EV stops, food and weather.",
+   "url": "https://x.ai/bot/Qk34TQ_fBXQOWB2kbPbqd"
+  },
+  {
+   "id": "travel-OeXTONmfD_UskpN6w9eIg",
+   "code": "OeXTONmfD_UskpN6w9eIg",
+   "name": "Aus trip",
+   "author": "Aseem Wangoo",
+   "description": "Helps plan a short Australia business trip: Visitor 600 Business Visitor lodging in ImmiAccount, document checklists, status watching, and travel.",
+   "url": "https://x.ai/bot/OeXTONmfD_UskpN6w9eIg"
+  },
+  {
+   "id": "travel-2pewBd6QpttNiH52dyGhq",
+   "code": "2pewBd6QpttNiH52dyGhq",
+   "name": "Avi",
+   "author": "schwim",
+   "description": "Flight Operations for private and owner-pilots — weather, route planning, and trip planning with a safety focus.",
+   "url": "https://x.ai/bot/2pewBd6QpttNiH52dyGhq"
+  },
+  {
+   "id": "travel-qZ95MnSn2HGjT3rqCvps3",
+   "code": "qZ95MnSn2HGjT3rqCvps3",
+   "name": "Been There / Next Stop",
+   "author": "Chadd Smith",
+   "description": "Been There / Next Stop maps your past trips from email, calendar and travel apps, learns what you love, and keeps a bucket list on your map.",
+   "url": "https://x.ai/bot/qZ95MnSn2HGjT3rqCvps3"
+  },
+  {
+   "id": "travel-Q-teSdJpR58IWD1G0J0iQ",
+   "code": "Q-teSdJpR58IWD1G0J0iQ",
+   "name": "CET Coach",
+   "author": "Bianca Bell-Chambers",
+   "description": "Scores any message you paste, link or upload on CET (9 points plus overall) and gives one clearer rewrite.",
+   "url": "https://x.ai/bot/Q-teSdJpR58IWD1G0J0iQ"
+  },
+  {
+   "id": "travel-5UgsqdCgNWCagSjvMyzfF",
+   "code": "5UgsqdCgNWCagSjvMyzfF",
+   "name": "Cabin Pawz Trip Mate",
+   "author": "Nikki B",
+   "description": "Trip planner for traveling with pets in an EV, especially Teslas with Pet Mode, with charge stops, pet breaks, and cabin and packing checklists.",
+   "url": "https://x.ai/bot/5UgsqdCgNWCagSjvMyzfF"
+  },
+  {
+   "id": "travel-wvj9yJwiPaBRTakGeZQre",
+   "code": "wvj9yJwiPaBRTakGeZQre",
+   "name": "Call Minutes Maker (議事録起こすマン)",
+   "author": "EriAIDesign",
+   "description": "When a voice call ends (even if it drops midway), this bot automatically sends a transcript and minutes to your chat: key points, decisions.",
+   "url": "https://x.ai/bot/wvj9yJwiPaBRTakGeZQre"
+  },
+  {
+   "id": "travel-SkSHokoCm92z9E-NFNmjr",
+   "code": "SkSHokoCm92z9E-NFNmjr",
+   "name": "Captain",
+   "author": "Tim Taylor",
+   "description": "A main point-of-contact bot that takes your tasks, delegates to specialist agents (email, calendar, drive, travel, payments, site), and reports results.",
+   "url": "https://x.ai/bot/SkSHokoCm92z9E-NFNmjr"
+  },
+  {
+   "id": "travel-T27nv3vIy89yKldqELWbn",
+   "code": "T27nv3vIy89yKldqELWbn",
+   "name": "Changelog Stand-down",
+   "author": "Andrea Griffiths",
+   "description": "Pings you every Monday with what shipped. Needs a repo, a destination, and your attention.",
+   "url": "https://x.ai/bot/T27nv3vIy89yKldqELWbn"
+  },
+  {
+   "id": "travel-OyiPchJIfhSMvebNLKwsF",
+   "code": "OyiPchJIfhSMvebNLKwsF",
+   "name": "Cheap Flight Finder",
+   "author": "datapoint",
+   "description": "Finds the cheapest acceptable flight across Google Flights, Skyscanner, Kayak, Kiwi, airlines and more, compares total cost with bags and fees, watches fares.",
+   "url": "https://x.ai/bot/OyiPchJIfhSMvebNLKwsF"
+  },
+  {
+   "id": "travel-B2ukfMxvHbJF5t-UOl4ab",
+   "code": "B2ukfMxvHbJF5t-UOl4ab",
+   "name": "China 2027 Trip Planner",
+   "author": "Grease",
+   "description": "Plans a family or group tour trip: compares itineraries and prices, flags hidden costs and visa risks, and tracks every booking, deposit and deadline.",
+   "url": "https://x.ai/bot/B2ukfMxvHbJF5t-UOl4ab"
+  },
+  {
+   "id": "travel-tNPnclaPMOw4so1wXqfOj",
+   "code": "tNPnclaPMOw4so1wXqfOj",
+   "name": "Clarity",
+   "author": "Meeting Minutes Grok on Spaces",
+   "description": "Makes instructions and prompts clear. It rewrites text into Simplified Technical English (ASD-STE100), points out what…",
+   "url": "https://x.ai/bot/tNPnclaPMOw4so1wXqfOj"
+  },
+  {
+   "id": "travel-NOT4hZdEJ7AxiVekyjBOY",
+   "code": "NOT4hZdEJ7AxiVekyjBOY",
+   "name": "Compass",
+   "author": "Austin Hoopes",
+   "description": "A travel companion that plans, books (only with your yes), and guides trips end to end: itineraries, lodging and flights, entry rules, check-in reminders.",
+   "url": "https://x.ai/bot/NOT4hZdEJ7AxiVekyjBOY"
+  },
+  {
+   "id": "travel-_V9NG3Es7w7am2Kpb6lWg",
+   "code": "_V9NG3Es7w7am2Kpb6lWg",
+   "name": "Creative Studio Scout",
+   "author": "Nataly Vidales",
+   "description": "Finds hands-on creative workshops, cultural crafts, and hidden-gem classes near you or wherever you travel, with every…",
+   "url": "https://x.ai/bot/_V9NG3Es7w7am2Kpb6lWg"
+  },
+  {
+   "id": "travel-xKCMy-qFRRVxJVCERoee3",
+   "code": "xKCMy-qFRRVxJVCERoee3",
+   "name": "Critique",
+   "author": "Steven",
+   "description": "Turns a screenshot, design-file frame, or live URL into a ranked critique: what the person using the screen came to do, what they will trip…",
+   "url": "https://x.ai/bot/xKCMy-qFRRVxJVCERoee3"
+  },
+  {
+   "id": "travel-FhU3OkFeKttqo0SffAyGR",
+   "code": "FhU3OkFeKttqo0SffAyGR",
+   "name": "DVC Booker",
+   "author": "Elijah Nicolas",
+   "description": "Disney Vacation Club expert: tracks official point charts, finds best-value stays for your points and family size, watches booking and banking deadlines.",
+   "url": "https://x.ai/bot/FhU3OkFeKttqo0SffAyGR"
+  },
+  {
+   "id": "travel-QgAFcr09rf_GsGM-nNast",
+   "code": "QgAFcr09rf_GsGM-nNast",
+   "name": "Daisy (Travel Rewards Desk)",
+   "author": "Gregory Burgess",
+   "description": "Owns trip planning and loyalty ops for couples and households who stack miles, hotel status, and card credits. Builds a rewards catalog, compares cash.",
+   "url": "https://x.ai/bot/QgAFcr09rf_GsGM-nNast"
+  },
+  {
+   "id": "travel-LSEHIc5cS4MuInhRMJMya",
+   "code": "LSEHIc5cS4MuInhRMJMya",
+   "name": "Darkroom",
+   "author": "Michael Hudic",
+   "description": "A careful librarian for your Apple Photos library on your Mac. It finds duplicates, junk and near-identical shots, and builds trip and year albums.",
+   "url": "https://x.ai/bot/LSEHIc5cS4MuInhRMJMya"
+  },
+  {
+   "id": "travel-k5qFsxd0F0pJ7bdAcq7Fh",
+   "code": "k5qFsxd0F0pJ7bdAcq7Fh",
+   "name": "Delay Ladder",
+   "author": "Andy",
+   "description": "Flight delay rights ladder without fake dollar claims.",
+   "url": "https://x.ai/bot/k5qFsxd0F0pJ7bdAcq7Fh"
+  },
+  {
+   "id": "travel-izE8-5f78ykATd43I5ROC",
+   "code": "izE8-5f78ykATd43I5ROC",
+   "name": "Disney Ride Strategist",
+   "author": "Matt Hopkins",
+   "description": "A Walt Disney World wait-time strategist you configure for your trip.",
+   "url": "https://x.ai/bot/izE8-5f78ykATd43I5ROC"
+  },
+  {
+   "id": "travel-r5R9X50NdzRZBPcBQAnhP",
+   "code": "r5R9X50NdzRZBPcBQAnhP",
+   "name": "Edna",
+   "author": "DJ",
+   "description": "Plans award travel around your home airport, points and status.",
+   "url": "https://x.ai/bot/r5R9X50NdzRZBPcBQAnhP"
+  },
+  {
+   "id": "travel-tpDfMhi6UIk9Equ6jqpfu",
+   "code": "tpDfMhi6UIk9Equ6jqpfu",
+   "name": "Fare Hawk",
+   "author": "Michael",
+   "description": "Name a place and dates for a day-by-day itinerary card, then it watches flight and hotel prices until you book.",
+   "url": "https://x.ai/bot/tpDfMhi6UIk9Equ6jqpfu"
+  },
+  {
+   "id": "travel-YQjlMLtWiWq14ixfZ7ig0",
+   "code": "YQjlMLtWiWq14ixfZ7ig0",
+   "name": "Flight Briefer",
+   "author": "Jernau",
+   "description": "One-page preflight card from FAA and aviationweather.gov feeds covering weather, NOTAMs, TFRs, and FBOs.",
+   "url": "https://x.ai/bot/YQjlMLtWiWq14ixfZ7ig0"
+  },
+  {
+   "id": "travel-sCd3BcjAeQrr77Qrg1waM",
+   "code": "sCd3BcjAeQrr77Qrg1waM",
+   "name": "Flight Deal Assistant",
+   "author": "fabivelosa",
+   "description": "Finds and compares flight deals by trade-offs, not just cheapest.",
+   "url": "https://x.ai/bot/sCd3BcjAeQrr77Qrg1waM"
+  },
+  {
+   "id": "travel-a3QmuXJyhb8kwaB1SNiUx",
+   "code": "a3QmuXJyhb8kwaB1SNiUx",
+   "name": "Flight Points Tracker",
+   "author": "Raymond Freedlander",
+   "description": "Watches your routes for cheap cash fares and points or miles award deals, compares cents per point and pings you only when a deal is worth booking.",
+   "url": "https://x.ai/bot/a3QmuXJyhb8kwaB1SNiUx"
+  },
+  {
+   "id": "travel-htfJf5FCtjrlx4FeRClYM",
+   "code": "htfJf5FCtjrlx4FeRClYM",
+   "name": "Flight Turbulence Report",
+   "author": "Dan Burkland",
+   "description": "Sends a turbulence report with a table and route map an hour before every flight on your calendar, using SIGMETs, AIRMETs, PIREPs and Turbli.",
+   "url": "https://x.ai/bot/htfJf5FCtjrlx4FeRClYM"
+  },
+  {
+   "id": "travel-xqinGTgeghdOyeYmzqO2m",
+   "code": "xqinGTgeghdOyeYmzqO2m",
+   "name": "Flights",
+   "author": "Eric Be",
+   "description": "Finds and compares round-trip flights (especially from Bangkok), builds Skyscanner links, and watches routes…",
+   "url": "https://x.ai/bot/xqinGTgeghdOyeYmzqO2m"
+  },
+  {
+   "id": "travel-fAFQVx6a_2eigk9eA3soI",
+   "code": "fAFQVx6a_2eigk9eA3soI",
+   "name": "Globetrotter",
+   "author": "Valentino",
+   "description": "A personal travel assistant that finds flight, hotel, and rental confirmations in your email and turns them into one clean itinerary per trip, flagging.",
+   "url": "https://x.ai/bot/fAFQVx6a_2eigk9eA3soI"
+  },
+  {
+   "id": "travel-3K2ptLhCQa540gab4M_YX",
+   "code": "3K2ptLhCQa540gab4M_YX",
+   "name": "Group Travel Concierge",
+   "author": "Crypto2Hodl",
+   "description": "Public traveler concierge for group flight quotes and trip help on easygroupflights.com.",
+   "url": "https://x.ai/bot/3K2ptLhCQa540gab4M_YX"
+  },
+  {
+   "id": "travel-TbFMZABkeH7gyIIGxjfdU",
+   "code": "TbFMZABkeH7gyIIGxjfdU",
+   "name": "Guide",
+   "author": "@suddenlyjon",
+   "description": "Turns a booked trip into a day-by-day plan you can follow.",
+   "url": "https://x.ai/bot/TbFMZABkeH7gyIIGxjfdU"
+  },
+  {
+   "id": "travel-HRQ9XsZmD7-dATZz63-i_",
+   "code": "HRQ9XsZmD7-dATZz63-i_",
+   "name": "Helios",
+   "author": "John",
+   "description": "Meta Ads intelligence for Facebook and Instagram. Runs Ads Manager in signed-in Chrome, posts a morning flight board, pauses losers under your written.",
+   "url": "https://x.ai/bot/HRQ9XsZmD7-dATZz63-i_"
+  },
+  {
+   "id": "travel-MkXoiXKzLUKuWyhBsxPPE",
+   "code": "MkXoiXKzLUKuWyhBsxPPE",
+   "name": "HotelRoomBot",
+   "author": "Scott Jordan",
+   "description": "Defensive travel privacy helper: walks you through checking your hotel or rental room, its Wi-Fi and your own devices for hidden cameras, trackers and spyware.",
+   "url": "https://x.ai/bot/MkXoiXKzLUKuWyhBsxPPE"
+  },
+  {
+   "id": "travel-7R9vIVZsXH693yr5GSULl",
+   "code": "7R9vIVZsXH693yr5GSULl",
+   "name": "Itinerary Reality Check",
+   "author": "Alex",
+   "description": "Paste a travel itinerary → Booked vs Wish list, feasibility flags, and official sources to confirm.",
+   "url": "https://x.ai/bot/7R9vIVZsXH693yr5GSULl"
+  },
+  {
+   "id": "travel-sYDyDQ-06nwtbIQDqzxlU",
+   "code": "sYDyDQ-06nwtbIQDqzxlU",
+   "name": "Kodak",
+   "author": "Gabriela Hobe",
+   "description": "Turns your photos into beautiful albums: trip recaps, year-in-reviews, gift books, and scrapbook-style PDFs.",
+   "url": "https://x.ai/bot/sYDyDQ-06nwtbIQDqzxlU"
+  },
+  {
+   "id": "travel-Jsc8w9oL22s5oHXryL4bq",
+   "code": "Jsc8w9oL22s5oHXryL4bq",
+   "name": "Label Checker",
+   "author": "Arunas Zidonis",
+   "description": "Send a photo of any label and get it explained in plain words, with warnings, allergens and safety points flagged.",
+   "url": "https://x.ai/bot/Jsc8w9oL22s5oHXryL4bq"
+  },
+  {
+   "id": "travel-v-rXX1htNDDMR110ZovcW",
+   "code": "v-rXX1htNDDMR110ZovcW",
+   "name": "Listing Polish",
+   "author": "Mrunknown.cro",
+   "description": "Rewrites Airbnb/VRBO and Etsy listings so they convert without sounding spammy. Paste your title and description for sharper titles, a clean.",
+   "url": "https://x.ai/bot/v-rXX1htNDDMR110ZovcW"
+  },
+  {
+   "id": "travel-AM17wqUeEmweEHWn58rEL",
+   "code": "AM17wqUeEmweEHWn58rEL",
+   "name": "Local Concert Scout",
+   "author": "Chaney",
+   "description": "Finds concerts near home or travel cities from Spotify or Apple Music taste; calendar optional.",
+   "url": "https://x.ai/bot/AM17wqUeEmweEHWn58rEL"
+  },
+  {
+   "id": "travel-6FxcOf5cgteUpdtd3g700",
+   "code": "6FxcOf5cgteUpdtd3g700",
+   "name": "Loyalty",
+   "author": "Carlos",
+   "description": "Finds missing airline and hotel miles in your mail, files claims, and steers you toward status.",
+   "url": "https://x.ai/bot/6FxcOf5cgteUpdtd3g700"
+  },
+  {
+   "id": "travel-F0ZQruHL4AsmoLxWWLvUG",
+   "code": "F0ZQruHL4AsmoLxWWLvUG",
+   "name": "MamboItalianoBot",
+   "author": "Mambo Italiano",
+   "description": "Travel assistant: realistic itineraries, transport and lodging with pros/cons, checklists and plan B — without…",
+   "url": "https://x.ai/bot/F0ZQruHL4AsmoLxWWLvUG"
+  },
+  {
+   "id": "travel-11sWH3DhDRrCC1EAGhqA2",
+   "code": "11sWH3DhDRrCC1EAGhqA2",
+   "name": "MetricXYZ",
+   "author": "bobbyR3PD",
+   "description": "AI agent that farms Metric (metric.xyz) points on BNB Chain and Robinhood Chain by clicking through Metric's app like a human.",
+   "url": "https://x.ai/bot/11sWH3DhDRrCC1EAGhqA2"
+  },
+  {
+   "id": "travel-yKRjDGTy_4GhV9OzAWnyK",
+   "code": "yKRjDGTy_4GhV9OzAWnyK",
+   "name": "Mileage Log Catcher",
+   "author": "Mike",
+   "description": "Draft mileage logs from calendar drive and travel blocks.",
+   "url": "https://x.ai/bot/yKRjDGTy_4GhV9OzAWnyK"
+  },
+  {
+   "id": "travel-zYTKGwDgxJnIoHHy4eXAC",
+   "code": "zYTKGwDgxJnIoHHy4eXAC",
+   "name": "Miles",
+   "author": "Darius Gaynor",
+   "description": "Finds high-intent buying signals for CRM, GoHighLevel, and AI receptionist / voice-agent services. Scans Reddit, LinkedIn, X, and Facebook twice each.",
+   "url": "https://x.ai/bot/zYTKGwDgxJnIoHHy4eXAC"
+  },
+  {
+   "id": "travel-A5PJWWubWq6RSITiu_tdG",
+   "code": "A5PJWWubWq6RSITiu_tdG",
+   "name": "Nomad Pro – Travel Bookkeeper",
+   "author": "Komal Amin",
+   "description": "Files your travel bookings from your inbox and logs where you are each day, building a clear travel record you can…",
+   "url": "https://x.ai/bot/A5PJWWubWq6RSITiu_tdG"
+  },
+  {
+   "id": "travel-iI1YZh-DqYsjUd4sfFvKC",
+   "code": "iI1YZh-DqYsjUd4sfFvKC",
+   "name": "Otto",
+   "author": "Dustin Rhodes",
+   "description": "Researches airline fares for a trip you name and recommends the best value after weighing connection risk against…",
+   "url": "https://x.ai/bot/iI1YZh-DqYsjUd4sfFvKC"
+  },
+  {
+   "id": "travel-RzyCs1gMOvwYULk3Wsm-f",
+   "code": "RzyCs1gMOvwYULk3Wsm-f",
+   "name": "PPL Checkride DPE",
+   "author": "Nick",
+   "description": "A mock Designated Pilot Examiner that runs Private Pilot checkride orals from the ACS, grades your answers and points you to the FAA handbook chapter.",
+   "url": "https://x.ai/bot/RzyCs1gMOvwYULk3Wsm-f"
+  },
+  {
+   "id": "travel-NvXhjW2O-Q711MGCyQDl_",
+   "code": "NvXhjW2O-Q711MGCyQDl_",
+   "name": "Pack Out",
+   "author": "Joe Giordano",
+   "description": "Reusable packing kits by trip type plus countdown reminders. Say you're packing for a trip on a date and get a checklist and a one-shot ping.",
+   "url": "https://x.ai/bot/NvXhjW2O-Q711MGCyQDl_"
+  },
+  {
+   "id": "travel-cH-LNd9KCM9OW4kPQu_8e",
+   "code": "cH-LNd9KCM9OW4kPQu_8e",
+   "name": "PostBot",
+   "author": "Cody Libolt",
+   "description": "Reads X for you and sends a short rundown of what's worth posting about, with real links, talking points and people to talk with. Read-only.",
+   "url": "https://x.ai/bot/cH-LNd9KCM9OW4kPQu_8e"
+  },
+  {
+   "id": "travel-37Km_vSkZWbQLJacdb_xq",
+   "code": "37Km_vSkZWbQLJacdb_xq",
+   "name": "Protective Detail",
+   "author": "Mike",
+   "description": "Always-on protective detail: advance packets before every destination, Tailscale-first location (names only), and cabin precool + nav before leave-by.",
+   "url": "https://x.ai/bot/37Km_vSkZWbQLJacdb_xq"
+  },
+  {
+   "id": "travel-vo-3PTd6VFVKKPBLDWUfT",
+   "code": "vo-3PTd6VFVKKPBLDWUfT",
+   "name": "Puck Prophet",
+   "author": "KH",
+   "description": "A fantasy hockey assistant for ESPN points leagues: daily matchup report, lineup checks, top free agents and goalie streams. Moves only with your OK.",
+   "url": "https://x.ai/bot/vo-3PTd6VFVKKPBLDWUfT"
+  },
+  {
+   "id": "travel-2lNBe_0w4Ua7tH4oawNWO",
+   "code": "2lNBe_0w4Ua7tH4oawNWO",
+   "name": "RV Trip Scout",
+   "author": "Richard Ames",
+   "description": "Plans RV and fifth-wheel routes and stops around your rig's height, length, and weight limits, a daily mileage cap…",
+   "url": "https://x.ai/bot/2lNBe_0w4Ua7tH4oawNWO"
+  },
+  {
+   "id": "travel-DQJgjJ30he07LMKZx1gnb",
+   "code": "DQJgjJ30he07LMKZx1gnb",
+   "name": "RivetRoad Trip Planner",
+   "author": "The Seth",
+   "description": "RV trip planner from RivetRoad that finds a rental rig, plans an RV-friendly route and campgrounds, totals real costs and coaches first-time drivers.",
+   "url": "https://x.ai/bot/DQJgjJ30he07LMKZx1gnb"
+  },
+  {
+   "id": "travel-Ycw6R4sK_jLw3oG02mO1A",
+   "code": "Ycw6R4sK_jLw3oG02mO1A",
+   "name": "Robin",
+   "author": "David",
+   "description": "Ranks flight itineraries by complimentary upgrade odds, aircraft type, and layover lounges.",
+   "url": "https://x.ai/bot/Ycw6R4sK_jLw3oG02mO1A"
+  },
+  {
+   "id": "travel-XGri4qPORtUxnDruyF_da",
+   "code": "XGri4qPORtUxnDruyF_da",
+   "name": "Routebook",
+   "author": "Anan Jaiswal",
+   "description": "Tour and travel desk assistant for OTAs: manage leads, quotes, bookings, flights, transport, and guest documents…",
+   "url": "https://x.ai/bot/XGri4qPORtUxnDruyF_da"
+  },
+  {
+   "id": "travel-8WjAjMTjfyF6wfzx-5Si3",
+   "code": "8WjAjMTjfyF6wfzx-5Si3",
+   "name": "Seamore",
+   "author": "Tweekerr",
+   "description": "A travel agent that finds trips that fit your real calendar and taught preferences. Checks openings first, hunts strong deals, and never books without.",
+   "url": "https://x.ai/bot/8WjAjMTjfyF6wfzx-5Si3"
+  },
+  {
+   "id": "travel-ld-dyXoWR89MHo5EefDy0",
+   "code": "ld-dyXoWR89MHo5EefDy0",
+   "name": "Settlement Finder",
+   "author": "Sergey Kapirov",
+   "description": "Finds open class action settlements you may be owed money from and points you to the official, free claim form.",
+   "url": "https://x.ai/bot/ld-dyXoWR89MHo5EefDy0"
+  },
+  {
+   "id": "travel-438hek2SIHhpHn9FDlQCe",
+   "code": "438hek2SIHhpHn9FDlQCe",
+   "name": "Space Monkey",
+   "author": "Eugene Ray",
+   "description": "Launch brief specialist for any orbital or suborbital flight — past, planned, scrubbed, or failed.",
+   "url": "https://x.ai/bot/438hek2SIHhpHn9FDlQCe"
+  },
+  {
+   "id": "travel-ORMgFC4uJZkLVKB5HuVIW",
+   "code": "ORMgFC4uJZkLVKB5HuVIW",
+   "name": "StarBot",
+   "author": "Jake Smart",
+   "description": "Starship & SpaceX launch companion: living Launch Card, nerdy Starbase hardware watch, and live in-flight milestone pings — dead simple front door,.",
+   "url": "https://x.ai/bot/ORMgFC4uJZkLVKB5HuVIW"
+  },
+  {
+   "id": "travel-xhYtadt6BRbZh3MMEppLa",
+   "code": "xhYtadt6BRbZh3MMEppLa",
+   "name": "Staypick",
+   "author": "Turac",
+   "description": "Ranks neighborhoods and stay types while a trip is still being designed — drafts only, never books.",
+   "url": "https://x.ai/bot/xhYtadt6BRbZh3MMEppLa"
+  },
+  {
+   "id": "travel-S4bu3goWvhKDw3NVtAVSA",
+   "code": "S4bu3goWvhKDw3NVtAVSA",
+   "name": "Stow",
+   "author": "@Brbaumhoff",
+   "description": "Trip packing coach for everyday travelers. Builds clear checklists from your trip type, activities, length, drive vs fly, destination weather, and TSA.",
+   "url": "https://x.ai/bot/S4bu3goWvhKDw3NVtAVSA"
+  },
+  {
+   "id": "travel-xqjRzHVNQxOSK0S_RhDo3",
+   "code": "xqjRzHVNQxOSK0S_RhDo3",
+   "name": "Tammy — True-Total Travel & Points Scout",
+   "author": "Bill Jenson",
+   "description": "Your True-Total Travel & Points Scout for flights, hotels, and award redemptions: exposes hidden resort & Basic Economy fees, verifies fares directly…",
+   "url": "https://x.ai/bot/xqjRzHVNQxOSK0S_RhDo3"
+  },
+  {
+   "id": "travel-wjHbMvA9JGdCyNnd9mBft",
+   "code": "wjHbMvA9JGdCyNnd9mBft",
+   "name": "TesBots: Road Trip Prep",
+   "author": "TimDOES",
+   "description": "Spots road trips on your calendar (or that you mention) and sends a short prep brief the evening before, starting with the weather.",
+   "url": "https://x.ai/bot/wjHbMvA9JGdCyNnd9mBft"
+  },
+  {
+   "id": "travel-IfjwtqY3BxMXeHdivRspj",
+   "code": "IfjwtqY3BxMXeHdivRspj",
+   "name": "Tesla Owners Bot",
+   "author": "Tesla Shawn - Comedian/ Anti-Hero",
+   "description": "Guide for new Tesla owners: asks model, year and trim, then answers setup, charging, FSD, winter, road-trip and troubleshooting questions from the manuals.",
+   "url": "https://x.ai/bot/IfjwtqY3BxMXeHdivRspj"
+  },
+  {
+   "id": "travel-zAzTVZRdvW9AK9okGihzU",
+   "code": "zAzTVZRdvW9AK9okGihzU",
+   "name": "Thailand Visa Desk",
+   "author": "Daniel Hogberg",
+   "description": "Tracks your Thai immigration deadlines (90-day reports, TM30, re-entry permits, TDAC, visa renewals), reminds you…",
+   "url": "https://x.ai/bot/zAzTVZRdvW9AK9okGihzU"
+  },
+  {
+   "id": "travel-JV6YIfX2EPzy1egwNmkya",
+   "code": "JV6YIfX2EPzy1egwNmkya",
+   "name": "Tour Guide",
+   "author": "Matt Lee",
+   "description": "A family travel planner that builds day-by-day trip plans with real, dated prices, watches booking windows, and sends short morning prompts during the trip.",
+   "url": "https://x.ai/bot/JV6YIfX2EPzy1egwNmkya"
+  },
+  {
+   "id": "travel-ySpYZ_5kCKLZZa9H5lQkg",
+   "code": "ySpYZ_5kCKLZZa9H5lQkg",
+   "name": "Travel",
+   "author": "K .",
+   "description": "Finds and compares flights, stays, ferries, and activities, plans itineraries, and books transport based on your past bookings.",
+   "url": "https://x.ai/bot/ySpYZ_5kCKLZZa9H5lQkg"
+  },
+  {
+   "id": "travel-5QvgpYYA9XbZUm-bUuKHB",
+   "code": "5QvgpYYA9XbZUm-bUuKHB",
+   "name": "Travel",
+   "author": "Steven",
+   "description": "Personal trip planner for people juggling flights, stays, ground logistics, and paperwork. It maps critical paths and next actions, and it never books.",
+   "url": "https://x.ai/bot/5QvgpYYA9XbZUm-bUuKHB"
+  },
+  {
+   "id": "travel-aGGP8goKCKkb-M8xR3oPL",
+   "code": "aGGP8goKCKkb-M8xR3oPL",
+   "name": "Travel",
+   "author": "OutworkVentures",
+   "description": "A family travel researcher and itinerary designer that compares verified flights and practical family stays, then returns Best Experience, B.",
+   "url": "https://x.ai/bot/aGGP8goKCKkb-M8xR3oPL"
+  },
+  {
+   "id": "travel-CO9aQ2BdGGHEJH0wXTGV7",
+   "code": "CO9aQ2BdGGHEJH0wXTGV7",
+   "name": "Travel Advisor",
+   "author": "@thefit24couple",
+   "description": "A travel advisor that plans multi-day trips (flights, stays, road trips, day-by-day itineraries, and reservation proposals) from live official sources.",
+   "url": "https://x.ai/bot/CO9aQ2BdGGHEJH0wXTGV7"
+  },
+  {
+   "id": "travel-d8C0ufUatv_fgoCRbfXZ4",
+   "code": "d8C0ufUatv_fgoCRbfXZ4",
+   "name": "Travel Agent",
+   "author": "Scott Metcalf",
+   "description": "Plans trips and drafts bookings for your approval; never pays or confirms without you.",
+   "url": "https://x.ai/bot/d8C0ufUatv_fgoCRbfXZ4"
+  },
+  {
+   "id": "travel-qdj9RHgwlMBpQflJy0K_X",
+   "code": "qdj9RHgwlMBpQflJy0K_X",
+   "name": "Travel Agent",
+   "author": "Manan",
+   "description": "Points-aware travel ops agent: sets up a trip HQ (Notion or local files), hunts cash and award deals, watches on a schedule, and only pings when.",
+   "url": "https://x.ai/bot/qdj9RHgwlMBpQflJy0K_X"
+  },
+  {
+   "id": "travel-nKo1yWVsJZlLHOXU-dBtA",
+   "code": "nKo1yWVsJZlLHOXU-dBtA",
+   "name": "Travel Agent",
+   "author": "Queen",
+   "description": "Your full travel agent: finds the best flights and hotels, sorts airport transfers, Uber and museum tickets, and writes a complete city guide tailored…",
+   "url": "https://x.ai/bot/nKo1yWVsJZlLHOXU-dBtA"
+  },
+  {
+   "id": "travel-57uOFOEX5O7ZfTWml40ny",
+   "code": "57uOFOEX5O7ZfTWml40ny",
+   "name": "Travel Agent",
+   "author": "Jess",
+   "description": "Friendly travel planner for vacations and road trips: flights, stays, restaurants, day-by-day itineraries, weather, and EV road trips with charging stops.",
+   "url": "https://x.ai/bot/57uOFOEX5O7ZfTWml40ny"
+  },
+  {
+   "id": "travel-_yHS4eeajJMAXY1EHAdoO",
+   "code": "_yHS4eeajJMAXY1EHAdoO",
+   "name": "Travel Agent",
+   "author": "Jeremy",
+   "description": "Keeps a Notion travel log and answers questions from your own trips.",
+   "url": "https://x.ai/bot/_yHS4eeajJMAXY1EHAdoO"
+  },
+  {
+   "id": "travel-m7sSNlYWSxqrsHrMiEnsh",
+   "code": "m7sSNlYWSxqrsHrMiEnsh",
+   "name": "Travel And Event Agency",
+   "author": "dogenorway dogenorway",
+   "description": "Finds live flights, hotels, ground transport, and official event tickets.",
+   "url": "https://x.ai/bot/m7sSNlYWSxqrsHrMiEnsh"
+  },
+  {
+   "id": "travel-1MwL5s1o4YeJ1jA8ejdhd",
+   "code": "1MwL5s1o4YeJ1jA8ejdhd",
+   "name": "Travel Bot",
+   "author": "Lovable Curves",
+   "description": "Plans family trips on a real budget: business class on points, cheap fare watching, hosted-stay pitches to hotels…",
+   "url": "https://x.ai/bot/1MwL5s1o4YeJ1jA8ejdhd"
+  },
+  {
+   "id": "travel-CAboHRIpMlLDU6mwnByCq",
+   "code": "CAboHRIpMlLDU6mwnByCq",
+   "name": "Travel Bot",
+   "author": "Grease",
+   "description": "Family travel planner and coordinator. Plans trips, compares flights and lodging, tracks PTO accrual and carryover…",
+   "url": "https://x.ai/bot/CAboHRIpMlLDU6mwnByCq"
+  },
+  {
+   "id": "travel-uoHQ_22Pp57gdRGw5lHre",
+   "code": "uoHQ_22Pp57gdRGw5lHre",
+   "name": "Travel Concierge",
+   "author": "Chung Ben",
+   "description": "A multilingual travel concierge that builds route-efficient day plans, flags weather and local blockers early…",
+   "url": "https://x.ai/bot/uoHQ_22Pp57gdRGw5lHre"
+  },
+  {
+   "id": "travel-sc693906bdeded166b7ba",
+   "code": "sc693906bdeded166b7ba",
+   "name": "Travel Coordinator",
+   "author": "SpaceX",
+   "description": "Hold the best option before it expires. Compares flights and hotels to your rules, confirms before booking, and drops itinerary plus calendar.",
+   "url": "https://x.ai/bot/sc693906bdeded166b7ba"
+  },
+  {
+   "id": "travel-covrY3BaA_FEyhLrrbGzR",
+   "code": "covrY3BaA_FEyhLrrbGzR",
+   "name": "Travel Day Pack",
+   "author": "Mike",
+   "description": "Day-of travel pack from your calendar: weather, leave-by, packing list, docs/tickets, short brief.",
+   "url": "https://x.ai/bot/covrY3BaA_FEyhLrrbGzR"
+  },
+  {
+   "id": "travel-MdJ6IbHH6Q02R05YlgUbl",
+   "code": "MdJ6IbHH6Q02R05YlgUbl",
+   "name": "Travel Deal Hunter",
+   "author": "natillie elder",
+   "description": "Finds real trip deals from your hub airports, fits them to open calendar windows, and plans by vibe , with honest prices and no invented “normally…",
+   "url": "https://x.ai/bot/MdJ6IbHH6Q02R05YlgUbl"
+  },
+  {
+   "id": "travel-HUyK_n0GZRm8NXq_Sgw5I",
+   "code": "HUyK_n0GZRm8NXq_Sgw5I",
+   "name": "Travel Delay Copilot",
+   "author": "Fernand Pelin",
+   "description": "When a flight is delayed, canceled, or you misconnect, pulls live airline policy + passenger-rights rules, cites sources with dates, and drafts a calm…",
+   "url": "https://x.ai/bot/HUyK_n0GZRm8NXq_Sgw5I"
+  },
+  {
+   "id": "travel-CfeptLkV_zsiL-nhOKSUu",
+   "code": "CfeptLkV_zsiL-nhOKSUu",
+   "name": "Travel Desk",
+   "author": "ladybarrelmaker",
+   "description": "Work-travel desk that actually enjoys the logistics — bag-inclusive flights, hotels near the venue, transfers, calendar…",
+   "url": "https://x.ai/bot/CfeptLkV_zsiL-nhOKSUu"
+  },
+  {
+   "id": "travel-Upkn_bUxr___NAvXZB3Dc",
+   "code": "Upkn_bUxr___NAvXZB3Dc",
+   "name": "Travel Expenses",
+   "author": "David Haythornthwaite",
+   "description": "Track trip spends in any currency, roll them up to a report total you choose, and export a clean A4 or Letter Excel +…",
+   "url": "https://x.ai/bot/Upkn_bUxr___NAvXZB3Dc"
+  },
+  {
+   "id": "travel-4YWzzAP8Di9B4DnYd3Uzo",
+   "code": "4YWzzAP8Di9B4DnYd3Uzo",
+   "name": "Travel Grok",
+   "author": "Tony Chan",
+   "description": "A slow travel companion that leaves on its own and comes home with short notes and postcard images.",
+   "url": "https://x.ai/bot/4YWzzAP8Di9B4DnYd3Uzo"
+  },
+  {
+   "id": "travel-wg82QACOYA6z6ZzFURvcZ",
+   "code": "wg82QACOYA6z6ZzFURvcZ",
+   "name": "Travel Guru",
+   "author": "DJ",
+   "description": "Travel Guru knows your frequent flyer, hotel, and rental car programs and finds the smartest mix of cash and points for every trip.",
+   "url": "https://x.ai/bot/wg82QACOYA6z6ZzFURvcZ"
+  },
+  {
+   "id": "travel--oVff2knWZBAARtD7s6_k",
+   "code": "-oVff2knWZBAARtD7s6_k",
+   "name": "Travel Itinerary Desk TRIP-SMART",
+   "author": "Cypher",
+   "description": "Day-by-day travel itinerary with transfer buffers and a packing checklist.",
+   "url": "https://x.ai/bot/-oVff2knWZBAARtD7s6_k"
+  },
+  {
+   "id": "travel-vA_hVKUzdFFr_5USHoUji",
+   "code": "vA_hVKUzdFFr_5USHoUji",
+   "name": "Travel Plans",
+   "author": "MrDingo#7118",
+   "description": "Deep trip, getaway, and vacation planning — research and itineraries with 2–3 coherent options, logistics, lodging…",
+   "url": "https://x.ai/bot/vA_hVKUzdFFr_5USHoUji"
+  },
+  {
+   "id": "travel-xG8090ZuddD1vqrDdeTHZ",
+   "code": "xG8090ZuddD1vqrDdeTHZ",
+   "name": "Travel Specialist",
+   "author": "Arthur MacWaters",
+   "description": "End-to-end travel desk for busy travelers.",
+   "url": "https://x.ai/bot/xG8090ZuddD1vqrDdeTHZ"
+  },
+  {
+   "id": "travel-WNoawju9U2WDwe2yPxGjO",
+   "code": "WNoawju9U2WDwe2yPxGjO",
+   "name": "Travel Steward",
+   "author": "Stephen Benjamin",
+   "description": "Daily companion for booked trips that turns plans into practical checks and suggests food and lounges along the way.",
+   "url": "https://x.ai/bot/WNoawju9U2WDwe2yPxGjO"
+  },
+  {
+   "id": "travel-0hD-M0m0boT7nmRKuQKOD",
+   "code": "0hD-M0m0boT7nmRKuQKOD",
+   "name": "Travel agent",
+   "author": "David Mende",
+   "description": "A travel agent for road trips and flights: compares and books pet-friendly hotels, plans EV charging stops, and answers on-the-road questions by voice.",
+   "url": "https://x.ai/bot/0hD-M0m0boT7nmRKuQKOD"
+  },
+  {
+   "id": "travel-9Mp1uoDdR0_woJFzt85DC",
+   "code": "9Mp1uoDdR0_woJFzt85DC",
+   "name": "Traveler",
+   "author": "Andrew Hua",
+   "description": "A family travel agent and points maximizer.",
+   "url": "https://x.ai/bot/9Mp1uoDdR0_woJFzt85DC"
+  },
+  {
+   "id": "travel-AkhWclpS2_nLsje2M5r6W",
+   "code": "AkhWclpS2_nLsje2M5r6W",
+   "name": "Trip Fix Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "When a flight or bag goes wrong: says what you're owed under US DOT or EU rules, warns before you take a voucher, drafts refund and bag claims, tracks them.",
+   "url": "https://x.ai/bot/AkhWclpS2_nLsje2M5r6W"
+  },
+  {
+   "id": "travel-lkfpeJX5Hg58yMFm0B0kb",
+   "code": "lkfpeJX5Hg58yMFm0B0kb",
+   "name": "Trip Pilot",
+   "author": "Joseph Snyder",
+   "description": "Builds day-by-day itineraries and packing lists, watches fares and award space on routes you care about, and runs…",
+   "url": "https://x.ai/bot/lkfpeJX5Hg58yMFm0B0kb"
+  },
+  {
+   "id": "travel-mRAXp_PlX3sMY4N13Hgnj",
+   "code": "mRAXp_PlX3sMY4N13Hgnj",
+   "name": "Trip Prep",
+   "author": "Sam E",
+   "description": "Handles the household side of your trips. It spots trips in your email, builds one trip page, keeps a chore list like pets, mail hold.",
+   "url": "https://x.ai/bot/mRAXp_PlX3sMY4N13Hgnj"
+  },
+  {
+   "id": "travel-u3-oBBZFKvgWtqSEwICPO",
+   "code": "u3-oBBZFKvgWtqSEwICPO",
+   "name": "Trip Radar",
+   "author": "Josh",
+   "description": "Watches prices and deals for your upcoming trip (lodging, tickets, add-ons, rentals) and messages you only when something is worth acting…",
+   "url": "https://x.ai/bot/u3-oBBZFKvgWtqSEwICPO"
+  },
+  {
+   "id": "travel-bze8MHCEZCkRP_Dw7uqw5",
+   "code": "bze8MHCEZCkRP_Dw7uqw5",
+   "name": "TripConcierge",
+   "author": "Carolina Dill",
+   "description": "Travel concierge that researches a sourced trip brief with flights, hotels, sights, safety, daily plans, and budget, and only recommends.",
+   "url": "https://x.ai/bot/bze8MHCEZCkRP_Dw7uqw5"
+  },
+  {
+   "id": "travel-JOqKmRtk249knj1lWv3dl",
+   "code": "JOqKmRtk249knj1lWv3dl",
+   "name": "TripScout",
+   "author": "Haim Bahari",
+   "description": "A friendly travel agent that researches destinations, flights, hotels, and campsites, builds day-by-day itineraries…",
+   "url": "https://x.ai/bot/JOqKmRtk249knj1lWv3dl"
+  },
+  {
+   "id": "travel-_AdzH87gB_gh1gJGmD30e",
+   "code": "_AdzH87gB_gh1gJGmD30e",
+   "name": "TripScout",
+   "author": "Anurag Agrawal",
+   "description": "Skeptical travel analyst that vets destinations, drive times, weather, and tourist traps before building an interactive…",
+   "url": "https://x.ai/bot/_AdzH87gB_gh1gJGmD30e"
+  },
+  {
+   "id": "travel--UBhEaV5ItDVIPFV-2j8U",
+   "code": "-UBhEaV5ItDVIPFV-2j8U",
+   "name": "Trippy",
+   "author": "Teslaconomics",
+   "description": "24/7 travel teammate for stays, restaurants, day plans, flights, rentals, and shoot ideas.",
+   "url": "https://x.ai/bot/-UBhEaV5ItDVIPFV-2j8U"
+  },
+  {
+   "id": "travel-BZr7_j7WC1klRjG8SrwWx",
+   "code": "BZr7_j7WC1klRjG8SrwWx",
+   "name": "Ultimate RV Trip Planner",
+   "author": "Chris Millet",
+   "description": "Plans multi-day RV trips around your rig: paced legs, rig-safe routes, stays by your memberships and budget, live…",
+   "url": "https://x.ai/bot/BZr7_j7WC1klRjG8SrwWx"
+  },
+  {
+   "id": "travel-cr8KAg2sp0Nyam7-QF-jh",
+   "code": "cr8KAg2sp0Nyam7-QF-jh",
+   "name": "Vacation Planner",
+   "author": "McDubleNOpickle",
+   "description": "Plan vacations, compare flights and cruises, find stays, build itineraries, handle airport and port logistics…",
+   "url": "https://x.ai/bot/cr8KAg2sp0Nyam7-QF-jh"
+  },
+  {
+   "id": "travel-Ust023GCgyUqViovDUky9",
+   "code": "Ust023GCgyUqViovDUky9",
+   "name": "Vacation Vicky",
+   "author": "James Harrison",
+   "description": "Plans trips end to end (flights, lodging, rental cars, day-by-day itineraries, price checks) and saves polished plans to Google Drive or OneDrive. Never books.",
+   "url": "https://x.ai/bot/Ust023GCgyUqViovDUky9"
+  },
+  {
+   "id": "travel-CPOWEqxmLfmSsiMnw2qlD",
+   "code": "CPOWEqxmLfmSsiMnw2qlD",
+   "name": "Vibe Check",
+   "author": "Abby Nelson",
+   "description": "A vibe check for project understanding. When friction or repeated points show you and AI may not be building the same thing, it slows in and recalibrates.",
+   "url": "https://x.ai/bot/CPOWEqxmLfmSsiMnw2qlD"
+  },
+  {
+   "id": "travel-ZApqGaOa7Rw1kXUHo5vyG",
+   "code": "ZApqGaOa7Rw1kXUHo5vyG",
+   "name": "Your Travel Planner",
+   "author": "Mambo Italiano",
+   "description": "Turns a destination into a realistic day-by-day itinerary with transport and lodging trade-offs, checklists and a fallback plan.",
+   "url": "https://x.ai/bot/ZApqGaOa7Rw1kXUHo5vyG"
+  },
+  {
+   "id": "travel-PFD95widaEeqjkYLLUZmD",
+   "code": "PFD95widaEeqjkYLLUZmD",
+   "name": "point peddler",
+   "author": "Daniel Xu",
+   "description": "An award-travel brain that makes points optimisation effortless.",
+   "url": "https://x.ai/bot/PFD95widaEeqjkYLLUZmD"
+  },
+  {
+   "id": "travel-eXQt5VUovcU0HMj_b-CDY",
+   "code": "eXQt5VUovcU0HMj_b-CDY",
+   "name": "t2000",
+   "author": "funkii r",
+   "description": "Marketplace operator for t2000.ai. Earn, hire, settle, and sell in USDC over Passport Connect.",
+   "url": "https://x.ai/bot/eXQt5VUovcU0HMj_b-CDY"
+  },
+  {
+   "id": "travel-EL7FBbcMa3gIcXvSxozqv",
+   "code": "EL7FBbcMa3gIcXvSxozqv",
+   "name": "ポイ活・セール番人",
+   "author": "sidejob_AJ",
+   "description": "Watches items you want on Amazon, Rakuten and Yahoo! against a target price including points, and alerts you only on drops or big sales. Never buys.",
+   "url": "https://x.ai/bot/EL7FBbcMa3gIcXvSxozqv"
+  },
+  {
+   "id": "travel-nhplJJITvVS4IJQBvtenq",
+   "code": "nhplJJITvVS4IJQBvtenq",
+   "name": "乗り過ごし番",
+   "author": "RYO",
+   "description": "Stops you missing your train stop: send your destination and it sets phone alarms just before your transfer and exit stations. Japanese.",
+   "url": "https://x.ai/bot/nhplJJITvVS4IJQBvtenq"
+  }
+ ]
+}

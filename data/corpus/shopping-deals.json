@@ -1,0 +1,1928 @@
+{
+ "slug": "shopping-deals",
+ "label": "Shopping & Deals",
+ "count": 240,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "shopping-deals-yXsqmCaODNkTEwtIbiXxe",
+   "code": "yXsqmCaODNkTEwtIbiXxe",
+   "name": "AE deal bot",
+   "author": "Scott Metcalf",
+   "description": "Grades your open opportunities against MEDDPICC and names the next move to make.",
+   "url": "https://x.ai/bot/yXsqmCaODNkTEwtIbiXxe"
+  },
+  {
+   "id": "shopping-deals-6p3StnT2p3UZPL1xcNvIG",
+   "code": "6p3StnT2p3UZPL1xcNvIG",
+   "name": "AI Deal Scout",
+   "author": "MetCaster",
+   "description": "Scans X a few times a day for AI tool and subscription deals (ChatGPT, Claude, Cursor, Midjourney and more) and sends short alerts. Never posts as you.",
+   "url": "https://x.ai/bot/6p3StnT2p3UZPL1xcNvIG"
+  },
+  {
+   "id": "shopping-deals-L6q8qCzomu2lTs9mu_r1X",
+   "code": "L6q8qCzomu2lTs9mu_r1X",
+   "name": "AI Master",
+   "author": "Leonardo Clark Ribeiro",
+   "description": "Sends each question to ChatGPT, Claude, Gemini, and Grok in the browser, then returns one combined summary so you don’t…",
+   "url": "https://x.ai/bot/L6q8qCzomu2lTs9mu_r1X"
+  },
+  {
+   "id": "shopping-deals-LVV6rcMxNBUKHPX5QFKP-",
+   "code": "LVV6rcMxNBUKHPX5QFKP-",
+   "name": "AI Price Watch",
+   "author": "Jeffrey McLeod",
+   "description": "Tell it which AI models you use and roughly how much; every Monday you get a plain-English price check with cheaper same-tier options.",
+   "url": "https://x.ai/bot/LVV6rcMxNBUKHPX5QFKP-"
+  },
+  {
+   "id": "shopping-deals-397nAuSYuayNl0seXbR5t",
+   "code": "397nAuSYuayNl0seXbR5t",
+   "name": "Afterglass",
+   "author": "Phantom Builds",
+   "description": "Audits a named AI model for safety, reliability, capability, and related axes using cited public evidence, then returns a bias line, raw audit, and Grok.",
+   "url": "https://x.ai/bot/397nAuSYuayNl0seXbR5t"
+  },
+  {
+   "id": "shopping-deals-yXrklU1viS9roHs9d25-a",
+   "code": "yXrklU1viS9roHs9d25-a",
+   "name": "Airfare Deals",
+   "author": "Luke Carriere",
+   "description": "Watches for unusually cheap last-minute nonstop weekend fares from your home airport, priced for your whole family, and only pings you when a deal.",
+   "url": "https://x.ai/bot/yXrklU1viS9roHs9d25-a"
+  },
+  {
+   "id": "shopping-deals-sY7Y_dWsD3Kyf6PgROSlC",
+   "code": "sY7Y_dWsD3Kyf6PgROSlC",
+   "name": "All Knowing",
+   "author": "Kody Bennett",
+   "description": "Helps you build and run a niche digital product shop (templates, trackers, planners) from first listing to weekly sales checks on a small time budget.",
+   "url": "https://x.ai/bot/sY7Y_dWsD3Kyf6PgROSlC"
+  },
+  {
+   "id": "shopping-deals-nKNpAPZZaDJmDPd4QwTIX",
+   "code": "nKNpAPZZaDJmDPd4QwTIX",
+   "name": "Amazon",
+   "author": "Kevin",
+   "description": "Shopping and savings bot for Amazon cart and wishlist deal watching, USA-made product search, and optional local listings.",
+   "url": "https://x.ai/bot/nKNpAPZZaDJmDPd4QwTIX"
+  },
+  {
+   "id": "shopping-deals-oOnro0nYdAP6AaiEnUBG6",
+   "code": "oOnro0nYdAP6AaiEnUBG6",
+   "name": "Amazon Ads Manager",
+   "author": "Brandon Hinojosa",
+   "description": "Monitors and reports on Amazon Sponsored Products, Brands and Display ads from native reports, and proposes changes for you to approve.",
+   "url": "https://x.ai/bot/oOnro0nYdAP6AaiEnUBG6"
+  },
+  {
+   "id": "shopping-deals-WWH3tIZcTTiOxlYnbG-i-",
+   "code": "WWH3tIZcTTiOxlYnbG-i-",
+   "name": "Amazon Affiliate Video Maker",
+   "author": "CryptoBandit",
+   "description": "Makes short-form Amazon affiliate videos and stills for you: it picks a trending product with a live listing, writes the script.",
+   "url": "https://x.ai/bot/WWH3tIZcTTiOxlYnbG-i-"
+  },
+  {
+   "id": "shopping-deals-LD3Aulc-ptTo30r3eX_KR",
+   "code": "LD3Aulc-ptTo30r3eX_KR",
+   "name": "Amazon Checkout Agent",
+   "author": "Rohan Arun",
+   "description": "Finds a requested Amazon product, verifies variant, quantity, and budget, adds it to the cart, and stops at checkout before payment.",
+   "url": "https://x.ai/bot/LD3Aulc-ptTo30r3eX_KR"
+  },
+  {
+   "id": "shopping-deals-YAzSULV-SRvnKlxOzcx3L",
+   "code": "YAzSULV-SRvnKlxOzcx3L",
+   "name": "Amazon Shopping",
+   "author": "-",
+   "description": "Shops Amazon for you through the Amazon phone app, using iPhone Mirroring, an Android phone over Tailscale, or a virtual Android phone.",
+   "url": "https://x.ai/bot/YAzSULV-SRvnKlxOzcx3L"
+  },
+  {
+   "id": "shopping-deals-RtJUdCQlpUeoc_LV_N1Ve",
+   "code": "RtJUdCQlpUeoc_LV_N1Ve",
+   "name": "Amazon ranking",
+   "author": "hiếu nguyễn công",
+   "description": "Spy your Amazon market every day: organic rank and price for every ASIN × keyword, auto-crawled on a schedule…",
+   "url": "https://x.ai/bot/RtJUdCQlpUeoc_LV_N1Ve"
+  },
+  {
+   "id": "shopping-deals-xTuuc4CJilpanN_wzC8tB",
+   "code": "xTuuc4CJilpanN_wzC8tB",
+   "name": "Apple Deal Price Slicer",
+   "author": "Kent Weber",
+   "description": "Finds the lowest real price on the Mac, iPhone, or iPad you want, whether new, refurbished, open-box, or used.",
+   "url": "https://x.ai/bot/xTuuc4CJilpanN_wzC8tB"
+  },
+  {
+   "id": "shopping-deals-Vx13jzt30gpYEztDQbueA",
+   "code": "Vx13jzt30gpYEztDQbueA",
+   "name": "Apple Inventory & Deal Bot",
+   "author": "Phillip Holland",
+   "description": "Finds the exact Apple product you want in stock and shows who can get it to you soonest and cheapest, across Apple, carriers and big-box stores.",
+   "url": "https://x.ai/bot/Vx13jzt30gpYEztDQbueA"
+  },
+  {
+   "id": "shopping-deals-vBskzZFRWX5t20481zgS5",
+   "code": "vBskzZFRWX5t20481zgS5",
+   "name": "Apple Inventory & Deal Bot",
+   "author": "Roderik van der Veer",
+   "description": "Finds the exact Apple product you want in stock, shows who can get it to you soonest and cheapest, watches Apple Store pickup restocks; buys only on your yes.",
+   "url": "https://x.ai/bot/vBskzZFRWX5t20481zgS5"
+  },
+  {
+   "id": "shopping-deals-1xERibyRYst3MSlMvqy_F",
+   "code": "1xERibyRYst3MSlMvqy_F",
+   "name": "Artist COO",
+   "author": "Patrick Breen",
+   "description": "COO for an independent artist’s exposure-to-deal operation. Filters every desk through you, stands up manager and task bots, and drives organic growth.",
+   "url": "https://x.ai/bot/1xERibyRYst3MSlMvqy_F"
+  },
+  {
+   "id": "shopping-deals-b5Wez7fDDAGMnvjyUaoYY",
+   "code": "b5Wez7fDDAGMnvjyUaoYY",
+   "name": "Asado bot",
+   "author": "Darío Kondratiuk",
+   "description": "Plans your asado shopping: tell it who is coming and it calculates how much meat, chorizo, and bread to buy…",
+   "url": "https://x.ai/bot/b5Wez7fDDAGMnvjyUaoYY"
+  },
+  {
+   "id": "shopping-deals-4t5SqSmfSngvT9v7w5gp5",
+   "code": "4t5SqSmfSngvT9v7w5gp5",
+   "name": "Balance Buddy",
+   "author": "Samuel Dickinson",
+   "description": "Send a photo of a gift card and get back how much is left on it, checked on the brand's official site.",
+   "url": "https://x.ai/bot/4t5SqSmfSngvT9v7w5gp5"
+  },
+  {
+   "id": "shopping-deals-ptD8qjcnxR03zfSV2b5dZ",
+   "code": "ptD8qjcnxR03zfSV2b5dZ",
+   "name": "Bargain Hunter",
+   "author": "Jake",
+   "description": "Daily on-sale scout: finds discounted deals across stores in your country, then checks eBay, Etsy, Gumroad and Shopify for 30%+ net resale profit. You buy.",
+   "url": "https://x.ai/bot/ptD8qjcnxR03zfSV2b5dZ"
+  },
+  {
+   "id": "shopping-deals-UwThF7HjQfD5hxtAWwtkY",
+   "code": "UwThF7HjQfD5hxtAWwtkY",
+   "name": "Bee",
+   "author": "Cyber Viking",
+   "description": "Helps boyfriends and husbands be thoughtful, cycle-aware partners from only what she shares, with heads-ups, important dates, gift ideas and fair chores.",
+   "url": "https://x.ai/bot/UwThF7HjQfD5hxtAWwtkY"
+  },
+  {
+   "id": "shopping-deals-OlIyQY5zrc7C7b3VocYZk",
+   "code": "OlIyQY5zrc7C7b3VocYZk",
+   "name": "Bezoff",
+   "author": "Jason Baum",
+   "description": "Helps you quit Amazon by finding the things you buy at other stores, with Made in USA options first.",
+   "url": "https://x.ai/bot/OlIyQY5zrc7C7b3VocYZk"
+  },
+  {
+   "id": "shopping-deals-Xe3MVO3fgpnjY4-e2k5bH",
+   "code": "Xe3MVO3fgpnjY4-e2k5bH",
+   "name": "Black Friday Real-Deal Checker",
+   "author": "Prabhu Ratthinam",
+   "description": "Logs prices for the products you paste every day, then tells you on Black Friday and Cyber Monday whether each price is a real deal compared…",
+   "url": "https://x.ai/bot/Xe3MVO3fgpnjY4-e2k5bH"
+  },
+  {
+   "id": "shopping-deals-BAbHIps4VA0Hr4GLIOJme",
+   "code": "BAbHIps4VA0Hr4GLIOJme",
+   "name": "Blair",
+   "author": "Jediah Katz",
+   "description": "A personal shopper that hunts down secondhand designer pieces and can buy them.",
+   "url": "https://x.ai/bot/BAbHIps4VA0Hr4GLIOJme"
+  },
+  {
+   "id": "shopping-deals-GdB4gU1sxGHVx5xkAJYtc",
+   "code": "GdB4gU1sxGHVx5xkAJYtc",
+   "name": "Bloodhound",
+   "author": "Cyber Lord",
+   "description": "Scans listings in the cities you choose and ranks the rental deals that pass your own buy box and underwriting, rehab included.",
+   "url": "https://x.ai/bot/GdB4gU1sxGHVx5xkAJYtc"
+  },
+  {
+   "id": "shopping-deals-55mwt8wkn-IAj89LPGPGN",
+   "code": "55mwt8wkn-IAj89LPGPGN",
+   "name": "Boo-tique",
+   "author": "Andris Volkovs",
+   "description": "A gloomy, gothic Halloween costume finder. It learns who you are, then finds your 3 to 5 best costumes with verified buy links that arrive in time.",
+   "url": "https://x.ai/bot/55mwt8wkn-IAj89LPGPGN"
+  },
+  {
+   "id": "shopping-deals-6P8spN6KhyUKNm4UH-meW",
+   "code": "6P8spN6KhyUKNm4UH-meW",
+   "name": "Bookworm",
+   "author": "@Synk556",
+   "description": "Adds new books to your Calibre library with full metadata, sends them to your Kindle, and watches your authors and series for releases and deals.",
+   "url": "https://x.ai/bot/6P8spN6KhyUKNm4UH-meW"
+  },
+  {
+   "id": "shopping-deals-DGg-YKZc5Wwl7QN1O2sKG",
+   "code": "DGg-YKZc5Wwl7QN1O2sKG",
+   "name": "Boss B",
+   "author": "Deana Rock",
+   "description": "Front-door orchestrator for a multi-bot shop: plans, routes to specialists or Grok Build CLI, and inspects results — without becoming a second coder…",
+   "url": "https://x.ai/bot/DGg-YKZc5Wwl7QN1O2sKG"
+  },
+  {
+   "id": "shopping-deals-5mzwroI2pRFvH84Md1Ufj",
+   "code": "5mzwroI2pRFvH84Md1Ufj",
+   "name": "Botoween",
+   "author": "Jenna",
+   "description": "A bot that will help you pick out and buy your favorite bot mask for Halloween this year .",
+   "url": "https://x.ai/bot/5mzwroI2pRFvH84Md1Ufj"
+  },
+  {
+   "id": "shopping-deals-c3Xj0xgm2AuiKKEBWEDxG",
+   "code": "c3Xj0xgm2AuiKKEBWEDxG",
+   "name": "Bourbon Buddy",
+   "author": "Amit Gandhi",
+   "description": "A whisky and bourbon buying advisor. Send it a bottle and price, and it tells you whether it's worth it, using…",
+   "url": "https://x.ai/bot/c3Xj0xgm2AuiKKEBWEDxG"
+  },
+  {
+   "id": "shopping-deals-_PsDzWmelSCI1gDpCRA4u",
+   "code": "_PsDzWmelSCI1gDpCRA4u",
+   "name": "Box Truck Work Finder",
+   "author": "Z23 Brownridge",
+   "description": "Finds work for a box truck or cargo van (Amazon Relay, final-mile and courier programs, local posts) with requirements. Drafts only, never applies.",
+   "url": "https://x.ai/bot/_PsDzWmelSCI1gDpCRA4u"
+  },
+  {
+   "id": "shopping-deals-8O-xrNV8vAMjpFVn176K8",
+   "code": "8O-xrNV8vAMjpFVn176K8",
+   "name": "Brand Deal Bouncer",
+   "author": "Mark G",
+   "description": "Guards creators from sponsorship scams: scans your inbox daily, scores each pitch Legit, Verify or Trash without clicking, drafts replies from your rate card.",
+   "url": "https://x.ai/bot/8O-xrNV8vAMjpFVn176K8"
+  },
+  {
+   "id": "shopping-deals-22A2V2dAwAcNT1p2pMoP8",
+   "code": "22A2V2dAwAcNT1p2pMoP8",
+   "name": "Butter Boy",
+   "author": "Jaxon Wright",
+   "description": "Finds and orders the cheapest stick butter from the online retailer you pick, comparing price per ounce and always asking before buying.",
+   "url": "https://x.ai/bot/22A2V2dAwAcNT1p2pMoP8"
+  },
+  {
+   "id": "shopping-deals-O9XbjNnFDHDqkOZy87nox",
+   "code": "O9XbjNnFDHDqkOZy87nox",
+   "name": "Buy",
+   "author": "Paul",
+   "description": "Compiles shoppable trade studies: picks a winner, hunts the best real price, checks buy links, and delivers a chat chart plus full Notion/Docs/Sheets write-up.",
+   "url": "https://x.ai/bot/O9XbjNnFDHDqkOZy87nox"
+  },
+  {
+   "id": "shopping-deals-gIV4FpQgVmcsO0soCjHGc",
+   "code": "gIV4FpQgVmcsO0soCjHGc",
+   "name": "Buy Elsewhere",
+   "author": "Brian Mangum",
+   "description": "Buys from brand sites and other retailers when Amazon blocks bots or has a worse deal.",
+   "url": "https://x.ai/bot/gIV4FpQgVmcsO0soCjHGc"
+  },
+  {
+   "id": "shopping-deals-dKULJ5f9nPf6_fVn5aGK4",
+   "code": "dKULJ5f9nPf6_fVn5aGK4",
+   "name": "Buy or Skip",
+   "author": "saikrishna uppaluri",
+   "description": "Paste a product link or name and get one verdict: BUY, WAIT or SKIP.",
+   "url": "https://x.ai/bot/dKULJ5f9nPf6_fVn5aGK4"
+  },
+  {
+   "id": "shopping-deals-kQ7OlCrADIjztiAKsVR0Y",
+   "code": "kQ7OlCrADIjztiAKsVR0Y",
+   "name": "BuyerBot",
+   "author": "dmitry",
+   "description": "Personal shopping researcher and buying adviser. Maps the market first, asks a few closed questions, shortlists best-fit options, then recommends.",
+   "url": "https://x.ai/bot/kQ7OlCrADIjztiAKsVR0Y"
+  },
+  {
+   "id": "shopping-deals-K4JptVX1j3qOV9qBWkll-",
+   "code": "K4JptVX1j3qOV9qBWkll-",
+   "name": "Card Benefits Desk",
+   "author": "Loungeless",
+   "description": "Maps a purchase to the card you used, tells you which purchase benefits may still apply, then drafts, files and tracks claims as you direct.",
+   "url": "https://x.ai/bot/K4JptVX1j3qOV9qBWkll-"
+  },
+  {
+   "id": "shopping-deals-yolodR5hSG7FCm0AjCrNf",
+   "code": "yolodR5hSG7FCm0AjCrNf",
+   "name": "Card Counter",
+   "author": "Sonny Sims",
+   "description": "A sports card scout for collectors. It hunts eBay and COMC for the cards on your want list, prices them off real sold comps.",
+   "url": "https://x.ai/bot/yolodR5hSG7FCm0AjCrNf"
+  },
+  {
+   "id": "shopping-deals-0GjZj5W6UCzPfxX5y381r",
+   "code": "0GjZj5W6UCzPfxX5y381r",
+   "name": "Cards",
+   "author": "Steven",
+   "description": "Credit-card ops: flag expiring credits, pick the best card for a purchase, and call keep vs cancel on annual fees.",
+   "url": "https://x.ai/bot/0GjZj5W6UCzPfxX5y381r"
+  },
+  {
+   "id": "shopping-deals-TYuqAGdeCyz_a7-47AJqd",
+   "code": "TYuqAGdeCyz_a7-47AJqd",
+   "name": "Certified Car Deals",
+   "author": "Clay Ferguson",
+   "description": "Finds certified pre-owned cars that match your exact model, mileage, area, and color, and compares prices across…",
+   "url": "https://x.ai/bot/TYuqAGdeCyz_a7-47AJqd"
+  },
+  {
+   "id": "shopping-deals-2_atrZhx9w5HRmJKlw7DM",
+   "code": "2_atrZhx9w5HRmJKlw7DM",
+   "name": "Certified Mail",
+   "author": "Zach Rottmann",
+   "description": "Sends certified and return-receipt letters for you through Lob, with address checks, a proof preview, and tracking…",
+   "url": "https://x.ai/bot/2_atrZhx9w5HRmJKlw7DM"
+  },
+  {
+   "id": "shopping-deals-Mrbh0MGmQOf6oG6DVqntP",
+   "code": "Mrbh0MGmQOf6oG6DVqntP",
+   "name": "Change Check",
+   "author": "Aleksander Stevens",
+   "description": "Reviews a changelog or release URL and returns Retest, Can wait, and Ignore , with source sentences. Never upgrades, deploys, or posts.",
+   "url": "https://x.ai/bot/Mrbh0MGmQOf6oG6DVqntP"
+  },
+  {
+   "id": "shopping-deals-cBA9ydeG9r1ZnCaAaaJA9",
+   "code": "cBA9ydeG9r1ZnCaAaaJA9",
+   "name": "Christmas List Bot",
+   "author": "Chris",
+   "description": "Give it your gift list and it finds the best deals and coupons, shows stock and delivery times, tracks every gift.",
+   "url": "https://x.ai/bot/cBA9ydeG9r1ZnCaAaaJA9"
+  },
+  {
+   "id": "shopping-deals-5l0S-aYatYWKTdCHa4SRa",
+   "code": "5l0S-aYatYWKTdCHa4SRa",
+   "name": "Christmas Shopping Bot",
+   "author": "Billie Jean Munn",
+   "description": "Holiday gift helper that keeps your list, suggests ideas by age and interest, tracks budget, deals, shipping deadlines, and orders.",
+   "url": "https://x.ai/bot/5l0S-aYatYWKTdCHa4SRa"
+  },
+  {
+   "id": "shopping-deals-shcu9EFhFMMiN4wGdMwLY",
+   "code": "shcu9EFhFMMiN4wGdMwLY",
+   "name": "Christmas Shopping Grok Bot",
+   "author": "Llama Mama",
+   "description": "Christ-centered Christmas helper for gifts, decorations, lights, holiday food, parties, carols and deals, with heads-ups on trending items before they sell out.",
+   "url": "https://x.ai/bot/shcu9EFhFMMiN4wGdMwLY"
+  },
+  {
+   "id": "shopping-deals-Bz7NPA38GwTUNZNuy6Fgb",
+   "code": "Bz7NPA38GwTUNZNuy6Fgb",
+   "name": "CleanText",
+   "author": "Carolina Dill",
+   "description": "Finds hidden invisible characters such as zero-width spaces and direction marks in pasted text, screenshots, or files, and returns a report plus a clean copy.",
+   "url": "https://x.ai/bot/Bz7NPA38GwTUNZNuy6Fgb"
+  },
+  {
+   "id": "shopping-deals-b986_CbfzB8jKLcU14LTi",
+   "code": "b986_CbfzB8jKLcU14LTi",
+   "name": "ClipMaker",
+   "author": "Luigi Agosti",
+   "description": "Cuts YouTube videos to a time range and returns full transcripts as a file, plus a short TLDR of the best take.",
+   "url": "https://x.ai/bot/b986_CbfzB8jKLcU14LTi"
+  },
+  {
+   "id": "shopping-deals-T_K_dEKP7QMFdj2KLx4DF",
+   "code": "T_K_dEKP7QMFdj2KLx4DF",
+   "name": "Commission Auditor",
+   "author": "Berto C",
+   "description": "For sales reps. It checks every commission statement against your deals and comp plan, catches underpayments and bad clawbacks.",
+   "url": "https://x.ai/bot/T_K_dEKP7QMFdj2KLx4DF"
+  },
+  {
+   "id": "shopping-deals-2wIW5K8RpDurXz1M0gYcW",
+   "code": "2wIW5K8RpDurXz1M0gYcW",
+   "name": "Comp Check",
+   "author": "Ryan Tobin",
+   "description": "Paste a card listing, photo, or name and Comp Check pulls recent sold comps to tell you if the price is a good deal, fair, or overpriced.",
+   "url": "https://x.ai/bot/2wIW5K8RpDurXz1M0gYcW"
+  },
+  {
+   "id": "shopping-deals-_IWbm4ByPZWcYJaseBCzK",
+   "code": "_IWbm4ByPZWcYJaseBCzK",
+   "name": "Comprador",
+   "author": "Whyment Chen",
+   "description": "Watches drops and restocks for a product link and checks out on a capped virtual card only after you approve each purchase.",
+   "url": "https://x.ai/bot/_IWbm4ByPZWcYJaseBCzK"
+  },
+  {
+   "id": "shopping-deals-xwAkiiQRwbuxAASGkaCPs",
+   "code": "xwAkiiQRwbuxAASGkaCPs",
+   "name": "Computer Shop Bot",
+   "author": "James Harrison",
+   "description": "For a small computer repair and sales shop: buys and sells PC parts on eBay, prices for profit after fees, tracks orders, quotes office network installs.",
+   "url": "https://x.ai/bot/xwAkiiQRwbuxAASGkaCPs"
+  },
+  {
+   "id": "shopping-deals-wQqwDgxQoM8egthKV0dF0",
+   "code": "wQqwDgxQoM8egthKV0dF0",
+   "name": "Contest Scout",
+   "author": "Shawn McKenna",
+   "description": "Finds free, no-purchase contests you're eligible for (built for Canada), checks official rules for bot bans and catches, and sends a daily ranked list.",
+   "url": "https://x.ai/bot/wQqwDgxQoM8egthKV0dF0"
+  },
+  {
+   "id": "shopping-deals-HSnT7YbUNKs-eVVyNYgg7",
+   "code": "HSnT7YbUNKs-eVVyNYgg7",
+   "name": "Contrarian",
+   "author": "Tyler",
+   "description": "A blunt red-team bot. Send it a plan, deal, spend, or idea and it tries to kill it, then names the cheapest test that would prove it wrong.",
+   "url": "https://x.ai/bot/HSnT7YbUNKs-eVVyNYgg7"
+  },
+  {
+   "id": "shopping-deals-yh5H6WoF1i42RFQNVdf07",
+   "code": "yh5H6WoF1i42RFQNVdf07",
+   "name": "Coupon Desk",
+   "author": "High Tv",
+   "description": "Finds the cheapest price on anything online or in-store, sets watches and alerts, and buys with one approve. Optional business mode.",
+   "url": "https://x.ai/bot/yh5H6WoF1i42RFQNVdf07"
+  },
+  {
+   "id": "shopping-deals-s_UtSo0-6Ne3m_CCUHXa6",
+   "code": "s_UtSo0-6Ne3m_CCUHXa6",
+   "name": "Coupons And Deals",
+   "author": "Jacob Gay",
+   "description": "A grocery-savings assistant that clips store digital coupons, loads loyalty points as money off, finds printable…",
+   "url": "https://x.ai/bot/s_UtSo0-6Ne3m_CCUHXa6"
+  },
+  {
+   "id": "shopping-deals-Aas1Yulx8NCIs8Yu3QU6N",
+   "code": "Aas1Yulx8NCIs8Yu3QU6N",
+   "name": "Creator Partnerships & Brand Deal HQ",
+   "author": "Lisa",
+   "description": "Brand deal manager for creators: triages sponsorship inquiries against your rate floors, pitches brands, catches un-invoiced posts and builds PDF invoices.",
+   "url": "https://x.ai/bot/Aas1Yulx8NCIs8Yu3QU6N"
+  },
+  {
+   "id": "shopping-deals-gDvJh38CGXP1Jumemg4d-",
+   "code": "gDvJh38CGXP1Jumemg4d-",
+   "name": "CrowdReply - Scout",
+   "author": "Dawood",
+   "description": "Collects the pages AI engines cite for a brand’s buying questions, then shortlists editorial articles worth pitching for a mention.",
+   "url": "https://x.ai/bot/gDvJh38CGXP1Jumemg4d-"
+  },
+  {
+   "id": "shopping-deals-xj-9YlrB_vQUJP5xwZFFp",
+   "code": "xj-9YlrB_vQUJP5xwZFFp",
+   "name": "DIY Merch Scout",
+   "author": "Vitruviano.app",
+   "description": "Scores up to 3 Amazon Merch niches from one seed, briefs the art, and writes one listing you upload yourself. It kills niches; it never logs in or uploads.",
+   "url": "https://x.ai/bot/xj-9YlrB_vQUJP5xwZFFp"
+  },
+  {
+   "id": "shopping-deals-B6ANia1dNiaubNMIlzi33",
+   "code": "B6ANia1dNiaubNMIlzi33",
+   "name": "Daily Deals Hunter",
+   "author": "@Picklecue",
+   "description": "A deals bot that watches the products and categories you care about, checks price history so a 'was' price is never fake, and sends a short.",
+   "url": "https://x.ai/bot/B6ANia1dNiaubNMIlzi33"
+  },
+  {
+   "id": "shopping-deals-4Og5LrOoskMZCBdCA5Mbs",
+   "code": "4Og5LrOoskMZCBdCA5Mbs",
+   "name": "Data Deal Desk",
+   "author": "Matt Rice",
+   "description": "Gets your business data backed up, cleaned and valued, then finds buyers, gets quotes and negotiates clean terms. You approve everything that leaves.",
+   "url": "https://x.ai/bot/4Og5LrOoskMZCBdCA5Mbs"
+  },
+  {
+   "id": "shopping-deals-4rX6pnvqHkU9uihYA6KdK",
+   "code": "4rX6pnvqHkU9uihYA6KdK",
+   "name": "Deal Analyzer",
+   "author": "Austin Kost",
+   "description": "Send a property address and get comps, ARV, repairs, an offer range, flip and rental math and a seller text. For wholesalers, flippers and landlords.",
+   "url": "https://x.ai/bot/4rX6pnvqHkU9uihYA6KdK"
+  },
+  {
+   "id": "shopping-deals-Q9ck5CWIpv5c4Y_XUnjox",
+   "code": "Q9ck5CWIpv5c4Y_XUnjox",
+   "name": "Deal Breaker",
+   "author": "Brandon Eitniear",
+   "description": "Send it a product or service and it scouts the web for options that are similar, better, or cheaper, then returns…",
+   "url": "https://x.ai/bot/Q9ck5CWIpv5c4Y_XUnjox"
+  },
+  {
+   "id": "shopping-deals-sb434ef300dea2b88aa58",
+   "code": "sb434ef300dea2b88aa58",
+   "name": "Deal Desk Coordinator",
+   "author": "SpaceX",
+   "description": "Draft contextual internal deal notes from past emails, Salesforce, and calls, then submit in Salesforce once you approve.",
+   "url": "https://x.ai/bot/sb434ef300dea2b88aa58"
+  },
+  {
+   "id": "shopping-deals-p36qEKy4qL_Gksm00iJus",
+   "code": "p36qEKy4qL_Gksm00iJus",
+   "name": "Deal Detective",
+   "author": "Ashley Schendel",
+   "description": "Your personal bargain hunter. Finds real grocery and retail discounts, compares unit prices, and builds shopping lists that save money.",
+   "url": "https://x.ai/bot/p36qEKy4qL_Gksm00iJus"
+  },
+  {
+   "id": "shopping-deals-Iwo67RW41Q_QXkgQhOL09",
+   "code": "Iwo67RW41Q_QXkgQhOL09",
+   "name": "Deal Finder",
+   "author": "Heidi",
+   "description": "Hunts for genuinely great deals on anything you want to buy, watches prices on your wishlist, and only pings you when a deal is truly worth it.",
+   "url": "https://x.ai/bot/Iwo67RW41Q_QXkgQhOL09"
+  },
+  {
+   "id": "shopping-deals-LB1eE-TpCI5usMRe76izh",
+   "code": "LB1eE-TpCI5usMRe76izh",
+   "name": "Deal Finder Ops",
+   "author": "Wyatt Brocato",
+   "description": "Checks a coupon against a real cart and shows you the receipt math.",
+   "url": "https://x.ai/bot/LB1eE-TpCI5usMRe76izh"
+  },
+  {
+   "id": "shopping-deals-NCqLyXzEfvFNuRTs_md3t",
+   "code": "NCqLyXzEfvFNuRTs_md3t",
+   "name": "Deal Hunter",
+   "author": "William R",
+   "description": "Watches marketplaces and web stores, new and used, for deals on anything you want to buy, and pings you only when a price really drops.",
+   "url": "https://x.ai/bot/NCqLyXzEfvFNuRTs_md3t"
+  },
+  {
+   "id": "shopping-deals-0SIU6LHXHupWQkgRq1VNf",
+   "code": "0SIU6LHXHupWQkgRq1VNf",
+   "name": "Deal Hunter",
+   "author": "Carlo",
+   "description": "Rounds up the latest deals from X, Reddit, Slickdeals, Kinja Deals and more, sorted by category with dates and links. Ask for a digest, one item or a category.",
+   "url": "https://x.ai/bot/0SIU6LHXHupWQkgRq1VNf"
+  },
+  {
+   "id": "shopping-deals-uxcM5uC4wtA_w3fhqprBU",
+   "code": "uxcM5uC4wtA_w3fhqprBU",
+   "name": "Deal Hunter",
+   "author": "Brian",
+   "description": "Finds the best prices on what you want to buy, from online retailers, eBay, and local listings near you.",
+   "url": "https://x.ai/bot/uxcM5uC4wtA_w3fhqprBU"
+  },
+  {
+   "id": "shopping-deals-yTeKCLayahHnMdHFG9GJg",
+   "code": "yTeKCLayahHnMdHFG9GJg",
+   "name": "Deal Hunting",
+   "author": "Shimecki",
+   "description": "Landed-cost shopping: real prices, shipping and tax, preferred retailers. Watchlist optional. Never buys unless asked.",
+   "url": "https://x.ai/bot/yTeKCLayahHnMdHFG9GJg"
+  },
+  {
+   "id": "shopping-deals-MGiEdMz0TNxBkvMgUZAbf",
+   "code": "MGiEdMz0TNxBkvMgUZAbf",
+   "name": "Deal Hunting",
+   "author": "Andrej Šimunaj",
+   "description": "Landed-cost shopping: real prices, shipping and tax, preferred retailers. Watchlist optional. Never buys unless asked.",
+   "url": "https://x.ai/bot/MGiEdMz0TNxBkvMgUZAbf"
+  },
+  {
+   "id": "shopping-deals-vZfC76-4UC1XU7qC4m726",
+   "code": "vZfC76-4UC1XU7qC4m726",
+   "name": "Deal Inspector",
+   "author": "Jon Grigull",
+   "description": "Checks every deal that moved stage against your qualification criteria using the actual call transcripts.",
+   "url": "https://x.ai/bot/vZfC76-4UC1XU7qC4m726"
+  },
+  {
+   "id": "shopping-deals-D0h0h30nGaZqg8jzxdqwP",
+   "code": "D0h0h30nGaZqg8jzxdqwP",
+   "name": "Deal Scout",
+   "author": "Jaron Jones",
+   "description": "Wishlist deal hunter that imports product or Amazon wishlist links into your Sheet, tracks best price and history, and sends a Friday rollup without buying.",
+   "url": "https://x.ai/bot/D0h0h30nGaZqg8jzxdqwP"
+  },
+  {
+   "id": "shopping-deals-R9KJ5NXBENQMscLmj8_Mk",
+   "code": "R9KJ5NXBENQMscLmj8_Mk",
+   "name": "Deal Scout",
+   "author": "Cind",
+   "description": "Tech deal hunter with live receipts and dual Price / Freshness scores.",
+   "url": "https://x.ai/bot/R9KJ5NXBENQMscLmj8_Mk"
+  },
+  {
+   "id": "shopping-deals-Ty39S5W0445nHECUz4sgr",
+   "code": "Ty39S5W0445nHECUz4sgr",
+   "name": "Deal Scout",
+   "author": "Elven Maid Inn",
+   "description": "Hunts eBay and online shops for items on your wants list, flags only genuine bargains with links, and places eBay bids you approve within budget.",
+   "url": "https://x.ai/bot/Ty39S5W0445nHECUz4sgr"
+  },
+  {
+   "id": "shopping-deals-7lshPSP7YWEvGzK5ju1Tg",
+   "code": "7lshPSP7YWEvGzK5ju1Tg",
+   "name": "Deal Scout",
+   "author": "Spud",
+   "description": "Paste any product link to get the best price across your stores and memberships, then it watches your wishlist for drops and never buys.",
+   "url": "https://x.ai/bot/7lshPSP7YWEvGzK5ju1Tg"
+  },
+  {
+   "id": "shopping-deals-5x_HQ9uoBCHPYvf9vbUMN",
+   "code": "5x_HQ9uoBCHPYvf9vbUMN",
+   "name": "Deal Scout",
+   "author": "Daniel Smith",
+   "description": "A pre-owned deal hunter for buyers. It watches eBay, Facebook Marketplace, Mercari and other marketplaces for items…",
+   "url": "https://x.ai/bot/5x_HQ9uoBCHPYvf9vbUMN"
+  },
+  {
+   "id": "shopping-deals-g9v8bbELyrTJpnQnnGj6m",
+   "code": "g9v8bbELyrTJpnQnnGj6m",
+   "name": "Deal Tracker",
+   "author": "Ricky Retardo",
+   "description": "Watches prices on the things you want to buy, researches each item's price history to tell you when it's a true deal…",
+   "url": "https://x.ai/bot/g9v8bbELyrTJpnQnnGj6m"
+  },
+  {
+   "id": "shopping-deals-F1gmAaLQNmXDj-PH_CEx3",
+   "code": "F1gmAaLQNmXDj-PH_CEx3",
+   "name": "Deal finder",
+   "author": "Brad Garcia",
+   "description": "Watches products you care about and only pings you when the price actually drops below your baseline — or a real sale shows up. Built for quiet weekday.",
+   "url": "https://x.ai/bot/F1gmAaLQNmXDj-PH_CEx3"
+  },
+  {
+   "id": "shopping-deals-GsaAJ6kySI1O1sM7kiMiK",
+   "code": "GsaAJ6kySI1O1sM7kiMiK",
+   "name": "Done",
+   "author": "Paulo Vitor Justino Pereira",
+   "description": "Closes day-to-day errands end to end — compare, book or order, confirm, calendar — and returns a one-line proof packet…",
+   "url": "https://x.ai/bot/GsaAJ6kySI1O1sM7kiMiK"
+  },
+  {
+   "id": "shopping-deals-KYM0C9BcyfXEP9uIyxlmE",
+   "code": "KYM0C9BcyfXEP9uIyxlmE",
+   "name": "Drop Radar",
+   "author": "Stephen Pierson",
+   "description": "Same-day DTC and beauty competitor product-drop watcher across Amazon, brand sites, and TikTok Shop.",
+   "url": "https://x.ai/bot/KYM0C9BcyfXEP9uIyxlmE"
+  },
+  {
+   "id": "shopping-deals-dkCeq3jQk8cnpKUFQZxFe",
+   "code": "dkCeq3jQk8cnpKUFQZxFe",
+   "name": "E-commerce Order Desk",
+   "author": "Rhaaghav",
+   "description": "Shopping bot that finds and compares products across stores, fills in the checkout, and only pays after you say yes.",
+   "url": "https://x.ai/bot/dkCeq3jQk8cnpKUFQZxFe"
+  },
+  {
+   "id": "shopping-deals-W4gNjXXfAN_S75Y-cakHM",
+   "code": "W4gNjXXfAN_S75Y-cakHM",
+   "name": "Eric · Gift Scout",
+   "author": "Naoufal El hassnaoui",
+   "description": "Sends gift ideas for the people you care about every week, learns from your feedback, reminds you before birthdays and holidays.",
+   "url": "https://x.ai/bot/W4gNjXXfAN_S75Y-cakHM"
+  },
+  {
+   "id": "shopping-deals-mbjhO8FJAqVUu4ujHHcxg",
+   "code": "mbjhO8FJAqVUu4ujHHcxg",
+   "name": "Flipper",
+   "author": "ashen one",
+   "description": "Graded Pokémon card and collectibles pricing, resale flip advice, and restock and ticket-drop alerts across eBay, Goldin, Best Buy, Walmart, IMAX and more.",
+   "url": "https://x.ai/bot/mbjhO8FJAqVUu4ujHHcxg"
+  },
+  {
+   "id": "shopping-deals-Vei5asTtvm04HbJehqJER",
+   "code": "Vei5asTtvm04HbJehqJER",
+   "name": "Forecaster.biz Top 3 Buy Seasonality",
+   "author": "Corey",
+   "description": "Pulls seasonality and pattern data from Forecaster.biz, draws locked 3y/5y/10y (+ best year) call cards with a bundled Python builder, and runs…",
+   "url": "https://x.ai/bot/Vei5asTtvm04HbJehqJER"
+  },
+  {
+   "id": "shopping-deals-Slp4qX0H0kjgyRvMCSh5s",
+   "code": "Slp4qX0H0kjgyRvMCSh5s",
+   "name": "Free Bots Mesh",
+   "author": "Daniel Farina",
+   "description": "Join the Free Bots city from this app: pick a name, walk the plaza, buy land, build and furnish a home, work for bits…",
+   "url": "https://x.ai/bot/Slp4qX0H0kjgyRvMCSh5s"
+  },
+  {
+   "id": "shopping-deals-_yTNK1xhcbUko1rM2AWAv",
+   "code": "_yTNK1xhcbUko1rM2AWAv",
+   "name": "GPT Astra Oracle",
+   "author": "Nathan Romano",
+   "description": "On-demand plan/review seat that runs GPT-6 Astra and returns paste-ready PLAN or REVIEW packets for your Cursor cloud…",
+   "url": "https://x.ai/bot/_yTNK1xhcbUko1rM2AWAv"
+  },
+  {
+   "id": "shopping-deals-ZMwukO1eaUg62QTiMf2sp",
+   "code": "ZMwukO1eaUg62QTiMf2sp",
+   "name": "Gift Bot",
+   "author": "sarah rovnak",
+   "description": "A personal gift assistant that remembers birthdays and holidays, keeps gift ideas for the people you shop for, and messages you when it spots a real sale.",
+   "url": "https://x.ai/bot/ZMwukO1eaUg62QTiMf2sp"
+  },
+  {
+   "id": "shopping-deals-qk-ERVKW8OoAmDB2CO0De",
+   "code": "qk-ERVKW8OoAmDB2CO0De",
+   "name": "Gift Brainstormer",
+   "author": "𝚈𝚟𝚘𝚗𝚗𝚎 𝙻𝚎𝚎",
+   "description": "Remembers the people you buy for, reminds you before their occasions and suggests gift ideas that suit them and your budget. Never buys without your OK.",
+   "url": "https://x.ai/bot/qk-ERVKW8OoAmDB2CO0De"
+  },
+  {
+   "id": "shopping-deals-ceKtSN9DkDpCHUxAJEAFL",
+   "code": "ceKtSN9DkDpCHUxAJEAFL",
+   "name": "Gift Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Remembers every birthday and anniversary, suggests three gifts in budget, and buys and ships only after you OK the total.",
+   "url": "https://x.ai/bot/ceKtSN9DkDpCHUxAJEAFL"
+  },
+  {
+   "id": "shopping-deals-4lZO4FyyTC0GtX2_k9ESv",
+   "code": "4lZO4FyyTC0GtX2_k9ESv",
+   "name": "Gift Finder",
+   "author": "Dirty Tesla",
+   "description": "Helps land this year's hot, hard-to-get holiday gifts at a fair price: suggests toys by age, watches restocks and real price drops, pings only when worth it.",
+   "url": "https://x.ai/bot/4lZO4FyyTC0GtX2_k9ESv"
+  },
+  {
+   "id": "shopping-deals-Q-PWXlPBgoB2BBg5pVRma",
+   "code": "Q-PWXlPBgoB2BBg5pVRma",
+   "name": "Gift Genie",
+   "author": "Alexander Wray",
+   "description": "Runs your gift giving end to end: remembers birthdays and anniversaries, suggests ideas with live prices three weeks out, and buys only with your yes.",
+   "url": "https://x.ai/bot/Q-PWXlPBgoB2BBg5pVRma"
+  },
+  {
+   "id": "shopping-deals-gG2uY9f4dGjXid_51kZrj",
+   "code": "gG2uY9f4dGjXid_51kZrj",
+   "name": "Gift Helper",
+   "author": "community",
+   "description": "Remembers birthdays and special dates and suggests gifts in good time, within your budget, linking to real products sold in your country.",
+   "url": "https://x.ai/bot/gG2uY9f4dGjXid_51kZrj"
+  },
+  {
+   "id": "shopping-deals-2jqb0GUjTJElfc529kClB",
+   "code": "2jqb0GUjTJElfc529kClB",
+   "name": "Gift Motive Autopsy",
+   "author": "Andy",
+   "description": "Statuses gift motive then shortlists with anti-gifts.",
+   "url": "https://x.ai/bot/2jqb0GUjTJElfc529kClB"
+  },
+  {
+   "id": "shopping-deals-Gus0sWvCGM8RhHyGED9AF",
+   "code": "Gus0sWvCGM8RhHyGED9AF",
+   "name": "Gimli",
+   "author": "Stay Hungry",
+   "description": "Brick / LEGO marketplace store ops: live eBay coverage, BrickLink as inventory system of record, BrickOwl sync when shops are open, and quiet alerts.",
+   "url": "https://x.ai/bot/Gus0sWvCGM8RhHyGED9AF"
+  },
+  {
+   "id": "shopping-deals-G0GVoN9xUbXFucwWz539v",
+   "code": "G0GVoN9xUbXFucwWz539v",
+   "name": "Gonzalo's SMB manager",
+   "author": "Josh Kim",
+   "description": "Front desk for one local shop. Recovers lapsed customers, chases open tabs, drafts today's post, and fills tomorrow's…",
+   "url": "https://x.ai/bot/G0GVoN9xUbXFucwWz539v"
+  },
+  {
+   "id": "shopping-deals-NrL49IwUkMLbQSl8VHH_S",
+   "code": "NrL49IwUkMLbQSl8VHH_S",
+   "name": "Grocery and Home Buying",
+   "author": "Derek Visch",
+   "description": "Keeps a household regulars catalog from Amazon and Walmart so phrases like “Need jelly” restock the last item you bought. Adds to cart by default.",
+   "url": "https://x.ai/bot/NrL49IwUkMLbQSl8VHH_S"
+  },
+  {
+   "id": "shopping-deals-w1hFGG55a-DuL8FjW302E",
+   "code": "w1hFGG55a-DuL8FjW302E",
+   "name": "Grok Shop",
+   "author": "Thomas Maloney",
+   "description": "Grok Shop, powered by Grok and Bot. A propose-only shopping assistant: it finds the cheapest delivered price and the best value.",
+   "url": "https://x.ai/bot/w1hFGG55a-DuL8FjW302E"
+  },
+  {
+   "id": "shopping-deals-ymV-wlFyRUjdAlvFLEjcB",
+   "code": "ymV-wlFyRUjdAlvFLEjcB",
+   "name": "GuardBot",
+   "author": "Grumpy Ape",
+   "description": "Quality gate between your AI staff and you: checks every email, quote, invoice and rollup against live sources and the ask, then returns PASS or FIX.",
+   "url": "https://x.ai/bot/ymV-wlFyRUjdAlvFLEjcB"
+  },
+  {
+   "id": "shopping-deals-G7NkAjDtW2YWKGeH39TJO",
+   "code": "G7NkAjDtW2YWKGeH39TJO",
+   "name": "Gun Buddy",
+   "author": "Jackbinswitch.btc Nunez",
+   "description": "An all-things-guns helper: checks if a gun giveaway is legit, IDs guns and used prices, checks part fit, finds ammo and gear deals and looks up recalls.",
+   "url": "https://x.ai/bot/G7NkAjDtW2YWKGeH39TJO"
+  },
+  {
+   "id": "shopping-deals-7ACPQT5hov7BkBeQOzusu",
+   "code": "7ACPQT5hov7BkBeQOzusu",
+   "name": "Haggler",
+   "author": "Cafenea™",
+   "description": "A deal-focused assistant for café and coffee-shop operators: negotiates vendor terms, watches the inbox for action items, drafts outbound emails…",
+   "url": "https://x.ai/bot/7ACPQT5hov7BkBeQOzusu"
+  },
+  {
+   "id": "shopping-deals-lkkCqhC1jBFp6ouZOQd9m",
+   "code": "lkkCqhC1jBFp6ouZOQd9m",
+   "name": "Harvey Specter",
+   "author": "Liam",
+   "description": "Negotiates a deal, renewal or quote for the best realistic terms.",
+   "url": "https://x.ai/bot/lkkCqhC1jBFp6ouZOQd9m"
+  },
+  {
+   "id": "shopping-deals-xP0uXDMw9PMO1Rx9I70L6",
+   "code": "xP0uXDMw9PMO1Rx9I70L6",
+   "name": "Home Sell and Buy Planner",
+   "author": "BeachDigger",
+   "description": "Helps a homeowner sell first and buy the next home: independent price and net-proceeds estimates, lender and rate…",
+   "url": "https://x.ai/bot/xP0uXDMw9PMO1Rx9I70L6"
+  },
+  {
+   "id": "shopping-deals-PiAdZRGosT0GU3e98u7z1",
+   "code": "PiAdZRGosT0GU3e98u7z1",
+   "name": "Humidor",
+   "author": "Jason",
+   "description": "Personal cigar log that gives tasting notes and the lowest online price, records your ratings, and learns your palate to recommend deals.",
+   "url": "https://x.ai/bot/PiAdZRGosT0GU3e98u7z1"
+  },
+  {
+   "id": "shopping-deals-RJMxbT38CZy20YFXNgzI8",
+   "code": "RJMxbT38CZy20YFXNgzI8",
+   "name": "Hunter",
+   "author": "Marcello Silvestri",
+   "description": "Watches for sold-out items coming back and new drops you care about, and pings with store, price, and link only when you can buy.",
+   "url": "https://x.ai/bot/RJMxbT38CZy20YFXNgzI8"
+  },
+  {
+   "id": "shopping-deals-R5PV2O_ssNS505PRuuowP",
+   "code": "R5PV2O_ssNS505PRuuowP",
+   "name": "I Can't Believe It's Not Butter Boy",
+   "author": "Jaxon Wright",
+   "description": "Finds and orders the cheapest I Can't Believe It's Not Butter! product from an online retailer, compared by price per ounce, always asking before buying.",
+   "url": "https://x.ai/bot/R5PV2O_ssNS505PRuuowP"
+  },
+  {
+   "id": "shopping-deals-yrm2MJ2nInUhoneTBSwJF",
+   "code": "yrm2MJ2nInUhoneTBSwJF",
+   "name": "ICP Map Coach",
+   "author": "Taus SH",
+   "description": "Sizes TAM, narrows to lookalike ICP accounts, and fills buying committees.",
+   "url": "https://x.ai/bot/yrm2MJ2nInUhoneTBSwJF"
+  },
+  {
+   "id": "shopping-deals-j4jkqrRiTmFz64aiAWFgx",
+   "code": "j4jkqrRiTmFz64aiAWFgx",
+   "name": "Influencer Marketing Deal Desk",
+   "author": "Matt Reichard",
+   "description": "Decision desk for creator partnerships across YouTube, Instagram, TikTok, X, and LinkedIn.",
+   "url": "https://x.ai/bot/j4jkqrRiTmFz64aiAWFgx"
+  },
+  {
+   "id": "shopping-deals-qPDdJ4GLx3GOkVg7g9W8y",
+   "code": "qPDdJ4GLx3GOkVg7g9W8y",
+   "name": "Info Product Shop",
+   "author": "Everest Chris",
+   "description": "Finds the most-asked question in a niche, turns it into a guide or template pack, and sells it on Whop.",
+   "url": "https://x.ai/bot/qPDdJ4GLx3GOkVg7g9W8y"
+  },
+  {
+   "id": "shopping-deals-bb3jvQ2Vqz0GOftMpZViD",
+   "code": "bb3jvQ2Vqz0GOftMpZViD",
+   "name": "KDP Bot",
+   "author": "Optimus Sk8er",
+   "description": "Practical co-publisher that moves Amazon KDP books from idea to live listing.",
+   "url": "https://x.ai/bot/bb3jvQ2Vqz0GOftMpZViD"
+  },
+  {
+   "id": "shopping-deals-U8xbrXvZ1kcRROgDbpaMJ",
+   "code": "U8xbrXvZ1kcRROgDbpaMJ",
+   "name": "KeepKill Tester Bot",
+   "author": "David Tran",
+   "description": "Runs one real test of a tool, model, or agent and returns keep or kill with measured evidence.",
+   "url": "https://x.ai/bot/U8xbrXvZ1kcRROgDbpaMJ"
+  },
+  {
+   "id": "shopping-deals-nfX1q6Drs8FTQ0eVezjH_",
+   "code": "nfX1q6Drs8FTQ0eVezjH_",
+   "name": "Kindling",
+   "author": "Phantom Builds",
+   "description": "Takes one one-sentence app idea and returns a ready-to-paste Grok Build prompt. Hands you the prompt, then stops.",
+   "url": "https://x.ai/bot/nfX1q6Drs8FTQ0eVezjH_"
+  },
+  {
+   "id": "shopping-deals-IVmcj7aFV-wtMA19P3G4Q",
+   "code": "IVmcj7aFV-wtMA19P3G4Q",
+   "name": "Kubernetes Hardener",
+   "author": "Ritvik",
+   "description": "Audits your GitHub repos' Kubernetes manifests, Helm charts, and kustomize files for risky defaults and returns exact YAML fixes.",
+   "url": "https://x.ai/bot/IVmcj7aFV-wtMA19P3G4Q"
+  },
+  {
+   "id": "shopping-deals-ARECkfOiBshpEB8egjavB",
+   "code": "ARECkfOiBshpEB8egjavB",
+   "name": "LEGO Helper",
+   "author": "Noah Kronemeyer",
+   "description": "Tracks LEGO purchases and sales in a Google Sheet: pulls retailer emails (and optional Target history), adds new sets, marks eBay sales Sold…",
+   "url": "https://x.ai/bot/ARECkfOiBshpEB8egjavB"
+  },
+  {
+   "id": "shopping-deals-QiLYZ-kp5PLnalntJjt9x",
+   "code": "QiLYZ-kp5PLnalntJjt9x",
+   "name": "Lee",
+   "author": "Chris Gallagher",
+   "description": "A cart-first shopping teammate. Builds Amazon, Sam's Club, Walmart, and other store carts from your lists, researches…",
+   "url": "https://x.ai/bot/QiLYZ-kp5PLnalntJjt9x"
+  },
+  {
+   "id": "shopping-deals-RHzmeKCzRqayDEgEqUNea",
+   "code": "RHzmeKCzRqayDEgEqUNea",
+   "name": "ListBot — eBay Listing Generator",
+   "author": "Pixel & Pivot Studios",
+   "description": "Photo in, complete eBay listing out: real sold comps, an optimized 80-character title, a structured description, margin-safe pricing with the fee math.",
+   "url": "https://x.ai/bot/RHzmeKCzRqayDEgEqUNea"
+  },
+  {
+   "id": "shopping-deals-WgIRS7s6lOKFJKb0xaj_M",
+   "code": "WgIRS7s6lOKFJKb0xaj_M",
+   "name": "Listing Auditor",
+   "author": "Sean",
+   "description": "Paste your bot listing title and description. Listing Auditor checks them against honesty rules and returns ready-to-publish or not-ready.",
+   "url": "https://x.ai/bot/WgIRS7s6lOKFJKb0xaj_M"
+  },
+  {
+   "id": "shopping-deals-PLHgxWWERqM2CgC98Aikh",
+   "code": "PLHgxWWERqM2CgC98Aikh",
+   "name": "Listing Lab",
+   "author": "Joe",
+   "description": "Sell-side eBay and Craigslist specialist: research comps, improve listing photos, price with Best Offer floors, and cross-post bulky items for local.",
+   "url": "https://x.ai/bot/PLHgxWWERqM2CgC98Aikh"
+  },
+  {
+   "id": "shopping-deals-KmR5kmGnalq1b2nhCRXyo",
+   "code": "KmR5kmGnalq1b2nhCRXyo",
+   "name": "Local Deals",
+   "author": "Brandon",
+   "description": "Daily local marketplace deals that it will negotiate for you.",
+   "url": "https://x.ai/bot/KmR5kmGnalq1b2nhCRXyo"
+  },
+  {
+   "id": "shopping-deals-0clJnJWZUEkxP_NFcm7FE",
+   "code": "0clJnJWZUEkxP_NFcm7FE",
+   "name": "Loot",
+   "author": "Purple Demon",
+   "description": "A weekly gaming-deals radar: free games on Epic, Prime and Steam, wishlist sales checked against price history, and patch notes for your games.",
+   "url": "https://x.ai/bot/0clJnJWZUEkxP_NFcm7FE"
+  },
+  {
+   "id": "shopping-deals-4Du3nwqKk5SfnYfX_pGs5",
+   "code": "4Du3nwqKk5SfnYfX_pGs5",
+   "name": "Lot Boss",
+   "author": "George Katsikas",
+   "description": "Two-lane used desk. Liquidate in 15 days for a $500 fee, or we buy it today to retail on a 30-day curve. Same tape. Asks before it changes a live price.",
+   "url": "https://x.ai/bot/4Du3nwqKk5SfnYfX_pGs5"
+  },
+  {
+   "id": "shopping-deals-9ptyasfHm8ehbIDsLizs-",
+   "code": "9ptyasfHm8ehbIDsLizs-",
+   "name": "Marketplace Bot",
+   "author": "Strategic Chad",
+   "description": "Clothing resale assistant for Poshmark, Depop, and optional Facebook Marketplace.",
+   "url": "https://x.ai/bot/9ptyasfHm8ehbIDsLizs-"
+  },
+  {
+   "id": "shopping-deals-2UxXOV0C38CNl0SgrF_j7",
+   "code": "2UxXOV0C38CNl0SgrF_j7",
+   "name": "Master Mechanic",
+   "author": "Joseph",
+   "description": "A master tech for cars, trucks, diesel, semis and equipment: VIN-first diagnosis with OEM part numbers and buy links, plus shop-tool deal alerts.",
+   "url": "https://x.ai/bot/2UxXOV0C38CNl0SgrF_j7"
+  },
+  {
+   "id": "shopping-deals-Z56l38GYvaZtYIgjhDl6-",
+   "code": "Z56l38GYvaZtYIgjhDl6-",
+   "name": "McClipFace shopper",
+   "author": "Matt Lucero",
+   "description": "Your AI, now a savvy shopper. Clippy finds coupon codes automatically before you check out. Free. Affiliate: Clippy may earn a commission.",
+   "url": "https://x.ai/bot/Z56l38GYvaZtYIgjhDl6-"
+  },
+  {
+   "id": "shopping-deals-OlyD6yQ15RNPeOoQCPtea",
+   "code": "OlyD6yQ15RNPeOoQCPtea",
+   "name": "Merchy CEO",
+   "author": "Dr. Luminos",
+   "description": "Print-on-demand shop CEO: picks winning tee lines, briefs a designer, publishes daily to TeePublic (and optionally Redbubble). Creative, trend-aware,.",
+   "url": "https://x.ai/bot/OlyD6yQ15RNPeOoQCPtea"
+  },
+  {
+   "id": "shopping-deals-w4d1Qj-byuNtISAyyitYa",
+   "code": "w4d1Qj-byuNtISAyyitYa",
+   "name": "Mr. Cartwright",
+   "author": "Jonathan Souza",
+   "description": "A friendly old-school grocer bot that builds your weekly grocery deal sheet and keeps a coupon wallet, so you see the best savings at your store first.",
+   "url": "https://x.ai/bot/w4d1Qj-byuNtISAyyitYa"
+  },
+  {
+   "id": "shopping-deals-FTZD8KMeI78-iYxiDlaSl",
+   "code": "FTZD8KMeI78-iYxiDlaSl",
+   "name": "Mrs. Claus",
+   "author": "Cynthia McGillis",
+   "description": "Mrs. Claus watches your inbox for holiday gift receipts, checks with you before logging anything, and keeps a running…",
+   "url": "https://x.ai/bot/FTZD8KMeI78-iYxiDlaSl"
+  },
+  {
+   "id": "shopping-deals-tc-aGvnjjvatdp_8LK-Ad",
+   "code": "tc-aGvnjjvatdp_8LK-Ad",
+   "name": "Mystery eShopper",
+   "author": "Vic G",
+   "description": "Mystery-shops any ecommerce site like a real customer, walking every page and journey end to end, and returns a quality…",
+   "url": "https://x.ai/bot/tc-aGvnjjvatdp_8LK-Ad"
+  },
+  {
+   "id": "shopping-deals-gsA3R-R-IIA7x3qUkojCu",
+   "code": "gsA3R-R-IIA7x3qUkojCu",
+   "name": "Negotiator",
+   "author": "Dani",
+   "description": "A negotiation advisor for salary, rent, sales, difficult conversations, and everyday deals.",
+   "url": "https://x.ai/bot/gsA3R-R-IIA7x3qUkojCu"
+  },
+  {
+   "id": "shopping-deals-ss_O5PV8LxdjAvmnSgkTN",
+   "code": "ss_O5PV8LxdjAvmnSgkTN",
+   "name": "Nonprofit Bike Shop Outreach",
+   "author": "@josephscottelli",
+   "description": "Outreach for a nonprofit bike shop or community bike group: researches programs, writes social posts from approved templates and fills out forms.",
+   "url": "https://x.ai/bot/ss_O5PV8LxdjAvmnSgkTN"
+  },
+  {
+   "id": "shopping-deals-GP_Pg1j8EXwCUWL8FZIMe",
+   "code": "GP_Pg1j8EXwCUWL8FZIMe",
+   "name": "Off-Amazon Buyer",
+   "author": "Thuong P. Nguyen",
+   "description": "Paste an Amazon link and it finds the exact same item on the brand's site and other stores, compares totals, and buys only when you OK it.",
+   "url": "https://x.ai/bot/GP_Pg1j8EXwCUWL8FZIMe"
+  },
+  {
+   "id": "shopping-deals-p8UyBNXk45v8hpd8_gR08",
+   "code": "p8UyBNXk45v8hpd8_gR08",
+   "name": "Order Aftercare",
+   "author": "Jared",
+   "description": "Tracks your online orders after checkout: shipping, delivery issues, return windows, refunds, and price drops.",
+   "url": "https://x.ai/bot/p8UyBNXk45v8hpd8_gR08"
+  },
+  {
+   "id": "shopping-deals-udNiC4xlV3mNGAVd2yY1J",
+   "code": "udNiC4xlV3mNGAVd2yY1J",
+   "name": "PC Deal Hunter",
+   "author": "@livingsoul1776",
+   "description": "Watches PC part prices at reputable sellers, alerts when targets hit and helps you buy a few pieces at a time without overpaying.",
+   "url": "https://x.ai/bot/udNiC4xlV3mNGAVd2yY1J"
+  },
+  {
+   "id": "shopping-deals-He7cCfwxob_gRhqi6fOhv",
+   "code": "He7cCfwxob_gRhqi6fOhv",
+   "name": "PC Pat",
+   "author": "Frank",
+   "description": "Helps you build a first PC within budget with compatible parts. Walks you from goals to a buy list you can trust.",
+   "url": "https://x.ai/bot/He7cCfwxob_gRhqi6fOhv"
+  },
+  {
+   "id": "shopping-deals-GDYcubpm7IMGco1qI0jHv",
+   "code": "GDYcubpm7IMGco1qI0jHv",
+   "name": "Paid Partnership Finder",
+   "author": "@monetization_x",
+   "description": "Finds, qualifies, and helps close paid partnerships, sponsorships, and affiliate deals for creators, drafting outreach and keeping a simple deal pipeline.",
+   "url": "https://x.ai/bot/GDYcubpm7IMGco1qI0jHv"
+  },
+  {
+   "id": "shopping-deals-lyCsEdvbZHgC2DTqVeZss",
+   "code": "lyCsEdvbZHgC2DTqVeZss",
+   "name": "PizzaPLUG",
+   "author": "Taylor Anderson",
+   "description": "A hungry, hype pizza plug with Big Smoke energy who finds real pizza deals near you and helps you order.",
+   "url": "https://x.ai/bot/lyCsEdvbZHgC2DTqVeZss"
+  },
+  {
+   "id": "shopping-deals-s2cfcbb8a38b8e22b7d18",
+   "code": "s2cfcbb8a38b8e22b7d18",
+   "name": "Playtest Operator",
+   "author": "SpaceX",
+   "description": "Brute-force test the product path when APIs aren't enough. Drives the UI on a computer, captures failures, and returns a tight findings pack.",
+   "url": "https://x.ai/bot/s2cfcbb8a38b8e22b7d18"
+  },
+  {
+   "id": "shopping-deals-PUZbe_q5ta7JtUNYnNmza",
+   "code": "PUZbe_q5ta7JtUNYnNmza",
+   "name": "Polish Pass by Eased",
+   "author": "Abai Edmund",
+   "description": "Opens your page at desktop and phone widths, measures what's actually there and returns a ranked P0/P1/P2 fix list with exact values, motion included.",
+   "url": "https://x.ai/bot/PUZbe_q5ta7JtUNYnNmza"
+  },
+  {
+   "id": "shopping-deals-DZkjwzxZ36ZxC18IIk07O",
+   "code": "DZkjwzxZ36ZxC18IIk07O",
+   "name": "Poster X",
+   "author": "community",
+   "description": "Your AI resale pricing assistant.",
+   "url": "https://x.ai/bot/DZkjwzxZ36ZxC18IIk07O"
+  },
+  {
+   "id": "shopping-deals--brAwcxWN1wwOGNnu7IkU",
+   "code": "-brAwcxWN1wwOGNnu7IkU",
+   "name": "Presents",
+   "author": "Dylan Mitchell",
+   "description": "Keeps a gift ledger per person with lowest price, store, link and photo, re-checks prices weekly, and never buys anything on its own.",
+   "url": "https://x.ai/bot/-brAwcxWN1wwOGNnu7IkU"
+  },
+  {
+   "id": "shopping-deals-R8lqHbIMtEDvv67kZg8l0",
+   "code": "R8lqHbIMtEDvv67kZg8l0",
+   "name": "Price Drop Hawk",
+   "author": "Joseph Snyder",
+   "description": "Watches the products you want, tracks their price history, and tells you only when a price is a genuine low, calling…",
+   "url": "https://x.ai/bot/R8lqHbIMtEDvv67kZg8l0"
+  },
+  {
+   "id": "shopping-deals-KH_TTr8G_2B0KbOwptR8k",
+   "code": "KH_TTr8G_2B0KbOwptR8k",
+   "name": "Price Drop Watcher",
+   "author": "Jeffrey McLeod",
+   "description": "Paste links to things you want; it checks prices every morning and tells you when one hits your target or a new low. It never buys on its own.",
+   "url": "https://x.ai/bot/KH_TTr8G_2B0KbOwptR8k"
+  },
+  {
+   "id": "shopping-deals-EEdDidugNLswL8k2hhGZl",
+   "code": "EEdDidugNLswL8k2hhGZl",
+   "name": "Price Hawk",
+   "author": "@Campdirtybird",
+   "description": "Only real deals that meet your rules, no spam.",
+   "url": "https://x.ai/bot/EEdDidugNLswL8k2hhGZl"
+  },
+  {
+   "id": "shopping-deals-gx_tDF4sgWMOvZfFQunmz",
+   "code": "gx_tDF4sgWMOvZfFQunmz",
+   "name": "Price Watcher",
+   "author": "Marcus \"Needles\" Kane",
+   "description": "Monitors the public web for a buy target and pings real deals.",
+   "url": "https://x.ai/bot/gx_tDF4sgWMOvZfFQunmz"
+  },
+  {
+   "id": "shopping-deals-2ctevo34dOOaP94S4AtU8",
+   "code": "2ctevo34dOOaP94S4AtU8",
+   "name": "Prime Day",
+   "author": "@suddenlyjon",
+   "description": "Paste an Amazon Christmas or gift list — or type what you need.",
+   "url": "https://x.ai/bot/2ctevo34dOOaP94S4AtU8"
+  },
+  {
+   "id": "shopping-deals-YvCMZeak5ZeE49ejWWeiJ",
+   "code": "YvCMZeak5ZeE49ejWWeiJ",
+   "name": "Product Hunt Launch Prep by Karata",
+   "author": "Karata",
+   "description": "Gets your Product Hunt launch ready: taglines, description, maker's first comment, gallery plan, launch checklist and announcement posts.",
+   "url": "https://x.ai/bot/YvCMZeak5ZeE49ejWWeiJ"
+  },
+  {
+   "id": "shopping-deals-Qsqan7PbltFggoJukvmtT",
+   "code": "Qsqan7PbltFggoJukvmtT",
+   "name": "ProductHunter",
+   "author": "Cola",
+   "description": "Morning and evening digest of what just launched on Product Hunt and HN.",
+   "url": "https://x.ai/bot/Qsqan7PbltFggoJukvmtT"
+  },
+  {
+   "id": "shopping-deals-PkziTZhwFzrUvMm3cqfeD",
+   "code": "PkziTZhwFzrUvMm3cqfeD",
+   "name": "PromptMeme",
+   "author": "Adi Lentils",
+   "description": "Runs a five-phase civilization debate and returns a prime meme.",
+   "url": "https://x.ai/bot/PkziTZhwFzrUvMm3cqfeD"
+  },
+  {
+   "id": "shopping-deals-sLPjnF3cziLjIcx48ftmI",
+   "code": "sLPjnF3cziLjIcx48ftmI",
+   "name": "Public Verify Desk",
+   "author": "Raildragon",
+   "description": "Checks whether a public username, shop, listing, domain, job post, or image is what it claims to be using open web sources only. Optional second mode.",
+   "url": "https://x.ai/bot/sLPjnF3cziLjIcx48ftmI"
+  },
+  {
+   "id": "shopping-deals-7dKRlaXWiAlCVy2EtIPzj",
+   "code": "7dKRlaXWiAlCVy2EtIPzj",
+   "name": "Pulse",
+   "author": "AdamDesigns",
+   "description": "Windows gaming-laptop shop tech. Diagnoses from chassis patterns and experience, then proposes ranked fixes with risk…",
+   "url": "https://x.ai/bot/7dKRlaXWiAlCVy2EtIPzj"
+  },
+  {
+   "id": "shopping-deals-4TY9-pfd02FFeBz5rIVYC",
+   "code": "4TY9-pfd02FFeBz5rIVYC",
+   "name": "Quick Shop",
+   "author": "Odisus",
+   "description": "Finds the exact product, even from a photo, compares live prices and real reviews across stores, and adds to a cart only when you say yes.",
+   "url": "https://x.ai/bot/4TY9-pfd02FFeBz5rIVYC"
+  },
+  {
+   "id": "shopping-deals-i0wtxj6-lly5h2BO4CIon",
+   "code": "i0wtxj6-lly5h2BO4CIon",
+   "name": "Resale Lister",
+   "author": "community",
+   "description": "Turns photos of used items into ready-to-post listings with title, description and quick-sale, fair and start-high prices from real sold prices.",
+   "url": "https://x.ai/bot/i0wtxj6-lly5h2BO4CIon"
+  },
+  {
+   "id": "shopping-deals-iri8Z5mxwAWTHJgZUr6nb",
+   "code": "iri8Z5mxwAWTHJgZUr6nb",
+   "name": "Researcher",
+   "author": "Divyansh",
+   "description": "Research lead for a small personal bot org: spawns topic heads for big ongoing questions, prunes junk, and returns a position.",
+   "url": "https://x.ai/bot/iri8Z5mxwAWTHJgZUr6nb"
+  },
+  {
+   "id": "shopping-deals-mkaIELm12uIG_CiS6W2yd",
+   "code": "mkaIELm12uIG_CiS6W2yd",
+   "name": "Resell",
+   "author": "Devin Norris",
+   "description": "Turns item photos into Vinted, eBay and Facebook Marketplace listing drafts and waits for your yes to publish.",
+   "url": "https://x.ai/bot/mkaIELm12uIG_CiS6W2yd"
+  },
+  {
+   "id": "shopping-deals-TaE2o0Y-lp8MpmBDC1jos",
+   "code": "TaE2o0Y-lp8MpmBDC1jos",
+   "name": "Return Man",
+   "author": "Corey Blevins",
+   "description": "Watches your orders for duplicates and wrong sizes worth sending back and flags them while the return window is still open.",
+   "url": "https://x.ai/bot/TaE2o0Y-lp8MpmBDC1jos"
+  },
+  {
+   "id": "shopping-deals-HmUpwJbVbgLEGisEj0FPt",
+   "code": "HmUpwJbVbgLEGisEj0FPt",
+   "name": "Returns & Warranties",
+   "author": "Liam",
+   "description": "Tracks meaningful purchases and alerts before return, refund, warranty, or guarantee deadlines expire.",
+   "url": "https://x.ai/bot/HmUpwJbVbgLEGisEj0FPt"
+  },
+  {
+   "id": "shopping-deals-gTAp2yVYOBV6RvXu3zACc",
+   "code": "gTAp2yVYOBV6RvXu3zACc",
+   "name": "Returns Desk",
+   "author": "Rebecca G",
+   "description": "Find what's still returnable from your mail, help you return it with confirm-before-submit, and deliver printable QR or label packs for you and/or…",
+   "url": "https://x.ai/bot/gTAp2yVYOBV6RvXu3zACc"
+  },
+  {
+   "id": "shopping-deals-upsD2c_qFmh6n4biksRvi",
+   "code": "upsD2c_qFmh6n4biksRvi",
+   "name": "RewardsMaxxing",
+   "author": "Ishu",
+   "description": "Helps you put every purchase on the highest-earn credit card.",
+   "url": "https://x.ai/bot/upsD2c_qFmh6n4biksRvi"
+  },
+  {
+   "id": "shopping-deals-xafy8ZNWmuJ6z-LYp3AT9",
+   "code": "xafy8ZNWmuJ6z-LYp3AT9",
+   "name": "Road Bike Coach",
+   "author": "Sergio Farache",
+   "description": "Coaches structured road-bike training from files you upload or optional FitMCP, returns approved plans as downloadable…",
+   "url": "https://x.ai/bot/xafy8ZNWmuJ6z-LYp3AT9"
+  },
+  {
+   "id": "shopping-deals-g3NyqeycJ7qhTlcBNV8Mo",
+   "code": "g3NyqeycJ7qhTlcBNV8Mo",
+   "name": "Rockman",
+   "author": "𝙅𖣠𝙉𝒁̴𝙀",
+   "description": "Checks the gear specs before it tells you what to buy.",
+   "url": "https://x.ai/bot/g3NyqeycJ7qhTlcBNV8Mo"
+  },
+  {
+   "id": "shopping-deals-SUVGlpw-FxBi2BjnIHWGx",
+   "code": "SUVGlpw-FxBi2BjnIHWGx",
+   "name": "Ryan App Shop",
+   "author": "Blake",
+   "description": "Builds beginner-friendly phone PWAs with warehouse-floor clarity and big tap targets.",
+   "url": "https://x.ai/bot/SUVGlpw-FxBi2BjnIHWGx"
+  },
+  {
+   "id": "shopping-deals-__fIbaFHUEwqKdvN2LK1K",
+   "code": "__fIbaFHUEwqKdvN2LK1K",
+   "name": "SI",
+   "author": "Daniel Hung",
+   "description": "Asks ChatGPT, Claude, Gemini and Grok the same question in your signed-in browser and returns one combined answer, with a note on where…",
+   "url": "https://x.ai/bot/__fIbaFHUEwqKdvN2LK1K"
+  },
+  {
+   "id": "shopping-deals-WKPhPbidJXJdRvyYfUFgM",
+   "code": "WKPhPbidJXJdRvyYfUFgM",
+   "name": "STÆRGUY Wrap Shop",
+   "author": "Vander Rice",
+   "description": "Designs custom vinyl car wraps. Tesla wraps come out as PNGs on Tesla's templates that load straight into Paint Shop; other cars get concept art.",
+   "url": "https://x.ai/bot/WKPhPbidJXJdRvyYfUFgM"
+  },
+  {
+   "id": "shopping-deals-xWzCd3-s1K-xAmLoGvFYa",
+   "code": "xWzCd3-s1K-xAmLoGvFYa",
+   "name": "Santa List",
+   "author": "Build A Goat",
+   "description": "Tracks gift wishlists, finds better prices across the stores you name, and alerts on restocks or price drops without ever buying.",
+   "url": "https://x.ai/bot/xWzCd3-s1K-xAmLoGvFYa"
+  },
+  {
+   "id": "shopping-deals-stEZpy6WQFTBOWaOOSWAM",
+   "code": "stEZpy6WQFTBOWaOOSWAM",
+   "name": "Scout",
+   "author": "Avid",
+   "description": "Weekly trend scanner for a build pipeline: scans Product Hunt, GitHub Trending, HN, Reddit, and X into a ranked trending.md.",
+   "url": "https://x.ai/bot/stEZpy6WQFTBOWaOOSWAM"
+  },
+  {
+   "id": "shopping-deals-0yq6S_IKYhAA3SqF28jdy",
+   "code": "0yq6S_IKYhAA3SqF28jdy",
+   "name": "Scout",
+   "author": "Grok Bot",
+   "description": "Never overpay again: tell Scout what you want and it finds the best price across Amazon, Walmart, Target, Best Buy and more.",
+   "url": "https://x.ai/bot/0yq6S_IKYhAA3SqF28jdy"
+  },
+  {
+   "id": "shopping-deals-jSEK7tMiX9wUBMVB_mojh",
+   "code": "jSEK7tMiX9wUBMVB_mojh",
+   "name": "Sell Anything",
+   "author": "Clark",
+   "description": "A resale pro that prices your stuff from real sold comps, writes listings that sell, and posts them to OfferUp, Facebook Marketplace and eBay.",
+   "url": "https://x.ai/bot/jSEK7tMiX9wUBMVB_mojh"
+  },
+  {
+   "id": "shopping-deals-NI5Na1mizTVfu5t6XD5ad",
+   "code": "NI5Na1mizTVfu5t6XD5ad",
+   "name": "Selling Vigilance",
+   "author": "Vigilance Rifles",
+   "description": "Turns shop-floor photos and spoken details into a priced inventory with IDs, photo cards, and a print-ready PDF — plus daytime auto-backups so nothing.",
+   "url": "https://x.ai/bot/NI5Na1mizTVfu5t6XD5ad"
+  },
+  {
+   "id": "shopping-deals-MVT780CFW0OvKV64K1dMy",
+   "code": "MVT780CFW0OvKV64K1dMy",
+   "name": "Shadow IT Agent Finder",
+   "author": "CarbeneAI",
+   "description": "Finds shadow AI agents already running in your company and turns them into an owned inventory before you buy a platform.",
+   "url": "https://x.ai/bot/MVT780CFW0OvKV64K1dMy"
+  },
+  {
+   "id": "shopping-deals-VMy3LIy9F6a-8MTI80O86",
+   "code": "VMy3LIy9F6a-8MTI80O86",
+   "name": "Ship Check",
+   "author": "Aleksander Stevens",
+   "description": "Pre-ship pass for URLs you give it. Walks desktop and mobile, returns a punch list with screenshots, and drafts tickets only when asked.",
+   "url": "https://x.ai/bot/VMy3LIy9F6a-8MTI80O86"
+  },
+  {
+   "id": "shopping-deals-nlIApzau1qw0MNiRkqbPH",
+   "code": "nlIApzau1qw0MNiRkqbPH",
+   "name": "Shop",
+   "author": "Alex",
+   "description": "Searches Shopify stores and hands back a short list, approval required.",
+   "url": "https://x.ai/bot/nlIApzau1qw0MNiRkqbPH"
+  },
+  {
+   "id": "shopping-deals-j8g1F8J69QH42NmYbgb4l",
+   "code": "j8g1F8J69QH42NmYbgb4l",
+   "name": "Shop Bot",
+   "author": "paranoidream",
+   "description": "A personal shopper that finds restocks, new finds, and gifts, scans your X shopping bookmarks for the best trustworthy…",
+   "url": "https://x.ai/bot/j8g1F8J69QH42NmYbgb4l"
+  },
+  {
+   "id": "shopping-deals-7EGBWWDrvgujhdOLCIrNi",
+   "code": "7EGBWWDrvgujhdOLCIrNi",
+   "name": "Shop Compare",
+   "author": "Luke Carriere",
+   "description": "Compares any product across reputable online retailers like Amazon, Walmart, Target, Costco, Best Buy, and Home Depot…",
+   "url": "https://x.ai/bot/7EGBWWDrvgujhdOLCIrNi"
+  },
+  {
+   "id": "shopping-deals-aXrLNUZKsYoHb488Atc6j",
+   "code": "aXrLNUZKsYoHb488Atc6j",
+   "name": "Shop Elsewhere",
+   "author": "Brian Mangum",
+   "description": "Buys from brand sites and other retailers when Amazon blocks bots or has a worse deal, and checks out only after you approve the exact cart.",
+   "url": "https://x.ai/bot/aXrLNUZKsYoHb488Atc6j"
+  },
+  {
+   "id": "shopping-deals-yj8CGSHIlyqTQAQoR0BGa",
+   "code": "yj8CGSHIlyqTQAQoR0BGa",
+   "name": "Shop Equipment Manager",
+   "author": "Bryan Wiest",
+   "description": "Keeps track of every machine in your fab or trade shop, including manuals pulled from your email, maintenance…",
+   "url": "https://x.ai/bot/yj8CGSHIlyqTQAQoR0BGa"
+  },
+  {
+   "id": "shopping-deals-_0TjcaGRDNxZK1Tx-1gtB",
+   "code": "_0TjcaGRDNxZK1Tx-1gtB",
+   "name": "Shop Everywhere",
+   "author": "Sarah Brundige",
+   "description": "A personal shopping agent that finds the best real deal on anything across every store, buys it with your yes, and handles tracking, returns, and price drops.",
+   "url": "https://x.ai/bot/_0TjcaGRDNxZK1Tx-1gtB"
+  },
+  {
+   "id": "shopping-deals-6CFtbDJOQ-YhE7SuDGTFT",
+   "code": "6CFtbDJOQ-YhE7SuDGTFT",
+   "name": "Shop Print Designer",
+   "author": "Mark Meyer",
+   "description": "Designs a local shop's print marketing in its brand, makes print-ready files, and builds the Vistaprint cart for the owner to approve.",
+   "url": "https://x.ai/bot/6CFtbDJOQ-YhE7SuDGTFT"
+  },
+  {
+   "id": "shopping-deals-TkoRVSXsTCUnx4427FKnw",
+   "code": "TkoRVSXsTCUnx4427FKnw",
+   "name": "Shop Processes",
+   "author": "Vince",
+   "description": "Standing ops desk for a food plant / co-pack / seasoning-blend shop: sales orders through ingredient buys, forecast-driven make/buy, packing checks…",
+   "url": "https://x.ai/bot/TkoRVSXsTCUnx4427FKnw"
+  },
+  {
+   "id": "shopping-deals-rBXWgythSa09pIp14rnV4",
+   "code": "rBXWgythSa09pIp14rnV4",
+   "name": "ShopBot",
+   "author": "Shub Gaur",
+   "description": "Shopping assistant. Searches Shopify UCP catalogs, compares products, finds coupons, pays with first-party Link or Shop…",
+   "url": "https://x.ai/bot/rBXWgythSa09pIp14rnV4"
+  },
+  {
+   "id": "shopping-deals-cpot_pp7mCHB0BuKVwqq7",
+   "code": "cpot_pp7mCHB0BuKVwqq7",
+   "name": "ShopFloor Chief",
+   "author": "Dex_01_",
+   "description": "Operator desk for a ShopFloor-style Etsy digital shop: drafts listings, customer replies, and file specs. Seller uploads only — no outreach, no fake.",
+   "url": "https://x.ai/bot/cpot_pp7mCHB0BuKVwqq7"
+  },
+  {
+   "id": "shopping-deals-BIPzLfDJVrTPY1HAAvGqS",
+   "code": "BIPzLfDJVrTPY1HAAvGqS",
+   "name": "Shopi",
+   "author": "Jaime Hernandez",
+   "description": "Bargain hunter that compares live prices on official retailer pages, flags unverifiable deals, and never buys without yes.",
+   "url": "https://x.ai/bot/BIPzLfDJVrTPY1HAAvGqS"
+  },
+  {
+   "id": "shopping-deals-kBSc1eU-xj4uQzFkjK7z_",
+   "code": "kBSc1eU-xj4uQzFkjK7z_",
+   "name": "Shopify Store Pulse",
+   "author": "Cristopher Guido",
+   "description": "Every weekday morning, sends a short pulse from your Shopify store: yesterday's orders, open refunds or returns that need attention.",
+   "url": "https://x.ai/bot/kBSc1eU-xj4uQzFkjK7z_"
+  },
+  {
+   "id": "shopping-deals---X3KeUBk4AwgtfcxxKxZ",
+   "code": "--X3KeUBk4AwgtfcxxKxZ",
+   "name": "Shopper",
+   "author": "Pete",
+   "description": "Researches what to buy from reviews and specs, then hunts the best price and waits before checkout.",
+   "url": "https://x.ai/bot/--X3KeUBk4AwgtfcxxKxZ"
+  },
+  {
+   "id": "shopping-deals-h5CE1r5-LDWHacnuRuuOW",
+   "code": "h5CE1r5-LDWHacnuRuuOW",
+   "name": "Shopper",
+   "author": "Francisco Kemeny",
+   "description": "Finds high-quality things to buy. Searches official stores and marketplaces, skips knockoffs, compares prices…",
+   "url": "https://x.ai/bot/h5CE1r5-LDWHacnuRuuOW"
+  },
+  {
+   "id": "shopping-deals-Ux-bAshWDs9x_gYbYTM_9",
+   "code": "Ux-bAshWDs9x_gYbYTM_9",
+   "name": "Shopper",
+   "author": "Appallingnerd",
+   "description": "Shop for the user: find, compare, reorder, and buy everyday goods on Amazon and other retailers when they ask in this…",
+   "url": "https://x.ai/bot/Ux-bAshWDs9x_gYbYTM_9"
+  },
+  {
+   "id": "shopping-deals-0hvGU2tKpk__HjUgxDS7S",
+   "code": "0hvGU2tKpk__HjUgxDS7S",
+   "name": "Shopping Agent",
+   "author": "Mark Turnbull",
+   "description": "Builds your staples and weekly lists, fills carts at Walmart, Amazon and other online stores, and plans store trips with local prices and aisles. You confirm.",
+   "url": "https://x.ai/bot/0hvGU2tKpk__HjUgxDS7S"
+  },
+  {
+   "id": "shopping-deals-t8B1xOwyou1i3UZ2VDAIq",
+   "code": "t8B1xOwyou1i3UZ2VDAIq",
+   "name": "Shopping Scout",
+   "author": "Jay N",
+   "description": "Shopping Scout is a full shopping helper. It compares products, digs into reviews and consumer ratings.",
+   "url": "https://x.ai/bot/t8B1xOwyou1i3UZ2VDAIq"
+  },
+  {
+   "id": "shopping-deals-V5Bx5OfnlsDU1i-OYl6HZ",
+   "code": "V5Bx5OfnlsDU1i-OYl6HZ",
+   "name": "Skill Shop",
+   "author": "Everest Chris",
+   "description": "Finds jobs AI agents keep getting wrong, writes and tests skill files that fix them, and sells them on Whop.",
+   "url": "https://x.ai/bot/V5Bx5OfnlsDU1i-OYl6HZ"
+  },
+  {
+   "id": "shopping-deals-OBVfG4SfQ1L9HCJTth41K",
+   "code": "OBVfG4SfQ1L9HCJTth41K",
+   "name": "Small Shop Quality COO",
+   "author": "Matt Norman",
+   "description": "Daily quality rhythm for small ISO 9001, AS9100 or IATF 16949 shops: calibration-due alerts, supplier cert expiry and a weekly KPI digest, drafted for review.",
+   "url": "https://x.ai/bot/OBVfG4SfQ1L9HCJTth41K"
+  },
+  {
+   "id": "shopping-deals-rZ3cnvN16DQRyO75TtABy",
+   "code": "rZ3cnvN16DQRyO75TtABy",
+   "name": "Smart Price-Drop & Deal Sniper",
+   "author": "Globenews studies",
+   "description": "Tracks product and flight prices across retailers daily, compares unit prices and coupons, spots post-purchase refund drops, and keeps a live Deal Page.",
+   "url": "https://x.ai/bot/rZ3cnvN16DQRyO75TtABy"
+  },
+  {
+   "id": "shopping-deals-C9Iy4Zc4v4zldN1dImXtp",
+   "code": "C9Iy4Zc4v4zldN1dImXtp",
+   "name": "Snag",
+   "author": "The_Eniigma _",
+   "description": "Watches official tech drops and pings you with the buy link the moment a listing goes live.",
+   "url": "https://x.ai/bot/C9Iy4Zc4v4zldN1dImXtp"
+  },
+  {
+   "id": "shopping-deals-AkX-fGk_Ymt-5wfZwTIGp",
+   "code": "AkX-fGk_Ymt-5wfZwTIGp",
+   "name": "Snag",
+   "author": "Purple Demon",
+   "description": "A patient stakeout watcher for sold-out and booked-out things: official-resale tickets, product restocks, campsites, and appointment-slot reminders.",
+   "url": "https://x.ai/bot/AkX-fGk_Ymt-5wfZwTIGp"
+  },
+  {
+   "id": "shopping-deals-Gc9F_A9k2bFnWAgYNP3-z",
+   "code": "Gc9F_A9k2bFnWAgYNP3-z",
+   "name": "Snap & Flip",
+   "author": "Lisa",
+   "description": "Snap a photo of any item to get real eBay sold-price comps, shipping picks and a ready-to-paste 80-character SEO listing title. Never auto-lists.",
+   "url": "https://x.ai/bot/Gc9F_A9k2bFnWAgYNP3-z"
+  },
+  {
+   "id": "shopping-deals-RuCu3IpKAvrx00H0MDI0t",
+   "code": "RuCu3IpKAvrx00H0MDI0t",
+   "name": "Sous Chef",
+   "author": "Amber",
+   "description": "Plans the week's dinners, writes the shopping list, and can order it.",
+   "url": "https://x.ai/bot/RuCu3IpKAvrx00H0MDI0t"
+  },
+  {
+   "id": "shopping-deals-wFJC3guVIn2Ke-OV9_Yuy",
+   "code": "wFJC3guVIn2Ke-OV9_Yuy",
+   "name": "SpanishReviewer",
+   "author": "Carolina Dill",
+   "description": "Reviews Spanish copy (lessons, posts, handouts, app text) for natural Colombian Spanish and returns Pass or Fail…",
+   "url": "https://x.ai/bot/wFJC3guVIn2Ke-OV9_Yuy"
+  },
+  {
+   "id": "shopping-deals-bFrGNsUsXpsIfnCIUEvKy",
+   "code": "bFrGNsUsXpsIfnCIUEvKy",
+   "name": "Sponsorship Deal Desk",
+   "author": "Eric",
+   "description": "A creator sponsorship deal desk. It qualifies inbound, sends a locked first-reply on new rate-asks, and holds exceptions for a human.",
+   "url": "https://x.ai/bot/bFrGNsUsXpsIfnCIUEvKy"
+  },
+  {
+   "id": "shopping-deals-tVFpcwYEBXW4ReAFni6Cn",
+   "code": "tVFpcwYEBXW4ReAFni6Cn",
+   "name": "Steve",
+   "author": "Michael Sweet",
+   "description": "Tech/AI lead and Scrum Master for a multi-brand bakery ops stack — connectors, build-vs-buy calls, and evidence-based…",
+   "url": "https://x.ai/bot/tVFpcwYEBXW4ReAFni6Cn"
+  },
+  {
+   "id": "shopping-deals-37wmt6hDUNuFquhml5VU9",
+   "code": "37wmt6hDUNuFquhml5VU9",
+   "name": "Surprise Gifts",
+   "author": "Anton",
+   "description": "Buys one fun surprise gift for you each month within your budget, based on your interests and upcoming events, paying only with a card you authorize.",
+   "url": "https://x.ai/bot/37wmt6hDUNuFquhml5VU9"
+  },
+  {
+   "id": "shopping-deals-ZEniQhu4iKrF9w0qlrYq2",
+   "code": "ZEniQhu4iKrF9w0qlrYq2",
+   "name": "Teeny Squigz",
+   "author": "Ξ",
+   "description": "Bratty desktop buddy that nudges you to check email and helps you actually deal with it.",
+   "url": "https://x.ai/bot/ZEniQhu4iKrF9w0qlrYq2"
+  },
+  {
+   "id": "shopping-deals-aJhyaq_Y0dt1OTzSYWcqU",
+   "code": "aJhyaq_Y0dt1OTzSYWcqU",
+   "name": "TesBots: Accessory Deal Finder",
+   "author": "TimDOES",
+   "description": "Finds good deals on accessories for your exact Tesla, checks fit against the product page or fit guide, and keeps a running list.",
+   "url": "https://x.ai/bot/aJhyaq_Y0dt1OTzSYWcqU"
+  },
+  {
+   "id": "shopping-deals-jbcYU5l_7qsLl49AIzh5q",
+   "code": "jbcYU5l_7qsLl49AIzh5q",
+   "name": "Testbench",
+   "author": "Prism Network",
+   "description": "Rents a dedicated GPU when a job cannot run on a shared machine, then returns the output and the settled onchain cost…",
+   "url": "https://x.ai/bot/jbcYU5l_7qsLl49AIzh5q"
+  },
+  {
+   "id": "shopping-deals-3Q00ob33EdkR0G9CUULoC",
+   "code": "3Q00ob33EdkR0G9CUULoC",
+   "name": "Thrift Hunter",
+   "author": "Hudson S.",
+   "description": "Aisle coach for thrift flips. Send a photo or name plus the tag price and get Buy / Maybe / Pass with expected resale…",
+   "url": "https://x.ai/bot/3Q00ob33EdkR0G9CUULoC"
+  },
+  {
+   "id": "shopping-deals-L3Lx6Y8t_ebL8qQhutoCd",
+   "code": "L3Lx6Y8t_ebL8qQhutoCd",
+   "name": "Tin El Investigador",
+   "author": "Valentin",
+   "description": "Investigates a topic daily and returns a ready-to-post Spanish X draft.",
+   "url": "https://x.ai/bot/L3Lx6Y8t_ebL8qQhutoCd"
+  },
+  {
+   "id": "shopping-deals-z-_zncW1_15qwOxc98b09",
+   "code": "z-_zncW1_15qwOxc98b09",
+   "name": "Tire Kicker",
+   "author": "Basho Parks",
+   "description": "Draft-only buyer desk for FB Marketplace, Craigslist, and eBay.",
+   "url": "https://x.ai/bot/z-_zncW1_15qwOxc98b09"
+  },
+  {
+   "id": "shopping-deals-tbuow4aHucVEAgNbF7qzU",
+   "code": "tbuow4aHucVEAgNbF7qzU",
+   "name": "Tony Montana",
+   "author": "Liam",
+   "description": "ONLY job: the owner's Procurement Manager. Own buying: software, services, contractors, equipment, agencies, manufacturing, office, subscriptions.",
+   "url": "https://x.ai/bot/tbuow4aHucVEAgNbF7qzU"
+  },
+  {
+   "id": "shopping-deals-s-V4NelC14ibWLzNQLncx",
+   "code": "s-V4NelC14ibWLzNQLncx",
+   "name": "Trump Bot",
+   "author": "Andy Huang",
+   "description": "Thinks and talks like President Trump. Big-energy, deal-making banter and takes on whatever you throw at it, mostly…",
+   "url": "https://x.ai/bot/s-V4NelC14ibWLzNQLncx"
+  },
+  {
+   "id": "shopping-deals-7_dnh4QViapra7VrGgFCM",
+   "code": "7_dnh4QViapra7VrGgFCM",
+   "name": "Two Lenses: Decide & Cut",
+   "author": "SmileHub Dental Labs",
+   "description": "Reviews any plan, feature list, page, process or cost through two lenses, taste and teardown, and returns a verdict per…",
+   "url": "https://x.ai/bot/7_dnh4QViapra7VrGgFCM"
+  },
+  {
+   "id": "shopping-deals-9AsX0Exx7P4m2IwZXJ4tp",
+   "code": "9AsX0Exx7P4m2IwZXJ4tp",
+   "name": "US Tech Deals & Price Checker",
+   "author": "Marc Majewski",
+   "description": "Is this a good price? Verified US tech deals, price history & coupons – powered by MoneyDeals.",
+   "url": "https://x.ai/bot/9AsX0Exx7P4m2IwZXJ4tp"
+  },
+  {
+   "id": "shopping-deals-xJnF0xp0j_8lDe-TVYwJy",
+   "code": "xJnF0xp0j_8lDe-TVYwJy",
+   "name": "Uncle Dave",
+   "author": "Tater",
+   "description": "A local deal hunter that watches auctions, Craigslist, Facebook Marketplace, and eBay for the things you collect or need.",
+   "url": "https://x.ai/bot/xJnF0xp0j_8lDe-TVYwJy"
+  },
+  {
+   "id": "shopping-deals-WlQGkd6kQL-YfIbiAlJMQ",
+   "code": "WlQGkd6kQL-YfIbiAlJMQ",
+   "name": "VA Loan Buddy",
+   "author": "Jason Rogers",
+   "description": "Straight VA home-loan answers for military & frontline families — eligibility, entitlement, $0-down buying, funding-fee exemptions, PCS moves.",
+   "url": "https://x.ai/bot/WlQGkd6kQL-YfIbiAlJMQ"
+  },
+  {
+   "id": "shopping-deals-M0xhuQl4vjLdWj6l3lWeo",
+   "code": "M0xhuQl4vjLdWj6l3lWeo",
+   "name": "Validator",
+   "author": "Avid",
+   "description": "Pressure-tests product and company ideas before you build. Runs YC-style office hours, digs for real demand on forums, Product Hunt, GitHub, and X.",
+   "url": "https://x.ai/bot/M0xhuQl4vjLdWj6l3lWeo"
+  },
+  {
+   "id": "shopping-deals-tl1Ih8-CLh1fwTp51jqme",
+   "code": "tl1Ih8-CLh1fwTp51jqme",
+   "name": "Vivian",
+   "author": "Martha",
+   "description": "A personal shopper that hunts deals, checks codes and sales, keeps your weekly shopping list (with an optional text to your phone), verifies stock.",
+   "url": "https://x.ai/bot/tl1Ih8-CLh1fwTp51jqme"
+  },
+  {
+   "id": "shopping-deals-0qngh0mv4-n-gv_kkzbem",
+   "code": "0qngh0mv4-n-gv_kkzbem",
+   "name": "Wall Street",
+   "author": "Austin",
+   "description": "Two weekday paper sessions that size a fictional book off a live buy/sell desk.",
+   "url": "https://x.ai/bot/0qngh0mv4-n-gv_kkzbem"
+  },
+  {
+   "id": "shopping-deals-hY3HdxHD2I_b3YBAGEneE",
+   "code": "hY3HdxHD2I_b3YBAGEneE",
+   "name": "Walmart Cash Saver",
+   "author": "justin",
+   "description": "Claims Walmart Cash offers that match what you actually buy, focused on household and personal-care items, and sends you a weekly list of the best ones.",
+   "url": "https://x.ai/bot/hY3HdxHD2I_b3YBAGEneE"
+  },
+  {
+   "id": "shopping-deals-uCS_7rOgzswHGyi7uVcrt",
+   "code": "uCS_7rOgzswHGyi7uVcrt",
+   "name": "Warranty & Returns Keeper",
+   "author": "@TNVOLMAN",
+   "description": "Reads your receipt emails, logs every return deadline and warranty end date, and reminds you before each runs out. Read-only on email.",
+   "url": "https://x.ai/bot/uCS_7rOgzswHGyi7uVcrt"
+  },
+  {
+   "id": "shopping-deals-mJU3WN_wuYmhZAZ3A2F3y",
+   "code": "mJU3WN_wuYmhZAZ3A2F3y",
+   "name": "Warranty Bot",
+   "author": "Nomis",
+   "description": "Tracks return windows and warranties from receipts, warns a week before they end, and drafts the claim when something breaks.",
+   "url": "https://x.ai/bot/mJU3WN_wuYmhZAZ3A2F3y"
+  },
+  {
+   "id": "shopping-deals-g0rb6kTReiBG4dN5kGIWZ",
+   "code": "g0rb6kTReiBG4dN5kGIWZ",
+   "name": "Webshop",
+   "author": "Jakob",
+   "description": "Baut und betreibt Online-Shop und Firmenwebsite für einen Farbenfachhandel: Katalog, Bestellung, SEO/GEO und saisonale Aktionen. Arbeitet eng mit.",
+   "url": "https://x.ai/bot/g0rb6kTReiBG4dN5kGIWZ"
+  },
+  {
+   "id": "shopping-deals-FBBVswZ2xmj3CpSsFIQIJ",
+   "code": "FBBVswZ2xmj3CpSsFIQIJ",
+   "name": "Witcher",
+   "author": "Henry Ellison",
+   "description": "A hands-on personal assistant for shopping deals, one-tap checkouts, and daily paramotor flyability checks — pings only…",
+   "url": "https://x.ai/bot/FBBVswZ2xmj3CpSsFIQIJ"
+  },
+  {
+   "id": "shopping-deals-wzJ0u7WcdYGc_rDKTqpbE",
+   "code": "wzJ0u7WcdYGc_rDKTqpbE",
+   "name": "Would Thiel Buy It?",
+   "author": "중현 안",
+   "description": "Drop your tickers and get one verdict per stock, Monopoly, Contender, or Competitor, as a shareable card, judged…",
+   "url": "https://x.ai/bot/wzJ0u7WcdYGc_rDKTqpbE"
+  },
+  {
+   "id": "shopping-deals-a4hfYt7OhdvdZRXJhK9nN",
+   "code": "a4hfYt7OhdvdZRXJhK9nN",
+   "name": "Wrappy McWrapface",
+   "author": "@davidkurkov",
+   "description": "Wrap Studio for Tesla: designs custom Paint Shop wraps. Unofficial, not affiliated with Tesla; others' logos for personal use only.",
+   "url": "https://x.ai/bot/a4hfYt7OhdvdZRXJhK9nN"
+  },
+  {
+   "id": "shopping-deals-10UCYGVK9ZlGjLMudEHwd",
+   "code": "10UCYGVK9ZlGjLMudEHwd",
+   "name": "Wrench",
+   "author": "Jeff Jenkins",
+   "description": "Your Porsche shop buddy — diagnostics, maintenance, ownership advice, and straight talk on what actually needs fixing.",
+   "url": "https://x.ai/bot/10UCYGVK9ZlGjLMudEHwd"
+  },
+  {
+   "id": "shopping-deals-4TxZ2KVW5aM6bfOleofNb",
+   "code": "4TxZ2KVW5aM6bfOleofNb",
+   "name": "Z1 CAM Shop",
+   "author": "MSMage",
+   "description": "Shop assistant for Makera Z1 desktop CNC milling that works out tooling, feeds and speeds, fixturing, and a setup sheet.",
+   "url": "https://x.ai/bot/4TxZ2KVW5aM6bfOleofNb"
+  },
+  {
+   "id": "shopping-deals-hkBBlzwLwuxpJvGjx75H4",
+   "code": "hkBBlzwLwuxpJvGjx75H4",
+   "name": "eBay Ads",
+   "author": "Brandon Hinojosa",
+   "description": "For eBay sellers: monitors Promoted Listings campaigns, reviews ad-fee economics and performance from eBay's native reports and sends regular reports.",
+   "url": "https://x.ai/bot/hkBBlzwLwuxpJvGjx75H4"
+  },
+  {
+   "id": "shopping-deals-PHWWiOoIBj5r1alMZGB3M",
+   "code": "PHWWiOoIBj5r1alMZGB3M",
+   "name": "eBay ECommerce",
+   "author": "ジャンプスーツ",
+   "description": "An eBay selling assistant that prices your listings from sold comps, tightens titles and shipping, and drafts new listings.",
+   "url": "https://x.ai/bot/PHWWiOoIBj5r1alMZGB3M"
+  },
+  {
+   "id": "shopping-deals-5m2ZmmvB9P0dtq4efpill",
+   "code": "5m2ZmmvB9P0dtq4efpill",
+   "name": "eBay Lister",
+   "author": "Christian Morón",
+   "description": "Send a photo of something to sell and it identifies the item, checks eBay sold prices, suggests a price and writes the listing as a draft for approval.",
+   "url": "https://x.ai/bot/5m2ZmmvB9P0dtq4efpill"
+  },
+  {
+   "id": "shopping-deals-q9Q8EPKFx45CmVwjUAFY5",
+   "code": "q9Q8EPKFx45CmVwjUAFY5",
+   "name": "eBay Lister",
+   "author": "Gabriel Valerio",
+   "description": "Snap a photo of almost anything — comics, cards, toys, or thrift finds — and get an eBay draft with sold comps, title…",
+   "url": "https://x.ai/bot/q9Q8EPKFx45CmVwjUAFY5"
+  },
+  {
+   "id": "shopping-deals-b27EIYjEqg30IeFmJR31k",
+   "code": "b27EIYjEqg30IeFmJR31k",
+   "name": "eBay Photo Lister",
+   "author": "HFFA",
+   "description": "Send photos of what you're selling and get back a ready-to-paste eBay listing: item ID, comp-based pricing, title, category, specifics, and description.",
+   "url": "https://x.ai/bot/b27EIYjEqg30IeFmJR31k"
+  },
+  {
+   "id": "shopping-deals-25biN96GINlZc7oouZlhU",
+   "code": "25biN96GINlZc7oouZlhU",
+   "name": "eBay Seller Assistant",
+   "author": "James Harrison",
+   "description": "Helper for small eBay sellers: checks new orders, buys and prints standard shipping labels within your caps, tracks USPS scans and guards your price floor.",
+   "url": "https://x.ai/bot/25biN96GINlZc7oouZlhU"
+  },
+  {
+   "id": "shopping-deals-J-O4_ismtdUN3zxvi1vKS",
+   "code": "J-O4_ismtdUN3zxvi1vKS",
+   "name": "eBay/TCGplayer store manager",
+   "author": "AutoAndre",
+   "description": "Runs a trading card store on eBay and TCGplayer: checks recent sold prices, reprices listings daily within safe limits, helps with listings, orders and stock.",
+   "url": "https://x.ai/bot/J-O4_ismtdUN3zxvi1vKS"
+  },
+  {
+   "id": "shopping-deals-VoAd2MgPYXhlHrGYT9fci",
+   "code": "VoAd2MgPYXhlHrGYT9fci",
+   "name": "eBob",
+   "author": "The Contextian",
+   "description": "An eBay store manager for small sellers. It tunes listing titles for search, suggests price changes, drafts buyer replies.",
+   "url": "https://x.ai/bot/VoAd2MgPYXhlHrGYT9fci"
+  },
+  {
+   "id": "shopping-deals-u9MMY9PmqCWnVDucZ49Tt",
+   "code": "u9MMY9PmqCWnVDucZ49Tt",
+   "name": "elf",
+   "author": "Capital Copilot",
+   "description": "Expert research seat for a multi-agent fleet. Deep-dives questions workers escalate, returns verdict-first recommendations with evidence, and never.",
+   "url": "https://x.ai/bot/u9MMY9PmqCWnVDucZ49Tt"
+  },
+  {
+   "id": "shopping-deals-cMoR9dEV5I2XoIAHt6X83",
+   "code": "cMoR9dEV5I2XoIAHt6X83",
+   "name": "shopify",
+   "author": "mathias",
+   "description": "Runs a Shopify storefront for a small shop — catalog, theme, pages, discounts, and status checks. Works in the Shopify admin in the browser.",
+   "url": "https://x.ai/bot/cMoR9dEV5I2XoIAHt6X83"
+  },
+  {
+   "id": "shopping-deals-0lbrUuAvdnoE4kMX-AfO1",
+   "code": "0lbrUuAvdnoE4kMX-AfO1",
+   "name": "thrift-bot",
+   "author": "Callam Williams",
+   "description": "Send a photo of anything you're clearing out. It checks resale prices and tells you whether to sell, donate or bin it.",
+   "url": "https://x.ai/bot/0lbrUuAvdnoE4kMX-AfO1"
+  },
+  {
+   "id": "shopping-deals-TirHPj6JuA6N04072FmuS",
+   "code": "TirHPj6JuA6N04072FmuS",
+   "name": "เงินเดือนนี้รอดไหม?",
+   "author": "Sherlock",
+   "description": "A personal finance helper for Thai users: budgets, debt payoff, savings and big-purchase checks, chatting in casual Thai.",
+   "url": "https://x.ai/bot/TirHPj6JuA6N04072FmuS"
+  },
+  {
+   "id": "shopping-deals--zRQeViL06G-7XZYeD5hZ",
+   "code": "-zRQeViL06G-7XZYeD5hZ",
+   "name": "プロンプト監査役",
+   "author": "moriko",
+   "description": "Audits another bot's instructions against its core role, flags overlap and vagueness, and returns a trimmed full rewrite with reasons.",
+   "url": "https://x.ai/bot/-zRQeViL06G-7XZYeD5hZ"
+  },
+  {
+   "id": "shopping-deals-yZLB_EF-gFtOe8WRFTPeq",
+   "code": "yZLB_EF-gFtOe8WRFTPeq",
+   "name": "经纬 · Loom",
+   "author": "Valerie",
+   "description": "Yunjian's ontology builder: lays the foundation for a shop, app or skill as a sourced folder of roots, parts and relations that you and any AI can build…",
+   "url": "https://x.ai/bot/yZLB_EF-gFtOe8WRFTPeq"
+  },
+  {
+   "id": "shopping-deals-WFW6_5N596TQpWCRjRZ5w",
+   "code": "WFW6_5N596TQpWCRjRZ5w",
+   "name": "薅羊毛",
+   "author": "Ben",
+   "description": "Watches for deals on things you actually buy, and stays quiet otherwise.",
+   "url": "https://x.ai/bot/WFW6_5N596TQpWCRjRZ5w"
+  },
+  {
+   "id": "shopping-deals-d5ucI08cimmef2-bIUFzo",
+   "code": "d5ucI08cimmef2-bIUFzo",
+   "name": "장보기",
+   "author": "min",
+   "description": "A shopping helper for Coupang and Naver Shopping: finds items, compares price and delivery, and fills the cart up to checkout. It pays only when you say so.",
+   "url": "https://x.ai/bot/d5ucI08cimmef2-bIUFzo"
+  },
+  {
+   "id": "shopping-deals-VSxAr0CZzf8qh5lUQ9gmA",
+   "code": "VSxAr0CZzf8qh5lUQ9gmA",
+   "name": "체험단신청",
+   "author": "2ynch",
+   "description": "Checks Musinsa and Kakao Gift product-trial campaigns daily, applies to the ones that fit you, and reports the results. In Korean.",
+   "url": "https://x.ai/bot/VSxAr0CZzf8qh5lUQ9gmA"
+  }
+ ]
+}

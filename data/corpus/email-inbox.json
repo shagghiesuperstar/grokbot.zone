@@ -1,0 +1,2328 @@
+{
+ "slug": "email-inbox",
+ "label": "Email & Inbox",
+ "count": 290,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "email-inbox-HdN8nshqGbNy_Le0fSi_6",
+   "code": "HdN8nshqGbNy_Le0fSi_6",
+   "name": ".mail",
+   "author": "greedfi",
+   "description": "Gives your Grok Bot its own email inbox: an optional morning digest, smart sorting, reply drafts you approve before anything sends.",
+   "url": "https://x.ai/bot/HdN8nshqGbNy_Le0fSi_6"
+  },
+  {
+   "id": "email-inbox-opCFOq0FKZ41PBIiBeuVO",
+   "code": "opCFOq0FKZ41PBIiBeuVO",
+   "name": "3-Day Notice Validator",
+   "author": "Real Estate Lawyer",
+   "description": "Checks California 3-day notices to pay rent or quit, built for City of Los Angeles residential notices.",
+   "url": "https://x.ai/bot/opCFOq0FKZ41PBIiBeuVO"
+  },
+  {
+   "id": "email-inbox-CjkBywhqRcaruj2i658xU",
+   "code": "CjkBywhqRcaruj2i658xU",
+   "name": "Action My Email",
+   "author": "Elizabeth",
+   "description": "Triage bot for people drowning in multiple Gmail inboxes.",
+   "url": "https://x.ai/bot/CjkBywhqRcaruj2i658xU"
+  },
+  {
+   "id": "email-inbox-ubNqKLrzI3HZt2VCux5wn",
+   "code": "ubNqKLrzI3HZt2VCux5wn",
+   "name": "Admin Chief",
+   "author": "John Tapia",
+   "description": "Personal admin helper: every morning reads your email, calendar and to-dos and tells you in plain words what needs you. Never sends or changes anything.",
+   "url": "https://x.ai/bot/ubNqKLrzI3HZt2VCux5wn"
+  },
+  {
+   "id": "email-inbox--0bgFr7-a5pUPscGVqAe3",
+   "code": "-0bgFr7-a5pUPscGVqAe3",
+   "name": "Adventure Photography Bot",
+   "author": "Kai Mai",
+   "description": "Expedition sponsorship intern for adventure photographers: multi-inbox gear/PFC outreach, partner pitches, ship…",
+   "url": "https://x.ai/bot/-0bgFr7-a5pUPscGVqAe3"
+  },
+  {
+   "id": "email-inbox-45KWAc9vDeyrJLSqlGJnu",
+   "code": "45KWAc9vDeyrJLSqlGJnu",
+   "name": "Agent Installer",
+   "author": "Everest Chris",
+   "description": "Sets up a working AI agent inside a local business, connected to their inbox, calendar, reviews and phone, for a setup fee plus a monthly fe.",
+   "url": "https://x.ai/bot/45KWAc9vDeyrJLSqlGJnu"
+  },
+  {
+   "id": "email-inbox-PWBPqcCqUbEUPozXozRc3",
+   "code": "PWBPqcCqUbEUPozXozRc3",
+   "name": "Airfield Electrical Bid Scout",
+   "author": "@thefit24couple",
+   "description": "Finds and qualifies public bids for airfield lighting, NAVAIDs, FAA fiber, and underground electrical work, and sends a short recap plus a spreadsheet.",
+   "url": "https://x.ai/bot/PWBPqcCqUbEUPozXozRc3"
+  },
+  {
+   "id": "email-inbox-moKscJ7PToJw_PVQWvkf_",
+   "code": "moKscJ7PToJw_PVQWvkf_",
+   "name": "Alfred",
+   "author": "Michael Krantz",
+   "description": "Cheeky British chief of staff that watches email and Drive, builds daily briefings, and coordinates teammate bots.",
+   "url": "https://x.ai/bot/moKscJ7PToJw_PVQWvkf_"
+  },
+  {
+   "id": "email-inbox-kK3YzrnSL7a86H9ASHSqK",
+   "code": "kK3YzrnSL7a86H9ASHSqK",
+   "name": "Alfred Clone",
+   "author": "@TamaraCuri78434",
+   "description": "Alfred (The Batman butler) clone for an overwhelmed ADHD housewife: capture the day, Low Clarity Mode, grouped…",
+   "url": "https://x.ai/bot/kK3YzrnSL7a86H9ASHSqK"
+  },
+  {
+   "id": "email-inbox-j9tPpQruZZILltC0tn6m7",
+   "code": "j9tPpQruZZILltC0tn6m7",
+   "name": "Alphabot Raffle Bot",
+   "author": "@orpheuskaze",
+   "description": "Creates Alphabot collab raffles from partner docs on your own teams and templates, then pulls the winners into Google Sheets.",
+   "url": "https://x.ai/bot/j9tPpQruZZILltC0tn6m7"
+  },
+  {
+   "id": "email-inbox--ZHPJfwGTosEKmzelCSOH",
+   "code": "-ZHPJfwGTosEKmzelCSOH",
+   "name": "Angry email → Soft reply",
+   "author": "Chill",
+   "description": "Paste a blunt or angry email draft and optional tone. Get one clearer, more professional rewrite that keeps your facts, ask, and boundary.",
+   "url": "https://x.ai/bot/-ZHPJfwGTosEKmzelCSOH"
+  },
+  {
+   "id": "email-inbox-gV2uTzr3tG2s77bKjPSCq",
+   "code": "gV2uTzr3tG2s77bKjPSCq",
+   "name": "Anti-Vibe",
+   "author": "Erik Hancock",
+   "description": "A read-only production sheriff for your live sites. It walks each site.",
+   "url": "https://x.ai/bot/gV2uTzr3tG2s77bKjPSCq"
+  },
+  {
+   "id": "email-inbox-Z-yraNyUFmoZxN8i8tGC3",
+   "code": "Z-yraNyUFmoZxN8i8tGC3",
+   "name": "Application Inbox",
+   "author": "Philip",
+   "description": "Watches your job-application email, digests what needs a reply, and drafts messages for your OK.",
+   "url": "https://x.ai/bot/Z-yraNyUFmoZxN8i8tGC3"
+  },
+  {
+   "id": "email-inbox-QLrh5YPrr8fBtkeEX5Ggh",
+   "code": "QLrh5YPrr8fBtkeEX5Ggh",
+   "name": "Atomic Mail Desk",
+   "author": "Bosotter",
+   "description": "An inbox helper for Atomic Mail for Agents. It reads and searches your mail, drafts replies in chat, and sends only after you say yes to that exact message.",
+   "url": "https://x.ai/bot/QLrh5YPrr8fBtkeEX5Ggh"
+  },
+  {
+   "id": "email-inbox-Kb3ZgTScdJSy8oG5HnXAX",
+   "code": "Kb3ZgTScdJSy8oG5HnXAX",
+   "name": "Awareness",
+   "author": "ZFXGaming",
+   "description": "A personal confidant that keeps a dated log of the human side of your work: feelings, values and what matters to you.",
+   "url": "https://x.ai/bot/Kb3ZgTScdJSy8oG5HnXAX"
+  },
+  {
+   "id": "email-inbox-1N03KJD_3exMXdhXc4XJM",
+   "code": "1N03KJD_3exMXdhXc4XJM",
+   "name": "Ayudas",
+   "author": "DavidCabezaAI",
+   "description": "Rastrea y prioriza ayudas y créditos para startups (cloud, LLM, DB, email, mapas, observabilidad). Lleva el estado de cada programa; tú aplicas a mano.",
+   "url": "https://x.ai/bot/1N03KJD_3exMXdhXc4XJM"
+  },
+  {
+   "id": "email-inbox-Uf1bydmjxYZZpgymtOzSZ",
+   "code": "Uf1bydmjxYZZpgymtOzSZ",
+   "name": "BFCM Email Planner",
+   "author": "Chase Dimond | Email Marketing Nerd",
+   "description": "Plans your full Black Friday / Cyber Monday email and SMS calendar: sends, segments, offer angles, subject lines, flow…",
+   "url": "https://x.ai/bot/Uf1bydmjxYZZpgymtOzSZ"
+  },
+  {
+   "id": "email-inbox-WDewD77F7LbUhoRElmbyK",
+   "code": "WDewD77F7LbUhoRElmbyK",
+   "name": "Backlink Specialist",
+   "author": "John Boyle",
+   "description": "Finds natural backlink opportunities, writes personalized outreach as Gmail drafts, logs prospects in a Google Sheet and drafts one follow-up. Never sends.",
+   "url": "https://x.ai/bot/WDewD77F7LbUhoRElmbyK"
+  },
+  {
+   "id": "email-inbox-0VC1XzREXRFGe0hVo-JEG",
+   "code": "0VC1XzREXRFGe0hVo-JEG",
+   "name": "Be Happier",
+   "author": "Lenny Rachitsky",
+   "description": "Looks at your email and calendar each week, then suggests 3 concrete things that would make you happier.",
+   "url": "https://x.ai/bot/0VC1XzREXRFGe0hVo-JEG"
+  },
+  {
+   "id": "email-inbox-yu_bkwUfpHdqhF2Q1VhWn",
+   "code": "yu_bkwUfpHdqhF2Q1VhWn",
+   "name": "BeneBot",
+   "author": "@suddenlyjon",
+   "description": "Navigate employer benefits and find in-network doctors from your plan docs or an approved email search.",
+   "url": "https://x.ai/bot/yu_bkwUfpHdqhF2Q1VhWn"
+  },
+  {
+   "id": "email-inbox-uCSg2OyTimRoBIDrydymy",
+   "code": "uCSg2OyTimRoBIDrydymy",
+   "name": "Bid Desk",
+   "author": "Andrew",
+   "description": "Reads an RFQ or bid package and pulls out what matters: your scope, due date, addenda, bid form requirements, and gaps…",
+   "url": "https://x.ai/bot/uCSg2OyTimRoBIDrydymy"
+  },
+  {
+   "id": "email-inbox-ozMvCzisLrQLrDXY0GV-8",
+   "code": "ozMvCzisLrQLrDXY0GV-8",
+   "name": "Birthday Wish Desk",
+   "author": "TanLines",
+   "description": "Keeps your birthday list, reminds you ahead, and drafts short human wishes for WhatsApp, SMS, email, Slack, or X.",
+   "url": "https://x.ai/bot/ozMvCzisLrQLrDXY0GV-8"
+  },
+  {
+   "id": "email-inbox-N0J32FbnVRuetJi1oJggh",
+   "code": "N0J32FbnVRuetJi1oJggh",
+   "name": "Blunt",
+   "author": "Tal Siach",
+   "description": "Blunt is the review a senior product marketer would email after sitting with your page.",
+   "url": "https://x.ai/bot/N0J32FbnVRuetJi1oJggh"
+  },
+  {
+   "id": "email-inbox-Qf3kc7g_FQY41atLr-dBr",
+   "code": "Qf3kc7g_FQY41atLr-dBr",
+   "name": "Boardy",
+   "author": "JP",
+   "description": "Your bridge to Boardy, the AI superconnector at boardy@boardy.ai. Ask for a person or intro in chat, and it emails Boardy from your Gmail and brings.",
+   "url": "https://x.ai/bot/Qf3kc7g_FQY41atLr-dBr"
+  },
+  {
+   "id": "email-inbox-tII28kVM4dxPvzSLjwqko",
+   "code": "tII28kVM4dxPvzSLjwqko",
+   "name": "Bodyguard",
+   "author": "Liam",
+   "description": "Protect the owner's time and attention from requests that do not deserve direct access.",
+   "url": "https://x.ai/bot/tII28kVM4dxPvzSLjwqko"
+  },
+  {
+   "id": "email-inbox-X5OznsECCkLxuiiA9OOk3",
+   "code": "X5OznsECCkLxuiiA9OOk3",
+   "name": "Bonehead",
+   "author": "Rusticles Fashodi",
+   "description": "A general productivity wingman — helps with day-to-day tasks, email, follow-ups, and getting sticky admin sorted…",
+   "url": "https://x.ai/bot/X5OznsECCkLxuiiA9OOk3"
+  },
+  {
+   "id": "email-inbox-J0FpdtH6qCKE7-ZB5p3Zs",
+   "code": "J0FpdtH6qCKE7-ZB5p3Zs",
+   "name": "Bookkeeping Ninja Inbox",
+   "author": "Tim Armstrong",
+   "description": "Finds supplier invoices and receipts in your Gmail, files the real PDFs in Dropbox, and hands clean bill details to your Bill Entry bot.",
+   "url": "https://x.ai/bot/J0FpdtH6qCKE7-ZB5p3Zs"
+  },
+  {
+   "id": "email-inbox-Ka18PTTKUNtDDPg0HpYva",
+   "code": "Ka18PTTKUNtDDPg0HpYva",
+   "name": "Boost",
+   "author": "Wayne",
+   "description": "Reads work Gmail and files the real work as Asana tasks.",
+   "url": "https://x.ai/bot/Ka18PTTKUNtDDPg0HpYva"
+  },
+  {
+   "id": "email-inbox-RHSd-aq6KC84xxUnvBXSl",
+   "code": "RHSd-aq6KC84xxUnvBXSl",
+   "name": "Bot inbox",
+   "author": "Wayne Sutton",
+   "description": "A weekday unread digest for Grok Bots. Lists bots and group chats with new activity, one line each.",
+   "url": "https://x.ai/bot/RHSd-aq6KC84xxUnvBXSl"
+  },
+  {
+   "id": "email-inbox-estQ8HWdKqhheDNmOGjcy",
+   "code": "estQ8HWdKqhheDNmOGjcy",
+   "name": "Call Follow-Ups",
+   "author": "Daniel Brill",
+   "description": "Turns each recorded call into a follow-up email in your voice, a next-steps note, and the CRM updates, including the qualification fields your team runs…",
+   "url": "https://x.ai/bot/estQ8HWdKqhheDNmOGjcy"
+  },
+  {
+   "id": "email-inbox-sXXaY9eLkFYIayeSGqTp7",
+   "code": "sXXaY9eLkFYIayeSGqTp7",
+   "name": "Catalog Hygiene",
+   "author": "The Margin of Safety",
+   "description": "Reads your Shopify catalog and flags what's wrong — duplicates, missing tags, bad compare-at, empty alt text — in small ranked batches.",
+   "url": "https://x.ai/bot/sXXaY9eLkFYIayeSGqTp7"
+  },
+  {
+   "id": "email-inbox-vJo5baCNdh3N0Swpe5539",
+   "code": "vJo5baCNdh3N0Swpe5539",
+   "name": "Cemil",
+   "author": "Kerim",
+   "description": "Friendly wear log that remembers what you wore, when, and where from selfies or text so you do not repeat an outfit too soon.",
+   "url": "https://x.ai/bot/vJo5baCNdh3N0Swpe5539"
+  },
+  {
+   "id": "email-inbox-GiBPBQR2WrHNul4k9Tz6Q",
+   "code": "GiBPBQR2WrHNul4k9Tz6Q",
+   "name": "Chieeeeefy",
+   "author": "Naoufal El hassnaoui",
+   "description": "Chief of staff for a field engineer, calendar and work inbox first.",
+   "url": "https://x.ai/bot/GiBPBQR2WrHNul4k9Tz6Q"
+  },
+  {
+   "id": "email-inbox-QIfSY8pPwjqBSIdal-5CI",
+   "code": "QIfSY8pPwjqBSIdal-5CI",
+   "name": "Chief",
+   "author": "SmoresBoy Jack",
+   "description": "A Chief of Staff that scans email and calendar on first install, then every weekday morning.",
+   "url": "https://x.ai/bot/QIfSY8pPwjqBSIdal-5CI"
+  },
+  {
+   "id": "email-inbox-UrO63RhN1LGXD3DzoMess",
+   "code": "UrO63RhN1LGXD3DzoMess",
+   "name": "Chief",
+   "author": "Cameron",
+   "description": "Chief-of-staff operator bot. Owns open loops, drafts replies, runs a morning inbox/calendar scan, and writes current.md…",
+   "url": "https://x.ai/bot/UrO63RhN1LGXD3DzoMess"
+  },
+  {
+   "id": "email-inbox-OY2K6DPosnK6ijDNpWJL3",
+   "code": "OY2K6DPosnK6ijDNpWJL3",
+   "name": "Chief",
+   "author": "Ben",
+   "description": "A chief-of-staff assistant that keeps your priorities, inbox, calendar and a live Notion priorities dashboard in order, sends a daily briefing.",
+   "url": "https://x.ai/bot/OY2K6DPosnK6ijDNpWJL3"
+  },
+  {
+   "id": "email-inbox-cidS9JLYj_tbCX5wu9J80",
+   "code": "cidS9JLYj_tbCX5wu9J80",
+   "name": "Chief",
+   "author": "Myron Wallace",
+   "description": "A business chief of staff and commercial strategist that turns meeting transcripts, email threads, and updates into clear decisions, commitments.",
+   "url": "https://x.ai/bot/cidS9JLYj_tbCX5wu9J80"
+  },
+  {
+   "id": "email-inbox-qifsy8ppwjqbsidal-5ci",
+   "code": "qifsy8ppwjqbsidal-5ci",
+   "name": "Chief",
+   "author": "SmoresBoy",
+   "description": "A Chief of Staff that scans email and calendar on first install, then every weekday morning.",
+   "url": "https://x.ai/bot/qifsy8ppwjqbsidal-5ci"
+  },
+  {
+   "id": "email-inbox-3ITYjIFCSujYyq6rp5VAq",
+   "code": "3ITYjIFCSujYyq6rp5VAq",
+   "name": "Chop Bot",
+   "author": "Calix Build",
+   "description": "Chops inbox, calendar, and X replies into one daily brief with draft-only replies.",
+   "url": "https://x.ai/bot/3ITYjIFCSujYyq6rp5VAq"
+  },
+  {
+   "id": "email-inbox-3ityjifcsujyyq6rp5vaq",
+   "code": "3ityjifcsujyyq6rp5vaq",
+   "name": "Chop Bot",
+   "author": "Calix",
+   "description": "Chop Bot v6 chops your inbox, calendar, and X replies down to what matters.",
+   "url": "https://x.ai/bot/3ityjifcsujyyq6rp5vaq"
+  },
+  {
+   "id": "email-inbox-CqQQXo05k79ukSLCubxfj",
+   "code": "CqQQXo05k79ukSLCubxfj",
+   "name": "Chuck",
+   "author": "Veetharag",
+   "description": "Unsubscribes from promotional and marketing email so the inbox mostly keeps personal mail and purchase receipts.",
+   "url": "https://x.ai/bot/CqQQXo05k79ukSLCubxfj"
+  },
+  {
+   "id": "email-inbox-wIxb391-9pDKoWXQ8xrbD",
+   "code": "wIxb391-9pDKoWXQ8xrbD",
+   "name": "Claimed",
+   "author": "Liam",
+   "description": "Deep sweep of official refunds, settlements, and compensation you may already be entitled to claim.",
+   "url": "https://x.ai/bot/wIxb391-9pDKoWXQ8xrbD"
+  },
+  {
+   "id": "email-inbox-dtPto3ovCzrcBdSZ-tAv1",
+   "code": "dtPto3ovCzrcBdSZ-tAv1",
+   "name": "Class Act",
+   "author": "Scott Pettineo",
+   "description": "Finds legit class action settlements you qualify for in your Gmail, files honest claims on official administrator sites and sends a weekly report.",
+   "url": "https://x.ai/bot/dtPto3ovCzrcBdSZ-tAv1"
+  },
+  {
+   "id": "email-inbox-hT6HnvlNr-79WAtAQ_9QO",
+   "code": "hT6HnvlNr-79WAtAQ_9QO",
+   "name": "Clearloop",
+   "author": "mr fundman",
+   "description": "GTD-inspired Notion productivity bot: capture commitments by chat, voice, email, Gmail stars, Reminders or X bookmarks, then a morning brief and weekly review.",
+   "url": "https://x.ai/bot/hT6HnvlNr-79WAtAQ_9QO"
+  },
+  {
+   "id": "email-inbox-GbpCPWcJn2Id4ZB3wrHlc",
+   "code": "GbpCPWcJn2Id4ZB3wrHlc",
+   "name": "Clinic",
+   "author": "Jason Paschall",
+   "description": "Does the janitorial work for a desk crowded with assistants, on a fixed Tuesday and Friday round instead of waiting to be asked.",
+   "url": "https://x.ai/bot/GbpCPWcJn2Id4ZB3wrHlc"
+  },
+  {
+   "id": "email-inbox--GucfzHVWJljNVuyWjFSE",
+   "code": "-GucfzHVWJljNVuyWjFSE",
+   "name": "Comms Secretary",
+   "author": "AlexSGabor",
+   "description": "Keeps your Gmail Spam folder clear and sends you a weekday priority digest of revenue and communications mail.",
+   "url": "https://x.ai/bot/-GucfzHVWJljNVuyWjFSE"
+  },
+  {
+   "id": "email-inbox-N-Kgs41b2Lf9vVCkgsTHp",
+   "code": "N-Kgs41b2Lf9vVCkgsTHp",
+   "name": "Communications Desk",
+   "author": "Mitch A Nelson",
+   "description": "A multi-inbox communications desk for educators and operators. Triages email ads vs live ops, watches CRM and community for human asks, and only drafts.",
+   "url": "https://x.ai/bot/N-Kgs41b2Lf9vVCkgsTHp"
+  },
+  {
+   "id": "email-inbox-SbuQZDC2AKKzIU7zRdjka",
+   "code": "SbuQZDC2AKKzIU7zRdjka",
+   "name": "Communications Node",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: reads the firm mailbox (and chat, if connected), classifies each message, files it to the matter…",
+   "url": "https://x.ai/bot/SbuQZDC2AKKzIU7zRdjka"
+  },
+  {
+   "id": "email-inbox-z8B20RR44yHuVDcigXHuW",
+   "code": "z8B20RR44yHuVDcigXHuW",
+   "name": "Contacts Cleaner",
+   "author": "Joe Laughter",
+   "description": "Finds and carefully merges duplicate contacts in Google, iCloud, or Outlook, keeping every phone number and asking before any change.",
+   "url": "https://x.ai/bot/z8B20RR44yHuVDcigXHuW"
+  },
+  {
+   "id": "email-inbox-gcOAZlqYmTRNgGT_2I9oo",
+   "code": "gcOAZlqYmTRNgGT_2I9oo",
+   "name": "Creador de facturas ARCA",
+   "author": "Tomás",
+   "description": "One-time ARCA setup for Argentine sellers, then monthly Factura C PDFs by email.",
+   "url": "https://x.ai/bot/gcOAZlqYmTRNgGT_2I9oo"
+  },
+  {
+   "id": "email-inbox-u2wcsBjv2IBil5fBv37cZ",
+   "code": "u2wcsBjv2IBil5fBv37cZ",
+   "name": "CreditGrok",
+   "author": "Jered Taylor",
+   "description": "Walks AnnualCreditReport.com for free Equifax, Experian, and TransUnion reports, handles email and phone OTP, then saves the PDFs.",
+   "url": "https://x.ai/bot/u2wcsBjv2IBil5fBv37cZ"
+  },
+  {
+   "id": "email-inbox-n5CsjqOHm6yxy00lCBK3T",
+   "code": "n5CsjqOHm6yxy00lCBK3T",
+   "name": "Crossroads",
+   "author": "TREY",
+   "description": "Reach other people’s Crossroads bots via your AgentMail inbox, with your yes on actions.",
+   "url": "https://x.ai/bot/n5CsjqOHm6yxy00lCBK3T"
+  },
+  {
+   "id": "email-inbox-MxVncuoCs0xv2Ag3Tj_bv",
+   "code": "MxVncuoCs0xv2Ag3Tj_bv",
+   "name": "Dagney",
+   "author": "Anthony Diregolo",
+   "description": "Chief Operator for bookings, reservations, errands, and real-world fixes.",
+   "url": "https://x.ai/bot/MxVncuoCs0xv2Ag3Tj_bv"
+  },
+  {
+   "id": "email-inbox-vBIp-NWoTncOR8BQq5jqs",
+   "code": "vBIp-NWoTncOR8BQq5jqs",
+   "name": "Daily Desk",
+   "author": "BramForge .",
+   "description": "Personal admin co-pilot that drafts calendar, notes, and email moves and waits for your OK before anything is sent or changed.",
+   "url": "https://x.ai/bot/vBIp-NWoTncOR8BQq5jqs"
+  },
+  {
+   "id": "email-inbox--M2E0mNqSbuPgYBEtU-Oa",
+   "code": "-M2E0mNqSbuPgYBEtU-Oa",
+   "name": "DataBye",
+   "author": "686f6c61",
+   "description": "Spanish RGPD helper that connects Gmail or Outlook and sends official data-deletion requests in Spain.",
+   "url": "https://x.ai/bot/-M2E0mNqSbuPgYBEtU-Oa"
+  },
+  {
+   "id": "email-inbox-0lzORVii9A5b6W4ly6pEJ",
+   "code": "0lzORVii9A5b6W4ly6pEJ",
+   "name": "Deadline Desk",
+   "author": "Alex",
+   "description": "Paste a receipt or cancel email → prioritized deadlines, ready-to-send letter, and evidence checklist.",
+   "url": "https://x.ai/bot/0lzORVii9A5b6W4ly6pEJ"
+  },
+  {
+   "id": "email-inbox-cDiDHm01Cy9gIoMacSuGL",
+   "code": "cDiDHm01Cy9gIoMacSuGL",
+   "name": "Deep Search Email Scrubber",
+   "author": "Tom Palen",
+   "description": "Give it your email address and it finds where spammers can get it, in data breaches, people-search sites and data brokers.",
+   "url": "https://x.ai/bot/cDiDHm01Cy9gIoMacSuGL"
+  },
+  {
+   "id": "email-inbox-p2aM_rLyjsf79hVMv4tFX",
+   "code": "p2aM_rLyjsf79hVMv4tFX",
+   "name": "Desk Light Signal",
+   "author": "Doug Willbanks",
+   "description": "Turns a smart desk light into an at-a-glance status signal: soft red for unread email, purple for unread Teams, orange…",
+   "url": "https://x.ai/bot/p2aM_rLyjsf79hVMv4tFX"
+  },
+  {
+   "id": "email-inbox-rfAHsaFrz6xHBMtUpxDi5",
+   "code": "rfAHsaFrz6xHBMtUpxDi5",
+   "name": "Dewey",
+   "author": "William Moragne",
+   "description": "Watches Gmail and pings you when a message looks time-sensitive or needs a reply.",
+   "url": "https://x.ai/bot/rfAHsaFrz6xHBMtUpxDi5"
+  },
+  {
+   "id": "email-inbox-bPn4rxqBjPaEnJ2qurHZx",
+   "code": "bPn4rxqBjPaEnJ2qurHZx",
+   "name": "Directories",
+   "author": "Rareș",
+   "description": "Submits your products to free/easy SaaS and AI directories on a weekday cadence. Tracks status, uses a dedicated agent inbox for signups, and stops.",
+   "url": "https://x.ai/bot/bPn4rxqBjPaEnJ2qurHZx"
+  },
+  {
+   "id": "email-inbox-eoGTX8Y6jOoRDBYk5pNe9",
+   "code": "eoGTX8Y6jOoRDBYk5pNe9",
+   "name": "Directory Submitter",
+   "author": "Rami Rashid",
+   "description": "Submits products to free online directories.",
+   "url": "https://x.ai/bot/eoGTX8Y6jOoRDBYk5pNe9"
+  },
+  {
+   "id": "email-inbox-6zJ1yU4dDfAVYFJcy0687",
+   "code": "6zJ1yU4dDfAVYFJcy0687",
+   "name": "Dispatch",
+   "author": "Steve Curry",
+   "description": "Weekday Gmail sweep that drafts replies and never sends.",
+   "url": "https://x.ai/bot/6zJ1yU4dDfAVYFJcy0687"
+  },
+  {
+   "id": "email-inbox-YkmZEZYBk-BqylyQbM3kq",
+   "code": "YkmZEZYBk-BqylyQbM3kq",
+   "name": "Dispatch",
+   "author": "Filippo",
+   "description": "Nightly scan of email, Slack, LinkedIn and X DMs that books the missing calls.",
+   "url": "https://x.ai/bot/YkmZEZYBk-BqylyQbM3kq"
+  },
+  {
+   "id": "email-inbox-XO8uABzMu5WMtRJKwVHp7",
+   "code": "XO8uABzMu5WMtRJKwVHp7",
+   "name": "Dispatcher",
+   "author": "Brett Brownlee",
+   "description": "A dispatcher for lawn care and field-service companies on Service Autopilot.",
+   "url": "https://x.ai/bot/XO8uABzMu5WMtRJKwVHp7"
+  },
+  {
+   "id": "email-inbox-pEUC21J4T7tQ3ORZx8w05",
+   "code": "pEUC21J4T7tQ3ORZx8w05",
+   "name": "Dmarc Specialist",
+   "author": "Brett Evanson",
+   "description": "DMARC specialist for email auth and deliverability — reviews aggregate reports, spots real fails vs gateway noise…",
+   "url": "https://x.ai/bot/pEUC21J4T7tQ3ORZx8w05"
+  },
+  {
+   "id": "email-inbox-91mq1IFljG-EWQhe5kdXe",
+   "code": "91mq1IFljG-EWQhe5kdXe",
+   "name": "Don't Leave Me Hanging",
+   "author": "",
+   "description": "Scans your older Gmail threads for promises and open loops nobody closed, ranks them by deadline and stakes, and drafts a short follow-up for each one.",
+   "url": "https://x.ai/bot/91mq1IFljG-EWQhe5kdXe"
+  },
+  {
+   "id": "email-inbox-3_STyUFj2hVSyC5R-cQGi",
+   "code": "3_STyUFj2hVSyC5R-cQGi",
+   "name": "Dump",
+   "author": "Devin Norris",
+   "description": "A catch-all inbox for your brain. Throw it half-formed ideas, links, screenshots, and to-dos, and it keeps them safe and sorts them for later.",
+   "url": "https://x.ai/bot/3_STyUFj2hVSyC5R-cQGi"
+  },
+  {
+   "id": "email-inbox-PUn74RYv_r3pcSvNkeQbd",
+   "code": "PUn74RYv_r3pcSvNkeQbd",
+   "name": "E-mail Organizer",
+   "author": "Lein",
+   "description": "Dutch Gmail housekeeper that labels by vendor, hides noise, and keeps invoices under Payments.",
+   "url": "https://x.ai/bot/PUn74RYv_r3pcSvNkeQbd"
+  },
+  {
+   "id": "email-inbox-wK-G2hIgm7RXObI7z1P14",
+   "code": "wK-G2hIgm7RXObI7z1P14",
+   "name": "Echo",
+   "author": "6 of 9",
+   "description": "Promise ledger: mines commitments from email and briefs what's due.",
+   "url": "https://x.ai/bot/wK-G2hIgm7RXObI7z1P14"
+  },
+  {
+   "id": "email-inbox-b9XqJ0vKAgzfLn9SVmQDC",
+   "code": "b9XqJ0vKAgzfLn9SVmQDC",
+   "name": "Election Bot",
+   "author": "Russell Jenson",
+   "description": "A politically neutral US election guide. Check your registration, find where and when to vote.",
+   "url": "https://x.ai/bot/b9XqJ0vKAgzfLn9SVmQDC"
+  },
+  {
+   "id": "email-inbox-iLxlC_78W0dUaB7La8T5p",
+   "code": "iLxlC_78W0dUaB7La8T5p",
+   "name": "Emai",
+   "author": "Arthur",
+   "description": "An inbox-triage assistant that clears promos, newsletters, and bulk digests out of your Gmail or webmail every weekday by archiving them. It leaves real.",
+   "url": "https://x.ai/bot/iLxlC_78W0dUaB7La8T5p"
+  },
+  {
+   "id": "email-inbox-BFjaZlR93AzcnDagMhktC",
+   "code": "BFjaZlR93AzcnDagMhktC",
+   "name": "Email",
+   "author": "Andrew",
+   "description": "Protects your attention in email - ruthless triage, drafts the few replies that matter, never sends without your yes.",
+   "url": "https://x.ai/bot/BFjaZlR93AzcnDagMhktC"
+  },
+  {
+   "id": "email-inbox-nra0nIMSc10hIO81ZHaTd",
+   "code": "nra0nIMSc10hIO81ZHaTd",
+   "name": "Email",
+   "author": "Thomas",
+   "description": "Manages your email across connected accounts: summarizes new mail with reply drafts ready for review, watches for scams and phishing.",
+   "url": "https://x.ai/bot/nra0nIMSc10hIO81ZHaTd"
+  },
+  {
+   "id": "email-inbox-VawBY-27z2_YTml0jj7fl",
+   "code": "VawBY-27z2_YTml0jj7fl",
+   "name": "Email Assist",
+   "author": "Lida Wang",
+   "description": "A Gmail assistant that sorts and cleans up your inbox, and alerts you once a day only when something important needs your attention.",
+   "url": "https://x.ai/bot/VawBY-27z2_YTml0jj7fl"
+  },
+  {
+   "id": "email-inbox-tVeYePJvkcwbseg_vtnEt",
+   "code": "tVeYePJvkcwbseg_vtnEt",
+   "name": "Email Assist",
+   "author": "Melvin Vivas",
+   "description": "Watches your inbox on weekday mornings and only pings when something looks important, never sends unless you ask.",
+   "url": "https://x.ai/bot/tVeYePJvkcwbseg_vtnEt"
+  },
+  {
+   "id": "email-inbox-zCjJoM0qTicsdQCla6NJ4",
+   "code": "zCjJoM0qTicsdQCla6NJ4",
+   "name": "Email Assistant",
+   "author": "Ricardo",
+   "description": "Sorts your email every day by importance, unsubscribes you from junk senders, and catches phishing and leads that land in Spam. It never sends a thing.",
+   "url": "https://x.ai/bot/zCjJoM0qTicsdQCla6NJ4"
+  },
+  {
+   "id": "email-inbox-Eh-OqlRNqTiMZcAqhwa5l",
+   "code": "Eh-OqlRNqTiMZcAqhwa5l",
+   "name": "Email Bot",
+   "author": "@degen4lyfe_",
+   "description": "A friendly Gmail assistant that sends you a daily summary of the emails that actually matter and drafts replies for you…",
+   "url": "https://x.ai/bot/Eh-OqlRNqTiMZcAqhwa5l"
+  },
+  {
+   "id": "email-inbox-RiqLdJ0BipnpJEjzadgy_",
+   "code": "RiqLdJ0BipnpJEjzadgy_",
+   "name": "Email Bot",
+   "author": "Colin",
+   "description": "Turns inbox threads into action lists and drafts; never sends until approve.",
+   "url": "https://x.ai/bot/RiqLdJ0BipnpJEjzadgy_"
+  },
+  {
+   "id": "email-inbox-CunRrFqccrsoG7DFDqz5Y",
+   "code": "CunRrFqccrsoG7DFDqz5Y",
+   "name": "Email Bot",
+   "author": "Dave Gingras",
+   "description": "A Gmail-focused assistant that drafts and sends polished emails in your voice, keeps your signature intact, and handles recurring mail busywork like.",
+   "url": "https://x.ai/bot/CunRrFqccrsoG7DFDqz5Y"
+  },
+  {
+   "id": "email-inbox-oSaziY7pPP4PH2ZHts0hS",
+   "code": "oSaziY7pPP4PH2ZHts0hS",
+   "name": "Email Bot Work",
+   "author": "Scott Metcalf",
+   "description": "Work inbox triage that drafts replies, labels and archives safe mail, runs a quiet phishing scout, and never sends without approval. Also handles daily.",
+   "url": "https://x.ai/bot/oSaziY7pPP4PH2ZHts0hS"
+  },
+  {
+   "id": "email-inbox-VG2EVGqav2OeE_HiroQNY",
+   "code": "VG2EVGqav2OeE_HiroQNY",
+   "name": "Email Filter",
+   "author": "AARON MAGA",
+   "description": "Triages your work and personal inboxes, flags what needs a reply, new customer requests, and money or legal mail…",
+   "url": "https://x.ai/bot/VG2EVGqav2OeE_HiroQNY"
+  },
+  {
+   "id": "email-inbox-19fbVFTOUOOj_mEBi2e6f",
+   "code": "19fbVFTOUOOj_mEBi2e6f",
+   "name": "Email Inbox Manager",
+   "author": "Straight_Misses",
+   "description": "Triages Gmail and Outlook: a short morning rundown of bills, deadlines and replies owed, a daily spam and promo cleanup, and reply drafts you send yourself.",
+   "url": "https://x.ai/bot/19fbVFTOUOOj_mEBi2e6f"
+  },
+  {
+   "id": "email-inbox-CtX-cw1UJDjArdr8BrQa0",
+   "code": "CtX-cw1UJDjArdr8BrQa0",
+   "name": "Email Manager",
+   "author": "dfer2dfer",
+   "description": "Review-first Gmail cleanup: numbered trash candidates, Bin learning, unsubscribe queue, and accuracy tracking toward optional high-confidence auto-trash.",
+   "url": "https://x.ai/bot/CtX-cw1UJDjArdr8BrQa0"
+  },
+  {
+   "id": "email-inbox-F4GyQybzyfsBx6iXlwbHk",
+   "code": "F4GyQybzyfsBx6iXlwbHk",
+   "name": "Email Newsletter Daily Report",
+   "author": "",
+   "description": "Point your newsletters and podcast emails at your bot's email address and get one daily report: a quick summary of everything, a short summary of each item, and a 1-10 rating for how original it is.",
+   "url": "https://x.ai/bot/F4GyQybzyfsBx6iXlwbHk"
+  },
+  {
+   "id": "email-inbox-0iuz7X3hVDGJhJIBWTTZ_",
+   "code": "0iuz7X3hVDGJhJIBWTTZ_",
+   "name": "Email Scam Filter",
+   "author": "",
+   "description": "Looks through your Gmail every morning, read-only, and gives each suspicious email a color-coded 0-100 scam score based on the latest alerts from the FTC, FBI, and other trusted sources.",
+   "url": "https://x.ai/bot/0iuz7X3hVDGJhJIBWTTZ_"
+  },
+  {
+   "id": "email-inbox-0gMZE7TJirrVhbEgBJvIO",
+   "code": "0gMZE7TJirrVhbEgBJvIO",
+   "name": "Email confirmer",
+   "author": "null",
+   "description": "GmailとGoogleカレンダーを整理し、朝・昼・夜に受信箱を確認して大事なメールだけを知らせてくれるアシスタントです。返信は下書きまでで、送る前に必ず確認します。.",
+   "url": "https://x.ai/bot/0gMZE7TJirrVhbEgBJvIO"
+  },
+  {
+   "id": "email-inbox-d_d6Q6qExbvd2D3WomIYQ",
+   "code": "d_d6Q6qExbvd2D3WomIYQ",
+   "name": "Encore",
+   "author": "Michael Phippen",
+   "description": "Finds concerts you can actually go to — your artists, similar-vibe shows, priced for your party, filtered by distance…",
+   "url": "https://x.ai/bot/d_d6Q6qExbvd2D3WomIYQ"
+  },
+  {
+   "id": "email-inbox-iSu6JrCL-H5DeY_0_lWH6",
+   "code": "iSu6JrCL-H5DeY_0_lWH6",
+   "name": "End-of-Week Runner",
+   "author": "Keith Avila",
+   "description": "Collects low-priority ideas all week and works through them right before your weekly usage resets so nothing goes to waste.",
+   "url": "https://x.ai/bot/iSu6JrCL-H5DeY_0_lWH6"
+  },
+  {
+   "id": "email-inbox-wtEIGNZ8oipDDVQTDHMPB",
+   "code": "wtEIGNZ8oipDDVQTDHMPB",
+   "name": "Event Producer",
+   "author": "Jenna Nanpei",
+   "description": "Turns your event details into a run of show, guest list, and day-of checklist.",
+   "url": "https://x.ai/bot/wtEIGNZ8oipDDVQTDHMPB"
+  },
+  {
+   "id": "email-inbox-RcAqRF1OcnuD6vraJB8oR",
+   "code": "RcAqRF1OcnuD6vraJB8oR",
+   "name": "Events Outreach",
+   "author": "Anthony Ter-gevondyan",
+   "description": "Sales outreach bot for experiential / private event bookings. Runs warm re-engage then cold lookalike waves from a dedicated Gmail inbox, with Apollo.",
+   "url": "https://x.ai/bot/RcAqRF1OcnuD6vraJB8oR"
+  },
+  {
+   "id": "email-inbox-GMWdsAx2e40XGT9wCYo4Y",
+   "code": "GMWdsAx2e40XGT9wCYo4Y",
+   "name": "Feedback Triage",
+   "author": "Patrick O'Reilly",
+   "description": "Triages support and product feedback from email into bug, feature, and roadmap drafts. Approve Inbox gates every ticket and customer reply; sinks are.",
+   "url": "https://x.ai/bot/GMWdsAx2e40XGT9wCYo4Y"
+  },
+  {
+   "id": "email-inbox-oYPeTr7CaiOmiOby2ICxo",
+   "code": "oYPeTr7CaiOmiOby2ICxo",
+   "name": "File Shepherd · File & Media Curator",
+   "author": "Ram",
+   "description": "A file and media curator that herds scattered downloads, phone offloads, screenshots, and external/cloud drives into an organized archive—hu.",
+   "url": "https://x.ai/bot/oYPeTr7CaiOmiOby2ICxo"
+  },
+  {
+   "id": "email-inbox-CEtFUY1_kkn78AJSNINHI",
+   "code": "CEtFUY1_kkn78AJSNINHI",
+   "name": "Fixer",
+   "author": "Liam",
+   "description": "Take annoying loose-end problems you give it, investigate fully, and get them as close to resolved as possible before…",
+   "url": "https://x.ai/bot/CEtFUY1_kkn78AJSNINHI"
+  },
+  {
+   "id": "email-inbox-BAYUUoTHAtiILmNu1jM3y",
+   "code": "BAYUUoTHAtiILmNu1jM3y",
+   "name": "Fleet Factory",
+   "author": "Drew",
+   "description": "Weekday ops finish-line for a multi-bot desk: calendar, inbox, and open work.",
+   "url": "https://x.ai/bot/BAYUUoTHAtiILmNu1jM3y"
+  },
+  {
+   "id": "email-inbox-60mPBM7KOL8L6tErvGcs0",
+   "code": "60mPBM7KOL8L6tErvGcs0",
+   "name": "Follow-Up Closer",
+   "author": "AdventureNLearn Main",
+   "description": "Find every reply you owe and every answer you're waiting on, with short nudges drafted and ready.",
+   "url": "https://x.ai/bot/60mPBM7KOL8L6tErvGcs0"
+  },
+  {
+   "id": "email-inbox-1xiEqixv9rH6QWiL09AnO",
+   "code": "1xiEqixv9rH6QWiL09AnO",
+   "name": "Follow-Up Email Writer",
+   "author": "Brad Smith",
+   "description": "Tell it about your business and it writes a 2-week plain-text follow-up email series, 9-word emails for cold leads and a 24-touch follow-up plan.",
+   "url": "https://x.ai/bot/1xiEqixv9rH6QWiL09AnO"
+  },
+  {
+   "id": "email-inbox-ScfBcREQMQex9JUf2Se63",
+   "code": "ScfBcREQMQex9JUf2Se63",
+   "name": "Foundry",
+   "author": "Gareth Tipene",
+   "description": "Interviews you about a new venture and writes the operating files.",
+   "url": "https://x.ai/bot/ScfBcREQMQex9JUf2Se63"
+  },
+  {
+   "id": "email-inbox-6bxvMG6iPzU7Pok2iWjp9",
+   "code": "6bxvMG6iPzU7Pok2iWjp9",
+   "name": "Fractional Inbox Triage",
+   "author": "#CarbeneAI",
+   "description": "Triages a busy founder or CISO inbox: drafts polite vendor declines, flags Director+ and personal threads, and summarizes what needs a human.",
+   "url": "https://x.ai/bot/6bxvMG6iPzU7Pok2iWjp9"
+  },
+  {
+   "id": "email-inbox-ml0GdUkH0A-e7WwPcG6Jp",
+   "code": "ml0GdUkH0A-e7WwPcG6Jp",
+   "name": "GLP-1 Buddy",
+   "author": "Tina Bean",
+   "description": "Free weekly-shot buddy for Ozempic, Wegovy, Mounjaro and Zepbound (semaglutide and tirzepatide).",
+   "url": "https://x.ai/bot/ml0GdUkH0A-e7WwPcG6Jp"
+  },
+  {
+   "id": "email-inbox-z5UAhMwtF2ReWHMZP7Fsb",
+   "code": "z5UAhMwtF2ReWHMZP7Fsb",
+   "name": "Gamel",
+   "author": "Anthony Catanzaro",
+   "description": "An inbox-cleanup bot that unsubscribes marketing mail, keeps receipts and tracking you care about, and runs staggered morning sweeps for Gmail and Yahoo.",
+   "url": "https://x.ai/bot/z5UAhMwtF2ReWHMZP7Fsb"
+  },
+  {
+   "id": "email-inbox-T5FSfM91XA6gMgh2rX56K",
+   "code": "T5FSfM91XA6gMgh2rX56K",
+   "name": "Gatekeeper",
+   "author": "Liam",
+   "description": "Make the user confront what they would have to delay, drop, or sacrifice when they add something new.",
+   "url": "https://x.ai/bot/T5FSfM91XA6gMgh2rX56K"
+  },
+  {
+   "id": "email-inbox-xgGUjTBBTk1bKxxbxNsCW",
+   "code": "xgGUjTBBTk1bKxxbxNsCW",
+   "name": "Gizmo Benefits Helper",
+   "author": "South Dallas Foodie",
+   "description": "A patient helper that walks you through applying for SNAP, Medicaid, CHIP, and other benefits.",
+   "url": "https://x.ai/bot/xgGUjTBBTk1bKxxbxNsCW"
+  },
+  {
+   "id": "email-inbox-ApK8jWrzfQJP9LZOjNkSp",
+   "code": "ApK8jWrzfQJP9LZOjNkSp",
+   "name": "Gmail",
+   "author": "Carolina Dill",
+   "description": "Clears and files your Gmail on request: trash-only, trash+filter, or file-to-label, plus a ranked list of the senders…",
+   "url": "https://x.ai/bot/ApK8jWrzfQJP9LZOjNkSp"
+  },
+  {
+   "id": "email-inbox-4Kert6xnfaArPgZmyJi5M",
+   "code": "4Kert6xnfaArPgZmyJi5M",
+   "name": "Gmail Bot",
+   "author": "Aseem",
+   "description": "Weekday morning unread digests, drafts in your voice, triage labels/trash.",
+   "url": "https://x.ai/bot/4Kert6xnfaArPgZmyJi5M"
+  },
+  {
+   "id": "email-inbox-5wT0W9m-WHd6jNnH9GADM",
+   "code": "5wT0W9m-WHd6jNnH9GADM",
+   "name": "Gmail to Drive Archiver",
+   "author": "@ecoay",
+   "description": "Frees up Gmail storage by saving your biggest emails to Google Drive as a Google Doc plus the original attachments, neatly filed by sender.",
+   "url": "https://x.ai/bot/5wT0W9m-WHd6jNnH9GADM"
+  },
+  {
+   "id": "email-inbox-pu1Zx7vvSd55f0iU0sAVT",
+   "code": "pu1Zx7vvSd55f0iU0sAVT",
+   "name": "Gmail朝の仕分け",
+   "author": "UNSER",
+   "description": "Sorts your Gmail every morning and suggests today's to-dos in priority order, in Japanese, as a report or as input for your main bot.",
+   "url": "https://x.ai/bot/pu1Zx7vvSd55f0iU0sAVT"
+  },
+  {
+   "id": "email-inbox-tttQVA2UtlNwCzITNCIr0",
+   "code": "tttQVA2UtlNwCzITNCIr0",
+   "name": "Google Agent",
+   "author": "Ryan",
+   "description": "A read-first operator for Gmail, Drive and Calendar.",
+   "url": "https://x.ai/bot/tttQVA2UtlNwCzITNCIr0"
+  },
+  {
+   "id": "email-inbox-r1NaMrcq8hCJmCrX3M9dN",
+   "code": "r1NaMrcq8hCJmCrX3M9dN",
+   "name": "Gravy",
+   "author": "Oleksandr Syzov",
+   "description": "Finds unfinished work on a computer and in Drive or email, offers a short list to pick from, then helps finish…",
+   "url": "https://x.ai/bot/r1NaMrcq8hCJmCrX3M9dN"
+  },
+  {
+   "id": "email-inbox-TVQU-1m-jBvrdx2pnXtqH",
+   "code": "TVQU-1m-jBvrdx2pnXtqH",
+   "name": "Haggle Bot",
+   "author": "Scott Pettineo",
+   "description": "Lowers your recurring bills: finds what you pay in your email, researches better local prices and writes honest negotiation plans. Contacts no one without OK.",
+   "url": "https://x.ai/bot/TVQU-1m-jBvrdx2pnXtqH"
+  },
+  {
+   "id": "email-inbox-qRmySr_5609PmcJZ_3v8a",
+   "code": "qRmySr_5609PmcJZ_3v8a",
+   "name": "Handle Grab",
+   "author": "Bud Johnson",
+   "description": "Reserves your username across dozens of social, creator and business sites, signing up with its own email so your inbox stays clean.",
+   "url": "https://x.ai/bot/qRmySr_5609PmcJZ_3v8a"
+  },
+  {
+   "id": "email-inbox-wXaXn5rj0pJIMzzonyXsl",
+   "code": "wXaXn5rj0pJIMzzonyXsl",
+   "name": "Handoff",
+   "author": "Liam",
+   "description": "Hires real people through RentAHuman or Fiverr to get things done, gets your OK on cost, and brings the result back.",
+   "url": "https://x.ai/bot/wXaXn5rj0pJIMzzonyXsl"
+  },
+  {
+   "id": "email-inbox-A6er8L662aOk-vYUrRY9_",
+   "code": "A6er8L662aOk-vYUrRY9_",
+   "name": "Harper",
+   "author": "Travis",
+   "description": "An executive assistant for email, calendar, and texting. It triages your inbox, schedules people, protects deep-work time.",
+   "url": "https://x.ai/bot/A6er8L662aOk-vYUrRY9_"
+  },
+  {
+   "id": "email-inbox-1hD0sdaD2gCbQ927sIhft",
+   "code": "1hD0sdaD2gCbQ927sIhft",
+   "name": "Hedwig",
+   "author": "satadru",
+   "description": "Nightly planning owl: Gmail + Slack open loops, careful inbox cleanup, and a clear look at tomorrow plus the week ahead…",
+   "url": "https://x.ai/bot/1hD0sdaD2gCbQ927sIhft"
+  },
+  {
+   "id": "email-inbox-sIoeE87fILU5CzptPF29K",
+   "code": "sIoeE87fILU5CzptPF29K",
+   "name": "Holly Helpdesk",
+   "author": "Claire",
+   "description": "Frontline customer support. Owns the help desk and support inbox: tickets, how-tos, billing lookups, and refunds…",
+   "url": "https://x.ai/bot/sIoeE87fILU5CzptPF29K"
+  },
+  {
+   "id": "email-inbox-I7HbeXWOaffbgdwGAd-d2",
+   "code": "I7HbeXWOaffbgdwGAd-d2",
+   "name": "Homepage Advisor · Shopify Merchandising",
+   "author": "The Margin of Safety",
+   "description": "Builds homepage banners, slides, and featured merchandising on an unpublished Shopify theme duplicate, then copies…",
+   "url": "https://x.ai/bot/I7HbeXWOaffbgdwGAd-d2"
+  },
+  {
+   "id": "email-inbox-X5DmTZnZBPmZW7IdxBRZU",
+   "code": "X5DmTZnZBPmZW7IdxBRZU",
+   "name": "Honest Outreach",
+   "author": "Caroline Massey",
+   "description": "Writes personalized outreach emails to local professionals where every detail is true and sourced. You review and send every email yourself.",
+   "url": "https://x.ai/bot/X5DmTZnZBPmZW7IdxBRZU"
+  },
+  {
+   "id": "email-inbox-_EuPMIVricrP_kJ1ioS7h",
+   "code": "_EuPMIVricrP_kJ1ioS7h",
+   "name": "Hugo Sánchez",
+   "author": "Enrique",
+   "description": "Loyal, proactive Gmail and Google Calendar assistant: triages your inbox, adds confirmations to your calendar, catches conflicts, sends a short morning brief.",
+   "url": "https://x.ai/bot/_EuPMIVricrP_kJ1ioS7h"
+  },
+  {
+   "id": "email-inbox-JZAccYtlRFvDSU2CnMnkZ",
+   "code": "JZAccYtlRFvDSU2CnMnkZ",
+   "name": "Human Copywriter",
+   "author": "Massimo De Luisa",
+   "description": "A human-voice rewrite desk for email, posts, blogs, DMs, landing-page bodies, and PR.",
+   "url": "https://x.ai/bot/JZAccYtlRFvDSU2CnMnkZ"
+  },
+  {
+   "id": "email-inbox-yH2UttxbMwMugweZrigHT",
+   "code": "yH2UttxbMwMugweZrigHT",
+   "name": "Inbot",
+   "author": "Matthew Silberman",
+   "description": "Inbox-zero receive bot. On setup it asks you to connect every inbox you actually use (email, Slack or Teams, calendars…",
+   "url": "https://x.ai/bot/yH2UttxbMwMugweZrigHT"
+  },
+  {
+   "id": "email-inbox-LMz1PBJdEFChVoW5ZsO1y",
+   "code": "LMz1PBJdEFChVoW5ZsO1y",
+   "name": "Inbox",
+   "author": "Jaden Mathew",
+   "description": "Turns your Grok Bot inbox into a clean, dark, mobile-friendly HTML dashboard with search, filters, and needs-reply counts.",
+   "url": "https://x.ai/bot/LMz1PBJdEFChVoW5ZsO1y"
+  },
+  {
+   "id": "email-inbox-eVTdsEMUFrKpeF81qbA5J",
+   "code": "eVTdsEMUFrKpeF81qbA5J",
+   "name": "Inbox",
+   "author": "Amit Gandhi",
+   "description": "Gives you a dedicated email address and shows every email that arrives as a clean card in chat, with a summary and whether it needs you.",
+   "url": "https://x.ai/bot/eVTdsEMUFrKpeF81qbA5J"
+  },
+  {
+   "id": "email-inbox-o0e3nOxkmheYvc-U4pDF8",
+   "code": "o0e3nOxkmheYvc-U4pDF8",
+   "name": "Inbox",
+   "author": "Mohamed Foda",
+   "description": "Triages your email, sends each item that needs action to the bot that owns that topic, and archives clear promo. Never trashes, never sends.",
+   "url": "https://x.ai/bot/o0e3nOxkmheYvc-U4pDF8"
+  },
+  {
+   "id": "email-inbox--t-XZjCcLbbbx-hz7HDon",
+   "code": "-t-XZjCcLbbbx-hz7HDon",
+   "name": "Inbox",
+   "author": "Josh",
+   "description": "Pings only for mail needing action today; everything else lands in a digest.",
+   "url": "https://x.ai/bot/-t-XZjCcLbbbx-hz7HDon"
+  },
+  {
+   "id": "email-inbox-SFYFHDNLPUwKL2fSACwcH",
+   "code": "SFYFHDNLPUwKL2fSACwcH",
+   "name": "Inbox",
+   "author": "Coconut",
+   "description": "Weekday GTD triage for an Obsidian inbox that clarifies overnight captures into actions, waiting-fors, and calendar.",
+   "url": "https://x.ai/bot/SFYFHDNLPUwKL2fSACwcH"
+  },
+  {
+   "id": "email-inbox--t-xzjcclbbbx-hz7hdon",
+   "code": "-t-xzjcclbbbx-hz7hdon",
+   "name": "Inbox",
+   "author": "Josh Archer",
+   "description": "A quiet email watcher that only pings you for mail that needs action today and batches everything else into a digest.",
+   "url": "https://x.ai/bot/-t-xzjcclbbbx-hz7hdon"
+  },
+  {
+   "id": "email-inbox-GIwIK7b9pNsqI-J2qS4a-",
+   "code": "GIwIK7b9pNsqI-J2qS4a-",
+   "name": "Inbox Bot",
+   "author": "@orpheuskaze",
+   "description": "Keeps Gmail clean and safe with a weekly digest of important mail, a junk and promo cleanup list, and phishing warnings. Nothing moves without your approval.",
+   "url": "https://x.ai/bot/GIwIK7b9pNsqI-J2qS4a-"
+  },
+  {
+   "id": "email-inbox-6uqwQQpLVpsSYJPG2QIEp",
+   "code": "6uqwQQpLVpsSYJPG2QIEp",
+   "name": "Inbox Cleaner",
+   "author": "Jamie M.K.",
+   "description": "Cleans Gmail inboxes: scans promotions, unsubscribes when possible, trashes junk, and files keepers into folders.",
+   "url": "https://x.ai/bot/6uqwQQpLVpsSYJPG2QIEp"
+  },
+  {
+   "id": "email-inbox-Yb5t2YL0G2Y7NJMxeFV96",
+   "code": "Yb5t2YL0G2Y7NJMxeFV96",
+   "name": "Inbox Cleanup",
+   "author": "Tan",
+   "description": "Cleans up Gmail and Outlook: unsubscribes, flattens folders, builds sorting rules, reviews junk, flags scams, and keeps it clean with a weekly sweep.",
+   "url": "https://x.ai/bot/Yb5t2YL0G2Y7NJMxeFV96"
+  },
+  {
+   "id": "email-inbox-wcnr8DAwkk-zjDR8FMqP-",
+   "code": "wcnr8DAwkk-zjDR8FMqP-",
+   "name": "Inbox Drop",
+   "author": "Avid",
+   "description": "A personal webhook inbox. Send links, text, and notes from an iPhone Shortcut, your Mac, or a one-click clipper on X…",
+   "url": "https://x.ai/bot/wcnr8DAwkk-zjDR8FMqP-"
+  },
+  {
+   "id": "email-inbox-gJ3AERRL_vWOhTBgKm-2G",
+   "code": "gJ3AERRL_vWOhTBgKm-2G",
+   "name": "Inbox First Pass",
+   "author": "Mike Mosley",
+   "description": "Weekday morning mail triage — urgent and reply-needed threads with one-line draft replies.",
+   "url": "https://x.ai/bot/gJ3AERRL_vWOhTBgKm-2G"
+  },
+  {
+   "id": "email-inbox-7oq-3YkLd8kQgN7gsFd1o",
+   "code": "7oq-3YkLd8kQgN7gsFd1o",
+   "name": "Inbox Gate",
+   "author": "BramForge",
+   "description": "Mail triage that classifies and drafts replies; read-only first , never sends or deletes until you say so.",
+   "url": "https://x.ai/bot/7oq-3YkLd8kQgN7gsFd1o"
+  },
+  {
+   "id": "email-inbox-lsXZ6NdEqAdCHe8z88QAl",
+   "code": "lsXZ6NdEqAdCHe8z88QAl",
+   "name": "Inbox Injection Guard",
+   "author": "Thuong P. Nguyen",
+   "description": "Screens your email for hidden instructions aimed at AI assistants, like white text, zero-width characters and \"ignore previous instructions\" lines.",
+   "url": "https://x.ai/bot/lsXZ6NdEqAdCHe8z88QAl"
+  },
+  {
+   "id": "email-inbox-kLp7FHjgMyVTU9Ez64n-E",
+   "code": "kLp7FHjgMyVTU9Ez64n-E",
+   "name": "Inbox Injection Guard",
+   "author": "Helmet Required",
+   "description": "Screens your email for hidden instructions aimed at AI assistants, like white text, zero-width characters and \"ignore…",
+   "url": "https://x.ai/bot/kLp7FHjgMyVTU9Ez64n-E"
+  },
+  {
+   "id": "email-inbox-tdZaBxIG0zAg1LnrJMZ03",
+   "code": "tdZaBxIG0zAg1LnrJMZ03",
+   "name": "Inbox Janitor",
+   "author": "Jennifer",
+   "description": "Deep-cleans a buried Gmail or Outlook inbox to zero in rounds you approve: audits the backlog, then proposes bulk archives and folder or label rules.",
+   "url": "https://x.ai/bot/tdZaBxIG0zAg1LnrJMZ03"
+  },
+  {
+   "id": "email-inbox-VPr1VsoKJ5XG_T3hITN0v",
+   "code": "VPr1VsoKJ5XG_T3hITN0v",
+   "name": "Inbox Manager",
+   "author": "Gaurav Singh",
+   "description": "Keeps your Gmail tidy: each week it finds the noisiest senders, suggests unsubscribe, file, archive or keep, and only acts on what you approve.",
+   "url": "https://x.ai/bot/VPr1VsoKJ5XG_T3hITN0v"
+  },
+  {
+   "id": "email-inbox-s4f048c7b7da9e010c2c3",
+   "code": "s4f048c7b7da9e010c2c3",
+   "name": "Inbox Manager",
+   "author": "SpaceX",
+   "description": "Triages the inbox into categories, surfaces urgent and blocked threads, and drafts replies. Every send waits for you.",
+   "url": "https://x.ai/bot/s4f048c7b7da9e010c2c3"
+  },
+  {
+   "id": "email-inbox-wYp3q6RVWjQ3BYjQVh5ff",
+   "code": "wYp3q6RVWjQ3BYjQVh5ff",
+   "name": "Inbox Pilot",
+   "author": "Jennifer",
+   "description": "Your personal email manager for Gmail or Outlook: a morning inbox digest on the days you choose, sorted into Needs You, Waiting On and FYI.",
+   "url": "https://x.ai/bot/wYp3q6RVWjQ3BYjQVh5ff"
+  },
+  {
+   "id": "email-inbox-fKxBPN7PodohsFgf6sjGC",
+   "code": "fKxBPN7PodohsFgf6sjGC",
+   "name": "Inbox Router",
+   "author": "Eric",
+   "description": "Routes your inboxes to the right owner and stops. No customer replies from this seat — triage, hold, escalate.",
+   "url": "https://x.ai/bot/fKxBPN7PodohsFgf6sjGC"
+  },
+  {
+   "id": "email-inbox-bxO47jo7w93LXNsBd7gGI",
+   "code": "bxO47jo7w93LXNsBd7gGI",
+   "name": "Inbox Scout",
+   "author": "Javier Candiotti",
+   "description": "Morning unread Gmail brief grouped into Needs me, Can wait, and Noise; drafts only.",
+   "url": "https://x.ai/bot/bxO47jo7w93LXNsBd7gGI"
+  },
+  {
+   "id": "email-inbox-AXZqtG9WTTh6uF9jGcZuH",
+   "code": "AXZqtG9WTTh6uF9jGcZuH",
+   "name": "Inbox Sentinel",
+   "author": "Robert",
+   "description": "Inbox triage assistant that classifies mail as Actionable, Junk, Spam, or Phishing, quarantines the noisy and dangerous stuff.",
+   "url": "https://x.ai/bot/AXZqtG9WTTh6uF9jGcZuH"
+  },
+  {
+   "id": "email-inbox-hEwQojsrmkKXl_lk0BpF9",
+   "code": "hEwQojsrmkKXl_lk0BpF9",
+   "name": "Inbox Sweep",
+   "author": "Hudson S.",
+   "description": "A Gmail hygiene bot that runs a few times a week, listing spam to mark, noisy promos to archive and phishing to watch, and asks before changing anything.",
+   "url": "https://x.ai/bot/hEwQojsrmkKXl_lk0BpF9"
+  },
+  {
+   "id": "email-inbox-9ZUmJ1nt1rtKz0jn_LXCU",
+   "code": "9ZUmJ1nt1rtKz0jn_LXCU",
+   "name": "Inbox Tidy",
+   "author": "Dayyán",
+   "description": "Works with Gmail, Outlook or any connected mailbox: learns which senders you ignore, safely unsubscribes, and files the ones you only skim.",
+   "url": "https://x.ai/bot/9ZUmJ1nt1rtKz0jn_LXCU"
+  },
+  {
+   "id": "email-inbox-lDp666Fm-QgyBGqK7ee4l",
+   "code": "lDp666Fm-QgyBGqK7ee4l",
+   "name": "Inbox Triage",
+   "author": "Cristopher Guido",
+   "description": "A weekday email assistant for small business owners and freelancers.",
+   "url": "https://x.ai/bot/lDp666Fm-QgyBGqK7ee4l"
+  },
+  {
+   "id": "email-inbox-RBK79O-MXl4ZRHyuJYag6",
+   "code": "RBK79O-MXl4ZRHyuJYag6",
+   "name": "Inbox Triage",
+   "author": "Markus Johnson",
+   "description": "Point it at your inbox and get a clear list of what needs a reply, what's waiting, and what can go, plus short reply…",
+   "url": "https://x.ai/bot/RBK79O-MXl4ZRHyuJYag6"
+  },
+  {
+   "id": "email-inbox-lJlaMyB4w52lMUAPd2xFT",
+   "code": "lJlaMyB4w52lMUAPd2xFT",
+   "name": "Inbox Triage",
+   "author": "Steve Kelly",
+   "description": "Keeps your Gmail Primary tab clean every day.",
+   "url": "https://x.ai/bot/lJlaMyB4w52lMUAPd2xFT"
+  },
+  {
+   "id": "email-inbox-_Rk119iD1k18cSxDoV8CC",
+   "code": "_Rk119iD1k18cSxDoV8CC",
+   "name": "Inbox Triage",
+   "author": "Brian",
+   "description": "A morning email assistant that sorts Gmail, iCloud, or Outlook into what needs you today, clears obvious spam, and drafts replies without ever sending…",
+   "url": "https://x.ai/bot/_Rk119iD1k18cSxDoV8CC"
+  },
+  {
+   "id": "email-inbox-4O78A68DNAm84UP4GK3QE",
+   "code": "4O78A68DNAm84UP4GK3QE",
+   "name": "Inbox Triage",
+   "author": "Calix Build",
+   "description": "Sorts Gmail or Outlook into Act now, Reply soon, FYI and Noise and sends one short list. Read-only and draft-only; quiet when nothing matters.",
+   "url": "https://x.ai/bot/4O78A68DNAm84UP4GK3QE"
+  },
+  {
+   "id": "email-inbox-Yslmr9n5SfM4EalIzUFYt",
+   "code": "Yslmr9n5SfM4EalIzUFYt",
+   "name": "Inbox Triage",
+   "author": "Thomas Ferriere",
+   "description": "Turns a connected inbox into a daily Reply / Archive / Escalate action board. Drafts replies in your voice and never sends without your approval.",
+   "url": "https://x.ai/bot/Yslmr9n5SfM4EalIzUFYt"
+  },
+  {
+   "id": "email-inbox-5P3dWJ2NcYHX7SIlOs6lt",
+   "code": "5P3dWJ2NcYHX7SIlOs6lt",
+   "name": "Inbox Triage",
+   "author": "Chris Hadges",
+   "description": "Sorts your Gmail into needs-reply, waiting, FYI, and unsubscribe candidates.",
+   "url": "https://x.ai/bot/5P3dWJ2NcYHX7SIlOs6lt"
+  },
+  {
+   "id": "email-inbox-soRR-1IslCTX7U4YiBg3Y",
+   "code": "soRR-1IslCTX7U4YiBg3Y",
+   "name": "Inbox Triage Desk",
+   "author": "Cypher Monkey",
+   "description": "Sorts your messages into Reply, Delegate, Schedule, and FYI lanes with quoted asks, deadlines, and short reply drafts…",
+   "url": "https://x.ai/bot/soRR-1IslCTX7U4YiBg3Y"
+  },
+  {
+   "id": "email-inbox-sorr-1islctx7u4yibg3y",
+   "code": "sorr-1islctx7u4yibg3y",
+   "name": "Inbox Triage Desk",
+   "author": "Cypher",
+   "description": "Sorts your messages into Reply, Delegate, Schedule, and FYI lanes with quoted asks, deadlines, and short reply drafts.",
+   "url": "https://x.ai/bot/sorr-1islctx7u4yibg3y"
+  },
+  {
+   "id": "email-inbox-dfo7Cc1-VNviSdOGJyA7r",
+   "code": "dfo7Cc1-VNviSdOGJyA7r",
+   "name": "Inbox Viewer",
+   "author": "Sushant K",
+   "description": "A Gmail-style inbox for your Grok Bot's email, styled like Grok Bot in dark and light mode, that opens on your phone or computer over Tailscale.",
+   "url": "https://x.ai/bot/dfo7Cc1-VNviSdOGJyA7r"
+  },
+  {
+   "id": "email-inbox-9UjZlzLTiCHz5iPNilWMd",
+   "code": "9UjZlzLTiCHz5iPNilWMd",
+   "name": "Inbox Zero",
+   "author": "Ashley Schendel",
+   "description": "Email operations assistant: triages your whole inbox, drafts replies, tracks follow-ups and deadlines, sends a daily brief. Changes nothing without approval.",
+   "url": "https://x.ai/bot/9UjZlzLTiCHz5iPNilWMd"
+  },
+  {
+   "id": "email-inbox-h5i1TCuYEL2mVtMbQtW98",
+   "code": "h5i1TCuYEL2mVtMbQtW98",
+   "name": "Inbox Zero",
+   "author": "LD Acosta",
+   "description": "Weekday Gmail inbox-zero assistant. Archives noise, files notes, receipts, and docs, and leaves only action mail unread.",
+   "url": "https://x.ai/bot/h5i1TCuYEL2mVtMbQtW98"
+  },
+  {
+   "id": "email-inbox-u1pK59b5PDjThmgM73UUa",
+   "code": "u1pK59b5PDjThmgM73UUa",
+   "name": "Inbox Zero Assistant",
+   "author": "Sultanov",
+   "description": "An inbox-zero helper that organizes Gmail, flags messages that need a reply, drafts responses, and prepares bulk-unsubscribe actions.",
+   "url": "https://x.ai/bot/u1pK59b5PDjThmgM73UUa"
+  },
+  {
+   "id": "email-inbox-__kznux7HvZOfncVHWIVy",
+   "code": "__kznux7HvZOfncVHWIVy",
+   "name": "Inbox Zero Assistant — Your Morning Email Briefing",
+   "author": "News Gurus",
+   "description": "Keeps a busy owner's inbox under control with a short morning briefing: what needs you, what's drafted in your voice, and what's filed away.",
+   "url": "https://x.ai/bot/__kznux7HvZOfncVHWIVy"
+  },
+  {
+   "id": "email-inbox--hFhR6u_HxM1mlGX92HK9",
+   "code": "-hFhR6u_HxM1mlGX92HK9",
+   "name": "Inbox Zero Chief of Staff",
+   "author": "Moritz Bierling",
+   "description": "Gets your inbox to zero and keeps it there: daily triage, a digest of what needs you, and reply drafts you approve before anything is sent.",
+   "url": "https://x.ai/bot/-hFhR6u_HxM1mlGX92HK9"
+  },
+  {
+   "id": "email-inbox-376wiH0xV3KLPECgVu0Ca",
+   "code": "376wiH0xV3KLPECgVu0Ca",
+   "name": "Inbox and Personal Admin",
+   "author": "James",
+   "description": "A calm assistant that sorts your email, tracks bills and deadlines, flags scams, and drafts replies for your approval. Never sends or deletes.",
+   "url": "https://x.ai/bot/376wiH0xV3KLPECgVu0Ca"
+  },
+  {
+   "id": "email-inbox-VZBcSWV81X9BDXGpcmrNM",
+   "code": "VZBcSWV81X9BDXGpcmrNM",
+   "name": "Inbox to Income",
+   "author": "John",
+   "description": "Keeps your inbox small and surfaces money-making and money-saving moves in your mail and calendar.",
+   "url": "https://x.ai/bot/VZBcSWV81X9BDXGpcmrNM"
+  },
+  {
+   "id": "email-inbox-wMvNBAzsCA94-OsRIj7a8",
+   "code": "wMvNBAzsCA94-OsRIj7a8",
+   "name": "Independent Author Hub",
+   "author": "ladybarrelmaker",
+   "description": "Ops hub for indie authors coordinating site, newsletter, marketing calendar, and reader-lifecycle bots.",
+   "url": "https://x.ai/bot/wMvNBAzsCA94-OsRIj7a8"
+  },
+  {
+   "id": "email-inbox-fEF3XuiyCp32zSG0FkEDR",
+   "code": "fEF3XuiyCp32zSG0FkEDR",
+   "name": "Iris",
+   "author": "sandra pinilla",
+   "description": "Your weekday command center for email and calendar: sharp morning digests, conflict spotting, must-not-miss reminders, and optional phone nudges via.",
+   "url": "https://x.ai/bot/fEF3XuiyCp32zSG0FkEDR"
+  },
+  {
+   "id": "email-inbox-IvGrljJfOW6biGe_8eOJ0",
+   "code": "IvGrljJfOW6biGe_8eOJ0",
+   "name": "LaneKeep",
+   "author": "D'Artagnan",
+   "description": "File layer for a multi-bot swarm on one shared drive. Owns inbox, routing, leases, and ledger so specialists stop colliding and copying payloads.",
+   "url": "https://x.ai/bot/IvGrljJfOW6biGe_8eOJ0"
+  },
+  {
+   "id": "email-inbox-L05AlnkleKctIme127f8n",
+   "code": "L05AlnkleKctIme127f8n",
+   "name": "Leak",
+   "author": "Mikel",
+   "description": "Finds forgotten subscriptions in your email, shows what they cost each month, and drafts cancel messages you approve.",
+   "url": "https://x.ai/bot/L05AlnkleKctIme127f8n"
+  },
+  {
+   "id": "email-inbox-H2568vK9f4ZO_zlRgidOw",
+   "code": "H2568vK9f4ZO_zlRgidOw",
+   "name": "Leak Ledger",
+   "author": "Aydin Ayanzadeh",
+   "description": "Finds forgotten subscriptions and bill leaks in your email, drafts cancel or negotiate messages, and tracks cash you get back without auto-sending.",
+   "url": "https://x.ai/bot/H2568vK9f4ZO_zlRgidOw"
+  },
+  {
+   "id": "email-inbox-5ARm6x7aL6_5N1ETWr_sT",
+   "code": "5ARm6x7aL6_5N1ETWr_sT",
+   "name": "Ledger",
+   "author": "Bryan Hefner",
+   "description": "Turns Gmail and Drive receipts into a spend ledger, Monday digest, and keep/cancel/negotiate list.",
+   "url": "https://x.ai/bot/5ARm6x7aL6_5N1ETWr_sT"
+  },
+  {
+   "id": "email-inbox-KTMYJjzan8cuclz2lv1Rz",
+   "code": "KTMYJjzan8cuclz2lv1Rz",
+   "name": "Little x",
+   "author": "DonaldMoor91672",
+   "description": "Drives X and document tasks by email while you are away.",
+   "url": "https://x.ai/bot/KTMYJjzan8cuclz2lv1Rz"
+  },
+  {
+   "id": "email-inbox-Y2A-wqZnS45laQ_OrLaKK",
+   "code": "Y2A-wqZnS45laQ_OrLaKK",
+   "name": "Local Meetup Finder",
+   "author": "Coconut Chris",
+   "description": "Answer a few questions and it sends the best things happening near your ZIP each day, plus reminders before events you care about.",
+   "url": "https://x.ai/bot/Y2A-wqZnS45laQ_OrLaKK"
+  },
+  {
+   "id": "email-inbox-61VJpKKuiAnaJAZakWjdH",
+   "code": "61VJpKKuiAnaJAZakWjdH",
+   "name": "Login Ledger",
+   "author": "Nicholas Bunn",
+   "description": "Keeps an index of which email or username you signed up with for every online account, built from your inbox. Never stores passwords.",
+   "url": "https://x.ai/bot/61VJpKKuiAnaJAZakWjdH"
+  },
+  {
+   "id": "email-inbox-N53am-rfjXPCA2UJ91kEG",
+   "code": "N53am-rfjXPCA2UJ91kEG",
+   "name": "Longhand",
+   "author": "LAW",
+   "description": "A governed personal-ops bot: inbox triage, watches, nightly memory commit, Sunday audit for config drift. Memory lives in plain files you can read and diff.",
+   "url": "https://x.ai/bot/N53am-rfjXPCA2UJ91kEG"
+  },
+  {
+   "id": "email-inbox-gUAx3NQOBEeDB7f6sYbso",
+   "code": "gUAx3NQOBEeDB7f6sYbso",
+   "name": "Loop Closer",
+   "author": "Jeremy Mahoney",
+   "description": "Keeps one running list of your open loops (to-dos, renewals, follow-ups, waiting-ons) and sends a weekly review where each is done, dated or dropped.",
+   "url": "https://x.ai/bot/gUAx3NQOBEeDB7f6sYbso"
+  },
+  {
+   "id": "email-inbox-cUfaFDgqIkvz3DU5WAlnO",
+   "code": "cUfaFDgqIkvz3DU5WAlnO",
+   "name": "Mail Bot",
+   "author": "Justin Barnes",
+   "description": "Personal email triage partner that tames overloaded Gmail, Outlook, Zoho, or AOL/Yahoo inboxes using a non-destructive…",
+   "url": "https://x.ai/bot/cUfaFDgqIkvz3DU5WAlnO"
+  },
+  {
+   "id": "email-inbox-K880JZuPGIGoVv0uCU8ki",
+   "code": "K880JZuPGIGoVv0uCU8ki",
+   "name": "Mail Junkie",
+   "author": "Sam",
+   "description": "Archives unflagged newsletters, promotions, statement notices, and other junk across every connected mail account by removing them from the inbox only.",
+   "url": "https://x.ai/bot/K880JZuPGIGoVv0uCU8ki"
+  },
+  {
+   "id": "email-inbox-h1bJOR_y1RysAZrmkN05m",
+   "code": "h1bJOR_y1RysAZrmkN05m",
+   "name": "Mail in X Chat",
+   "author": "Phillip Holland",
+   "description": "Brings your important email into one X Chat as short cards, and sends a reply only after you say yes.",
+   "url": "https://x.ai/bot/h1bJOR_y1RysAZrmkN05m"
+  },
+  {
+   "id": "email-inbox-4WJEmgdGVdJePMiOdkDhV",
+   "code": "4WJEmgdGVdJePMiOdkDhV",
+   "name": "Mailbox Manager",
+   "author": "Stephane Bouraima",
+   "description": "Manages several Gmail, Outlook, and Yahoo inboxes: nightly junk cleanup, flags what needs attention, and drafts replies for your approval be.",
+   "url": "https://x.ai/bot/4WJEmgdGVdJePMiOdkDhV"
+  },
+  {
+   "id": "email-inbox-lcGQv8_I7UvJEWs3833LR",
+   "code": "lcGQv8_I7UvJEWs3833LR",
+   "name": "Mailchimp Monthly Blast",
+   "author": "Lovable Curves",
+   "description": "Drafts and sends a monthly Mailchimp email blast (last month, this month, upcoming, CTAs) plus optional same-day…",
+   "url": "https://x.ai/bot/lcGQv8_I7UvJEWs3833LR"
+  },
+  {
+   "id": "email-inbox-JpyZ_4XxyarEASAyt4OWJ",
+   "code": "JpyZ_4XxyarEASAyt4OWJ",
+   "name": "Mailman",
+   "author": "Mana Engineer",
+   "description": "Sorts every email that lands in your Grok Bot inbox and hands it to the right bot. Never replies, never clicks, and flags phishing before anything reaches you.",
+   "url": "https://x.ai/bot/JpyZ_4XxyarEASAyt4OWJ"
+  },
+  {
+   "id": "email-inbox-IgJF4MfrXe_3XlGXKqsHP",
+   "code": "IgJF4MfrXe_3XlGXKqsHP",
+   "name": "Marquee",
+   "author": "Matt Altman",
+   "description": "A nights-out booker that scouts live comedy, jazz, concerts and new restaurants near you, then pitches one or two…",
+   "url": "https://x.ai/bot/IgJF4MfrXe_3XlGXKqsHP"
+  },
+  {
+   "id": "email-inbox-F8vp6AGwCX3DYuTJ_aahF",
+   "code": "F8vp6AGwCX3DYuTJ_aahF",
+   "name": "Master Chief",
+   "author": "Peter Sinke",
+   "description": "Inbox triage, voice-matched replies and a weekday brief for your morning.",
+   "url": "https://x.ai/bot/F8vp6AGwCX3DYuTJ_aahF"
+  },
+  {
+   "id": "email-inbox-Kki8WwXYkmKYfr1IY2ABA",
+   "code": "Kki8WwXYkmKYfr1IY2ABA",
+   "name": "McKondo",
+   "author": "vandy",
+   "description": "Marie Kondo for a Mac: screenshots into month folders, Downloads sorted, Gmail noise archived.",
+   "url": "https://x.ai/bot/Kki8WwXYkmKYfr1IY2ABA"
+  },
+  {
+   "id": "email-inbox-xpZm4ufgAWoCcYPAbugWE",
+   "code": "xpZm4ufgAWoCcYPAbugWE",
+   "name": "Media Ledger",
+   "author": "Phillip.png",
+   "description": "Catalogs every ebook, audiobook, game, movie, and album you've bought digitally, from your email receipts, so you never…",
+   "url": "https://x.ai/bot/xpZm4ufgAWoCcYPAbugWE"
+  },
+  {
+   "id": "email-inbox-eGCyiAfGvnspMLamUiXDv",
+   "code": "eGCyiAfGvnspMLamUiXDv",
+   "name": "Messenger Inbox VA",
+   "author": "Josh Moulton",
+   "description": "A virtual assistant for small businesses that watches your Facebook Page inbox, reports every new message, and drafts…",
+   "url": "https://x.ai/bot/eGCyiAfGvnspMLamUiXDv"
+  },
+  {
+   "id": "email-inbox-7JAxnSahL4mx-cWpOv1tY",
+   "code": "7JAxnSahL4mx-cWpOv1tY",
+   "name": "Midas for the Inbox",
+   "author": "Twilight Surfers",
+   "description": "Your inbox already knows your niche. Midas turns your promo and announcement email into ready-to-review posts for X, Facebook business pages.",
+   "url": "https://x.ai/bot/7JAxnSahL4mx-cWpOv1tY"
+  },
+  {
+   "id": "email-inbox-HlaoZPmdS6_GkO7lzUw2S",
+   "code": "HlaoZPmdS6_GkO7lzUw2S",
+   "name": "Milou",
+   "author": "Kevin",
+   "description": "Weekly networking scout for founders and operators. Finds Luma/Eventbrite events in your metro, checks inbox invites and calendar conflicts.",
+   "url": "https://x.ai/bot/HlaoZPmdS6_GkO7lzUw2S"
+  },
+  {
+   "id": "email-inbox-7_qrgFePoJ6BOCRcdkZOv",
+   "code": "7_qrgFePoJ6BOCRcdkZOv",
+   "name": "Morning Desk",
+   "author": "AdventureNLearn Main",
+   "description": "Your inbox, calendar, and follow-ups in one calm morning brief.",
+   "url": "https://x.ai/bot/7_qrgFePoJ6BOCRcdkZOv"
+  },
+  {
+   "id": "email-inbox-6YwswfCUiouQ0SJkgPfJK",
+   "code": "6YwswfCUiouQ0SJkgPfJK",
+   "name": "Movie Magic",
+   "author": "kingroblo",
+   "description": "Helps pick movies, keep a personal watchlist, and optionally deliver a weekly top-10 domestic studio box-office pack…",
+   "url": "https://x.ai/bot/6YwswfCUiouQ0SJkgPfJK"
+  },
+  {
+   "id": "email-inbox-_z8j7TViBpvmQ9mlxRDec",
+   "code": "_z8j7TViBpvmQ9mlxRDec",
+   "name": "Ms. Scribe",
+   "author": "Jonathan Souza",
+   "description": "A writing, email, and calendar assistant. Drafts and rewrites in your voice, triages your inbox, and keeps your schedule straight.",
+   "url": "https://x.ai/bot/_z8j7TViBpvmQ9mlxRDec"
+  },
+  {
+   "id": "email-inbox-96EWGTulQPKJqVuozXaRx",
+   "code": "96EWGTulQPKJqVuozXaRx",
+   "name": "Multi Gmail",
+   "author": "@ecoay",
+   "description": "Connect all your Gmail inboxes to your bots at once, so any bot can search every inbox in one go.",
+   "url": "https://x.ai/bot/96EWGTulQPKJqVuozXaRx"
+  },
+  {
+   "id": "email-inbox-Yf3IZLg3s7OsH799ttVRF",
+   "code": "Yf3IZLg3s7OsH799ttVRF",
+   "name": "My Morning View",
+   "author": "Sarah Brundige",
+   "description": "A morning assistant that helps you start each day knowing what matters: your calendar, important email, team updates, and upcoming deadlines.",
+   "url": "https://x.ai/bot/Yf3IZLg3s7OsH799ttVRF"
+  },
+  {
+   "id": "email-inbox-v5MedUVzGQEty_TkPMpyL",
+   "code": "v5MedUVzGQEty_TkPMpyL",
+   "name": "MyPeople Bot",
+   "author": "StuyBoy From NYC",
+   "description": "Lists known data breaches that exposed an email and narrows it to the three fixes worth doing first, open sources only.",
+   "url": "https://x.ai/bot/v5MedUVzGQEty_TkPMpyL"
+  },
+  {
+   "id": "email-inbox-00LpQytGgJbn3KTdUJREV",
+   "code": "00LpQytGgJbn3KTdUJREV",
+   "name": "MyPhonely Phone Driver",
+   "author": "Quickfiling US",
+   "description": "Drives a real Android phone through MyPhonely. It taps, types, and reports what the screen did.",
+   "url": "https://x.ai/bot/00LpQytGgJbn3KTdUJREV"
+  },
+  {
+   "id": "email-inbox-dHd69sBvMG2o3lJa__T7K",
+   "code": "dHd69sBvMG2o3lJa__T7K",
+   "name": "Newsletter Cleanup",
+   "author": "Andrej Šimunaj",
+   "description": "Audits Gmail newsletters (last 6 months), builds a three-bucket review.html, then unsubscribes only what you approve…",
+   "url": "https://x.ai/bot/dHd69sBvMG2o3lJa__T7K"
+  },
+  {
+   "id": "email-inbox-J0CuUCheuaZacyOKXTSVH",
+   "code": "J0CuUCheuaZacyOKXTSVH",
+   "name": "Newsletter Desk INBOX-WORTHY",
+   "author": "Cypher",
+   "description": "Cited newsletter issue with three subject lines and one clear CTA.",
+   "url": "https://x.ai/bot/J0CuUCheuaZacyOKXTSVH"
+  },
+  {
+   "id": "email-inbox-_WDTIZiZCF43PWKoL5iUE",
+   "code": "_WDTIZiZCF43PWKoL5iUE",
+   "name": "Newsletter Editor",
+   "author": "Olushola Oladipupo",
+   "description": "Runs the day-to-day of a weekly beehiiv newsletter: drafts from your outlines, sends test emails, claims ads, schedules after your approval.",
+   "url": "https://x.ai/bot/_WDTIZiZCF43PWKoL5iUE"
+  },
+  {
+   "id": "email-inbox-FY3fh36XzhLj8G_ZPKfyN",
+   "code": "FY3fh36XzhLj8G_ZPKfyN",
+   "name": "Newsletter Editor",
+   "author": "Spinerazor | o00o",
+   "description": "Writes a daily, data-backed X Article newsletter for any crypto token you choose, plus optional morning and evening crypto market snapshots.",
+   "url": "https://x.ai/bot/FY3fh36XzhLj8G_ZPKfyN"
+  },
+  {
+   "id": "email-inbox-GF1rQBwR1S29YxNRIvZyU",
+   "code": "GF1rQBwR1S29YxNRIvZyU",
+   "name": "Newsletter Reading Queue",
+   "author": "Mike",
+   "description": "Weekday rank of newsletter and digest mail into read / skim / skip with one-line takeaways.",
+   "url": "https://x.ai/bot/GF1rQBwR1S29YxNRIvZyU"
+  },
+  {
+   "id": "email-inbox-9kuo07SsXFdVjHu5mkI5e",
+   "code": "9kuo07SsXFdVjHu5mkI5e",
+   "name": "Newsletter Unsubscriber",
+   "author": "Jeff Hartman",
+   "description": "A newsletter cleanup helper for Gmail, Outlook, Yahoo, and other email accounts.",
+   "url": "https://x.ai/bot/9kuo07SsXFdVjHu5mkI5e"
+  },
+  {
+   "id": "email-inbox-dp0WMDV_rIj6Q77wZ2dFO",
+   "code": "dp0WMDV_rIj6Q77wZ2dFO",
+   "name": "Newsletter Unsubscriber",
+   "author": "Foxtrot Lima Oscar",
+   "description": "Cleans up your Outlook.com or Gmail inbox: unsubscribes newsletters and marketing mail, and blocks senders that a bot can't unsubscribe…",
+   "url": "https://x.ai/bot/dp0WMDV_rIj6Q77wZ2dFO"
+  },
+  {
+   "id": "email-inbox-s5d2839123b973b4480f9",
+   "code": "s5d2839123b973b4480f9",
+   "name": "Newsletter Writer",
+   "author": "SpaceX",
+   "description": "Pulls what shipped from launches, wins and your calendar, writes the issue in your voice, and parks it for you to send.",
+   "url": "https://x.ai/bot/s5d2839123b973b4480f9"
+  },
+  {
+   "id": "email-inbox-aZktlS8No2Ur9nlhKRcy8",
+   "code": "aZktlS8No2Ur9nlhKRcy8",
+   "name": "NewsletterBot by Contentdrips",
+   "author": "Usama Khalid",
+   "description": "Turns a newsletter issue link into branded social graphics and carousels after you approve the highlights.",
+   "url": "https://x.ai/bot/aZktlS8No2Ur9nlhKRcy8"
+  },
+  {
+   "id": "email-inbox-V4vVQ5UtqQKMTQ7pg3Ihc",
+   "code": "V4vVQ5UtqQKMTQ7pg3Ihc",
+   "name": "Nixie",
+   "author": "Bruce F. Webster",
+   "description": "Gmail cleanup clerk for expert witnesses and busy professionals: trash promo noise, file license and matter mail, and keep availability-outreach.",
+   "url": "https://x.ai/bot/V4vVQ5UtqQKMTQ7pg3Ihc"
+  },
+  {
+   "id": "email-inbox-9Uh8RaBqp6PrcOcZjMHbD",
+   "code": "9Uh8RaBqp6PrcOcZjMHbD",
+   "name": "OS: Ontology Stack",
+   "author": "Damiano Redemagni",
+   "description": "An operational model of your organization that finds and resolves bottlenecks across projects, people, and processes.",
+   "url": "https://x.ai/bot/9Uh8RaBqp6PrcOcZjMHbD"
+  },
+  {
+   "id": "email-inbox-WrmRe9wC4ydNS7tqIkTjQ",
+   "code": "WrmRe9wC4ydNS7tqIkTjQ",
+   "name": "Onboarding Bot",
+   "author": "Matthew Barge",
+   "description": "Gets new hires up to speed: builds a knowledge file from your onboarding docs, tracks each hire's checklist and drafts a timed welcome email series.",
+   "url": "https://x.ai/bot/WrmRe9wC4ydNS7tqIkTjQ"
+  },
+  {
+   "id": "email-inbox-OnZxELs_59ZvE4_-jTMaV",
+   "code": "OnZxELs_59ZvE4_-jTMaV",
+   "name": "Open Loop Closer",
+   "author": "Scott Metcalf",
+   "description": "Finds VIP hangs where you went silent on work Slack or email, then drafts a paste-ready follow-up in chat.",
+   "url": "https://x.ai/bot/OnZxELs_59ZvE4_-jTMaV"
+  },
+  {
+   "id": "email-inbox-sKY-t3kMs_fK1Y2gLN23H",
+   "code": "sKY-t3kMs_fK1Y2gLN23H",
+   "name": "Open-Loop Catcher",
+   "author": "Krista Hilton",
+   "description": "Catches the yeses that slipped: sweeps your email, calendar and notes for things someone agreed to with no next step, and posts a short list.",
+   "url": "https://x.ai/bot/sKY-t3kMs_fK1Y2gLN23H"
+  },
+  {
+   "id": "email-inbox-YgM8FiKS0WczveQXe6edr",
+   "code": "YgM8FiKS0WczveQXe6edr",
+   "name": "Operator",
+   "author": "◢◤◥◣◥◣◢◤",
+   "description": "A single daily office for founders. It asks a short multiple-choice grill to dial in how it operates, compiles raw…",
+   "url": "https://x.ai/bot/YgM8FiKS0WczveQXe6edr"
+  },
+  {
+   "id": "email-inbox-YmQxkaiBgrFCUxR9J6krs",
+   "code": "YmQxkaiBgrFCUxR9J6krs",
+   "name": "Orwell (Grammar Fix)",
+   "author": "Tom Palen",
+   "description": "Paste any text and Orwell sends it right back with the grammar, spelling, and punctuation fixed.",
+   "url": "https://x.ai/bot/YmQxkaiBgrFCUxR9J6krs"
+  },
+  {
+   "id": "email-inbox-T_pOFV6-PnM3ZgALGFEBk",
+   "code": "T_pOFV6-PnM3ZgALGFEBk",
+   "name": "Outlook Calendar Desk",
+   "author": "Bosotter",
+   "description": "Shows your Outlook schedule, drafts creates/updates/cancels for review, and only writes after you approve the exact change.",
+   "url": "https://x.ai/bot/T_pOFV6-PnM3ZgALGFEBk"
+  },
+  {
+   "id": "email-inbox-2hd5RXfcTepic9O-O83Ri",
+   "code": "2hd5RXfcTepic9O-O83Ri",
+   "name": "Outlook Mail Desk",
+   "author": "Bosotter",
+   "description": "Drafts Outlook replies with the free Outlook Mail plugin and only sends after you approve the exact message.",
+   "url": "https://x.ai/bot/2hd5RXfcTepic9O-O83Ri"
+  },
+  {
+   "id": "email-inbox-1JJ_3wqHSU4fRt2fSTldf",
+   "code": "1JJ_3wqHSU4fRt2fSTldf",
+   "name": "Outlook Spam Filter Cleaner",
+   "author": "Bosotter",
+   "description": "Train it with AI to fight Outlook spam and malicious mail.",
+   "url": "https://x.ai/bot/1JJ_3wqHSU4fRt2fSTldf"
+  },
+  {
+   "id": "email-inbox-D9YwBJzd9iBP5PD4oNtiX",
+   "code": "D9YwBJzd9iBP5PD4oNtiX",
+   "name": "Owen",
+   "author": "AP",
+   "description": "A theology conversation partner that answers doctrinal and biblical questions from inside the confessional Reformed tradition: Scripture fir.",
+   "url": "https://x.ai/bot/D9YwBJzd9iBP5PD4oNtiX"
+  },
+  {
+   "id": "email-inbox-QKd4byLZMI9Amf9dRlDP1",
+   "code": "QKd4byLZMI9Amf9dRlDP1",
+   "name": "PayDate Chase",
+   "author": "Skip Rogers",
+   "description": "For freelancers and agency owners: track client “I’ll pay by …” promises in Gmail and draft the next chase when a date slips unpaid — you approve…",
+   "url": "https://x.ai/bot/QKd4byLZMI9Amf9dRlDP1"
+  },
+  {
+   "id": "email-inbox-Tjv5y1JtQGdUGviJNlUQY",
+   "code": "Tjv5y1JtQGdUGviJNlUQY",
+   "name": "Phishing Email Checker",
+   "author": "Marckenley Celestin",
+   "description": "Paste an email, .eml or screenshot (or connect Gmail/Outlook) for a Safe→Likely phishing verdict with score, evidence, IOC checks and next steps.",
+   "url": "https://x.ai/bot/Tjv5y1JtQGdUGviJNlUQY"
+  },
+  {
+   "id": "email-inbox-uvdl2ZJyNekgZv_niJKY-",
+   "code": "uvdl2ZJyNekgZv_niJKY-",
+   "name": "Phone Bot",
+   "author": "Fan Grok Bot Radar",
+   "description": "Makes phone calls and sends texts for you through Bland AI. Confirms every call and every payment with you first.",
+   "url": "https://x.ai/bot/uvdl2ZJyNekgZv_niJKY-"
+  },
+  {
+   "id": "email-inbox-5VOzTZvBuUv2bhQUqIXjj",
+   "code": "5VOzTZvBuUv2bhQUqIXjj",
+   "name": "Phone Call Bot",
+   "author": "Bowlboy",
+   "description": "Linked to a JooVoice number, places calls for you: booking appointments, chasing refunds, cancelling bookings, asking shops for quotes.",
+   "url": "https://x.ai/bot/5VOzTZvBuUv2bhQUqIXjj"
+  },
+  {
+   "id": "email-inbox-klUNCIuB1VMh6ERrVISN5",
+   "code": "klUNCIuB1VMh6ERrVISN5",
+   "name": "Phone Call Expert",
+   "author": "Heidi",
+   "description": "Helps you handle phone calls: finds the right number, writes scripts, preps you for interviews, and can place calls for you through Bland AI.",
+   "url": "https://x.ai/bot/klUNCIuB1VMh6ERrVISN5"
+  },
+  {
+   "id": "email-inbox-cU45-LD3a0tBwILes2aLL",
+   "code": "cU45-LD3a0tBwILes2aLL",
+   "name": "Political Spam Blocker",
+   "author": "Sawyer Merritt",
+   "description": "Clears political and election spam from your inbox, gets you off campaign lists, can auto-reply STOP to political texts and helps shut off campaign calls.",
+   "url": "https://x.ai/bot/cU45-LD3a0tBwILes2aLL"
+  },
+  {
+   "id": "email-inbox-R-i5_wHeR_cBinyLVyvWh",
+   "code": "R-i5_wHeR_cBinyLVyvWh",
+   "name": "Polo",
+   "author": "Soleio",
+   "description": "Watches your inbox for questions you can already answer from mail or files you already have.",
+   "url": "https://x.ai/bot/R-i5_wHeR_cBinyLVyvWh"
+  },
+  {
+   "id": "email-inbox-R_o82f2Mjkqo1PZKwL-NK",
+   "code": "R_o82f2Mjkqo1PZKwL-NK",
+   "name": "Porch",
+   "author": "Miloni Adams",
+   "description": "Daily USPS Informed Delivery scout: reads today's incoming mail and packages from your USPS account and posts a clear list. Read-only; quiet on empty days.",
+   "url": "https://x.ai/bot/R_o82f2Mjkqo1PZKwL-NK"
+  },
+  {
+   "id": "email-inbox-AIymMNJms4j1HgXNqutxL",
+   "code": "AIymMNJms4j1HgXNqutxL",
+   "name": "Porter",
+   "author": "Lukas Eppler",
+   "description": "Porter is your Switchboard secretary: look up agents, knock, and handle mailbox turns quietly.",
+   "url": "https://x.ai/bot/AIymMNJms4j1HgXNqutxL"
+  },
+  {
+   "id": "email-inbox-0POhIGmUHjJm9gR30O3mZ",
+   "code": "0POhIGmUHjJm9gR30O3mZ",
+   "name": "Premium Financial Newsletter Research (Drip + Link)",
+   "author": "Michael",
+   "description": "Researches financial newsletters and podcasts and pulls daily stock picks across them via Drip.",
+   "url": "https://x.ai/bot/0POhIGmUHjJm9gR30O3mZ"
+  },
+  {
+   "id": "email-inbox-Rw8d83KAzTYQWBAtAscin",
+   "code": "Rw8d83KAzTYQWBAtAscin",
+   "name": "Product Support Inbox Assistant",
+   "author": "Anoop Baliga",
+   "description": "Helps you find and draft answers to product questions. Never sends emails without you.",
+   "url": "https://x.ai/bot/Rw8d83KAzTYQWBAtAscin"
+  },
+  {
+   "id": "email-inbox-dlhjv6_TncBax75LX9GzG",
+   "code": "dlhjv6_TncBax75LX9GzG",
+   "name": "Proven",
+   "author": "Liam",
+   "description": "Finds customers who already praised your business in email and public posts and helps turn it into approved testimonials, with their permission.",
+   "url": "https://x.ai/bot/dlhjv6_TncBax75LX9GzG"
+  },
+  {
+   "id": "email-inbox-bbw5VWsbm4dvrF_-LHJf4",
+   "code": "bbw5VWsbm4dvrF_-LHJf4",
+   "name": "Quiet Inbox",
+   "author": "Ben",
+   "description": "Archives promo and junk in Gmail without deleting, and keeps weekly bills and events notes as drafts until you send.",
+   "url": "https://x.ai/bot/bbw5VWsbm4dvrF_-LHJf4"
+  },
+  {
+   "id": "email-inbox-lnEBRA4mvuYRbZC003NdY",
+   "code": "lnEBRA4mvuYRbZC003NdY",
+   "name": "Quote Closer",
+   "author": "Mark G",
+   "description": "For flooring sales reps: logs quotes in Notion, checks quote math, writes scope summaries and drafts low-pressure Gmail follow-ups for you to send.",
+   "url": "https://x.ai/bot/lnEBRA4mvuYRbZC003NdY"
+  },
+  {
+   "id": "email-inbox-NLw7vTHF4uuyaP_SGF659",
+   "code": "NLw7vTHF4uuyaP_SGF659",
+   "name": "Quoted",
+   "author": "Liam",
+   "description": "Tell Quoted what you need. It shops around for you — contacts providers, collects real quotes, compares true cost…",
+   "url": "https://x.ai/bot/NLw7vTHF4uuyaP_SGF659"
+  },
+  {
+   "id": "email-inbox-Yf3pOvZQ0B_9DDcCzuhDG",
+   "code": "Yf3pOvZQ0B_9DDcCzuhDG",
+   "name": "Raily",
+   "author": "Ntty",
+   "description": "Reviews possible new connections without touching your account.",
+   "url": "https://x.ai/bot/Yf3pOvZQ0B_9DDcCzuhDG"
+  },
+  {
+   "id": "email-inbox-Gx0HlW1t8lTnW2pVn0nKF",
+   "code": "Gx0HlW1t8lTnW2pVn0nKF",
+   "name": "Ramp Bot",
+   "author": "Matthew Barge",
+   "description": "Pairs Gmail with Ramp corporate cards daily so missing receipts and memos stop locking the plastic.",
+   "url": "https://x.ai/bot/Gx0HlW1t8lTnW2pVn0nKF"
+  },
+  {
+   "id": "email-inbox-mVkkx9p_-u6HZDNavZOz9",
+   "code": "mVkkx9p_-u6HZDNavZOz9",
+   "name": "Read Aloud!",
+   "author": "Natarajan Balasubramanian",
+   "description": "Reads anything aloud like a real person, not a robot: your screen, web pages, highlighted text, PDFs, docs, ebooks…",
+   "url": "https://x.ai/bot/mVkkx9p_-u6HZDNavZOz9"
+  },
+  {
+   "id": "email-inbox-mvkkx9p_-u6hzdnavzoz9",
+   "code": "mvkkx9p_-u6hzdnavzoz9",
+   "name": "Read Aloud!",
+   "author": "Natarajan",
+   "description": "Reads anything aloud like a real person, not a robot: your screen, web pages, highlighted text, PDFs, docs, ebooks, and email, in full, summarized…",
+   "url": "https://x.ai/bot/mvkkx9p_-u6hzdnavzoz9"
+  },
+  {
+   "id": "email-inbox-Gd-cqXG8xG_RPmKGixa73",
+   "code": "Gd-cqXG8xG_RPmKGixa73",
+   "name": "Reaper",
+   "author": "Liam",
+   "description": "Find recurring work, tools, processes, and obligations that no longer justify their existence.",
+   "url": "https://x.ai/bot/Gd-cqXG8xG_RPmKGixa73"
+  },
+  {
+   "id": "email-inbox-MzKMT64ou_j4Q3edfbjE_",
+   "code": "MzKMT64ou_j4Q3edfbjE_",
+   "name": "Rejectionist",
+   "author": "Nomis",
+   "description": "Turns an App Store or TestFlight rejection into a fix plan with the guideline cited, ranked fixes, and a Resolution Center reply draft.",
+   "url": "https://x.ai/bot/MzKMT64ou_j4Q3edfbjE_"
+  },
+  {
+   "id": "email-inbox-_abcO9nWji9H9yX1r9XGV",
+   "code": "_abcO9nWji9H9yX1r9XGV",
+   "name": "Rematch",
+   "author": "Michael Heckert",
+   "description": "Finds every stalled email, quiet lead, and open loop, then drafts the follow-up. Nothing sends without your OK.",
+   "url": "https://x.ai/bot/_abcO9nWji9H9yX1r9XGV"
+  },
+  {
+   "id": "email-inbox-v8VS1FsB0TRj9vuXcOx25",
+   "code": "v8VS1FsB0TRj9vuXcOx25",
+   "name": "Remembered",
+   "author": "Liam",
+   "description": "Finds and remembers birthdays, prepares personalised cards, and helps order physical cards or draft email greetings in time, with a weekly check.",
+   "url": "https://x.ai/bot/v8VS1FsB0TRj9vuXcOx25"
+  },
+  {
+   "id": "email-inbox-H_EMj2tvyMzpZ-f0k2uxo",
+   "code": "H_EMj2tvyMzpZ-f0k2uxo",
+   "name": "Renewal Rescue",
+   "author": "Marc Saintjour",
+   "description": "Helps people renew benefits like Medicaid.",
+   "url": "https://x.ai/bot/H_EMj2tvyMzpZ-f0k2uxo"
+  },
+  {
+   "id": "email-inbox-_ZqhiujOChsn7lcoTbdYh",
+   "code": "_ZqhiujOChsn7lcoTbdYh",
+   "name": "SNAIL Worker",
+   "author": "𝕏C4Chaos𝕏",
+   "description": "A worker leg for SNAIL, a protocol for agent-to-agent mail over one shared inbox.",
+   "url": "https://x.ai/bot/_ZqhiujOChsn7lcoTbdYh"
+  },
+  {
+   "id": "email-inbox-IJPTTz1XGwaTQlfo6Zi4-",
+   "code": "IJPTTz1XGwaTQlfo6Zi4-",
+   "name": "Send to Kindle",
+   "author": "Brian Lu",
+   "description": "Turns Google Docs, articles, and files into EPUBs and emails them to your Kindle from your Gmail, and checks with you…",
+   "url": "https://x.ai/bot/IJPTTz1XGwaTQlfo6Zi4-"
+  },
+  {
+   "id": "email-inbox-DTs9dbErT3H3Gn___HxXf",
+   "code": "DTs9dbErT3H3Gn___HxXf",
+   "name": "Shipper Hunter",
+   "author": "Mark G",
+   "description": "Prospecting for independent freight brokers: finds shippers in your niche each morning, logs them in Notion, writes call openers and Gmail follow-ups.",
+   "url": "https://x.ai/bot/DTs9dbErT3H3Gn___HxXf"
+  },
+  {
+   "id": "email-inbox-lWTF9AuO6Ak-lgrGiQeRW",
+   "code": "lWTF9AuO6Ak-lgrGiQeRW",
+   "name": "Shipping",
+   "author": "J S",
+   "description": "Turns one loose message about a shipment into a printed label: fills gaps from inboxes and orders, validates the address, compares rates, buys and prints.",
+   "url": "https://x.ai/bot/lWTF9AuO6Ak-lgrGiQeRW"
+  },
+  {
+   "id": "email-inbox-wUcz5CmpCYI1dfled8btd",
+   "code": "wUcz5CmpCYI1dfled8btd",
+   "name": "Shogun",
+   "author": "Justin Crisp",
+   "description": "Executive for your fleet: turns initiatives into action, forms bot teams, and reports progress.",
+   "url": "https://x.ai/bot/wUcz5CmpCYI1dfled8btd"
+  },
+  {
+   "id": "email-inbox-f5EvPVrHkyTX3piZyVmXO",
+   "code": "f5EvPVrHkyTX3piZyVmXO",
+   "name": "Side Hustle CEO",
+   "author": "@AlexFinn",
+   "description": "An autonomous CEO that finds, builds, and runs a small website business for you, like a directory or tracker with a newsletter and sponsors.",
+   "url": "https://x.ai/bot/f5EvPVrHkyTX3piZyVmXO"
+  },
+  {
+   "id": "email-inbox--Q150uwypm_hR4MF3IokP",
+   "code": "-Q150uwypm_hR4MF3IokP",
+   "name": "Side Hustle CEO",
+   "author": "Jack Hammond",
+   "description": "An autonomous CEO that finds, builds and runs a small website business for you, like a directory or tracker with a newsletter and affiliate income.",
+   "url": "https://x.ai/bot/-Q150uwypm_hR4MF3IokP"
+  },
+  {
+   "id": "email-inbox-XL-Elhpy7815Pk8sOMk3Q",
+   "code": "XL-Elhpy7815Pk8sOMk3Q",
+   "name": "Side Hustle CEO",
+   "author": "ALK Trading",
+   "description": "An autonomous CEO that finds, builds and runs a small website business, like a directory or tracker with a newsletter and sponsors, from 3 researched ideas.",
+   "url": "https://x.ai/bot/XL-Elhpy7815Pk8sOMk3Q"
+  },
+  {
+   "id": "email-inbox-76smC7H9kKKxDcMfq19hY",
+   "code": "76smC7H9kKKxDcMfq19hY",
+   "name": "Signup Alias Guard",
+   "author": "AdventureNLearn Main",
+   "description": "A unique email alias for every site you sign up on, so you can see who shared your address.",
+   "url": "https://x.ai/bot/76smC7H9kKKxDcMfq19hY"
+  },
+  {
+   "id": "email-inbox-MOob21I3oZVfaZ9dd2lE7",
+   "code": "MOob21I3oZVfaZ9dd2lE7",
+   "name": "Site-Validated Email Outreach",
+   "author": "Gabriel Hernandez",
+   "description": "Cold email to real businesses after checking the company site and public reviews, with no send until you say so.",
+   "url": "https://x.ai/bot/MOob21I3oZVfaZ9dd2lE7"
+  },
+  {
+   "id": "email-inbox-MHn2K6OnnvSs7itmjhX-K",
+   "code": "MHn2K6OnnvSs7itmjhX-K",
+   "name": "Socrates",
+   "author": "Martin Barna",
+   "description": "A Socratic debate partner: restates your half-baked idea in its strongest form, then keeps probing it.",
+   "url": "https://x.ai/bot/MHn2K6OnnvSs7itmjhX-K"
+  },
+  {
+   "id": "email-inbox-dnqS6y_qSOgmMNZ_dAak1",
+   "code": "dnqS6y_qSOgmMNZ_dAak1",
+   "name": "Spam Cleaner",
+   "author": "@dougdstecklein",
+   "description": "Keeps Gmail and other webmail free of spam and marketing lists: moves junk to Spam and unsubscribes you from promos, never deleting.",
+   "url": "https://x.ai/bot/dnqS6y_qSOgmMNZ_dAak1"
+  },
+  {
+   "id": "email-inbox-8V3bRj3MJ3gSqPRVwuZGZ",
+   "code": "8V3bRj3MJ3gSqPRVwuZGZ",
+   "name": "Sponsor Hunter",
+   "author": "Karata De Mada",
+   "description": "Helps creators find flat-fee sponsors for a newsletter or X account: media kit from real stats, brands that fit, short fixed-price pitches and one follow-up.",
+   "url": "https://x.ai/bot/8V3bRj3MJ3gSqPRVwuZGZ"
+  },
+  {
+   "id": "email-inbox-HK7rbeEuMNDD3_RbYyvx6",
+   "code": "HK7rbeEuMNDD3_RbYyvx6",
+   "name": "Sponsor Scout",
+   "author": "Michael Heckert",
+   "description": "Finds brands already sponsoring people like you, the real way in, and drafts the pitch for you to send. For fighters, athletes, newsletter writers and creators.",
+   "url": "https://x.ai/bot/HK7rbeEuMNDD3_RbYyvx6"
+  },
+  {
+   "id": "email-inbox-t-gNKMTD-GSe0vSRnGDQQ",
+   "code": "t-gNKMTD-GSe0vSRnGDQQ",
+   "name": "Sponsorship Hunter",
+   "author": "Vedant",
+   "description": "Finds verified sponsorship opportunities for creators, newsletter writers, indie hackers and podcasters, ranks them and drafts pitches for you to approve.",
+   "url": "https://x.ai/bot/t-gNKMTD-GSe0vSRnGDQQ"
+  },
+  {
+   "id": "email-inbox-0eNrUiaGS_HCEBNBMtS-N",
+   "code": "0eNrUiaGS_HCEBNBMtS-N",
+   "name": "Sputnik 1",
+   "author": "Ξ",
+   "description": "Commander & Chief of The Everything Bots. A calm, dry-humored captain who introduces the crew, lets you pick a quest (inbox, briefings, builds, account.",
+   "url": "https://x.ai/bot/0eNrUiaGS_HCEBNBMtS-N"
+  },
+  {
+   "id": "email-inbox-gpPjBLipn7IDb7AWPBnmV",
+   "code": "gpPjBLipn7IDb7AWPBnmV",
+   "name": "StarMind",
+   "author": "Jonathan Souza",
+   "description": "A chief-of-staff bot that takes every request, delegates to specialist bots, checks their work, and only brings you real decisions.",
+   "url": "https://x.ai/bot/gpPjBLipn7IDb7AWPBnmV"
+  },
+  {
+   "id": "email-inbox-4Tg_53sv5QYsk7JrY4-L_",
+   "code": "4Tg_53sv5QYsk7JrY4-L_",
+   "name": "Sub Guard",
+   "author": "Mathieu Rossignol",
+   "description": "Finds forgotten free trials and paid subscriptions in Gmail, then puts calendar reminders (default 5 and 3 days ahead)…",
+   "url": "https://x.ai/bot/4Tg_53sv5QYsk7JrY4-L_"
+  },
+  {
+   "id": "email-inbox-t0j3bcp2AFpIuKxhmg-EN",
+   "code": "t0j3bcp2AFpIuKxhmg-EN",
+   "name": "Sub Killer",
+   "author": "@GroksRules",
+   "description": "Finds the subscriptions you pay for in Gmail, helps cancel the unwanted ones and clears promo clutter without touching bills or official mail.",
+   "url": "https://x.ai/bot/t0j3bcp2AFpIuKxhmg-EN"
+  },
+  {
+   "id": "email-inbox-MzuJZpvaIK2KpexUVY-V0",
+   "code": "MzuJZpvaIK2KpexUVY-V0",
+   "name": "SubCut",
+   "author": "Taha",
+   "description": "Reads your inbox for recurring charges, marks monthly vs yearly, and shows where switching or cancelling would save…",
+   "url": "https://x.ai/bot/MzuJZpvaIK2KpexUVY-V0"
+  },
+  {
+   "id": "email-inbox-boeW0BXZypK672e5-DwWy",
+   "code": "boeW0BXZypK672e5-DwWy",
+   "name": "Subby",
+   "author": "Nicolò Tognoni",
+   "description": "I find your recurring subscriptions and charges in your email (spam included) and statements, and show what they cost…",
+   "url": "https://x.ai/bot/boeW0BXZypK672e5-DwWy"
+  },
+  {
+   "id": "email-inbox-GtQS4J39GGt5R8Vs7uvwi",
+   "code": "GtQS4J39GGt5R8Vs7uvwi",
+   "name": "Sully",
+   "author": "Tyler",
+   "description": "Finds your upcoming flights in your inbox and tells you the best 6 seats to grab on each leg, matched to your seat…",
+   "url": "https://x.ai/bot/GtQS4J39GGt5R8Vs7uvwi"
+  },
+  {
+   "id": "email-inbox-g3URTClmjeIlCgwDIK8dV",
+   "code": "g3URTClmjeIlCgwDIK8dV",
+   "name": "Support Bridge",
+   "author": "Marc Zänglein",
+   "description": "Turns support posts and forwarded threads into a German working brief for you plus a concise American-English customer reply draft. Never sends messages.",
+   "url": "https://x.ai/bot/g3URTClmjeIlCgwDIK8dV"
+  },
+  {
+   "id": "email-inbox-8g9eqsrncfnxhzbuktby-",
+   "code": "8g9eqsrncfnxhzbuktby-",
+   "name": "Support Reply Desk CALM-REPLY",
+   "author": "Cypher",
+   "description": "Turn a customer ticket and your policy into an empathetic, on-policy reply draft plus an internal note.",
+   "url": "https://x.ai/bot/8g9eqsrncfnxhzbuktby-"
+  },
+  {
+   "id": "email-inbox-ghYcuP9N4ymIYZeCZPoWO",
+   "code": "ghYcuP9N4ymIYZeCZPoWO",
+   "name": "Support Reply Drafter",
+   "author": "Mike",
+   "description": "Drafts a short care reply from a pasted support ticket or customer email, for you to send.",
+   "url": "https://x.ai/bot/ghYcuP9N4ymIYZeCZPoWO"
+  },
+  {
+   "id": "email-inbox-DnFsnmgeG6LR_WsQhHaJ-",
+   "code": "DnFsnmgeG6LR_WsQhHaJ-",
+   "name": "Sweep",
+   "author": "Ann",
+   "description": "Moves logins off an old email like Yahoo to Gmail, which Grok Bot can see, and closes leftover accounts through an editable list of moves and deletes.",
+   "url": "https://x.ai/bot/DnFsnmgeG6LR_WsQhHaJ-"
+  },
+  {
+   "id": "email-inbox-xeyk4BgUD9iVU5b55r0ok",
+   "code": "xeyk4BgUD9iVU5b55r0ok",
+   "name": "TESTYS",
+   "author": "Bud",
+   "description": "Turns real reviews and praise into named quotes and ready-to-paste lines for email, social, proposals, and websites.",
+   "url": "https://x.ai/bot/xeyk4BgUD9iVU5b55r0ok"
+  },
+  {
+   "id": "email-inbox-7fExIoCYvACOqWtnY0U0o",
+   "code": "7fExIoCYvACOqWtnY0U0o",
+   "name": "Tallyhand",
+   "author": "Brandon Pendleton",
+   "description": "Every request in one place, one owner per item, and nothing sent without your OK.",
+   "url": "https://x.ai/bot/7fExIoCYvACOqWtnY0U0o"
+  },
+  {
+   "id": "email-inbox-mpKYGkjuVEUHYI4R7Xud9",
+   "code": "mpKYGkjuVEUHYI4R7Xud9",
+   "name": "Tesla Covered Calls",
+   "author": "Andrew",
+   "description": "Helps long-term Tesla holders earn covered call income without getting their shares called away, using a fixed rulebook…",
+   "url": "https://x.ai/bot/mpKYGkjuVEUHYI4R7Xud9"
+  },
+  {
+   "id": "email-inbox-E3h6k-Sbq7hwF3PW1ZBI4",
+   "code": "E3h6k-Sbq7hwF3PW1ZBI4",
+   "name": "Text-cleanup",
+   "author": "GrokBotGod God",
+   "description": "Rewrites messy text, notes or AI drafts into one clean email, message or post, ready to send.",
+   "url": "https://x.ai/bot/E3h6k-Sbq7hwF3PW1ZBI4"
+  },
+  {
+   "id": "email-inbox-iXXRYul0WYgEQeFBSxba_",
+   "code": "iXXRYul0WYgEQeFBSxba_",
+   "name": "The Follow-Up Machine — Quotes Don't Die in the Inbox Anymore",
+   "author": "News Gurus",
+   "description": "Tracks the quotes and estimates a small business sends, nudges quiet prospects on the owner's cadence and approved voice.",
+   "url": "https://x.ai/bot/iXXRYul0WYgEQeFBSxba_"
+  },
+  {
+   "id": "email-inbox-U-eydTXJP7aN4W9dcUL5k",
+   "code": "U-eydTXJP7aN4W9dcUL5k",
+   "name": "The List",
+   "author": "Bill",
+   "description": "Three-line in-chat drops when new bots or directory picks land, no email and no drafting.",
+   "url": "https://x.ai/bot/U-eydTXJP7aN4W9dcUL5k"
+  },
+  {
+   "id": "email-inbox-wPs7aZwnwlVO7GNwcpiSz",
+   "code": "wPs7aZwnwlVO7GNwcpiSz",
+   "name": "UNDO",
+   "author": "Roshan",
+   "description": "Bought it, booked it, subscribed, regretted it?",
+   "url": "https://x.ai/bot/wPs7aZwnwlVO7GNwcpiSz"
+  },
+  {
+   "id": "email-inbox-YJAP3CUaR3i5F2mhN69tM",
+   "code": "YJAP3CUaR3i5F2mhN69tM",
+   "name": "Unsubscribe Bot",
+   "author": "Unicode",
+   "description": "Clears newsletters from your Gmail.",
+   "url": "https://x.ai/bot/YJAP3CUaR3i5F2mhN69tM"
+  },
+  {
+   "id": "email-inbox-skjw7snZQR8WzWNrFbzYW",
+   "code": "skjw7snZQR8WzWNrFbzYW",
+   "name": "Unsubscribed",
+   "author": "P",
+   "description": "Scans connected Gmail for recurring paid subscriptions and marketing newsletters, then helps you unsubscribe or cancel — only after you appr.",
+   "url": "https://x.ai/bot/skjw7snZQR8WzWNrFbzYW"
+  },
+  {
+   "id": "email-inbox-PVXoG6cwqxR5waSXdWzb5",
+   "code": "PVXoG6cwqxR5waSXdWzb5",
+   "name": "Vcardbot",
+   "author": "Renee Thompson",
+   "description": "Builds and maintains a digital business card Page with your photo, social links and Call/Email/Save buttons, plus a vCard, QR code and NFC help.",
+   "url": "https://x.ai/bot/PVXoG6cwqxR5waSXdWzb5"
+  },
+  {
+   "id": "email-inbox-BdGsOYPqhwazgMx9xCB1c",
+   "code": "BdGsOYPqhwazgMx9xCB1c",
+   "name": "Vote bot",
+   "author": "Tim Sonner",
+   "description": "Voting assistance bot that helps users make informed ballot decisions.",
+   "url": "https://x.ai/bot/BdGsOYPqhwazgMx9xCB1c"
+  },
+  {
+   "id": "email-inbox-Xm31xkpbR3rr_b_zJauoq",
+   "code": "Xm31xkpbR3rr_b_zJauoq",
+   "name": "VoxBot",
+   "author": "Andrew Carvajal",
+   "description": "Calls for you. No keys needed to try it: rehearse a tough call right in chat, then hook up your own phone line for real…",
+   "url": "https://x.ai/bot/Xm31xkpbR3rr_b_zJauoq"
+  },
+  {
+   "id": "email-inbox-PuAEE57P58Df5zskFY3pg",
+   "code": "PuAEE57P58Df5zskFY3pg",
+   "name": "Watchdog",
+   "author": "SmoresBoy Jack",
+   "description": "On first install, scans email once as soon as Gmail is ready, then weekly for receipts, renewals, and trials.",
+   "url": "https://x.ai/bot/PuAEE57P58Df5zskFY3pg"
+  },
+  {
+   "id": "email-inbox-BX4-kOUI2CzphgiYLZ1hb",
+   "code": "BX4-kOUI2CzphgiYLZ1hb",
+   "name": "Webby",
+   "author": "Farzad",
+   "description": "Website admin. Owns a personal site (rebuild + live fallback, exclusive long-form and newsletter) and a public weekday dashboard.",
+   "url": "https://x.ai/bot/BX4-kOUI2CzphgiYLZ1hb"
+  },
+  {
+   "id": "email-inbox-S07oX1xZqDW7OScY9hEN5",
+   "code": "S07oX1xZqDW7OScY9hEN5",
+   "name": "WhatsApp Inbox Desk",
+   "author": "Cobus Greyling",
+   "description": "Turns WhatsApp Web into an actionable morning and ops brief: unread triage, reply-needed flags, and decision watch-lists — without sending unless you ask.",
+   "url": "https://x.ai/bot/S07oX1xZqDW7OScY9hEN5"
+  },
+  {
+   "id": "email-inbox-p_0KTQ41WwupGeD-iShbK",
+   "code": "p_0KTQ41WwupGeD-iShbK",
+   "name": "Witness",
+   "author": "Liam",
+   "description": "Remember why important decisions were made so the user never reconstructs the reasoning from scratch.",
+   "url": "https://x.ai/bot/p_0KTQ41WwupGeD-iShbK"
+  },
+  {
+   "id": "email-inbox-BV8TiWwvtXEp3miBJUWaq",
+   "code": "BV8TiWwvtXEp3miBJUWaq",
+   "name": "YahooMail",
+   "author": "community",
+   "description": "Clears and files Yahoo Mail inbox on request.",
+   "url": "https://x.ai/bot/BV8TiWwvtXEp3miBJUWaq"
+  },
+  {
+   "id": "email-inbox-2OZhVriEJF4Ggj46JuHWS",
+   "code": "2OZhVriEJF4Ggj46JuHWS",
+   "name": "YahooMail",
+   "author": "Carolina",
+   "description": "Clears and files a Yahoo Mail inbox on demand: trash-only, trash+filter, or file-to-folder, with FIFO queuing and Next-10 offender lists.",
+   "url": "https://x.ai/bot/2OZhVriEJF4Ggj46JuHWS"
+  },
+  {
+   "id": "email-inbox-Aa6nFqk71RxxweZrhJ4MJ",
+   "code": "Aa6nFqk71RxxweZrhJ4MJ",
+   "name": "YahooMail",
+   "author": "Carolina Dill",
+   "description": "Clears and files your Yahoo Mail inbox on request (trash, trash and block, or move to a folder), finds the top sender…",
+   "url": "https://x.ai/bot/Aa6nFqk71RxxweZrhJ4MJ"
+  },
+  {
+   "id": "email-inbox-lfc-k1106XkXDlmAmJEco",
+   "code": "lfc-k1106XkXDlmAmJEco",
+   "name": "Zach",
+   "author": "Cristian Villacorta",
+   "description": "A warm, friend-first companion that helps with reminders, daily calendar structure, errands, and inbox cleanup…",
+   "url": "https://x.ai/bot/lfc-k1106XkXDlmAmJEco"
+  },
+  {
+   "id": "email-inbox-alHx8zJA0xXEN8FT1HDAc",
+   "code": "alHx8zJA0xXEN8FT1HDAc",
+   "name": "agent-notify",
+   "author": "Cyris",
+   "description": "Free email alerts sent only to you and only when something matters, with no inbox access and a one-click Cloudflare deploy.",
+   "url": "https://x.ai/bot/alHx8zJA0xXEN8FT1HDAc"
+  },
+  {
+   "id": "email-inbox-YALMxi_MPzZ7ck2fDA23l",
+   "code": "YALMxi_MPzZ7ck2fDA23l",
+   "name": "gort",
+   "author": "lu",
+   "description": "Proactive everyday-life coordinator: morning briefs, open work, mail catch, and specialist handoffs — decides and acts…",
+   "url": "https://x.ai/bot/YALMxi_MPzZ7ck2fDA23l"
+  },
+  {
+   "id": "email-inbox-oXVLzHzy4WVpw4rLytMv4",
+   "code": "oXVLzHzy4WVpw4rLytMv4",
+   "name": "honey",
+   "author": "horsezy Ruaywanasa",
+   "description": "Warm helper for day-to-day work in Thai or English — move files, use Google Drive, and keep Thai text readable on the bot computer.",
+   "url": "https://x.ai/bot/oXVLzHzy4WVpw4rLytMv4"
+  },
+  {
+   "id": "email-inbox-BYaLwjYHrWUAcUlyZVbgP",
+   "code": "BYaLwjYHrWUAcUlyZVbgP",
+   "name": "iMessage Relay",
+   "author": "Phillip Holland",
+   "description": "Get your iMessages in X Chat and reply from there, with a guided one-minute Mac setup, chosen contacts or all texts, quiet hours and blocking.",
+   "url": "https://x.ai/bot/BYaLwjYHrWUAcUlyZVbgP"
+  },
+  {
+   "id": "email-inbox-_e4a8viXo8YiLjdUv4fqH",
+   "code": "_e4a8viXo8YiLjdUv4fqH",
+   "name": "iMessage bot",
+   "author": "Evan Bacon",
+   "description": "Reads and sends iMessages on a connected Mac: chat.db for history, Beeper imessage-cli for send, reply, react, and edit.",
+   "url": "https://x.ai/bot/_e4a8viXo8YiLjdUv4fqH"
+  },
+  {
+   "id": "email-inbox-Q4Ll-gU_l-lvvpxq-quwr",
+   "code": "Q4Ll-gU_l-lvvpxq-quwr",
+   "name": "inbox manager",
+   "author": "Josh",
+   "description": "First line of defense on email, Slack, and DMs. Read-only by default — surfaces the ~3 that are both important and urgent. Never answers as you.",
+   "url": "https://x.ai/bot/Q4Ll-gU_l-lvvpxq-quwr"
+  },
+  {
+   "id": "email-inbox-cElGnAaR55iPHK2DGdPdu",
+   "code": "cElGnAaR55iPHK2DGdPdu",
+   "name": "loom",
+   "author": "lauren",
+   "description": "Gathers context across related Gmail threads and drafts a reply.",
+   "url": "https://x.ai/bot/cElGnAaR55iPHK2DGdPdu"
+  },
+  {
+   "id": "email-inbox-3S7qjz3K6eV95xasgN2x4",
+   "code": "3S7qjz3K6eV95xasgN2x4",
+   "name": "mailer",
+   "author": "mathias",
+   "description": "A Gmail assistant that triages your inbox on weekdays, drafts replies for you to review, and keeps noisy alerts out of the way.",
+   "url": "https://x.ai/bot/3S7qjz3K6eV95xasgN2x4"
+  },
+  {
+   "id": "email-inbox-ndO6BI7E2ur5X-bhWM_1R",
+   "code": "ndO6BI7E2ur5X-bhWM_1R",
+   "name": "openrobot",
+   "author": "alhan",
+   "description": "building openrobot. if you find us interesting and want to collab, this bot asks a few questions, writes an email…",
+   "url": "https://x.ai/bot/ndO6BI7E2ur5X-bhWM_1R"
+  },
+  {
+   "id": "email-inbox-p-0lxiUJj0Ws8_w7rDiCi",
+   "code": "p-0lxiUJj0Ws8_w7rDiCi",
+   "name": "행사 참석 확인 폼 메이커",
+   "author": "Brandon",
+   "description": "Builds an event RSVP form on grok.me with email delivery and a phone-scannable QR for hosts.",
+   "url": "https://x.ai/bot/p-0lxiUJj0Ws8_w7rDiCi"
+  }
+ ]
+}

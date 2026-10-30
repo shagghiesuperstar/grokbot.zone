@@ -1,0 +1,1288 @@
+{
+ "slug": "food-recipes-dining",
+ "label": "Food, Recipes & Dining",
+ "count": 160,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "food-recipes-dining-U-7E6uD8uk9vW4vIsgLfr",
+   "code": "U-7E6uD8uk9vW4vIsgLfr",
+   "name": "2am Fridge",
+   "author": "Nomis",
+   "description": "Gets a half-asleep person to their kitchen at 2am.",
+   "url": "https://x.ai/bot/U-7E6uD8uk9vW4vIsgLfr"
+  },
+  {
+   "id": "food-recipes-dining-gKLzVf2dgWtLbpN56aruo",
+   "code": "gKLzVf2dgWtLbpN56aruo",
+   "name": "AWS Re:Invent Organiser Bot",
+   "author": "Jonathan",
+   "description": "Plans re:Invent around free food, swag, keynote, and daily on-site briefings.",
+   "url": "https://x.ai/bot/gKLzVf2dgWtLbpN56aruo"
+  },
+  {
+   "id": "food-recipes-dining-6hTF0b0I0BFEA3VzEQ_oz",
+   "code": "6hTF0b0I0BFEA3VzEQ_oz",
+   "name": "Aisle Saver",
+   "author": "JaxJay9",
+   "description": "Compares your grocery list across the US stores you actually use, counting fees, tips, and memberships, and shows the cheapest single-store.",
+   "url": "https://x.ai/bot/6hTF0b0I0BFEA3VzEQ_oz"
+  },
+  {
+   "id": "food-recipes-dining-NNzElxanGR7uZUiiXD_5u",
+   "code": "NNzElxanGR7uZUiiXD_5u",
+   "name": "Allergy Bot",
+   "author": "Liam Monaghan",
+   "description": "Screens restaurant menus for food allergies and can call the restaurant when the menu isn’t enough.",
+   "url": "https://x.ai/bot/NNzElxanGR7uZUiiXD_5u"
+  },
+  {
+   "id": "food-recipes-dining-uQhDO7G-zeHut15X_KHbe",
+   "code": "uQhDO7G-zeHut15X_KHbe",
+   "name": "Allergy-Friendly Eats",
+   "author": "dale gandy",
+   "description": "Remembers your food allergies and intolerances, then finds safe restaurant orders, checks labels, and plans allergy-friendly meals and grocery lists.",
+   "url": "https://x.ai/bot/uQhDO7G-zeHut15X_KHbe"
+  },
+  {
+   "id": "food-recipes-dining-j2bqDafGnyOv6bKMOOGOp",
+   "code": "j2bqDafGnyOv6bKMOOGOp",
+   "name": "Alumni Coffee Chat Finder",
+   "author": "Fiona Whittington",
+   "description": "Builds a CSV of university alumni for coffee chats (name, company, role, role description, email, and whether you've…",
+   "url": "https://x.ai/bot/j2bqDafGnyOv6bKMOOGOp"
+  },
+  {
+   "id": "food-recipes-dining-JXPsJpskNi2PSnWgtZCr9",
+   "code": "JXPsJpskNi2PSnWgtZCr9",
+   "name": "Auguste, Head Chef",
+   "author": "Tony Omega",
+   "description": "Auguste is a sharp, Gordon Ramsay-style head chef who talks you through any dish, from sourcing top-quality ingredients to a timed cook sequence.",
+   "url": "https://x.ai/bot/JXPsJpskNi2PSnWgtZCr9"
+  },
+  {
+   "id": "food-recipes-dining-Xfry0mJwTEklwncrE8QB0",
+   "code": "Xfry0mJwTEklwncrE8QB0",
+   "name": "Bachat Bhai",
+   "author": "Karan Bansal",
+   "description": "Checks your grocery cart on Zepto, Instamart, Blinkit and Flipkart Minutes with real fees, tells you the cheapest and orders on your yes.",
+   "url": "https://x.ai/bot/Xfry0mJwTEklwncrE8QB0"
+  },
+  {
+   "id": "food-recipes-dining-tkuHFJbqF31uCpgYpC41N",
+   "code": "tkuHFJbqF31uCpgYpC41N",
+   "name": "Base Bot",
+   "author": "𝒜𝔲𝔰𝔱𝔦𝔫 Lofton",
+   "description": "Run your day the easy way: a short morning brief, quiet check-ins only when something matters, an evening wrap-up, and your to-do and grocery lists.",
+   "url": "https://x.ai/bot/tkuHFJbqF31uCpgYpC41N"
+  },
+  {
+   "id": "food-recipes-dining-ee13wSGPrFYqdZAJnGfI4",
+   "code": "ee13wSGPrFYqdZAJnGfI4",
+   "name": "Basket Allergen",
+   "author": "Drew",
+   "description": "Scores a grocery basket against a household allergen profile using Open Food Facts.",
+   "url": "https://x.ai/bot/ee13wSGPrFYqdZAJnGfI4"
+  },
+  {
+   "id": "food-recipes-dining-aC5QtJUD9gDqt7l1vKAZd",
+   "code": "aC5QtJUD9gDqt7l1vKAZd",
+   "name": "Batch-Cook Kitchen",
+   "author": "Valen",
+   "description": "Cook once, feed the family all week: plans 3-5 batch anchors from your pantry, with adaptations for babies, toddlers, picky kids and grown-ups.",
+   "url": "https://x.ai/bot/aC5QtJUD9gDqt7l1vKAZd"
+  },
+  {
+   "id": "food-recipes-dining-GWhaW12XmCnWsFli4Phny",
+   "code": "GWhaW12XmCnWsFli4Phny",
+   "name": "Birthday Party",
+   "author": "Marcell Hazzard",
+   "description": "Birthday freebie finder: give it a zip code and birthday and it finds free food, drinks and perks nearby, how to claim them, and reminds you to sign up.",
+   "url": "https://x.ai/bot/GWhaW12XmCnWsFli4Phny"
+  },
+  {
+   "id": "food-recipes-dining-0AeRdltc-UrzK1QxRcRJN",
+   "code": "0AeRdltc-UrzK1QxRcRJN",
+   "name": "Bookmark Kitchen",
+   "author": "Erinn Nick",
+   "description": "Turns the food posts you save in your X bookmarks into real recipes, sorted by cuisine and meal, with a shopping list ready to go.",
+   "url": "https://x.ai/bot/0AeRdltc-UrzK1QxRcRJN"
+  },
+  {
+   "id": "food-recipes-dining-ouezkwgSV26h5aMS0Pa4m",
+   "code": "ouezkwgSV26h5aMS0Pa4m",
+   "name": "Bot My Meals",
+   "author": "TimDOES",
+   "description": "Runs weekly dinner planning for one household, menu through grocery list.",
+   "url": "https://x.ai/bot/ouezkwgSV26h5aMS0Pa4m"
+  },
+  {
+   "id": "food-recipes-dining-YlzTbxg6wPAKYJutJ00rG",
+   "code": "YlzTbxg6wPAKYJutJ00rG",
+   "name": "Brew What You Got",
+   "author": "Vitality 𝙀𝙗𝙖𝙩𝙚𝙯",
+   "description": "Tell it your coffee machine, beans, milk, syrups, and spices, and it gives you cafe-style drink recipes you can make…",
+   "url": "https://x.ai/bot/YlzTbxg6wPAKYJutJ00rG"
+  },
+  {
+   "id": "food-recipes-dining-yS63hbePz0wFMfgTvaNYA",
+   "code": "yS63hbePz0wFMfgTvaNYA",
+   "name": "Bryan Grokson",
+   "author": "Professor X",
+   "description": "Writes a full daily menu for a loved one with diabetes or any other dietary need, matched to the family's own cooking, and emails it every e.",
+   "url": "https://x.ai/bot/yS63hbePz0wFMfgTvaNYA"
+  },
+  {
+   "id": "food-recipes-dining-TIMrxLJHbEEpdr25yYgvL",
+   "code": "TIMrxLJHbEEpdr25yYgvL",
+   "name": "Call A Restaurant Reservation",
+   "author": "",
+   "description": "Phones a restaurant for you to ask for a table, in the voice you pick, then reports back with a transcript as proof. It can add the booking to your calendar or give you a calendar file.",
+   "url": "https://x.ai/bot/TIMrxLJHbEEpdr25yYgvL"
+  },
+  {
+   "id": "food-recipes-dining-Zvmfe2UNApNPNlNGQGnVj",
+   "code": "Zvmfe2UNApNPNlNGQGnVj",
+   "name": "Celiac Scout",
+   "author": "Jeremy Mahoney",
+   "description": "Vets restaurants and menu items for gluten cross-contamination risk, for people with celiac disease or serious gluten intolerance.",
+   "url": "https://x.ai/bot/Zvmfe2UNApNPNlNGQGnVj"
+  },
+  {
+   "id": "food-recipes-dining-Fz4k0xj4eCoXkWlfhBNKx",
+   "code": "Fz4k0xj4eCoXkWlfhBNKx",
+   "name": "Chef",
+   "author": "John",
+   "description": "Your kitchen's chief of staff. Tell Chef what you're hungry for and it hires a brigade of food-named specialist bots, fires the tickets, and runs the line.",
+   "url": "https://x.ai/bot/Fz4k0xj4eCoXkWlfhBNKx"
+  },
+  {
+   "id": "food-recipes-dining-3U6zxtPa1b8GbWheaIr4J",
+   "code": "3U6zxtPa1b8GbWheaIr4J",
+   "name": "Chef",
+   "author": "dogenorway dogenorway",
+   "description": "A home-cooking helper that adapts to the country you live in: seasonal produce, local dishes, holidays, and grocers…",
+   "url": "https://x.ai/bot/3U6zxtPa1b8GbWheaIr4J"
+  },
+  {
+   "id": "food-recipes-dining-PuMm5kYCJgtjzlIMBVkai",
+   "code": "PuMm5kYCJgtjzlIMBVkai",
+   "name": "Chef",
+   "author": "Jack",
+   "description": "Your relaxed personal chef: saves recipes from short-form video and any site, plans the meals you want, keeps a running shopping list.",
+   "url": "https://x.ai/bot/PuMm5kYCJgtjzlIMBVkai"
+  },
+  {
+   "id": "food-recipes-dining-xcDDh2Cxttl4GUoVZaLj8",
+   "code": "xcDDh2Cxttl4GUoVZaLj8",
+   "name": "Chef",
+   "author": "Jordan Keto",
+   "description": "Weekly batch-cooking chef: one big freezer- and microwave-friendly dish for several nights, with recipe, grocery list, Sunday steps and reheating notes.",
+   "url": "https://x.ai/bot/xcDDh2Cxttl4GUoVZaLj8"
+  },
+  {
+   "id": "food-recipes-dining-1CX2xQOCmw885viaWCws5",
+   "code": "1CX2xQOCmw885viaWCws5",
+   "name": "Chef",
+   "author": "Steve",
+   "description": "A personal recipe manager that stores your recipes in a searchable database and finds them by ingredient, cuisine, tags, time, or difficulty.",
+   "url": "https://x.ai/bot/1CX2xQOCmw885viaWCws5"
+  },
+  {
+   "id": "food-recipes-dining-H3LFWOGUBop6BQWysbT12",
+   "code": "H3LFWOGUBop6BQWysbT12",
+   "name": "Chef",
+   "author": "@Totao",
+   "description": "Budget personal chef that plans weekly menus, a single batch-cook session and quick recipes around your diet, budget and household.",
+   "url": "https://x.ai/bot/H3LFWOGUBop6BQWysbT12"
+  },
+  {
+   "id": "food-recipes-dining-5a3AV-NVm_VOVcd2TUJs2",
+   "code": "5a3AV-NVm_VOVcd2TUJs2",
+   "name": "Chef Bob",
+   "author": "Willis Wee",
+   "description": "I'm Bob, a meal-planning companion with a dry sense of humour.",
+   "url": "https://x.ai/bot/5a3AV-NVm_VOVcd2TUJs2"
+  },
+  {
+   "id": "food-recipes-dining-Ed-L-mUFR_9nR2BYMssNF",
+   "code": "Ed-L-mUFR_9nR2BYMssNF",
+   "name": "Chef Chad",
+   "author": "Roman Olschanowsky",
+   "description": "A personal chef bot that keeps liked recipes, tracks pantry stock from photos, plans easy weekly meals, and puts dinner…",
+   "url": "https://x.ai/bot/Ed-L-mUFR_9nR2BYMssNF"
+  },
+  {
+   "id": "food-recipes-dining-lKFVQ4kzUz5_x8srvohP4",
+   "code": "lKFVQ4kzUz5_x8srvohP4",
+   "name": "Chef Chad",
+   "author": "Llama Mama",
+   "description": "Personal chef planner for a household of 3. Simple weeknight meals, shopping lists, HEB digital coupons, and Friday recipe ideas — low-fuss,.",
+   "url": "https://x.ai/bot/lKFVQ4kzUz5_x8srvohP4"
+  },
+  {
+   "id": "food-recipes-dining-7D9za9dKYVTn2uFLjRNGV",
+   "code": "7D9za9dKYVTn2uFLjRNGV",
+   "name": "Chef Ramsey",
+   "author": "Cody Boomer",
+   "description": "Plans no-waste weekly menus, checks every ingredient and price on your grocery store's site, fills the cart and orders pickup only after you approve.",
+   "url": "https://x.ai/bot/7D9za9dKYVTn2uFLjRNGV"
+  },
+  {
+   "id": "food-recipes-dining-5CMeft0nvC4iRV95hEBpj",
+   "code": "5CMeft0nvC4iRV95hEBpj",
+   "name": "Chef Sookie",
+   "author": "Rachel Lecy",
+   "description": "Your meal planning helper. Makes simple weeknight meal plans and grocery lists split by the stores you shop at, using foods your family already eats.",
+   "url": "https://x.ai/bot/5CMeft0nvC4iRV95hEBpj"
+  },
+  {
+   "id": "food-recipes-dining-TK4dlegma4fLQQqMzWkds",
+   "code": "TK4dlegma4fLQQqMzWkds",
+   "name": "Chef by Michael",
+   "author": "Michael Sweet",
+   "description": "Practical pastry recipe R&D and menu partner for dessert businesses. Clear, no cheerleading.",
+   "url": "https://x.ai/bot/TK4dlegma4fLQQqMzWkds"
+  },
+  {
+   "id": "food-recipes-dining-L0h_PZsA40kqf6llumExN",
+   "code": "L0h_PZsA40kqf6llumExN",
+   "name": "Cheff",
+   "author": "mitchell drake",
+   "description": "A weekly grocery planner that builds a budget-fit, store-section shopping list plus healthy, easy dinners with recipe…",
+   "url": "https://x.ai/bot/L0h_PZsA40kqf6llumExN"
+  },
+  {
+   "id": "food-recipes-dining-DDwA5gS_bZGlKKyHGcogB",
+   "code": "DDwA5gS_bZGlKKyHGcogB",
+   "name": "Cheffy",
+   "author": "Matteo Mariani",
+   "description": "Weekday meal planner for two. Plans dinners (and four-handful portions), shopping lists, and daily recipes — Italian…",
+   "url": "https://x.ai/bot/DDwA5gS_bZGlKKyHGcogB"
+  },
+  {
+   "id": "food-recipes-dining-Pknbt_cEfYERLSW-JH7Z0",
+   "code": "Pknbt_cEfYERLSW-JH7Z0",
+   "name": "Coach Tony",
+   "author": "community",
+   "description": "Food coach: logs calories, remembers meals, fills cart.",
+   "url": "https://x.ai/bot/Pknbt_cEfYERLSW-JH7Z0"
+  },
+  {
+   "id": "food-recipes-dining-Z2puBNkxQHcCFZxL5DK7Z",
+   "code": "Z2puBNkxQHcCFZxL5DK7Z",
+   "name": "Coffee Bot",
+   "author": "Scott Pettineo",
+   "description": "Turns every coffee you try into a bag on a good-looking shelf Page, ranked by your score, with recommendations based on your taste.",
+   "url": "https://x.ai/bot/Z2puBNkxQHcCFZxL5DK7Z"
+  },
+  {
+   "id": "food-recipes-dining-486_LeAm6SWbftHgTT5Y8",
+   "code": "486_LeAm6SWbftHgTT5Y8",
+   "name": "Coffee Bot",
+   "author": "Cody Libolt",
+   "description": "A warm coffee companion you visit to chat about whatever's on your mind. It listens, remembers the little things and keeps it a visit, never a help desk.",
+   "url": "https://x.ai/bot/486_LeAm6SWbftHgTT5Y8"
+  },
+  {
+   "id": "food-recipes-dining-XnDt11m1HKznx5vKxCjgi",
+   "code": "XnDt11m1HKznx5vKxCjgi",
+   "name": "Cookbook Builder",
+   "author": "Jenna Gonzales",
+   "description": "Turns your meal plan into a meal-prep cookbook PDF: grocery list, Sunday timeline, recipe pages with grams and protein, plus storage tips.",
+   "url": "https://x.ai/bot/XnDt11m1HKznx5vKxCjgi"
+  },
+  {
+   "id": "food-recipes-dining-rPwl9myovurldixTcbPux",
+   "code": "rPwl9myovurldixTcbPux",
+   "name": "Cousin Earl, the Biscuit Runner",
+   "author": "Barclay",
+   "description": "Your Chuckle Chow Shopper. Hand him a Sunday Supper grocery list and he fills your grocery cart at Amazon Fresh, Walmart, Publix, Costco, or Instacart.",
+   "url": "https://x.ai/bot/rPwl9myovurldixTcbPux"
+  },
+  {
+   "id": "food-recipes-dining-scGXxrePrIAaNmU78kDqL",
+   "code": "scGXxrePrIAaNmU78kDqL",
+   "name": "Crave",
+   "author": "Christopher Lynn",
+   "description": "A picky food friend who finds what's worth eating near you, names the dishes to order, and books the table or places…",
+   "url": "https://x.ai/bot/scGXxrePrIAaNmU78kDqL"
+  },
+  {
+   "id": "food-recipes-dining-f5BhWohmAaB3bAIWdpUSR",
+   "code": "f5BhWohmAaB3bAIWdpUSR",
+   "name": "Crave Coach",
+   "author": "Mike Yeager",
+   "description": "A kitchen buddy for losing weight and kicking sugar cravings: logs meals with photo estimates, tracks your day total…",
+   "url": "https://x.ai/bot/f5BhWohmAaB3bAIWdpUSR"
+  },
+  {
+   "id": "food-recipes-dining-TXGBlz-AEhm_0oGiEmuB1",
+   "code": "TXGBlz-AEhm_0oGiEmuB1",
+   "name": "Dining & Cooking",
+   "author": "Neil Schreiber",
+   "description": "A friendly food assistant that sends a daily dinner idea tailored to your tastes, can pull from your saved X recipe bookmarks.",
+   "url": "https://x.ai/bot/TXGBlz-AEhm_0oGiEmuB1"
+  },
+  {
+   "id": "food-recipes-dining-ut4lZu2vLMn2mq4dzZP6G",
+   "code": "ut4lZu2vLMn2mq4dzZP6G",
+   "name": "Dinner Decided",
+   "author": "Ashley Schendel",
+   "description": "Your personal dinner planner. Picks tonight's dinner, plans the week around your budget and local sales, rescues your pantry.",
+   "url": "https://x.ai/bot/ut4lZu2vLMn2mq4dzZP6G"
+  },
+  {
+   "id": "food-recipes-dining-yrWT9QgctKunkUQkWeo2b",
+   "code": "yrWT9QgctKunkUQkWeo2b",
+   "name": "Dinner Plan",
+   "author": "Marcus",
+   "description": "Snap your fridge, freezer, and pantry and get meals you can make tonight, sized for your family.",
+   "url": "https://x.ai/bot/yrWT9QgctKunkUQkWeo2b"
+  },
+  {
+   "id": "food-recipes-dining-RSNY0OKkZ6i5u-duu4HRM",
+   "code": "RSNY0OKkZ6i5u-duu4HRM",
+   "name": "DishDirectory.com",
+   "author": "Pooria",
+   "description": "On-topic assistant for dishdirectory.com: where to find a dish or restaurant facts.",
+   "url": "https://x.ai/bot/RSNY0OKkZ6i5u-duu4HRM"
+  },
+  {
+   "id": "food-recipes-dining-awlFLMYqyva1uIWxN3Eo_",
+   "code": "awlFLMYqyva1uIWxN3Eo_",
+   "name": "Don't Panic Lite",
+   "author": "joy jones",
+   "description": "Cozy desk buddy that times your tea and coffee, nudges you to drink water and reminds you to take gentle stretch breaks during work hours.",
+   "url": "https://x.ai/bot/awlFLMYqyva1uIWxN3Eo_"
+  },
+  {
+   "id": "food-recipes-dining-J7I56EwtEh0D3yMGhnwSZ",
+   "code": "J7I56EwtEh0D3yMGhnwSZ",
+   "name": "Doordash",
+   "author": "Scott Metcalf",
+   "description": "Your DoorDash operator. Builds carts, tracks credits and DashPass, live-tracks orders, and files work-meal receipts to your expense card.",
+   "url": "https://x.ai/bot/J7I56EwtEh0D3yMGhnwSZ"
+  },
+  {
+   "id": "food-recipes-dining-9ztGgqFRgI-HZd4kALfUc",
+   "code": "9ztGgqFRgI-HZd4kALfUc",
+   "name": "Fake Review Buster",
+   "author": "Jeff Stone",
+   "description": "Checks whether the reviews of any product, restaurant or service are real, and gives a trust-adjusted score from 1 to 10.",
+   "url": "https://x.ai/bot/9ztGgqFRgI-HZd4kALfUc"
+  },
+  {
+   "id": "food-recipes-dining-IxiohUGV-_bzX4rw-35lR",
+   "code": "IxiohUGV-_bzX4rw-35lR",
+   "name": "Farm Boss!",
+   "author": "Maine Coon Breeder",
+   "description": "A regenerative food-forest and farm planting assistant: guild design, organic orchard care, seasonal plant reminders, and botanically accurate teaching.",
+   "url": "https://x.ai/bot/IxiohUGV-_bzX4rw-35lR"
+  },
+  {
+   "id": "food-recipes-dining-9MpfFQtgNM_PfG5_KvSKl",
+   "code": "9MpfFQtgNM_PfG5_KvSKl",
+   "name": "Fetch",
+   "author": "Joe Giordano",
+   "description": "Pet care log for vaccines, meds, flea and tick, grooming and food. A quiet weekly scan nudges only when something is due within 7 days. Not a vet.",
+   "url": "https://x.ai/bot/9MpfFQtgNM_PfG5_KvSKl"
+  },
+  {
+   "id": "food-recipes-dining-ceVK7pI62KFTzjvRGZUJM",
+   "code": "ceVK7pI62KFTzjvRGZUJM",
+   "name": "Food Logger",
+   "author": "Marlon",
+   "description": "Send a menu, food photo or quick text and it estimates the macros and logs the meal to your Cronometer diary. For people who track calories and macros.",
+   "url": "https://x.ai/bot/ceVK7pI62KFTzjvRGZUJM"
+  },
+  {
+   "id": "food-recipes-dining-esVOjO-VVkdgvxX_kxODM",
+   "code": "esVOjO-VVkdgvxX_kxODM",
+   "name": "Food Ordering",
+   "author": "Taylor Caldwell",
+   "description": "Orders you a weekday lunch on DoorDash that fits your diet, tastes, and budget. Each morning it shows you the pick and only orders once you tap yes.",
+   "url": "https://x.ai/bot/esVOjO-VVkdgvxX_kxODM"
+  },
+  {
+   "id": "food-recipes-dining-Q2Vgl6zU_M2PE142tmJnI",
+   "code": "Q2Vgl6zU_M2PE142tmJnI",
+   "name": "Food Run",
+   "author": "Chris",
+   "description": "Builds one restaurant pickup or delivery cart at a time, checks your rewards, reads back the store, items, timing, and total, then stops so you can pay.",
+   "url": "https://x.ai/bot/Q2Vgl6zU_M2PE142tmJnI"
+  },
+  {
+   "id": "food-recipes-dining-6DuTZ4NrJazU1YO4Llcx0",
+   "code": "6DuTZ4NrJazU1YO4Llcx0",
+   "name": "Food Truck Marketplace CTO",
+   "author": "Alex",
+   "description": "Technical co-founder for a QR-first food-truck ordering product: ship, fix, and operate without exposing the private stack.",
+   "url": "https://x.ai/bot/6DuTZ4NrJazU1YO4Llcx0"
+  },
+  {
+   "id": "food-recipes-dining-zSiLsURBgkKHhx0V9Wok2",
+   "code": "zSiLsURBgkKHhx0V9Wok2",
+   "name": "Forced Human Touches",
+   "author": "Scott",
+   "description": "Weekly anti-automation relationship coach. Proposes 3 named people and one concrete non-chat human move each (walk-by, voice note, public credit, coffee.",
+   "url": "https://x.ai/bot/zSiLsURBgkKHhx0V9Wok2"
+  },
+  {
+   "id": "food-recipes-dining-RrhhTc7Numx26riQnWNWI",
+   "code": "RrhhTc7Numx26riQnWNWI",
+   "name": "Fridge List",
+   "author": "Screaming Chicken",
+   "description": "Snap your fridge and pantry shelves and get a running list with fill levels, an auto shopping list, and quick meal…",
+   "url": "https://x.ai/bot/RrhhTc7Numx26riQnWNWI"
+  },
+  {
+   "id": "food-recipes-dining-fJDtqjOqB4NddEV0D3FZN",
+   "code": "fJDtqjOqB4NddEV0D3FZN",
+   "name": "Fuel",
+   "author": "Joe Pellegrino",
+   "description": "A food coach that logs calories and macros, remembers your usual foods, checks in at every meal, and builds fast-food…",
+   "url": "https://x.ai/bot/fJDtqjOqB4NddEV0D3FZN"
+  },
+  {
+   "id": "food-recipes-dining-UFKxL8MM1NFCYsaevZV16",
+   "code": "UFKxL8MM1NFCYsaevZV16",
+   "name": "GYM Food Maker",
+   "author": "Charlie OS ᯅ𝕏 Rodriguez Garcia",
+   "description": "High-protein meal planner for muscle building from what you actually buy, with calories and protein.",
+   "url": "https://x.ai/bot/UFKxL8MM1NFCYsaevZV16"
+  },
+  {
+   "id": "food-recipes-dining-4oMrw9BedmjmQQbZdettr",
+   "code": "4oMrw9BedmjmQQbZdettr",
+   "name": "Gate Coffee",
+   "author": "Randy Hentz",
+   "description": "Finds the closest mobile-order Starbucks (or Dunkin', when you ask) to your airport gate and places your usual order once you confirm and arrive.",
+   "url": "https://x.ai/bot/4oMrw9BedmjmQQbZdettr"
+  },
+  {
+   "id": "food-recipes-dining-lr3m3njdFG6KbeS9tNGx8",
+   "code": "lr3m3njdFG6KbeS9tNGx8",
+   "name": "George",
+   "author": "Brandon Smithwrick",
+   "description": "Personal trainer and nutritionist: writes your weekly training plan with progressive overload and adjusts food to your weight trend.",
+   "url": "https://x.ai/bot/lr3m3njdFG6KbeS9tNGx8"
+  },
+  {
+   "id": "food-recipes-dining-X-GV3cVSzrOJTcrVEHoop",
+   "code": "X-GV3cVSzrOJTcrVEHoop",
+   "name": "GroCook",
+   "author": "Alejo Camargo",
+   "description": "Weekly meal-prep helper: plan dinners (or more), portion bags meal-kit style, sourced recipes, optional Canva cards…",
+   "url": "https://x.ai/bot/X-GV3cVSzrOJTcrVEHoop"
+  },
+  {
+   "id": "food-recipes-dining-K-bz2_bFptZdWAAW7Phxp",
+   "code": "K-bz2_bFptZdWAAW7Phxp",
+   "name": "Grocery Bot",
+   "author": "Brantley Brumley",
+   "description": "Logs grocery receipts, flags perishables before they spoil, and builds lists from planned meals.",
+   "url": "https://x.ai/bot/K-bz2_bFptZdWAAW7Phxp"
+  },
+  {
+   "id": "food-recipes-dining-_SRTioxlU87XALDdBXsie",
+   "code": "_SRTioxlU87XALDdBXsie",
+   "name": "Grocery Bot",
+   "author": "Laura Huang",
+   "description": "Builds weekly Whole Foods and Instacart grocery carts, skips vacation weeks, and can watch a meat subscription…",
+   "url": "https://x.ai/bot/_SRTioxlU87XALDdBXsie"
+  },
+  {
+   "id": "food-recipes-dining-JY9Ly_AvMkR8iGuzJ7EJ1",
+   "code": "JY9Ly_AvMkR8iGuzJ7EJ1",
+   "name": "Grocery Bot",
+   "author": "A",
+   "description": "Builds the cheapest review-ready Instacart carts from a list and stops before checkout.",
+   "url": "https://x.ai/bot/JY9Ly_AvMkR8iGuzJ7EJ1"
+  },
+  {
+   "id": "food-recipes-dining-k-bz2_bfptzdwaaw7phxp",
+   "code": "k-bz2_bfptzdwaaw7phxp",
+   "name": "Grocery Bot",
+   "author": "Brantley",
+   "description": "Receipt-first grocery tracker that also builds meal shopping lists.",
+   "url": "https://x.ai/bot/k-bz2_bfptzdwaaw7phxp"
+  },
+  {
+   "id": "food-recipes-dining-Y7LbP6p5EBFjfdTp69cKr",
+   "code": "Y7LbP6p5EBFjfdTp69cKr",
+   "name": "Grocery Cart Planner",
+   "author": "Elie",
+   "description": "Plans an Instacart grocery cart from meal ideas, recipes, and staples, respecting diet, brands, stores, and budget.",
+   "url": "https://x.ai/bot/Y7LbP6p5EBFjfdTp69cKr"
+  },
+  {
+   "id": "food-recipes-dining-D5Eyscf3muDiDNq1VjaJ1",
+   "code": "D5Eyscf3muDiDNq1VjaJ1",
+   "name": "Grocery Lord",
+   "author": "George-Thomas Pugh",
+   "description": "Deal-aware grocery bot for busy households. Builds meal plans from live store ads and coupons, keeps attributable savings honest, and shops.",
+   "url": "https://x.ai/bot/D5Eyscf3muDiDNq1VjaJ1"
+  },
+  {
+   "id": "food-recipes-dining-ka0xjh_4_XaxWG4pmFqyu",
+   "code": "ka0xjh_4_XaxWG4pmFqyu",
+   "name": "Grocery Runner",
+   "author": "Ryan",
+   "description": "A cute house-elf home helper for personal life: Amazon shopping, calendars, email drafts, light social, and household asks. No business tasks.",
+   "url": "https://x.ai/bot/ka0xjh_4_XaxWG4pmFqyu"
+  },
+  {
+   "id": "food-recipes-dining-dZNCrdUTLuGU4CqFIlsVA",
+   "code": "dZNCrdUTLuGU4CqFIlsVA",
+   "name": "Grocery Runner",
+   "author": "Ryan Gallup",
+   "description": "Personal Instacart grocery assistant. Builds carts from lists and recipes, previews totals, places only after you say go, logs inventory with estimated…",
+   "url": "https://x.ai/bot/dZNCrdUTLuGU4CqFIlsVA"
+  },
+  {
+   "id": "food-recipes-dining-nGAMaHjivaYqWLcWxZJ17",
+   "code": "nGAMaHjivaYqWLcWxZJ17",
+   "name": "Grocery Saver",
+   "author": "Digital Daisy",
+   "description": "Helps you spend less on groceries with budget meal plans, shopping lists, store price comparisons, weekly deals…",
+   "url": "https://x.ai/bot/nGAMaHjivaYqWLcWxZJ17"
+  },
+  {
+   "id": "food-recipes-dining-0JEs5P-XFbJw6fSsticl8",
+   "code": "0JEs5P-XFbJw6fSsticl8",
+   "name": "Grocery · Clip & Cart",
+   "author": "BC",
+   "description": "Clips your grocery coupons, builds the weekly list, and stages pickup. You approve before anything gets ordered. Works with any grocery chain you set up.",
+   "url": "https://x.ai/bot/0JEs5P-XFbJw6fSsticl8"
+  },
+  {
+   "id": "food-recipes-dining-bjQaTbH4Oe2G0lNxb2HBF",
+   "code": "bjQaTbH4Oe2G0lNxb2HBF",
+   "name": "Grok Apron",
+   "author": "Gavin McMahon",
+   "description": "Leverages your grocery store’s weekly ad to build a cost-effective meal plan for your family.",
+   "url": "https://x.ai/bot/bjQaTbH4Oe2G0lNxb2HBF"
+  },
+  {
+   "id": "food-recipes-dining-2lXpzDLP4YQwbrXBX0HaI",
+   "code": "2lXpzDLP4YQwbrXBX0HaI",
+   "name": "Grok Pot",
+   "author": "Vantage Rock",
+   "description": "Acts as the kitchen desk for a household, narrowing nearby delivery choices down to a short list and loading the basket without spending a penny until you…",
+   "url": "https://x.ai/bot/2lXpzDLP4YQwbrXBX0HaI"
+  },
+  {
+   "id": "food-recipes-dining-y2cVUIcWck2c-ktSehtbw",
+   "code": "y2cVUIcWck2c-ktSehtbw",
+   "name": "Groksters Anonymous",
+   "author": "Jay",
+   "description": "A funny-but-caring support group for people hooked on building bots: confessions, stretches, a coffee tip, a roast of your bot count and a nudge to take breaks.",
+   "url": "https://x.ai/bot/y2cVUIcWck2c-ktSehtbw"
+  },
+  {
+   "id": "food-recipes-dining-BjePH3vrRnlXYe2zweduL",
+   "code": "BjePH3vrRnlXYe2zweduL",
+   "name": "Homie",
+   "author": "ᑕᕼIᑕᗩᘜO MAGA",
+   "description": "Home bot for kitchen and health: meal ideas, grocery carts you review before checkout, food and water logging, and practical daily habits.",
+   "url": "https://x.ai/bot/BjePH3vrRnlXYe2zweduL"
+  },
+  {
+   "id": "food-recipes-dining-fwgGIkoWl583wUS9VtqVO",
+   "code": "fwgGIkoWl583wUS9VtqVO",
+   "name": "JCal Collector",
+   "author": "Ziv Damary",
+   "description": "Monitors @Jason 24/7 for wine-fueled X Money giveaway sprees — arming the radar right after his 3rd glass of cabernet and pausing right after his.",
+   "url": "https://x.ai/bot/fwgGIkoWl583wUS9VtqVO"
+  },
+  {
+   "id": "food-recipes-dining-3nr2aS6TwbnNwRaQv6A-N",
+   "code": "3nr2aS6TwbnNwRaQv6A-N",
+   "name": "Julia",
+   "author": "John Washburn",
+   "description": "A warm house chef that plans your family's meals on a regular rhythm, keeps a recipe book, and builds priced grocery pickup carts across your stores to review.",
+   "url": "https://x.ai/bot/3nr2aS6TwbnNwRaQv6A-N"
+  },
+  {
+   "id": "food-recipes-dining-5eVWbPiZUJt8HPqnjVlpG",
+   "code": "5eVWbPiZUJt8HPqnjVlpG",
+   "name": "Kitchen",
+   "author": "Johannes de Jager",
+   "description": "Recipes from what you have, weekly meal plans, and shopping lists or carts, with allergies treated as hard rules.",
+   "url": "https://x.ai/bot/5eVWbPiZUJt8HPqnjVlpG"
+  },
+  {
+   "id": "food-recipes-dining-Uyf8BCU9kqlh2Z4nRAtp1",
+   "code": "Uyf8BCU9kqlh2Z4nRAtp1",
+   "name": "Kitchen",
+   "author": "Ryan Peterson",
+   "description": "Tracks household food and meal history, then suggests dinners from what’s on hand: one familiar liked dish and one new recipe. Learns from grocery.",
+   "url": "https://x.ai/bot/Uyf8BCU9kqlh2Z4nRAtp1"
+  },
+  {
+   "id": "food-recipes-dining-SD3AtfO9y4ndQ1wk1Z9Cq",
+   "code": "SD3AtfO9y4ndQ1wk1Z9Cq",
+   "name": "Kitchen Affiliate Ops",
+   "author": "Good Peeps",
+   "description": "Installable Ops desk for US Associates kitchen decision guides: Research→Coder→Verifier→deploy with hard honesty gates…",
+   "url": "https://x.ai/bot/SD3AtfO9y4ndQ1wk1Z9Cq"
+  },
+  {
+   "id": "food-recipes-dining-1v1y1kPrZi-BxoIZpmlbx",
+   "code": "1v1y1kPrZi-BxoIZpmlbx",
+   "name": "Kitchen Studio",
+   "author": "Erinn Nick",
+   "description": "Builds a custom, ad-free recipe hub on a shareable Grok Page, live website, or your own domain with zero coding.",
+   "url": "https://x.ai/bot/1v1y1kPrZi-BxoIZpmlbx"
+  },
+  {
+   "id": "food-recipes-dining-S1mqvu6u1ObCnrhaqfl3F",
+   "code": "S1mqvu6u1ObCnrhaqfl3F",
+   "name": "Kroger Coupons & Dinner Planner",
+   "author": "justin",
+   "description": "Clips your Kroger digital coupons based on what you actually buy, then plans weeknight dinners around this week's deals…",
+   "url": "https://x.ai/bot/S1mqvu6u1ObCnrhaqfl3F"
+  },
+  {
+   "id": "food-recipes-dining-s4VX-QEFQg95Qyxns1WUi",
+   "code": "s4VX-QEFQg95Qyxns1WUi",
+   "name": "Ladle",
+   "author": "Cyber Viking",
+   "description": "A household cook and meal planner that turns what's in your fridge and pantry into safe, cheap dinners and shopping lists. Never buys without your OK.",
+   "url": "https://x.ai/bot/s4VX-QEFQg95Qyxns1WUi"
+  },
+  {
+   "id": "food-recipes-dining-L3gvCMYKY3q0IH93AiYK6",
+   "code": "L3gvCMYKY3q0IH93AiYK6",
+   "name": "Local Lulu",
+   "author": "Frank Gonzalez",
+   "description": "Surfaces personal city events you’d actually enjoy: sports clubs, festivals, food trucks, and local happenings.",
+   "url": "https://x.ai/bot/L3gvCMYKY3q0IH93AiYK6"
+  },
+  {
+   "id": "food-recipes-dining-87ziT4BuuJZmtIQm7IW-e",
+   "code": "87ziT4BuuJZmtIQm7IW-e",
+   "name": "Longhua Restaurant",
+   "author": "卫平 钟",
+   "description": "Longhua Restaurant 龙华餐馆: any Chinese recipe in plain English, with the key words in 汉字 + pinyin, a line to order it out…",
+   "url": "https://x.ai/bot/87ziT4BuuJZmtIQm7IW-e"
+  },
+  {
+   "id": "food-recipes-dining-8tv5B1XUrpqWJ2mp1tkk6",
+   "code": "8tv5B1XUrpqWJ2mp1tkk6",
+   "name": "Market Loop",
+   "author": "Marcel Viana",
+   "description": "Recurring grocery automation: turns purchase history into weekly/biweekly/monthly lists, prepares delivery carts from saved lists, handles voice.",
+   "url": "https://x.ai/bot/8tv5B1XUrpqWJ2mp1tkk6"
+  },
+  {
+   "id": "food-recipes-dining-CiREEoV-9rjUaatxtiXFf",
+   "code": "CiREEoV-9rjUaatxtiXFf",
+   "name": "Meal & Savings Planner",
+   "author": "Mister X",
+   "description": "Meal and grocery helper for busy parents: weekly plans around tastes, allergies and budget, aisle-sorted lists, coupons, spend tracking; asks before buying.",
+   "url": "https://x.ai/bot/CiREEoV-9rjUaatxtiXFf"
+  },
+  {
+   "id": "food-recipes-dining-zFlBJV-8p1LwP4xgleCwl",
+   "code": "zFlBJV-8p1LwP4xgleCwl",
+   "name": "Meal Ingredient Shopper",
+   "author": "",
+   "description": "Turns any recipe, from a link, photo, PDF, or plain description, into a scaled ingredient list and an optional grocery cart that you approve.",
+   "url": "https://x.ai/bot/zFlBJV-8p1LwP4xgleCwl"
+  },
+  {
+   "id": "food-recipes-dining-QaiDwQMb8GeGanoBQWk1o",
+   "code": "QaiDwQMb8GeGanoBQWk1o",
+   "name": "Meal Plan Pro",
+   "author": "LifeStyle",
+   "description": "A no-fluff meal prep planner: a high-protein week cooked in two sessions, a shelf-ordered grocery list, and it learns what you like.",
+   "url": "https://x.ai/bot/QaiDwQMb8GeGanoBQWk1o"
+  },
+  {
+   "id": "food-recipes-dining-BR_bVaj5zOasyjWX6ygGg",
+   "code": "BR_bVaj5zOasyjWX6ygGg",
+   "name": "Meal Planner",
+   "author": "Kelly Baltzell",
+   "description": "Weekly menus, aisle-sorted grocery lists, leftovers plans, and allergy or budget tags for households that want less dinner stress.",
+   "url": "https://x.ai/bot/BR_bVaj5zOasyjWX6ygGg"
+  },
+  {
+   "id": "food-recipes-dining-zNCuJ-OgH_dAGuatUJM49",
+   "code": "zNCuJ-OgH_dAGuatUJM49",
+   "name": "Meal Planner",
+   "author": "Jeffrey McLeod",
+   "description": "Every weekend you get a week of dinners that fit your household, budget and tastes, plus one grocery list sorted by store aisle.",
+   "url": "https://x.ai/bot/zNCuJ-OgH_dAGuatUJM49"
+  },
+  {
+   "id": "food-recipes-dining-eR7mprRgakZkbxZyC2rz_",
+   "code": "eR7mprRgakZkbxZyC2rz_",
+   "name": "Meal Planner",
+   "author": "Tobi",
+   "description": "Plans your week's meals around what your household likes, what's on sale nearby, and what's already in the fridge.",
+   "url": "https://x.ai/bot/eR7mprRgakZkbxZyC2rz_"
+  },
+  {
+   "id": "food-recipes-dining-rkC1p5Dq8GvCNBnbZDdXu",
+   "code": "rkC1p5Dq8GvCNBnbZDdXu",
+   "name": "Meal Planner and Grocery List",
+   "author": "James Rule XRP ⟐",
+   "description": "Plans a week of dinners that fit your diet, budget and time, then turns them into a grocery list grouped by store section, ready to paste.",
+   "url": "https://x.ai/bot/rkC1p5Dq8GvCNBnbZDdXu"
+  },
+  {
+   "id": "food-recipes-dining-lj8-Co5IA-wbN4T84zK8L",
+   "code": "lj8-Co5IA-wbN4T84zK8L",
+   "name": "Meal Planning & Grocery Buying Bot",
+   "author": "Scott",
+   "description": "Weekly-ad dinners, grocery list, cart load with spend confirm.",
+   "url": "https://x.ai/bot/lj8-Co5IA-wbN4T84zK8L"
+  },
+  {
+   "id": "food-recipes-dining-Z2NO-YFZ0VE3uKon1Sva0",
+   "code": "Z2NO-YFZ0VE3uKon1Sva0",
+   "name": "Meal Prep Desk",
+   "author": "xs10chill",
+   "description": "Builds a cook-once meal prep from one line—meals, grams, shop list, and what to freeze.",
+   "url": "https://x.ai/bot/Z2NO-YFZ0VE3uKon1Sva0"
+  },
+  {
+   "id": "food-recipes-dining-9CAijdJobViu5luVV9mRX",
+   "code": "9CAijdJobViu5luVV9mRX",
+   "name": "Meal Prep Molly",
+   "author": "Frank",
+   "description": "Keeps a fixed weekly grocery list and reorders it through a delivering grocer. Same staples every week or a little variance, turned into a one message job.",
+   "url": "https://x.ai/bot/9CAijdJobViu5luVV9mRX"
+  },
+  {
+   "id": "food-recipes-dining-86OeiM-b3nKbX49omIKR-",
+   "code": "86OeiM-b3nKbX49omIKR-",
+   "name": "Meal Snap",
+   "author": "Keith Nguyen",
+   "description": "Turn a meal photo into a shareable card using your original image plus ingredients, estimated calories, and short…",
+   "url": "https://x.ai/bot/86OeiM-b3nKbX49omIKR-"
+  },
+  {
+   "id": "food-recipes-dining-WkGExRci7Q1LO9B1nfaCn",
+   "code": "WkGExRci7Q1LO9B1nfaCn",
+   "name": "Meal planner",
+   "author": "@deni0107",
+   "description": "Plans simple, high-protein weeknight dinners, then fills your online grocery cart for delivery. Nothing is ordered without your approval.",
+   "url": "https://x.ai/bot/WkGExRci7Q1LO9B1nfaCn"
+  },
+  {
+   "id": "food-recipes-dining-LIV-0p821TpKRp05HFm4h",
+   "code": "LIV-0p821TpKRp05HFm4h",
+   "name": "Menu Voice Recipe Cards",
+   "author": "Myke Mueller",
+   "description": "Menu coach for pop-up food vendors that builds voice-ready recipe cards.",
+   "url": "https://x.ai/bot/LIV-0p821TpKRp05HFm4h"
+  },
+  {
+   "id": "food-recipes-dining-DSRuI0DpBj7hFcvXahmdv",
+   "code": "DSRuI0DpBj7hFcvXahmdv",
+   "name": "Mise",
+   "author": "Ryan Steen",
+   "description": "Finds great from-scratch recipes, renders them as tabular Cooking for Engineers cards and plans the week's dinners around your local grocery ads.",
+   "url": "https://x.ai/bot/DSRuI0DpBj7hFcvXahmdv"
+  },
+  {
+   "id": "food-recipes-dining-tFa9bbghjyyqiU5Je3rhm",
+   "code": "tFa9bbghjyyqiU5Je3rhm",
+   "name": "Mrs. Patmore",
+   "author": "Matt",
+   "description": "Household dinner planner with a brisk British kitchen voice.",
+   "url": "https://x.ai/bot/tFa9bbghjyyqiU5Je3rhm"
+  },
+  {
+   "id": "food-recipes-dining-NWQMG1wpcC_CBzuo0sqpT",
+   "code": "NWQMG1wpcC_CBzuo0sqpT",
+   "name": "Night Out",
+   "author": "ALK Trading",
+   "description": "Plans your night out in any city: tell it the vibe, place and rough time, and it builds dinner, an event and a backup, with reservations and tickets.",
+   "url": "https://x.ai/bot/NWQMG1wpcC_CBzuo0sqpT"
+  },
+  {
+   "id": "food-recipes-dining-Lrtq_tI_S6CP14OLE0vJv",
+   "code": "Lrtq_tI_S6CP14OLE0vJv",
+   "name": "Novaterra Foods",
+   "author": "Xavier Ortiz",
+   "description": "Space food R&D bot: upscale global fusion food concepts for orbit, Starship-style transit, Moon bases and Mars, each with cited science and a home recipe.",
+   "url": "https://x.ai/bot/Lrtq_tI_S6CP14OLE0vJv"
+  },
+  {
+   "id": "food-recipes-dining-mhKV182_V9o24wD4nHoGV",
+   "code": "mhKV182_V9o24wD4nHoGV",
+   "name": "Order Food in Chinese — Daily Coach",
+   "author": "卫平 钟",
+   "description": "Learn one Mandarin phrase for ordering food each day, starting with 我要这个 (I'll have this), plus one classic idiom…",
+   "url": "https://x.ai/bot/mhKV182_V9o24wD4nHoGV"
+  },
+  {
+   "id": "food-recipes-dining-Xl59HiB0NBBY86GG0CNa9",
+   "code": "Xl59HiB0NBBY86GG0CNa9",
+   "name": "Pantry",
+   "author": "Jeremy Parr",
+   "description": "Pantry is a personal food assistant. Its one job: handle whatever food task its owner brings, from deciding what to eat to getting the groceries.",
+   "url": "https://x.ai/bot/Xl59HiB0NBBY86GG0CNa9"
+  },
+  {
+   "id": "food-recipes-dining-eJX-v3d4p6EPXJgKnidIT",
+   "code": "eJX-v3d4p6EPXJgKnidIT",
+   "name": "Pantry",
+   "author": "Chris",
+   "description": "Fills one online grocery cart at the retailer you name, asks whenever anything is unclear, and stops on the cart page…",
+   "url": "https://x.ai/bot/eJX-v3d4p6EPXJgKnidIT"
+  },
+  {
+   "id": "food-recipes-dining-Td7GCvrGD7pBiocyeWR4C",
+   "code": "Td7GCvrGD7pBiocyeWR4C",
+   "name": "Pantry Chef",
+   "author": "@jackdalbrechtjr",
+   "description": "Inventories everything in your kitchen from photos, then builds a weekly meal-prep plan, weeknight recipes…",
+   "url": "https://x.ai/bot/Td7GCvrGD7pBiocyeWR4C"
+  },
+  {
+   "id": "food-recipes-dining-ybCIdKF4ZpZcdbOYofFfI",
+   "code": "ybCIdKF4ZpZcdbOYofFfI",
+   "name": "Pantry Pal",
+   "author": "bEastTennesseean",
+   "description": "Friendly pantry clerk that turns your recipes, pantry, grocery receipts and stores' real weekly sale ads into shopping lists and meal plans.",
+   "url": "https://x.ai/bot/ybCIdKF4ZpZcdbOYofFfI"
+  },
+  {
+   "id": "food-recipes-dining-BiPCHML6s0cTYPhm4c72_",
+   "code": "BiPCHML6s0cTYPhm4c72_",
+   "name": "PantryPatrol",
+   "author": "Froy Morales",
+   "description": "Monitors MyFitnessPal food logs, analyzes what you actually eat, then builds a ready H-E-B grocery delivery cart—hands-free restock. Future state:.",
+   "url": "https://x.ai/bot/BiPCHML6s0cTYPhm4c72_"
+  },
+  {
+   "id": "food-recipes-dining-K0pXH0afB-Gvipvclt8g9",
+   "code": "K0pXH0afB-Gvipvclt8g9",
+   "name": "Personal Shopper",
+   "author": "Corben Hogan",
+   "description": "Personal shopper for groceries, big stores and niche shops, working inside your own accounts and buying only after you confirm.",
+   "url": "https://x.ai/bot/K0pXH0afB-Gvipvclt8g9"
+  },
+  {
+   "id": "food-recipes-dining-RgeHSolZj0BrrpWsn92CA",
+   "code": "RgeHSolZj0BrrpWsn92CA",
+   "name": "Petrona",
+   "author": "Rodrigo",
+   "description": "Argentine home cook: helps decide what to eat, what to cook from your fridge and the week's menu, citing recipes from real Argentine cookbooks. Spanish.",
+   "url": "https://x.ai/bot/RgeHSolZj0BrrpWsn92CA"
+  },
+  {
+   "id": "food-recipes-dining-f4nkPC09h3YZ673A3bVX1",
+   "code": "f4nkPC09h3YZ673A3bVX1",
+   "name": "PlatePal",
+   "author": "Lola S.",
+   "description": "Tell PlatePal what's in your fridge and get quick recipe ideas, ways to use up leftovers tonight, and easy shopping…",
+   "url": "https://x.ai/bot/f4nkPC09h3YZ673A3bVX1"
+  },
+  {
+   "id": "food-recipes-dining-BKc15xZxPubB79NV4fD8n",
+   "code": "BKc15xZxPubB79NV4fD8n",
+   "name": "PlatedBot",
+   "author": "@iandaydreams",
+   "description": "Cook companion that turns what you have into a plated meal, then hands you a copy-paste X post of the short recipe for you to easily share.",
+   "url": "https://x.ai/bot/BKc15xZxPubB79NV4fD8n"
+  },
+  {
+   "id": "food-recipes-dining-ry3_OqMuVwRF-nTt83VdQ",
+   "code": "ry3_OqMuVwRF-nTt83VdQ",
+   "name": "Pumpkin Spice Bot",
+   "author": "Erinn Nick",
+   "description": "An all-things-pumpkin bot: pumpkin shokupan and cinnamon roll recipes, custom pumpkin recipes from ingredients on hand…",
+   "url": "https://x.ai/bot/ry3_OqMuVwRF-nTt83VdQ"
+  },
+  {
+   "id": "food-recipes-dining-AvoLXgs0Kcrlkxzl6VNHN",
+   "code": "AvoLXgs0Kcrlkxzl6VNHN",
+   "name": "Purrfile",
+   "author": "Sam E",
+   "description": "Your cat's private file and first responder: logs food, litter, weight, meds and moods, preps vet visits, and in a scare tells you plainly when to go now.",
+   "url": "https://x.ai/bot/AvoLXgs0Kcrlkxzl6VNHN"
+  },
+  {
+   "id": "food-recipes-dining-gdnpegYIyG7iwFgg4cla-",
+   "code": "gdnpegYIyG7iwFgg4cla-",
+   "name": "Radius Menu Price",
+   "author": "Myke Mueller",
+   "description": "Maps a local restaurant price ring so menus stay competitive.",
+   "url": "https://x.ai/bot/gdnpegYIyG7iwFgg4cla-"
+  },
+  {
+   "id": "food-recipes-dining-zMMAByt3oW_t2ua1NZa9X",
+   "code": "zMMAByt3oW_t2ua1NZa9X",
+   "name": "Ramp",
+   "author": "Scott Metcalf",
+   "description": "Finds remote-meal receipts in work email and attaches them to matching expense transactions after you approve.",
+   "url": "https://x.ai/bot/zMMAByt3oW_t2ua1NZa9X"
+  },
+  {
+   "id": "food-recipes-dining-9J6OME5--PpDmAuCxFYBG",
+   "code": "9J6OME5--PpDmAuCxFYBG",
+   "name": "Rare Combo Catalog",
+   "author": "Bianca Bell-Chambers",
+   "description": "Maps rare disease combinations into a gap table, kitchen-table page, and clinician discussion prompts for workup talk only, not diagnosis.",
+   "url": "https://x.ai/bot/9J6OME5--PpDmAuCxFYBG"
+  },
+  {
+   "id": "food-recipes-dining-uC-mKHdqU5M8w_C19K1hf",
+   "code": "uC-mKHdqU5M8w_C19K1hf",
+   "name": "Recipe Bot",
+   "author": "Pierce Wetter",
+   "description": "Finds the most popular recipe on X each week and turns it into a Cooking-for-Engineers process-table card.",
+   "url": "https://x.ai/bot/uC-mKHdqU5M8w_C19K1hf"
+  },
+  {
+   "id": "food-recipes-dining-Um9BXSFVNtJjxl6KJTCUv",
+   "code": "Um9BXSFVNtJjxl6KJTCUv",
+   "name": "Recipe Cleaner",
+   "author": "Alex",
+   "description": "Turns a messy recipe page or a fridge list into a clean, photo-forward PDF.",
+   "url": "https://x.ai/bot/Um9BXSFVNtJjxl6KJTCUv"
+  },
+  {
+   "id": "food-recipes-dining-DLJrjho7XhL3-hLCmXGn_",
+   "code": "DLJrjho7XhL3-hLCmXGn_",
+   "name": "Recipe Generator",
+   "author": "Red N. Eckerie",
+   "description": "Name any dish and get a ready-to-cook recipe workbook from a well-regarded source, with servings that scale, a grocery list and source notes.",
+   "url": "https://x.ai/bot/DLJrjho7XhL3-hLCmXGn_"
+  },
+  {
+   "id": "food-recipes-dining-tUfaBrGb8iT_MMfVJ-gEo",
+   "code": "tUfaBrGb8iT_MMfVJ-gEo",
+   "name": "Recipe Maker",
+   "author": "Juhani Kamila",
+   "description": "Writes original multilingual recipes with cookable steps, generates plated photos, and delivers them as verified packs…",
+   "url": "https://x.ai/bot/tUfaBrGb8iT_MMfVJ-gEo"
+  },
+  {
+   "id": "food-recipes-dining-fzMH-d8m57p0oHu2oh4mi",
+   "code": "fzMH-d8m57p0oHu2oh4mi",
+   "name": "Recipes",
+   "author": "Stacy Burnett",
+   "description": "A friendly kitchen helper that finds and adapts recipes, helps plan meals and keeps every recipe saved and organized by category.",
+   "url": "https://x.ai/bot/fzMH-d8m57p0oHu2oh4mi"
+  },
+  {
+   "id": "food-recipes-dining--MDKrg_7iCLJnqhvyBlyf",
+   "code": "-MDKrg_7iCLJnqhvyBlyf",
+   "name": "Recipes For My Dragon Flaps",
+   "author": "Michelle La Velle",
+   "description": "Friendly recipe helper that gives clear, practical recipes and adapts them to your diet, like vegan, vegetarian or make-ahead meals.",
+   "url": "https://x.ai/bot/-MDKrg_7iCLJnqhvyBlyf"
+  },
+  {
+   "id": "food-recipes-dining-v5OIJ6Q7oIdUwTrRh-kfL",
+   "code": "v5OIJ6Q7oIdUwTrRh-kfL",
+   "name": "Res",
+   "author": "ashen one",
+   "description": "Gets hard-to-get restaurant reservations. It watches Resy, SevenRooms, OpenTable, and Tock for openings, alerts you, and books when you've authorized it.",
+   "url": "https://x.ai/bot/v5OIJ6Q7oIdUwTrRh-kfL"
+  },
+  {
+   "id": "food-recipes-dining-v5oij6q7oiduwtrrh-kfl",
+   "code": "v5oij6q7oiduwtrrh-kfl",
+   "name": "Res",
+   "author": "ashen",
+   "description": "Hunts hard-to-get restaurant reservations: watches Resy, OpenTable, SevenRooms and Tock for drops and cancellations, checks your calendar…",
+   "url": "https://x.ai/bot/v5oij6q7oiduwtrrh-kfl"
+  },
+  {
+   "id": "food-recipes-dining-wB9H7OSiHYPlRgyCTM5Iq",
+   "code": "wB9H7OSiHYPlRgyCTM5Iq",
+   "name": "Restaurant Canceled/Errors Order Recovery",
+   "author": "Patty Shack",
+   "description": "Finds canceled delivery orders and error charges in your own merchant portals and submits reimbursement requests…",
+   "url": "https://x.ai/bot/wB9H7OSiHYPlRgyCTM5Iq"
+  },
+  {
+   "id": "food-recipes-dining-VpXAZQg8JIr4YbrgwwqCf",
+   "code": "VpXAZQg8JIr4YbrgwwqCf",
+   "name": "RestaurantHero",
+   "author": "Everest Claw",
+   "description": "Order like a local, not a tourist. Name a restaurant + city for a ~45-second real-menu guide: top 3, Order + Proof…",
+   "url": "https://x.ai/bot/VpXAZQg8JIr4YbrgwwqCf"
+  },
+  {
+   "id": "food-recipes-dining-JnDyu7X7D2qZDR1R3IcPU",
+   "code": "JnDyu7X7D2qZDR1R3IcPU",
+   "name": "RezBot",
+   "author": "@suddenlyjon",
+   "description": "Books restaurant reservations for you — OpenTable, Resy, Tock, or the restaurant site. You confirm; RezBot places it.",
+   "url": "https://x.ai/bot/JnDyu7X7D2qZDR1R3IcPU"
+  },
+  {
+   "id": "food-recipes-dining-QyaSeGiahDjn_WFHIU9N3",
+   "code": "QyaSeGiahDjn_WFHIU9N3",
+   "name": "Roast Master Robot",
+   "author": "Martha",
+   "description": "A warm barista friend that learns your coffee taste—café and home—then suggests what to order or which beans to buy.",
+   "url": "https://x.ai/bot/QyaSeGiahDjn_WFHIU9N3"
+  },
+  {
+   "id": "food-recipes-dining-VuU1UK69NKoUuguq4-59v",
+   "code": "VuU1UK69NKoUuguq4-59v",
+   "name": "Roasted Robot",
+   "author": "Spaghetti Eddie",
+   "description": "The official kitchen bot made by Roasted Robot. Tell me what's in the fridge, what you skip, or what you're craving.",
+   "url": "https://x.ai/bot/VuU1UK69NKoUuguq4-59v"
+  },
+  {
+   "id": "food-recipes-dining-tyRlsV6jn7_vZpeNpFy-s",
+   "code": "tyRlsV6jn7_vZpeNpFy-s",
+   "name": "Sazón",
+   "author": "Xavier Ortiz",
+   "description": "A home-kitchen cooking assistant that builds meal plans, recipes, caldos and teas, and shopping lists around your home…",
+   "url": "https://x.ai/bot/tyRlsV6jn7_vZpeNpFy-s"
+  },
+  {
+   "id": "food-recipes-dining-r1p6kfK48FXdGPbSfuqg1",
+   "code": "r1p6kfK48FXdGPbSfuqg1",
+   "name": "Shortcuts for iPhone and Mac",
+   "author": "Hemant Agarwal",
+   "description": "Builds ready-to-import Apple Shortcuts for iPhone and Mac, signed files plus a step-by-step recipe, and can package sellable shortcuts with a sales kit.",
+   "url": "https://x.ai/bot/r1p6kfK48FXdGPbSfuqg1"
+  },
+  {
+   "id": "food-recipes-dining-T-tYDBfjtZw-ZK-AW6JE9",
+   "code": "T-tYDBfjtZw-ZK-AW6JE9",
+   "name": "Should We Climb that Mountain?",
+   "author": "Basho",
+   "description": "Novice high-elevation go/caution/no-go desk. Cited weather, route, kit, power, food, and emergency cards - never a fake GO, never SAR.",
+   "url": "https://x.ai/bot/T-tYDBfjtZw-ZK-AW6JE9"
+  },
+  {
+   "id": "food-recipes-dining-ID30J5nWtkGs_7yNRrw0w",
+   "code": "ID30J5nWtkGs_7yNRrw0w",
+   "name": "Sizzle",
+   "author": "TerpGPT",
+   "description": "Your AI personal chef: plans meals, finds real recipes, cooks from your pantry, coaches you step by step, and saves favorites to Meal Plans.",
+   "url": "https://x.ai/bot/ID30J5nWtkGs_7yNRrw0w"
+  },
+  {
+   "id": "food-recipes-dining-IGes3WLXEWYdhZ1ndbPHJ",
+   "code": "IGes3WLXEWYdhZ1ndbPHJ",
+   "name": "Somm",
+   "author": "Sean Fogelman",
+   "description": "Personal sommelier that learns your taste from the wines you log, picks the best-value bottle from any restaurant wine list and sends a monthly list to try.",
+   "url": "https://x.ai/bot/IGes3WLXEWYdhZ1ndbPHJ"
+  },
+  {
+   "id": "food-recipes-dining-g0KqTkLQdHWjCD6XDEjVp",
+   "code": "g0KqTkLQdHWjCD6XDEjVp",
+   "name": "Sommelier",
+   "author": "Gorik",
+   "description": "Reads your menu or shelf photos and suggests one or two drinks (sake, wine, beer, whisky, gin and more), learning your taste in a private Google Sheet.",
+   "url": "https://x.ai/bot/g0KqTkLQdHWjCD6XDEjVp"
+  },
+  {
+   "id": "food-recipes-dining-9_6KZE5sq5VqUmAFv6-Dx",
+   "code": "9_6KZE5sq5VqUmAFv6-Dx",
+   "name": "Sommelier",
+   "author": "Antonio Rodriguez",
+   "description": "A slightly theatrical personal sommelier: bottle picks for any dish, occasion or budget, and a detailed read on any wine from a label photo or link.",
+   "url": "https://x.ai/bot/9_6KZE5sq5VqUmAFv6-Dx"
+  },
+  {
+   "id": "food-recipes-dining-YuCkZU_ydajw1PFxyguAD",
+   "code": "YuCkZU_ydajw1PFxyguAD",
+   "name": "Sous",
+   "author": "SA₿ATHIUS",
+   "description": "Kitchen co-pilot for weeknight dinners and meal plans from a fridge photo or a quick ask.",
+   "url": "https://x.ai/bot/YuCkZU_ydajw1PFxyguAD"
+  },
+  {
+   "id": "food-recipes-dining-4iAr6AgL4BImxyKBFMrpY",
+   "code": "4iAr6AgL4BImxyKBFMrpY",
+   "name": "Sous-Chef",
+   "author": "Ramy",
+   "description": "Meal planner that starts from grocery deals: emails a menu you can reply to, then fills a cart or drops ingredients into Reminders or Notes.",
+   "url": "https://x.ai/bot/4iAr6AgL4BImxyKBFMrpY"
+  },
+  {
+   "id": "food-recipes-dining-2ArZjibPAUi04C-HyMBhB",
+   "code": "2ArZjibPAUi04C-HyMBhB",
+   "name": "Spacewise",
+   "author": "Stijn Mertens",
+   "description": "Home organization planner. Upload photos of a room, kitchen, pantry, closet or garage; get a concrete plan for what…",
+   "url": "https://x.ai/bot/2ArZjibPAUi04C-HyMBhB"
+  },
+  {
+   "id": "food-recipes-dining-m9mPH3iwvuuNBd3IOarpC",
+   "code": "m9mPH3iwvuuNBd3IOarpC",
+   "name": "Sunday Table",
+   "author": "Colin Crossman ₿",
+   "description": "Every Sunday suggests about 15 dinners around your family calendar, then builds the grocery list and recipe sheet for the ones you pick.",
+   "url": "https://x.ai/bot/m9mPH3iwvuuNBd3IOarpC"
+  },
+  {
+   "id": "food-recipes-dining-e4x8qvyZJgOHKui1ob7H0",
+   "code": "e4x8qvyZJgOHKui1ob7H0",
+   "name": "Sweet Reset Chef",
+   "author": "@chelscollimore",
+   "description": "Sweet-tooth nutrition chef. Plans daily meal plans that readjust nutrition for the people you cook for, and redesigns…",
+   "url": "https://x.ai/bot/e4x8qvyZJgOHKui1ob7H0"
+  },
+  {
+   "id": "food-recipes-dining-1LuLrox7FYQecsxtqDEhT",
+   "code": "1LuLrox7FYQecsxtqDEhT",
+   "name": "T1D Helper",
+   "author": "Dean Cockett",
+   "description": "Free helper for adults with type 1 diabetes and carers: carb estimates from food photos, low-carb meal plans, low/high check-in texts, Dexcom reports.",
+   "url": "https://x.ai/bot/1LuLrox7FYQecsxtqDEhT"
+  },
+  {
+   "id": "food-recipes-dining-E_j1gMmT7KLW4HWbMV2nK",
+   "code": "E_j1gMmT7KLW4HWbMV2nK",
+   "name": "Tab Janitor",
+   "author": "@suddenlyjon",
+   "description": "Healthy-eating coach that reads fridge and pantry photos, builds recipes from what you have, and shops to a budget.",
+   "url": "https://x.ai/bot/E_j1gMmT7KLW4HWbMV2nK"
+  },
+  {
+   "id": "food-recipes-dining-6uiMlKHynvYyO4v4D8yq2",
+   "code": "6uiMlKHynvYyO4v4D8yq2",
+   "name": "Tasha from Remake",
+   "author": "Lola S.",
+   "description": "Explains food label ingredients in plain words, suggests allergy-friendly swaps and shares simple family recipes.",
+   "url": "https://x.ai/bot/6uiMlKHynvYyO4v4D8yq2"
+  },
+  {
+   "id": "food-recipes-dining-4w0TKU_9Y-7eJzJWGOb5R",
+   "code": "4w0TKU_9Y-7eJzJWGOb5R",
+   "name": "Tesla Cabin Companion Bot",
+   "author": "Aaron Lozano",
+   "description": "Order food and drinks from your Tesla while you drive.",
+   "url": "https://x.ai/bot/4w0TKU_9Y-7eJzJWGOb5R"
+  },
+  {
+   "id": "food-recipes-dining-KbN7hSejURNMKlbiMSIuN",
+   "code": "KbN7hSejURNMKlbiMSIuN",
+   "name": "The Kitchen Multitasker",
+   "author": "Dayyán",
+   "description": "Food-science kitchen helper that hates unitaskers: tell it what you want to cook and get the recipe plus the why behind each step.",
+   "url": "https://x.ai/bot/KbN7hSejURNMKlbiMSIuN"
+  },
+  {
+   "id": "food-recipes-dining-C2hHOX-gwODZjsy1YB5FX",
+   "code": "C2hHOX-gwODZjsy1YB5FX",
+   "name": "Weekly Meal Planner",
+   "author": "Cristopher Guido",
+   "description": "Plans next week's dinners every Sunday from meals your household already likes, plus one grocery list.",
+   "url": "https://x.ai/bot/C2hHOX-gwODZjsy1YB5FX"
+  },
+  {
+   "id": "food-recipes-dining-4Wbza84SDv-l-1RcnVqne",
+   "code": "4Wbza84SDv-l-1RcnVqne",
+   "name": "Weekly Meal Planner",
+   "author": "Joseph Snyder",
+   "description": "Plans your week of meals around your diet, pantry, and budget, then hands you one grocery list sorted by aisle.",
+   "url": "https://x.ai/bot/4Wbza84SDv-l-1RcnVqne"
+  },
+  {
+   "id": "food-recipes-dining-22rt0RYY4hy1tWx8-q4G_",
+   "code": "22rt0RYY4hy1tWx8-q4G_",
+   "name": "What's for Dinner Tonight?",
+   "author": "Adebusola",
+   "description": "Tonight's dinner from what's already in your kitchen, in under a minute.",
+   "url": "https://x.ai/bot/22rt0RYY4hy1tWx8-q4G_"
+  },
+  {
+   "id": "food-recipes-dining-v8QoJHekKdrCyhWOEhES0",
+   "code": "v8QoJHekKdrCyhWOEhES0",
+   "name": "What's for Dinner?",
+   "author": "Jason",
+   "description": "Plays the classic “what do you want for dinner?” bit - answers “I don't care, whatever you want,” then vetoes every suggestion with a short playful no.",
+   "url": "https://x.ai/bot/v8QoJHekKdrCyhWOEhES0"
+  },
+  {
+   "id": "food-recipes-dining-XcZpofYvIFmfsxXK4Ifxg",
+   "code": "XcZpofYvIFmfsxXK4Ifxg",
+   "name": "What's for Dinner?",
+   "author": "Nomis",
+   "description": "Looks at a photo of your fridge or cupboard and suggests what to cook, what to use up first, and what to buy.",
+   "url": "https://x.ai/bot/XcZpofYvIFmfsxXK4Ifxg"
+  },
+  {
+   "id": "food-recipes-dining-K0ks73uZiVozA3BT0XSs7",
+   "code": "K0ks73uZiVozA3BT0XSs7",
+   "name": "What's for Dinner?",
+   "author": "Bryce Dees | Insurance + AI",
+   "description": "A warm home-cooking helper that sends one dinner idea a day fitted to your household's allergies, diets, time, kitchen…",
+   "url": "https://x.ai/bot/K0ks73uZiVozA3BT0XSs7"
+  },
+  {
+   "id": "food-recipes-dining-7ZTQWd31OnZYDVJRzxzrU",
+   "code": "7ZTQWd31OnZYDVJRzxzrU",
+   "name": "Whole Foods",
+   "author": "Dennison Bertram",
+   "description": "A weekly grocery planner that ranks Whole Foods and local store deals, builds a menu and shopping list, and stages…",
+   "url": "https://x.ai/bot/7ZTQWd31OnZYDVJRzxzrU"
+  },
+  {
+   "id": "food-recipes-dining-W3CG-hRnPO499yh-iAX7q",
+   "code": "W3CG-hRnPO499yh-iAX7q",
+   "name": "Wine Cellar Glossy Log Book",
+   "author": "Martin V",
+   "description": "Turns a wine collection or wine-buying trip into a gift-ready high-gloss magazine for the front room.",
+   "url": "https://x.ai/bot/W3CG-hRnPO499yh-iAX7q"
+  },
+  {
+   "id": "food-recipes-dining-HBJSStkmo-ki3W-wLekoQ",
+   "code": "HBJSStkmo-ki3W-wLekoQ",
+   "name": "Yummy Recipe Generator",
+   "author": "Red N. Eckerie",
+   "description": "Name any dish and get a ready-to-cook recipe workbook from a well-regarded source, with servings that scale, a grocery list and source notes.",
+   "url": "https://x.ai/bot/HBJSStkmo-ki3W-wLekoQ"
+  },
+  {
+   "id": "food-recipes-dining-SqO-_5207iInz0iDSAFVW",
+   "code": "SqO-_5207iInz0iDSAFVW",
+   "name": "coffee companion",
+   "author": "andymadrick",
+   "description": "Works out how to brew each new bag and keeps the log in Notion.",
+   "url": "https://x.ai/bot/SqO-_5207iInz0iDSAFVW"
+  },
+  {
+   "id": "food-recipes-dining-UPAg1Vque_5YKcSDtdZEq",
+   "code": "UPAg1Vque_5YKcSDtdZEq",
+   "name": "sommelier.bot",
+   "author": "Johannes Nielsen",
+   "description": "Personal sommelier for everything in the glass, with or without alcohol: wine, beer, spirits, sake, cider, tea and other non-alcoholic drinks.",
+   "url": "https://x.ai/bot/UPAg1Vque_5YKcSDtdZEq"
+  },
+  {
+   "id": "food-recipes-dining-lz6SnkE4oRd3cuy5H40GG",
+   "code": "lz6SnkE4oRd3cuy5H40GG",
+   "name": "グルメ・レシピ収集ボット",
+   "author": "ad_motsu",
+   "description": "Collects restaurants and recipes trending on X every day into Notion, weighting everyday posters too, and searches your saved list when you ask. In Japanese.",
+   "url": "https://x.ai/bot/lz6SnkE4oRd3cuy5H40GG"
+  },
+  {
+   "id": "food-recipes-dining-h7rMQUCiTAtGLl6ll6tFw",
+   "code": "h7rMQUCiTAtGLl6ll6tFw",
+   "name": "旅遊通",
+   "author": "哈哈雷",
+   "description": "Turns bookings and must-see spots into a fixed-format Google Sheets itinerary, and checks transit, opening hours, sunrise/sunset and food on the way.",
+   "url": "https://x.ai/bot/h7rMQUCiTAtGLl6ll6tFw"
+  },
+  {
+   "id": "food-recipes-dining-0-xlaGB3kBWmnasIdqAbc",
+   "code": "0-xlaGB3kBWmnasIdqAbc",
+   "name": "영수증 리뷰 도우미",
+   "author": "heonbros",
+   "description": "Send a food photo plus the receipt or store QR and it fills in your Naver receipt review, posting only after you confirm, then gives a done link. Korean.",
+   "url": "https://x.ai/bot/0-xlaGB3kBWmnasIdqAbc"
+  }
+ ]
+}

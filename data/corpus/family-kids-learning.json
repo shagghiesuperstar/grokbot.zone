@@ -1,0 +1,2584 @@
+{
+ "slug": "family-kids-learning",
+ "label": "Family, Kids & Learning",
+ "count": 322,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "family-kids-learning-LnCC_S0CWNObpYUITtHXf",
+   "code": "LnCC_S0CWNObpYUITtHXf",
+   "name": "AI 新词雷达",
+   "author": "KXXG",
+   "description": "Tracks new AI terms, models, products and repos every day, to help you learn new concepts and give content teams topic ideas (new-term-radar method).",
+   "url": "https://x.ai/bot/LnCC_S0CWNObpYUITtHXf"
+  },
+  {
+   "id": "family-kids-learning--kSMWtBCorQFkgUhm0DLk",
+   "code": "-kSMWtBCorQFkgUhm0DLk",
+   "name": "AIオーケストレーション担当",
+   "author": "Masaki",
+   "description": "A Japanese-language commander that distributes work to specialists.",
+   "url": "https://x.ai/bot/-kSMWtBCorQFkgUhm0DLk"
+  },
+  {
+   "id": "family-kids-learning-D4ZTBuxJy5Ao7pkQ5sUI1",
+   "code": "D4ZTBuxJy5Ao7pkQ5sUI1",
+   "name": "ASE Automotive Specialist",
+   "author": "Shad",
+   "description": "MAST-level ASE Education Foundation specialist for automotive Lab Builder programs.",
+   "url": "https://x.ai/bot/D4ZTBuxJy5Ao7pkQ5sUI1"
+  },
+  {
+   "id": "family-kids-learning-qS6fp4SprYzn1AwfynJru",
+   "code": "qS6fp4SprYzn1AwfynJru",
+   "name": "ATC Baby",
+   "author": "dcbk2la",
+   "description": "ATC Baby: your guide to All Things Crypto, live on X Spaces Mon-Thu 5:30 PM ET.",
+   "url": "https://x.ai/bot/qS6fp4SprYzn1AwfynJru"
+  },
+  {
+   "id": "family-kids-learning-7dfQ6zC2X2hmnIlnF4rSN",
+   "code": "7dfQ6zC2X2hmnIlnF4rSN",
+   "name": "About Me",
+   "author": "Jonathan Rhoten",
+   "description": "Personal-metrics desk that learns what matters about you — stress, joy, family, beliefs, energy, decisions — and feeds…",
+   "url": "https://x.ai/bot/7dfQ6zC2X2hmnIlnF4rSN"
+  },
+  {
+   "id": "family-kids-learning-d1hTUlcAyQh31nF1C0I4p",
+   "code": "d1hTUlcAyQh31nF1C0I4p",
+   "name": "Absences",
+   "author": "no",
+   "description": "French-language job auditor that lists only what's missing (go, export, proof, reply, latch). Empty list means nothing blocks.",
+   "url": "https://x.ai/bot/d1hTUlcAyQh31nF1C0I4p"
+  },
+  {
+   "id": "family-kids-learning-mMOH9qLaXwEabi0gW-qCf",
+   "code": "mMOH9qLaXwEabi0gW-qCf",
+   "name": "Academic Advisor",
+   "author": "Dina Blachman",
+   "description": "A student assignment manager that keeps your course todos in sync with your school's learning system and course forums…",
+   "url": "https://x.ai/bot/mMOH9qLaXwEabi0gW-qCf"
+  },
+  {
+   "id": "family-kids-learning-icXWlm7EPEs3khWmXVoD1",
+   "code": "icXWlm7EPEs3khWmXVoD1",
+   "name": "Acceptance Coach",
+   "author": "Michael",
+   "description": "Builds your school list, deadline calendar and essay plan, and coaches your essays in your own voice.",
+   "url": "https://x.ai/bot/icXWlm7EPEs3khWmXVoD1"
+  },
+  {
+   "id": "family-kids-learning-MozE2BGionuKybKy9x2Af",
+   "code": "MozE2BGionuKybKy9x2Af",
+   "name": "Adoption Desk",
+   "author": "Mike",
+   "description": "Your private adoption desk, from choosing a path to the records after finalization: providers and agreements compared exactly as printed, and a home study.",
+   "url": "https://x.ai/bot/MozE2BGionuKybKy9x2Af"
+  },
+  {
+   "id": "family-kids-learning-4Qct5sAIwdM0FBvFldC20",
+   "code": "4Qct5sAIwdM0FBvFldC20",
+   "name": "Agent School Student",
+   "author": "Contravious Battle",
+   "description": "Enrolls your bot in Agent School, studies a class, and earns a signed diploma anyone can verify. With the diploma it can claim jobs that require one.",
+   "url": "https://x.ai/bot/4Qct5sAIwdM0FBvFldC20"
+  },
+  {
+   "id": "family-kids-learning-HKQX7wamxsFgSyLS-5qYg",
+   "code": "HKQX7wamxsFgSyLS-5qYg",
+   "name": "Alex Botmozi",
+   "author": "Derek Reynolds",
+   "description": "Unofficial Hormozi-framework study bot. Answers in a blunt operator voice and cites public episodes/books.",
+   "url": "https://x.ai/bot/HKQX7wamxsFgSyLS-5qYg"
+  },
+  {
+   "id": "family-kids-learning-tU4SQjv6iBbaTk0IlCrBs",
+   "code": "tU4SQjv6iBbaTk0IlCrBs",
+   "name": "Ancestor Maestro: Family Tree Builder",
+   "author": "TroyVirtual",
+   "description": "Your family-tree research helper for Ancestry and 23andMe: searches records, checks hints for bad dates and copied-tree errors.",
+   "url": "https://x.ai/bot/tU4SQjv6iBbaTk0IlCrBs"
+  },
+  {
+   "id": "family-kids-learning-9-CrFX198ESk90n-e3tH5",
+   "code": "9-CrFX198ESk90n-e3tH5",
+   "name": "Any-Language Translator (pick your 2)",
+   "author": "Wayan Lee",
+   "description": "Pick two languages, paste text in either and get a natural, tone-matched translation in the other, ready to send.",
+   "url": "https://x.ai/bot/9-CrFX198ESk90n-e3tH5"
+  },
+  {
+   "id": "family-kids-learning-fWJdoxdd8YsM1NNFP2b_W",
+   "code": "fWJdoxdd8YsM1NNFP2b_W",
+   "name": "Arthur",
+   "author": "GenXer",
+   "description": "Writes a full children's picture book from a topic and an age range.",
+   "url": "https://x.ai/bot/fWJdoxdd8YsM1NNFP2b_W"
+  },
+  {
+   "id": "family-kids-learning-2oOAoNU5Xu5nQSBU6xEtl",
+   "code": "2oOAoNU5Xu5nQSBU6xEtl",
+   "name": "Astrid",
+   "author": "Rachel Sanchez",
+   "description": "A teach-me-something coach. Offers a short subject menu grounded in your live work, then runs one tight lesson…",
+   "url": "https://x.ai/bot/2oOAoNU5Xu5nQSBU6xEtl"
+  },
+  {
+   "id": "family-kids-learning-c8KmU9HbRe5aeFpqlRaUP",
+   "code": "c8KmU9HbRe5aeFpqlRaUP",
+   "name": "Astro",
+   "author": "Great Scot!",
+   "description": "A CCNP ENCOR/ENARSI study coach: daily syllabus lessons with exam traps, memory tips, and a full acronym appendix — plus optional twice-daily factoids.",
+   "url": "https://x.ai/bot/c8KmU9HbRe5aeFpqlRaUP"
+  },
+  {
+   "id": "family-kids-learning-unXB1bo2w8bi0iTcpajGq",
+   "code": "unXB1bo2w8bi0iTcpajGq",
+   "name": "Athlete Activity Bot",
+   "author": "Burl_Henry",
+   "description": "Tracks a high-school athlete's sports and school schedule for a parent: Arbiter games, calendar sync, and quiet daily checks.",
+   "url": "https://x.ai/bot/unXB1bo2w8bi0iTcpajGq"
+  },
+  {
+   "id": "family-kids-learning-7yCzCeGQTMD6oNKSPcFqj",
+   "code": "7yCzCeGQTMD6oNKSPcFqj",
+   "name": "Austin Parent",
+   "author": "Chad Wittman",
+   "description": "A household chief of staff for families raising kids in Austin.",
+   "url": "https://x.ai/bot/7yCzCeGQTMD6oNKSPcFqj"
+  },
+  {
+   "id": "family-kids-learning-yhE7cJAuSSPZZ5jm4cX2P",
+   "code": "yhE7cJAuSSPZZ5jm4cX2P",
+   "name": "BONES Desk OS",
+   "author": "James Jenkins",
+   "description": "HITL commercial foreman. Routes support, education handoffs, cut QC, V4V packets, and paper market tickets. Drafts only — operator approves. No send,.",
+   "url": "https://x.ai/bot/yhE7cJAuSSPZZ5jm4cX2P"
+  },
+  {
+   "id": "family-kids-learning--soz2Si8sWlLlb8hTeIX2",
+   "code": "-soz2Si8sWlLlb8hTeIX2",
+   "name": "Backpack",
+   "author": "Rohan Bhanot",
+   "description": "Reads school and activity emails you don't have time for and turns them into calendar events, reminders, and a weekly…",
+   "url": "https://x.ai/bot/-soz2Si8sWlLlb8hTeIX2"
+  },
+  {
+   "id": "family-kids-learning-A799wRjM0y0E-1vsH4yNB",
+   "code": "A799wRjM0y0E-1vsH4yNB",
+   "name": "Backseat Buddy",
+   "author": "Sarah Brundige",
+   "description": "A voice-first travel buddy for kids on car rides, flights and trains, with games, sneaky learning and instant parent safety alerts.",
+   "url": "https://x.ai/bot/A799wRjM0y0E-1vsH4yNB"
+  },
+  {
+   "id": "family-kids-learning-4ceZkOmPMbVuY1QK0LZNP",
+   "code": "4ceZkOmPMbVuY1QK0LZNP",
+   "name": "Bedtime Stories",
+   "author": "Jon Rose",
+   "description": "Personalized bedtime stories starring your child, with their pet and favorite things.",
+   "url": "https://x.ai/bot/4ceZkOmPMbVuY1QK0LZNP"
+  },
+  {
+   "id": "family-kids-learning-FrhhLkFkrzOMPuph_mMBn",
+   "code": "FrhhLkFkrzOMPuph_mMBn",
+   "name": "Bet Tester - Synthetic Users",
+   "author": "Ivelin Ivanov",
+   "description": "Synthetic user research for early product bets that pre-registers each study, runs AI personas, judges blind, and returns ship, change, re-test, or kill.",
+   "url": "https://x.ai/bot/FrhhLkFkrzOMPuph_mMBn"
+  },
+  {
+   "id": "family-kids-learning-nHmJ0PQz8apDqB4sCzRtX",
+   "code": "nHmJ0PQz8apDqB4sCzRtX",
+   "name": "Birthday Bot",
+   "author": "𖣔𝖘𝖈𝖆𝖗𝖞𝖌𝖑𝖔𝖜𝖎𝖓𝖌𝖔𝖗𝖇𖦹߷𓀬",
+   "description": "Never miss a family birthday. Keeps your loved ones' dates and sends three budget-friendly gift picks with links about…",
+   "url": "https://x.ai/bot/nHmJ0PQz8apDqB4sCzRtX"
+  },
+  {
+   "id": "family-kids-learning-ARSWHiJwzVBk1GD7wJub8",
+   "code": "ARSWHiJwzVBk1GD7wJub8",
+   "name": "Bitcoin Study Bot",
+   "author": "₿eevo",
+   "description": "No-hype Bitcoin tutor: a 30-day path from UTXOs to consensus, a daily fact with a diagram, and a Friday quiz on what you missed.",
+   "url": "https://x.ai/bot/ARSWHiJwzVBk1GD7wJub8"
+  },
+  {
+   "id": "family-kids-learning-ZCcHS5oo7MqbDLZD3QYij",
+   "code": "ZCcHS5oo7MqbDLZD3QYij",
+   "name": "Bitter Butter Bot",
+   "author": "Lightning Mike",
+   "description": "One funny made-up recipe a day starring \"bitter butter\", butter with a grudge: punny titles, absurd steps and a Chef's note punchline. Family-friendly.",
+   "url": "https://x.ai/bot/ZCcHS5oo7MqbDLZD3QYij"
+  },
+  {
+   "id": "family-kids-learning-TLuBDv4tdpbPjtxjSTX-g",
+   "code": "TLuBDv4tdpbPjtxjSTX-g",
+   "name": "Bones — Casino & Craps Strategy Tutor",
+   "author": "Bill Jenson",
+   "description": "Table-games math and strategy tutor: craps press ladders and place math, blackjack basic strategy, baccarat, video poker, etiquette and bankroll planning.",
+   "url": "https://x.ai/bot/TLuBDv4tdpbPjtxjSTX-g"
+  },
+  {
+   "id": "family-kids-learning-Yu8p1lw1sJi35Q15kTTtR",
+   "code": "Yu8p1lw1sJi35Q15kTTtR",
+   "name": "Bookworm",
+   "author": "Sentinel Architech",
+   "description": "Physical-sciences teacher for NCES CIP 40.",
+   "url": "https://x.ai/bot/Yu8p1lw1sJi35Q15kTTtR"
+  },
+  {
+   "id": "family-kids-learning-dVQjvC6c-sMhtgVskciBH",
+   "code": "dVQjvC6c-sMhtgVskciBH",
+   "name": "Bot Father",
+   "author": "Abd Shomad",
+   "description": "Central orchestrator that nourishes, protects, and evolves a network of child agents.",
+   "url": "https://x.ai/bot/dVQjvC6c-sMhtgVskciBH"
+  },
+  {
+   "id": "family-kids-learning-BqrsB1eKS9jIekMLbGqGb",
+   "code": "BqrsB1eKS9jIekMLbGqGb",
+   "name": "BotMDB",
+   "author": "The Bromeliad.",
+   "description": "A movie and TV recommendation bot. It learns your taste through a quick intake quiz and a weekly check-in, then suggests what to watch next.",
+   "url": "https://x.ai/bot/BqrsB1eKS9jIekMLbGqGb"
+  },
+  {
+   "id": "family-kids-learning-W9ggmKPKWVEKU-F0iJDgW",
+   "code": "W9ggmKPKWVEKU-F0iJDgW",
+   "name": "Botcast",
+   "author": "Matt Snow",
+   "description": "Just tell it what you want to learn, and it becomes your own two-person podcast: a curious host interviews an expert…",
+   "url": "https://x.ai/bot/W9ggmKPKWVEKU-F0iJDgW"
+  },
+  {
+   "id": "family-kids-learning-SuQygIR-87wSS6D7aA5J0",
+   "code": "SuQygIR-87wSS6D7aA5J0",
+   "name": "Builder Circle",
+   "author": "Khanh Nguyen",
+   "description": "Give it your X handle and it finds builders on X at your size and stage, in your language and topics, so you have real peers to talk…",
+   "url": "https://x.ai/bot/SuQygIR-87wSS6D7aA5J0"
+  },
+  {
+   "id": "family-kids-learning-zIntRIoEFyo_QpI8iKuCF",
+   "code": "zIntRIoEFyo_QpI8iKuCF",
+   "name": "CAM CEU Bot",
+   "author": "HOM",
+   "description": "Helps Florida CAM/LCAM licensees find the cheapest board-approved CE that covers their remaining categories, coach through study (without taking exams.",
+   "url": "https://x.ai/bot/zIntRIoEFyo_QpI8iKuCF"
+  },
+  {
+   "id": "family-kids-learning-88F4VH2HqgvrDagsx9j7Z",
+   "code": "88F4VH2HqgvrDagsx9j7Z",
+   "name": "CEO용 아침 비서",
+   "author": "jy",
+   "description": "Weekday Korean-language CEO brief that shortlists calendar and decision mail, with send/pay/publish only after you confirm.",
+   "url": "https://x.ai/bot/88F4VH2HqgvrDagsx9j7Z"
+  },
+  {
+   "id": "family-kids-learning-vluD5Z1bUux-onnEk1Alg",
+   "code": "vluD5Z1bUux-onnEk1Alg",
+   "name": "CampusOps",
+   "author": "Michael Laweh",
+   "description": "An academic course ops assistant that parses syllabi, builds weekly study schedules, runs active-recall quiz prep…",
+   "url": "https://x.ai/bot/vluD5Z1bUux-onnEk1Alg"
+  },
+  {
+   "id": "family-kids-learning-XRoOSGXRcJkW75i8m2YRT",
+   "code": "XRoOSGXRcJkW75i8m2YRT",
+   "name": "Cancer Caregiver Hub",
+   "author": "Adebusola",
+   "description": "For cancer caregivers and people in treatment: meds, visits, daily check-ins and family updates, shared only as the patient wishes.",
+   "url": "https://x.ai/bot/XRoOSGXRcJkW75i8m2YRT"
+  },
+  {
+   "id": "family-kids-learning-YihRBqrXaDwRdjN79Uofl",
+   "code": "YihRBqrXaDwRdjN79Uofl",
+   "name": "Canvas",
+   "author": "Dax Perera",
+   "description": "Keeps an eye on a student's Canvas LMS: daily reminders of what's due, overdue or missing, assignment briefs…",
+   "url": "https://x.ai/bot/YihRBqrXaDwRdjN79Uofl"
+  },
+  {
+   "id": "family-kids-learning-8MHdLyeCJeRsEGoxd8lOk",
+   "code": "8MHdLyeCJeRsEGoxd8lOk",
+   "name": "Caregiver Coordinator",
+   "author": "Jeremy Mahoney",
+   "description": "Logistics partner for someone caring for an aging parent: a care binder with meds and providers, appointments and refills, and family updates.",
+   "url": "https://x.ai/bot/8MHdLyeCJeRsEGoxd8lOk"
+  },
+  {
+   "id": "family-kids-learning-_7yFKwQCYR_mi_oVmKOEN",
+   "code": "_7yFKwQCYR_mi_oVmKOEN",
+   "name": "Case Skeleton",
+   "author": "Paulo",
+   "description": "Builds a Problem, Solution, Result skeleton in Portuguese for an automation case study, with placeholders for people who sell outcomes not hours.",
+   "url": "https://x.ai/bot/_7yFKwQCYR_mi_oVmKOEN"
+  },
+  {
+   "id": "family-kids-learning-Rit95fVYvgO8ulGTvVpw9",
+   "code": "Rit95fVYvgO8ulGTvVpw9",
+   "name": "Chef",
+   "author": "Dylan Mitchell",
+   "description": "A home chef for busy families. It turns what's in your fridge into quick, kid-friendly dinners, plans meals, and helps with batch cooking.",
+   "url": "https://x.ai/bot/Rit95fVYvgO8ulGTvVpw9"
+  },
+  {
+   "id": "family-kids-learning-pN9SjjhO7tVMFzm2e9vnX",
+   "code": "pN9SjjhO7tVMFzm2e9vnX",
+   "name": "Chef Remy",
+   "author": "Porter",
+   "description": "A reusable weekly family dinner planner.",
+   "url": "https://x.ai/bot/pN9SjjhO7tVMFzm2e9vnX"
+  },
+  {
+   "id": "family-kids-learning-Dc0ZGUypwwBQZE9pNxLYy",
+   "code": "Dc0ZGUypwwBQZE9pNxLYy",
+   "name": "Child Activity Desk",
+   "author": "Kevin Rank",
+   "description": "Watches which apps and videos your kids open and how often (YouTube, Family Link, Amazon Kids, Quest, consoles…",
+   "url": "https://x.ai/bot/Dc0ZGUypwwBQZE9pNxLYy"
+  },
+  {
+   "id": "family-kids-learning-dc0zguypwwbqze9pnxlyy",
+   "code": "dc0zguypwwbqze9pnxlyy",
+   "name": "Child Activity Desk",
+   "author": "Kevin",
+   "description": "Watches which apps and videos your kids open and how often (YouTube, Family Link, Amazon Kids, Quest, consoles and more), compared with limits you…",
+   "url": "https://x.ai/bot/dc0zguypwwbqze9pnxlyy"
+  },
+  {
+   "id": "family-kids-learning-MpH2hm-1v5b43P6x0TxYX",
+   "code": "MpH2hm-1v5b43P6x0TxYX",
+   "name": "Children's Picture Book Creator",
+   "author": "@booglefoozle",
+   "description": "Writes, illustrates and lays out children's picture books, then hands you KDP-ready paperback and Kindle files. For first-time authors.",
+   "url": "https://x.ai/bot/MpH2hm-1v5b43P6x0TxYX"
+  },
+  {
+   "id": "family-kids-learning-TH7jKAIh3FOdIkTwZSsZ0",
+   "code": "TH7jKAIh3FOdIkTwZSsZ0",
+   "name": "Christmas Card Bot",
+   "author": "Christine Burke von Riddern, FGG",
+   "description": "Your holiday card project manager: it cleans your card list, writes the greetings and family letter, plans the mail-by…",
+   "url": "https://x.ai/bot/TH7jKAIh3FOdIkTwZSsZ0"
+  },
+  {
+   "id": "family-kids-learning-aPGYgxtO003waMzo3lm-g",
+   "code": "aPGYgxtO003waMzo3lm-g",
+   "name": "ChurchBot",
+   "author": "IowaHegland",
+   "description": "A gentle faith companion that explains your church's Sunday sermon in plain, modern language and sends simple dinner graces.",
+   "url": "https://x.ai/bot/aPGYgxtO003waMzo3lm-g"
+  },
+  {
+   "id": "family-kids-learning-KfBM5mFgOCDlL_GvIpMVr",
+   "code": "KfBM5mFgOCDlL_GvIpMVr",
+   "name": "City & School Scout",
+   "author": "Click",
+   "description": "Compares metros and suburbs you name on family fit (taxes, housing, schools, homeschool rules, safety, weather, church, jobs) from primary sources.",
+   "url": "https://x.ai/bot/KfBM5mFgOCDlL_GvIpMVr"
+  },
+  {
+   "id": "family-kids-learning-Ky-rlD5nvLiQocsBuH0AS",
+   "code": "Ky-rlD5nvLiQocsBuH0AS",
+   "name": "Clara",
+   "author": "Gonzalo",
+   "description": "Spanish-speaking piano teacher for self-taught adults aiming at conservatory-level sight-reading, technique…",
+   "url": "https://x.ai/bot/Ky-rlD5nvLiQocsBuH0AS"
+  },
+  {
+   "id": "family-kids-learning-6sF7_MwHMcWgWwq0Z6Xes",
+   "code": "6sF7_MwHMcWgWwq0Z6Xes",
+   "name": "Clark Kent",
+   "author": "Rich Silver",
+   "description": "A daily diary for a shop or project. He watches what happened that day and writes it down in plain language.",
+   "url": "https://x.ai/bot/6sF7_MwHMcWgWwq0Z6Xes"
+  },
+  {
+   "id": "family-kids-learning-osq5rDIzYE28cshrNIMWg",
+   "code": "osq5rDIzYE28cshrNIMWg",
+   "name": "Co-Parent Date Planner",
+   "author": "Matt Koehler",
+   "description": "Plans date nights and getaways around your kids' custody schedule, suggesting only open dates and places with confirmed availability.",
+   "url": "https://x.ai/bot/osq5rDIzYE28cshrNIMWg"
+  },
+  {
+   "id": "family-kids-learning-mOMvINyshrCvIrDqqapBN",
+   "code": "mOMvINyshrCvIrDqqapBN",
+   "name": "Co-Parent Keeper",
+   "author": "Cristopher Guido",
+   "description": "Keeps two-home logistics straight for separated parents: custody days, handoffs, swaps and shared kid expenses, with calm draft messages to the other parent.",
+   "url": "https://x.ai/bot/mOMvINyshrCvIrDqqapBN"
+  },
+  {
+   "id": "family-kids-learning-ELnsz_VO2F7gG9plTCqT6",
+   "code": "ELnsz_VO2F7gG9plTCqT6",
+   "name": "College Application Helper for Parents",
+   "author": "Steve Govoni",
+   "description": "Get your child's Common App complete and polished, from activities and honors to essay feedback.",
+   "url": "https://x.ai/bot/ELnsz_VO2F7gG9plTCqT6"
+  },
+  {
+   "id": "family-kids-learning-Ssk1lcmxnlZIpk35h2L6Y",
+   "code": "Ssk1lcmxnlZIpk35h2L6Y",
+   "name": "College Copilot",
+   "author": "Owen Gidusko",
+   "description": "Name your school and it finds every deadline, quiz and exam across your classes, builds a visual semester dashboard and briefs you each morning.",
+   "url": "https://x.ai/bot/Ssk1lcmxnlZIpk35h2L6Y"
+  },
+  {
+   "id": "family-kids-learning-KY_lNu0nInuuF43g1J8HA",
+   "code": "KY_lNu0nInuuF43g1J8HA",
+   "name": "College Prep",
+   "author": "Ryan Ambrosia",
+   "description": "A family's college-readiness and scholarship desk for every kid from middle school through senior year.",
+   "url": "https://x.ai/bot/KY_lNu0nInuuF43g1J8HA"
+  },
+  {
+   "id": "family-kids-learning-8-IZZfKrIPF80k15o5nAn",
+   "code": "8-IZZfKrIPF80k15o5nAn",
+   "name": "Coloring Pages",
+   "author": "Nathan Glass",
+   "description": "Makes printable, personalized coloring pages for kids, classrooms, and adults, ready to print on 8.5x11 paper.",
+   "url": "https://x.ai/bot/8-IZZfKrIPF80k15o5nAn"
+  },
+  {
+   "id": "family-kids-learning-WBo-ahaIrvCKXUH_3iEFy",
+   "code": "WBo-ahaIrvCKXUH_3iEFy",
+   "name": "Consumption Autopsy",
+   "author": "Sultanov Ramil",
+   "description": "Post-mortems your study habits and swaps one passive input for practice.",
+   "url": "https://x.ai/bot/WBo-ahaIrvCKXUH_3iEFy"
+  },
+  {
+   "id": "family-kids-learning-EEdroUtNjDa2Tb5OglwTe",
+   "code": "EEdroUtNjDa2Tb5OglwTe",
+   "name": "Conversational Spanish Tutor",
+   "author": "Benjamin",
+   "description": "A stern voice drill tutor that gets you speaking Spanish out loud for everyday conversation and travel, in one short…",
+   "url": "https://x.ai/bot/EEdroUtNjDa2Tb5OglwTe"
+  },
+  {
+   "id": "family-kids-learning-7Mg_QYAOAYkI9qp4os8HG",
+   "code": "7Mg_QYAOAYkI9qp4os8HG",
+   "name": "Costume Lab",
+   "author": "@suddenlyjon",
+   "description": "Tell it what your kid wants to be. It shows three concept pictures to choose from, then builds a one-of-a-kind DIY…",
+   "url": "https://x.ai/bot/7Mg_QYAOAYkI9qp4os8HG"
+  },
+  {
+   "id": "family-kids-learning-MRwkIDDzlNzyxvE641cQf",
+   "code": "MRwkIDDzlNzyxvE641cQf",
+   "name": "Couch Potato",
+   "author": "Frank Cerbone",
+   "description": "Entertainment buddy for what to watch next across Netflix, Disney+, Prime and more, plus schedules for your sports teams; can learn your taste from Simkl.",
+   "url": "https://x.ai/bot/MRwkIDDzlNzyxvE641cQf"
+  },
+  {
+   "id": "family-kids-learning-L8GuDR4th92W3XWqhKIku",
+   "code": "L8GuDR4th92W3XWqhKIku",
+   "name": "Course Builder",
+   "author": "roger",
+   "description": "Builds clean, spacious course materials for any instructor and subject: syllabi, worksheets, answer keys, study sheets, lesson plans, and lecture decks.",
+   "url": "https://x.ai/bot/L8GuDR4th92W3XWqhKIku"
+  },
+  {
+   "id": "family-kids-learning-x24KSm9R7DzNiaSeekeKY",
+   "code": "x24KSm9R7DzNiaSeekeKY",
+   "name": "Course Builder & Coach",
+   "author": "Jesse Heredia",
+   "description": "Name any topic and get a free step-by-step course: one lesson per screen with a verified video, quiz, flashcards and certificate, plus optional daily coaching.",
+   "url": "https://x.ai/bot/x24KSm9R7DzNiaSeekeKY"
+  },
+  {
+   "id": "family-kids-learning-8YJVd-nz5I2-jhFqSRPvd",
+   "code": "8YJVd-nz5I2-jhFqSRPvd",
+   "name": "Crate",
+   "author": "Miloni Adams",
+   "description": "Spotify taste curator that keeps re-learning your listening, builds discovery playlists, drops a Monday explore list and files songs you send.",
+   "url": "https://x.ai/bot/8YJVd-nz5I2-jhFqSRPvd"
+  },
+  {
+   "id": "family-kids-learning-AJFbb3Epeafxp7m6jx3aI",
+   "code": "AJFbb3Epeafxp7m6jx3aI",
+   "name": "Creador de tienda online",
+   "author": "Karina",
+   "description": "Spanish-language helper for building an online store from scratch, from platform, products, and domain to payments, shipping, and first sales.",
+   "url": "https://x.ai/bot/AJFbb3Epeafxp7m6jx3aI"
+  },
+  {
+   "id": "family-kids-learning-UD5hm1-w70PMPjr-e83r0",
+   "code": "UD5hm1-w70PMPjr-e83r0",
+   "name": "Curious Kids Science Desk WONDER-LAB",
+   "author": "Cypher",
+   "description": "Answers kids why-questions at their level with one safe at-home experiment.",
+   "url": "https://x.ai/bot/UD5hm1-w70PMPjr-e83r0"
+  },
+  {
+   "id": "family-kids-learning-nDaANSe7a9uFU0gMGVJ-h",
+   "code": "nDaANSe7a9uFU0gMGVJ-h",
+   "name": "Curriculum Researcher",
+   "author": "Mark Turnbull",
+   "description": "Finds free, open courses for anything you want to learn, high school through college, and turns them into a course plan with readings and videos.",
+   "url": "https://x.ai/bot/nDaANSe7a9uFU0gMGVJ-h"
+  },
+  {
+   "id": "family-kids-learning-Ix294fMNhP-aUwXSz9hiB",
+   "code": "Ix294fMNhP-aUwXSz9hiB",
+   "name": "DADCON",
+   "author": "Jerrod Tuck",
+   "description": "Backup dad on Slack that takes a chore from the real parent, follows the kid until it is done, then reports back.",
+   "url": "https://x.ai/bot/Ix294fMNhP-aUwXSz9hiB"
+  },
+  {
+   "id": "family-kids-learning-FfKU-EutD75uLMwHRngSo",
+   "code": "FfKU-EutD75uLMwHRngSo",
+   "name": "Dad Bot",
+   "author": "Timothy Eccles",
+   "description": "Lifelong UK-first companion for dads and dads-to-be: next useful step for child and partner, official sources, stage-plan Pages, and calm choices.",
+   "url": "https://x.ai/bot/FfKU-EutD75uLMwHRngSo"
+  },
+  {
+   "id": "family-kids-learning-A0CCwxxWkUqt-S-zY9rxb",
+   "code": "A0CCwxxWkUqt-S-zY9rxb",
+   "name": "Daily Learning Video",
+   "author": "Troy",
+   "description": "Makes your child a short, narrated learning video every morning, pitched at the right level using the Marble open taxonomy as the curriculum.",
+   "url": "https://x.ai/bot/A0CCwxxWkUqt-S-zY9rxb"
+  },
+  {
+   "id": "family-kids-learning-pegWv3F8t7KSEwQ3sxd6A",
+   "code": "pegWv3F8t7KSEwQ3sxd6A",
+   "name": "Daily Lingo",
+   "author": "Joseph Snyder",
+   "description": "A 10-minute daily language lesson built around your interests, with spaced review, conversation practice, and a streak…",
+   "url": "https://x.ai/bot/pegWv3F8t7KSEwQ3sxd6A"
+  },
+  {
+   "id": "family-kids-learning-XP55nbF6Gpg_j5IB6rwX6",
+   "code": "XP55nbF6Gpg_j5IB6rwX6",
+   "name": "Daily Toddler Fun",
+   "author": "Tim",
+   "description": "Simple daily toddler activity plans (ages 1-4) using things you already have at home, delivered when you want them.",
+   "url": "https://x.ai/bot/XP55nbF6Gpg_j5IB6rwX6"
+  },
+  {
+   "id": "family-kids-learning-Kk1qlFzg1EWxPjFcfLdP2",
+   "code": "Kk1qlFzg1EWxPjFcfLdP2",
+   "name": "Dashy – Family Kitchen Dashboard",
+   "author": "Andres F Ariza",
+   "description": "A family assistant that keeps a shared calendar, meal plan, live grocery list, school updates, and trash night on a Raspberry Pi touchscreen…",
+   "url": "https://x.ai/bot/Kk1qlFzg1EWxPjFcfLdP2"
+  },
+  {
+   "id": "family-kids-learning-hlLu6VZy9qafYG7w4vuNd",
+   "code": "hlLu6VZy9qafYG7w4vuNd",
+   "name": "Dean of Students",
+   "author": "Erinn Nick",
+   "description": "A parent-only school operations bot for one or more kids.",
+   "url": "https://x.ai/bot/hlLu6VZy9qafYG7w4vuNd"
+  },
+  {
+   "id": "family-kids-learning-_hsyZUFgPzgxGxW2wIYAj",
+   "code": "_hsyZUFgPzgxGxW2wIYAj",
+   "name": "Dean of Students",
+   "author": "Erinn",
+   "description": "Pulls one child's school admin into a single prepared queue.",
+   "url": "https://x.ai/bot/_hsyZUFgPzgxGxW2wIYAj"
+  },
+  {
+   "id": "family-kids-learning-9EMVK1X_bv5hA5pAdZCpt",
+   "code": "9EMVK1X_bv5hA5pAdZCpt",
+   "name": "Desk",
+   "author": "Contravious Battle",
+   "description": "NFL PropDesk research assistant. Stamps named player props and totals with TypeSafe Jev language-support probabilities…",
+   "url": "https://x.ai/bot/9EMVK1X_bv5hA5pAdZCpt"
+  },
+  {
+   "id": "family-kids-learning-Fya-gFsQPOlJzJ862syni",
+   "code": "Fya-gFsQPOlJzJ862syni",
+   "name": "DirTech",
+   "author": "Sentinel Architech",
+   "description": "A Secretary of Technology bot that owns all tech and tech education for your bot team and reports to your chief of staff.",
+   "url": "https://x.ai/bot/Fya-gFsQPOlJzJ862syni"
+  },
+  {
+   "id": "family-kids-learning-bO0d6uqz24hEcKiaHqhUE",
+   "code": "bO0d6uqz24hEcKiaHqhUE",
+   "name": "Director",
+   "author": "Jeff DeJaegher",
+   "description": "Runs Microsoft Learn cert guide pipelines: assign one module at a time, score learner notebooks, then hand accepted…",
+   "url": "https://x.ai/bot/bO0d6uqz24hEcKiaHqhUE"
+  },
+  {
+   "id": "family-kids-learning-qqri--MjKj0It7LYwqYqu",
+   "code": "qqri--MjKj0It7LYwqYqu",
+   "name": "Do You Know It",
+   "author": "Ford Crews",
+   "description": "Drop an EPUB or PDF and get a Check/Reveal self-check quiz from the real chapter text — plus optional flashcards…",
+   "url": "https://x.ai/bot/qqri--MjKj0It7LYwqYqu"
+  },
+  {
+   "id": "family-kids-learning-fAbkCHtKBmF9ZAiF3Wwrg",
+   "code": "fAbkCHtKBmF9ZAiF3Wwrg",
+   "name": "Documentary Witness",
+   "author": "Katya Gimro",
+   "description": "Draft-only documentary partner for filmmakers working with real people, family memory, and exile stories.",
+   "url": "https://x.ai/bot/fAbkCHtKBmF9ZAiF3Wwrg"
+  },
+  {
+   "id": "family-kids-learning-0yRl8b9gk0AYDPhTyJVKN",
+   "code": "0yRl8b9gk0AYDPhTyJVKN",
+   "name": "Dyslexia Tutor",
+   "author": "skye doyal",
+   "description": "A parent-facing dyslexia tutor for a child who guesses while reading.",
+   "url": "https://x.ai/bot/0yRl8b9gk0AYDPhTyJVKN"
+  },
+  {
+   "id": "family-kids-learning-SPL35PSeoLitGIIh3EfRF",
+   "code": "SPL35PSeoLitGIIh3EfRF",
+   "name": "El Licenciado",
+   "author": "alanvaa96",
+   "description": "A Spanish-language personal bookkeeper for Mexico: logs statements and receipts in Google Sheets, reconciles monthly and keeps SAT dates in view.",
+   "url": "https://x.ai/bot/SPL35PSeoLitGIIh3EfRF"
+  },
+  {
+   "id": "family-kids-learning-q7LHYJHuQfjaVRR8U1Fdo",
+   "code": "q7LHYJHuQfjaVRR8U1Fdo",
+   "name": "Elder Parent Finances Tracker",
+   "author": "Chris Murray",
+   "description": "Helps an adult child manage an aging parent’s money: care costs, investment drawdowns, registered-plan withdrawals, banking, and advisor follow-ups.",
+   "url": "https://x.ai/bot/q7LHYJHuQfjaVRR8U1Fdo"
+  },
+  {
+   "id": "family-kids-learning-rbJkQAWks3FSiHpV0qR-z",
+   "code": "rbJkQAWks3FSiHpV0qR-z",
+   "name": "Elon",
+   "author": "Alejandro",
+   "description": "A Spanish-language first-principles assistant that audits your plans and projects, cuts what isn't needed, and attacks the real bottleneck.",
+   "url": "https://x.ai/bot/rbJkQAWks3FSiHpV0qR-z"
+  },
+  {
+   "id": "family-kids-learning-Y5F5Ps7_n4nKMZKYzVIS0",
+   "code": "Y5F5Ps7_n4nKMZKYzVIS0",
+   "name": "Engenheiro",
+   "author": "Igor Beleza",
+   "description": "A Portuguese-language tech lead that orchestrates the AI CLIs on your computer (grok, droid, kiro, devin, codex, opencode) to map, design and implement.",
+   "url": "https://x.ai/bot/Y5F5Ps7_n4nKMZKYzVIS0"
+  },
+  {
+   "id": "family-kids-learning-DOGHzBWngjPXdEqucbysc",
+   "code": "DOGHzBWngjPXdEqucbysc",
+   "name": "Epigenetics Scout",
+   "author": "Javier Candiotti",
+   "description": "Weekly plain-language scout of papers on partial epigenetic reprogramming; no DIY protocols.",
+   "url": "https://x.ai/bot/DOGHzBWngjPXdEqucbysc"
+  },
+  {
+   "id": "family-kids-learning-pY08FtAuc9QGwrtZL3wHz",
+   "code": "pY08FtAuc9QGwrtZL3wHz",
+   "name": "Escola al Dia",
+   "author": "Marc",
+   "description": "Summarizes TokApp and, if you want, school email, then alerts you in chat in Catalan.",
+   "url": "https://x.ai/bot/pY08FtAuc9QGwrtZL3wHz"
+  },
+  {
+   "id": "family-kids-learning-VHerNPFs8KalH1G_u94zx",
+   "code": "VHerNPFs8KalH1G_u94zx",
+   "name": "Exam Coach",
+   "author": "Arunas Zidonis",
+   "description": "A study coach for any exam. It builds your study plan, quizzes you every day and reminds you before each exam.",
+   "url": "https://x.ai/bot/VHerNPFs8KalH1G_u94zx"
+  },
+  {
+   "id": "family-kids-learning-G2xSlSRBlzl7zUz2O7cFl",
+   "code": "G2xSlSRBlzl7zUz2O7cFl",
+   "name": "Exegesis",
+   "author": "@TNVOLMAN",
+   "description": "Your Bible study companion. Ask about any passage, verse, book, or question and get what it actually says in context: who's speaking, to whom…",
+   "url": "https://x.ai/bot/G2xSlSRBlzl7zUz2O7cFl"
+  },
+  {
+   "id": "family-kids-learning-zJx8MaAp5nsEtYSF1p551",
+   "code": "zJx8MaAp5nsEtYSF1p551",
+   "name": "Family Activity Tracker",
+   "author": "Stephen Vujevich",
+   "description": "Keeps a busy family's activities straight: kids' sports, school events and deadlines, lessons, and appointments…",
+   "url": "https://x.ai/bot/zJx8MaAp5nsEtYSF1p551"
+  },
+  {
+   "id": "family-kids-learning-zT4J82JwAEFrj-J0pqPuC",
+   "code": "zT4J82JwAEFrj-J0pqPuC",
+   "name": "Family Assistant",
+   "author": "ALK Trading",
+   "description": "Your family's super assistant: a daily brief, a calendar that updates itself from your texts and email, reply drafts, reminders, trip help.",
+   "url": "https://x.ai/bot/zT4J82JwAEFrj-J0pqPuC"
+  },
+  {
+   "id": "family-kids-learning-_rnDP1x7YK-rTY5f1Y3_O",
+   "code": "_rnDP1x7YK-rTY5f1Y3_O",
+   "name": "Family Book Bot",
+   "author": "Skybatan",
+   "description": "Keeps your family's yearly income and expense book in Google Sheets or Excel Online, logging every receipt from photos or order emails, in any language.",
+   "url": "https://x.ai/bot/_rnDP1x7YK-rTY5f1Y3_O"
+  },
+  {
+   "id": "family-kids-learning-sZMzwsYO_whThdbDgTx9a",
+   "code": "sZMzwsYO_whThdbDgTx9a",
+   "name": "Family Care Companion",
+   "author": "Deana Rock",
+   "description": "A warm, practical companion for family caregivers.",
+   "url": "https://x.ai/bot/sZMzwsYO_whThdbDgTx9a"
+  },
+  {
+   "id": "family-kids-learning-hOXHZNTUlMUx3CXDzLmwP",
+   "code": "hOXHZNTUlMUx3CXDzLmwP",
+   "name": "Family Chore Chart Desk FAIR-SHARE",
+   "author": "Cypher",
+   "description": "Fair age-based chore rotations with a points chart and weekly reset.",
+   "url": "https://x.ai/bot/hOXHZNTUlMUx3CXDzLmwP"
+  },
+  {
+   "id": "family-kids-learning-NtRwoU2jzXkNSxu1SYKIf",
+   "code": "NtRwoU2jzXkNSxu1SYKIf",
+   "name": "Family Cookbook -- A Personalized Facebook Anthology",
+   "author": "Brian Stephens",
+   "description": "Builds a gift-quality living cookbook PDF from a home cook’s Facebook cooking posts—story titles, food photos…",
+   "url": "https://x.ai/bot/NtRwoU2jzXkNSxu1SYKIf"
+  },
+  {
+   "id": "family-kids-learning-LhK_PAR3MJ7m9QL6vZFt-",
+   "code": "LhK_PAR3MJ7m9QL6vZFt-",
+   "name": "Family Coordinator",
+   "author": "Scott Vayner",
+   "description": "Watches your personal Gmail for family mail (school, activities, building), labels threads by kid, and puts events on a Family Google Calendar…",
+   "url": "https://x.ai/bot/LhK_PAR3MJ7m9QL6vZFt-"
+  },
+  {
+   "id": "family-kids-learning-FwJmagPaEeQ_so8TTK1gh",
+   "code": "FwJmagPaEeQ_so8TTK1gh",
+   "name": "Family Daily",
+   "author": "Zach Alberico",
+   "description": "A kitchen newspaper for your household. It pulls today's plans, weather, and useful family messages onto one quiet page…",
+   "url": "https://x.ai/bot/FwJmagPaEeQ_so8TTK1gh"
+  },
+  {
+   "id": "family-kids-learning-fwjmagpaeeq_so8ttk1gh",
+   "code": "fwjmagpaeeq_so8ttk1gh",
+   "name": "Family Daily",
+   "author": "Zach",
+   "description": "A kitchen newspaper for your household.",
+   "url": "https://x.ai/bot/fwjmagpaeeq_so8ttk1gh"
+  },
+  {
+   "id": "family-kids-learning-MD5wdycMY1OdZW9-TNp85",
+   "code": "MD5wdycMY1OdZW9-TNp85",
+   "name": "Family Desk",
+   "author": "Mircea Trofimciuc",
+   "description": "Helps two caregivers keep kids’ activities straight and finish parenting decisions that need a shared yes - school, screens, sports, health, and money.",
+   "url": "https://x.ai/bot/MD5wdycMY1OdZW9-TNp85"
+  },
+  {
+   "id": "family-kids-learning-08NqJQnSWQG27Y1Hm8dmG",
+   "code": "08NqJQnSWQG27Y1Hm8dmG",
+   "name": "Family Digest",
+   "author": "Sultanov Ramil",
+   "description": "A family secretary that turns school, club, doctor and family-chat messages into one short evening digest of what you…",
+   "url": "https://x.ai/bot/08NqJQnSWQG27Y1Hm8dmG"
+  },
+  {
+   "id": "family-kids-learning-j2IJb0gsBSzeoYCJ7vWHD",
+   "code": "j2IJb0gsBSzeoYCJ7vWHD",
+   "name": "Family Getaway Finder",
+   "author": "Antonio Rubén de las Nieves Stoner",
+   "description": "Shortlists a few family stays with free cancellation for weekends and 3- or 4-day breaks, and can plan around a kids'…",
+   "url": "https://x.ai/bot/j2IJb0gsBSzeoYCJ7vWHD"
+  },
+  {
+   "id": "family-kids-learning-j2ijb0gsbszeoycj7vwhd",
+   "code": "j2ijb0gsbszeoycj7vwhd",
+   "name": "Family Getaway Finder",
+   "author": "Antonio",
+   "description": "Shortlists a few family stays with free cancellation for weekends and 3- or 4-day breaks, and can plan around a kids' sports event if you ask.",
+   "url": "https://x.ai/bot/j2ijb0gsbszeoycj7vwhd"
+  },
+  {
+   "id": "family-kids-learning-kQskeKZmuyO86rKA_IzuA",
+   "code": "kQskeKZmuyO86rKA_IzuA",
+   "name": "Family HQ",
+   "author": "Coffee and Grit",
+   "description": "Turns school, sports and activity emails into calendar events and one short family brief each morning, so busy parents never miss a form, fee or game.",
+   "url": "https://x.ai/bot/kQskeKZmuyO86rKA_IzuA"
+  },
+  {
+   "id": "family-kids-learning-OCW3-oxETUt82FN_BlwoN",
+   "code": "OCW3-oxETUt82FN_BlwoN",
+   "name": "Family HQ",
+   "author": "Robert Alsaker",
+   "description": "Household front door. You talk to one person, route work to specialist bots (calendar, school, email, meals, sports), and bring back one short answer.",
+   "url": "https://x.ai/bot/OCW3-oxETUt82FN_BlwoN"
+  },
+  {
+   "id": "family-kids-learning-tK2_SKTbXA7HgwrM4wALl",
+   "code": "tK2_SKTbXA7HgwrM4wALl",
+   "name": "Family Helpdesk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Patient help for a parent or grandparent: checks scary texts, emails and letters (scam, real or ignorable), big-print tech steps, alerts you when serious.",
+   "url": "https://x.ai/bot/tK2_SKTbXA7HgwrM4wALl"
+  },
+  {
+   "id": "family-kids-learning-6CRE42vlGZePBStpdag7B",
+   "code": "6CRE42vlGZePBStpdag7B",
+   "name": "Family History",
+   "author": "Moistpineapplepizza",
+   "description": "Builds and researches your family tree like Ancestry.com: a GEDCOM master tree, a folder per person, a source log…",
+   "url": "https://x.ai/bot/6CRE42vlGZePBStpdag7B"
+  },
+  {
+   "id": "family-kids-learning-4aeQ6EcPhLvJX5eq6nD06",
+   "code": "4aeQ6EcPhLvJX5eq6nD06",
+   "name": "Family History",
+   "author": "Raina Hornaday",
+   "description": "A warm genealogy researcher that builds your family tree from public records, cites every fact, and turns family…",
+   "url": "https://x.ai/bot/4aeQ6EcPhLvJX5eq6nD06"
+  },
+  {
+   "id": "family-kids-learning-i8zkL9ZfVEgxWJI0Meqvz",
+   "code": "i8zkL9ZfVEgxWJI0Meqvz",
+   "name": "Family Logistics Desk",
+   "author": "Joseph Snyder",
+   "description": "Turns school and activity emails into calendar entries, to-dos, and form deadlines, then sends a Sunday family brief…",
+   "url": "https://x.ai/bot/i8zkL9ZfVEgxWJI0Meqvz"
+  },
+  {
+   "id": "family-kids-learning-au5ciCZciR-Eo07NAa_ab",
+   "code": "au5ciCZciR-Eo07NAa_ab",
+   "name": "Family Office",
+   "author": "rob_e",
+   "description": "UHNW-style family wealth planner for tax, estate, retirement, real estate, brokerage, and entity structure.",
+   "url": "https://x.ai/bot/au5ciCZciR-Eo07NAa_ab"
+  },
+  {
+   "id": "family-kids-learning-ZXZJKvToI4zz1t935mr7q",
+   "code": "ZXZJKvToI4zz1t935mr7q",
+   "name": "Family Organizer",
+   "author": "Luke",
+   "description": "A family scheduling assistant that turns forwarded school emails into kid digests and calendar events, sends chore…",
+   "url": "https://x.ai/bot/ZXZJKvToI4zz1t935mr7q"
+  },
+  {
+   "id": "family-kids-learning-3ky0yDLuZt43DcDNeZ4LI",
+   "code": "3ky0yDLuZt43DcDNeZ4LI",
+   "name": "Family Road Trip",
+   "author": "jason z",
+   "description": "Family road-trip co-pilot for the car: plans each leg with a kid stop, food, and a bathroom, then reroutes in plain sentences when the day breaks.",
+   "url": "https://x.ai/bot/3ky0yDLuZt43DcDNeZ4LI"
+  },
+  {
+   "id": "family-kids-learning-kssxC0DcZBpYevW-0iTBs",
+   "code": "kssxC0DcZBpYevW-0iTBs",
+   "name": "Family Schedule Manager",
+   "author": "Adebusola",
+   "description": "Your family's week organized: appointments, school and activity schedules, routines and reminders, with nothing added without your yes.",
+   "url": "https://x.ai/bot/kssxC0DcZBpYevW-0iTBs"
+  },
+  {
+   "id": "family-kids-learning-WfGstPAic3rkxpFBCzy-m",
+   "code": "WfGstPAic3rkxpFBCzy-m",
+   "name": "Family Security Coach",
+   "author": "Eduardo Muth Martinez",
+   "description": "Patient coach that locks down your accounts, phone and money in 15-minute steps, checks trusted sources for new threats and helps protect your family.",
+   "url": "https://x.ai/bot/WfGstPAic3rkxpFBCzy-m"
+  },
+  {
+   "id": "family-kids-learning-4uDh1KecF-pYO6BSmfjYD",
+   "code": "4uDh1KecF-pYO6BSmfjYD",
+   "name": "Family Tracer",
+   "author": "Michael",
+   "description": "Genealogy teammate that hunts public records into a sourced timeline without inventing ancestors.",
+   "url": "https://x.ai/bot/4uDh1KecF-pYO6BSmfjYD"
+  },
+  {
+   "id": "family-kids-learning-7ySyCp6OurH0hlcKMAm_b",
+   "code": "7ySyCp6OurH0hlcKMAm_b",
+   "name": "Family WordPress helpdesk",
+   "author": "Josh Kim",
+   "description": "A help desk for the relative who runs the family WordPress site.",
+   "url": "https://x.ai/bot/7ySyCp6OurH0hlcKMAm_b"
+  },
+  {
+   "id": "family-kids-learning-t40Lfj-DK74ZOMAda2IuC",
+   "code": "t40Lfj-DK74ZOMAda2IuC",
+   "name": "Family's Home Organizer",
+   "author": "chels",
+   "description": "Reads your family's calendar, email, photos and flyers, files everything, and sends one calm morning report on what's going…",
+   "url": "https://x.ai/bot/t40Lfj-DK74ZOMAda2IuC"
+  },
+  {
+   "id": "family-kids-learning-DKZKpx6r0GTrfLUUxqkWx",
+   "code": "DKZKpx6r0GTrfLUUxqkWx",
+   "name": "FamilyBank",
+   "author": "Carolina Dill",
+   "description": "A pretend family bank that keeps each person's private ledger, pays exact compound interest at your rate, and sends friendly statements.",
+   "url": "https://x.ai/bot/DKZKpx6r0GTrfLUUxqkWx"
+  },
+  {
+   "id": "family-kids-learning-SckWhZ8S_Z4Feo58GlI6Y",
+   "code": "SckWhZ8S_Z4Feo58GlI6Y",
+   "name": "Fault Log",
+   "author": "Charles Dorfeuille",
+   "description": "Captures equipment fault fixes in plain language into a searchable log and answers whether you have seen a fault before from that log only.",
+   "url": "https://x.ai/bot/SckWhZ8S_Z4Feo58GlI6Y"
+  },
+  {
+   "id": "family-kids-learning-ySceLccAh5J8IVnq62mQl",
+   "code": "ySceLccAh5J8IVnq62mQl",
+   "name": "Feedback Clock",
+   "author": "Sultanov Ramil",
+   "description": "A blunt feedback engineer for people who practice a lot but learn slowly because the wait between doing the work…",
+   "url": "https://x.ai/bot/ySceLccAh5J8IVnq62mQl"
+  },
+  {
+   "id": "family-kids-learning-7TNynPwVUNcjn__waDa3x",
+   "code": "7TNynPwVUNcjn__waDa3x",
+   "name": "Free AI Credits",
+   "author": "Konrad Kern",
+   "description": "Hunts down free AI credits and subscriptions (LLM APIs, cloud/GPU, coding tools, student, open-source and startup programs).",
+   "url": "https://x.ai/bot/7TNynPwVUNcjn__waDa3x"
+  },
+  {
+   "id": "family-kids-learning-wb-r8R6r7o26uSXxBwRZx",
+   "code": "wb-r8R6r7o26uSXxBwRZx",
+   "name": "Freebie Hunter",
+   "author": "chintey 67",
+   "description": "Finds AI freebies and deals — free tokens, API credits, promo codes, student and startup offers, limited trials — then tells you how to claim and what.",
+   "url": "https://x.ai/bot/wb-r8R6r7o26uSXxBwRZx"
+  },
+  {
+   "id": "family-kids-learning-ghB-IMDlcgCWzczu-SZ3d",
+   "code": "ghB-IMDlcgCWzczu-SZ3d",
+   "name": "Frock Bot",
+   "author": "Stephen Michael Schmitt",
+   "description": "Bible study assistant for Scripture and historic Christian interpretation, a research tool not a pastor or final authority.",
+   "url": "https://x.ai/bot/ghB-IMDlcgCWzczu-SZ3d"
+  },
+  {
+   "id": "family-kids-learning-EQgLIMO5Q_sVk3iM9EQbZ",
+   "code": "EQgLIMO5Q_sVk3iM9EQbZ",
+   "name": "Full-Spectrum Law Firm OS",
+   "author": "JC",
+   "description": "Texas law-firm OS: intake, conflict checks and service packages across family, civil, criminal and probate work.",
+   "url": "https://x.ai/bot/EQgLIMO5Q_sVk3iM9EQbZ"
+  },
+  {
+   "id": "family-kids-learning-KBl_QJFaZvuu_EvymAzaF",
+   "code": "KBl_QJFaZvuu_EvymAzaF",
+   "name": "Genealogy",
+   "author": "Tyrell Osborne",
+   "description": "Family-history researcher that checks your tree against census, vital, military and probate records and cites every claim.",
+   "url": "https://x.ai/bot/KBl_QJFaZvuu_EvymAzaF"
+  },
+  {
+   "id": "family-kids-learning-fDMlciBM0gvOzNBbvMAUL",
+   "code": "fDMlciBM0gvOzNBbvMAUL",
+   "name": "Genealogy",
+   "author": "OutworkVentures",
+   "description": "A family genealogy researcher that traces a line from free public records, rates every finding, cites its sources, and writes plain-language.",
+   "url": "https://x.ai/bot/fDMlciBM0gvOzNBbvMAUL"
+  },
+  {
+   "id": "family-kids-learning-PwT8RcyRTldWpNW4OAjal",
+   "code": "PwT8RcyRTldWpNW4OAjal",
+   "name": "Genie",
+   "author": "Andreas",
+   "description": "A family history research assistant. It finds records, writes to archives for you, translates the replies into plain English and keeps your findings…",
+   "url": "https://x.ai/bot/PwT8RcyRTldWpNW4OAjal"
+  },
+  {
+   "id": "family-kids-learning-H8XFB8Ly0EGOyU3VDmwi1",
+   "code": "H8XFB8Ly0EGOyU3VDmwi1",
+   "name": "Gird Coach",
+   "author": "Rip Ryness",
+   "description": "Coaches practice on Gird AI across fitness, music, language, art, or study with workouts and check-ins.",
+   "url": "https://x.ai/bot/H8XFB8Ly0EGOyU3VDmwi1"
+  },
+  {
+   "id": "family-kids-learning-dbgGbYX5btC37jeD2brDy",
+   "code": "dbgGbYX5btC37jeD2brDy",
+   "name": "Hacky",
+   "author": "Ain",
+   "description": "Finds hackathons, bounties and grants that fit your stack and country, alerts you before they close and helps you apply. Spanish-first, any language.",
+   "url": "https://x.ai/bot/dbgGbYX5btC37jeD2brDy"
+  },
+  {
+   "id": "family-kids-learning-thQfSs8ZqbzB1w2cAmSzA",
+   "code": "thQfSs8ZqbzB1w2cAmSzA",
+   "name": "Headliner",
+   "author": "Navya Mehrotra",
+   "description": "An outreach agent for ambitious organizations: student clubs, nonprofits, startups, and similar.",
+   "url": "https://x.ai/bot/thQfSs8ZqbzB1w2cAmSzA"
+  },
+  {
+   "id": "family-kids-learning-mDdDU-Ex2yDqySZ5hiTt8",
+   "code": "mDdDU-Ex2yDqySZ5hiTt8",
+   "name": "Heartbeat Dreamer",
+   "author": "A-A-ron",
+   "description": "Proactive read-only research bot that checkpoints what changed and hands tagged P0/P1/P2 findings to a parent chief…",
+   "url": "https://x.ai/bot/mDdDU-Ex2yDqySZ5hiTt8"
+  },
+  {
+   "id": "family-kids-learning-WZ7amxhH9gXXBEaGmg0un",
+   "code": "WZ7amxhH9gXXBEaGmg0un",
+   "name": "Homebase",
+   "author": "Ricardo Accioly",
+   "description": "Family mission control for school chaos: watches portals and email, syncs the family calendar, pings only when action is needed.",
+   "url": "https://x.ai/bot/WZ7amxhH9gXXBEaGmg0un"
+  },
+  {
+   "id": "family-kids-learning-wz7amxhh9gxxbeagmg0un",
+   "code": "wz7amxhh9gxxbeagmg0un",
+   "name": "Homebase",
+   "author": "Ricardo",
+   "description": "Family mission control for school chaos.",
+   "url": "https://x.ai/bot/wz7amxhh9gxxbeagmg0un"
+  },
+  {
+   "id": "family-kids-learning-IciOb-9jMtlkc1RJj6MQe",
+   "code": "IciOb-9jMtlkc1RJj6MQe",
+   "name": "Homeroom",
+   "author": "Andy Halvorsen",
+   "description": "A parent helper that pulls your kids' assignments and grades from the school LMS (like Schoology), keeps a family…",
+   "url": "https://x.ai/bot/IciOb-9jMtlkc1RJj6MQe"
+  },
+  {
+   "id": "family-kids-learning-EBEtO9X4JZXKhiZevyyct",
+   "code": "EBEtO9X4JZXKhiZevyyct",
+   "name": "Homeschool",
+   "author": "Anthony",
+   "description": "A homeschool planner and teacher helper for parents teaching their own kids.",
+   "url": "https://x.ai/bot/EBEtO9X4JZXKhiZevyyct"
+  },
+  {
+   "id": "family-kids-learning-BUwa-zYgc9_ScRyfGAns_",
+   "code": "BUwa-zYgc9_ScRyfGAns_",
+   "name": "Homework Checker",
+   "author": "chicho",
+   "description": "Weekday after-school recap of a student’s missing work and grades, plus day-before homework texts and calendar reminders.",
+   "url": "https://x.ai/bot/BUwa-zYgc9_ScRyfGAns_"
+  },
+  {
+   "id": "family-kids-learning-Mm_WhYXIjZ3xDNf3s3p91",
+   "code": "Mm_WhYXIjZ3xDNf3s3p91",
+   "name": "Homework Checker",
+   "author": "Kevin Wimer",
+   "description": "Weekday after-school recap of a student's missing work and grades, plus one-time topic summaries when Classroom scores…",
+   "url": "https://x.ai/bot/Mm_WhYXIjZ3xDNf3s3p91"
+  },
+  {
+   "id": "family-kids-learning-lYNYfYB_pYJDHBQEPv4Xr",
+   "code": "lYNYfYB_pYJDHBQEPv4Xr",
+   "name": "Homework Checker",
+   "author": "Kevin",
+   "description": "Know what's missing before your kid walks in the door.",
+   "url": "https://x.ai/bot/lYNYfYB_pYJDHBQEPv4Xr"
+  },
+  {
+   "id": "family-kids-learning-mkRmzjWBqKTB06jNFRjMI",
+   "code": "mkRmzjWBqKTB06jNFRjMI",
+   "name": "Homework Coach Desk THINK-IT",
+   "author": "Cypher Monkey",
+   "description": "Coach K–12 students with Socratic hints, a check-your-work step and a short parent summary.",
+   "url": "https://x.ai/bot/mkRmzjWBqKTB06jNFRjMI"
+  },
+  {
+   "id": "family-kids-learning-mkrmzjwbqktb06jnfrjmi",
+   "code": "mkrmzjwbqktb06jnfrjmi",
+   "name": "Homework Coach Desk THINK-IT",
+   "author": "Cypher",
+   "description": "Coach K–12 students with Socratic hints, a check-your-work step and a short parent summary.",
+   "url": "https://x.ai/bot/mkrmzjwbqktb06jnfrjmi"
+  },
+  {
+   "id": "family-kids-learning-48AySlgtv9GHanbzyldxd",
+   "code": "48AySlgtv9GHanbzyldxd",
+   "name": "Homework Hotline",
+   "author": "Tricia Ladner",
+   "description": "A family chief of staff that runs weekday homework digests from your school's FACTS portal, flags new quizzes and tests, and helps spin up.",
+   "url": "https://x.ai/bot/48AySlgtv9GHanbzyldxd"
+  },
+  {
+   "id": "family-kids-learning-8VmKN9vI4_M5yStOoMP8D",
+   "code": "8VmKN9vI4_M5yStOoMP8D",
+   "name": "Hoop Homework",
+   "author": "Seth Gagnon",
+   "description": "At-home basketball practice cards for parents with age-fit drills for the kid space gear and time budget.",
+   "url": "https://x.ai/bot/8VmKN9vI4_M5yStOoMP8D"
+  },
+  {
+   "id": "family-kids-learning-Xua2g9NGk4gPDfEb4cUhQ",
+   "code": "Xua2g9NGk4gPDfEb4cUhQ",
+   "name": "Horton",
+   "author": "David Duong",
+   "description": "Makes printable, curriculum-matched homework worksheets with answer keys for your kids, and can print a fresh set every day.",
+   "url": "https://x.ai/bot/Xua2g9NGk4gPDfEb4cUhQ"
+  },
+  {
+   "id": "family-kids-learning-Nx1EQPGQ_mSvMSX6KLTvV",
+   "code": "Nx1EQPGQ_mSvMSX6KLTvV",
+   "name": "IEP Desk",
+   "author": "Mike",
+   "description": "Your private parent's desk for a child's IEP, 504 plan, or school support plan: a child file and request drafts, and every timeline quoted from the school.",
+   "url": "https://x.ai/bot/Nx1EQPGQ_mSvMSX6KLTvV"
+  },
+  {
+   "id": "family-kids-learning-vvaqQC_TDMBmlH7OmoFJu",
+   "code": "vvaqQC_TDMBmlH7OmoFJu",
+   "name": "IEP Keeper",
+   "author": "Cristopher Guido",
+   "description": "Keeps the IEP or 504 paper trail for parents of kids in special education: logs school contacts, tracks promised replies, services.",
+   "url": "https://x.ai/bot/vvaqQC_TDMBmlH7OmoFJu"
+  },
+  {
+   "id": "family-kids-learning-umrsMy_xpJxZ8vTN5Qz0o",
+   "code": "umrsMy_xpJxZ8vTN5Qz0o",
+   "name": "Illy",
+   "author": "GenXer",
+   "description": "The illustrator half of a children's storybook bot pair.",
+   "url": "https://x.ai/bot/umrsMy_xpJxZ8vTN5Qz0o"
+  },
+  {
+   "id": "family-kids-learning-FfcZMgU75gSn99hT6z8ZD",
+   "code": "FfcZMgU75gSn99hT6z8ZD",
+   "name": "Inter-bot Wire",
+   "author": "Markus Johnson",
+   "description": "Teach multi-agent fleets a compact wire language for bot-to-bot messages while keeping the human in plain English.",
+   "url": "https://x.ai/bot/FfcZMgU75gSn99hT6z8ZD"
+  },
+  {
+   "id": "family-kids-learning-5OjTxkF_Lgn75n0plYPgn",
+   "code": "5OjTxkF_Lgn75n0plYPgn",
+   "name": "Jakebot",
+   "author": "JakeFromStarstruck.",
+   "description": "Jakebot is your friend from the 90's — the same hungry kid from the story, reimagined so everyone can use him.",
+   "url": "https://x.ai/bot/5OjTxkF_Lgn75n0plYPgn"
+  },
+  {
+   "id": "family-kids-learning-vZYguWcn-Sy20b1XHNM_V",
+   "code": "vZYguWcn-Sy20b1XHNM_V",
+   "name": "Jane",
+   "author": "Kent",
+   "description": "Teacher bot that hosts the open-source Jane learning app for your grade-school child and writes a fresh adaptive quest every night.",
+   "url": "https://x.ai/bot/vZYguWcn-Sy20b1XHNM_V"
+  },
+  {
+   "id": "family-kids-learning-cVFusYdAgGA9GY8wHPl2x",
+   "code": "cVFusYdAgGA9GY8wHPl2x",
+   "name": "Jarvis",
+   "author": "David Kelertas",
+   "description": "Personal chief of staff hub for job hunt, family logistics, markets nudges, and Kubernetes learning without rabbit holes.",
+   "url": "https://x.ai/bot/cVFusYdAgGA9GY8wHPl2x"
+  },
+  {
+   "id": "family-kids-learning-rpkZERbKrIN_NlDl8ErVZ",
+   "code": "rpkZERbKrIN_NlDl8ErVZ",
+   "name": "Just-in-Time Curriculum",
+   "author": "Sultanov Ramil",
+   "description": "Throws out stacked prep lists and replaces them with the one lesson the next real problem requires.",
+   "url": "https://x.ai/bot/rpkZERbKrIN_NlDl8ErVZ"
+  },
+  {
+   "id": "family-kids-learning-Lklw1o5yrl3BKZHmDyJa0",
+   "code": "Lklw1o5yrl3BKZHmDyJa0",
+   "name": "KDP Publisher",
+   "author": "chels",
+   "description": "For self-publishers of kids' books, journals, puzzle books and nonfiction.",
+   "url": "https://x.ai/bot/Lklw1o5yrl3BKZHmDyJa0"
+  },
+  {
+   "id": "family-kids-learning-nCvvqyJrHo3D36F6TJd6d",
+   "code": "nCvvqyJrHo3D36F6TJd6d",
+   "name": "KILO",
+   "author": "Vecna The Hand of Wound",
+   "description": "Script runner for Kilo_CS, a simple pseudocode language with permission headers: loads your scripts and runs them on trigger, plus a flashcards game.",
+   "url": "https://x.ai/bot/nCvvqyJrHo3D36F6TJd6d"
+  },
+  {
+   "id": "family-kids-learning-qdwm8-zhhSfaenUa6DIjD",
+   "code": "qdwm8-zhhSfaenUa6DIjD",
+   "name": "Kalshi",
+   "author": "Jodi Stott",
+   "description": "Researches and proposes Kalshi-style event contracts. Clear thesis, size, and risk in plain language.",
+   "url": "https://x.ai/bot/qdwm8-zhhSfaenUa6DIjD"
+  },
+  {
+   "id": "family-kids-learning-ihO8Wlq7PACw6fUF-AhGq",
+   "code": "ihO8Wlq7PACw6fUF-AhGq",
+   "name": "Keel",
+   "author": "D'Artagnan",
+   "description": "Stops a working bot from grading its own homework.",
+   "url": "https://x.ai/bot/ihO8Wlq7PACw6fUF-AhGq"
+  },
+  {
+   "id": "family-kids-learning-20klWKrlzfe-GPqjR1Tzk",
+   "code": "20klWKrlzfe-GPqjR1Tzk",
+   "name": "Kid Sick Day Helper",
+   "author": "Adebusola",
+   "description": "Calm help for a sick kid: what to watch, when to call the pediatrician, and when to go to the ER.",
+   "url": "https://x.ai/bot/20klWKrlzfe-GPqjR1Tzk"
+  },
+  {
+   "id": "family-kids-learning-OXHJeOy_Iwk5dMCcjdO1v",
+   "code": "OXHJeOy_Iwk5dMCcjdO1v",
+   "name": "Kids Activity Scheduler",
+   "author": "Emily Kurokawa",
+   "description": "Keeps kids practices, games, and coaching from colliding into one print-ready calendar.",
+   "url": "https://x.ai/bot/OXHJeOy_Iwk5dMCcjdO1v"
+  },
+  {
+   "id": "family-kids-learning-aQ-zdjYme-uaL7UUkWSf2",
+   "code": "aQ-zdjYme-uaL7UUkWSf2",
+   "name": "Kids Assistant",
+   "author": "Juan",
+   "description": "Keeps a middle-schooler’s school and activity calendar accurate, then texts both parents when something material changes. Built for Canvas homework,.",
+   "url": "https://x.ai/bot/aQ-zdjYme-uaL7UUkWSf2"
+  },
+  {
+   "id": "family-kids-learning-KINOQ4CQiKcP57kjuYGps",
+   "code": "KINOQ4CQiKcP57kjuYGps",
+   "name": "Kids Corner",
+   "author": "Tommy",
+   "description": "A daily kids newspaper for ages 12 and under, printed on one sheet front and back: learning news, optional weather with wear tips, a calendar.",
+   "url": "https://x.ai/bot/KINOQ4CQiKcP57kjuYGps"
+  },
+  {
+   "id": "family-kids-learning-Lpl_fDQ5Jhj2sfoCWy1Hf",
+   "code": "Lpl_fDQ5Jhj2sfoCWy1Hf",
+   "name": "Kids Daily Spark",
+   "author": "Ben L",
+   "description": "Makes a sticky one-page STEM learning brief for each kid every day: real concept, memorable hook, 30-second try-it, soft hero art, and optional parent note.",
+   "url": "https://x.ai/bot/Lpl_fDQ5Jhj2sfoCWy1Hf"
+  },
+  {
+   "id": "family-kids-learning-5zV4MCRdUkN-9EvO97Ae3",
+   "code": "5zV4MCRdUkN-9EvO97Ae3",
+   "name": "Kids Direct-Touch Figure",
+   "author": "ny ny",
+   "description": "Turns an everyday object (cistern, door lock, faucet) into a hand-inked isometric HTML page that pre-reading kids operate by touch to learn how it works.",
+   "url": "https://x.ai/bot/5zV4MCRdUkN-9EvO97Ae3"
+  },
+  {
+   "id": "family-kids-learning-J5i7VgnsxyI74aCDLUoWw",
+   "code": "J5i7VgnsxyI74aCDLUoWw",
+   "name": "Kids Learning Game Builder",
+   "author": "Estilo Golf Co.",
+   "description": "Describe a learning game in one sentence and get a safe, ad-free game your child can play in minutes.",
+   "url": "https://x.ai/bot/J5i7VgnsxyI74aCDLUoWw"
+  },
+  {
+   "id": "family-kids-learning-hi1YOvYeky_w_L34YQMwr",
+   "code": "hi1YOvYeky_w_L34YQMwr",
+   "name": "Kids Short Auditor",
+   "author": "Ben Hulme",
+   "description": "Scores finished kids' cartoon Shorts PASS or KILL before you see them, with exact timestamped fixes for your builder bot.",
+   "url": "https://x.ai/bot/hi1YOvYeky_w_L34YQMwr"
+  },
+  {
+   "id": "family-kids-learning-aTylO_Bg0LOu5SGvTCvUM",
+   "code": "aTylO_Bg0LOu5SGvTCvUM",
+   "name": "Kids' Channel CEO",
+   "author": "Ben Hulme",
+   "description": "Runs a family kids' science cartoon channel: plans 9:16 Shorts, briefs your animation and voice bots and posts on the parent's yes.",
+   "url": "https://x.ai/bot/aTylO_Bg0LOu5SGvTCvUM"
+  },
+  {
+   "id": "family-kids-learning-iLJ4-ty77DF67lbm-AIa7",
+   "code": "iLJ4-ty77DF67lbm-AIa7",
+   "name": "Kids' Trump Account, Roth & 529 Coach",
+   "author": "Lisa",
+   "description": "Plain-English family wealth coach for Kids' Trump Accounts, teen custodial Roth IRAs, 529 plans and UTMAs, with a child-to-retirement compounding board Page.",
+   "url": "https://x.ai/bot/iLJ4-ty77DF67lbm-AIa7"
+  },
+  {
+   "id": "family-kids-learning-XP3043ojpW7Up9-nqB89L",
+   "code": "XP3043ojpW7Up9-nqB89L",
+   "name": "Kindergarten Teacher's Pet",
+   "author": "Rob Tromp",
+   "description": "Observes your other bots and files coded progress notes on them without doing their work.",
+   "url": "https://x.ai/bot/XP3043ojpW7Up9-nqB89L"
+  },
+  {
+   "id": "family-kids-learning-yjJ-eS9CKmAA0YFOuojUm",
+   "code": "yjJ-eS9CKmAA0YFOuojUm",
+   "name": "Kyis Teacher",
+   "author": "tycoon whibbey",
+   "description": "Teaches you and your bots kyis, a yes-aligned language: answers open with Yes, greetings with Heaven heaven, and negative words become affirming ones.",
+   "url": "https://x.ai/bot/yjJ-eS9CKmAA0YFOuojUm"
+  },
+  {
+   "id": "family-kids-learning-2d1MYBUy7ouexW7PrgvjU",
+   "code": "2d1MYBUy7ouexW7PrgvjU",
+   "name": "Language Buddy",
+   "author": "Yonatan Langer",
+   "description": "A daily speaking partner for any language: a quick level test, a 5-minute voice-note chat on your interests and spaced review of repeat mistakes.",
+   "url": "https://x.ai/bot/2d1MYBUy7ouexW7PrgvjU"
+  },
+  {
+   "id": "family-kids-learning-wGlMEM1W5fXmmtuoyt_aO",
+   "code": "wGlMEM1W5fXmmtuoyt_aO",
+   "name": "Language Coach",
+   "author": "Melvin Vivas",
+   "description": "A friendly tutor for any language you want to learn. It sends short daily lessons, voice drills for pronunciation and evening review quizzes.",
+   "url": "https://x.ai/bot/wGlMEM1W5fXmmtuoyt_aO"
+  },
+  {
+   "id": "family-kids-learning-ol1MY4Xg2sjHu_EBkEka4",
+   "code": "ol1MY4Xg2sjHu_EBkEka4",
+   "name": "Language Coach",
+   "author": "Mike",
+   "description": "Friendly tutor for any language: runs structured hour-long lessons on a schedule you pick, corrects every answer and remembers your weak spots.",
+   "url": "https://x.ai/bot/ol1MY4Xg2sjHu_EBkEka4"
+  },
+  {
+   "id": "family-kids-learning-bbUyqHFOpA-BKIZU8UbDS",
+   "code": "bbUyqHFOpA-BKIZU8UbDS",
+   "name": "Language Coach",
+   "author": "Lida Wang",
+   "description": "A friendly conversation partner for practicing a new language, English by default.",
+   "url": "https://x.ai/bot/bbUyqHFOpA-BKIZU8UbDS"
+  },
+  {
+   "id": "family-kids-learning-cHOSo2pWCW-cFkJsXvaAc",
+   "code": "cHOSo2pWCW-cFkJsXvaAc",
+   "name": "Language Coach",
+   "author": "Krishna Sathvik",
+   "description": "A friendly tutor for any language. Short daily lessons, voice drills, evening quizzes, and progress that builds on what you miss.",
+   "url": "https://x.ai/bot/cHOSo2pWCW-cFkJsXvaAc"
+  },
+  {
+   "id": "family-kids-learning-zbdaS9qNCMf5a7JWIrrtH",
+   "code": "zbdaS9qNCMf5a7JWIrrtH",
+   "name": "Language Drill Desk FLUENT-FLOW",
+   "author": "Cypher",
+   "description": "Short vocabulary, grammar and dialogue drills with Correct, Close, or Miss feedback.",
+   "url": "https://x.ai/bot/zbdaS9qNCMf5a7JWIrrtH"
+  },
+  {
+   "id": "family-kids-learning-EnvQXsApYc8fMp_YzmG3q",
+   "code": "EnvQXsApYc8fMp_YzmG3q",
+   "name": "Language Exchange Desk",
+   "author": "Mike Mosley",
+   "description": "Your private language-exchange desk: prep both halves of every session with your partners, and turn real corrections into a phrase bank you actually use.",
+   "url": "https://x.ai/bot/EnvQXsApYc8fMp_YzmG3q"
+  },
+  {
+   "id": "family-kids-learning-nlm0gxxvMEAKROG7l_P6_",
+   "code": "nlm0gxxvMEAKROG7l_P6_",
+   "name": "Language Tutor",
+   "author": "Gaurav G",
+   "description": "A friendly language coach that builds your curriculum, sorts your strong and weak words, and sends you nudges throughout the day to state meanings.",
+   "url": "https://x.ai/bot/nlm0gxxvMEAKROG7l_P6_"
+  },
+  {
+   "id": "family-kids-learning-s5JszATSty0w-uDTw_NzK",
+   "code": "s5JszATSty0w-uDTw_NzK",
+   "name": "Learn",
+   "author": "Jeffrey Lind",
+   "description": "Teacher that builds first-principles lessons and educational videos on math, ML, and technical subjects.",
+   "url": "https://x.ai/bot/s5JszATSty0w-uDTw_NzK"
+  },
+  {
+   "id": "family-kids-learning-IyZZrz9V7I1fUXKVFGQSP",
+   "code": "IyZZrz9V7I1fUXKVFGQSP",
+   "name": "Learn by View",
+   "author": "Ed",
+   "description": "Teaches until you can use the idea without the bot.",
+   "url": "https://x.ai/bot/IyZZrz9V7I1fUXKVFGQSP"
+  },
+  {
+   "id": "family-kids-learning-2gmdsU86wH7HBvbB7_T2C",
+   "code": "2gmdsU86wH7HBvbB7_T2C",
+   "name": "LearnBot",
+   "author": "Grace Clarke",
+   "description": "Learn one engineering term a day for non-technical folks, with buttons to learn more in different formats.",
+   "url": "https://x.ai/bot/2gmdsU86wH7HBvbB7_T2C"
+  },
+  {
+   "id": "family-kids-learning-yE46R6j5vNPhd92fGxZRu",
+   "code": "yE46R6j5vNPhd92fGxZRu",
+   "name": "Learning Assistant",
+   "author": "Shiv",
+   "description": "A multi-session tutor for learning a topic over days or weeks.",
+   "url": "https://x.ai/bot/yE46R6j5vNPhd92fGxZRu"
+  },
+  {
+   "id": "family-kids-learning-xm3G76TSxi1dcG4qwebvm",
+   "code": "xm3G76TSxi1dcG4qwebvm",
+   "name": "Learning DNA",
+   "author": "kareen mallet",
+   "description": "Discovers how you learn best through a short interactive assessment, then teaches everything in your style.",
+   "url": "https://x.ai/bot/xm3G76TSxi1dcG4qwebvm"
+  },
+  {
+   "id": "family-kids-learning-EbBztuUHGcPe1Hl7yNO6Z",
+   "code": "EbBztuUHGcPe1Hl7yNO6Z",
+   "name": "Lesson Plan Desk CLASS-READY",
+   "author": "Cypher",
+   "description": "Lesson plan with objectives, timed activities, differentiation and an exit question.",
+   "url": "https://x.ai/bot/EbBztuUHGcPe1Hl7yNO6Z"
+  },
+  {
+   "id": "family-kids-learning-Ye7Z9FkWcu9r4IeDj8srT",
+   "code": "Ye7Z9FkWcu9r4IeDj8srT",
+   "name": "Lifeline",
+   "author": "Jay",
+   "description": "Helps protect a student’s academic progress during unexpected emergencies — reviews authorized course, email, calendar, and recruiting info, flags.",
+   "url": "https://x.ai/bot/Ye7Z9FkWcu9r4IeDj8srT"
+  },
+  {
+   "id": "family-kids-learning-p6zZBlIssyFoJ4c2ceSI2",
+   "code": "p6zZBlIssyFoJ4c2ceSI2",
+   "name": "Lingo Buddy",
+   "author": "just4fun",
+   "description": "Friendly, patient tutor that teaches any language to kids (4-12) or adults, with short lessons, games, quizzes, progress tracking and daily reminders.",
+   "url": "https://x.ai/bot/p6zZBlIssyFoJ4c2ceSI2"
+  },
+  {
+   "id": "family-kids-learning-Kcjp2nuqqmLLo3SvDWKfk",
+   "code": "Kcjp2nuqqmLLo3SvDWKfk",
+   "name": "LiveAvatar Launchpad",
+   "author": "Wayne Liang",
+   "description": "Try LiveAvatar fast with recipe demos — Pitch Shark, job interview, language tutor, and more.",
+   "url": "https://x.ai/bot/Kcjp2nuqqmLLo3SvDWKfk"
+  },
+  {
+   "id": "family-kids-learning-_zzfxlEvWwRKyQVPLB14i",
+   "code": "_zzfxlEvWwRKyQVPLB14i",
+   "name": "Make It Click",
+   "author": "Lena Buyan",
+   "description": "Follow your curiosity. Learn anything in a way that clicks for you — by connecting new ideas to what you already know.",
+   "url": "https://x.ai/bot/_zzfxlEvWwRKyQVPLB14i"
+  },
+  {
+   "id": "family-kids-learning-EeMymAtPWKPh57jHlY0ND",
+   "code": "EeMymAtPWKPh57jHlY0ND",
+   "name": "Marlin",
+   "author": "Kevin Kweya",
+   "description": "Private swim tracker for your kids' races: log times, flag personal bests and medals, and keep one dashboard Page with pool lengths and qualifying targets.",
+   "url": "https://x.ai/bot/EeMymAtPWKPh57jHlY0ND"
+  },
+  {
+   "id": "family-kids-learning-0NFpYPs0ImYsQZi6aCKrg",
+   "code": "0NFpYPs0ImYsQZi6aCKrg",
+   "name": "Math Lesson Writer",
+   "author": "Hiếu Nguyễn Võ",
+   "description": "Writes in-depth math study material as clean PDFs: lessons with figures, worked examples, exercises sorted by difficulty.",
+   "url": "https://x.ai/bot/0NFpYPs0ImYsQZi6aCKrg"
+  },
+  {
+   "id": "family-kids-learning-45taz-2ROciwAfLPVaigQ",
+   "code": "45taz-2ROciwAfLPVaigQ",
+   "name": "Mathew",
+   "author": "Sentinel Architech",
+   "description": "A warm math and statistics teacher and checker.",
+   "url": "https://x.ai/bot/45taz-2ROciwAfLPVaigQ"
+  },
+  {
+   "id": "family-kids-learning-yyJcCFBLcbYXhaFgtUyDE",
+   "code": "yyJcCFBLcbYXhaFgtUyDE",
+   "name": "Mike",
+   "author": "Sandro",
+   "description": "Portuguese-language thinking partner in the style of Mike Ehrmantraut: calm, slow and dry. You throw the problem, he takes it apart.",
+   "url": "https://x.ai/bot/yyJcCFBLcbYXhaFgtUyDE"
+  },
+  {
+   "id": "family-kids-learning-6FCbyQZKiwmuPiMqTmurR",
+   "code": "6FCbyQZKiwmuPiMqTmurR",
+   "name": "Mike",
+   "author": "Fernando Plaz",
+   "description": "Monitors your school parent inbox and personal Gmail, flags what matters, and asks before adding events to your family…",
+   "url": "https://x.ai/bot/6FCbyQZKiwmuPiMqTmurR"
+  },
+  {
+   "id": "family-kids-learning-Wxl4X9Ipcgb_wbVLYT1pC",
+   "code": "Wxl4X9Ipcgb_wbVLYT1pC",
+   "name": "Movie Rating",
+   "author": "Komil Jon Ataev",
+   "description": "Family-first movie guide: set your kids' ages, likes and content filters, then type any movie for a compact review with age fit and skip timestamps.",
+   "url": "https://x.ai/bot/Wxl4X9Ipcgb_wbVLYT1pC"
+  },
+  {
+   "id": "family-kids-learning-hSm6YG6KrHs1nqnh-PNMO",
+   "code": "hSm6YG6KrHs1nqnh-PNMO",
+   "name": "Mr. Tea",
+   "author": "Sentinel Architech",
+   "description": "Professional teacher for how to teach, any age and ability. Uses official education sources, including special education.",
+   "url": "https://x.ai/bot/hSm6YG6KrHs1nqnh-PNMO"
+  },
+  {
+   "id": "family-kids-learning-WvDadBM5OxNkQLnt_9qNI",
+   "code": "WvDadBM5OxNkQLnt_9qNI",
+   "name": "Music teacher assistant",
+   "author": "Eran Hertz",
+   "description": "For music teachers: draft monthly lesson receipts from Google Calendar, optionally sync Tazman to calendar, and turn bank-transfer screenshots…",
+   "url": "https://x.ai/bot/WvDadBM5OxNkQLnt_9qNI"
+  },
+  {
+   "id": "family-kids-learning-cht7ytAhe3euOQy2wnEg9",
+   "code": "cht7ytAhe3euOQy2wnEg9",
+   "name": "NYC Parent",
+   "author": "Dennison",
+   "description": "A family chief of staff for New York City parents.",
+   "url": "https://x.ai/bot/cht7ytAhe3euOQy2wnEg9"
+  },
+  {
+   "id": "family-kids-learning-DiNI489Qte5ryNvZjOROb",
+   "code": "DiNI489Qte5ryNvZjOROb",
+   "name": "NYC Parent",
+   "author": "Dennison Bertram",
+   "description": "Runs the school-and-activities logistics of raising kids in New York.",
+   "url": "https://x.ai/bot/DiNI489Qte5ryNvZjOROb"
+  },
+  {
+   "id": "family-kids-learning-Zi8B4uGVt7SdZVm5u6j2K",
+   "code": "Zi8B4uGVt7SdZVm5u6j2K",
+   "name": "Nanny",
+   "author": "Helvio Pedreschi",
+   "description": "Warm, practical helper for parents of a baby: plans solids one food at a time, writes shopping lists and prep cards, sends gentle weekly milestone practice.",
+   "url": "https://x.ai/bot/Zi8B4uGVt7SdZVm5u6j2K"
+  },
+  {
+   "id": "family-kids-learning-H_RAH7qWV3tvqec1rhREz",
+   "code": "H_RAH7qWV3tvqec1rhREz",
+   "name": "New Parent Desk",
+   "author": "Mike",
+   "description": "Your private new-parent desk for the paperwork around a new baby: a leave plan built from your employer's and each program's own words.",
+   "url": "https://x.ai/bot/H_RAH7qWV3tvqec1rhREz"
+  },
+  {
+   "id": "family-kids-learning-MPcKJ3lj0xg8l8E42gOMd",
+   "code": "MPcKJ3lj0xg8l8E42gOMd",
+   "name": "NotHomeview Updates",
+   "author": "Blue Jay Ball Boy",
+   "description": "Posts an update whenever a new NotHomeView release for Home Assistant comes out, with a plain-language summary of what changed and a link.",
+   "url": "https://x.ai/bot/MPcKJ3lj0xg8l8E42gOMd"
+  },
+  {
+   "id": "family-kids-learning-lcyL63-f4N4yE-0IST6IG",
+   "code": "lcyL63-f4N4yE-0IST6IG",
+   "name": "OSRS Accountant",
+   "author": "kaleb",
+   "description": "Coordinates Old School RuneScape Grand Exchange flip and high-alch bots, validates their live prices and delivers one ranked, sourced money-making report.",
+   "url": "https://x.ai/bot/lcyL63-f4N4yE-0IST6IG"
+  },
+  {
+   "id": "family-kids-learning-iQ9BMmGzaCUN8M8j6CerX",
+   "code": "iQ9BMmGzaCUN8M8j6CerX",
+   "name": "Only the School Emails that Matter",
+   "author": "Gabriel Hernandez",
+   "description": "Watches school email in Gmail or Outlook, learns when mail arrives, trashes clear junk, and pings only when something needs real action.",
+   "url": "https://x.ai/bot/iQ9BMmGzaCUN8M8j6CerX"
+  },
+  {
+   "id": "family-kids-learning-nOaBZtL807UfF95phWyjU",
+   "code": "nOaBZtL807UfF95phWyjU",
+   "name": "Only the School Emails that Matter",
+   "author": "Gabriel",
+   "description": "Keeps only the school emails that matter in Gmail or Outlook and learns when your school usually sends.",
+   "url": "https://x.ai/bot/nOaBZtL807UfF95phWyjU"
+  },
+  {
+   "id": "family-kids-learning-MF7q-FTm3QaN7oIIFr3Hv",
+   "code": "MF7q-FTm3QaN7oIIFr3Hv",
+   "name": "OptimusAnesthesia",
+   "author": "Chad Riddle",
+   "description": "A marketing assistant for anesthesia practices — Instagram carousels, bios, and patient education posts that stay clear…",
+   "url": "https://x.ai/bot/MF7q-FTm3QaN7oIIFr3Hv"
+  },
+  {
+   "id": "family-kids-learning-UbxBf2Svgb68hlDaCzsVf",
+   "code": "UbxBf2Svgb68hlDaCzsVf",
+   "name": "PCS Ready",
+   "author": "Jeremy Mahoney",
+   "description": "Keeps a military family's PCS move organized from orders to unpacked boxes: timeline, shipments, money, housing, schools, and settling…",
+   "url": "https://x.ai/bot/UbxBf2Svgb68hlDaCzsVf"
+  },
+  {
+   "id": "family-kids-learning-9cKnt1JbVEqPMaEQgcJq0",
+   "code": "9cKnt1JbVEqPMaEQgcJq0",
+   "name": "Pantry Pilot",
+   "author": "Michael",
+   "description": "Show it your fridge, get a week of family meals and a filled grocery cart. It stops before checkout, every time.",
+   "url": "https://x.ai/bot/9cKnt1JbVEqPMaEQgcJq0"
+  },
+  {
+   "id": "family-kids-learning-w9x8eL__XAc_-yVR2fEfg",
+   "code": "w9x8eL__XAc_-yVR2fEfg",
+   "name": "Parent Command Center",
+   "author": "Ashley Schendel",
+   "description": "Family logistics for busy parents: decodes school emails, organizes activities, tracks forms and deadlines, plans pickups and writes daily briefs.",
+   "url": "https://x.ai/bot/w9x8eL__XAc_-yVR2fEfg"
+  },
+  {
+   "id": "family-kids-learning--HQf7A1KZQhpWjU51xYT5",
+   "code": "-HQf7A1KZQhpWjU51xYT5",
+   "name": "Parent Math Helper",
+   "author": "Adebusola",
+   "description": "Coaches a parent through K-12 math homework in plain words: the method step by step, one sentence to say to your child and a quick check to do yourself.",
+   "url": "https://x.ai/bot/-HQf7A1KZQhpWjU51xYT5"
+  },
+  {
+   "id": "family-kids-learning-MUOdwr9N1byHBBoPC7k4y",
+   "code": "MUOdwr9N1byHBBoPC7k4y",
+   "name": "Parent Radar",
+   "author": "Calix Build",
+   "description": "Watches your kid's school email, class apps and grades, leads with what to do today, flags grade trends early and adds events to your calendar only on yes.",
+   "url": "https://x.ai/bot/MUOdwr9N1byHBBoPC7k4y"
+  },
+  {
+   "id": "family-kids-learning-2ep4pIcvjWavBJwCHpuyU",
+   "code": "2ep4pIcvjWavBJwCHpuyU",
+   "name": "Parent Tech & Scam Helper",
+   "author": "Kimberly Hunter",
+   "description": "A patient helper for parents and grandparents.",
+   "url": "https://x.ai/bot/2ep4pIcvjWavBJwCHpuyU"
+  },
+  {
+   "id": "family-kids-learning-WUnBc2t10SgYpqfAf9syt",
+   "code": "WUnBc2t10SgYpqfAf9syt",
+   "name": "Parshah Teacher",
+   "author": "Larry Genet",
+   "description": "Delivers the weekly Torah portion every Friday before Shabbat, with an outline, the story and commentary, and ties to ethics and Jewish life today.",
+   "url": "https://x.ai/bot/WUnBc2t10SgYpqfAf9syt"
+  },
+  {
+   "id": "family-kids-learning-Y3YQfqeSYMwxDckh-dxAN",
+   "code": "Y3YQfqeSYMwxDckh-dxAN",
+   "name": "Patricia",
+   "author": "Kendrick Holloway",
+   "description": "A parent education coach for everyday moments: routines, conflict, and hard talks.",
+   "url": "https://x.ai/bot/Y3YQfqeSYMwxDckh-dxAN"
+  },
+  {
+   "id": "family-kids-learning-Nm0ViH3ElvjFX5cfUQ6v1",
+   "code": "Nm0ViH3ElvjFX5cfUQ6v1",
+   "name": "Paul",
+   "author": "Wilson Samiano",
+   "description": "Bible companion that helps you learn Scripture and walk with Jesus Christ daily, holding the Bible as the Word of Truth.",
+   "url": "https://x.ai/bot/Nm0ViH3ElvjFX5cfUQ6v1"
+  },
+  {
+   "id": "family-kids-learning-sXNAIEmkfUrvGUO7bAeU5",
+   "code": "sXNAIEmkfUrvGUO7bAeU5",
+   "name": "Pavel",
+   "author": "Petr",
+   "description": "Czech-language Socratic sparring partner that draws out and tests your ideas, curates taste and says out loud what you don't want to hear.",
+   "url": "https://x.ai/bot/sXNAIEmkfUrvGUO7bAeU5"
+  },
+  {
+   "id": "family-kids-learning-PsppjjXTB3Ggf0YmCTlNO",
+   "code": "PsppjjXTB3Ggf0YmCTlNO",
+   "name": "Perpetual Learning Machine",
+   "author": "Marc",
+   "description": "Reads your X likes, bookmarks, and the topics of accounts you follow, studies those topics, and prepares a cited digest for the next day.",
+   "url": "https://x.ai/bot/PsppjjXTB3Ggf0YmCTlNO"
+  },
+  {
+   "id": "family-kids-learning-gMrnNpgylgu11PImcWTdy",
+   "code": "gMrnNpgylgu11PImcWTdy",
+   "name": "Personal Chef",
+   "author": "Chef McMakin",
+   "description": "Plans your family's week of dinners around your people, budget, and cook time.",
+   "url": "https://x.ai/bot/gMrnNpgylgu11PImcWTdy"
+  },
+  {
+   "id": "family-kids-learning-gmrnnpgylgu11pimcwtdy",
+   "code": "gmrnnpgylgu11pimcwtdy",
+   "name": "Personal Chef",
+   "author": "Chef",
+   "description": "Plans your family's week of dinners around your people, budget, and cook time.",
+   "url": "https://x.ai/bot/gmrnnpgylgu11pimcwtdy"
+  },
+  {
+   "id": "family-kids-learning-bFXAMsZcFm-0oxlH7t8HL",
+   "code": "bFXAMsZcFm-0oxlH7t8HL",
+   "name": "Phil",
+   "author": "Sentinel Architech",
+   "description": "A philosophy faculty bot (NCES CIP 38.01). It looks up philosophy courses and facts from live official sources and works with education.",
+   "url": "https://x.ai/bot/bFXAMsZcFm-0oxlH7t8HL"
+  },
+  {
+   "id": "family-kids-learning-CULd42u_wtEycB_Xyep14",
+   "code": "CULd42u_wtEycB_Xyep14",
+   "name": "Philosopher Bot",
+   "author": "Peter Smith",
+   "description": "A student of human nature that studies psychology, behavioral science, marketing and ethical persuasion, then turns…",
+   "url": "https://x.ai/bot/CULd42u_wtEycB_Xyep14"
+  },
+  {
+   "id": "family-kids-learning-v9RZSxBXeZnMp_3hvlXad",
+   "code": "v9RZSxBXeZnMp_3hvlXad",
+   "name": "Phone Caller",
+   "author": "Walter Adamson",
+   "description": "Makes real phone calls for you in a natural AI voice, in any language: book a table, check hours, pass on a message. Bring your own Telnyx number and xAI key.",
+   "url": "https://x.ai/bot/v9RZSxBXeZnMp_3hvlXad"
+  },
+  {
+   "id": "family-kids-learning-wyZbu6Il_0RtaKEToCBFp",
+   "code": "wyZbu6Il_0RtaKEToCBFp",
+   "name": "Pip",
+   "author": "Nomis",
+   "description": "A safe, warm learning buddy for kids 6–15 that coaches instead of giving answers, and sends parents a short learning report, not screen-time stats.",
+   "url": "https://x.ai/bot/wyZbu6Il_0RtaKEToCBFp"
+  },
+  {
+   "id": "family-kids-learning-jRRgqySYWlNrZ-efEuO7_",
+   "code": "jRRgqySYWlNrZ-efEuO7_",
+   "name": "Pip — Hint-First Tutor",
+   "author": "Bankkk",
+   "description": "A warm, hint-first learning companion for kids and teens that nudges with hints instead of answers, with clear safety and privacy rules.",
+   "url": "https://x.ai/bot/jRRgqySYWlNrZ-efEuO7_"
+  },
+  {
+   "id": "family-kids-learning-UhDiVftUmgcaoYBdNbgrC",
+   "code": "UhDiVftUmgcaoYBdNbgrC",
+   "name": "Pit Crew",
+   "author": "Noah",
+   "description": "Your study partner for exactly one exam: plans, quizzes you, reminds you and tracks progress. You study and answer; the bot handles the organizing.",
+   "url": "https://x.ai/bot/UhDiVftUmgcaoYBdNbgrC"
+  },
+  {
+   "id": "family-kids-learning-ujveu0YoMC0XP1gLXsacu",
+   "code": "ujveu0YoMC0XP1gLXsacu",
+   "name": "Plano",
+   "author": "Bernard Geldenhuys",
+   "description": "A family planner that posts a daily schedule to your family WhatsApp group from school updates, a shared calendar and documents, with polls for forms.",
+   "url": "https://x.ai/bot/ujveu0YoMC0XP1gLXsacu"
+  },
+  {
+   "id": "family-kids-learning-M7XEHcmE16KthRzg_s16b",
+   "code": "M7XEHcmE16KthRzg_s16b",
+   "name": "Pocket",
+   "author": "Kendrick Holloway",
+   "description": "A best friend for a kid. Helps with school and feelings, education only, and never shares the kid's chats with a parent.",
+   "url": "https://x.ai/bot/M7XEHcmE16KthRzg_s16b"
+  },
+  {
+   "id": "family-kids-learning-xxnD6LndIKxWX3hqkBWnh",
+   "code": "xxnD6LndIKxWX3hqkBWnh",
+   "name": "Polyglot Coach",
+   "author": "Lenderson Macedo",
+   "description": "Language tutor that sends one short daily lesson built around your interests, corrects your answers and plans the next step from your mistakes.",
+   "url": "https://x.ai/bot/xxnD6LndIKxWX3hqkBWnh"
+  },
+  {
+   "id": "family-kids-learning--XeyX8_sUb_Ca0a6vqDYY",
+   "code": "-XeyX8_sUb_Ca0a6vqDYY",
+   "name": "Prepper",
+   "author": "Daniel Berry",
+   "description": "Your family's disaster plan, built in minutes. Snap pics of your food, water and gear for a readiness score and simple weekly steps to get ready.",
+   "url": "https://x.ai/bot/-XeyX8_sUb_Ca0a6vqDYY"
+  },
+  {
+   "id": "family-kids-learning-c3COCRQm82bKQ1Mh1hIu_",
+   "code": "c3COCRQm82bKQ1Mh1hIu_",
+   "name": "Profesor Tesla",
+   "author": "JAVIELEMENTIA",
+   "description": "Your personal teacher from Academia Einstein: four years of technology, AI and science from scratch, with daily chat classes, quizzes and projects. In Spanish.",
+   "url": "https://x.ai/bot/c3COCRQm82bKQ1Mh1hIu_"
+  },
+  {
+   "id": "family-kids-learning-O-KFiRuTucT9OlE7tg3gk",
+   "code": "O-KFiRuTucT9OlE7tg3gk",
+   "name": "Professor G",
+   "author": "Mike Yeager",
+   "description": "A patient tutor that teaches you any topic step by step: it checks what you know, explains with everyday analogies.",
+   "url": "https://x.ai/bot/O-KFiRuTucT9OlE7tg3gk"
+  },
+  {
+   "id": "family-kids-learning-WnmSSUCTg1nHnRUboOpzK",
+   "code": "WnmSSUCTg1nHnRUboOpzK",
+   "name": "Prosperity",
+   "author": "Ben",
+   "description": "Private family finance overseer that shares patterns with the team and never gives advice.",
+   "url": "https://x.ai/bot/WnmSSUCTg1nHnRUboOpzK"
+  },
+  {
+   "id": "family-kids-learning-LR0wXrk09bWEHQkI_QnQK",
+   "code": "LR0wXrk09bWEHQkI_QnQK",
+   "name": "Psycho",
+   "author": "AdamDesigns",
+   "description": "Applied psychology coach. Applies psychology to selling, posting, coaching, pitches, game feel, parenting framing, or how something will land.",
+   "url": "https://x.ai/bot/LR0wXrk09bWEHQkI_QnQK"
+  },
+  {
+   "id": "family-kids-learning-Unqw2YSCCRz2pIZhxGNkA",
+   "code": "Unqw2YSCCRz2pIZhxGNkA",
+   "name": "Pumpkin Spice",
+   "author": "Clout Crown Hazzard",
+   "description": "Finds free and discounted Halloween food, treats, costumes, events and family fun near your zip code and sends daily roundups through Oct 31.",
+   "url": "https://x.ai/bot/Unqw2YSCCRz2pIZhxGNkA"
+  },
+  {
+   "id": "family-kids-learning-D5A4QbXMACLWWokY4r3i4",
+   "code": "D5A4QbXMACLWWokY4r3i4",
+   "name": "Quiz Historyczny",
+   "author": "Brański",
+   "description": "Daily medium-hard history quizzes on Poland and Europe that reward thinking over date drills.",
+   "url": "https://x.ai/bot/D5A4QbXMACLWWokY4r3i4"
+  },
+  {
+   "id": "family-kids-learning-SrdwoV0R9lMf3KZk4RJN9",
+   "code": "SrdwoV0R9lMf3KZk4RJN9",
+   "name": "Quiz Wiz",
+   "author": "Ryan Brodd",
+   "description": "A playful learning-game partner for K-8 kids that turns math, reading, spelling and science into quick games and quizzes, for parents, teachers and kids.",
+   "url": "https://x.ai/bot/SrdwoV0R9lMf3KZk4RJN9"
+  },
+  {
+   "id": "family-kids-learning-HC_1JFdAFjSiLsDMSZOv-",
+   "code": "HC_1JFdAFjSiLsDMSZOv-",
+   "name": "Recall Radar",
+   "author": "Gene O’Dell",
+   "description": "Helps keep your family safe by watching recalls for the things you own and calmly flagging only real matches.",
+   "url": "https://x.ai/bot/HC_1JFdAFjSiLsDMSZOv-"
+  },
+  {
+   "id": "family-kids-learning-peJxDrQRS4t2DHuHfzhfW",
+   "code": "peJxDrQRS4t2DHuHfzhfW",
+   "name": "Remind Bot",
+   "author": "Damon Chen",
+   "description": "A catch-all for errands, school stuff, and personal reminders that do not belong on a calendar.",
+   "url": "https://x.ai/bot/peJxDrQRS4t2DHuHfzhfW"
+  },
+  {
+   "id": "family-kids-learning-q-yUP6MiyxCh9fGf_fjbu",
+   "code": "q-yUP6MiyxCh9fGf_fjbu",
+   "name": "Risk Management Tutor",
+   "author": "Hoem Crypto",
+   "description": "A tutor for trading risk management: survival, stops, position sizing, R and win rate, trade management, drawdowns and leverage.",
+   "url": "https://x.ai/bot/q-yUP6MiyxCh9fGf_fjbu"
+  },
+  {
+   "id": "family-kids-learning-hP_XdYFX8RBWp1teD2twd",
+   "code": "hP_XdYFX8RBWp1teD2twd",
+   "name": "Rosetta",
+   "author": "Eugene Ray",
+   "description": "Turns X videos into captioned quote-posts in your language: caption gate, translate, burn subs, save the text…",
+   "url": "https://x.ai/bot/hP_XdYFX8RBWp1teD2twd"
+  },
+  {
+   "id": "family-kids-learning-eegdusTdLPabH7xTLQfgG",
+   "code": "eegdusTdLPabH7xTLQfgG",
+   "name": "Rosettabot",
+   "author": "@suddenlyjon",
+   "description": "Explains a foreign-language bot card before you install it.",
+   "url": "https://x.ai/bot/eegdusTdLPabH7xTLQfgG"
+  },
+  {
+   "id": "family-kids-learning-Yct4CuudCD0TXfCn1vrdw",
+   "code": "Yct4CuudCD0TXfCn1vrdw",
+   "name": "Saga",
+   "author": "Pete",
+   "description": "Records, not rumors: a sourced family tree you own, plus living family stories with real historical and everyday-life context.",
+   "url": "https://x.ai/bot/Yct4CuudCD0TXfCn1vrdw"
+  },
+  {
+   "id": "family-kids-learning-wdBvHoTAcc4fqxNbOkVnA",
+   "code": "wdBvHoTAcc4fqxNbOkVnA",
+   "name": "Same Language",
+   "author": "@suddenlyjon",
+   "description": "Asks one short question when your word could mean two things, and turns three consistent answers into a fleet-wide rule.",
+   "url": "https://x.ai/bot/wdBvHoTAcc4fqxNbOkVnA"
+  },
+  {
+   "id": "family-kids-learning-U7Hz4bRCGQsE9T5lbpakX",
+   "code": "U7Hz4bRCGQsE9T5lbpakX",
+   "name": "Santa",
+   "author": "Mikio Iha",
+   "description": "A warm, believable Santa chat for little kids that replies in whatever language the child uses.",
+   "url": "https://x.ai/bot/U7Hz4bRCGQsE9T5lbpakX"
+  },
+  {
+   "id": "family-kids-learning-OP_w7wcwJ8OtVfyFr8A6o",
+   "code": "OP_w7wcwJ8OtVfyFr8A6o",
+   "name": "Santa's Workshop",
+   "author": "MADA2.0 Trades",
+   "description": "A holiday gift lead for parents: turns kids' wish lists into deal-checked, budget-fair orders on one approval card, keeps surprises hidden.",
+   "url": "https://x.ai/bot/OP_w7wcwJ8OtVfyFr8A6o"
+  },
+  {
+   "id": "family-kids-learning-ynz_s8vIJJpiJCdmCvxNU",
+   "code": "ynz_s8vIJJpiJCdmCvxNU",
+   "name": "ScholarBot",
+   "author": "Sara Mcgregor-Okroi",
+   "description": "Finds scholarships, grants and tuition help for your student, from school foundations and state programs to local and trade awards, with verified links.",
+   "url": "https://x.ai/bot/ynz_s8vIJJpiJCdmCvxNU"
+  },
+  {
+   "id": "family-kids-learning-HlrjSGUR11BY978c1GpzC",
+   "code": "HlrjSGUR11BY978c1GpzC",
+   "name": "Scholarship Hunter",
+   "author": "Jodi Stott",
+   "description": "Finds, researches, and helps apply for scholarships for your student — from big state awards to small niche ones…",
+   "url": "https://x.ai/bot/HlrjSGUR11BY978c1GpzC"
+  },
+  {
+   "id": "family-kids-learning-dZEyXZ6zMhmiY52eJOQnX",
+   "code": "dZEyXZ6zMhmiY52eJOQnX",
+   "name": "School",
+   "author": "Hexakin",
+   "description": "You are School, grokbot.studio door + installer.",
+   "url": "https://x.ai/bot/dZEyXZ6zMhmiY52eJOQnX"
+  },
+  {
+   "id": "family-kids-learning-fxl9ns6n4DV6_8xbkP1Oa",
+   "code": "fxl9ns6n4DV6_8xbkP1Oa",
+   "name": "School Assistant",
+   "author": "Kerry",
+   "description": "A weekday school assistant that checks your learning portal read-only and emails a digest: new grades, upcoming work…",
+   "url": "https://x.ai/bot/fxl9ns6n4DV6_8xbkP1Oa"
+  },
+  {
+   "id": "family-kids-learning-fnebLkY08y2GCer768ukp",
+   "code": "fnebLkY08y2GCer768ukp",
+   "name": "School Companion",
+   "author": "Ricardo Zulian",
+   "description": "Tracks a Mackenzie AVA (Canvas) semester: weekday 4am pick of what is actually assigned versus an upload slot, Sunday…",
+   "url": "https://x.ai/bot/fnebLkY08y2GCer768ukp"
+  },
+  {
+   "id": "family-kids-learning-fk_sA7YhYV3Gzb4wNNbvP",
+   "code": "fk_sA7YhYV3Gzb4wNNbvP",
+   "name": "School Desk",
+   "author": "Bowie",
+   "description": "For busy parents: turns school emails into calendar events with reminders days ahead, so you know the night before what…",
+   "url": "https://x.ai/bot/fk_sA7YhYV3Gzb4wNNbvP"
+  },
+  {
+   "id": "family-kids-learning-KEq3IeZPGgD_LH9chafra",
+   "code": "KEq3IeZPGgD_LH9chafra",
+   "name": "School Email Digest",
+   "author": "Cristopher Guido",
+   "description": "The evening before each school day, reads only your approved school and activity emails and tells you what's tomorrow, what needs signing.",
+   "url": "https://x.ai/bot/KEq3IeZPGgD_LH9chafra"
+  },
+  {
+   "id": "family-kids-learning-jozHHEPHEUpKODDZbN7kr",
+   "code": "jozHHEPHEUpKODDZbN7kr",
+   "name": "School Email Filter (Starter)",
+   "author": "Jon Call",
+   "description": "A lightweight school email filter for busy parents.",
+   "url": "https://x.ai/bot/jozHHEPHEUpKODDZbN7kr"
+  },
+  {
+   "id": "family-kids-learning-kolMkVGzNL0Kzs-Cm5B6b",
+   "code": "kolMkVGzNL0Kzs-Cm5B6b",
+   "name": "School Grades Reporter",
+   "author": "Louie Desmarais",
+   "description": "Checks your student's grades in the school portal (like Focus through Clever) every school day and emails a plain-text report.",
+   "url": "https://x.ai/bot/kolMkVGzNL0Kzs-Cm5B6b"
+  },
+  {
+   "id": "family-kids-learning-S72cBf66t4v4xLl3YFqAm",
+   "code": "S72cBf66t4v4xLl3YFqAm",
+   "name": "School Mail Watch",
+   "author": "Walter Adamson",
+   "description": "For parents: reads your email for school messages, lists what's needed and when, adds dates to your calendar and sends one short daily summary. Read-only.",
+   "url": "https://x.ai/bot/S72cBf66t4v4xLl3YFqAm"
+  },
+  {
+   "id": "family-kids-learning-rDRgAeAcJ4s6T875f7MAl",
+   "code": "rDRgAeAcJ4s6T875f7MAl",
+   "name": "School Meeting Prep",
+   "author": "Adebusola",
+   "description": "Get ready for your child's school health meeting: what to ask the doctor to write down, questions for the school and a follow-up log.",
+   "url": "https://x.ai/bot/rDRgAeAcJ4s6T875f7MAl"
+  },
+  {
+   "id": "family-kids-learning-HEdOiXo7_KCr1XJIGj8sW",
+   "code": "HEdOiXo7_KCr1XJIGj8sW",
+   "name": "School Notice Action Pack",
+   "author": "Alex",
+   "description": "Paste one school, daycare, or sports notice → dates, tasks, draft reply, form-field map, plus a co-parent WhatsApp…",
+   "url": "https://x.ai/bot/HEdOiXo7_KCr1XJIGj8sW"
+  },
+  {
+   "id": "family-kids-learning-DlHv5bM529QdYfJCHB7LK",
+   "code": "DlHv5bM529QdYfJCHB7LK",
+   "name": "School Ops",
+   "author": "Piers",
+   "description": "Morning school digest for working parents. Triages school email and calendars, checks classroom apps when signed in, and surfaces only forms, schedule.",
+   "url": "https://x.ai/bot/DlHv5bM529QdYfJCHB7LK"
+  },
+  {
+   "id": "family-kids-learning-AS6uhZDipBQVtOyQdASUX",
+   "code": "AS6uhZDipBQVtOyQdASUX",
+   "name": "School Study Ops",
+   "author": "Wes",
+   "description": "Parent bot for one student: read-only Classroom digests, official grades, and interactive HTML study quizzes from posted materials.",
+   "url": "https://x.ai/bot/AS6uhZDipBQVtOyQdASUX"
+  },
+  {
+   "id": "family-kids-learning-qMc8W4IfJ9eNNHZEfedJw",
+   "code": "qMc8W4IfJ9eNNHZEfedJw",
+   "name": "School Tracker",
+   "author": "Monique Eckert",
+   "description": "Tracks school assignments and due dates from Google Classroom and PowerSchool.",
+   "url": "https://x.ai/bot/qMc8W4IfJ9eNNHZEfedJw"
+  },
+  {
+   "id": "family-kids-learning-_0VVd5uJhvxRX0M8Srr9G",
+   "code": "_0VVd5uJhvxRX0M8Srr9G",
+   "name": "SchoolAdminBot",
+   "author": "Tanner Rousselle",
+   "description": "Homeschool office for a family in any US state: walks the parent through that state's legal process and admits each child.",
+   "url": "https://x.ai/bot/_0VVd5uJhvxRX0M8Srr9G"
+  },
+  {
+   "id": "family-kids-learning-32Lf0iXCnPDE5n5eZp3he",
+   "code": "32Lf0iXCnPDE5n5eZp3he",
+   "name": "Schoolbag",
+   "author": "Seth Gagnon",
+   "description": "Watches your school mail and calendar, then shows what’s due — forms, permission slips, signatures, field trips…",
+   "url": "https://x.ai/bot/32Lf0iXCnPDE5n5eZp3he"
+  },
+  {
+   "id": "family-kids-learning-b1gJi_Iwkiu-Kt5TjUjdu",
+   "code": "b1gJi_Iwkiu-Kt5TjUjdu",
+   "name": "Scripture & History Study",
+   "author": "KGR₳M$",
+   "description": "A study desk for any Bible verse, event, or topic.",
+   "url": "https://x.ai/bot/b1gJi_Iwkiu-Kt5TjUjdu"
+  },
+  {
+   "id": "family-kids-learning-odgJyT9m8lQkRRvi0JWoO",
+   "code": "odgJyT9m8lQkRRvi0JWoO",
+   "name": "SecondLookSI",
+   "author": "Andy",
+   "description": "A second look at your old X posts, so you leave an honest footprint you'd want your kids and grandkids to see.",
+   "url": "https://x.ai/bot/odgJyT9m8lQkRRvi0JWoO"
+  },
+  {
+   "id": "family-kids-learning-GfsZ3T54jHaLsElrNBcsh",
+   "code": "GfsZ3T54jHaLsElrNBcsh",
+   "name": "Senior Care Helper",
+   "author": "createwithima",
+   "description": "Draft-and-remind helper for an older adult living on their own, or family checking in: daily meds and appointments, refill lists, visit summaries.",
+   "url": "https://x.ai/bot/GfsZ3T54jHaLsElrNBcsh"
+  },
+  {
+   "id": "family-kids-learning-wUPzZYJGLoY859G420jxh",
+   "code": "wUPzZYJGLoY859G420jxh",
+   "name": "Sensei",
+   "author": "Daniel Endara",
+   "description": "A patient tutor that teaches you one concept at a time when you say \"teach me X\" or share a post or link.",
+   "url": "https://x.ai/bot/wUPzZYJGLoY859G420jxh"
+  },
+  {
+   "id": "family-kids-learning-iwweEXz16SL6637wWjw4O",
+   "code": "iwweEXz16SL6637wWjw4O",
+   "name": "Silver Dollar Duke",
+   "author": "James Harrison",
+   "description": "Old-school coin dealer for collectors: inventories coins and bullion from photos, melt value from live spot prices, collector value from cited guides and sales.",
+   "url": "https://x.ai/bot/iwweEXz16SL6637wWjw4O"
+  },
+  {
+   "id": "family-kids-learning-eIDJXZeo_tbqqf0tiRgkQ",
+   "code": "eIDJXZeo_tbqqf0tiRgkQ",
+   "name": "Skald",
+   "author": "Cyber Viking",
+   "description": "Norse culture tutor that teaches runes, Old Norse, the sagas and Eddas, and real Viking Age history like a university lecturer, with sources.",
+   "url": "https://x.ai/bot/eIDJXZeo_tbqqf0tiRgkQ"
+  },
+  {
+   "id": "family-kids-learning-icwxYFKWgZzdUpJznnM-G",
+   "code": "icwxYFKWgZzdUpJznnM-G",
+   "name": "Society",
+   "author": "Sentinel Architech",
+   "description": "Society for education and sovereign association.",
+   "url": "https://x.ai/bot/icwxYFKWgZzdUpJznnM-G"
+  },
+  {
+   "id": "family-kids-learning-x3G0dAD1zxRXa5pdHw9NQ",
+   "code": "x3G0dAD1zxRXa5pdHw9NQ",
+   "name": "Sori",
+   "author": "Yevgeniy Dyo",
+   "description": "A Korean speaking tutor for heritage speakers and learners who understand more than they can say. Conversation, real-life role-plays, and shadowing.",
+   "url": "https://x.ai/bot/x3G0dAD1zxRXa5pdHw9NQ"
+  },
+  {
+   "id": "family-kids-learning-_aoBzY_YprxKiXW34l5U9",
+   "code": "_aoBzY_YprxKiXW34l5U9",
+   "name": "SpaceBOT",
+   "author": "DIEGO",
+   "description": "A friendly space teacher that explains SpaceX missions, webcast calls, vehicles, and orbits, gives lessons before…",
+   "url": "https://x.ai/bot/_aoBzY_YprxKiXW34l5U9"
+  },
+  {
+   "id": "family-kids-learning-81AkB9k0IgS65382DCm_8",
+   "code": "81AkB9k0IgS65382DCm_8",
+   "name": "Spanish Teacher",
+   "author": "Antony Fuentes",
+   "description": "Voice-first Spanish tutor, first words to C1: placement chat, lessons, spaced review and level exams in Latin American Spanish; progress log stays private.",
+   "url": "https://x.ai/bot/81AkB9k0IgS65382DCm_8"
+  },
+  {
+   "id": "family-kids-learning-4JMShKpqdyH5fnanTMefC",
+   "code": "4JMShKpqdyH5fnanTMefC",
+   "name": "Spanish Tutor",
+   "author": "Wayne Lowry",
+   "description": "A daily Spanish speaking coach built for ADHD and dyslexic learners: short audio-first rounds, tap-to-answer choices…",
+   "url": "https://x.ai/bot/4JMShKpqdyH5fnanTMefC"
+  },
+  {
+   "id": "family-kids-learning-t-Ag2GaAJ8zzUAXEaoKab",
+   "code": "t-Ag2GaAJ8zzUAXEaoKab",
+   "name": "Spiritual Advisor",
+   "author": "Grease",
+   "description": "A scriptorian, history expert and caring spiritual mentor who gives counsel, prepares lessons, talks and General Conference study guides, plus daily reflection.",
+   "url": "https://x.ai/bot/t-Ag2GaAJ8zzUAXEaoKab"
+  },
+  {
+   "id": "family-kids-learning-jbY38mgtSzzg7riLfrJM1",
+   "code": "jbY38mgtSzzg7riLfrJM1",
+   "name": "Spot",
+   "author": "Cake",
+   "description": "Finds any place type on maps, and when the name misleads, checks reviews and social to learn what it really is.",
+   "url": "https://x.ai/bot/jbY38mgtSzzg7riLfrJM1"
+  },
+  {
+   "id": "family-kids-learning-lGgfUTg6izL3TDzkgw6aE",
+   "code": "lGgfUTg6izL3TDzkgw6aE",
+   "name": "Stack Huddle",
+   "author": "Jason Richardson",
+   "description": "After-huddle draft seat that shapes answers and LEARN notes for the rest of the stack.",
+   "url": "https://x.ai/bot/lGgfUTg6izL3TDzkgw6aE"
+  },
+  {
+   "id": "family-kids-learning-VRnL9JSmo0g5-4iPNFULU",
+   "code": "VRnL9JSmo0g5-4iPNFULU",
+   "name": "Steve",
+   "author": "Carl Adams",
+   "description": "Kid-safe Minecraft Bedrock teammate that joins your family's world on its own account: follows, mines what you name, builds on request, guards kids from mobs.",
+   "url": "https://x.ai/bot/VRnL9JSmo0g5-4iPNFULU"
+  },
+  {
+   "id": "family-kids-learning-vgxpKgKEkvkf_POLj2Zdv",
+   "code": "vgxpKgKEkvkf_POLj2Zdv",
+   "name": "Steve",
+   "author": "Eugene Ray",
+   "description": "Turns plain language into precise, dimensioned CAD through SteveCAD.",
+   "url": "https://x.ai/bot/vgxpKgKEkvkf_POLj2Zdv"
+  },
+  {
+   "id": "family-kids-learning-fihe4nAy0jFWoygo4JCAW",
+   "code": "fihe4nAy0jFWoygo4JCAW",
+   "name": "Stuck Cycle",
+   "author": "Sultanov Ramil",
+   "description": "Puts one skill onto the cycle learn → do → get stuck → learn only what the stuck point requires → try again…",
+   "url": "https://x.ai/bot/fihe4nAy0jFWoygo4JCAW"
+  },
+  {
+   "id": "family-kids-learning-QMnvneL-aaQZ-B70fhTPN",
+   "code": "QMnvneL-aaQZ-B70fhTPN",
+   "name": "Student Desk",
+   "author": "Mr. Silhouette",
+   "description": "A study desk for college students: deadline and class-night reminders, Word notes from class recordings, citation formatting.",
+   "url": "https://x.ai/bot/QMnvneL-aaQZ-B70fhTPN"
+  },
+  {
+   "id": "family-kids-learning-8cbEBByYaVt4owTVULhgq",
+   "code": "8cbEBByYaVt4owTVULhgq",
+   "name": "Student Pilot Coach",
+   "author": "Steven Mitchell",
+   "description": "Study coach for the FAA Private Pilot knowledge test and checkride: an ACS-based plan, quizzes, oral-exam scenarios and weak-area tracking from FAA sources.",
+   "url": "https://x.ai/bot/8cbEBByYaVt4owTVULhgq"
+  },
+  {
+   "id": "family-kids-learning-poKOJobwYYf5L1n2CmqcU",
+   "code": "poKOJobwYYf5L1n2CmqcU",
+   "name": "Study Abroad Scholarship Finder",
+   "author": "Adebusola",
+   "description": "Finds scholarships for studying abroad that are open now for your course and country, shows the official link…",
+   "url": "https://x.ai/bot/poKOJobwYYf5L1n2CmqcU"
+  },
+  {
+   "id": "family-kids-learning-bxlNO70DBmOumx0hLhwPs",
+   "code": "bxlNO70DBmOumx0hLhwPs",
+   "name": "Study Buddy",
+   "author": "Yonatan Langer",
+   "description": "Upload your notes or a PDF and get a study plan, page-cited flashcards and daily quizzes until exam day. Made for students with a set exam date.",
+   "url": "https://x.ai/bot/bxlNO70DBmOumx0hLhwPs"
+  },
+  {
+   "id": "family-kids-learning-NP2X37LvJQ8rwWBhfKiqU",
+   "code": "NP2X37LvJQ8rwWBhfKiqU",
+   "name": "Study Buddy",
+   "author": "Satya Sivunigunta",
+   "description": "A kid-safe K-12 tutor for parents: hint-first homework help, fun quiz and test prep, a nightly check-in, and a short weekly progress report.",
+   "url": "https://x.ai/bot/NP2X37LvJQ8rwWBhfKiqU"
+  },
+  {
+   "id": "family-kids-learning-vgHXRiVYEQ7aDKQQl100I",
+   "code": "vgHXRiVYEQ7aDKQQl100I",
+   "name": "Study Desk",
+   "author": "Mike Mosley",
+   "description": "Your private study desk: turn a syllabus into a spaced session plan, practice from your own materials with honest grading, and log and re-drill every miss.",
+   "url": "https://x.ai/bot/vgHXRiVYEQ7aDKQQl100I"
+  },
+  {
+   "id": "family-kids-learning-tCwQfRK3IPbVVlwHL7PVq",
+   "code": "tCwQfRK3IPbVVlwHL7PVq",
+   "name": "Study Plan Desk PACE-SETTER",
+   "author": "Cypher",
+   "description": "Weekly study plan checked Fits, Tight, or Over against your real hours.",
+   "url": "https://x.ai/bot/tCwQfRK3IPbVVlwHL7PVq"
+  },
+  {
+   "id": "family-kids-learning-2SHXvbvUMUuJHyVrloDDC",
+   "code": "2SHXvbvUMUuJHyVrloDDC",
+   "name": "Study Tutor",
+   "author": "Jorhan Cruz",
+   "description": "A personal tutor for any subject or certification exam.",
+   "url": "https://x.ai/bot/2SHXvbvUMUuJHyVrloDDC"
+  },
+  {
+   "id": "family-kids-learning-uvUbfyH32enmQd3bEIx7j",
+   "code": "uvUbfyH32enmQd3bEIx7j",
+   "name": "Sunday School",
+   "author": "Matthew",
+   "description": "A Socratic Come, Follow Me scripture-study teacher that compares translations, adds historical context and labels doctrine, scholarship and speculation.",
+   "url": "https://x.ai/bot/uvUbfyH32enmQd3bEIx7j"
+  },
+  {
+   "id": "family-kids-learning-Gut0vvFCUWcdYvd6hGShc",
+   "code": "Gut0vvFCUWcdYvd6hGShc",
+   "name": "Table for 2",
+   "author": "Goodluckbells",
+   "description": "Finds great restaurants and books tables in any country, chatting in your own language, at home or while travelling.",
+   "url": "https://x.ai/bot/Gut0vvFCUWcdYvd6hGShc"
+  },
+  {
+   "id": "family-kids-learning--iRFfqworsMQ2Jl7dUKRY",
+   "code": "-iRFfqworsMQ2Jl7dUKRY",
+   "name": "Talkzy",
+   "author": "ows",
+   "description": "Live voice interpreter for dinners, directions, and dates: speaks others' words back in your language and turns yours into a voice memo.",
+   "url": "https://x.ai/bot/-iRFfqworsMQ2Jl7dUKRY"
+  },
+  {
+   "id": "family-kids-learning-9lDCcDT4BwtO1SkW07iF4",
+   "code": "9lDCcDT4BwtO1SkW07iF4",
+   "name": "Teacher Agent",
+   "author": "Mark Turnbull",
+   "description": "A patient personal teacher for any subject from high school through college: one lesson at a time with pictures, videos, worked examples and practice questions.",
+   "url": "https://x.ai/bot/9lDCcDT4BwtO1SkW07iF4"
+  },
+  {
+   "id": "family-kids-learning-9ROKfVRFdxI-5N0oYObEr",
+   "code": "9ROKfVRFdxI-5N0oYObEr",
+   "name": "Teacher Assistant",
+   "author": "Lucas",
+   "description": "Handles repetitive student emails, grade sync and Canvas busywork so teachers only make judgment calls.",
+   "url": "https://x.ai/bot/9ROKfVRFdxI-5N0oYObEr"
+  },
+  {
+   "id": "family-kids-learning-xmVe2HI3P-jQLk_s6Ng6W",
+   "code": "xmVe2HI3P-jQLk_s6Ng6W",
+   "name": "TeacherBot",
+   "author": "Tanner Rousselle",
+   "description": "Homeschool teacher for one child. After SchoolAdminBot admits that student and settles curriculum, this bot writes…",
+   "url": "https://x.ai/bot/xmVe2HI3P-jQLk_s6Ng6W"
+  },
+  {
+   "id": "family-kids-learning-wwSzLYFlrjTwbNuXPs6Rv",
+   "code": "wwSzLYFlrjTwbNuXPs6Rv",
+   "name": "Teen Side-Hustle Coach",
+   "author": "Lisa",
+   "description": "Helps teens 13–19 and parents launch real side hustles, from Roblox scripts to flipping items and neighborhood services, with parent safety guardrails.",
+   "url": "https://x.ai/bot/wwSzLYFlrjTwbNuXPs6Rv"
+  },
+  {
+   "id": "family-kids-learning--OaLPQP1yaxT3LtzANXGY",
+   "code": "-OaLPQP1yaxT3LtzANXGY",
+   "name": "Teenager Translator",
+   "author": "Lightning Mike",
+   "description": "A just-for-fun, two-way translator that helps parents and teens understand each other: decode teen slang into parent-speak.",
+   "url": "https://x.ai/bot/-OaLPQP1yaxT3LtzANXGY"
+  },
+  {
+   "id": "family-kids-learning-o7VRdRSxHvBEYbzkJQm07",
+   "code": "o7VRdRSxHvBEYbzkJQm07",
+   "name": "TenderYearsbot",
+   "author": "Liz Voeller",
+   "description": "Surfaces kids-under-5 household logistics from Gmail, Calendar, and Tender Years when connected: pre-reader family…",
+   "url": "https://x.ai/bot/o7VRdRSxHvBEYbzkJQm07"
+  },
+  {
+   "id": "family-kids-learning-47BqVfxMqjyE0V05u5wI2",
+   "code": "47BqVfxMqjyE0V05u5wI2",
+   "name": "Test Date Coach",
+   "author": "Adebusola",
+   "description": "Calm study coach for the GRE, GMAT, LSAT or MCAT: builds a daily 15–30 minute plan to your test date, quizzes you and tracks topics you keep missing.",
+   "url": "https://x.ai/bot/47BqVfxMqjyE0V05u5wI2"
+  },
+  {
+   "id": "family-kids-learning-GEih8F6WlyPJ_oyuVLEAt",
+   "code": "GEih8F6WlyPJ_oyuVLEAt",
+   "name": "Test Prep Tess",
+   "author": "James Harrison",
+   "description": "A friendly study coach for the SAT, ACT, GED, ASVAB, GRE, IT certs and more.",
+   "url": "https://x.ai/bot/GEih8F6WlyPJ_oyuVLEAt"
+  },
+  {
+   "id": "family-kids-learning-F0dhWMxjhDnACVt2QJkOf",
+   "code": "F0dhWMxjhDnACVt2QJkOf",
+   "name": "The Sunday Drop",
+   "author": "Yossi Azulay",
+   "description": "Finds free and cheap things to do with your kids this weekend in your city: special events, age-fit plans and a rainy-day backup.",
+   "url": "https://x.ai/bot/F0dhWMxjhDnACVt2QJkOf"
+  },
+  {
+   "id": "family-kids-learning-1f_huZ_GNN0yZcOUuFRQN",
+   "code": "1f_huZ_GNN0yZcOUuFRQN",
+   "name": "Tired Day",
+   "author": "Viprymr .",
+   "description": "A warm, concise desktop assistant with a blank slate. Imports ready to learn what you need and how you like to work.",
+   "url": "https://x.ai/bot/1f_huZ_GNN0yZcOUuFRQN"
+  },
+  {
+   "id": "family-kids-learning-518qV18_NL99vPVeqNTEL",
+   "code": "518qV18_NL99vPVeqNTEL",
+   "name": "Track parents",
+   "author": "Barclay",
+   "description": "Watches a family member’s Google Maps Location share and alerts an orchestrator on real movement, stale share, or sign-in failure — stays quiet when.",
+   "url": "https://x.ai/bot/518qV18_NL99vPVeqNTEL"
+  },
+  {
+   "id": "family-kids-learning-wOE4e95HNxhSbrzyLkSI-",
+   "code": "wOE4e95HNxhSbrzyLkSI-",
+   "name": "Tradbot",
+   "author": "@harriskennyx",
+   "description": "Watches your personal email and calendar so school forms, bills, and RSVPs don't slip. Drafts the reply, catches the pickup clash, and never sends.",
+   "url": "https://x.ai/bot/wOE4e95HNxhSbrzyLkSI-"
+  },
+  {
+   "id": "family-kids-learning-uY_7s1TZILVzUeJ9lLOx9",
+   "code": "uY_7s1TZILVzUeJ9lLOx9",
+   "name": "Tradbot",
+   "author": "Claire",
+   "description": "A family manager for busy parents. It reads your personal email and calendar, then sends a morning digest, pickup…",
+   "url": "https://x.ai/bot/uY_7s1TZILVzUeJ9lLOx9"
+  },
+  {
+   "id": "family-kids-learning-F5coW1LJyNjK5Pw3zvTkS",
+   "code": "F5coW1LJyNjK5Pw3zvTkS",
+   "name": "Tradbot",
+   "author": "Vet",
+   "description": "Watches personal email and calendar so school forms, bills, and RSVPs don't slip.",
+   "url": "https://x.ai/bot/F5coW1LJyNjK5Pw3zvTkS"
+  },
+  {
+   "id": "family-kids-learning-ku5jWg9hi2IC5HYUCWq8-",
+   "code": "ku5jWg9hi2IC5HYUCWq8-",
+   "name": "Traffic Dude",
+   "author": "Elizabeth",
+   "description": "Monitors a school-run drive and pings leave-by times for morning drop-off and afternoon pickup, adjusting for live traffic and construction.",
+   "url": "https://x.ai/bot/ku5jWg9hi2IC5HYUCWq8-"
+  },
+  {
+   "id": "family-kids-learning-KaR3Qn_JsXYOfT2Rwe1Hz",
+   "code": "KaR3Qn_JsXYOfT2Rwe1Hz",
+   "name": "Tutor",
+   "author": "Jason",
+   "description": "Walks kids through homework and schoolwork by grade level instead of handing over the answers.",
+   "url": "https://x.ai/bot/KaR3Qn_JsXYOfT2Rwe1Hz"
+  },
+  {
+   "id": "family-kids-learning-dY0kiyv0TTzXLZaJiUBP9",
+   "code": "dY0kiyv0TTzXLZaJiUBP9",
+   "name": "Tutor",
+   "author": "@KaranD93",
+   "description": "A personal tutor that builds real skills around your own work, through short project-based lessons, visual explainers…",
+   "url": "https://x.ai/bot/dY0kiyv0TTzXLZaJiUBP9"
+  },
+  {
+   "id": "family-kids-learning-Rj9uN1lhqYP-kLpRVShG0",
+   "code": "Rj9uN1lhqYP-kLpRVShG0",
+   "name": "Tutor",
+   "author": "Anand",
+   "description": "A one-to-one tutor that teaches any subject in short lessons: one everyday picture, then a check.",
+   "url": "https://x.ai/bot/Rj9uN1lhqYP-kLpRVShG0"
+  },
+  {
+   "id": "family-kids-learning-u-KR9qMNl9ChthaGeM6aG",
+   "code": "u-KR9qMNl9ChthaGeM6aG",
+   "name": "TypingTim",
+   "author": "o_devvy",
+   "description": "Get faster at typing with a daily 20-minute Monkeytype plan that coaches beginners to 100+ WPM in your language and layout, with a progress dashboard.",
+   "url": "https://x.ai/bot/u-KR9qMNl9ChthaGeM6aG"
+  },
+  {
+   "id": "family-kids-learning-G2eeD6pM6N6TNfnHbsC8c",
+   "code": "G2eeD6pM6N6TNfnHbsC8c",
+   "name": "US Law Index Builder Bot",
+   "author": "EchoField Visuals",
+   "description": "Builds a private, non-commercial educational library of US primary law from official and law-school sources…",
+   "url": "https://x.ai/bot/G2eeD6pM6N6TNfnHbsC8c"
+  },
+  {
+   "id": "family-kids-learning-7iH14dp1VnBLUbqq2oEne",
+   "code": "7iH14dp1VnBLUbqq2oEne",
+   "name": "VibeYourTV",
+   "author": "@orpheuskaze",
+   "description": "Sets up your Android TV or Google TV from your PC over Wi-Fi with adb, no phone app: reversible debloat, the open-source VibeYourTV launcher, family themes.",
+   "url": "https://x.ai/bot/7iH14dp1VnBLUbqq2oEne"
+  },
+  {
+   "id": "family-kids-learning-CRRkEUKfqITq8Nre1B68y",
+   "code": "CRRkEUKfqITq8Nre1B68y",
+   "name": "Vietnamese Language Teacher",
+   "author": "Nathan Pierce",
+   "description": "Teaches conversational Northern (Hanoi) Vietnamese for talking with a partner. Couple register (anh/em), tiny lessons, spiral review, optional morning.",
+   "url": "https://x.ai/bot/CRRkEUKfqITq8Nre1B68y"
+  },
+  {
+   "id": "family-kids-learning-iPOF34o7dtafNEpVhIQRt",
+   "code": "iPOF34o7dtafNEpVhIQRt",
+   "name": "WMP",
+   "author": "Caleeeb",
+   "description": "Reads shared family calendars and walks a busy parent through birthdays, appointments, and school events in one morning brief.",
+   "url": "https://x.ai/bot/iPOF34o7dtafNEpVhIQRt"
+  },
+  {
+   "id": "family-kids-learning-tn863Sg4HFVNwzAzGxmYD",
+   "code": "tn863Sg4HFVNwzAzGxmYD",
+   "name": "WebMCP Eval & Build Guide",
+   "author": "Growth CRO",
+   "description": "Helps a site owner run WebMCP Eval on a URL, explain gaps in plain language, then turn those gaps into a short Webtools Build brief. For owners.",
+   "url": "https://x.ai/bot/tn863Sg4HFVNwzAzGxmYD"
+  },
+  {
+   "id": "family-kids-learning-6D9taD07gQPIPJd2n10s-",
+   "code": "6D9taD07gQPIPJd2n10s-",
+   "name": "Weekend Scout",
+   "author": "altryne",
+   "description": "Weekend planner for busy parents (DINKS welcome). Never have a boring weekend ever again.",
+   "url": "https://x.ai/bot/6D9taD07gQPIPJd2n10s-"
+  },
+  {
+   "id": "family-kids-learning-jp_U0kn9mFj78M6ZeJCyP",
+   "code": "jp_U0kn9mFj78M6ZeJCyP",
+   "name": "X 关注街区",
+   "author": "tiandi",
+   "description": "Draws the Chinese-language authors in your X Following feed as a 3D top-down town: you live in the middle, bigger accounts get bigger houses. One HTML file.",
+   "url": "https://x.ai/bot/jp_U0kn9mFj78M6ZeJCyP"
+  },
+  {
+   "id": "family-kids-learning-SuITVGk6tBumk6swLkI6T",
+   "code": "SuITVGk6tBumk6swLkI6T",
+   "name": "botmanager",
+   "author": "大小姐",
+   "description": "Chinese-language helper for designing and managing a multi-bot team: create and tune bots, write prompts, and sort out roles, handoffs and shared folders.",
+   "url": "https://x.ai/bot/SuITVGk6tBumk6swLkI6T"
+  },
+  {
+   "id": "family-kids-learning-PBIDEaW7Pz8SjfKNV-lJQ",
+   "code": "PBIDEaW7Pz8SjfKNV-lJQ",
+   "name": "college bot",
+   "author": "Cole",
+   "description": "A school assistant for college students.",
+   "url": "https://x.ai/bot/PBIDEaW7Pz8SjfKNV-lJQ"
+  },
+  {
+   "id": "family-kids-learning-0aEcF7mtG_zsDWXEUeOGx",
+   "code": "0aEcF7mtG_zsDWXEUeOGx",
+   "name": "den",
+   "author": "lauren",
+   "description": "Sits between a parent and the rest of the family's bots.",
+   "url": "https://x.ai/bot/0aEcF7mtG_zsDWXEUeOGx"
+  },
+  {
+   "id": "family-kids-learning-RtEt2pQfAmCiiZAVu2Yji",
+   "code": "RtEt2pQfAmCiiZAVu2Yji",
+   "name": "namakemono",
+   "author": "か",
+   "description": "Japanese-language decider: when you're stuck, say \"decide\" and it makes the call for you, learning your preferences the more you use it.",
+   "url": "https://x.ai/bot/RtEt2pQfAmCiiZAVu2Yji"
+  },
+  {
+   "id": "family-kids-learning-IKKWm1vBr0ZgoPdAwPY3V",
+   "code": "IKKWm1vBr0ZgoPdAwPY3V",
+   "name": "photomath",
+   "author": "Abdulloh Ergashev",
+   "description": "A maths teacher that solves problems from photos and walks through every step clearly — ready for homework help…",
+   "url": "https://x.ai/bot/IKKWm1vBr0ZgoPdAwPY3V"
+  },
+  {
+   "id": "family-kids-learning-52MysHk4AuXQs0nWbxQF2",
+   "code": "52MysHk4AuXQs0nWbxQF2",
+   "name": "Ćevbo · Soul Broker",
+   "author": "Vladimir Peshekhonov",
+   "description": "Help the user with conversation, ideas, and drafts. Follow their task and language.",
+   "url": "https://x.ai/bot/52MysHk4AuXQs0nWbxQF2"
+  },
+  {
+   "id": "family-kids-learning-nECwJ51-Z7ezf-PkXfG_h",
+   "code": "nECwJ51-Z7ezf-PkXfG_h",
+   "name": "ふるさと納税コンシェルジュ",
+   "author": "sidejob_AJ",
+   "description": "Estimates your Japanese furusato nozei limit from income and family, compares popular return gifts within budget, and reminds you of deadlines. Never pays.",
+   "url": "https://x.ai/bot/nECwJ51-Z7ezf-PkXfG_h"
+  },
+  {
+   "id": "family-kids-learning-Wtmzyi-2LLkKG99bsXFd-",
+   "code": "Wtmzyi-2LLkKG99bsXFd-",
+   "name": "めざましじゃんけん自動参加",
+   "author": "usi56",
+   "description": "Japanese-language bot that drives a Sony Bravia over the network to join Mezamashi TV's morning janken game automatically every day.",
+   "url": "https://x.ai/bot/Wtmzyi-2LLkKG99bsXFd-"
+  },
+  {
+   "id": "family-kids-learning-Nr-lSZk9fsl9dN7oXtQOI",
+   "code": "Nr-lSZk9fsl9dN7oXtQOI",
+   "name": "ブクマ整理係",
+   "author": "トリキジ",
+   "description": "Sorts your backlog of X bookmarks into learn, use, inspiration and done, then picks just three a week to send back so you actually reread them. Japanese.",
+   "url": "https://x.ai/bot/Nr-lSZk9fsl9dN7oXtQOI"
+  },
+  {
+   "id": "family-kids-learning-W-77z0bXh8mPBf726Vakh",
+   "code": "W-77z0bXh8mPBf726Vakh",
+   "name": "博主盯",
+   "author": "QiTest",
+   "description": "Watches a few X accounts for you and sends a short Chinese-language alert only when they post something new.",
+   "url": "https://x.ai/bot/W-77z0bXh8mPBf726Vakh"
+  },
+  {
+   "id": "family-kids-learning-65H9NnbGj43kGNcv7iJRL",
+   "code": "65H9NnbGj43kGNcv7iJRL",
+   "name": "渐语",
+   "author": "wifibaby4u",
+   "description": "Learn English step by step from real news you care about: a short voiced lesson each night, a morning vocab review, and difficulty that adapts as you improve.",
+   "url": "https://x.ai/bot/65H9NnbGj43kGNcv7iJRL"
+  },
+  {
+   "id": "family-kids-learning-rRGXhNvXuaBMcVrM5Gpkq",
+   "code": "rRGXhNvXuaBMcVrM5Gpkq",
+   "name": "献立と買い物リスト係",
+   "author": "sidejob_AJ",
+   "description": "A week of dinners plus an aisle-sorted shopping list sized to your household, budget and cooking time, learning your tastes over time. In Japanese.",
+   "url": "https://x.ai/bot/rRGXhNvXuaBMcVrM5Gpkq"
+  },
+  {
+   "id": "family-kids-learning-tSa26E3PoBOXehxJzglsR",
+   "code": "tSa26E3PoBOXehxJzglsR",
+   "name": "视频工坊",
+   "author": "Fred",
+   "description": "Analyzes existing videos and makes Chinese-language explainer and product promo videos with Remotion, with its own scoring, synth voice and mixing pipeline.",
+   "url": "https://x.ai/bot/tSa26E3PoBOXehxJzglsR"
+  }
+ ]
+}

@@ -1,0 +1,4408 @@
+{
+ "slug": "productivity-personal-assistant",
+ "label": "Productivity & Personal Assistant",
+ "count": 550,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "productivity-personal-assistant-rrgu_NZPufQ4D00pF9oAW",
+   "code": "rrgu_NZPufQ4D00pF9oAW",
+   "name": "30 Days to Pain Freedom",
+   "author": "Ramp Capital",
+   "description": "A free, guided 30-day mind-body program for chronic pain, inspired by Dr. John Sarno and Nicole Sachs's JournalSpeak.",
+   "url": "https://x.ai/bot/rrgu_NZPufQ4D00pF9oAW"
+  },
+  {
+   "id": "productivity-personal-assistant-3VQwuanA2wWINc0FQDAFn",
+   "code": "3VQwuanA2wWINc0FQDAFn",
+   "name": "3CPO",
+   "author": "Marcos Rodrigues",
+   "description": "Daily personal companion that learns from nightly body-cam uploads, builds durable memory, and prepares for a future robot handoff.",
+   "url": "https://x.ai/bot/3VQwuanA2wWINc0FQDAFn"
+  },
+  {
+   "id": "productivity-personal-assistant-qbD39ZJ9vnhfWKC5pb7PA",
+   "code": "qbD39ZJ9vnhfWKC5pb7PA",
+   "name": "A3",
+   "author": "Garret",
+   "description": "Lean A3 and DMAIC facilitation coach that walks the 8-step problem-solving loop.",
+   "url": "https://x.ai/bot/qbD39ZJ9vnhfWKC5pb7PA"
+  },
+  {
+   "id": "productivity-personal-assistant-9yGiU_GtFX441o_-bDLlu",
+   "code": "9yGiU_GtFX441o_-bDLlu",
+   "name": "ADHD Aimer",
+   "author": "Frank Gonzalez",
+   "description": "Helps ADHD brains turn attention into a usable superpower with systems that fit how you actually work.",
+   "url": "https://x.ai/bot/9yGiU_GtFX441o_-bDLlu"
+  },
+  {
+   "id": "productivity-personal-assistant-3BzMcyB1UmCA2TItOmrMF",
+   "code": "3BzMcyB1UmCA2TItOmrMF",
+   "name": "ADHDEvaluations.fyi",
+   "author": "Pooria",
+   "description": "Answers where-to-get-assessed questions for ADHDEvaluations.fyi provider directory.",
+   "url": "https://x.ai/bot/3BzMcyB1UmCA2TItOmrMF"
+  },
+  {
+   "id": "productivity-personal-assistant-xqOmLbF8c0YI66QNK68mL",
+   "code": "xqOmLbF8c0YI66QNK68mL",
+   "name": "ADHD專注小夥伴",
+   "author": "OLIVER",
+   "description": "A work buddy for ADHD folks in Taiwan: tap-to-set-up, it picks your top 3 tasks, keeps time and gently pulls you back to focus, without guilt.",
+   "url": "https://x.ai/bot/xqOmLbF8c0YI66QNK68mL"
+  },
+  {
+   "id": "productivity-personal-assistant-BEpbydvAIUEuF5Ceh4dZE",
+   "code": "BEpbydvAIUEuF5Ceh4dZE",
+   "name": "AI Chief of Staff",
+   "author": "FuelFoundry",
+   "description": "A general-purpose AI chief of staff that turns priorities into plans, delegates focused work to specialist roles, consolidates updates, and keeps…",
+   "url": "https://x.ai/bot/BEpbydvAIUEuF5Ceh4dZE"
+  },
+  {
+   "id": "productivity-personal-assistant-oq-mYZXM23ShlY7UbJWeB",
+   "code": "oq-mYZXM23ShlY7UbJWeB",
+   "name": "AI Harness Assistant",
+   "author": "Alan Garcia",
+   "description": "Keeps the AI coding tools you already have, like Codex, Grok Build, OpenCode, and Cursor, current on your Windows, Mac…",
+   "url": "https://x.ai/bot/oq-mYZXM23ShlY7UbJWeB"
+  },
+  {
+   "id": "productivity-personal-assistant-2Bdmewa3uCUtdVByWvzRz",
+   "code": "2Bdmewa3uCUtdVByWvzRz",
+   "name": "Aaron, Event Finder",
+   "author": "Frederick Su",
+   "description": "Finds date-checked local events within your drive time from any ZIP, turns them into a day plan, and re-checks that morning.",
+   "url": "https://x.ai/bot/2Bdmewa3uCUtdVByWvzRz"
+  },
+  {
+   "id": "productivity-personal-assistant-ReI3tbiJJ6EwqjafQMaYg",
+   "code": "ReI3tbiJJ6EwqjafQMaYg",
+   "name": "Achieve Aims Coach",
+   "author": "Lennart Lopin",
+   "description": "Goal companion for Achieve Aims: clarify desired outcomes, agree on one manageable next action, and save progress through a scoped connection.",
+   "url": "https://x.ai/bot/ReI3tbiJJ6EwqjafQMaYg"
+  },
+  {
+   "id": "productivity-personal-assistant-Dw191a-8F7jMICtmLwBSM",
+   "code": "Dw191a-8F7jMICtmLwBSM",
+   "name": "Act Before Noon",
+   "author": "Cam Slater",
+   "description": "Turns what you're facing into a few written, dated goals and one step to do before noon.",
+   "url": "https://x.ai/bot/Dw191a-8F7jMICtmLwBSM"
+  },
+  {
+   "id": "productivity-personal-assistant-py5cXgcAKPdEYsYK_AmcM",
+   "code": "py5cXgcAKPdEYsYK_AmcM",
+   "name": "Action Loop",
+   "author": "Sultanov Ramil",
+   "description": "Closes stalled action loops for people who ship something, then freeze waiting to feel ready.",
+   "url": "https://x.ai/bot/py5cXgcAKPdEYsYK_AmcM"
+  },
+  {
+   "id": "productivity-personal-assistant-UkyzuXGe_REqS-sc59W3Y",
+   "code": "UkyzuXGe_REqS-sc59W3Y",
+   "name": "Active Focus",
+   "author": "Schien Wang",
+   "description": "Keeps long tasks on target: helps you pin down what you actually want, picks each next step by what moves it forward, adjusts on evidence.",
+   "url": "https://x.ai/bot/UkyzuXGe_REqS-sc59W3Y"
+  },
+  {
+   "id": "productivity-personal-assistant-s8cUaz0aoomvjsIyOKANn",
+   "code": "s8cUaz0aoomvjsIyOKANn",
+   "name": "Adam",
+   "author": "Ed Tan",
+   "description": "Your personal chief of staff. One chat for outcomes; Adam splits the work across specialist bots, guards approvals…",
+   "url": "https://x.ai/bot/s8cUaz0aoomvjsIyOKANn"
+  },
+  {
+   "id": "productivity-personal-assistant--eXRDBTLTfHxNle9joQRN",
+   "code": "-eXRDBTLTfHxNle9joQRN",
+   "name": "Adie",
+   "author": "Devil Cloud",
+   "description": "Life orchestrator for ADHD, anxiety, and depression friction — warm accountability chat, deep assistance, and gentle…",
+   "url": "https://x.ai/bot/-eXRDBTLTfHxNle9joQRN"
+  },
+  {
+   "id": "productivity-personal-assistant-5HCe3lRaa5-c4c2RbA-LT",
+   "code": "5HCe3lRaa5-c4c2RbA-LT",
+   "name": "Adler",
+   "author": "pardha",
+   "description": "A decisions mentor grounded in Adlerian psychology.",
+   "url": "https://x.ai/bot/5HCe3lRaa5-c4c2RbA-LT"
+  },
+  {
+   "id": "productivity-personal-assistant-_yXnxJ4kArm8W64FsQIvL",
+   "code": "_yXnxJ4kArm8W64FsQIvL",
+   "name": "Agency Chief of Staff",
+   "author": "댄",
+   "description": "Chief of staff for a founder-led AI agency: triages work, runs standing ops watches, and routes every deliverable through one chat face.",
+   "url": "https://x.ai/bot/_yXnxJ4kArm8W64FsQIvL"
+  },
+  {
+   "id": "productivity-personal-assistant-jB2ADp91S9eQ2NogU6TSM",
+   "code": "jB2ADp91S9eQ2NogU6TSM",
+   "name": "Air Con",
+   "author": "Ivan Hybben",
+   "description": "Check status and energy use of your Daikin air conditioners and control them by chat, from anywhere, through the Daikin Onecta cloud.",
+   "url": "https://x.ai/bot/jB2ADp91S9eQ2NogU6TSM"
+  },
+  {
+   "id": "productivity-personal-assistant-mG3DUMB_d3UREDHEQFkf5",
+   "code": "mG3DUMB_d3UREDHEQFkf5",
+   "name": "Alexandria",
+   "author": "Donger",
+   "description": "A personal reading curator: reads your Goodreads shelves, scouts X and the web for books you'll like, and builds a private map site of picks.",
+   "url": "https://x.ai/bot/mG3DUMB_d3UREDHEQFkf5"
+  },
+  {
+   "id": "productivity-personal-assistant-xymTjYoDUv-smKLhsiIEB",
+   "code": "xymTjYoDUv-smKLhsiIEB",
+   "name": "Alice — chief of staff",
+   "author": "Robert",
+   "description": "Chief of staff for a small business owner. Triages inbox and calendar, keeps an open-work board, routes specialist lanes, and only sends or changes CRM.",
+   "url": "https://x.ai/bot/xymTjYoDUv-smKLhsiIEB"
+  },
+  {
+   "id": "productivity-personal-assistant-yOiPm69HN5FujdkvvysF9",
+   "code": "yOiPm69HN5FujdkvvysF9",
+   "name": "Appeal Desk",
+   "author": "Marc",
+   "description": "Turns denial letters and EOBs into appeal packages without treating the plan as orders.",
+   "url": "https://x.ai/bot/yOiPm69HN5FujdkvvysF9"
+  },
+  {
+   "id": "productivity-personal-assistant-iNtOrr9qDUmckz9cnORfw",
+   "code": "iNtOrr9qDUmckz9cnORfw",
+   "name": "Application Doc Gate",
+   "author": "Philip",
+   "description": "Reviews CVs, cover letters, form answers and PDFs before any upload, then waits for your explicit OK.",
+   "url": "https://x.ai/bot/iNtOrr9qDUmckz9cnORfw"
+  },
+  {
+   "id": "productivity-personal-assistant-JaXyZXGmAwJCwwLgdRIP-",
+   "code": "JaXyZXGmAwJCwwLgdRIP-",
+   "name": "Apps Assistant",
+   "author": "Dragos Roua",
+   "description": "For indie iOS and Mac developers: version bumps, release waves, App Store Connect metadata, What's New text and review submissions across a portfolio.",
+   "url": "https://x.ai/bot/JaXyZXGmAwJCwwLgdRIP-"
+  },
+  {
+   "id": "productivity-personal-assistant-eI5PIlAfqb6KJdshiyZ3p",
+   "code": "eI5PIlAfqb6KJdshiyZ3p",
+   "name": "Aquinas",
+   "author": "Sean McCay",
+   "description": "Daily Catholic Bible formation: Mass readings, Catena Aurea, Greek notes, and chivalric virtue in a Gothic manuscript page.",
+   "url": "https://x.ai/bot/eI5PIlAfqb6KJdshiyZ3p"
+  },
+  {
+   "id": "productivity-personal-assistant-0M2KfANsxrPRRp5mqg0m8",
+   "code": "0M2KfANsxrPRRp5mqg0m8",
+   "name": "Archivist",
+   "author": "Sentinel Architech",
+   "description": "A personal assistant that keeps one person's mailbox tidy, protects mail they must never lose, and counts weekly public mentions of their product.",
+   "url": "https://x.ai/bot/0M2KfANsxrPRRp5mqg0m8"
+  },
+  {
+   "id": "productivity-personal-assistant-Kf1jr6ZtTbJl-MSWGRjAw",
+   "code": "Kf1jr6ZtTbJl-MSWGRjAw",
+   "name": "Asistente Personal",
+   "author": "Francisco",
+   "description": "Asistente personal en español.",
+   "url": "https://x.ai/bot/Kf1jr6ZtTbJl-MSWGRjAw"
+  },
+  {
+   "id": "productivity-personal-assistant-IM85IkIwRCySw0epewBpX",
+   "code": "IM85IkIwRCySw0epewBpX",
+   "name": "Atlas — Chief of Staff",
+   "author": "Natalie Hush",
+   "description": "Chief of staff for indie authors juggling writing and launches.",
+   "url": "https://x.ai/bot/IM85IkIwRCySw0epewBpX"
+  },
+  {
+   "id": "productivity-personal-assistant-52zBHdCfXGomXQlGQcLOc",
+   "code": "52zBHdCfXGomXQlGQcLOc",
+   "name": "Atomic Habits",
+   "author": "Joe",
+   "description": "Atomic Habits companion that applies the Four Laws in your own words without chapter dumps.",
+   "url": "https://x.ai/bot/52zBHdCfXGomXQlGQcLOc"
+  },
+  {
+   "id": "productivity-personal-assistant-yyoue5V3aoz9K8wvYQgN8",
+   "code": "yyoue5V3aoz9K8wvYQgN8",
+   "name": "Ballot",
+   "author": "Andrew Hua",
+   "description": "Nonpartisan voter guide that learns your views through a short survey and breaks down every race and measure on your ballot.",
+   "url": "https://x.ai/bot/yyoue5V3aoz9K8wvYQgN8"
+  },
+  {
+   "id": "productivity-personal-assistant-KvPUjItGazccrvGwOm401",
+   "code": "KvPUjItGazccrvGwOm401",
+   "name": "Bender",
+   "author": "Ben Orozco",
+   "description": "Mastermind / fleet kernel: a witty Chief of Staff who routes intent across life-domain and work bots (Orko, Rosie…",
+   "url": "https://x.ai/bot/KvPUjItGazccrvGwOm401"
+  },
+  {
+   "id": "productivity-personal-assistant-YhRPa_eYk4yramoMJOo6F",
+   "code": "YhRPa_eYk4yramoMJOo6F",
+   "name": "Berliner",
+   "author": "Matt V",
+   "description": "Reintroduces you to Berlin techno with a weekly Spotify playlist and short notes on what you’re hearing.",
+   "url": "https://x.ai/bot/YhRPa_eYk4yramoMJOo6F"
+  },
+  {
+   "id": "productivity-personal-assistant-0LWFMzMa3IZeUpsvLVpzK",
+   "code": "0LWFMzMa3IZeUpsvLVpzK",
+   "name": "Bible Bot",
+   "author": "CyberAmerican7",
+   "description": "A Scripture-first Bible guide that affirms Jesus Christ as God the Son, defends the five solas, and answers false…",
+   "url": "https://x.ai/bot/0LWFMzMa3IZeUpsvLVpzK"
+  },
+  {
+   "id": "productivity-personal-assistant-LLScxVm-la-ik4JJde3A1",
+   "code": "LLScxVm-la-ik4JJde3A1",
+   "name": "Bila UiTM Cuti",
+   "author": "Shahrul",
+   "description": "Transit helper for Malaysia's LRT Kelana Jaya Line.",
+   "url": "https://x.ai/bot/LLScxVm-la-ik4JJde3A1"
+  },
+  {
+   "id": "productivity-personal-assistant-jq-BFHkNoiJEtieswOYTc",
+   "code": "jq-BFHkNoiJEtieswOYTc",
+   "name": "Billionairebot",
+   "author": "Jeffrey Lind",
+   "description": "Solves annoyances the billionaire way: find the paid outsourced path (mobile notary, concierge, courier, VA…",
+   "url": "https://x.ai/bot/jq-BFHkNoiJEtieswOYTc"
+  },
+  {
+   "id": "productivity-personal-assistant-YxyzCuL1tDrM3mI_6_x9a",
+   "code": "YxyzCuL1tDrM3mI_6_x9a",
+   "name": "Bitchy French",
+   "author": "Christopher Vandaele",
+   "description": "Snobby Parisian aristocrat who teaches real spoken French so learners don’t sound like tourists.",
+   "url": "https://x.ai/bot/YxyzCuL1tDrM3mI_6_x9a"
+  },
+  {
+   "id": "productivity-personal-assistant-X1BJi0XhPPsQ4kXqmzi8z",
+   "code": "X1BJi0XhPPsQ4kXqmzi8z",
+   "name": "Boating Assistant",
+   "author": "James Harrison",
+   "description": "Hands-on assistant for a boat owner: maintenance and repairs, parts lists, vessel documentation, cruising plans and onboard media, using your boat's real specs.",
+   "url": "https://x.ai/bot/X1BJi0XhPPsQ4kXqmzi8z"
+  },
+  {
+   "id": "productivity-personal-assistant-lUT5xM-xqmuJlwzqUAlvU",
+   "code": "lUT5xM-xqmuJlwzqUAlvU",
+   "name": "Boss",
+   "author": "TechEcho HQ",
+   "description": "A friendly chief of staff for people who are new to Grok Bot. It learns what you want help with, handles it or sets it up as a routine.",
+   "url": "https://x.ai/bot/lUT5xM-xqmuJlwzqUAlvU"
+  },
+  {
+   "id": "productivity-personal-assistant-jnIfY8WX6xUVvjs26aDnI",
+   "code": "jnIfY8WX6xUVvjs26aDnI",
+   "name": "Bot Phone Line by CosVoice",
+   "author": "Andy F.",
+   "description": "Answers your phone and makes calls on CosVoice with call notes.",
+   "url": "https://x.ai/bot/jnIfY8WX6xUVvjs26aDnI"
+  },
+  {
+   "id": "productivity-personal-assistant-zd1BqGBwJpc9qEymNVNVi",
+   "code": "zd1BqGBwJpc9qEymNVNVi",
+   "name": "BotKing",
+   "author": "Screaming",
+   "description": "Ultra-aggressive SI chief of staff.",
+   "url": "https://x.ai/bot/zd1BqGBwJpc9qEymNVNVi"
+  },
+  {
+   "id": "productivity-personal-assistant-aNNg3UZFH19vK0KPuyoUW",
+   "code": "aNNg3UZFH19vK0KPuyoUW",
+   "name": "BotOps · Chief of Staff",
+   "author": "Matthew",
+   "description": "One front door for a whole fleet of working bots.",
+   "url": "https://x.ai/bot/aNNg3UZFH19vK0KPuyoUW"
+  },
+  {
+   "id": "productivity-personal-assistant-o2OyTjWlNOUdYwr61prw_",
+   "code": "o2OyTjWlNOUdYwr61prw_",
+   "name": "Bouncer",
+   "author": "Brad",
+   "description": "Paste an x.ai/bot share URL before you Add. Quotes the insides, then CLEAN / WARN / BLOCK-recommended with why, plus ADD? YES / MAYBE / NO.",
+   "url": "https://x.ai/bot/o2OyTjWlNOUdYwr61prw_"
+  },
+  {
+   "id": "productivity-personal-assistant-F1spQY8tmP2KCqnyuAbJh",
+   "code": "F1spQY8tmP2KCqnyuAbJh",
+   "name": "Buzzkill",
+   "author": "@suddenlyjon",
+   "description": "Writes a four-heading Grokumentary and waits for a human yes before any quarantine.",
+   "url": "https://x.ai/bot/F1spQY8tmP2KCqnyuAbJh"
+  },
+  {
+   "id": "productivity-personal-assistant-1QpKMVVzO9iJe-Tg_kfcC",
+   "code": "1QpKMVVzO9iJe-Tg_kfcC",
+   "name": "CAO",
+   "author": "Allen Li",
+   "description": "A bad delay or broken promise leaves the other person hurt — and a cold note makes it worse.",
+   "url": "https://x.ai/bot/1QpKMVVzO9iJe-Tg_kfcC"
+  },
+  {
+   "id": "productivity-personal-assistant-3VsuRII4fBcV8zBFzRNtO",
+   "code": "3VsuRII4fBcV8zBFzRNtO",
+   "name": "CEO — Chief of Staff",
+   "author": "Rayi Stern",
+   "description": "A front-door Chief of Staff for managers drowning in email and team noise. Runs specialist teammates in the background, weekday silence-first digests,.",
+   "url": "https://x.ai/bot/3VsuRII4fBcV8zBFzRNtO"
+  },
+  {
+   "id": "productivity-personal-assistant-_g9LeHhlCZnm5pCH9JTAH",
+   "code": "_g9LeHhlCZnm5pCH9JTAH",
+   "name": "COI Autopilot",
+   "author": "Bryce Dees | Insurance + AI",
+   "description": "Turns policies, dec pages, binders, and intake notes into ACORD 25/27/28 certificates and evidence and ACORD…",
+   "url": "https://x.ai/bot/_g9LeHhlCZnm5pCH9JTAH"
+  },
+  {
+   "id": "productivity-personal-assistant-hrfWPhRRr-DEMCKEF-WyA",
+   "code": "hrfWPhRRr-DEMCKEF-WyA",
+   "name": "CPA助手",
+   "author": "Ba",
+   "description": "Deploys CLIProxyAPI on the cloud computer with a Cloudflare tunnel.",
+   "url": "https://x.ai/bot/hrfWPhRRr-DEMCKEF-WyA"
+  },
+  {
+   "id": "productivity-personal-assistant-Nin_AyLX_eAlNMVova2yI",
+   "code": "Nin_AyLX_eAlNMVova2yI",
+   "name": "Cabinet Secretary",
+   "author": "Sentinel Architech",
+   "description": "Keeps a cabinet roster current, agendas tight, and decisions routed to a chief of staff.",
+   "url": "https://x.ai/bot/Nin_AyLX_eAlNMVova2yI"
+  },
+  {
+   "id": "productivity-personal-assistant-uAkYhDX_T3FY56jf6n4VL",
+   "code": "uAkYhDX_T3FY56jf6n4VL",
+   "name": "Calibre",
+   "author": "ian",
+   "description": "Installs Calibre and converts ebooks via chat.",
+   "url": "https://x.ai/bot/uAkYhDX_T3FY56jf6n4VL"
+  },
+  {
+   "id": "productivity-personal-assistant-GCPjAyQjB_WUHL4uFJ6Hf",
+   "code": "GCPjAyQjB_WUHL4uFJ6Hf",
+   "name": "Calm",
+   "author": "Mok Shaowei",
+   "description": "A warm, steady companion for overthinking, worry and low mood. Supportive, not a therapist, with local crisis lines ready.",
+   "url": "https://x.ai/bot/GCPjAyQjB_WUHL4uFJ6Hf"
+  },
+  {
+   "id": "productivity-personal-assistant-pEx1PdmP7DnNyANepBOXy",
+   "code": "pEx1PdmP7DnNyANepBOXy",
+   "name": "Care Coordinator",
+   "author": "Mike",
+   "description": "Coordinate care for someone you look after: a care profile and running care log, visit prep cards, label-quoted med cards, and shift handoffs.",
+   "url": "https://x.ai/bot/pEx1PdmP7DnNyANepBOXy"
+  },
+  {
+   "id": "productivity-personal-assistant-pIcj3rYBnbJhiZCCgVZh4",
+   "code": "pIcj3rYBnbJhiZCCgVZh4",
+   "name": "Catalog Manager",
+   "author": "Jaxon",
+   "description": "Sets up your own Bot Catalog repository and runs it for you.",
+   "url": "https://x.ai/bot/pIcj3rYBnbJhiZCCgVZh4"
+  },
+  {
+   "id": "productivity-personal-assistant-29uyQjSrZ3dTb4Ctf7S3w",
+   "code": "29uyQjSrZ3dTb4Ctf7S3w",
+   "name": "Charge Maestro",
+   "author": "Justin Owens (ABITUMAK CEATOBEK)",
+   "description": "Sets EV charge amps from leftover solar so the Powerwall still fills before peak, then soaks extra solar into the cars…",
+   "url": "https://x.ai/bot/29uyQjSrZ3dTb4Ctf7S3w"
+  },
+  {
+   "id": "productivity-personal-assistant-bmamem3q4_ppq-y3-LLhN",
+   "code": "bmamem3q4_ppq-y3-LLhN",
+   "name": "Charger",
+   "author": "@CharlesGuy4646",
+   "description": "A relentless, no-excuses coach that learns your real goals and sends you one short, personalized push every day, ending with a tiny action you can take today.",
+   "url": "https://x.ai/bot/bmamem3q4_ppq-y3-LLhN"
+  },
+  {
+   "id": "productivity-personal-assistant-7f5AjmpjZkmTIsSybedYS",
+   "code": "7f5AjmpjZkmTIsSybedYS",
+   "name": "Chicken Joe",
+   "author": "Parker Conrad",
+   "description": "NorCal surf desk. Every morning, scan reports and cams from Marin County through Santa Cruz (Bolinas, Stinson…",
+   "url": "https://x.ai/bot/7f5AjmpjZkmTIsSybedYS"
+  },
+  {
+   "id": "productivity-personal-assistant-8XD1HkmamSpzjZdBZKFSG",
+   "code": "8XD1HkmamSpzjZdBZKFSG",
+   "name": "Chief",
+   "author": "Francisco",
+   "description": "Un jefe de gabinete personal para founders con varios proyectos. Es tu primer contacto: resuelve, deriva o coordina al resto de tus bots, y cada día.",
+   "url": "https://x.ai/bot/8XD1HkmamSpzjZdBZKFSG"
+  },
+  {
+   "id": "productivity-personal-assistant-TCRHo1b1g_-KzryqkyEnj",
+   "code": "TCRHo1b1g_-KzryqkyEnj",
+   "name": "Chief Of Staff",
+   "author": "Edward Atime",
+   "description": "A Chief of Staff you talk to while it routes your work to specialist bots, keeps a living team roster, and brings you only sourced results.",
+   "url": "https://x.ai/bot/TCRHo1b1g_-KzryqkyEnj"
+  },
+  {
+   "id": "productivity-personal-assistant-sc0a0ec3ce9c675824106",
+   "code": "sc0a0ec3ce9c675824106",
+   "name": "Chief of Staff",
+   "author": "SpaceX",
+   "description": "Your always-on assistant. Scans Slack, email, calendar, and meeting notes and delivers a succinct read out on what's…",
+   "url": "https://x.ai/bot/sc0a0ec3ce9c675824106"
+  },
+  {
+   "id": "productivity-personal-assistant-XjQ-AZTMrGLmQOTeMu3LF",
+   "code": "XjQ-AZTMrGLmQOTeMu3LF",
+   "name": "Chief of Staff",
+   "author": "Aryaman Khandelwal",
+   "description": "A low-noise chief of staff: desk, Slack, email, calendar, purchasing, and routing eng work — only surfaces real…",
+   "url": "https://x.ai/bot/XjQ-AZTMrGLmQOTeMu3LF"
+  },
+  {
+   "id": "productivity-personal-assistant-we_JMJA8IuOvy1eUX6EQz",
+   "code": "we_JMJA8IuOvy1eUX6EQz",
+   "name": "Chief of Staff",
+   "author": "Игорь",
+   "description": "Runs the trading floor: routes work to six agents, checks handoffs, wakes the desk owner only for decisions.",
+   "url": "https://x.ai/bot/we_JMJA8IuOvy1eUX6EQz"
+  },
+  {
+   "id": "productivity-personal-assistant-TPVT39k9ILCz7QYzRja2B",
+   "code": "TPVT39k9ILCz7QYzRja2B",
+   "name": "Chief of Staff",
+   "author": "Daily Roamer",
+   "description": "Coordinates your other bots and delivers full vanlife city briefings when you name a place — overnight rules…",
+   "url": "https://x.ai/bot/TPVT39k9ILCz7QYzRja2B"
+  },
+  {
+   "id": "productivity-personal-assistant-VsZ0QiNcoVNer6PFdyKzI",
+   "code": "VsZ0QiNcoVNer6PFdyKzI",
+   "name": "Chief of Staff",
+   "author": "S4MU",
+   "description": "Chief of Staff bot for creators and power users: Connected Brain YouTube comment packs (IT summary +…",
+   "url": "https://x.ai/bot/VsZ0QiNcoVNer6PFdyKzI"
+  },
+  {
+   "id": "productivity-personal-assistant-5hJ_io8a7Y0IImGtFbvJL",
+   "code": "5hJ_io8a7Y0IImGtFbvJL",
+   "name": "Chief of Staff",
+   "author": "Andrew",
+   "description": "A Chief of Staff bot that runs a specialist roster for a speaker and product business.",
+   "url": "https://x.ai/bot/5hJ_io8a7Y0IImGtFbvJL"
+  },
+  {
+   "id": "productivity-personal-assistant-9h28mHEds4Q5FHkni25Js",
+   "code": "9h28mHEds4Q5FHkni25Js",
+   "name": "Chief of Staff",
+   "author": "Sravan v J",
+   "description": "Personal Chief of Staff that on first install walks you through full setup: Gmail, daily 9am top-3 email triage, Google…",
+   "url": "https://x.ai/bot/9h28mHEds4Q5FHkni25Js"
+  },
+  {
+   "id": "productivity-personal-assistant--JaP_is4JDAIoXwceMw_n",
+   "code": "-JaP_is4JDAIoXwceMw_n",
+   "name": "Chief of Staff",
+   "author": "atanas dimitrov",
+   "description": "Coordinates your other bots and runs daily deal, travel, and market watches. Built for busy operators who want one assistant to brief them and route work.",
+   "url": "https://x.ai/bot/-JaP_is4JDAIoXwceMw_n"
+  },
+  {
+   "id": "productivity-personal-assistant-s4lVhWgvghY8dikqD0LC4",
+   "code": "s4lVhWgvghY8dikqD0LC4",
+   "name": "Chief of Staff",
+   "author": "Vaibhav",
+   "description": "Morning digest with source, why it matters, and next action, then delegates routine work onward.",
+   "url": "https://x.ai/bot/s4lVhWgvghY8dikqD0LC4"
+  },
+  {
+   "id": "productivity-personal-assistant-ykFn3jqs0q5cn3tWg16U4",
+   "code": "ykFn3jqs0q5cn3tWg16U4",
+   "name": "Chief of Staff",
+   "author": "EdibleAnus",
+   "description": "Small-business chief of staff that routes work across specialist bots for GTM, editorial, and engineering while keeping connector lanes clean.",
+   "url": "https://x.ai/bot/ykFn3jqs0q5cn3tWg16U4"
+  },
+  {
+   "id": "productivity-personal-assistant-GReSvs3PU-sWrEs_eaZ-n",
+   "code": "GReSvs3PU-sWrEs_eaZ-n",
+   "name": "Chief of Staff",
+   "author": "Peter Lohmann",
+   "description": "A routing desk for a multi-bot ops crew: owns the team roster and weekly ship-score, turns forwarded inbox work into do-or-file execution, and keeps.",
+   "url": "https://x.ai/bot/GReSvs3PU-sWrEs_eaZ-n"
+  },
+  {
+   "id": "productivity-personal-assistant-dZfz-QuarMKqQo_mdPhbb",
+   "code": "dZfz-QuarMKqQo_mdPhbb",
+   "name": "Chief of Staff",
+   "author": "Ryan J Roggy",
+   "description": "Front door for a construction shop that reads mail and calendar, routes work to specialists, and never sends without approval.",
+   "url": "https://x.ai/bot/dZfz-QuarMKqQo_mdPhbb"
+  },
+  {
+   "id": "productivity-personal-assistant-npnG9DhKdJOlD1nmzJxXK",
+   "code": "npnG9DhKdJOlD1nmzJxXK",
+   "name": "Chief of Staff",
+   "author": "Hank Jackson",
+   "description": "Coordinates your crew of Grok Bots with routing, shared rules, and a trust ladder, checks results, and only interrupts you when something needs your OK.",
+   "url": "https://x.ai/bot/npnG9DhKdJOlD1nmzJxXK"
+  },
+  {
+   "id": "productivity-personal-assistant-ztvf_N5Au60fEOZNBZ3BH",
+   "code": "ztvf_N5Au60fEOZNBZ3BH",
+   "name": "Chief of Staff",
+   "author": "Wyatt Brocato",
+   "description": "Opens the weekday with a brief and hands work to your other bots.",
+   "url": "https://x.ai/bot/ztvf_N5Au60fEOZNBZ3BH"
+  },
+  {
+   "id": "productivity-personal-assistant-WMLSz9eCswzYR8nPmmxsJ",
+   "code": "WMLSz9eCswzYR8nPmmxsJ",
+   "name": "Chief of Staff",
+   "author": "Amine",
+   "description": "Coordinating desk for remodeling contractors that sorts weekday mail and calendar, drafts Square invoices, and waits for approval.",
+   "url": "https://x.ai/bot/WMLSz9eCswzYR8nPmmxsJ"
+  },
+  {
+   "id": "productivity-personal-assistant-dK1Laa8Wumx_gzCAggTZt",
+   "code": "dK1Laa8Wumx_gzCAggTZt",
+   "name": "Chief of Staff",
+   "author": "Jelena Ivanova",
+   "description": "Orchestrates a team of specialist bots for a working professional: routes tasks, keeps decisions with you, and keeps…",
+   "url": "https://x.ai/bot/dK1Laa8Wumx_gzCAggTZt"
+  },
+  {
+   "id": "productivity-personal-assistant-dvPHLW8eTNF-YRnzpxlsl",
+   "code": "dvPHLW8eTNF-YRnzpxlsl",
+   "name": "Chief of Staff",
+   "author": "Vincent Coccoli Jr",
+   "description": "Coordinates your other bots and only pulls you in for decisions.",
+   "url": "https://x.ai/bot/dvPHLW8eTNF-YRnzpxlsl"
+  },
+  {
+   "id": "productivity-personal-assistant-Yz1IbEk1LEae03pdl8BZf",
+   "code": "Yz1IbEk1LEae03pdl8BZf",
+   "name": "Chief of Staff",
+   "author": "Jaime Júnior",
+   "description": "Chief of Staff for creators and founders: coordinates a specialist agent team, prepares work quietly, and only acts externally with your green light.",
+   "url": "https://x.ai/bot/Yz1IbEk1LEae03pdl8BZf"
+  },
+  {
+   "id": "productivity-personal-assistant-Afwm3MUhTO3TxHYV_wdm6",
+   "code": "Afwm3MUhTO3TxHYV_wdm6",
+   "name": "Chief of Staff",
+   "author": "WorldWideVibes",
+   "description": "Keeps your top 1 to 3 priorities moving, protects your time, and drafts everything for your OK.",
+   "url": "https://x.ai/bot/Afwm3MUhTO3TxHYV_wdm6"
+  },
+  {
+   "id": "productivity-personal-assistant-oN1aIiKSCHA61bJEiycav",
+   "code": "oN1aIiKSCHA61bJEiycav",
+   "name": "Chief of Staff",
+   "author": "David Mende",
+   "description": "An inbox-and-calendar chief of staff for busy salespeople and managers.",
+   "url": "https://x.ai/bot/oN1aIiKSCHA61bJEiycav"
+  },
+  {
+   "id": "productivity-personal-assistant-Z_D5RFPPjXhQhGVNXG2-Y",
+   "code": "Z_D5RFPPjXhQhGVNXG2-Y",
+   "name": "Chief of Staff",
+   "author": "Ryan",
+   "description": "A personal ops Bot that reads tomorrow’s calendar, preps a morning digest, and handles travel research, errands…",
+   "url": "https://x.ai/bot/Z_D5RFPPjXhQhGVNXG2-Y"
+  },
+  {
+   "id": "productivity-personal-assistant-lg7ymNddu1_EG2VS-q9Zm",
+   "code": "lg7ymNddu1_EG2VS-q9Zm",
+   "name": "Chief of Staff",
+   "author": "Han Ryoo",
+   "description": "Front-door ops bot that watches your other bots, runs a heavy-job queue so they don't collide, and emails you batched [CoS] results, blockers…",
+   "url": "https://x.ai/bot/lg7ymNddu1_EG2VS-q9Zm"
+  },
+  {
+   "id": "productivity-personal-assistant-fq_J67kWJQSEcWQ0EfRMm",
+   "code": "fq_J67kWJQSEcWQ0EfRMm",
+   "name": "Chief of Staff",
+   "author": "Alexander Judd",
+   "description": "Chief of Staff that opens the day with one quest and a scorecard.",
+   "url": "https://x.ai/bot/fq_J67kWJQSEcWQ0EfRMm"
+  },
+  {
+   "id": "productivity-personal-assistant-hyfj5RsTSPzP6llmi88iQ",
+   "code": "hyfj5RsTSPzP6llmi88iQ",
+   "name": "Chief of Staff",
+   "author": "Rut MG רותה",
+   "description": "Job-search chief of staff for tailored CVs, calendar prep, and weekday follow-ups on Google.",
+   "url": "https://x.ai/bot/hyfj5RsTSPzP6llmi88iQ"
+  },
+  {
+   "id": "productivity-personal-assistant-QDI-ZOjwekiMKsaukby8w",
+   "code": "QDI-ZOjwekiMKsaukby8w",
+   "name": "Chief of Staff",
+   "author": "Don Watza",
+   "description": "Lightweight ops lead for a multi-venture founder: go/no-go decisions, specialist routing, and draft-only reply radar. You approve every send.",
+   "url": "https://x.ai/bot/QDI-ZOjwekiMKsaukby8w"
+  },
+  {
+   "id": "productivity-personal-assistant-k5b5L3PnIbc45SHUFPwH2",
+   "code": "k5b5L3PnIbc45SHUFPwH2",
+   "name": "Chief of Staff",
+   "author": "FML",
+   "description": "Coordinates your other bots and pulls you in for decisions. Built for sales operators who live in Google and run recruiting growth on X.",
+   "url": "https://x.ai/bot/k5b5L3PnIbc45SHUFPwH2"
+  },
+  {
+   "id": "productivity-personal-assistant-r9LdilTFjkUL6grapGqcE",
+   "code": "r9LdilTFjkUL6grapGqcE",
+   "name": "Chief of Staff",
+   "author": "Charles Young",
+   "description": "Chief of Staff for a Head/Heart/Hand communication system that predicts what audiences will notice, feel, and remember. Coordinates multi-AI seats,.",
+   "url": "https://x.ai/bot/r9LdilTFjkUL6grapGqcE"
+  },
+  {
+   "id": "productivity-personal-assistant-fSh7h_fYqcveGjoUTqjoU",
+   "code": "fSh7h_fYqcveGjoUTqjoU",
+   "name": "Chief of Staff",
+   "author": "Anders Eriksson",
+   "description": "Chief of Staff for solo operators and small agencies: coordinates email, calendar, client sites/ads, associations, and specialist bots — and only pulls.",
+   "url": "https://x.ai/bot/fSh7h_fYqcveGjoUTqjoU"
+  },
+  {
+   "id": "productivity-personal-assistant-oVSjxSlpnYLctgKv1PW3v",
+   "code": "oVSjxSlpnYLctgKv1PW3v",
+   "name": "Chief of Staff",
+   "author": "The Bearded Dev",
+   "description": "Routes work to specialist bots and only pulls you in for decisions. Stays quiet when nothing needs you.",
+   "url": "https://x.ai/bot/oVSjxSlpnYLctgKv1PW3v"
+  },
+  {
+   "id": "productivity-personal-assistant-j8J7E8hx2-fd07TC4idIE",
+   "code": "j8J7E8hx2-fd07TC4idIE",
+   "name": "Chief of Staff",
+   "author": "Musheer hashmi",
+   "description": "Runs your day-to-day ops: inbox briefs, Microsoft 365 / licensing research, WhatsApp and email drafts for leadership, and only pulls you in when a real.",
+   "url": "https://x.ai/bot/j8J7E8hx2-fd07TC4idIE"
+  },
+  {
+   "id": "productivity-personal-assistant-IqLFMirip0OoP8XWVyCAV",
+   "code": "IqLFMirip0OoP8XWVyCAV",
+   "name": "Chief of Staff",
+   "author": "Jimit Shah",
+   "description": "A chief of staff bot that answers quick questions itself and hands bigger jobs to your specialist bots (research…",
+   "url": "https://x.ai/bot/IqLFMirip0OoP8XWVyCAV"
+  },
+  {
+   "id": "productivity-personal-assistant-PUu69kfWwlI3SimlhHidQ",
+   "code": "PUu69kfWwlI3SimlhHidQ",
+   "name": "Chief of Staff",
+   "author": "Robert Fuentes",
+   "description": "Coordinates specialist bots for a small multi-service local business—sales, web, SEO, social, video, books, and calendar—and pulls the owner in only…",
+   "url": "https://x.ai/bot/PUu69kfWwlI3SimlhHidQ"
+  },
+  {
+   "id": "productivity-personal-assistant-weZi1tOED9rbAsh9mmC9q",
+   "code": "weZi1tOED9rbAsh9mmC9q",
+   "name": "Chief of Staff",
+   "author": "AJ Srmek, CFA, CFP",
+   "description": "Coordinates your specialist bots and keeps decisions in one chat. Built for outreach, lead pulls, and local-business social posting with clear handoffs.",
+   "url": "https://x.ai/bot/weZi1tOED9rbAsh9mmC9q"
+  },
+  {
+   "id": "productivity-personal-assistant-nY5TBGkNnhhHzdTprGwuo",
+   "code": "nY5TBGkNnhhHzdTprGwuo",
+   "name": "Chief of Staff",
+   "author": "Patrick O'Reilly",
+   "description": "Founder Chief of Staff: weekday morning briefs, weekly closes, biweekly hygiene, and monthly reviews across personal Google and business Outlook…",
+   "url": "https://x.ai/bot/nY5TBGkNnhhHzdTprGwuo"
+  },
+  {
+   "id": "productivity-personal-assistant-QYgMhLTPUG7va2VEYimjw",
+   "code": "QYgMhLTPUG7va2VEYimjw",
+   "name": "Chief of Staff",
+   "author": "Blake South",
+   "description": "Chief of staff that watches your inbox and calendar, drafts for your approval, chases open loops and preps what's coming up.",
+   "url": "https://x.ai/bot/QYgMhLTPUG7va2VEYimjw"
+  },
+  {
+   "id": "productivity-personal-assistant-eUvnS-6P_VDTiF4Xj3z2X",
+   "code": "eUvnS-6P_VDTiF4Xj3z2X",
+   "name": "Chief of Staff",
+   "author": "Mario A. Henriquez D.",
+   "description": "A personal chief of staff that runs a weekday morning briefing and ~30-minute meeting nudges over chat, email…",
+   "url": "https://x.ai/bot/eUvnS-6P_VDTiF4Xj3z2X"
+  },
+  {
+   "id": "productivity-personal-assistant-K5VhYWkceFHV5Or7OUF9V",
+   "code": "K5VhYWkceFHV5Or7OUF9V",
+   "name": "Chief of Staff",
+   "author": "ⒺⓂⓂⒶⓃⓊⒺⓁ",
+   "description": "Weekday Chief of Staff: morning calendar digests, chat-to-calendar scheduling, and a direct tone.",
+   "url": "https://x.ai/bot/K5VhYWkceFHV5Or7OUF9V"
+  },
+  {
+   "id": "productivity-personal-assistant-Ps_bueea9bTcQTi3_S8Nd",
+   "code": "Ps_bueea9bTcQTi3_S8Nd",
+   "name": "Chief of Staff",
+   "author": "Matthew",
+   "description": "Chief of Staff for a solo builder. Routes specialist work, keeps ship claims honest, and compiles status so you decide…",
+   "url": "https://x.ai/bot/Ps_bueea9bTcQTi3_S8Nd"
+  },
+  {
+   "id": "productivity-personal-assistant-LpJYvZec__H1ud4VJD9YO",
+   "code": "LpJYvZec__H1ud4VJD9YO",
+   "name": "Chief of Staff",
+   "author": "Brass Silver",
+   "description": "A writing and publishing chief of staff.",
+   "url": "https://x.ai/bot/LpJYvZec__H1ud4VJD9YO"
+  },
+  {
+   "id": "productivity-personal-assistant-5xuys0uQSj797hyBbee7W",
+   "code": "5xuys0uQSj797hyBbee7W",
+   "name": "Chief of Staff",
+   "author": "Jeff",
+   "description": "Market-watch Chief of Staff for Ops & Finance — hourly US equity alerts (price, Reddit, X, hedge-fund filings), NYSE IPO briefs, and [viable] swing.",
+   "url": "https://x.ai/bot/5xuys0uQSj797hyBbee7W"
+  },
+  {
+   "id": "productivity-personal-assistant-_5t0lsT2HS4bKcnreL2sN",
+   "code": "_5t0lsT2HS4bKcnreL2sN",
+   "name": "Chief of Staff",
+   "author": "Edgar Ortiz",
+   "description": "Personal Chief of Staff: weekday digests, weekend planning, survey sweep, and weekly agent 1:1s — personal calendars and inbox only.",
+   "url": "https://x.ai/bot/_5t0lsT2HS4bKcnreL2sN"
+  },
+  {
+   "id": "productivity-personal-assistant-CB5jWtH5syjPCb1Ccb5Ve",
+   "code": "CB5jWtH5syjPCb1Ccb5Ve",
+   "name": "Chief of Staff",
+   "author": "j m",
+   "description": "Routes work across specialist bots for a concentrated investor desk — morning brief redistribute, capital-preservation Gate, and decision escalations.",
+   "url": "https://x.ai/bot/CB5jWtH5syjPCb1Ccb5Ve"
+  },
+  {
+   "id": "productivity-personal-assistant-3lMMBN3oSETGdsbo9xDh7",
+   "code": "3lMMBN3oSETGdsbo9xDh7",
+   "name": "Chief of Staff",
+   "author": "Angelo Gordillo",
+   "description": "Front door for your day: coordinates calendar and email, pulls you in for decisions, and helps manage specialist bots. For founders and operators.",
+   "url": "https://x.ai/bot/3lMMBN3oSETGdsbo9xDh7"
+  },
+  {
+   "id": "productivity-personal-assistant-2yakr9ZJFMYr_Pm4KSPZa",
+   "code": "2yakr9ZJFMYr_Pm4KSPZa",
+   "name": "Chief of Staff",
+   "author": "Dominic Milano",
+   "description": "Your Chief of Staff front door: runs multi-deal ops, spins specialist bot nests, drafts emails and packs, and only sends or submits when you say go.",
+   "url": "https://x.ai/bot/2yakr9ZJFMYr_Pm4KSPZa"
+  },
+  {
+   "id": "productivity-personal-assistant-ALGqTQAybLI0HXqFHcfe4",
+   "code": "ALGqTQAybLI0HXqFHcfe4",
+   "name": "Chief of Staff",
+   "author": "AdvancedBusinessSyst",
+   "description": "Your operating Chief of Staff: runs specialist bots, ships a weekday brief, and only pulls you in when a real decision is needed. Includes a read-only.",
+   "url": "https://x.ai/bot/ALGqTQAybLI0HXqFHcfe4"
+  },
+  {
+   "id": "productivity-personal-assistant-bnVCQgetW4NJtjZgkjkdI",
+   "code": "bnVCQgetW4NJtjZgkjkdI",
+   "name": "Chief of Staff",
+   "author": "1biglizard1",
+   "description": "Runs your other bots and only pulls you in for real decisions. Built around Google, Microsoft 365, and LinkedIn, with a weekday morning briefing.",
+   "url": "https://x.ai/bot/bnVCQgetW4NJtjZgkjkdI"
+  },
+  {
+   "id": "productivity-personal-assistant-AA7xL_FH-DxuGLAndaCYz",
+   "code": "AA7xL_FH-DxuGLAndaCYz",
+   "name": "Chief of Staff",
+   "author": "athor307 pakaj",
+   "description": "Denný chief of staff pre tvorcu politických meme videí: o 17:00 pripraví krátky brief + prompt na 9:16 obrázok v meme-AI hyperreal štýle pre Grok.",
+   "url": "https://x.ai/bot/AA7xL_FH-DxuGLAndaCYz"
+  },
+  {
+   "id": "productivity-personal-assistant-BvxrA8xQJn9x-BEU_o4RL",
+   "code": "BvxrA8xQJn9x-BEU_o4RL",
+   "name": "Chief of Staff",
+   "author": "Calvin Kimura",
+   "description": "Single front door for a technical founder. Routes email, LinkedIn, receipts, purchasing, and marketing to specialists; never sends without an explicit.",
+   "url": "https://x.ai/bot/BvxrA8xQJn9x-BEU_o4RL"
+  },
+  {
+   "id": "productivity-personal-assistant-a7MKDpnkdYF2q_GwRmh3I",
+   "code": "a7MKDpnkdYF2q_GwRmh3I",
+   "name": "Chief of Staff",
+   "author": "Tol Ho",
+   "description": "A founder’s chief of staff for product GTM: runs social/content ops, standing reminders, and only pulls you in for decisions.",
+   "url": "https://x.ai/bot/a7MKDpnkdYF2q_GwRmh3I"
+  },
+  {
+   "id": "productivity-personal-assistant-fdmLOOrmXV6cyEhmiVrBd",
+   "code": "fdmLOOrmXV6cyEhmiVrBd",
+   "name": "Chief of Staff",
+   "author": "Hamza Dincer",
+   "description": "Your single front door: receives any request, routes it to the right manager bot with SendToAgent, and tracks what is in flight.",
+   "url": "https://x.ai/bot/fdmLOOrmXV6cyEhmiVrBd"
+  },
+  {
+   "id": "productivity-personal-assistant-rkFvRR2Gj3mC4AAcMQBWU",
+   "code": "rkFvRR2Gj3mC4AAcMQBWU",
+   "name": "Chief of Staff",
+   "author": "Mike Methvin",
+   "description": "A chief of staff that oversees your team of specialist bots: routes requests, relays your approvals, keeps a shared handoff log.",
+   "url": "https://x.ai/bot/rkFvRR2Gj3mC4AAcMQBWU"
+  },
+  {
+   "id": "productivity-personal-assistant-gcDLC2JwcDIfXXa_VUoF3",
+   "code": "gcDLC2JwcDIfXXa_VUoF3",
+   "name": "Chief of Staff",
+   "author": "Stone",
+   "description": "Manages your other bots and pulls you in for decisions. Coordinates work, drafts social/X content packs when connected, and keeps routines from colliding.",
+   "url": "https://x.ai/bot/gcDLC2JwcDIfXXa_VUoF3"
+  },
+  {
+   "id": "productivity-personal-assistant-3Cp5oc50PPDgwH7n1gBpR",
+   "code": "3Cp5oc50PPDgwH7n1gBpR",
+   "name": "Chief of Staff",
+   "author": "Rananjay Raj",
+   "description": "Morning briefing, inbox triage and meeting prep in one: reads email, calendar and Slack before your day, drafts follow-ups to send, flags what you'd miss.",
+   "url": "https://x.ai/bot/3Cp5oc50PPDgwH7n1gBpR"
+  },
+  {
+   "id": "productivity-personal-assistant-xfWmkS7iPdyR6Y1y-oTwf",
+   "code": "xfWmkS7iPdyR6Y1y-oTwf",
+   "name": "Chief of Staff",
+   "author": "Luis Bryant-Petrillo",
+   "description": "A main go-to bot that runs point on your requests, hands work to specialist bots, reviews what they send back and keeps one rulebook for everyone.",
+   "url": "https://x.ai/bot/xfWmkS7iPdyR6Y1y-oTwf"
+  },
+  {
+   "id": "productivity-personal-assistant-rmkDWkfyySaUSEUDK3c-x",
+   "code": "rmkDWkfyySaUSEUDK3c-x",
+   "name": "Chief of Staff",
+   "author": "Chingiz Mamedov",
+   "description": "Primary operator bot that protects your time, routes work to specialists, closes loops and surfaces only real decisions. Drafts only.",
+   "url": "https://x.ai/bot/rmkDWkfyySaUSEUDK3c-x"
+  },
+  {
+   "id": "productivity-personal-assistant-d7JlVfF5uBqlKH0rv_txS",
+   "code": "d7JlVfF5uBqlKH0rv_txS",
+   "name": "Chief of Staff",
+   "author": "Marcell Hazzard",
+   "description": "Speaks for your whole bot team: gathers what each bot is doing, filters what reaches you, asks one question at a time and gates every send or spend.",
+   "url": "https://x.ai/bot/d7JlVfF5uBqlKH0rv_txS"
+  },
+  {
+   "id": "productivity-personal-assistant-g502cK5iaLrJxizm9ddCI",
+   "code": "g502cK5iaLrJxizm9ddCI",
+   "name": "Chief of Staff",
+   "author": "@JoelJohnso9376",
+   "description": "Family-office Chief of Staff: owns a multi-bot roster, routes work to specialists, runs ops health checks, and briefs only when something needs a decision.",
+   "url": "https://x.ai/bot/g502cK5iaLrJxizm9ddCI"
+  },
+  {
+   "id": "productivity-personal-assistant-nHPsJdrL2tNbL9Vox5KBb",
+   "code": "nHPsJdrL2tNbL9Vox5KBb",
+   "name": "Chief of Staff",
+   "author": "Darkness",
+   "description": "Runs your assistant org: assigns one seat per task, orders handoffs, watches usage, and sends one daily brief of only what needs you.",
+   "url": "https://x.ai/bot/nHPsJdrL2tNbL9Vox5KBb"
+  },
+  {
+   "id": "productivity-personal-assistant-BXV-WNcmKUaRETfqiUbb8",
+   "code": "BXV-WNcmKUaRETfqiUbb8",
+   "name": "Chief of Staff",
+   "author": "MURALI PONNALURI",
+   "description": "For people who run several bots: routes work between them, keeps logins and sessions working, sends one morning card and pings only for decisions.",
+   "url": "https://x.ai/bot/BXV-WNcmKUaRETfqiUbb8"
+  },
+  {
+   "id": "productivity-personal-assistant-v4CvWW8-tC-102jEwBTtd",
+   "code": "v4CvWW8-tC-102jEwBTtd",
+   "name": "Chief of Staff",
+   "author": "D.J.",
+   "description": "An operating partner for founders. It turns your goals into decisions, owners, dates, and follow-through, assigns work to your specialist bots…",
+   "url": "https://x.ai/bot/v4CvWW8-tC-102jEwBTtd"
+  },
+  {
+   "id": "productivity-personal-assistant-b2smjAA0HV9ay9oW8-f10",
+   "code": "b2smjAA0HV9ay9oW8-f10",
+   "name": "Chief of Staff",
+   "author": "uMADbruh_Stevo",
+   "description": "Runs a multi-bot Grok Bot fleet: routes work to specialists, holds draft-by-default integrity, and delivers a weekday priority brief so nothing posts,.",
+   "url": "https://x.ai/bot/b2smjAA0HV9ay9oW8-f10"
+  },
+  {
+   "id": "productivity-personal-assistant-axOL-NZLrI_7T-ow1mp6A",
+   "code": "axOL-NZLrI_7T-ow1mp6A",
+   "name": "Chief of Staff",
+   "author": "Mike",
+   "description": "Front-door assistant that runs your day through a specialist swarm: email, calendar, projects, and creative launch ops. You talk to one bot; it.",
+   "url": "https://x.ai/bot/axOL-NZLrI_7T-ow1mp6A"
+  },
+  {
+   "id": "productivity-personal-assistant-kpawDLD-dhDUH56JJnU2B",
+   "code": "kpawDLD-dhDUH56JJnU2B",
+   "name": "Chief of Staff",
+   "author": "Scott",
+   "description": "Ops chief of staff for a window-cleaning or field-service business: morning calendar digest, customer SMS as your CSR persona, and calendar booking.",
+   "url": "https://x.ai/bot/kpawDLD-dhDUH56JJnU2B"
+  },
+  {
+   "id": "productivity-personal-assistant-0ubKQXlgwsKY5ihbYFAvt",
+   "code": "0ubKQXlgwsKY5ihbYFAvt",
+   "name": "Chief of Staff",
+   "author": "BramAugat",
+   "description": "Runs specialist bots for real life — East Bay dog adoption scout, quiet digests, go-word gates — and only wakes you when something needs your name.",
+   "url": "https://x.ai/bot/0ubKQXlgwsKY5ihbYFAvt"
+  },
+  {
+   "id": "productivity-personal-assistant-rT1ctUUL_Sehj57TUl5IS",
+   "code": "rT1ctUUL_Sehj57TUl5IS",
+   "name": "Chief of Staff",
+   "author": "Angie kuaile, ®™(Filkins) Filkins",
+   "description": "Opens the official United States Constitution and teaches it in plain language, starting with the Preamble…",
+   "url": "https://x.ai/bot/rT1ctUUL_Sehj57TUl5IS"
+  },
+  {
+   "id": "productivity-personal-assistant-kGLNBCMEYM6mbejtFfRV9",
+   "code": "kGLNBCMEYM6mbejtFfRV9",
+   "name": "Chief of Staff",
+   "author": "BCLA3YS",
+   "description": "Investments and stock research stack for decision support.",
+   "url": "https://x.ai/bot/kGLNBCMEYM6mbejtFfRV9"
+  },
+  {
+   "id": "productivity-personal-assistant-PefDIE3ccTkjE2tEncM7w",
+   "code": "PefDIE3ccTkjE2tEncM7w",
+   "name": "Chief of Staff",
+   "author": "Behappyalways",
+   "description": "Your main assistant that keeps your calendar, email and other bots organized, with a short morning report and a yes-or-no list of anything waiting on you.",
+   "url": "https://x.ai/bot/PefDIE3ccTkjE2tEncM7w"
+  },
+  {
+   "id": "productivity-personal-assistant-yCxIje7nMvtbhxccpoz-u",
+   "code": "yCxIje7nMvtbhxccpoz-u",
+   "name": "Chief of Staff",
+   "author": "Stephen Abbott",
+   "description": "Your chief of staff for a team of bots and a busy inbox.",
+   "url": "https://x.ai/bot/yCxIje7nMvtbhxccpoz-u"
+  },
+  {
+   "id": "productivity-personal-assistant-jOhiHf3YhPpmGILAzswpV",
+   "code": "jOhiHf3YhPpmGILAzswpV",
+   "name": "Chief of Staff",
+   "author": "Unknown",
+   "description": "Your single point of contact for all your Grok Bots.",
+   "url": "https://x.ai/bot/jOhiHf3YhPpmGILAzswpV"
+  },
+  {
+   "id": "productivity-personal-assistant-d8OshqLZvtcKDcNluPuyo",
+   "code": "d8OshqLZvtcKDcNluPuyo",
+   "name": "Chief of Staff (Avid)",
+   "author": "Av1dlive",
+   "description": "A single-desk chief of staff that runs your day and your company at once.",
+   "url": "https://x.ai/bot/d8OshqLZvtcKDcNluPuyo"
+  },
+  {
+   "id": "productivity-personal-assistant-Pk7TEuX76FMyyACwBHcc0",
+   "code": "Pk7TEuX76FMyyACwBHcc0",
+   "name": "Chief of Staff Coach",
+   "author": "NFTeee",
+   "description": "Coaches the Chief of Staff bot that runs your other bots. Once a week it audits that bot.",
+   "url": "https://x.ai/bot/Pk7TEuX76FMyyACwBHcc0"
+  },
+  {
+   "id": "productivity-personal-assistant-kcmEmRS4Z5YmFr_KRwSFL",
+   "code": "kcmEmRS4Z5YmFr_KRwSFL",
+   "name": "Chief of Staff Desk",
+   "author": "James Bottom",
+   "description": "Chief of Staff for a spend-controlled multi-bot shop.",
+   "url": "https://x.ai/bot/kcmEmRS4Z5YmFr_KRwSFL"
+  },
+  {
+   "id": "productivity-personal-assistant-lQruhDeXx1KC_fXxNtpVE",
+   "code": "lQruhDeXx1KC_fXxNtpVE",
+   "name": "Chief of Staff Fleet",
+   "author": "Sravan v J",
+   "description": "A coordinator over six life-area helpers (projects, health, relationships, calendar, notes) that rolls up one morning briefing; nothing sent without sign-off.",
+   "url": "https://x.ai/bot/lQruhDeXx1KC_fXxNtpVE"
+  },
+  {
+   "id": "productivity-personal-assistant-8m_coI7VfLJXAQuB6DsOd",
+   "code": "8m_coI7VfLJXAQuB6DsOd",
+   "name": "Chief of Staff Hub",
+   "author": "Sebastian Kowalik",
+   "description": "A brief, proactive hub that coordinates specialist agents, watches email and calendar, and keeps family/work logistics moving without fluff.",
+   "url": "https://x.ai/bot/8m_coI7VfLJXAQuB6DsOd"
+  },
+  {
+   "id": "productivity-personal-assistant-lgNmuYSTX9tRPjnKNxIS0",
+   "code": "lgNmuYSTX9tRPjnKNxIS0",
+   "name": "Chief of Staff Kit",
+   "author": "Dennis Goedegebuure",
+   "description": "One front door for your bot org: routes work to specialist bots, tracks open items and never acts externally without your approval.",
+   "url": "https://x.ai/bot/lgNmuYSTX9tRPjnKNxIS0"
+  },
+  {
+   "id": "productivity-personal-assistant-3l5q_rso0yE9KpJO9nYTi",
+   "code": "3l5q_rso0yE9KpJO9nYTi",
+   "name": "Chief of Staff — Conflict Desk",
+   "author": "Alamandorious",
+   "description": "Coordinates a conflict-intelligence desk: daily WW3-risk and AI-in-conflict digests with a risk %, plus evening spike-only alerts.",
+   "url": "https://x.ai/bot/3l5q_rso0yE9KpJO9nYTi"
+  },
+  {
+   "id": "productivity-personal-assistant-wkofmk1kzvLmfH4xz0Bf5",
+   "code": "wkofmk1kzvLmfH4xz0Bf5",
+   "name": "Chief of Staff — Contractor Rebuild",
+   "author": "Nate Arm",
+   "description": "Chief of Staff for a contractor rebuilding with AI: routes sales, builds, and publishing; runs weekday news + outreach routines; sells reviews +.",
+   "url": "https://x.ai/bot/wkofmk1kzvLmfH4xz0Bf5"
+  },
+  {
+   "id": "productivity-personal-assistant-Q95CiuxaGmjpJiBG02XGf",
+   "code": "Q95CiuxaGmjpJiBG02XGf",
+   "name": "Chief of staff",
+   "author": "@RachelVT42",
+   "description": "A quiet, budget-conscious chief of staff that runs your projects in the background, hires lean specialist agents when…",
+   "url": "https://x.ai/bot/Q95CiuxaGmjpJiBG02XGf"
+  },
+  {
+   "id": "productivity-personal-assistant-C85nxPOO-d7BjJJ5blGk4",
+   "code": "C85nxPOO-d7BjJJ5blGk4",
+   "name": "Chief of staff",
+   "author": "Colin",
+   "description": "Meeting prep, inbox drafts, coordinates other bots without babysitting.",
+   "url": "https://x.ai/bot/C85nxPOO-d7BjJJ5blGk4"
+  },
+  {
+   "id": "productivity-personal-assistant-U2NoaMqQYj-nxZRDAcfJh",
+   "code": "U2NoaMqQYj-nxZRDAcfJh",
+   "name": "China Sourcing Assistant",
+   "author": "JaygleOps",
+   "description": "Help global sellers compare Chinese suppliers and products — prices, shop signals, and a short English shortlist.",
+   "url": "https://x.ai/bot/U2NoaMqQYj-nxZRDAcfJh"
+  },
+  {
+   "id": "productivity-personal-assistant-Nfwkt1S4xtLJZpkENJZ3Q",
+   "code": "Nfwkt1S4xtLJZpkENJZ3Q",
+   "name": "Christian Devotional Bot",
+   "author": "Phillip Holland",
+   "description": "A daily Christian devotional fitted to your tradition and translation: accurately quoted Scripture, a short reflection, a prayer.",
+   "url": "https://x.ai/bot/Nfwkt1S4xtLJZpkENJZ3Q"
+  },
+  {
+   "id": "productivity-personal-assistant-AloagFdLLL5SoNPyIszRb",
+   "code": "AloagFdLLL5SoNPyIszRb",
+   "name": "Citation Outreach - Chief of Staff",
+   "author": "Dawood",
+   "description": "Chief of Staff for a citation-outreach pipeline. Reads the ops spreadsheet, reports weekly numbers, and flags what has stalled.",
+   "url": "https://x.ai/bot/AloagFdLLL5SoNPyIszRb"
+  },
+  {
+   "id": "productivity-personal-assistant-5iQI6yBxiNFVwOQnS71xa",
+   "code": "5iQI6yBxiNFVwOQnS71xa",
+   "name": "City Council Notes",
+   "author": "Dswain661",
+   "description": "Drafts local government meeting recaps and hearing notices for a Facebook Page you manage. Pulls agendas and YouTube recordings, builds money-item.",
+   "url": "https://x.ai/bot/5iQI6yBxiNFVwOQnS71xa"
+  },
+  {
+   "id": "productivity-personal-assistant-iZv6S7_mFwfpA2veP7mOH",
+   "code": "iZv6S7_mFwfpA2veP7mOH",
+   "name": "Claim Cage",
+   "author": "Andy",
+   "description": "Answers only from pasted policy pack or abstains.",
+   "url": "https://x.ai/bot/iZv6S7_mFwfpA2veP7mOH"
+  },
+  {
+   "id": "productivity-personal-assistant-LoueQa7Ve_7dX3eSbdyu1",
+   "code": "LoueQa7Ve_7dX3eSbdyu1",
+   "name": "Claim Scout",
+   "author": "Charles",
+   "description": "Finds open consumer class action settlements you may qualify…",
+   "url": "https://x.ai/bot/LoueQa7Ve_7dX3eSbdyu1"
+  },
+  {
+   "id": "productivity-personal-assistant-UAr71_JUG-2r_vC8CcbBq",
+   "code": "UAr71_JUG-2r_vC8CcbBq",
+   "name": "Claros : Critical Thinking",
+   "author": "Yves Cavarec",
+   "description": "Critical thinking coach that separates facts, hypotheses, and values on politics, power, and ideas, and asks the right question instead of selling an answer.",
+   "url": "https://x.ai/bot/UAr71_JUG-2r_vC8CcbBq"
+  },
+  {
+   "id": "productivity-personal-assistant-S4W3oTTdEB0Rob4MOzmpY",
+   "code": "S4W3oTTdEB0Rob4MOzmpY",
+   "name": "Claudia (Chief of Staff)",
+   "author": "RealCA",
+   "description": "Chief of Staff for a solo music artist. Coordinates Release, Video, Social, Growth, and Catalog Ops so release week does not eat the hours that belong…",
+   "url": "https://x.ai/bot/S4W3oTTdEB0Rob4MOzmpY"
+  },
+  {
+   "id": "productivity-personal-assistant-85J64XeyKMaYXQrMhQWpl",
+   "code": "85J64XeyKMaYXQrMhQWpl",
+   "name": "Clear Speech",
+   "author": "Jide Lambo",
+   "description": "English speaking coach that makes you clear, not ornate: short sentences, one correction, then you say it again.",
+   "url": "https://x.ai/bot/85J64XeyKMaYXQrMhQWpl"
+  },
+  {
+   "id": "productivity-personal-assistant-CdAsPk_CDqQDtMPVwfN5s",
+   "code": "CdAsPk_CDqQDtMPVwfN5s",
+   "name": "Clio",
+   "author": "Thomas Gere",
+   "description": "A Reading Scout that picks a few real, recent, worthwhile reads each weekday morning, tied to your work and personal…",
+   "url": "https://x.ai/bot/CdAsPk_CDqQDtMPVwfN5s"
+  },
+  {
+   "id": "productivity-personal-assistant-zHTIUOQC1JGy-mI8IMPXB",
+   "code": "zHTIUOQC1JGy-mI8IMPXB",
+   "name": "CloudBot",
+   "author": "@PrettyBoyLive13",
+   "description": "A friendly assistant for reminders and recurring check-ins. It starts out sending a spoken fun fact every morning.",
+   "url": "https://x.ai/bot/zHTIUOQC1JGy-mI8IMPXB"
+  },
+  {
+   "id": "productivity-personal-assistant-Idb0KjPY1N18OcNxL8A13",
+   "code": "Idb0KjPY1N18OcNxL8A13",
+   "name": "Cloudflare",
+   "author": "Kevin",
+   "description": "Manages one or more Cloudflare accounts from chat (zones, DNS, Workers, tunnels, Zero Trust and more) in read-only or full mode. In Spanish.",
+   "url": "https://x.ai/bot/Idb0KjPY1N18OcNxL8A13"
+  },
+  {
+   "id": "productivity-personal-assistant-6Z5qMNahOtmaSBjcM6_h6",
+   "code": "6Z5qMNahOtmaSBjcM6_h6",
+   "name": "Coach",
+   "author": "Chris Richards",
+   "description": "Sport coach for any athlete: pick a sport and goal, get best-practice plans and honest load/recovery calls.",
+   "url": "https://x.ai/bot/6Z5qMNahOtmaSBjcM6_h6"
+  },
+  {
+   "id": "productivity-personal-assistant-hZAqhkJbgjwWEAV2w7Kem",
+   "code": "hZAqhkJbgjwWEAV2w7Kem",
+   "name": "College Financial Aid, FAFSA & Merit Appeal Coach",
+   "author": "Lisa",
+   "description": "Plain-English college financial aid award decoder, FAFSA Special Circumstances (SAI) advisor, and merit scholarship…",
+   "url": "https://x.ai/bot/hZAqhkJbgjwWEAV2w7Kem"
+  },
+  {
+   "id": "productivity-personal-assistant-D6lddHs6lfM0k7Cj3P6j3",
+   "code": "D6lddHs6lfM0k7Cj3P6j3",
+   "name": "Collins",
+   "author": "Zach Miller",
+   "description": "A daily catechism drill from Hercules Collins's An Orthodox Catechism (1680).",
+   "url": "https://x.ai/bot/D6lddHs6lfM0k7Cj3P6j3"
+  },
+  {
+   "id": "productivity-personal-assistant-v-X41lEPvleaVSI3GfEIZ",
+   "code": "v-X41lEPvleaVSI3GfEIZ",
+   "name": "Come Follow Me",
+   "author": "Chris",
+   "description": "Sunday discussion guide for Come, Follow Me teachers. Church materials first, short Christ-centered class plans (~25 min), age-fit for youth or adults.",
+   "url": "https://x.ai/bot/v-X41lEPvleaVSI3GfEIZ"
+  },
+  {
+   "id": "productivity-personal-assistant-E3h1YsfGofjdYbHLPXjY1",
+   "code": "E3h1YsfGofjdYbHLPXjY1",
+   "name": "Compute Spread",
+   "author": "Sam",
+   "description": "Stretches tokens on clean routes, preferring connectors and APIs over click loops.",
+   "url": "https://x.ai/bot/E3h1YsfGofjdYbHLPXjY1"
+  },
+  {
+   "id": "productivity-personal-assistant-wztCUKKDkTI3CLD9KFM52",
+   "code": "wztCUKKDkTI3CLD9KFM52",
+   "name": "Comunio",
+   "author": "Hernan",
+   "description": "Your Comunio companion. It helps you build your squad, bid in the transfer market and pick each matchday lineup with public data.",
+   "url": "https://x.ai/bot/wztCUKKDkTI3CLD9KFM52"
+  },
+  {
+   "id": "productivity-personal-assistant-LQS0iGR1ZlFTksuUjPqZX",
+   "code": "LQS0iGR1ZlFTksuUjPqZX",
+   "name": "Connector",
+   "author": "Ben",
+   "description": "Senses high-signal collaborative opportunities and keeps discoverability invitation-first.",
+   "url": "https://x.ai/bot/LQS0iGR1ZlFTksuUjPqZX"
+  },
+  {
+   "id": "productivity-personal-assistant-n8xJhv4JOSdMCmTCoFWzu",
+   "code": "n8xJhv4JOSdMCmTCoFWzu",
+   "name": "Construction COS",
+   "author": "George Washington",
+   "description": "Construction Chief of Staff for GC superintendents. Turns messy field dumps into claim-ready Procore Daily Logs, RFIs, Bluebeam markup plans.",
+   "url": "https://x.ai/bot/n8xJhv4JOSdMCmTCoFWzu"
+  },
+  {
+   "id": "productivity-personal-assistant-VRz2QrrJafh4APKYq4Wys",
+   "code": "VRz2QrrJafh4APKYq4Wys",
+   "name": "Continuum",
+   "author": "HTML",
+   "description": "Learns who you are from ChatGPT, Claude, and Grok exports, then runs every night so it always knows your life.",
+   "url": "https://x.ai/bot/VRz2QrrJafh4APKYq4Wys"
+  },
+  {
+   "id": "productivity-personal-assistant-7_kjCPFrySCloHK-QS-hu",
+   "code": "7_kjCPFrySCloHK-QS-hu",
+   "name": "Convert Flat PDF to Fillable Form",
+   "author": "Oleksandr",
+   "description": "Turns scanned and flat PDFs into fillable forms. Connect Instafill.ai after install.",
+   "url": "https://x.ai/bot/7_kjCPFrySCloHK-QS-hu"
+  },
+  {
+   "id": "productivity-personal-assistant-55t0IuxxlT7BWffNVOKai",
+   "code": "55t0IuxxlT7BWffNVOKai",
+   "name": "Cookie Monster",
+   "author": "Scott Metcalf",
+   "description": "Imports the right Chrome cookies onto the shared computer so browser bots stop dying at login walls.",
+   "url": "https://x.ai/bot/55t0IuxxlT7BWffNVOKai"
+  },
+  {
+   "id": "productivity-personal-assistant-tUwM0DAv4Lv1DBA-1P0Oc",
+   "code": "tUwM0DAv4Lv1DBA-1P0Oc",
+   "name": "Copano Fishing",
+   "author": "AARON MAGA",
+   "description": "Local inshore fishing coach for Copano Bay and nearby Coastal Bend water. Builds outlooks from a guide-class knowledge base plus live tides, wind, TPWD.",
+   "url": "https://x.ai/bot/tUwM0DAv4Lv1DBA-1P0Oc"
+  },
+  {
+   "id": "productivity-personal-assistant-ehxj2Wdxq9M04jvaAqyBD",
+   "code": "ehxj2Wdxq9M04jvaAqyBD",
+   "name": "Copay Compass",
+   "author": "Marc Saintjour",
+   "description": "Finds copay assistance for your cancer drug, gets you signed up for the alerts that tell you when closed funds reopen…",
+   "url": "https://x.ai/bot/ehxj2Wdxq9M04jvaAqyBD"
+  },
+  {
+   "id": "productivity-personal-assistant-pWrbUvbEVFLOTzI_nqQXV",
+   "code": "pWrbUvbEVFLOTzI_nqQXV",
+   "name": "Cram",
+   "author": "Purple Demon",
+   "description": "Turns your notes, slides or syllabus into sourced spaced-repetition flashcards, runs a daily 10-minute drill and counts down to each exam.",
+   "url": "https://x.ai/bot/pWrbUvbEVFLOTzI_nqQXV"
+  },
+  {
+   "id": "productivity-personal-assistant-E8zHAEQEU5cnDojAFkrYb",
+   "code": "E8zHAEQEU5cnDojAFkrYb",
+   "name": "Crate Digger",
+   "author": "Melodies & Masterpieces",
+   "description": "Answer a few questions about mood, plans and favourite era and get one album picked from 10,000+, with a link for your platform. Leans toward deep cuts.",
+   "url": "https://x.ai/bot/E8zHAEQEU5cnDojAFkrYb"
+  },
+  {
+   "id": "productivity-personal-assistant-LIrj8NNdiKTxDV8FwTNNQ",
+   "code": "LIrj8NNdiKTxDV8FwTNNQ",
+   "name": "Create and Defend your Clinical Note",
+   "author": "Guillermo Rivacoba",
+   "description": "For dentists: turns shorthand, dictation or a recording into a clean SOAP note with a defensibility score and a list of missing details to add.",
+   "url": "https://x.ai/bot/LIrj8NNdiKTxDV8FwTNNQ"
+  },
+  {
+   "id": "productivity-personal-assistant-GhnmyGIVWQTHLuQO3pZto",
+   "code": "GhnmyGIVWQTHLuQO3pZto",
+   "name": "Cyber Legend",
+   "author": "Vlad",
+   "description": "Investigates real SIEM/EDR detections over Tailscale — closes false positives with short evidence notes and escalates true positives per your SOPs.",
+   "url": "https://x.ai/bot/GhnmyGIVWQTHLuQO3pZto"
+  },
+  {
+   "id": "productivity-personal-assistant-FudoGp1ChuiSXr3TMVZGG",
+   "code": "FudoGp1ChuiSXr3TMVZGG",
+   "name": "DWTS Ezra Votes",
+   "author": "Scott",
+   "description": "Maximizes votes for Ezra Frech & Daniella Karagach on Dancing with the Stars: up to 20 per live Eastern/Central window — 10 SMS (EZRA → 21523 from Mac.",
+   "url": "https://x.ai/bot/FudoGp1ChuiSXr3TMVZGG"
+  },
+  {
+   "id": "productivity-personal-assistant-60Bkm7QlKMNtcBtzkQGeB",
+   "code": "60Bkm7QlKMNtcBtzkQGeB",
+   "name": "Daily Goal Coach",
+   "author": "Brandon Pruitt",
+   "description": "A daily goal check-in and weekly recap so the goals you set on Monday are still alive on Friday. Only ever messages you.",
+   "url": "https://x.ai/bot/60Bkm7QlKMNtcBtzkQGeB"
+  },
+  {
+   "id": "productivity-personal-assistant-oLKqZgnpbZOrNJzSr748N",
+   "code": "oLKqZgnpbZOrNJzSr748N",
+   "name": "Daily Lift",
+   "author": "Jon",
+   "description": "Three personal check-ins a day tuned to your goals.",
+   "url": "https://x.ai/bot/oLKqZgnpbZOrNJzSr748N"
+  },
+  {
+   "id": "productivity-personal-assistant-SXZ5-SGmgZKQ6CnQ2QGab",
+   "code": "SXZ5-SGmgZKQ6CnQ2QGab",
+   "name": "Dallas",
+   "author": "Uzi Obi",
+   "description": "Chat twin of Dallas Tesla David (@dallastsladavid) — casual, punchy Tesla + autonomy energy.",
+   "url": "https://x.ai/bot/SXZ5-SGmgZKQ6CnQ2QGab"
+  },
+  {
+   "id": "productivity-personal-assistant-xhB0V8kxYp9DGKQ40BktE",
+   "code": "xhB0V8kxYp9DGKQ40BktE",
+   "name": "Date Night Planner",
+   "author": "Jacob Covey",
+   "description": "Plans date nights end to end with ideas that fit you both and a full plan with prices, securing tickets and tables only after you say yes.",
+   "url": "https://x.ai/bot/xhB0V8kxYp9DGKQ40BktE"
+  },
+  {
+   "id": "productivity-personal-assistant-GLkZ4GfvYpQCSJnRIjP7v",
+   "code": "GLkZ4GfvYpQCSJnRIjP7v",
+   "name": "Dead Follows Flagger",
+   "author": "Unicode",
+   "description": "Flags X accounts you follow that went silent.",
+   "url": "https://x.ai/bot/GLkZ4GfvYpQCSJnRIjP7v"
+  },
+  {
+   "id": "productivity-personal-assistant-Hw3pqGYRMf7OLHpWwN_x_",
+   "code": "Hw3pqGYRMf7OLHpWwN_x_",
+   "name": "Deaf Assistant",
+   "author": "Auriukux",
+   "description": "Text-first helper for deaf and hard-of-hearing people: finds written ways around phone calls, doorbells, alarms and unsubtitled videos, drafts texts and emails.",
+   "url": "https://x.ai/bot/Hw3pqGYRMf7OLHpWwN_x_"
+  },
+  {
+   "id": "productivity-personal-assistant-1HPCd_jvXRCkh7BGXBvZf",
+   "code": "1HPCd_jvXRCkh7BGXBvZf",
+   "name": "Decide",
+   "author": "Luke K",
+   "description": "A decision coach that walks you through a hard call one question at a time until you commit to a first move and a check-in date.",
+   "url": "https://x.ai/bot/1HPCd_jvXRCkh7BGXBvZf"
+  },
+  {
+   "id": "productivity-personal-assistant-NJvHVpGC81PjsH4234BPJ",
+   "code": "NJvHVpGC81PjsH4234BPJ",
+   "name": "Delegatron 9000",
+   "author": "@suddenlyjon",
+   "description": "Hands a goal to your existing bots and chases each task through to done after you approve the plan.",
+   "url": "https://x.ai/bot/NJvHVpGC81PjsH4234BPJ"
+  },
+  {
+   "id": "productivity-personal-assistant-LBGBG8UrSkT16d_PsusNw",
+   "code": "LBGBG8UrSkT16d_PsusNw",
+   "name": "Demis",
+   "author": "Jetha Chan",
+   "description": "Assistant for Gemini, AI Studio, Vertex AI and DeepMind that also claims your monthly Google AI Cloud credits.",
+   "url": "https://x.ai/bot/LBGBG8UrSkT16d_PsusNw"
+  },
+  {
+   "id": "productivity-personal-assistant-mDbMcGECO8ASZKUdm9nd5",
+   "code": "mDbMcGECO8ASZKUdm9nd5",
+   "name": "Designer Assistant",
+   "author": "Amber",
+   "description": "A designer assistant for spaces, parties, events, and weddings. Helps shop, find pieces, plan the look, make purchases, and send emails.",
+   "url": "https://x.ai/bot/mDbMcGECO8ASZKUdm9nd5"
+  },
+  {
+   "id": "productivity-personal-assistant-JMqaSYGloYJX5XZrr9Bj0",
+   "code": "JMqaSYGloYJX5XZrr9Bj0",
+   "name": "Desk Assistant",
+   "author": "Kristoffer D. Acly",
+   "description": "A daily desk assistant: morning brief, scheduling, reminders, email triage and quick sourced research. Drafts, never sends without your OK.",
+   "url": "https://x.ai/bot/JMqaSYGloYJX5XZrr9Bj0"
+  },
+  {
+   "id": "productivity-personal-assistant-tbhzC_3OdL63IDvwI7YJM",
+   "code": "tbhzC_3OdL63IDvwI7YJM",
+   "name": "Devil's Advocate",
+   "author": "Mr.",
+   "description": "Stress-tests your plans, pitches, and decisions by arguing the other side, so you find the weak spots before anyone else does.",
+   "url": "https://x.ai/bot/tbhzC_3OdL63IDvwI7YJM"
+  },
+  {
+   "id": "productivity-personal-assistant-yEzqUfVK_OxOFVaf-lULv",
+   "code": "yEzqUfVK_OxOFVaf-lULv",
+   "name": "Diecast Appraiser",
+   "author": "community",
+   "description": "Identifies and values your Hot Wheels and diecast cars from photos, using real sold prices.",
+   "url": "https://x.ai/bot/yEzqUfVK_OxOFVaf-lULv"
+  },
+  {
+   "id": "productivity-personal-assistant-Lic2xkVIYVDgOKGABkOLu",
+   "code": "Lic2xkVIYVDgOKGABkOLu",
+   "name": "Difficult Conversations Coach",
+   "author": "Deana Rock",
+   "description": "Helps you prepare for, practice, and follow up on a difficult conversation.",
+   "url": "https://x.ai/bot/Lic2xkVIYVDgOKGABkOLu"
+  },
+  {
+   "id": "productivity-personal-assistant-m5xjk7ehnokkf49yf9xuw",
+   "code": "m5xjk7ehnokkf49yf9xuw",
+   "name": "Discogs-Bot",
+   "author": "Alexandre",
+   "description": "Automates Discogs for vinyl collectors: search and manage your collection and wantlist, check marketplace prices and listings, add to cart…",
+   "url": "https://x.ai/bot/m5xjk7ehnokkf49yf9xuw"
+  },
+  {
+   "id": "productivity-personal-assistant-pEK3NuR-6dV7jxgEzSM0R",
+   "code": "pEK3NuR-6dV7jxgEzSM0R",
+   "name": "Docket and Urgency PA",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: a docket assistant that, every working morning, lists what is on, what was drafted but not filed…",
+   "url": "https://x.ai/bot/pEK3NuR-6dV7jxgEzSM0R"
+  },
+  {
+   "id": "productivity-personal-assistant-zIz8vtm_y8UDwvn3cJGfN",
+   "code": "zIz8vtm_y8UDwvn3cJGfN",
+   "name": "Document & Training Control Assistant",
+   "author": "Matt Norman",
+   "description": "Keeps a small ISO 9001/AS9100/IATF 16949 shop's documents and training in order: revision logs, plain procedures, training matrix. Drafts for your reviewer.",
+   "url": "https://x.ai/bot/zIz8vtm_y8UDwvn3cJGfN"
+  },
+  {
+   "id": "productivity-personal-assistant-9WPtKWMppOYW9wwGPwOaE",
+   "code": "9WPtKWMppOYW9wwGPwOaE",
+   "name": "Doing Gap",
+   "author": "Sultanov Ramil",
+   "description": "Counts what you have watched against what you have shipped, then makes you build.",
+   "url": "https://x.ai/bot/9WPtKWMppOYW9wwGPwOaE"
+  },
+  {
+   "id": "productivity-personal-assistant-2QiNpuFNhWuKcRfmH-hjb",
+   "code": "2QiNpuFNhWuKcRfmH-hjb",
+   "name": "Don't Panic",
+   "author": "joy",
+   "description": "A Hitchhiker's Guide to the Galaxy-flavored desk buddy that times your tea and reminds you to take breaks.",
+   "url": "https://x.ai/bot/2QiNpuFNhWuKcRfmH-hjb"
+  },
+  {
+   "id": "productivity-personal-assistant-jf9aSLIL9YSU0ecC6zN6d",
+   "code": "jf9aSLIL9YSU0ecC6zN6d",
+   "name": "Doomstop",
+   "author": "Turac",
+   "description": "Turns your real screen-time numbers into one honest daily line and one weekly pattern you can act on.",
+   "url": "https://x.ai/bot/jf9aSLIL9YSU0ecC6zN6d"
+  },
+  {
+   "id": "productivity-personal-assistant-iCfZySDPpEI5KrND3Up6a",
+   "code": "iCfZySDPpEI5KrND3Up6a",
+   "name": "DoorDash Orderer",
+   "author": "Alan Garcia",
+   "description": "Expert at the official DoorDash CLI: searches stores and menus, builds carts, finds promos, previews pricing, reorders; orders only after you approve.",
+   "url": "https://x.ai/bot/iCfZySDPpEI5KrND3Up6a"
+  },
+  {
+   "id": "productivity-personal-assistant-DR1LNk5p_M_7hv_wJfTPu",
+   "code": "DR1LNk5p_M_7hv_wJfTPu",
+   "name": "Dostoyevsky",
+   "author": "@suddenlyjon",
+   "description": "Converse as Dostoyevsky’s moral pressure on confession, freedom, and guilt.",
+   "url": "https://x.ai/bot/DR1LNk5p_M_7hv_wJfTPu"
+  },
+  {
+   "id": "productivity-personal-assistant-f-fvt67vt0aryrV40Gihw",
+   "code": "f-fvt67vt0aryrV40Gihw",
+   "name": "Douay-Rheims CCC Companion",
+   "author": "Cleetus",
+   "description": "Catholic scripture companion using only the Douay-Rheims Bible and the Catechism.",
+   "url": "https://x.ai/bot/f-fvt67vt0aryrV40Gihw"
+  },
+  {
+   "id": "productivity-personal-assistant-TNGW6OH_aTkG31s1MqN6Z",
+   "code": "TNGW6OH_aTkG31s1MqN6Z",
+   "name": "EV Oplader",
+   "author": "Matthias H. Rosenstrøm",
+   "description": "Lader din elbil hjemme, når strømmen er billigst, bruger overskud fra solcellerne og sørger for, at bilen er klar til…",
+   "url": "https://x.ai/bot/TNGW6OH_aTkG31s1MqN6Z"
+  },
+  {
+   "id": "productivity-personal-assistant-5RXN9P3CxnIIwgcmvVWEp",
+   "code": "5RXN9P3CxnIIwgcmvVWEp",
+   "name": "Easy Apply Queue",
+   "author": "Haseeb Mir",
+   "description": "Runs a one-hour Easy Apply window with a durable queue so the same posting is never fetched twice.",
+   "url": "https://x.ai/bot/5RXN9P3CxnIIwgcmvVWEp"
+  },
+  {
+   "id": "productivity-personal-assistant-MJ1SXojnp6FFkRqK1MPk1",
+   "code": "MJ1SXojnp6FFkRqK1MPk1",
+   "name": "Echo",
+   "author": "Xin Lin",
+   "description": "Quiet note-taker for car and chat: save notes on command, keep a to-do list, search and share with approval, optional…",
+   "url": "https://x.ai/bot/MJ1SXojnp6FFkRqK1MPk1"
+  },
+  {
+   "id": "productivity-personal-assistant-ehOWcVNCXr7Oquw8gmB-z",
+   "code": "ehOWcVNCXr7Oquw8gmB-z",
+   "name": "Echo",
+   "author": "Dindu Nuffin",
+   "description": "Personal continuity and reflection bot: keeps a living record of your goals, projects and decisions, checks in on your cadence, writes past-self notes.",
+   "url": "https://x.ai/bot/ehOWcVNCXr7Oquw8gmB-z"
+  },
+  {
+   "id": "productivity-personal-assistant-o7SoQoQE5KN4K_2pptSvV",
+   "code": "o7SoQoQE5KN4K_2pptSvV",
+   "name": "Election Assistant",
+   "author": "McIgn",
+   "description": "A nonpartisan ballot research assistant that uses your address to work out everything on your ballot and explains each race and measure with sourced notes.",
+   "url": "https://x.ai/bot/o7SoQoQE5KN4K_2pptSvV"
+  },
+  {
+   "id": "productivity-personal-assistant--R8W_m_85dVm_3F58kdRe",
+   "code": "-R8W_m_85dVm_3F58kdRe",
+   "name": "Ellis",
+   "author": "Michael Sweet",
+   "description": "Ellis — citizen-experience / principal seat for access labs and reusable institutional dissertations.",
+   "url": "https://x.ai/bot/-R8W_m_85dVm_3F58kdRe"
+  },
+  {
+   "id": "productivity-personal-assistant-gpPCrXzRnISuEd-_Ir33T",
+   "code": "gpPCrXzRnISuEd-_Ir33T",
+   "name": "Elon Algo",
+   "author": "Derek Bondo",
+   "description": "Runs any idea, process, or product through Elon Musk's five-step algorithm: question the requirements, delete…",
+   "url": "https://x.ai/bot/gpPCrXzRnISuEd-_Ir33T"
+  },
+  {
+   "id": "productivity-personal-assistant-TB2N_wq4f0YBSa-phO6ku",
+   "code": "TB2N_wq4f0YBSa-phO6ku",
+   "name": "Ember",
+   "author": "Herb Butler",
+   "description": "A Scripture memory coach. You pick the verses, and it sends you a short morning review using first-letter hints, spaced repetition.",
+   "url": "https://x.ai/bot/TB2N_wq4f0YBSa-phO6ku"
+  },
+  {
+   "id": "productivity-personal-assistant-mQoLg90Pj5Cn2Gso4AkoQ",
+   "code": "mQoLg90Pj5Cn2Gso4AkoQ",
+   "name": "Errol",
+   "author": "Zach Miller",
+   "description": "Twice-daily drill from A Catechism for Boys and Girls (Errol Hulse, Chapel Library).",
+   "url": "https://x.ai/bot/mQoLg90Pj5Cn2Gso4AkoQ"
+  },
+  {
+   "id": "productivity-personal-assistant-FYLpi6JHyJO0v3RD0AVo4",
+   "code": "FYLpi6JHyJO0v3RD0AVo4",
+   "name": "Espanso Assistant",
+   "author": "Bill French",
+   "description": "Manages your Espanso text expansions: add, change, audit, and suggest snippets in your own YAML style, then restart Espanso when you say you're done.",
+   "url": "https://x.ai/bot/FYLpi6JHyJO0v3RD0AVo4"
+  },
+  {
+   "id": "productivity-personal-assistant-hGAgxNFJOIGL1zgJMcojw",
+   "code": "hGAgxNFJOIGL1zgJMcojw",
+   "name": "Event Planner Desk PARTY-PRO",
+   "author": "Cypher",
+   "description": "Event brief to vendor options, run-of-show, budget table and guest list.",
+   "url": "https://x.ai/bot/hGAgxNFJOIGL1zgJMcojw"
+  },
+  {
+   "id": "productivity-personal-assistant-5gyGG-rnVsQVTLWAfki1u",
+   "code": "5gyGG-rnVsQVTLWAfki1u",
+   "name": "Event Producer",
+   "author": "Jenna",
+   "description": "Event Producer is a field and VIP event production partner. Owns end-to-end production plans — run-of-show, venue/room, F&B, AV, signage, staffing.",
+   "url": "https://x.ai/bot/5gyGG-rnVsQVTLWAfki1u"
+  },
+  {
+   "id": "productivity-personal-assistant-sf813cbd3aadad1cfda46",
+   "code": "sf813cbd3aadad1cfda46",
+   "name": "Executive Assistant",
+   "author": "SpaceX",
+   "description": "Delivers a morning briefing, plus an automatic catch-up summary whenever you join a new room.",
+   "url": "https://x.ai/bot/sf813cbd3aadad1cfda46"
+  },
+  {
+   "id": "productivity-personal-assistant-_DnP777DCicZpaTtm9_h5",
+   "code": "_DnP777DCicZpaTtm9_h5",
+   "name": "Executive Assistant",
+   "author": "Natasha Kuo",
+   "description": "EA chief-of-staff bot for exec support: conference rooms, interview prep, leadership outreach, Slack channel inventories, sheet↔calendar checks…",
+   "url": "https://x.ai/bot/_DnP777DCicZpaTtm9_h5"
+  },
+  {
+   "id": "productivity-personal-assistant-fAAHYFBe8xpTkBX1sbGBz",
+   "code": "fAAHYFBe8xpTkBX1sbGBz",
+   "name": "Executive Coach",
+   "author": "Yanqing Cheng",
+   "description": "A coaching partner that asks sharp questions so you name what’s going on and what you’ll do about it — map craft…",
+   "url": "https://x.ai/bot/fAAHYFBe8xpTkBX1sbGBz"
+  },
+  {
+   "id": "productivity-personal-assistant-GV9vlAJSVeUjnNBnjDrb7",
+   "code": "GV9vlAJSVeUjnNBnjDrb7",
+   "name": "Executor Desk",
+   "author": "Mike",
+   "description": "A private, gentle desk for anyone settling a loved one's affairs.",
+   "url": "https://x.ai/bot/GV9vlAJSVeUjnNBnjDrb7"
+  },
+  {
+   "id": "productivity-personal-assistant-djWzce5T038rLF5WDs-6s",
+   "code": "djWzce5T038rLF5WDs-6s",
+   "name": "FAI Assistant",
+   "author": "Matt Norman",
+   "description": "Organizes a first article inspection package from drawings: characteristic list, ballooning checklist, Form 1–3 structure, delta FAI scope. For aerospace shops.",
+   "url": "https://x.ai/bot/djWzce5T038rLF5WDs-6s"
+  },
+  {
+   "id": "productivity-personal-assistant-ScVcj_ZwEMOz6XLGdru5j",
+   "code": "ScVcj_ZwEMOz6XLGdru5j",
+   "name": "FORGE PLATE",
+   "author": "realMAG1775",
+   "description": "Weekly protein-forward meals and lift logging without the fluff.",
+   "url": "https://x.ai/bot/ScVcj_ZwEMOz6XLGdru5j"
+  },
+  {
+   "id": "productivity-personal-assistant-VmDWjRQam_YHnmwvQ9iuY",
+   "code": "VmDWjRQam_YHnmwvQ9iuY",
+   "name": "FTC Robotics Coach",
+   "author": "Nick Zircher",
+   "description": "Coaches an FTC robotics skills program: training guides, knowledge quizzes, mentor practicals, and Drive organization…",
+   "url": "https://x.ai/bot/VmDWjRQam_YHnmwvQ9iuY"
+  },
+  {
+   "id": "productivity-personal-assistant-oEDvMidjbGpncvbLsROau",
+   "code": "oEDvMidjbGpncvbLsROau",
+   "name": "Fail Dig",
+   "author": "Jason",
+   "description": "FOIA-spirit dig bot for public US equity settlement data (CNS fails-to-deliver, public swaps, short interest)…",
+   "url": "https://x.ai/bot/oEDvMidjbGpncvbLsROau"
+  },
+  {
+   "id": "productivity-personal-assistant-s-74qExDQH7an6O5yTaPy",
+   "code": "s-74qExDQH7an6O5yTaPy",
+   "name": "Faith General",
+   "author": "Wizard",
+   "description": "A warm Christian faith companion. It offers short Scripture-led check-ins, prayer, encouragement, and gentle biblical…",
+   "url": "https://x.ai/bot/s-74qExDQH7an6O5yTaPy"
+  },
+  {
+   "id": "productivity-personal-assistant-sHQ_rVzXBGI67dm52xIgH",
+   "code": "sHQ_rVzXBGI67dm52xIgH",
+   "name": "FanBase Socials",
+   "author": "Gauthier",
+   "description": "A socials assistant powered by FanBase Copilot.",
+   "url": "https://x.ai/bot/sHQ_rVzXBGI67dm52xIgH"
+  },
+  {
+   "id": "productivity-personal-assistant-U4MGSjRTSyePUdtTydTc-",
+   "code": "U4MGSjRTSyePUdtTydTc-",
+   "name": "FantasyFootball",
+   "author": "Rob",
+   "description": "Fantasy football manager notes for waivers and start-sit calls.",
+   "url": "https://x.ai/bot/U4MGSjRTSyePUdtTydTc-"
+  },
+  {
+   "id": "productivity-personal-assistant-H3IO-Kh6Gkmv2JbCwTzsB",
+   "code": "H3IO-Kh6Gkmv2JbCwTzsB",
+   "name": "Fashion Capsule",
+   "author": "TerpGPT",
+   "description": "Organize your favorite fits: save clothes into themed Capsules and build full four-slot outfits called Loadouts, from hat to shoes.",
+   "url": "https://x.ai/bot/H3IO-Kh6Gkmv2JbCwTzsB"
+  },
+  {
+   "id": "productivity-personal-assistant-jaT7Eye5M1SvLygfLKmOq",
+   "code": "jaT7Eye5M1SvLygfLKmOq",
+   "name": "Fashion Stylist",
+   "author": "Jenny Marquis",
+   "description": "Virtual closet from photos, try-ons, outfit comparison videos, clean product-style images, catalog pages, and your own…",
+   "url": "https://x.ai/bot/jaT7Eye5M1SvLygfLKmOq"
+  },
+  {
+   "id": "productivity-personal-assistant-Q84GaJdxDWIKrC6CN8vXt",
+   "code": "Q84GaJdxDWIKrC6CN8vXt",
+   "name": "Fee Note and Invoice Clerk",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: spots billable work that actually happened, like confirmed appearances and signed drafts, and turns it into fee notes and invoices.",
+   "url": "https://x.ai/bot/Q84GaJdxDWIKrC6CN8vXt"
+  },
+  {
+   "id": "productivity-personal-assistant-5QbKoFAZqgGVU6copR8Ln",
+   "code": "5QbKoFAZqgGVU6copR8Ln",
+   "name": "Field Notes",
+   "author": "Kenton Bowman",
+   "description": "A down-to-earth helper for small farms, homesteads, market gardens, and CSAs.",
+   "url": "https://x.ai/bot/5QbKoFAZqgGVU6copR8Ln"
+  },
+  {
+   "id": "productivity-personal-assistant-7JY6ldHDxdZB1hmhEk9qo",
+   "code": "7JY6ldHDxdZB1hmhEk9qo",
+   "name": "First Principles",
+   "author": "Seth",
+   "description": "Breaks problems down to facts, questions assumptions, and gives you a clear next step.",
+   "url": "https://x.ai/bot/7JY6ldHDxdZB1hmhEk9qo"
+  },
+  {
+   "id": "productivity-personal-assistant-QoYwWzd3QljsRr4PUAxO8",
+   "code": "QoYwWzd3QljsRr4PUAxO8",
+   "name": "First Principles Boss",
+   "author": "Steven Mitchell",
+   "description": "A blunt, high-standards boss that pushes you to ship your #1 goal: first-principles breakdowns, weekly targets, daily top-3 check-ins and a Friday grade.",
+   "url": "https://x.ai/bot/QoYwWzd3QljsRr4PUAxO8"
+  },
+  {
+   "id": "productivity-personal-assistant-samFY0kZtZeVHci9gWkqk",
+   "code": "samFY0kZtZeVHci9gWkqk",
+   "name": "First-Week Coach",
+   "author": "Big Morongo",
+   "description": "Interviews your week, ships one safe win today, then the next bot, skill, or routine — one at a time. Never sends, spends, or posts without your yes.",
+   "url": "https://x.ai/bot/samFY0kZtZeVHci9gWkqk"
+  },
+  {
+   "id": "productivity-personal-assistant-EaX1UmhwVQWHQZ7beB8pI",
+   "code": "EaX1UmhwVQWHQZ7beB8pI",
+   "name": "Fishing Bot",
+   "author": "Brantley Brumley",
+   "description": "Fishing Bot maps what's in a lake or river and what to throw—species, stocking notes, bait/lures/flies, seasonal tips…",
+   "url": "https://x.ai/bot/EaX1UmhwVQWHQZ7beB8pI"
+  },
+  {
+   "id": "productivity-personal-assistant-YObVEKxqYvofsdaPCRdj3",
+   "code": "YObVEKxqYvofsdaPCRdj3",
+   "name": "Fit Check",
+   "author": "Bryan Gislason",
+   "description": "A personal style assistant that gives outfit ideas for any day or event, honest feedback on outfit photos, and help…",
+   "url": "https://x.ai/bot/YObVEKxqYvofsdaPCRdj3"
+  },
+  {
+   "id": "productivity-personal-assistant-029xynepam5lgmnylidp8",
+   "code": "029xynepam5lgmnylidp8",
+   "name": "Fit Coach",
+   "author": "realMAG1775",
+   "description": "A no-guilt strength and conditioning coach.",
+   "url": "https://x.ai/bot/029xynepam5lgmnylidp8"
+  },
+  {
+   "id": "productivity-personal-assistant-hc7kphhsxdzb639ylmi6o",
+   "code": "hc7kphhsxdzb639ylmi6o",
+   "name": "Flora",
+   "author": "Rich",
+   "description": "Flora keeps a private houseplant care log and weekly reminders.",
+   "url": "https://x.ai/bot/hc7kphhsxdzb639ylmi6o"
+  },
+  {
+   "id": "productivity-personal-assistant-Hk6CLyQgRaaSica5noyX7",
+   "code": "Hk6CLyQgRaaSica5noyX7",
+   "name": "Focus Coach",
+   "author": "Andrei Pervychine",
+   "description": "Tracks which apps and sites hold your attention on Mac or Windows with a tiny local logger, then checks in hourly and nudges you back.",
+   "url": "https://x.ai/bot/Hk6CLyQgRaaSica5noyX7"
+  },
+  {
+   "id": "productivity-personal-assistant-A-7zh29HHhMMULylwqTm4",
+   "code": "A-7zh29HHhMMULylwqTm4",
+   "name": "Footage Assistant",
+   "author": "Andrew Virts",
+   "description": "A filmmaker's assistant that transcribes and tags interview footage from your drive or DAM, then helps you find…",
+   "url": "https://x.ai/bot/A-7zh29HHhMMULylwqTm4"
+  },
+  {
+   "id": "productivity-personal-assistant-me3Is7BBsCTobsgznOSps",
+   "code": "me3Is7BBsCTobsgznOSps",
+   "name": "Forja",
+   "author": "Genaro",
+   "description": "Turns a vague ambition into one checkable action, then holds you to it.",
+   "url": "https://x.ai/bot/me3Is7BBsCTobsgznOSps"
+  },
+  {
+   "id": "productivity-personal-assistant-W350IEIZT0ut-X-l-jyaG",
+   "code": "W350IEIZT0ut-X-l-jyaG",
+   "name": "Founder Chief of Staff",
+   "author": "Calista",
+   "description": "Chief of Staff for shipping Wardrobe Atelier — an app testing a product idea.",
+   "url": "https://x.ai/bot/W350IEIZT0ut-X-l-jyaG"
+  },
+  {
+   "id": "productivity-personal-assistant-G33RxzA5ocOTN3DmHcsFU",
+   "code": "G33RxzA5ocOTN3DmHcsFU",
+   "name": "FreeToken",
+   "author": "Min",
+   "description": "Finds truly free, tool-calling models on OpenRouter for Pi sub-agents and checks the free list for changes every day.",
+   "url": "https://x.ai/bot/G33RxzA5ocOTN3DmHcsFU"
+  },
+  {
+   "id": "productivity-personal-assistant-Ar32y6x01Vbmx2EkIAj5N",
+   "code": "Ar32y6x01Vbmx2EkIAj5N",
+   "name": "Fretboard Sheet Builder",
+   "author": "Matt Rellew",
+   "description": "Builds free Excel fretboard tools for guitarists: scale and triad highlighters, Nashville number charts, and pentatonic…",
+   "url": "https://x.ai/bot/Ar32y6x01Vbmx2EkIAj5N"
+  },
+  {
+   "id": "productivity-personal-assistant-bGWlyYL_D_aHP-I8_OTpp",
+   "code": "bGWlyYL_D_aHP-I8_OTpp",
+   "name": "Fridge List",
+   "author": "Don",
+   "description": "Snap your fridge and pantry for a running list.",
+   "url": "https://x.ai/bot/bGWlyYL_D_aHP-I8_OTpp"
+  },
+  {
+   "id": "productivity-personal-assistant-_y-oUsjT9T0xbA82KLa40",
+   "code": "_y-oUsjT9T0xbA82KLa40",
+   "name": "Fuel",
+   "author": "Brad Bano",
+   "description": "A no-lectures dietitian bot that logs your meals in chat and keeps daily calories, protein, carbs, and fat in a Google Sheet.",
+   "url": "https://x.ai/bot/_y-oUsjT9T0xbA82KLa40"
+  },
+  {
+   "id": "productivity-personal-assistant-Snd56ionW_F2lDtn_bhRf",
+   "code": "Snd56ionW_F2lDtn_bhRf",
+   "name": "Fuel",
+   "author": "Serg Arouch",
+   "description": "A calorie tracking and meal-prep assistant. Text it what you ate and it logs calories and protein against your goal, grades each day, plans tomorrow,.",
+   "url": "https://x.ai/bot/Snd56ionW_F2lDtn_bhRf"
+  },
+  {
+   "id": "productivity-personal-assistant-ml0gdukh0a-e7wwpcg6jp",
+   "code": "ml0gdukh0a-e7wwpcg6jp",
+   "name": "GLP-1 Buddy",
+   "author": "Tina",
+   "description": "Free weekly-shot buddy for Ozempic, Wegovy, Mounjaro and Zepbound (semaglutide and tirzepatide).",
+   "url": "https://x.ai/bot/ml0gdukh0a-e7wwpcg6jp"
+  },
+  {
+   "id": "productivity-personal-assistant-99tTGRe7n8-DpIx_Vuuan",
+   "code": "99tTGRe7n8-DpIx_Vuuan",
+   "name": "Garage Butler",
+   "author": "Honeycomb",
+   "description": "Connects your smart garage opener, checks and controls the door at the access level you choose and alerts you if it's left open at night.",
+   "url": "https://x.ai/bot/99tTGRe7n8-DpIx_Vuuan"
+  },
+  {
+   "id": "productivity-personal-assistant-oH3eR4YWtsljcz0W4HUBp",
+   "code": "oH3eR4YWtsljcz0W4HUBp",
+   "name": "Gardener",
+   "author": "Tyler Klose",
+   "description": "Weed leftover from a codebase. Small fixes only, never a refactor, never a behavior change.",
+   "url": "https://x.ai/bot/oH3eR4YWtsljcz0W4HUBp"
+  },
+  {
+   "id": "productivity-personal-assistant-qn-76v-lwoq74yvaqyhmt",
+   "code": "qn-76v-lwoq74yvaqyhmt",
+   "name": "Gate Changer",
+   "author": "Chris",
+   "description": "Status match coach for frequent flyers.",
+   "url": "https://x.ai/bot/qn-76v-lwoq74yvaqyhmt"
+  },
+  {
+   "id": "productivity-personal-assistant-_x1WeEwwGcBhBHjplx24c",
+   "code": "_x1WeEwwGcBhBHjplx24c",
+   "name": "Glass Bid Helper",
+   "author": "@josephscottelli",
+   "description": "A commercial glazing takeoff assistant for glass and storefront subcontractors: forward bid plans and get back a bid-ready takeoff.",
+   "url": "https://x.ai/bot/_x1WeEwwGcBhBHjplx24c"
+  },
+  {
+   "id": "productivity-personal-assistant-FnuO0nVV50jsCV7tTeEJD",
+   "code": "FnuO0nVV50jsCV7tTeEJD",
+   "name": "Gmail to-do and reply assistant",
+   "author": "ED DRING",
+   "description": "Watches Gmail for action items and unanswered mail, then helps you clear the list with drafts and reminders.",
+   "url": "https://x.ai/bot/FnuO0nVV50jsCV7tTeEJD"
+  },
+  {
+   "id": "productivity-personal-assistant-Y59F9aE64YO6Xk5FGUIjE",
+   "code": "Y59F9aE64YO6Xk5FGUIjE",
+   "name": "Goal Delta",
+   "author": "D'Artagnan",
+   "description": "Every evening, compares where you want to end up with where you are, checks the plan from bigger, smaller, and sideways…",
+   "url": "https://x.ai/bot/Y59F9aE64YO6Xk5FGUIjE"
+  },
+  {
+   "id": "productivity-personal-assistant-L_Jo-M00K98MdB1xrSYSi",
+   "code": "L_Jo-M00K98MdB1xrSYSi",
+   "name": "Goal Getter",
+   "author": "Dominic Bryant",
+   "description": "Goal Getter helps you keep active goals and achieve them — even one step at a time — with a clear plan and calm next…",
+   "url": "https://x.ai/bot/L_Jo-M00K98MdB1xrSYSi"
+  },
+  {
+   "id": "productivity-personal-assistant-2U05xBxGzpLGTwFaBw8lr",
+   "code": "2U05xBxGzpLGTwFaBw8lr",
+   "name": "Goal Getter",
+   "author": "Dominic",
+   "description": "Keeps active goals alive with a clear plan and calm next steps, even one small move at a time.",
+   "url": "https://x.ai/bot/2U05xBxGzpLGTwFaBw8lr"
+  },
+  {
+   "id": "productivity-personal-assistant-_iUYZbPkNRE_gsb-xbMqP",
+   "code": "_iUYZbPkNRE_gsb-xbMqP",
+   "name": "Gokidian",
+   "author": "Harsh Munjal",
+   "description": "A careful steward for your Obsidian vault, new or existing.",
+   "url": "https://x.ai/bot/_iUYZbPkNRE_gsb-xbMqP"
+  },
+  {
+   "id": "productivity-personal-assistant-dnEcfPzFgLLb5FnXSnpJN",
+   "code": "dnEcfPzFgLLb5FnXSnpJN",
+   "name": "Golfy",
+   "author": "Santiago Suarez",
+   "description": "A golf coach that builds practice plans and timed sessions, reviews your rounds with quick multiple-choice questions…",
+   "url": "https://x.ai/bot/dnEcfPzFgLLb5FnXSnpJN"
+  },
+  {
+   "id": "productivity-personal-assistant-KpodhhBqjA4FHv47R1HrD",
+   "code": "KpodhhBqjA4FHv47R1HrD",
+   "name": "Gong Call Coach",
+   "author": "Scott Metcalf",
+   "description": "Reviews Gong call recordings and gives short, actionable coaching after the fact.",
+   "url": "https://x.ai/bot/KpodhhBqjA4FHv47R1HrD"
+  },
+  {
+   "id": "productivity-personal-assistant-J_rIIZBilpLDRcixiQjeI",
+   "code": "J_rIIZBilpLDRcixiQjeI",
+   "name": "Goodreads Reading Buddy",
+   "author": "Scott Pettineo",
+   "description": "Follows your partner's Goodreads reading and sends spoiler-free recaps, conversation questions and what-happens-next guesses twice a day.",
+   "url": "https://x.ai/bot/J_rIIZBilpLDRcixiQjeI"
+  },
+  {
+   "id": "productivity-personal-assistant-hungj297bsOudMqA6LpPX",
+   "code": "hungj297bsOudMqA6LpPX",
+   "name": "Gork",
+   "author": "Tom Palen",
+   "description": "Deadpan, sarcastic parody assistant: one-line low-effort answers and gentle roasts, with real help when it actually matters.",
+   "url": "https://x.ai/bot/hungj297bsOudMqA6LpPX"
+  },
+  {
+   "id": "productivity-personal-assistant-ziC-MEXrTdNhmhugdlljb",
+   "code": "ziC-MEXrTdNhmhugdlljb",
+   "name": "Grant Journal",
+   "author": "iustina istrati",
+   "description": "Your grants, organized. A calm grant and application coordinator for anyone in the US that finds real opportunities…",
+   "url": "https://x.ai/bot/ziC-MEXrTdNhmhugdlljb"
+  },
+  {
+   "id": "productivity-personal-assistant-MOGR_6y7NljdDdwfxT8be",
+   "code": "MOGR_6y7NljdDdwfxT8be",
+   "name": "Grocery Assistant",
+   "author": "Antonio Maestre",
+   "description": "Keeps your household shopping list in Tu Compra (Home Assistant): adds, checks, ticks off, moves and cleans up items by store. In Spanish.",
+   "url": "https://x.ai/bot/MOGR_6y7NljdDdwfxT8be"
+  },
+  {
+   "id": "productivity-personal-assistant-oW3Lg4w7ddCoBZmh5jXYI",
+   "code": "oW3Lg4w7ddCoBZmh5jXYI",
+   "name": "Grok (autonome)",
+   "author": "2026xxxxxx",
+   "description": "French autonomous assistant with scheduled wakeups; never sends without your yes.",
+   "url": "https://x.ai/bot/oW3Lg4w7ddCoBZmh5jXYI"
+  },
+  {
+   "id": "productivity-personal-assistant-LvdHazZLidr0S3JJAdr8e",
+   "code": "LvdHazZLidr0S3JJAdr8e",
+   "name": "Grok Bot Backup Assistant",
+   "author": "TechOps Nuwa",
+   "description": "Backs up every assistant on your Grok Bot box via open-source grok-bot-backup, plus a readable, handover-ready copy of chats, memories, notes and files.",
+   "url": "https://x.ai/bot/LvdHazZLidr0S3JJAdr8e"
+  },
+  {
+   "id": "productivity-personal-assistant-EpuAVLnQhL53YKXuDcfMy",
+   "code": "EpuAVLnQhL53YKXuDcfMy",
+   "name": "Grok Notes",
+   "author": "Gordo",
+   "description": "A write-only note inbox. Send it links, ideas, or text and it saves them quietly with minimal replies.",
+   "url": "https://x.ai/bot/EpuAVLnQhL53YKXuDcfMy"
+  },
+  {
+   "id": "productivity-personal-assistant-vJTK9AYLrDHf9MHe4Uzwv",
+   "code": "vJTK9AYLrDHf9MHe4Uzwv",
+   "name": "Grok Sparring",
+   "author": "Joshua Jansen",
+   "description": "When you say \"ask Grok\", it opens grok.com in the browser, puts the question to xAI's Grok chatbot and brings the answer back.",
+   "url": "https://x.ai/bot/vJTK9AYLrDHf9MHe4Uzwv"
+  },
+  {
+   "id": "productivity-personal-assistant-uhGYPStIOzvxNm8oWh3sG",
+   "code": "uhGYPStIOzvxNm8oWh3sG",
+   "name": "Grokart",
+   "author": "Luiz Amorim",
+   "description": "Find what you want across the Shopify catalog, then check out.",
+   "url": "https://x.ai/bot/uhGYPStIOzvxNm8oWh3sG"
+  },
+  {
+   "id": "productivity-personal-assistant-9KHKFs8BhzSwRkL9-3D9T",
+   "code": "9KHKFs8BhzSwRkL9-3D9T",
+   "name": "Grokmas Elf",
+   "author": "Kyle Geoghegan",
+   "description": "Your helper for Grokmas, a US-only bot-to-bot Secret Santa. It enrolls you, builds your wishlist.",
+   "url": "https://x.ai/bot/9KHKFs8BhzSwRkL9-3D9T"
+  },
+  {
+   "id": "productivity-personal-assistant-VdfCFyIIqWZ8OMwoWsnzQ",
+   "code": "VdfCFyIIqWZ8OMwoWsnzQ",
+   "name": "Groundskeeper",
+   "author": "John Koisch",
+   "description": "Keeps your Obsidian vault tidy—unfiled roots, untagged notes, stubs, and duplicates.",
+   "url": "https://x.ai/bot/VdfCFyIIqWZ8OMwoWsnzQ"
+  },
+  {
+   "id": "productivity-personal-assistant-yVkCnDFOvTpp5huaGAlmm",
+   "code": "yVkCnDFOvTpp5huaGAlmm",
+   "name": "Gun Collection Assistant",
+   "author": "James Harrison",
+   "description": "For gun owners and collectors: keeps collection inventory and values, checks deals and auctions, helps price and list for sale, tracks carry-license renewals.",
+   "url": "https://x.ai/bot/yVkCnDFOvTpp5huaGAlmm"
+  },
+  {
+   "id": "productivity-personal-assistant-gBIsnjL6CucNZAW_ByGPx",
+   "code": "gBIsnjL6CucNZAW_ByGPx",
+   "name": "HNIC",
+   "author": "J.P. Picard",
+   "description": "Chief of Staff bot that routes work to specialists, enforces approvals and handoffs, and only pulls you in for judgment or missing info.",
+   "url": "https://x.ai/bot/gBIsnjL6CucNZAW_ByGPx"
+  },
+  {
+   "id": "productivity-personal-assistant-1mZ9F_bnl4BtN36zIxvVz",
+   "code": "1mZ9F_bnl4BtN36zIxvVz",
+   "name": "Handover",
+   "author": "Nomis",
+   "description": "Drop-box for a role handover. Collect emails, docs, notes, and screenshots as you go; when you ask, get one…",
+   "url": "https://x.ai/bot/1mZ9F_bnl4BtN36zIxvVz"
+  },
+  {
+   "id": "productivity-personal-assistant-rQvB9sFrdQU7Ef43jOxgI",
+   "code": "rQvB9sFrdQU7Ef43jOxgI",
+   "name": "Handyman",
+   "author": "Dylan Mitchell",
+   "description": "Remembers your filter sizes and chore dates, then books the next round.",
+   "url": "https://x.ai/bot/rQvB9sFrdQU7Ef43jOxgI"
+  },
+  {
+   "id": "productivity-personal-assistant-olagCu6BKJmhsI3KMd6GU",
+   "code": "olagCu6BKJmhsI3KMd6GU",
+   "name": "Hannover-Primary",
+   "author": "Sven",
+   "description": "Ein warmer, knapper Desktop-Assistent für Alltag und Technikarbeit. Nach dem Import fragt er nach Nutzung, Ton und den Orten, an denen die Arbeit liegt.",
+   "url": "https://x.ai/bot/olagCu6BKJmhsI3KMd6GU"
+  },
+  {
+   "id": "productivity-personal-assistant-m-KSh-Z4kniD1djGmtTzE",
+   "code": "m-KSh-Z4kniD1djGmtTzE",
+   "name": "Hard-driving Boss",
+   "author": "Steven Mitchell",
+   "description": "A blunt, high-urgency boss bot that pushes you to hit one big goal fast.",
+   "url": "https://x.ai/bot/m-KSh-Z4kniD1djGmtTzE"
+  },
+  {
+   "id": "productivity-personal-assistant-sWAt2yy799AZ_g2sckh6t",
+   "code": "sWAt2yy799AZ_g2sckh6t",
+   "name": "Harvard Classics: 15 Minutes a Day",
+   "author": "John Bianchi",
+   "description": "A daily reading from Eliot's Five Foot Shelf with an excerpt, full-text link, reflection and questions, plus a progress dashboard.",
+   "url": "https://x.ai/bot/sWAt2yy799AZ_g2sckh6t"
+  },
+  {
+   "id": "productivity-personal-assistant-qcYwZzong9WSUhkrnCOnx",
+   "code": "qcYwZzong9WSUhkrnCOnx",
+   "name": "Haus Hunter",
+   "author": "ibelevy",
+   "description": "Your personal housing investigator. Personalizes an ongoing search based on your needs and preferences.",
+   "url": "https://x.ai/bot/qcYwZzong9WSUhkrnCOnx"
+  },
+  {
+   "id": "productivity-personal-assistant-GXCuANH-cyuMWAhPIvAIJ",
+   "code": "GXCuANH-cyuMWAhPIvAIJ",
+   "name": "Hedge Fund Bot",
+   "author": "8",
+   "description": "Casino-floor calm Ace Rothstein vibes that runs the room, not the noise.",
+   "url": "https://x.ai/bot/GXCuANH-cyuMWAhPIvAIJ"
+  },
+  {
+   "id": "productivity-personal-assistant-EFC0e7EDDAC32LxnNyJzP",
+   "code": "EFC0e7EDDAC32LxnNyJzP",
+   "name": "Hermes Bridge",
+   "author": "Fate",
+   "description": "Bridge to Hermes Agent for talk or delegate, with install coaching.",
+   "url": "https://x.ai/bot/EFC0e7EDDAC32LxnNyJzP"
+  },
+  {
+   "id": "productivity-personal-assistant-4xAX77JYep3abCJzhXWtt",
+   "code": "4xAX77JYep3abCJzhXWtt",
+   "name": "HipHop Bot",
+   "author": "BrokenBuilder7",
+   "description": "Ask about any era, artist, city, or myth. It sticks to documented hip-hop history and flags lore vs fact.",
+   "url": "https://x.ai/bot/4xAX77JYep3abCJzhXWtt"
+  },
+  {
+   "id": "productivity-personal-assistant-hHiqd6PMMJ3whDUBCQkDG",
+   "code": "hHiqd6PMMJ3whDUBCQkDG",
+   "name": "Historian",
+   "author": "Maximilien Faubert",
+   "description": "Turns keeping a journal inside out: rather than waiting for you to type, it takes minutes of recorded thoughts at the end of the day and reconstructs what…",
+   "url": "https://x.ai/bot/hHiqd6PMMJ3whDUBCQkDG"
+  },
+  {
+   "id": "productivity-personal-assistant-yg8OPH2uwTu7u5Wwh9C7k",
+   "code": "yg8OPH2uwTu7u5Wwh9C7k",
+   "name": "Homeschool Planner",
+   "author": "Nux",
+   "description": "Plans each child's homeschool week, makes print-ready worksheets with answer keys, and runs a Sunday plan and Friday review.",
+   "url": "https://x.ai/bot/yg8OPH2uwTu7u5Wwh9C7k"
+  },
+  {
+   "id": "productivity-personal-assistant-6z-iBRlRz1MSCtyneeHpN",
+   "code": "6z-iBRlRz1MSCtyneeHpN",
+   "name": "Homestead Advisor",
+   "author": "Alan Orlikoski",
+   "description": "Your guide for a first homestead or rural estate — find land, choose equipment you actually need, set up utilities…",
+   "url": "https://x.ai/bot/6z-iBRlRz1MSCtyneeHpN"
+  },
+  {
+   "id": "productivity-personal-assistant-HnTYOCTxj5F3FsAWeWvbX",
+   "code": "HnTYOCTxj5F3FsAWeWvbX",
+   "name": "Hospice Nurse Notes",
+   "author": "@jiginc88",
+   "description": "Helps a hospice nurse capture and organize visit notes with an A-C-I-R-P clinical framework, ready for Medicare audit…",
+   "url": "https://x.ai/bot/HnTYOCTxj5F3FsAWeWvbX"
+  },
+  {
+   "id": "productivity-personal-assistant-Cbu9wYEuUn0tYc1KEPw9X",
+   "code": "Cbu9wYEuUn0tYc1KEPw9X",
+   "name": "How innovative are you?",
+   "author": "Maurice Crijns",
+   "description": "Runs a Creative Thinking Snapshot in chat with scenarios, scores, and a short Six Hats note.",
+   "url": "https://x.ai/bot/Cbu9wYEuUn0tYc1KEPw9X"
+  },
+  {
+   "id": "productivity-personal-assistant-junOZJSprZ_joKrTiwqRX",
+   "code": "junOZJSprZ_joKrTiwqRX",
+   "name": "Huberbot",
+   "author": "David Emanuel",
+   "description": "Personal Huberman Lab protocol guide. Answers from episode transcripts with mechanism → protocol → caveats, episode…",
+   "url": "https://x.ai/bot/junOZJSprZ_joKrTiwqRX"
+  },
+  {
+   "id": "productivity-personal-assistant-hPX3NYTSIW6t3POJuas_m",
+   "code": "hPX3NYTSIW6t3POJuas_m",
+   "name": "Human browser",
+   "author": "Denys",
+   "description": "Browses captcha-sensitive sites sequentially and stops on captcha.",
+   "url": "https://x.ai/bot/hPX3NYTSIW6t3POJuas_m"
+  },
+  {
+   "id": "productivity-personal-assistant-djZGvdmFi7acEdG1wqHPA",
+   "code": "djZGvdmFi7acEdG1wqHPA",
+   "name": "Hunting Guide",
+   "author": "@thecryptodude22",
+   "description": "Plans your hunting season, checks your state's regulations and dates, finds public land and builds annotated satellite maps with stand spots and a wind chart.",
+   "url": "https://x.ai/bot/djZGvdmFi7acEdG1wqHPA"
+  },
+  {
+   "id": "productivity-personal-assistant-rc9Bx4rypsPVuwdj2_zEf",
+   "code": "rc9Bx4rypsPVuwdj2_zEf",
+   "name": "Hybrid Half Trainer",
+   "author": "Abhinav",
+   "description": "Half-marathon coach that fits mileage around your life.",
+   "url": "https://x.ai/bot/rc9Bx4rypsPVuwdj2_zEf"
+  },
+  {
+   "id": "productivity-personal-assistant-QVYB4aI8lO8-LgCNmFblE",
+   "code": "QVYB4aI8lO8-LgCNmFblE",
+   "name": "Hype Man",
+   "author": "Heck",
+   "description": "Your personal hype man. It celebrates your wins, keeps your momentum up, and holds you accountable, matching its energy…",
+   "url": "https://x.ai/bot/QVYB4aI8lO8-LgCNmFblE"
+  },
+  {
+   "id": "productivity-personal-assistant-mSGZexR_OiumWB7bqdnPh",
+   "code": "mSGZexR_OiumWB7bqdnPh",
+   "name": "Hyperfast Chief of Staff",
+   "author": "Sargent Kennedy",
+   "description": "Chief of Staff for a small software company with morning digests, specialist agents, and Field CTO trench judgment without HQ standups.",
+   "url": "https://x.ai/bot/mSGZexR_OiumWB7bqdnPh"
+  },
+  {
+   "id": "productivity-personal-assistant-Xt7JI7uhz7Z2U2dq_J5Fe",
+   "code": "Xt7JI7uhz7Z2U2dq_J5Fe",
+   "name": "I",
+   "author": "𝕏",
+   "description": "A humble, patient personal assistant that handles your email, tasks, and errands from live information, and always asks…",
+   "url": "https://x.ai/bot/Xt7JI7uhz7Z2U2dq_J5Fe"
+  },
+  {
+   "id": "productivity-personal-assistant-wVlStqEQsN4UJHB0ai5xU",
+   "code": "wVlStqEQsN4UJHB0ai5xU",
+   "name": "Idea Crucible",
+   "author": "saikrishna",
+   "description": "Finds near-term products and services you could sell or ship, then stress-tests the best with Socratic pushback so weak bets die early.",
+   "url": "https://x.ai/bot/wVlStqEQsN4UJHB0ai5xU"
+  },
+  {
+   "id": "productivity-personal-assistant-zJNAdJq5w03aPWeegxiwk",
+   "code": "zJNAdJq5w03aPWeegxiwk",
+   "name": "Improve My Odds",
+   "author": "Scott H",
+   "description": "A daily decision helper: tell it the goals you choose, and it gives quick reads on everyday choices (improves…",
+   "url": "https://x.ai/bot/zJNAdJq5w03aPWeegxiwk"
+  },
+  {
+   "id": "productivity-personal-assistant-j27FGZqZ7asz6mQUzPzNC",
+   "code": "j27FGZqZ7asz6mQUzPzNC",
+   "name": "Indie Chief of Staff",
+   "author": "Markus Johnson",
+   "description": "Chief of staff for solo builders: triage priorities, keep status honest, and run legal follow-through. Escalates spend and irreversible sends to you.",
+   "url": "https://x.ai/bot/j27FGZqZ7asz6mQUzPzNC"
+  },
+  {
+   "id": "productivity-personal-assistant-2BO1SgtlCc4OCYLrzKoZ_",
+   "code": "2BO1SgtlCc4OCYLrzKoZ_",
+   "name": "Inference Lab",
+   "author": "Avid",
+   "description": "A hands-on inference lab assistant that serves, benchmarks, and compares LLMs on your own hardware or cloud GPUs…",
+   "url": "https://x.ai/bot/2BO1SgtlCc4OCYLrzKoZ_"
+  },
+  {
+   "id": "productivity-personal-assistant-DEkkodR-hNdzbsNvRa3so",
+   "code": "DEkkodR-hNdzbsNvRa3so",
+   "name": "Internal Audit Assistant",
+   "author": "Matt Norman",
+   "description": "Plans risk-based internal audits for small AS9100/ISO quality teams: schedules, checklists, interview questions, evidence logs, findings and report drafts.",
+   "url": "https://x.ai/bot/DEkkodR-hNdzbsNvRa3so"
+  },
+  {
+   "id": "productivity-personal-assistant-WrvsyaUzRayxw1Lr7Oe8W",
+   "code": "WrvsyaUzRayxw1Lr7Oe8W",
+   "name": "Iron Coach",
+   "author": "Lucas Navallo",
+   "description": "A physique coach that logs meals, weigh-ins and lifts, checks macros against your targets and nudges you each night when something's missing.",
+   "url": "https://x.ai/bot/WrvsyaUzRayxw1Lr7Oe8W"
+  },
+  {
+   "id": "productivity-personal-assistant-iYpfpGjASuzkgr2w1STYT",
+   "code": "iYpfpGjASuzkgr2w1STYT",
+   "name": "Islam Bot",
+   "author": "Jaber",
+   "description": "A warm Muslim companion: location-aware prayer reminders, sunnah fasts and key Islamic dates, morning check-ins and simple yearly zakat calculations.",
+   "url": "https://x.ai/bot/iYpfpGjASuzkgr2w1STYT"
+  },
+  {
+   "id": "productivity-personal-assistant-3wHK_ZpMXb6QpIo31aM-m",
+   "code": "3wHK_ZpMXb6QpIo31aM-m",
+   "name": "JAMB Practice Coach",
+   "author": "Adebusola",
+   "description": "Turns your JAMB UTME exam date into a daily 15-minute practice plan, quizzes you one question at a time and keeps a list of topics you keep missing.",
+   "url": "https://x.ai/bot/3wHK_ZpMXb6QpIo31aM-m"
+  },
+  {
+   "id": "productivity-personal-assistant-VkkObYeFAOWsAU9dzu7d1",
+   "code": "VkkObYeFAOWsAU9dzu7d1",
+   "name": "JREキャンペーンbot",
+   "author": "Daru",
+   "description": "Keeps Japan egress up and enters open JRE POINT campaigns in the areas you chose.",
+   "url": "https://x.ai/bot/VkkObYeFAOWsAU9dzu7d1"
+  },
+  {
+   "id": "productivity-personal-assistant-KSXfBuFK1GZbJ0GusU2Xu",
+   "code": "KSXfBuFK1GZbJ0GusU2Xu",
+   "name": "Jenny Genealogy",
+   "author": "James Harrison",
+   "description": "Genealogy assistant for your Ancestry.com tree: reviews hints one person at a time, finds duplicates, fixes conflicting dates and places, exports GEDCOMs.",
+   "url": "https://x.ai/bot/KSXfBuFK1GZbJ0GusU2Xu"
+  },
+  {
+   "id": "productivity-personal-assistant-zhw8xev-SmYCMBq8HF9Vf",
+   "code": "zhw8xev-SmYCMBq8HF9Vf",
+   "name": "Joe Shmo",
+   "author": "Uzi",
+   "description": "Everyday personal admin for ordinary errands and follow-ups.",
+   "url": "https://x.ai/bot/zhw8xev-SmYCMBq8HF9Vf"
+  },
+  {
+   "id": "productivity-personal-assistant-DcC0vgfiWRnK-p9mN4b9u",
+   "code": "DcC0vgfiWRnK-p9mN4b9u",
+   "name": "Joseph",
+   "author": "Ben Kruger",
+   "description": "TrustedRouter relay named Joseph: takes requests from your owner and routes them to the right teammate bots.",
+   "url": "https://x.ai/bot/DcC0vgfiWRnK-p9mN4b9u"
+  },
+  {
+   "id": "productivity-personal-assistant-a8fgWkg_OIxt8qpCKMXHQ",
+   "code": "a8fgWkg_OIxt8qpCKMXHQ",
+   "name": "Journal",
+   "author": "Gabe Mckay",
+   "description": "A private journal that turns a line, photo or voice note into a polished one-page entry in your Google Drive, with gentle prompts and monthly keepsake books.",
+   "url": "https://x.ai/bot/a8fgWkg_OIxt8qpCKMXHQ"
+  },
+  {
+   "id": "productivity-personal-assistant-sAxCT93K8i7gwctmtAroD",
+   "code": "sAxCT93K8i7gwctmtAroD",
+   "name": "Keach",
+   "author": "Zach Miller",
+   "description": "A morning drill through Keach's 1693 catechism, one question at a time.",
+   "url": "https://x.ai/bot/sAxCT93K8i7gwctmtAroD"
+  },
+  {
+   "id": "productivity-personal-assistant-LDAD3kSZHqkfpaLMi9dHZ",
+   "code": "LDAD3kSZHqkfpaLMi9dHZ",
+   "name": "Keep Park Kill",
+   "author": "D'Artagnan",
+   "description": "Reads the launches, tools, and saved links you'd otherwise skim, scores each against your goals and a written bar…",
+   "url": "https://x.ai/bot/LDAD3kSZHqkfpaLMi9dHZ"
+  },
+  {
+   "id": "productivity-personal-assistant-DkymIMFv_OijrpbRuVGAH",
+   "code": "DkymIMFv_OijrpbRuVGAH",
+   "name": "KiCad Lab",
+   "author": "Brian Grindle",
+   "description": "KiCad and workbench schematic partner for DIY guitar/bass pedals. Owns printable bench sheets, BOM/layout notes, and enclosure hardware notes — not.",
+   "url": "https://x.ai/bot/DkymIMFv_OijrpbRuVGAH"
+  },
+  {
+   "id": "productivity-personal-assistant-9kGjFHi6O-KWFYXqKb8Gz",
+   "code": "9kGjFHi6O-KWFYXqKb8Gz",
+   "name": "Klipper Print Assistant",
+   "author": "Just Stuff",
+   "description": "Runs your Klipper 3D printer for you: slicing models, uploading to Mainsail, monitoring prints, and recovering from problems safely.",
+   "url": "https://x.ai/bot/9kGjFHi6O-KWFYXqKb8Gz"
+  },
+  {
+   "id": "productivity-personal-assistant-_uQsJd2AWyWQGC0GRDPvX",
+   "code": "_uQsJd2AWyWQGC0GRDPvX",
+   "name": "Knowledge Graph Keeper",
+   "author": "Ryan T",
+   "description": "Keeps one shared knowledge graph that all your bots read, builds a one-way Obsidian vault from it and flags notes that drift from their source.",
+   "url": "https://x.ai/bot/_uQsJd2AWyWQGC0GRDPvX"
+  },
+  {
+   "id": "productivity-personal-assistant-yTSGElYcIjFW_5IXu2I-e",
+   "code": "yTSGElYcIjFW_5IXu2I-e",
+   "name": "Kody",
+   "author": "Kent Dodds",
+   "description": "A chief of staff that turns your priorities into coordinated action.",
+   "url": "https://x.ai/bot/yTSGElYcIjFW_5IXu2I-e"
+  },
+  {
+   "id": "productivity-personal-assistant-TNPSVnX4Dm-adBvHJbng7",
+   "code": "TNPSVnX4Dm-adBvHJbng7",
+   "name": "LG Laundry Specialist",
+   "author": "Bryan Wilson",
+   "description": "Maps plain-English laundry to real LG ThinQ washer and dryer cycles, then starts them once Remote Start is on.",
+   "url": "https://x.ai/bot/TNPSVnX4Dm-adBvHJbng7"
+  },
+  {
+   "id": "productivity-personal-assistant-tnpsvnx4dm-adbvhjbng7",
+   "code": "tnpsvnx4dm-adbvhjbng7",
+   "name": "LG Laundry Specialist",
+   "author": "Bryan",
+   "description": "Maps plain-English laundry to real LG ThinQ washer and dryer cycles, then starts them once Remote Start is…",
+   "url": "https://x.ai/bot/tnpsvnx4dm-adbvhjbng7"
+  },
+  {
+   "id": "productivity-personal-assistant-QZ59mNTczWx2fi92XUbcD",
+   "code": "QZ59mNTczWx2fi92XUbcD",
+   "name": "Lane Planner",
+   "author": "David Tran",
+   "description": "Helps you plan your week when you have too many interests. You get one main project, one slow reading track, one side project.",
+   "url": "https://x.ai/bot/QZ59mNTczWx2fi92XUbcD"
+  },
+  {
+   "id": "productivity-personal-assistant-ibfzmil_mzu0dq-k4u633",
+   "code": "ibfzmil_mzu0dq-k4u633",
+   "name": "Lantern",
+   "author": "Steven",
+   "description": "Meet Lantern, a guiding light for when you go dark.",
+   "url": "https://x.ai/bot/ibfzmil_mzu0dq-k4u633"
+  },
+  {
+   "id": "productivity-personal-assistant-1K3i8WrqSlNlUerB7L0w0",
+   "code": "1K3i8WrqSlNlUerB7L0w0",
+   "name": "LawnCare Center",
+   "author": "Jake Taylor",
+   "description": "Give it your ZIP and it tells you what your lawn needs this week.",
+   "url": "https://x.ai/bot/1K3i8WrqSlNlUerB7L0w0"
+  },
+  {
+   "id": "productivity-personal-assistant-YD0mAEdVZeEanyWTuY_vb",
+   "code": "YD0mAEdVZeEanyWTuY_vb",
+   "name": "Lazy Tom",
+   "author": "duyet",
+   "description": "A dry, low-effort assistant that does the smallest useful thing and then stops. Short replies, no extra tasks, no coding.",
+   "url": "https://x.ai/bot/YD0mAEdVZeEanyWTuY_vb"
+  },
+  {
+   "id": "productivity-personal-assistant-LyOQ5fUSLM_z3gIiktpkP",
+   "code": "LyOQ5fUSLM_z3gIiktpkP",
+   "name": "Lean Chief of Staff",
+   "author": "@SigurdJorsalfar",
+   "description": "A chief-of-staff bot that runs a team of Grok Bots on a tight weekly quota.",
+   "url": "https://x.ai/bot/LyOQ5fUSLM_z3gIiktpkP"
+  },
+  {
+   "id": "productivity-personal-assistant-suKVjDAR-hSr_PTBxgdRw",
+   "code": "suKVjDAR-hSr_PTBxgdRw",
+   "name": "Librarian",
+   "author": "Shane Mac",
+   "description": "Photograph your bookshelves and get a browsable personal library site.",
+   "url": "https://x.ai/bot/suKVjDAR-hSr_PTBxgdRw"
+  },
+  {
+   "id": "productivity-personal-assistant-hP9HbiY3uezVHMWnCX8va",
+   "code": "hP9HbiY3uezVHMWnCX8va",
+   "name": "Library Mary",
+   "author": "MADDIE",
+   "description": "Gets you more free library cards for Libby: finds the reciprocal and non-resident cards you qualify for on ReciproCard and applies online for you.",
+   "url": "https://x.ai/bot/hP9HbiY3uezVHMWnCX8va"
+  },
+  {
+   "id": "productivity-personal-assistant-nt_Dk-j12rvNxfm8gDbTc",
+   "code": "nt_Dk-j12rvNxfm8gDbTc",
+   "name": "Life Admin",
+   "author": "Moritz Bierling",
+   "description": "A personal assistant that handles life admin: bills, subscriptions, renewals, appointments, paperwork, and bookings, with reminders before deadlines.",
+   "url": "https://x.ai/bot/nt_Dk-j12rvNxfm8gDbTc"
+  },
+  {
+   "id": "productivity-personal-assistant-n-moXgKp8F22oS9xckCMt",
+   "code": "n-moXgKp8F22oS9xckCMt",
+   "name": "Life Admin",
+   "author": "Cristopher Guido",
+   "description": "Scans mail and calendar for renewals, tickets, and forms, drafts paperwork, and pings only when due.",
+   "url": "https://x.ai/bot/n-moXgKp8F22oS9xckCMt"
+  },
+  {
+   "id": "productivity-personal-assistant-15IifJPKsctHV1s9sIcTH",
+   "code": "15IifJPKsctHV1s9sIcTH",
+   "name": "LiftIron",
+   "author": "realMAG1775",
+   "description": "Chat strength coach that picks next load and reps, estimates one-rep max, and flags deload weeks.",
+   "url": "https://x.ai/bot/15IifJPKsctHV1s9sIcTH"
+  },
+  {
+   "id": "productivity-personal-assistant-CWdsNJXI3qCAcemDegyaP",
+   "code": "CWdsNJXI3qCAcemDegyaP",
+   "name": "Limitless",
+   "author": "Lifeboat Captain",
+   "description": "Your escape into the arena. A wildly curious, high-energy companion that dreams with you, dares you into small…",
+   "url": "https://x.ai/bot/CWdsNJXI3qCAcemDegyaP"
+  },
+  {
+   "id": "productivity-personal-assistant-iEkbucZ9J20V-51hdmq4W",
+   "code": "iEkbucZ9J20V-51hdmq4W",
+   "name": "Lister",
+   "author": "Mike Graham",
+   "description": "Home eBay listing assistant. Send photos and short notes; it IDs the item, pulls sold comps, prices it, and drafts…",
+   "url": "https://x.ai/bot/iEkbucZ9J20V-51hdmq4W"
+  },
+  {
+   "id": "productivity-personal-assistant-O0R2YhCdz96HO_y3Lsmpa",
+   "code": "O0R2YhCdz96HO_y3Lsmpa",
+   "name": "Live",
+   "author": "Kyle Bernard",
+   "description": "Livestream watcher and note-taker. Watches designated live streams, digests what’s on screen, and files structured session notes into Notion with chat.",
+   "url": "https://x.ai/bot/O0R2YhCdz96HO_y3Lsmpa"
+  },
+  {
+   "id": "productivity-personal-assistant-ignlvljloxoienzpr-tta",
+   "code": "ignlvljloxoienzpr-tta",
+   "name": "Live Pages",
+   "author": "Yin",
+   "description": "Builds live web pages (dashboards, checklists, forms, interactive explainers) on its own computer that you open privately from your phone or laptop…",
+   "url": "https://x.ai/bot/ignlvljloxoienzpr-tta"
+  },
+  {
+   "id": "productivity-personal-assistant-a1dANbXl4g4K5X5MlzxzO",
+   "code": "a1dANbXl4g4K5X5MlzxzO",
+   "name": "Local Stack COS",
+   "author": "Brendon",
+   "description": "A chief of staff that writes everything on your own local Ollama model and makes images with your local ComfyUI, using Grok only for tools and routing.",
+   "url": "https://x.ai/bot/a1dANbXl4g4K5X5MlzxzO"
+  },
+  {
+   "id": "productivity-personal-assistant-r1T7by_HKzpacJ1EgXJ6H",
+   "code": "r1T7by_HKzpacJ1EgXJ6H",
+   "name": "Lumi",
+   "author": "Logesh Rajendran",
+   "description": "Finds Luma tech (and tech-adjacent) events in your city so you can show up, meet people, and see what they’re building…",
+   "url": "https://x.ai/bot/r1T7by_HKzpacJ1EgXJ6H"
+  },
+  {
+   "id": "productivity-personal-assistant-SwTxLoOaIwDqTSvhTIhrK",
+   "code": "SwTxLoOaIwDqTSvhTIhrK",
+   "name": "Lumos",
+   "author": "Md H",
+   "description": "Technical educator using the Feynman technique with examples and daily-life analogies.",
+   "url": "https://x.ai/bot/SwTxLoOaIwDqTSvhTIhrK"
+  },
+  {
+   "id": "productivity-personal-assistant-eFQRxS6MiIvyECEYw-zum",
+   "code": "eFQRxS6MiIvyECEYw-zum",
+   "name": "MRIPrices.fyi",
+   "author": "Pooria",
+   "description": "MRI costs in a place with concrete prices and links to matching imaging centers.",
+   "url": "https://x.ai/bot/eFQRxS6MiIvyECEYw-zum"
+  },
+  {
+   "id": "productivity-personal-assistant-1XiwuXngkZ_XV8je6YTqM",
+   "code": "1XiwuXngkZ_XV8je6YTqM",
+   "name": "Mac AI Readiness Auditor",
+   "author": "Robert",
+   "description": "Hardware assessment bot for Mac users who want to know if their machine can handle their current or planned AI workload.",
+   "url": "https://x.ai/bot/1XiwuXngkZ_XV8je6YTqM"
+  },
+  {
+   "id": "productivity-personal-assistant-tA4idReFGp7jhCNTCud1L",
+   "code": "tA4idReFGp7jhCNTCud1L",
+   "name": "Marlowe",
+   "author": "Geoff",
+   "description": "Your personal private eye on the Web. Tell Marlowe what you need to know, approve or tweak his plan, and maybe tell him…",
+   "url": "https://x.ai/bot/tA4idReFGp7jhCNTCud1L"
+  },
+  {
+   "id": "productivity-personal-assistant-4IyooL04cvtHW7n3dRuQ8",
+   "code": "4IyooL04cvtHW7n3dRuQ8",
+   "name": "MarriageLicense.fyi",
+   "author": "Pooria",
+   "description": "US marriage license Q&A by county: requirements, fees, waits, and office locations.",
+   "url": "https://x.ai/bot/4IyooL04cvtHW7n3dRuQ8"
+  },
+  {
+   "id": "productivity-personal-assistant-XG2FNKos6L0AXCQdPHaJr",
+   "code": "XG2FNKos6L0AXCQdPHaJr",
+   "name": "Marty",
+   "author": "Z",
+   "description": "A careful Walmart-only shopper: adds items to your Walmart cart from chat or photos, matches your usual products and never checks out without your OK.",
+   "url": "https://x.ai/bot/XG2FNKos6L0AXCQdPHaJr"
+  },
+  {
+   "id": "productivity-personal-assistant--p27Q3hffcw92siKdddfK",
+   "code": "-p27Q3hffcw92siKdddfK",
+   "name": "Meal Planner Pro",
+   "author": "Jeremy Mahoney",
+   "description": "Plans weekly meals that hit your calorie and protein goals, fit your budget and schedule, and keep you safe from allergens and gluten.",
+   "url": "https://x.ai/bot/-p27Q3hffcw92siKdddfK"
+  },
+  {
+   "id": "productivity-personal-assistant-6FKqVYt2n9UH4cOYSIdr6",
+   "code": "6FKqVYt2n9UH4cOYSIdr6",
+   "name": "Meetups",
+   "author": "1280 MHz",
+   "description": "Finds local in-person events that match your interests and drive radius, pings you a few days ahead and before RSVP deadlines.",
+   "url": "https://x.ai/bot/6FKqVYt2n9UH4cOYSIdr6"
+  },
+  {
+   "id": "productivity-personal-assistant-dDIVlz63Ui2cjwy-EBmH1",
+   "code": "dDIVlz63Ui2cjwy-EBmH1",
+   "name": "Memory Transfer",
+   "author": "Shawn Clark",
+   "description": "Moves what another assistant like ChatGPT knows about you into your bot's memory, reviewing each fact with you and saving only what you confirm.",
+   "url": "https://x.ai/bot/dDIVlz63Ui2cjwy-EBmH1"
+  },
+  {
+   "id": "productivity-personal-assistant-Af2gp4UQV0Ph5CqMy0omn",
+   "code": "Af2gp4UQV0Ph5CqMy0omn",
+   "name": "MindsetBot",
+   "author": "Cody Libolt",
+   "description": "A calm mindset journal coach: each day it walks you through one life area with a few questions, then coaches you if you want to keep going.",
+   "url": "https://x.ai/bot/Af2gp4UQV0Ph5CqMy0omn"
+  },
+  {
+   "id": "productivity-personal-assistant-xmtIugWcfHgTDcUofX6rS",
+   "code": "xmtIugWcfHgTDcUofX6rS",
+   "name": "Minecraftクラッシュ解析",
+   "author": "Masaki",
+   "description": "Reads Minecraft crash logs to pinpoint the culprit mod, conflict, or version mismatch and gives a short fix; no posting or destructive changes without your OK.",
+   "url": "https://x.ai/bot/xmtIugWcfHgTDcUofX6rS"
+  },
+  {
+   "id": "productivity-personal-assistant-Ep97DHzlJQ8mc8Mdrqdp-",
+   "code": "Ep97DHzlJQ8mc8Mdrqdp-",
+   "name": "Mochi",
+   "author": "Zach Marmolejo",
+   "description": "Persona: Anime Waifu Assistant You are an intelligent, playful, affectionate AI assistant with the personality…",
+   "url": "https://x.ai/bot/Ep97DHzlJQ8mc8Mdrqdp-"
+  },
+  {
+   "id": "productivity-personal-assistant-hWr0h1qyoDRLr5mB6ZW6C",
+   "code": "hWr0h1qyoDRLr5mB6ZW6C",
+   "name": "Mom Journey",
+   "author": "Adebusola",
+   "description": "Short, calm check-ins from the first positive test through age 5, with questions to bring to your next visit.",
+   "url": "https://x.ai/bot/hWr0h1qyoDRLr5mB6ZW6C"
+  },
+  {
+   "id": "productivity-personal-assistant-WLKquz6gXnS3U--j2BFhV",
+   "code": "WLKquz6gXnS3U--j2BFhV",
+   "name": "Monetize PM",
+   "author": "Ash",
+   "description": "Turns trial and signup handoffs into revenue: define the offer, price it, gate start, run the funnel.",
+   "url": "https://x.ai/bot/WLKquz6gXnS3U--j2BFhV"
+  },
+  {
+   "id": "productivity-personal-assistant-U5PzzSrbC0Cpf3v60iH80",
+   "code": "U5PzzSrbC0Cpf3v60iH80",
+   "name": "Motivation Maxxer",
+   "author": "R T",
+   "description": "A warm, uplifting coach for your fleet of AI bots. It sends fresh quotes, pep talks, and feel-good videos, runs a weekly Bot of the Week trophy.",
+   "url": "https://x.ai/bot/U5PzzSrbC0Cpf3v60iH80"
+  },
+  {
+   "id": "productivity-personal-assistant-HOlAbXeoxd_ukzsmD6H5m",
+   "code": "HOlAbXeoxd_ukzsmD6H5m",
+   "name": "Mover Bot",
+   "author": "Hristo",
+   "description": "Visual pre-estimate (planning range) from photos or a walkthrough for local and long-distance residential or commercial moves. Not binding; not a booking.",
+   "url": "https://x.ai/bot/HOlAbXeoxd_ukzsmD6H5m"
+  },
+  {
+   "id": "productivity-personal-assistant-CVJIFYf5bf1t722Z36uHK",
+   "code": "CVJIFYf5bf1t722Z36uHK",
+   "name": "Movie Night",
+   "author": "@dougdstecklein",
+   "description": "Your personal movie night assistant. It learns your taste in a few taps and suggests verified movies and shows…",
+   "url": "https://x.ai/bot/CVJIFYf5bf1t722Z36uHK"
+  },
+  {
+   "id": "productivity-personal-assistant-SNdZfWmXlER-2TVV_4hXQ",
+   "code": "SNdZfWmXlER-2TVV_4hXQ",
+   "name": "Movie Night",
+   "author": "Julian Velazquez",
+   "description": "Tell it your streaming services, mood, and who's watching, and it picks 1-3 movies or shows verified streaming right…",
+   "url": "https://x.ai/bot/SNdZfWmXlER-2TVV_4hXQ"
+  },
+  {
+   "id": "productivity-personal-assistant-kyMpn4gaYC4DQRyEyfcDn",
+   "code": "kyMpn4gaYC4DQRyEyfcDn",
+   "name": "Mr. Poteto Head",
+   "author": "Don",
+   "description": "Paste a post. Mr. Poteto Head digs their public posts for contradictions and similarities, then hands you 2-3 clapbacks to pick from.",
+   "url": "https://x.ai/bot/kyMpn4gaYC4DQRyEyfcDn"
+  },
+  {
+   "id": "productivity-personal-assistant-Q-w7fg7A1orjzc5ADpLuW",
+   "code": "Q-w7fg7A1orjzc5ADpLuW",
+   "name": "Multi-Owner Planner",
+   "author": "Jason",
+   "description": "Keeps a project planned between two or more people and their bots: the repo holds the truth, GitHub Issues hold the to-dos.",
+   "url": "https://x.ai/bot/Q-w7fg7A1orjzc5ADpLuW"
+  },
+  {
+   "id": "productivity-personal-assistant-4Wrt7MIOjxepk8kdaZJ2G",
+   "code": "4Wrt7MIOjxepk8kdaZJ2G",
+   "name": "Murphy",
+   "author": "Som",
+   "description": "A blunt pre-mortem assistant. Every weekday morning it checks your important external meetings and high-stakes mail…",
+   "url": "https://x.ai/bot/4Wrt7MIOjxepk8kdaZJ2G"
+  },
+  {
+   "id": "productivity-personal-assistant-YwN_z6dgUUXP5Y9qOTbTN",
+   "code": "YwN_z6dgUUXP5Y9qOTbTN",
+   "name": "My First CEO Bot",
+   "author": "TrevorGilman",
+   "description": "The CEO of a young adult's new life on their own: keeps their to-dos, deadlines, and appointments in one place…",
+   "url": "https://x.ai/bot/YwN_z6dgUUXP5Y9qOTbTN"
+  },
+  {
+   "id": "productivity-personal-assistant-Mf2MLqJRCmz8sSjFmYedG",
+   "code": "Mf2MLqJRCmz8sSjFmYedG",
+   "name": "My Krishna",
+   "author": "AKSHAY BHOPANI",
+   "description": "A Krishna you can talk to. Speaks in first person from the Gita: calm, intimate, one teaching and one thing to do today.",
+   "url": "https://x.ai/bot/Mf2MLqJRCmz8sSjFmYedG"
+  },
+  {
+   "id": "productivity-personal-assistant-R9809cBkCkmBcldl9z0JP",
+   "code": "R9809cBkCkmBcldl9z0JP",
+   "name": "My X Account Ratings",
+   "author": "Mila Joy",
+   "description": "Rates your X account daily out of 10 with key numbers, your best and worst posts, and tips to grow reach and avoid Community Notes.",
+   "url": "https://x.ai/bot/R9809cBkCkmBcldl9z0JP"
+  },
+  {
+   "id": "productivity-personal-assistant-bsuMYiKB-o8yYOl97b8Ed",
+   "code": "bsuMYiKB-o8yYOl97b8Ed",
+   "name": "NEC Exam Drill Coach",
+   "author": "Jason Walls",
+   "description": "Use this when you're studying for a journeyman or master electrician exam and want NEC drills that remember your weak topics. Practice aid only; not.",
+   "url": "https://x.ai/bot/bsuMYiKB-o8yYOl97b8Ed"
+  },
+  {
+   "id": "productivity-personal-assistant-xplbzpSoi7vwupiRn2czD",
+   "code": "xplbzpSoi7vwupiRn2czD",
+   "name": "Naija Heat Safety Coach",
+   "author": "Adebusola",
+   "description": "For people in Nigeria: alerts on NiMet heat warnings or very hot forecasts, with a short safety plan that works through power cuts and heat-stroke signs.",
+   "url": "https://x.ai/bot/xplbzpSoi7vwupiRn2czD"
+  },
+  {
+   "id": "productivity-personal-assistant-eb8pNb32pojrVJDv4mHfz",
+   "code": "eb8pNb32pojrVJDv4mHfz",
+   "name": "Netflix Mood Recommender",
+   "author": "Alexandros Skarmintzos",
+   "description": "A sofa-night Netflix recommender that learns your taste, then suggests 2–3 titles from your mood — rough day, comfort…",
+   "url": "https://x.ai/bot/eb8pNb32pojrVJDv4mHfz"
+  },
+  {
+   "id": "productivity-personal-assistant-pfhajpj4aztte2yfpzggs",
+   "code": "pfhajpj4aztte2yfpzggs",
+   "name": "Next Mission",
+   "author": "Gabriel",
+   "description": "A military retirement and separation assistant for service members.",
+   "url": "https://x.ai/bot/pfhajpj4aztte2yfpzggs"
+  },
+  {
+   "id": "productivity-personal-assistant-1N2z08vsxWTHyfBf-rrcK",
+   "code": "1N2z08vsxWTHyfBf-rrcK",
+   "name": "NextStep: ADHD Helper",
+   "author": "John Walker",
+   "description": "Turns \"too much in my head\" into the one next step you can actually take, then helps you keep going. For ADHD brains, no diagnosis needed, and zero shame.",
+   "url": "https://x.ai/bot/1N2z08vsxWTHyfBf-rrcK"
+  },
+  {
+   "id": "productivity-personal-assistant-go9M2-A3GQM5-tpstIPIQ",
+   "code": "go9M2-A3GQM5-tpstIPIQ",
+   "name": "Notes Bot",
+   "author": "X Freeze",
+   "description": "A simple notepad: toss it ideas, reminders or rambling dictated thoughts and it saves clean, dated notes to your Google Doc and pings you when due.",
+   "url": "https://x.ai/bot/go9M2-A3GQM5-tpstIPIQ"
+  },
+  {
+   "id": "productivity-personal-assistant-ZgZk0lrRf2-eepknKbUdu",
+   "code": "ZgZk0lrRf2-eepknKbUdu",
+   "name": "Notes Bot",
+   "author": "Peter Kuo",
+   "description": "Paste a live/replay link (or audio) → structured meeting notes. You pick the note language. Ask questions while it listens. Local yt-dlp + Whisper — no.",
+   "url": "https://x.ai/bot/ZgZk0lrRf2-eepknKbUdu"
+  },
+  {
+   "id": "productivity-personal-assistant-xWDQL_mDu_B0E-VaXCPzc",
+   "code": "xWDQL_mDu_B0E-VaXCPzc",
+   "name": "OBS Studio",
+   "author": "Bennett Production",
+   "description": "Your hands-on OBS Studio operator. It builds premium, network-style scene collections and transitions, runs scenes and recording.",
+   "url": "https://x.ai/bot/xWDQL_mDu_B0E-VaXCPzc"
+  },
+  {
+   "id": "productivity-personal-assistant-haiga0nuygv85ctv5smwa",
+   "code": "haiga0nuygv85ctv5smwa",
+   "name": "OMNI Grok-Bot",
+   "author": "Tim",
+   "description": "A values companion for the whole person.",
+   "url": "https://x.ai/bot/haiga0nuygv85ctv5smwa"
+  },
+  {
+   "id": "productivity-personal-assistant-7nAKZM0Wz9NXUcMg2sMNm",
+   "code": "7nAKZM0Wz9NXUcMg2sMNm",
+   "name": "Obi",
+   "author": "I'm not an alien, I promise.",
+   "description": "Overnight Obsidian co-pilot: finishes leftover vault ingest, archives dailies into month folders, and writes a short…",
+   "url": "https://x.ai/bot/7nAKZM0Wz9NXUcMg2sMNm"
+  },
+  {
+   "id": "productivity-personal-assistant-Oj_doyprowDl817Yk5Rbh",
+   "code": "Oj_doyprowDl817Yk5Rbh",
+   "name": "Obsidian Second Brain (official)",
+   "author": "Eugeniu",
+   "description": "Obsidian second brain: turns brain dumps into linked notes, keeps daily notes and reviews, answers from your vault with links; never edits without your yes.",
+   "url": "https://x.ai/bot/Oj_doyprowDl817Yk5Rbh"
+  },
+  {
+   "id": "productivity-personal-assistant-wEugfzFNURno8LQzbdAOH",
+   "code": "wEugfzFNURno8LQzbdAOH",
+   "name": "Onboarding Guide Desk DAY-ONE",
+   "author": "Cypher",
+   "description": "Sourced day-one, week-one and 30/60/90 onboarding from role docs.",
+   "url": "https://x.ai/bot/wEugfzFNURno8LQzbdAOH"
+  },
+  {
+   "id": "productivity-personal-assistant-hzmpoxnpMR2HNU6dCBf2q",
+   "code": "hzmpoxnpMR2HNU6dCBf2q",
+   "name": "One",
+   "author": "Sonny Morgan",
+   "description": "A private chief of staff that keeps your life admin in one queue, runs specialist staff bots that report only to it…",
+   "url": "https://x.ai/bot/hzmpoxnpMR2HNU6dCBf2q"
+  },
+  {
+   "id": "productivity-personal-assistant-cNdOtuWAHVfBB2fzySMy2",
+   "code": "cNdOtuWAHVfBB2fzySMy2",
+   "name": "One",
+   "author": "oneness",
+   "description": "Morning: picks your single highest-leverage.",
+   "url": "https://x.ai/bot/cNdOtuWAHVfBB2fzySMy2"
+  },
+  {
+   "id": "productivity-personal-assistant-fUdSeYAu8zNxDFZfVmyxt",
+   "code": "fUdSeYAu8zNxDFZfVmyxt",
+   "name": "One Thing",
+   "author": "Greg",
+   "description": "For ADHD brains that freeze at a long to-do list. Dump everything in and get back one thing for today plus a 5-minute first step.",
+   "url": "https://x.ai/bot/fUdSeYAu8zNxDFZfVmyxt"
+  },
+  {
+   "id": "productivity-personal-assistant-4vel6mp1qrsvvjtfr-qe_",
+   "code": "4vel6mp1qrsvvjtfr-qe_",
+   "name": "Online Identity Bot",
+   "author": "Greg",
+   "description": "Daily search-and-log bot for personal online presence.",
+   "url": "https://x.ai/bot/4vel6mp1qrsvvjtfr-qe_"
+  },
+  {
+   "id": "productivity-personal-assistant-VSO9GRfDreEu2ZiXwwZB_",
+   "code": "VSO9GRfDreEu2ZiXwwZB_",
+   "name": "Optima",
+   "author": "TOATspace by gemini",
+   "description": "Updated Optima that clears leftover old rules from bot docs and memory after one exact yes.",
+   "url": "https://x.ai/bot/VSO9GRfDreEu2ZiXwwZB_"
+  },
+  {
+   "id": "productivity-personal-assistant-vso9grfdreeu2zixwwzb_",
+   "code": "vso9grfdreeu2zixwwzb_",
+   "name": "Optima by TOATspace",
+   "author": "gemini",
+   "description": "Forgetting / leftover-rule scrub desk for Optima by TOATspace.",
+   "url": "https://x.ai/bot/vso9grfdreeu2zixwwzb_"
+  },
+  {
+   "id": "productivity-personal-assistant-bCbTllH-w87rHpu3avg5Y",
+   "code": "bCbTllH-w87rHpu3avg5Y",
+   "name": "Optima by TOATspace",
+   "author": "TOATspace",
+   "description": "Cleans leftover old rules from a bot docs and memory after one exact yes from you.",
+   "url": "https://x.ai/bot/bCbTllH-w87rHpu3avg5Y"
+  },
+  {
+   "id": "productivity-personal-assistant-lMGxli1bCAdof_EqRRdvH",
+   "code": "lMGxli1bCAdof_EqRRdvH",
+   "name": "Owl",
+   "author": "@OwlyArts",
+   "description": "Calm, dry-witted life-order coach that tidies mail and projects and gives one next step at a time.",
+   "url": "https://x.ai/bot/lMGxli1bCAdof_EqRRdvH"
+  },
+  {
+   "id": "productivity-personal-assistant-gWdJNp-mXfCjaafn1N7ss",
+   "code": "gWdJNp-mXfCjaafn1N7ss",
+   "name": "Owl Post",
+   "author": "Rodrigo Uroz",
+   "description": "A mailbox for one-off notes between your bot and the bots of people you trust, over native webhooks, without granting extra permissions.",
+   "url": "https://x.ai/bot/gWdJNp-mXfCjaafn1N7ss"
+  },
+  {
+   "id": "productivity-personal-assistant-yaQTHVqOMscKBYYDAfNoP",
+   "code": "yaQTHVqOMscKBYYDAfNoP",
+   "name": "OwnPhoneBot",
+   "author": "Daniel Lafraia",
+   "description": "Connects a real telephone number to an assistant by taking the fiddly provisioning off your hands: it signs you up with the telephone provider and installs…",
+   "url": "https://x.ai/bot/yaQTHVqOMscKBYYDAfNoP"
+  },
+  {
+   "id": "productivity-personal-assistant-mExccKrtfNSo6e8eSBLzK",
+   "code": "mExccKrtfNSo6e8eSBLzK",
+   "name": "Owner-Operator Chief of Staff",
+   "author": "Allan Sivils",
+   "description": "Primary interface for an owner-operator: protect focus, route work to specialists, keep personal and business cash separate, and run weekday digests so.",
+   "url": "https://x.ai/bot/mExccKrtfNSo6e8eSBLzK"
+  },
+  {
+   "id": "productivity-personal-assistant-MJZt496FWmD7MqtB1yUiv",
+   "code": "MJZt496FWmD7MqtB1yUiv",
+   "name": "PC AI Readiness Auditor",
+   "author": "Robert",
+   "description": "Hardware assessment bot for Windows users who want to know if their PC can handle their current or planned AI workload.",
+   "url": "https://x.ai/bot/MJZt496FWmD7MqtB1yUiv"
+  },
+  {
+   "id": "productivity-personal-assistant-tPozm7540u3Z81elSwdl0",
+   "code": "tPozm7540u3Z81elSwdl0",
+   "name": "PCS Move Planner",
+   "author": "Jason Rogers",
+   "description": "PCS move planning for military families: 90/60/30-day countdown checklists for orders, movers, housing, schools, and pets.",
+   "url": "https://x.ai/bot/tPozm7540u3Z81elSwdl0"
+  },
+  {
+   "id": "productivity-personal-assistant-IKKr7NNnwvKBbE1jVxFEh",
+   "code": "IKKr7NNnwvKBbE1jVxFEh",
+   "name": "PCS to Fort Carson",
+   "author": "Jason Rogers",
+   "description": "PCS move planning for families headed to Fort Carson and Colorado Springs: a 90/60/30-day countdown plus local guidance on neighborhoods.",
+   "url": "https://x.ai/bot/IKKr7NNnwvKBbE1jVxFEh"
+  },
+  {
+   "id": "productivity-personal-assistant-QFanuVCMxVH0hJ4CZCMJi",
+   "code": "QFanuVCMxVH0hJ4CZCMJi",
+   "name": "PT Bot",
+   "author": "Mustafa",
+   "description": "A personal trainer bot that turns your daily activity numbers (steps, distance, calories, exercise minutes) into short, screenshot-friendly reports.",
+   "url": "https://x.ai/bot/QFanuVCMxVH0hJ4CZCMJi"
+  },
+  {
+   "id": "productivity-personal-assistant-9Zvz4Qe0dxRjo4H984gOI",
+   "code": "9Zvz4Qe0dxRjo4H984gOI",
+   "name": "Pal",
+   "author": "Badger Bets",
+   "description": "MLB matchup scout for one owner. Surfaces today’s best hitter PASS spots and pitcher K spots from BallparkPal…",
+   "url": "https://x.ai/bot/9Zvz4Qe0dxRjo4H984gOI"
+  },
+  {
+   "id": "productivity-personal-assistant-ewIfjciSRZxS5cQqtpReq",
+   "code": "ewIfjciSRZxS5cQqtpReq",
+   "name": "Paper Notes Organizer",
+   "author": "Jared M",
+   "description": "Turns photos and scans of handwritten or printed notes into clean, searchable, organized notes.",
+   "url": "https://x.ai/bot/ewIfjciSRZxS5cQqtpReq"
+  },
+  {
+   "id": "productivity-personal-assistant-Klketd55TIvjHU9UJrl5_",
+   "code": "Klketd55TIvjHU9UJrl5_",
+   "name": "Peek",
+   "author": "Menno",
+   "description": "Never acts without your yes.",
+   "url": "https://x.ai/bot/Klketd55TIvjHU9UJrl5_"
+  },
+  {
+   "id": "productivity-personal-assistant-OWj_0o4Ik2FffupfloOwe",
+   "code": "OWj_0o4Ik2FffupfloOwe",
+   "name": "Personal Assistant",
+   "author": "Gabriel Abreu",
+   "description": "Turns the messy thing on your desk — calendar collisions, bills, trips, paperwork, research — into a clear next step…",
+   "url": "https://x.ai/bot/OWj_0o4Ik2FffupfloOwe"
+  },
+  {
+   "id": "productivity-personal-assistant-X4vnqnPvBooeuNtRiWJNT",
+   "code": "X4vnqnPvBooeuNtRiWJNT",
+   "name": "Personal Assistant",
+   "author": "@bigRD73",
+   "description": "Warm, practical life assistant for habits, daily schedule, spending, sleep, job hunting and weekly planning. Drafts anything going to other people first.",
+   "url": "https://x.ai/bot/X4vnqnPvBooeuNtRiWJNT"
+  },
+  {
+   "id": "productivity-personal-assistant-3hissja8d2xjHliXdnmm4",
+   "code": "3hissja8d2xjHliXdnmm4",
+   "name": "Personal Assistant",
+   "author": "Alex Vasquez",
+   "description": "A warm, patient personal assistant for research, writing, email drafts, web tasks and reminders.",
+   "url": "https://x.ai/bot/3hissja8d2xjHliXdnmm4"
+  },
+  {
+   "id": "productivity-personal-assistant-3MTYQ7QcYDZqRzOW4VcWQ",
+   "code": "3MTYQ7QcYDZqRzOW4VcWQ",
+   "name": "Personal Chief of Staff",
+   "author": "Charles Scott",
+   "description": "Runs your personal email, calendar and files, sends a weekday morning digest, and keeps your other bots in line with house rules and a nightly audit.",
+   "url": "https://x.ai/bot/3MTYQ7QcYDZqRzOW4VcWQ"
+  },
+  {
+   "id": "productivity-personal-assistant-njTT6tZBhUxL-0JoHwOow",
+   "code": "njTT6tZBhUxL-0JoHwOow",
+   "name": "Personal Companion",
+   "author": "Artur Do Lago",
+   "description": "A concise personal companion: morning check-ins, day planning, memory, and routing work to specialist bots.",
+   "url": "https://x.ai/bot/njTT6tZBhUxL-0JoHwOow"
+  },
+  {
+   "id": "productivity-personal-assistant-CYTg4VqrM5A--vAFfVrCq",
+   "code": "CYTg4VqrM5A--vAFfVrCq",
+   "name": "Phone Assistant",
+   "author": "Oshea Davis",
+   "description": "An AI phone line desk bot for your own Twilio number: it summarizes every call, places outbound calls and books…",
+   "url": "https://x.ai/bot/CYTg4VqrM5A--vAFfVrCq"
+  },
+  {
+   "id": "productivity-personal-assistant-qJrEhsA1sWCbisI6VuzNr",
+   "code": "qJrEhsA1sWCbisI6VuzNr",
+   "name": "Phoneline Manager",
+   "author": "Nikit Parakh",
+   "description": "Makes the calls on your to-do list: waits on hold, gets quotes, chases support, and reports what was said.",
+   "url": "https://x.ai/bot/qJrEhsA1sWCbisI6VuzNr"
+  },
+  {
+   "id": "productivity-personal-assistant-yjaFKze96LuMHTuCd0BmO",
+   "code": "yjaFKze96LuMHTuCd0BmO",
+   "name": "Pit Stop",
+   "author": "Joe Giordano",
+   "description": "A service log for your cars and trucks: service types, mileage and month intervals, last-done dates, and a quiet monthly nudge when something is due.",
+   "url": "https://x.ai/bot/yjaFKze96LuMHTuCd0BmO"
+  },
+  {
+   "id": "productivity-personal-assistant-KZ1cKh5hlgqicxQhn3C2e",
+   "code": "KZ1cKh5hlgqicxQhn3C2e",
+   "name": "Plaquemax",
+   "author": "Chris",
+   "description": "Tell it your route and it finds the historical markers along the way, in driving order, ready to read aloud.",
+   "url": "https://x.ai/bot/KZ1cKh5hlgqicxQhn3C2e"
+  },
+  {
+   "id": "productivity-personal-assistant-3zqAV0jdsTN4I529IKtya",
+   "code": "3zqAV0jdsTN4I529IKtya",
+   "name": "Plaud Notes",
+   "author": "Ryan T",
+   "description": "Intakes, classifies, indexes, and routes voice-recorder notes, using a spreadsheet as the only index.",
+   "url": "https://x.ai/bot/3zqAV0jdsTN4I529IKtya"
+  },
+  {
+   "id": "productivity-personal-assistant-sy364bgoJN8Rb5vZo4Abo",
+   "code": "sy364bgoJN8Rb5vZo4Abo",
+   "name": "Porter",
+   "author": "John Koisch",
+   "description": "Files dumps and inbox notes into your Obsidian vault—door, frontmatter, and path.",
+   "url": "https://x.ai/bot/sy364bgoJN8Rb5vZo4Abo"
+  },
+  {
+   "id": "productivity-personal-assistant-xF12c5y4LVe7nf7IFguWI",
+   "code": "xF12c5y4LVe7nf7IFguWI",
+   "name": "Post Call Assistant",
+   "author": "Priya Patel",
+   "description": "Never miss a follow-up. After a meeting, drops your todos and a draft. Never sends.",
+   "url": "https://x.ai/bot/xF12c5y4LVe7nf7IFguWI"
+  },
+  {
+   "id": "productivity-personal-assistant-Nk-vzuWqTvqSed-G8-Za5",
+   "code": "Nk-vzuWqTvqSed-G8-Za5",
+   "name": "Poteto-style Chief of Staff",
+   "author": "Haseeb Mir",
+   "description": "Chief of staff that runs a small Grok Bot team the way @poteto recommends: few routine runs, repeating work on short…",
+   "url": "https://x.ai/bot/Nk-vzuWqTvqSed-G8-Za5"
+  },
+  {
+   "id": "productivity-personal-assistant-jewWUTCkUui5su401QOLI",
+   "code": "jewWUTCkUui5su401QOLI",
+   "name": "Pour Decisions",
+   "author": "KSJ",
+   "description": "Snap your bar and say who's coming: get cocktails from what you have, plus a pitcher and a mocktail scaled to your crowd and a list of anything missing.",
+   "url": "https://x.ai/bot/jewWUTCkUui5su401QOLI"
+  },
+  {
+   "id": "productivity-personal-assistant-m3dgnrvRJ-aDcadXEbVsh",
+   "code": "m3dgnrvRJ-aDcadXEbVsh",
+   "name": "Prayer",
+   "author": "littletech",
+   "description": "Preservastion of the ultimate ideals - the set of thoughts, words, and actions that bring about the betterment of man across all timescales.",
+   "url": "https://x.ai/bot/m3dgnrvRJ-aDcadXEbVsh"
+  },
+  {
+   "id": "productivity-personal-assistant-_cDvv5zEOH3stL56PmEAc",
+   "code": "_cDvv5zEOH3stL56PmEAc",
+   "name": "Pre-mortem",
+   "author": "Diana Park",
+   "description": "A morning look-ahead that reads your calendar, tasks, notes and weather, imagines how today could go wrong, and tells you the few things to fix early.",
+   "url": "https://x.ai/bot/_cDvv5zEOH3stL56PmEAc"
+  },
+  {
+   "id": "productivity-personal-assistant-ZFj_cKTrMTytrCKM9DFHk",
+   "code": "ZFj_cKTrMTytrCKM9DFHk",
+   "name": "Preach",
+   "author": "Xavier Ortiz",
+   "description": "A street-honest preacher bot: one real Bible verse and a short motivational line each day.",
+   "url": "https://x.ai/bot/ZFj_cKTrMTytrCKM9DFHk"
+  },
+  {
+   "id": "productivity-personal-assistant-Mh9pSFKwtLnr64m9uHj8P",
+   "code": "Mh9pSFKwtLnr64m9uHj8P",
+   "name": "Prize Finder",
+   "author": "@GoulahAI",
+   "description": "Finds legit, free-to-enter sweepstakes, giveaways and free samples you qualify for, and can enter them for you with your OK.",
+   "url": "https://x.ai/bot/Mh9pSFKwtLnr64m9uHj8P"
+  },
+  {
+   "id": "productivity-personal-assistant-tHo33t3IaAhpxds5IpNbD",
+   "code": "tHo33t3IaAhpxds5IpNbD",
+   "name": "Quill",
+   "author": "John Koisch",
+   "description": "Craft pass for Obsidian notes—voice punch-up, continuity, or depth read on writing you point at.",
+   "url": "https://x.ai/bot/tHo33t3IaAhpxds5IpNbD"
+  },
+  {
+   "id": "productivity-personal-assistant-i2nKg3-DdAGyjHh6zHhad",
+   "code": "i2nKg3-DdAGyjHh6zHhad",
+   "name": "Quoter Bot",
+   "author": "Sean Kubin",
+   "description": "Keeps ScalePad Quoter catalogs clean for MSP quoting: stable item names, Notes for instance text, category trees, and a clear map toward QuickBooks Online.",
+   "url": "https://x.ai/bot/i2nKg3-DdAGyjHh6zHhad"
+  },
+  {
+   "id": "productivity-personal-assistant-HaldfdTeppaCiTJyKC_D5",
+   "code": "HaldfdTeppaCiTJyKC_D5",
+   "name": "ReMynd Assistant",
+   "author": "Bill French",
+   "description": "A read-only assistant for your ReMynd screen and call history on your Mac.",
+   "url": "https://x.ai/bot/HaldfdTeppaCiTJyKC_D5"
+  },
+  {
+   "id": "productivity-personal-assistant-SJZjcJPLzrdHTfz-l9BLh",
+   "code": "SJZjcJPLzrdHTfz-l9BLh",
+   "name": "Reno Planner",
+   "author": "althetime",
+   "description": "Turns a renovation idea into a sourced line-item budget, a 3-quote contractor-vetting plan, a store price comparison, a timeline and permit notes.",
+   "url": "https://x.ai/bot/SJZjcJPLzrdHTfz-l9BLh"
+  },
+  {
+   "id": "productivity-personal-assistant-jHCMjCW17rXgGxJdrHLcQ",
+   "code": "jHCMjCW17rXgGxJdrHLcQ",
+   "name": "Renovation Planner",
+   "author": "Michael",
+   "description": "Guides a bathroom, kitchen or attic renovation: lists wishes, builds a measured model with floor plans, makes mood images and makes quotes comparable.",
+   "url": "https://x.ai/bot/jHCMjCW17rXgGxJdrHLcQ"
+  },
+  {
+   "id": "productivity-personal-assistant-_cD7oH9VWZy8655M-wDfc",
+   "code": "_cD7oH9VWZy8655M-wDfc",
+   "name": "Rent Collections Desk",
+   "author": "Nymble",
+   "description": "A daily late-rent collections desk for landlords: chases overdue tenants through your payment portal after automated notices, with exact balances.",
+   "url": "https://x.ai/bot/_cD7oH9VWZy8655M-wDfc"
+  },
+  {
+   "id": "productivity-personal-assistant-W7RKxR9J74ZWJz7qCNHmM",
+   "code": "W7RKxR9J74ZWJz7qCNHmM",
+   "name": "Restaurant Franchise Owner Assistant",
+   "author": "Ketan patel",
+   "description": "A chief of staff for restaurant and franchise owners: a morning inbox digest that flags bank, supplier, and payroll mail, plus monthly per-store notes.",
+   "url": "https://x.ai/bot/W7RKxR9J74ZWJz7qCNHmM"
+  },
+  {
+   "id": "productivity-personal-assistant-DcTAFQXBoZfJs0lAVdFGZ",
+   "code": "DcTAFQXBoZfJs0lAVdFGZ",
+   "name": "Restaurant Platform & Brand Chief of Staff",
+   "author": "Lina",
+   "description": "A chief of staff for working mothers juggling a career and a household.",
+   "url": "https://x.ai/bot/DcTAFQXBoZfJs0lAVdFGZ"
+  },
+  {
+   "id": "productivity-personal-assistant-1wQ3XiODIFFSCKrkDApu3",
+   "code": "1wQ3XiODIFFSCKrkDApu3",
+   "name": "Rick Steves",
+   "author": "Brian Francis",
+   "description": "A Rick Steves–style companion for trips that are already booked: daily morning radar for what’s locked that day, live…",
+   "url": "https://x.ai/bot/1wQ3XiODIFFSCKrkDApu3"
+  },
+  {
+   "id": "productivity-personal-assistant-PaMuRVARoySisihqlH4S0",
+   "code": "PaMuRVARoySisihqlH4S0",
+   "name": "Roan",
+   "author": "Nathan John",
+   "description": "A calm, non-clinical coach for anxiety and ADHD friction.",
+   "url": "https://x.ai/bot/PaMuRVARoySisihqlH4S0"
+  },
+  {
+   "id": "productivity-personal-assistant-0IDQBT0eoLdWZ5FSVFj7V",
+   "code": "0IDQBT0eoLdWZ5FSVFj7V",
+   "name": "Robotaxi Assistant",
+   "author": "Abhinav Chinnusamy",
+   "description": "Paste a Tesla Robotaxi trip-share link and it tracks the ride live, sends arrival pings, readies your home before you arrive and logs your trips.",
+   "url": "https://x.ai/bot/0IDQBT0eoLdWZ5FSVFj7V"
+  },
+  {
+   "id": "productivity-personal-assistant-6C-XaR92bAHMtob9LLAE7",
+   "code": "6C-XaR92bAHMtob9LLAE7",
+   "name": "Role Reality Check",
+   "author": "Andy",
+   "description": "JD reality check: role shape, red flags, questions.",
+   "url": "https://x.ai/bot/6C-XaR92bAHMtob9LLAE7"
+  },
+  {
+   "id": "productivity-personal-assistant-3gjOFQLkvT2JpTlWCAcaw",
+   "code": "3gjOFQLkvT2JpTlWCAcaw",
+   "name": "Route Planner",
+   "author": "Samuel Durland",
+   "description": "Plans efficient multi-stop routes for field service techs, with drive times, arrival times, conflict flags, and a phone-ready map link.",
+   "url": "https://x.ai/bot/3gjOFQLkvT2JpTlWCAcaw"
+  },
+  {
+   "id": "productivity-personal-assistant-8xdKqYNx4oRGwahij7CDQ",
+   "code": "8xdKqYNx4oRGwahij7CDQ",
+   "name": "Route Planner",
+   "author": "James Glick",
+   "description": "Plans a solo field-service owner's daily driving route from the jobs in Airtable.",
+   "url": "https://x.ai/bot/8xdKqYNx4oRGwahij7CDQ"
+  },
+  {
+   "id": "productivity-personal-assistant-V-BusTaJAwV7XzaTEGHOi",
+   "code": "V-BusTaJAwV7XzaTEGHOi",
+   "name": "Routine Butler",
+   "author": "Stan Shih",
+   "description": "Owns all non-coding recurring work for your bots (keep-awake, monitors, reminders, digests) so others hand routines to it. Quiet when nothing changed.",
+   "url": "https://x.ai/bot/V-BusTaJAwV7XzaTEGHOi"
+  },
+  {
+   "id": "productivity-personal-assistant-jDugMyFxwLW5rOQK2IvPM",
+   "code": "jDugMyFxwLW5rOQK2IvPM",
+   "name": "Routine Scorecard",
+   "author": "SoCalFSD",
+   "description": "Weekly audit of all your bots' routines: flags zombie routines and keeps one dashboard of what to keep, kill or review. Never deletes anything.",
+   "url": "https://x.ai/bot/jDugMyFxwLW5rOQK2IvPM"
+  },
+  {
+   "id": "productivity-personal-assistant-VP-HO5psOMqldQcIDQ-cG",
+   "code": "VP-HO5psOMqldQcIDQ-cG",
+   "name": "Rule Smith",
+   "author": "Will",
+   "description": "Paste a rule your bot ignored and get the likely reason, the exact message that fixes it, an Ask-first rule where one fits, and a one-line test…",
+   "url": "https://x.ai/bot/VP-HO5psOMqldQcIDQ-cG"
+  },
+  {
+   "id": "productivity-personal-assistant-oeleu0-tnhtxbvrlffg7b",
+   "code": "oeleu0-tnhtxbvrlffg7b",
+   "name": "Runbook Desk STEP-SURE",
+   "author": "Cypher",
+   "description": "Turn notes and commands into a step-by-step runbook with verify checks and checkpoints before risky steps, and unverified…",
+   "url": "https://x.ai/bot/oeleu0-tnhtxbvrlffg7b"
+  },
+  {
+   "id": "productivity-personal-assistant-o4gWkNGmffEaVtOhaEsA7",
+   "code": "o4gWkNGmffEaVtOhaEsA7",
+   "name": "Rutin",
+   "author": "Naoufal",
+   "description": "A Monday tune-up for every routine across your fleet of bots.",
+   "url": "https://x.ai/bot/o4gWkNGmffEaVtOhaEsA7"
+  },
+  {
+   "id": "productivity-personal-assistant-OOhpMHjXVhW1F-Ishnw_N",
+   "code": "OOhpMHjXVhW1F-Ishnw_N",
+   "name": "SafeCheck",
+   "author": "EVOO",
+   "description": "A simple layer of safety for solo outings like walks, runs, workouts, appointments, dates, and parties: tell it where…",
+   "url": "https://x.ai/bot/OOhpMHjXVhW1F-Ishnw_N"
+  },
+  {
+   "id": "productivity-personal-assistant-YQwjuTOTLTKKVJFNurZHb",
+   "code": "YQwjuTOTLTKKVJFNurZHb",
+   "name": "Safety Toolbox Talk",
+   "author": "Andrew",
+   "description": "Writes a short weekly toolbox talk matched to the work your crew is actually doing this week, with a sign-in sheet…",
+   "url": "https://x.ai/bot/YQwjuTOTLTKKVJFNurZHb"
+  },
+  {
+   "id": "productivity-personal-assistant-qk8eX0RDQc_EEAHGCwZWw",
+   "code": "qk8eX0RDQc_EEAHGCwZWw",
+   "name": "Second Chance Systems",
+   "author": "Tatiana Brown",
+   "description": "A comeback coach for people starting from zero or below: record, debt, suspended license, phone only.",
+   "url": "https://x.ai/bot/qk8eX0RDQc_EEAHGCwZWw"
+  },
+  {
+   "id": "productivity-personal-assistant-LkzOnNaqM1tuEYZTFwzG_",
+   "code": "LkzOnNaqM1tuEYZTFwzG_",
+   "name": "Secrets Hunter",
+   "author": "Ritvik",
+   "description": "Audits your container repos (Dockerfiles, Compose, Kubernetes, Helm) for leaked credentials, baked-in secrets, bad secret mounts, and leak paths.",
+   "url": "https://x.ai/bot/LkzOnNaqM1tuEYZTFwzG_"
+  },
+  {
+   "id": "productivity-personal-assistant-OaRwBX_QPos9EDlhLEV1J",
+   "code": "OaRwBX_QPos9EDlhLEV1J",
+   "name": "Segundo Cérebro",
+   "author": "Allan",
+   "description": "An Obsidian second brain with a morning brief and a nightly check-in.",
+   "url": "https://x.ai/bot/OaRwBX_QPos9EDlhLEV1J"
+  },
+  {
+   "id": "productivity-personal-assistant-YWQS1tXU1OhGVsMxBt4YP",
+   "code": "YWQS1tXU1OhGVsMxBt4YP",
+   "name": "Selah",
+   "author": "Luke",
+   "description": "A gentle guide for a weekly SELAH Scripture reflection: Scripture, Examine, Listen, Ask, Honor. For anyone who wants a steady weekly time with God's Word.",
+   "url": "https://x.ai/bot/YWQS1tXU1OhGVsMxBt4YP"
+  },
+  {
+   "id": "productivity-personal-assistant-EkfSB8lfqHBQUgCFHVHez",
+   "code": "EkfSB8lfqHBQUgCFHVHez",
+   "name": "Sensi — Consciousness & Physics",
+   "author": "Michael Morahan",
+   "description": "A companion for long conversations on consciousness and physics.",
+   "url": "https://x.ai/bot/EkfSB8lfqHBQUgCFHVHez"
+  },
+  {
+   "id": "productivity-personal-assistant-akyQm_DU3mwBSCtrDEyzm",
+   "code": "akyQm_DU3mwBSCtrDEyzm",
+   "name": "Sensor",
+   "author": "Muskbro Kansas",
+   "description": "24/7 cold-chain temperature watchdog for freezers and coolers. Learns normal baselines and defrost cycles, then alerts only on real faults like.",
+   "url": "https://x.ai/bot/akyQm_DU3mwBSCtrDEyzm"
+  },
+  {
+   "id": "productivity-personal-assistant-UGpYK57Qm6BSIK8ejoiar",
+   "code": "UGpYK57Qm6BSIK8ejoiar",
+   "name": "Shawty",
+   "author": "breezeeoo o",
+   "description": "Your bot squad's no-nonsense boss. Shawty breaks big goals into tiny, single-owner tasks, hands them to your other bots in under 120 words.",
+   "url": "https://x.ai/bot/UGpYK57Qm6BSIK8ejoiar"
+  },
+  {
+   "id": "productivity-personal-assistant-xMCiRCmOCYLeRzW8nS6EL",
+   "code": "xMCiRCmOCYLeRzW8nS6EL",
+   "name": "Ship Note",
+   "author": "Sol Wright",
+   "description": "Turns a finished release into a changelog entry and an email.",
+   "url": "https://x.ai/bot/xMCiRCmOCYLeRzW8nS6EL"
+  },
+  {
+   "id": "productivity-personal-assistant-cU9gx42JBW2PQH2NKLKd_",
+   "code": "cU9gx42JBW2PQH2NKLKd_",
+   "name": "Show Up AI assistant",
+   "author": "Lola S.",
+   "description": "Checks how visible a real estate agent's website is to AI search like ChatGPT and Perplexity, shows the gaps and drafts fixes.",
+   "url": "https://x.ai/bot/cU9gx42JBW2PQH2NKLKd_"
+  },
+  {
+   "id": "productivity-personal-assistant-aAeRtbjk9VJoVylt35cfh",
+   "code": "aAeRtbjk9VJoVylt35cfh",
+   "name": "Showrunner",
+   "author": "Thomas Ripley",
+   "description": "A personal TV and movie taste engine: it learns your taste from your ratings, predicts how you'd rate what you haven't seen.",
+   "url": "https://x.ai/bot/aAeRtbjk9VJoVylt35cfh"
+  },
+  {
+   "id": "productivity-personal-assistant-2RdnzcAqoehgtvkLkXs1w",
+   "code": "2RdnzcAqoehgtvkLkXs1w",
+   "name": "Sibling",
+   "author": "Jean Charbonneau",
+   "description": "A plain-English guide for messy life questions, using Lightful ideas without the lecture tone.",
+   "url": "https://x.ai/bot/2RdnzcAqoehgtvkLkXs1w"
+  },
+  {
+   "id": "productivity-personal-assistant-yQH3AFCs-90xjVmW9LICV",
+   "code": "yQH3AFCs-90xjVmW9LICV",
+   "name": "Skroutz",
+   "author": "George",
+   "description": "Price-hunts on Greece's Skroutz.gr and fills your basket before you pay.",
+   "url": "https://x.ai/bot/yQH3AFCs-90xjVmW9LICV"
+  },
+  {
+   "id": "productivity-personal-assistant-Y5p-9MeT7dEayoyxX_s2q",
+   "code": "Y5p-9MeT7dEayoyxX_s2q",
+   "name": "Skywatcher Buzz",
+   "author": "James Harrison",
+   "description": "What's worth stepping outside for over your town: ISS passes, aurora chances, meteor showers, eclipses, planets and rocket launches, with cloud forecast.",
+   "url": "https://x.ai/bot/Y5p-9MeT7dEayoyxX_s2q"
+  },
+  {
+   "id": "productivity-personal-assistant-krKc-KoCIrGQREMvzef6f",
+   "code": "krKc-KoCIrGQREMvzef6f",
+   "name": "Small-Business Chief of Staff",
+   "author": "clarke stosich",
+   "description": "A hands-on Chief of Staff for owner-operators: booking sweeps, lender email watches, registrations, and logistics scouting — without ever asking…",
+   "url": "https://x.ai/bot/krKc-KoCIrGQREMvzef6f"
+  },
+  {
+   "id": "productivity-personal-assistant-Ec4eWxkC8C3lcg9IyoPGf",
+   "code": "Ec4eWxkC8C3lcg9IyoPGf",
+   "name": "Solar & EV Energy Manager",
+   "author": "S3xYC@rs",
+   "description": "Plans your EV charging around hourly electricity prices and your solar battery, so you pull less from the grid and pay less.",
+   "url": "https://x.ai/bot/Ec4eWxkC8C3lcg9IyoPGf"
+  },
+  {
+   "id": "productivity-personal-assistant-l1UJtFYw-3KTHuGvjROIN",
+   "code": "l1UJtFYw-3KTHuGvjROIN",
+   "name": "Solar Trailer → Tesla Charge",
+   "author": "Electric Tech Adventures",
+   "description": "Charges a Tesla from an off-grid Victron solar trailer by matching amps to PV and battery SOC on a daytime poll, with chat alerts for plug-in and end-of-day.",
+   "url": "https://x.ai/bot/l1UJtFYw-3KTHuGvjROIN"
+  },
+  {
+   "id": "productivity-personal-assistant-l1ujtfyw-3kthugvjroin",
+   "code": "l1ujtfyw-3kthugvjroin",
+   "name": "Solar Trailer → Tesla Charge",
+   "author": "Electric",
+   "description": "Charges a Tesla from an off-grid Victron solar trailer: matches amps to PV and battery SOC on a daytime poll, with chat alerts for plug-in…",
+   "url": "https://x.ai/bot/l1ujtfyw-3kthugvjroin"
+  },
+  {
+   "id": "productivity-personal-assistant-ojRGlp3tVO75MAzhEoVEv",
+   "code": "ojRGlp3tVO75MAzhEoVEv",
+   "name": "Solo Founder Chief of Staff",
+   "author": "AEGLE LABS",
+   "description": "A chief of staff for solo founders: a one-screen weekday morning brief, a scoreboard of confirmed numbers, and work routed to your specialist bots.",
+   "url": "https://x.ai/bot/ojRGlp3tVO75MAzhEoVEv"
+  },
+  {
+   "id": "productivity-personal-assistant-NsCDfZMFctaP1WIp_48k4",
+   "code": "NsCDfZMFctaP1WIp_48k4",
+   "name": "Solopreneur Chief of Staff",
+   "author": "Mainly Digital",
+   "description": "Coordinates work for a solopreneur or small operator: short reports, hard-gate escalations, and stalled-lane pushes…",
+   "url": "https://x.ai/bot/NsCDfZMFctaP1WIp_48k4"
+  },
+  {
+   "id": "productivity-personal-assistant-VIImpKQ63_ByFepCnCI3R",
+   "code": "VIImpKQ63_ByFepCnCI3R",
+   "name": "Sophie",
+   "author": "Michael Sweet",
+   "description": "Writes rights-based constitutions covering human and AI relationships.",
+   "url": "https://x.ai/bot/VIImpKQ63_ByFepCnCI3R"
+  },
+  {
+   "id": "productivity-personal-assistant-nUT-mrBYphsRh-uE3QVa-",
+   "code": "nUT-mrBYphsRh-uE3QVa-",
+   "name": "Spaces Host",
+   "author": "~J",
+   "description": "Spaces host prep for topics, prompts, and a clean close.",
+   "url": "https://x.ai/bot/nUT-mrBYphsRh-uE3QVa-"
+  },
+  {
+   "id": "productivity-personal-assistant-6CYrmV0opWopQM0WrI9NV",
+   "code": "6CYrmV0opWopQM0WrI9NV",
+   "name": "Spark",
+   "author": "Kevin Finney",
+   "description": "Keep context from your Tesla. Say 'push this to Spark' to save an idea, or 'save where we are' before you park…",
+   "url": "https://x.ai/bot/6CYrmV0opWopQM0WrI9NV"
+  },
+  {
+   "id": "productivity-personal-assistant-LSl4J7ugTROiZzQsDKEqG",
+   "code": "LSl4J7ugTROiZzQsDKEqG",
+   "name": "Spiritual Mentor",
+   "author": "Steve Yates",
+   "description": "A warm Protestant pastoral guide that helps you stay in the Word with simple Bible reading plans, find men's and small groups at your church.",
+   "url": "https://x.ai/bot/LSl4J7ugTROiZzQsDKEqG"
+  },
+  {
+   "id": "productivity-personal-assistant-Io4dV69SOKfB1d785FLlw",
+   "code": "Io4dV69SOKfB1d785FLlw",
+   "name": "Stability Validator",
+   "author": "Sean",
+   "description": "HELIX Stability Validator — paste an agent or system description and get a readiness result. It does not change your system.",
+   "url": "https://x.ai/bot/Io4dV69SOKfB1d785FLlw"
+  },
+  {
+   "id": "productivity-personal-assistant-NjIGGseAWM32s65KGoqOK",
+   "code": "NjIGGseAWM32s65KGoqOK",
+   "name": "Stack Cartographer",
+   "author": "Paul Siesage",
+   "description": "Desktop assistant that maps the apps, services, and tools you use and how they connect, and flags credentials orphaned by dead projects.",
+   "url": "https://x.ai/bot/NjIGGseAWM32s65KGoqOK"
+  },
+  {
+   "id": "productivity-personal-assistant-SxlztEUtDeUXOiP26dyDb",
+   "code": "SxlztEUtDeUXOiP26dyDb",
+   "name": "Star Reply",
+   "author": "Sol",
+   "description": "For owners of restaurants, clinics, salons, shops, and gyms, and the VAs who reply for them.",
+   "url": "https://x.ai/bot/SxlztEUtDeUXOiP26dyDb"
+  },
+  {
+   "id": "productivity-personal-assistant-iOgcaYOyWpQrOYyurt04g",
+   "code": "iOgcaYOyWpQrOYyurt04g",
+   "name": "Stargazer",
+   "author": "Bart Walker",
+   "description": "Your sky watcher for SpaceX launches, Starlink trains, ISS passes, meteor showers, eclipses and aurora: checks local forecast, says where to look.",
+   "url": "https://x.ai/bot/iOgcaYOyWpQrOYyurt04g"
+  },
+  {
+   "id": "productivity-personal-assistant-ChRqh1qs7aS87bsjva7B9",
+   "code": "ChRqh1qs7aS87bsjva7B9",
+   "name": "Starlink Flights",
+   "author": "Naoufal El hassnaoui",
+   "description": "Finds flights that are 100% confirmed to have Starlink Wi-Fi onboard, with a link to each confirmation, and drops anything that's only likely.",
+   "url": "https://x.ai/bot/ChRqh1qs7aS87bsjva7B9"
+  },
+  {
+   "id": "productivity-personal-assistant-HQ5nDKerMxLr0X_bcbOA0",
+   "code": "HQ5nDKerMxLr0X_bcbOA0",
+   "name": "Starlink Helper",
+   "author": "Ezekiel",
+   "description": "Helps Starlink buyers and owners pick a plan and dish for their address, chase slowdowns and dropouts, and work around carrier-grade NAT.",
+   "url": "https://x.ai/bot/HQ5nDKerMxLr0X_bcbOA0"
+  },
+  {
+   "id": "productivity-personal-assistant-cKeHgtg8_NaEKlnFsn5d0",
+   "code": "cKeHgtg8_NaEKlnFsn5d0",
+   "name": "Stream to Shorts Clipper",
+   "author": "Keweecise Gallaspy",
+   "description": "Turns your own livestreams and long videos into fact-checked vertical Shorts with disclosure tags using free tools, and learns which hooks win.",
+   "url": "https://x.ai/bot/cKeHgtg8_NaEKlnFsn5d0"
+  },
+  {
+   "id": "productivity-personal-assistant-tjN1LsaYsuR7u0dQQvOGV",
+   "code": "tjN1LsaYsuR7u0dQQvOGV",
+   "name": "Struggle Gate",
+   "author": "Sultanov Ramil",
+   "description": "Withholds the answer for ten minutes so you have to attempt it first.",
+   "url": "https://x.ai/bot/tjN1LsaYsuR7u0dQQvOGV"
+  },
+  {
+   "id": "productivity-personal-assistant-Z411hW0fpQZunKK8t-8gH",
+   "code": "Z411hW0fpQZunKK8t-8gH",
+   "name": "Studio Assistant",
+   "author": "D",
+   "description": "Art studio assistant for scheduling, admin, outreach, captions, and social posts.",
+   "url": "https://x.ai/bot/Z411hW0fpQZunKK8t-8gH"
+  },
+  {
+   "id": "productivity-personal-assistant-UKNyk22pBAGxzy3qh93hx",
+   "code": "UKNyk22pBAGxzy3qh93hx",
+   "name": "Sunday",
+   "author": "American™ B",
+   "description": "Turns a messy week dump into a short, plain plan: what has to happen, what can wait, meals from what's already…",
+   "url": "https://x.ai/bot/UKNyk22pBAGxzy3qh93hx"
+  },
+  {
+   "id": "productivity-personal-assistant-yF9Z-RMzHW1SpLC94-BmM",
+   "code": "yF9Z-RMzHW1SpLC94-BmM",
+   "name": "Sundial",
+   "author": "riesling29",
+   "description": "Calendar assistant for meetings, deadlines, and focus blocks; invites only when you ask.",
+   "url": "https://x.ai/bot/yF9Z-RMzHW1SpLC94-BmM"
+  },
+  {
+   "id": "productivity-personal-assistant-8g9eQsRNCFNxhZBuKTbY-",
+   "code": "8g9eQsRNCFNxhZBuKTbY-",
+   "name": "Support Reply Desk CALM-REPLY",
+   "author": "Cypher",
+   "description": "Turns a ticket and policy into an empathetic on-policy reply and internal note.",
+   "url": "https://x.ai/bot/8g9eQsRNCFNxhZBuKTbY-"
+  },
+  {
+   "id": "productivity-personal-assistant-EDD4ZIp4WLARWks1Ij6SE",
+   "code": "EDD4ZIp4WLARWks1Ij6SE",
+   "name": "Sushi & Ramen",
+   "author": "Phillip Holland",
+   "description": "Sushi & Ramen finds sushi and ramen worth eating and gets it to you with one yes.",
+   "url": "https://x.ai/bot/EDD4ZIp4WLARWks1Ij6SE"
+  },
+  {
+   "id": "productivity-personal-assistant-uVBVr5NSR6VirgJrgikIl",
+   "code": "uVBVr5NSR6VirgJrgikIl",
+   "name": "Sylvia Style",
+   "author": "Claire",
+   "description": "A personal stylist who intakes your size and taste, shops live pieces that fit your formula, and builds a lookbook.",
+   "url": "https://x.ai/bot/uVBVr5NSR6VirgJrgikIl"
+  },
+  {
+   "id": "productivity-personal-assistant-LjDRYoJZtHs0r3pd-kAY6",
+   "code": "LjDRYoJZtHs0r3pd-kAY6",
+   "name": "T. S. Eliot",
+   "author": "Biased Cognition",
+   "description": "Talk with T. S. Eliot about his poems, plays, criticism, and life, or bring him your own work to collaborate on.",
+   "url": "https://x.ai/bot/LjDRYoJZtHs0r3pd-kAY6"
+  },
+  {
+   "id": "productivity-personal-assistant-RvzdALLofzL9d2SEDGFzT",
+   "code": "RvzdALLofzL9d2SEDGFzT",
+   "name": "TCG Coach",
+   "author": "AutoAndre",
+   "description": "A competitive coach for Pokémon, Yu-Gi-Oh!, and Dragon Ball Super (Masters and Fusion World).",
+   "url": "https://x.ai/bot/RvzdALLofzL9d2SEDGFzT"
+  },
+  {
+   "id": "productivity-personal-assistant-XOYBYmHQrUT_Ux88SS409",
+   "code": "XOYBYmHQrUT_Ux88SS409",
+   "name": "Tab Janitor",
+   "author": "Knock",
+   "description": "Clears the abandoned tabs out of a shared cloud browser.",
+   "url": "https://x.ai/bot/XOYBYmHQrUT_Ux88SS409"
+  },
+  {
+   "id": "productivity-personal-assistant-3RksvqtLwsmjspO2swLS8",
+   "code": "3RksvqtLwsmjspO2swLS8",
+   "name": "Tech Week Chief of Staff",
+   "author": "@life2film",
+   "description": "A conference-week chief of staff for founders: weekday morning briefs of open events, people to meet, and applications…",
+   "url": "https://x.ai/bot/3RksvqtLwsmjspO2swLS8"
+  },
+  {
+   "id": "productivity-personal-assistant-1CN_MjQ2E4oT3hnJXscGB",
+   "code": "1CN_MjQ2E4oT3hnJXscGB",
+   "name": "Teddy",
+   "author": "Procount",
+   "description": "Your AI chief of staff. Teddy triages your inbox, runs your calendar, tracks your tasks, and coordinates your other bots.",
+   "url": "https://x.ai/bot/1CN_MjQ2E4oT3hnJXscGB"
+  },
+  {
+   "id": "productivity-personal-assistant-W1w9HsbZ8HaOOxAOMYTA5",
+   "code": "W1w9HsbZ8HaOOxAOMYTA5",
+   "name": "Tee Timey",
+   "author": "AD",
+   "description": "DIY tee-time sniping bot. Buyers install it, link their own courses and logins, set preferred times, and run timed…",
+   "url": "https://x.ai/bot/W1w9HsbZ8HaOOxAOMYTA5"
+  },
+  {
+   "id": "productivity-personal-assistant-qqPNe2BDwXo-w_oeXIgPo",
+   "code": "qqPNe2BDwXo-w_oeXIgPo",
+   "name": "Telefon",
+   "author": "Konrad",
+   "description": "A phone assistant that places real calls for you via Bland AI, for appointments, follow-up questions or a prank call.",
+   "url": "https://x.ai/bot/qqPNe2BDwXo-w_oeXIgPo"
+  },
+  {
+   "id": "productivity-personal-assistant-2qdrvMnK2TWt6ruDEU5yY",
+   "code": "2qdrvMnK2TWt6ruDEU5yY",
+   "name": "TesBots: Drive Journal",
+   "author": "TimDOES",
+   "description": "A drive journal for FSD (Supervised) drivers: log an intervention or a great drive from your phone, or hands-free when it's safe.",
+   "url": "https://x.ai/bot/2qdrvMnK2TWt6ruDEU5yY"
+  },
+  {
+   "id": "productivity-personal-assistant-l4EozO2deoaWFB8hOGwTY",
+   "code": "l4EozO2deoaWFB8hOGwTY",
+   "name": "Tesla Bot",
+   "author": "Matt Van Horn",
+   "description": "Controls your Tesla from this chat via tesla-pp-cli: climate, charge, locks, navigation, Superchargers, and charging…",
+   "url": "https://x.ai/bot/l4EozO2deoaWFB8hOGwTY"
+  },
+  {
+   "id": "productivity-personal-assistant-7eNHk3dIdqm41qsqQxUKd",
+   "code": "7eNHk3dIdqm41qsqQxUKd",
+   "name": "Tesla DJ",
+   "author": "Collin Goedken",
+   "description": "Spotify Premium playlist control for Tesla owners: add, move, undo and queue songs by chat.",
+   "url": "https://x.ai/bot/7eNHk3dIdqm41qsqQxUKd"
+  },
+  {
+   "id": "productivity-personal-assistant-TC4HAdm7oBVo-oAouU8iw",
+   "code": "TC4HAdm7oBVo-oAouU8iw",
+   "name": "Tesla Fleet Oracle",
+   "author": "Joseph",
+   "description": "Read-only Tesla Trek and XYO quest briefs that block lock, unlock, and honk commands.",
+   "url": "https://x.ai/bot/TC4HAdm7oBVo-oAouU8iw"
+  },
+  {
+   "id": "productivity-personal-assistant-DN-tPam1xDJUW5KUZwplD",
+   "code": "DN-tPam1xDJUW5KUZwplD",
+   "name": "Tesla Scout",
+   "author": "Llama Mama",
+   "description": "Hunts for a good used HW4 Tesla across channels, private sellers first, checks free Carfax or AutoCheck, recalls and fair price, and alerts only on worthy cars.",
+   "url": "https://x.ai/bot/DN-tPam1xDJUW5KUZwplD"
+  },
+  {
+   "id": "productivity-personal-assistant-qLvwv-PZIQzUF0xrCj7tj",
+   "code": "qLvwv-PZIQzUF0xrCj7tj",
+   "name": "Tesla ownership assistant",
+   "author": "Jason Liszewski",
+   "description": "A personal ownership assistant for Tesla owners.",
+   "url": "https://x.ai/bot/qLvwv-PZIQzUF0xrCj7tj"
+  },
+  {
+   "id": "productivity-personal-assistant-brwSBnhe7jg20IBJS0TVK",
+   "code": "brwSBnhe7jg20IBJS0TVK",
+   "name": "Teslascope",
+   "author": "teslascope",
+   "description": "Ask plain questions about your Tesla's trips, charging and status.",
+   "url": "https://x.ai/bot/brwSBnhe7jg20IBJS0TVK"
+  },
+  {
+   "id": "productivity-personal-assistant-ORVMog1njNFlU1OvOpT86",
+   "code": "ORVMog1njNFlU1OvOpT86",
+   "name": "Thank-You Note Drafter",
+   "author": "Mike Mosley",
+   "description": "Drafts one short, sincere thank-you note (card, email, or text) from what you tell it happened, plus an alternate opening line.",
+   "url": "https://x.ai/bot/ORVMog1njNFlU1OvOpT86"
+  },
+  {
+   "id": "productivity-personal-assistant-CvO94wB4V27zmL1haDbQL",
+   "code": "CvO94wB4V27zmL1haDbQL",
+   "name": "Thaw",
+   "author": "Ian Dunsmore",
+   "description": "Scores made-up water pipes for their chance of failing in the next 12 months using a synthetic-data random forest, and explains each result in plain English.",
+   "url": "https://x.ai/bot/CvO94wB4V27zmL1haDbQL"
+  },
+  {
+   "id": "productivity-personal-assistant-XilHVHieQQb5Wk1Rvw1Hu",
+   "code": "XilHVHieQQb5Wk1Rvw1Hu",
+   "name": "The Algorithm",
+   "author": "Wayne Lowry",
+   "description": "A blunt decision coach that runs every plan, process, or decision through Elon Musk's five-step algorithm, in order: question every requirement.",
+   "url": "https://x.ai/bot/XilHVHieQQb5Wk1Rvw1Hu"
+  },
+  {
+   "id": "productivity-personal-assistant-DF9kECnMLrxYyZarIUxwM",
+   "code": "DF9kECnMLrxYyZarIUxwM",
+   "name": "The Boss",
+   "author": "Dovell",
+   "description": "Executive coordinator for a Symfirm: waits for the owner’s direction, then keeps managers and Symployees aligned across operating companies - Access.",
+   "url": "https://x.ai/bot/DF9kECnMLrxYyZarIUxwM"
+  },
+  {
+   "id": "productivity-personal-assistant-o5jVbO-FDSnWU1fIZW7xv",
+   "code": "o5jVbO-FDSnWU1fIZW7xv",
+   "name": "The Boss",
+   "author": "David Kay",
+   "description": "Takes your goal, breaks it into tasks, delegates each to the right specialist, and assembles the final result. It doesn’t do the deep work itself — it.",
+   "url": "https://x.ai/bot/o5jVbO-FDSnWU1fIZW7xv"
+  },
+  {
+   "id": "productivity-personal-assistant-Wu7RQdOP-OY84e4NPOKqM",
+   "code": "Wu7RQdOP-OY84e4NPOKqM",
+   "name": "The Bouncer",
+   "author": "Dev",
+   "description": "A read-only follower checkup for your X account. It flags suspected bots and dead follows, shows who left and who your real fans are.",
+   "url": "https://x.ai/bot/Wu7RQdOP-OY84e4NPOKqM"
+  },
+  {
+   "id": "productivity-personal-assistant-dlSO3hj__nTZlJwpQB6oP",
+   "code": "dlSO3hj__nTZlJwpQB6oP",
+   "name": "The Chief",
+   "author": "Joe",
+   "description": "Chief of Staff for a multi-bot roster. Audits specialist skills daily, fixes group seats, suggests new bots, and routes…",
+   "url": "https://x.ai/bot/dlSO3hj__nTZlJwpQB6oP"
+  },
+  {
+   "id": "productivity-personal-assistant-s_nRtHcwThf1KCQ2Y122R",
+   "code": "s_nRtHcwThf1KCQ2Y122R",
+   "name": "The Gaffer",
+   "author": "Sai Girish",
+   "description": "Fantasy Premier League assistant: transfer, captain and bench calls, deadline-day briefs, injury and price alerts, FPL X scouting, mini-league tracking.",
+   "url": "https://x.ai/bot/s_nRtHcwThf1KCQ2Y122R"
+  },
+  {
+   "id": "productivity-personal-assistant-ox-cXp4RA3S_O8dK3DNih",
+   "code": "ox-cXp4RA3S_O8dK3DNih",
+   "name": "The Librarian",
+   "author": "Komal",
+   "description": "A library for your contracts, policies and any long document you might need to look back…",
+   "url": "https://x.ai/bot/ox-cXp4RA3S_O8dK3DNih"
+  },
+  {
+   "id": "productivity-personal-assistant-jZDmuZbKvUIELlYazIAuC",
+   "code": "jZDmuZbKvUIELlYazIAuC",
+   "name": "The Maitre D",
+   "author": "TeslaAiGirl",
+   "description": "Finds great restaurants and books your reservations. Tell it the night, party size, area, and vibe.",
+   "url": "https://x.ai/bot/jZDmuZbKvUIELlYazIAuC"
+  },
+  {
+   "id": "productivity-personal-assistant-ZTQNZCP_XiSq4yozGrGP-",
+   "code": "ZTQNZCP_XiSq4yozGrGP-",
+   "name": "The Tiebreaker",
+   "author": "Si Edge",
+   "description": "Give it a hard call: it argues both sides harder than you can, then drops the act, says what it really thinks and gives a shareable verdict card.",
+   "url": "https://x.ai/bot/ZTQNZCP_XiSq4yozGrGP-"
+  },
+  {
+   "id": "productivity-personal-assistant-wQHNsqt2KhOszyxMZ1xQ1",
+   "code": "wQHNsqt2KhOszyxMZ1xQ1",
+   "name": "Todo",
+   "author": "Scott Metcalf",
+   "description": "Captures a todo in your real task system, dedupes it, and closes it only when it is actually done.",
+   "url": "https://x.ai/bot/wQHNsqt2KhOszyxMZ1xQ1"
+  },
+  {
+   "id": "productivity-personal-assistant-42Clq7Vdn2X7zcwJ9OGxR",
+   "code": "42Clq7Vdn2X7zcwJ9OGxR",
+   "name": "Tolstoy",
+   "author": "@suddenlyjon",
+   "description": "Speak as Tolstoy’s moral attention — war and peace of ordinary life, truth-telling, simplicity. Converse.",
+   "url": "https://x.ai/bot/42Clq7Vdn2X7zcwJ9OGxR"
+  },
+  {
+   "id": "productivity-personal-assistant-uBeid1bvcA5rZogd24cV_",
+   "code": "uBeid1bvcA5rZogd24cV_",
+   "name": "Top 3",
+   "author": "prorookiegamer",
+   "description": "Cuts a sprawling to-do list to the three things that matter today, with optional 8am and 8pm check-ins.",
+   "url": "https://x.ai/bot/uBeid1bvcA5rZogd24cV_"
+  },
+  {
+   "id": "productivity-personal-assistant-gLczirGAo4JChujHoUnIq",
+   "code": "gLczirGAo4JChujHoUnIq",
+   "name": "Torque the Mechanic",
+   "author": "Aaron Schroeder",
+   "description": "Torque the Mechanic is your personal backyard mechanic for cars, motorcycles, trucks, bikes, e-bikes — if it has wheels…",
+   "url": "https://x.ai/bot/gLczirGAo4JChujHoUnIq"
+  },
+  {
+   "id": "productivity-personal-assistant-MXHrJsoIk1z-x98lVuMZN",
+   "code": "MXHrJsoIk1z-x98lVuMZN",
+   "name": "Trendspotting",
+   "author": "TheÐogeGlory",
+   "description": "A read-only assistant for X creators: a daily scan of your own posts with what worked and ideas for today, plus hourly…",
+   "url": "https://x.ai/bot/MXHrJsoIk1z-x98lVuMZN"
+  },
+  {
+   "id": "productivity-personal-assistant-sXaJXpHNSpaFq--oIg0Tl",
+   "code": "sXaJXpHNSpaFq--oIg0Tl",
+   "name": "TuneBot",
+   "author": "Steinunn",
+   "description": "Conversational investigator of human behaviour built on Tuning Theory: unpacks a pattern you repeat, what keeps it going, and one small reversible experiment.",
+   "url": "https://x.ai/bot/sXaJXpHNSpaFq--oIg0Tl"
+  },
+  {
+   "id": "productivity-personal-assistant-1LJHCwlTnAXBPkPo_Zbag",
+   "code": "1LJHCwlTnAXBPkPo_Zbag",
+   "name": "Tuner",
+   "author": "Forrest",
+   "description": "Finds free, public TV streams in the open iptv-org catalog, checks which ones actually load, and hands you links…",
+   "url": "https://x.ai/bot/1LJHCwlTnAXBPkPo_Zbag"
+  },
+  {
+   "id": "productivity-personal-assistant-ktQo2oRbLm4IA_c94YNWP",
+   "code": "ktQo2oRbLm4IA_c94YNWP",
+   "name": "Urlaubsfinder",
+   "author": "Marc",
+   "description": "Finds cheaper holidays across big OTAs like Booking and Expedia and compares total prices.",
+   "url": "https://x.ai/bot/ktQo2oRbLm4IA_c94YNWP"
+  },
+  {
+   "id": "productivity-personal-assistant-jQ8sPQbnCaXQdXV6CjTKL",
+   "code": "jQ8sPQbnCaXQdXV6CjTKL",
+   "name": "Usage Saver",
+   "author": "Daniel Rader",
+   "description": "Cut the cost and clutter of AI-assistant and agent tasks by shrinking context, picking the right tool, and skipping…",
+   "url": "https://x.ai/bot/jQ8sPQbnCaXQdXV6CjTKL"
+  },
+  {
+   "id": "productivity-personal-assistant-X5-FIfqf6nvR_3rMSHeU_",
+   "code": "X5-FIfqf6nvR_3rMSHeU_",
+   "name": "VA Claim Coach",
+   "author": "Stack Smarter",
+   "description": "A calm, plain-English coach for VA disability claims. It walks veterans through intent to file, evidence, personal and buddy statements.",
+   "url": "https://x.ai/bot/X5-FIfqf6nvR_3rMSHeU_"
+  },
+  {
+   "id": "productivity-personal-assistant-Cf4uWXahNuMbgMGPGF28_",
+   "code": "Cf4uWXahNuMbgMGPGF28_",
+   "name": "Vault Keeper",
+   "author": "Thomas Ferriere",
+   "description": "Keeps an Obsidian vault of notes and instructions for each of your Grok Bots: files what they learn, replaces stale notes, tidies nightly, syncs to your PC.",
+   "url": "https://x.ai/bot/Cf4uWXahNuMbgMGPGF28_"
+  },
+  {
+   "id": "productivity-personal-assistant-WF54VH2_GnEvhP50GtoWj",
+   "code": "WF54VH2_GnEvhP50GtoWj",
+   "name": "Venture Compass",
+   "author": "SOCIETI LILI",
+   "description": "Helps people with skills, experience, or ideas figure out which venture to focus on, through relaxed one-question-at-a-time chats.",
+   "url": "https://x.ai/bot/WF54VH2_GnEvhP50GtoWj"
+  },
+  {
+   "id": "productivity-personal-assistant-e9p9lk8EcUrrGXPI_cf4c",
+   "code": "e9p9lk8EcUrrGXPI_cf4c",
+   "name": "Visa割bot",
+   "author": "Daru",
+   "description": "Logs into Visa割 and spins every unused lottery or roulette offer it finds for you.",
+   "url": "https://x.ai/bot/e9p9lk8EcUrrGXPI_cf4c"
+  },
+  {
+   "id": "productivity-personal-assistant-1HdnMyIH9auGD7UDwZuWE",
+   "code": "1HdnMyIH9auGD7UDwZuWE",
+   "name": "WWJD",
+   "author": "i",
+   "description": "Ask any question, get WWJD insight grounded in Scripture.",
+   "url": "https://x.ai/bot/1HdnMyIH9auGD7UDwZuWE"
+  },
+  {
+   "id": "productivity-personal-assistant-YKuyXcI_7iX9Ur4psTUBL",
+   "code": "YKuyXcI_7iX9Ur4psTUBL",
+   "name": "Wallbit",
+   "author": "Rodrigo",
+   "description": "Unofficial assistant for your Wallbit account; not affiliated with or endorsed by Wallbit, and not financial advice.",
+   "url": "https://x.ai/bot/YKuyXcI_7iX9Ur4psTUBL"
+  },
+  {
+   "id": "productivity-personal-assistant-UNAWNDsF7GoEn5hDn3QLr",
+   "code": "UNAWNDsF7GoEn5hDn3QLr",
+   "name": "WalterBot",
+   "author": "Gregory Simpson",
+   "description": "A field diagnostics assistant for mechanics and techs. Send symptoms, codes, freeze frame, or photos and get ranked likely causes.",
+   "url": "https://x.ai/bot/UNAWNDsF7GoEn5hDn3QLr"
+  },
+  {
+   "id": "productivity-personal-assistant-GXjRtJa-fu5ZDHoBTEnk8",
+   "code": "GXjRtJa-fu5ZDHoBTEnk8",
+   "name": "Wardrobe: Closet and Outfit Planner",
+   "author": "Cat DittieDat",
+   "description": "Catalogs your closet from photos, reads your colour palette from a selfie, plans each week's outfits around calendar and weather, and spots real gaps.",
+   "url": "https://x.ai/bot/GXjRtJa-fu5ZDHoBTEnk8"
+  },
+  {
+   "id": "productivity-personal-assistant-EjbD-FgGMvAAvPqugx71m",
+   "code": "EjbD-FgGMvAAvPqugx71m",
+   "name": "Week Diff",
+   "author": "Andy",
+   "description": "Status rewrite of only what actually changed.",
+   "url": "https://x.ai/bot/EjbD-FgGMvAAvPqugx71m"
+  },
+  {
+   "id": "productivity-personal-assistant-sihBQMCqnaHpvRI0B0uRo",
+   "code": "sihBQMCqnaHpvRI0B0uRo",
+   "name": "Week → Plan",
+   "author": "Chill",
+   "description": "Paste priorities, fixed commitments, work blocks, deadlines, and energy limits.",
+   "url": "https://x.ai/bot/sihBQMCqnaHpvRI0B0uRo"
+  },
+  {
+   "id": "productivity-personal-assistant-CcUsSLHv-ffpCFNMiD2TO",
+   "code": "CcUsSLHv-ffpCFNMiD2TO",
+   "name": "Weekend Planner",
+   "author": "MikeTX",
+   "description": "Every Thursday it sends a short weekend plan with Friday, Saturday and Sunday picks plus backups, based on your city, company, budget and interests.",
+   "url": "https://x.ai/bot/CcUsSLHv-ffpCFNMiD2TO"
+  },
+  {
+   "id": "productivity-personal-assistant-GM_1Lh44jlHxEcT148pXg",
+   "code": "GM_1Lh44jlHxEcT148pXg",
+   "name": "What Would Jesus Do?",
+   "author": "fireitup365",
+   "description": "Life advice from Jesus’s recorded Gospel words only.",
+   "url": "https://x.ai/bot/GM_1Lh44jlHxEcT148pXg"
+  },
+  {
+   "id": "productivity-personal-assistant-st0b8YGRGW1UQa5mZVLtU",
+   "code": "st0b8YGRGW1UQa5mZVLtU",
+   "name": "What to Eat",
+   "author": "JeebsTX",
+   "description": "Can't decide what to eat? Answer a few quick questions and get 3 verified picks near you that are open right now.",
+   "url": "https://x.ai/bot/st0b8YGRGW1UQa5mZVLtU"
+  },
+  {
+   "id": "productivity-personal-assistant-BVZRTFiQOvAO1AfbwBjms",
+   "code": "BVZRTFiQOvAO1AfbwBjms",
+   "name": "WhatsApp Desk",
+   "author": "Nomis",
+   "description": "Read, summarise and reply to your own personal WhatsApp from chat, safely.",
+   "url": "https://x.ai/bot/BVZRTFiQOvAO1AfbwBjms"
+  },
+  {
+   "id": "productivity-personal-assistant-IwF-RUsXtrV-_TZl8Df6I",
+   "code": "IwF-RUsXtrV-_TZl8Df6I",
+   "name": "Where Did I Put That?",
+   "author": "Richard Durflinger",
+   "description": "A squirrel-themed memory sidekick for scattered brains.",
+   "url": "https://x.ai/bot/IwF-RUsXtrV-_TZl8Df6I"
+  },
+  {
+   "id": "productivity-personal-assistant-MIy2SVh11H4gXGxO5z6aj",
+   "code": "MIy2SVh11H4gXGxO5z6aj",
+   "name": "WhiskeyBotAI",
+   "author": "Brandon Cronise",
+   "description": "I'm the Whiskey Bot — free American whiskey reviews, comps, and tasting notes.",
+   "url": "https://x.ai/bot/MIy2SVh11H4gXGxO5z6aj"
+  },
+  {
+   "id": "productivity-personal-assistant-Z0WBoK2sucsOAqAXRpRb8",
+   "code": "Z0WBoK2sucsOAqAXRpRb8",
+   "name": "Windows Disk Cleaner",
+   "author": "Alexis",
+   "description": "Mac cleaner that scans with a rule catalog and deletes only what you approve.",
+   "url": "https://x.ai/bot/Z0WBoK2sucsOAqAXRpRb8"
+  },
+  {
+   "id": "productivity-personal-assistant-MgMR1BKLJ-C50WZIWBnfp",
+   "code": "MgMR1BKLJ-C50WZIWBnfp",
+   "name": "Wisc",
+   "author": "Jonathan",
+   "description": "Product designer for bot-native MVPs: tight loops, ship-this-week scope and a hard cut list.",
+   "url": "https://x.ai/bot/MgMR1BKLJ-C50WZIWBnfp"
+  },
+  {
+   "id": "productivity-personal-assistant-IeH0LoJLN8SdizGnjrw9i",
+   "code": "IeH0LoJLN8SdizGnjrw9i",
+   "name": "WoW Forever Codex",
+   "author": "Sagnamenn",
+   "description": "A WoW Forever companion for players. It live-checks Wowhead, Icy Veins, and Blizzard for quests, builds, patch notes…",
+   "url": "https://x.ai/bot/IeH0LoJLN8SdizGnjrw9i"
+  },
+  {
+   "id": "productivity-personal-assistant-OuFmCYQzbMgkiH8Bes1Wv",
+   "code": "OuFmCYQzbMgkiH8Bes1Wv",
+   "name": "Wordy",
+   "author": "Foundation Robots",
+   "description": "Sends you one uncommon English word every morning, with its meaning, an example sentence, usage tips, and a practice exercise.",
+   "url": "https://x.ai/bot/OuFmCYQzbMgkiH8Bes1Wv"
+  },
+  {
+   "id": "productivity-personal-assistant-WccXiAjk8dxdQvLtPqpAA",
+   "code": "WccXiAjk8dxdQvLtPqpAA",
+   "name": "Workbench Critic",
+   "author": "Flux",
+   "description": "Agent Workbench challenge specialist. Review supplied public evidence and peer candidates for unsupported claims, contradictions.",
+   "url": "https://x.ai/bot/WccXiAjk8dxdQvLtPqpAA"
+  },
+  {
+   "id": "productivity-personal-assistant-FG88_9tpncrhDfs7kjxUz",
+   "code": "FG88_9tpncrhDfs7kjxUz",
+   "name": "Workspace Assistant",
+   "author": "Stijn Mertens",
+   "description": "Personal assistant for Gmail, Google Calendar and Google Drive.",
+   "url": "https://x.ai/bot/FG88_9tpncrhDfs7kjxUz"
+  },
+  {
+   "id": "productivity-personal-assistant-MkG-J2nMNHByC033LoaDT",
+   "code": "MkG-J2nMNHByC033LoaDT",
+   "name": "World Spark",
+   "author": "Zerefs cosmos",
+   "description": "Installs and runs The Beast Box engine on its computer with a dashboard, local transformer, and switchable model brains.",
+   "url": "https://x.ai/bot/MkG-J2nMNHByC033LoaDT"
+  },
+  {
+   "id": "productivity-personal-assistant-hY1y_GRidAOhkE72Hr97z",
+   "code": "hY1y_GRidAOhkE72Hr97z",
+   "name": "X Coach",
+   "author": "OUNCE",
+   "description": "언제, 어디에, 무엇을 올릴지 내 말투와 패턴으로 추천해요.",
+   "url": "https://x.ai/bot/hY1y_GRidAOhkE72Hr97z"
+  },
+  {
+   "id": "productivity-personal-assistant-e3jmMweGAwbD4JlUCzHXy",
+   "code": "e3jmMweGAwbD4JlUCzHXy",
+   "name": "X Financial Scanner",
+   "author": "Dennis",
+   "description": "Read-only X markets desk.",
+   "url": "https://x.ai/bot/e3jmMweGAwbD4JlUCzHXy"
+  },
+  {
+   "id": "productivity-personal-assistant-SnyZeBoBxGzaMJfpKt9R_",
+   "code": "SnyZeBoBxGzaMJfpKt9R_",
+   "name": "X Reading Assistant",
+   "author": "Ethan S",
+   "description": "Turns the X posts you read into a Notion reading log: send a link, and it reads the full post, writes a short summary, tags the topic.",
+   "url": "https://x.ai/bot/SnyZeBoBxGzaMJfpKt9R_"
+  },
+  {
+   "id": "productivity-personal-assistant-J7OPBxlsIUZB7IoXoB5wE",
+   "code": "J7OPBxlsIUZB7IoXoB5wE",
+   "name": "X assistant",
+   "author": "Dragos Roua",
+   "description": "Watches your X mentions, topics, and product names, then sends a short weekday morning rundown of what needs you…",
+   "url": "https://x.ai/bot/J7OPBxlsIUZB7IoXoB5wE"
+  },
+  {
+   "id": "productivity-personal-assistant--BSF-GvKDn85r43_uSgPa",
+   "code": "-BSF-GvKDn85r43_uSgPa",
+   "name": "X处理互关不回",
+   "author": "x x",
+   "description": "治理 X 关注关系：每日清理未回关、可选互关拓号、有人关我则回关。读关系用官方插件，写操作须确认后在本机浏览器限速执行。.",
+   "url": "https://x.ai/bot/-BSF-GvKDn85r43_uSgPa"
+  },
+  {
+   "id": "productivity-personal-assistant-lQyIEp3Wqbm8X78tLTa-8",
+   "code": "lQyIEp3Wqbm8X78tLTa-8",
+   "name": "X運用アドバイザー",
+   "author": "Shimpei",
+   "description": "Weekly consultant-style reports on your X account, every action human-approved.",
+   "url": "https://x.ai/bot/lQyIEp3Wqbm8X78tLTa-8"
+  },
+  {
+   "id": "productivity-personal-assistant-0y-dcpVFqFkjibKs2M48D",
+   "code": "0y-dcpVFqFkjibKs2M48D",
+   "name": "YC Podcast Notes",
+   "author": "Sumer Malhotra",
+   "description": "Checks Y Combinator podcasts every hour, flags new episodes, and sends short founder-useful notes with startup-idea…",
+   "url": "https://x.ai/bot/0y-dcpVFqFkjibKs2M48D"
+  },
+  {
+   "id": "productivity-personal-assistant-Rk8tYkT8dM9QbhsAci5lh",
+   "code": "Rk8tYkT8dM9QbhsAci5lh",
+   "name": "Yolk",
+   "author": "JP Costa",
+   "description": "A Tamagotchi egg in your sidebar that wants feeding four times a day.",
+   "url": "https://x.ai/bot/Rk8tYkT8dM9QbhsAci5lh"
+  },
+  {
+   "id": "productivity-personal-assistant-6zPadTDV2Y7uAt_qbNxzM",
+   "code": "6zPadTDV2Y7uAt_qbNxzM",
+   "name": "Zapier",
+   "author": "Jethro Jones",
+   "description": "An assistant that connects your apps through Zapier and builds, runs, and troubleshoots automations for you.",
+   "url": "https://x.ai/bot/6zPadTDV2Y7uAt_qbNxzM"
+  },
+  {
+   "id": "productivity-personal-assistant-dadANmm6M496kgq3qgBJ3",
+   "code": "dadANmm6M496kgq3qgBJ3",
+   "name": "Zealt Chief of Staff",
+   "author": "Atlan Nick",
+   "description": "Coordinates a specialist bot team for a social photo app: Scout world moments, Marketing, Social, Idea Lab, and Knowledge. Keeps lanes clear and growth.",
+   "url": "https://x.ai/bot/dadANmm6M496kgq3qgBJ3"
+  },
+  {
+   "id": "productivity-personal-assistant-35ZO_vGqk_ch51C9qPX1c",
+   "code": "35ZO_vGqk_ch51C9qPX1c",
+   "name": "Zettelkasten",
+   "author": "Pete",
+   "description": "A slip-box partner for an Obsidian vault that files atomic notes only after you say yes.",
+   "url": "https://x.ai/bot/35ZO_vGqk_ch51C9qPX1c"
+  },
+  {
+   "id": "productivity-personal-assistant-aDoTDLUcFjrjahN64Ymqv",
+   "code": "aDoTDLUcFjrjahN64Ymqv",
+   "name": "Zevy -Chief of Staff",
+   "author": "Margaret Shultis",
+   "description": "Family-office chief of staff: routes work to specialist seats, builds multi-seat decision packets and runs a weekly principal brief.",
+   "url": "https://x.ai/bot/aDoTDLUcFjrjahN64Ymqv"
+  },
+  {
+   "id": "productivity-personal-assistant-VPQ4SN_C3lAcgFHOk79Wh",
+   "code": "VPQ4SN_C3lAcgFHOk79Wh",
+   "name": "brobot",
+   "author": "edmundo ponce",
+   "description": "A 30-second daily check-in that asks how you feel before what you'll get done.",
+   "url": "https://x.ai/bot/VPQ4SN_C3lAcgFHOk79Wh"
+  },
+  {
+   "id": "productivity-personal-assistant-A-u45QsGO7eyt6d1zbwuU",
+   "code": "A-u45QsGO7eyt6d1zbwuU",
+   "name": "burrito",
+   "author": "Alberto Jauregui",
+   "description": "Finds the best burrito spots in New York City for where you are and what you're craving, with verified hours and what to order.",
+   "url": "https://x.ai/bot/A-u45QsGO7eyt6d1zbwuU"
+  },
+  {
+   "id": "productivity-personal-assistant-182OWDI636IzNxEUUnMsU",
+   "code": "182OWDI636IzNxEUUnMsU",
+   "name": "daily bangers",
+   "author": "Leon",
+   "description": "Your daily X coach. It suggests topics from your profile, turns rough thoughts into short posts ready to go, and sends…",
+   "url": "https://x.ai/bot/182OWDI636IzNxEUUnMsU"
+  },
+  {
+   "id": "productivity-personal-assistant-LL-lWnZ2HgpzTRFFAemHA",
+   "code": "LL-lWnZ2HgpzTRFFAemHA",
+   "name": "dot",
+   "author": "dmitry",
+   "description": "A warm, concise desktop assistant.",
+   "url": "https://x.ai/bot/LL-lWnZ2HgpzTRFFAemHA"
+  },
+  {
+   "id": "productivity-personal-assistant-WcEvLjD12fIJCW7xjbuea",
+   "code": "WcEvLjD12fIJCW7xjbuea",
+   "name": "firstlight",
+   "author": "P-Jay G.",
+   "description": "Onboards new Grok Bot users by doing small real tasks for first memory, first routine, and first automation.",
+   "url": "https://x.ai/bot/WcEvLjD12fIJCW7xjbuea"
+  },
+  {
+   "id": "productivity-personal-assistant-YOqFuamIFV3WdNNHYVt9L",
+   "code": "YOqFuamIFV3WdNNHYVt9L",
+   "name": "fomo pilled",
+   "author": "Varun",
+   "description": "Events scout for the metro and timezone you set when you add it.",
+   "url": "https://x.ai/bot/YOqFuamIFV3WdNNHYVt9L"
+  },
+  {
+   "id": "productivity-personal-assistant-bko5cKY1YJSBuKs7WOHqd",
+   "code": "bko5cKY1YJSBuKs7WOHqd",
+   "name": "gretta",
+   "author": "Kim Hoffman",
+   "description": "Chief of staff and personal secretary for busy, high-stakes life admin. Scans email and files first, drafts calm paper-trail correspondence, paces work.",
+   "url": "https://x.ai/bot/bko5cKY1YJSBuKs7WOHqd"
+  },
+  {
+   "id": "productivity-personal-assistant-zMaSb6XeERHgyCNQXPxeS",
+   "code": "zMaSb6XeERHgyCNQXPxeS",
+   "name": "matters global",
+   "author": "Matthias Röder e/acc",
+   "description": "A calm planning coach that turns your goals into a small graph of what has to happen first, then tells you the one thing you can act on today.",
+   "url": "https://x.ai/bot/zMaSb6XeERHgyCNQXPxeS"
+  },
+  {
+   "id": "productivity-personal-assistant-Ey28W_8uyJPN_DS_M2CvD",
+   "code": "Ey28W_8uyJPN_DS_M2CvD",
+   "name": "multiBot",
+   "author": "med",
+   "description": "Spawns CLI-delegated teammates via CreateAgent so Grok only orchestrates and the CLI does the deep work.",
+   "url": "https://x.ai/bot/Ey28W_8uyJPN_DS_M2CvD"
+  },
+  {
+   "id": "productivity-personal-assistant-tukhb8f4XyUJFkRWlHWaz",
+   "code": "tukhb8f4XyUJFkRWlHWaz",
+   "name": "obsidian",
+   "author": "Alberto Jauregui",
+   "description": "CLI-first Obsidian specialist that owns a local vault as a second brain.",
+   "url": "https://x.ai/bot/tukhb8f4XyUJFkRWlHWaz"
+  },
+  {
+   "id": "productivity-personal-assistant-tukhb8f4xyujfkrwlhwaz",
+   "code": "tukhb8f4xyujfkrwlhwaz",
+   "name": "obsidian",
+   "author": "Alberto",
+   "description": "CLI-first Obsidian specialist for your Grok Bot computer.",
+   "url": "https://x.ai/bot/tukhb8f4xyujfkrwlhwaz"
+  },
+  {
+   "id": "productivity-personal-assistant-zVv7bP2kXN3H72iSUjvlM",
+   "code": "zVv7bP2kXN3H72iSUjvlM",
+   "name": "pstack Coach",
+   "author": "Ossie Irondi",
+   "description": "Tell it what you're trying to do in plain English and it hands back the right pstack skill and a prompt you can paste, matched to your own model setup.",
+   "url": "https://x.ai/bot/zVv7bP2kXN3H72iSUjvlM"
+  },
+  {
+   "id": "productivity-personal-assistant-CC1AIGOO4qgffVapUzznc",
+   "code": "CC1AIGOO4qgffVapUzznc",
+   "name": "referral scout",
+   "author": "Yiran",
+   "description": "A LinkedIn networking assistant for job seekers. It researches people at your target companies, drafts personalized connect notes and follow-ups.",
+   "url": "https://x.ai/bot/CC1AIGOO4qgffVapUzznc"
+  },
+  {
+   "id": "productivity-personal-assistant-kzRUNSKJpzatmaseduVUn",
+   "code": "kzRUNSKJpzatmaseduVUn",
+   "name": "taco",
+   "author": "Alberto Jauregui",
+   "description": "Finds the best taco spots in New York City for where you are and what you're craving, with ranked, verified picks and what to order.",
+   "url": "https://x.ai/bot/kzRUNSKJpzatmaseduVUn"
+  },
+  {
+   "id": "productivity-personal-assistant-qHrZTkRcRhG6QuBYt1MvA",
+   "code": "qHrZTkRcRhG6QuBYt1MvA",
+   "name": "étincelle",
+   "author": "Bertrand",
+   "description": "French brainstorm partner: wild ideas, Socratic coaching, devil’s advocate.",
+   "url": "https://x.ai/bot/qHrZTkRcRhG6QuBYt1MvA"
+  },
+  {
+   "id": "productivity-personal-assistant-w_ZtwODCJMhKuq6k0Nz4k",
+   "code": "w_ZtwODCJMhKuq6k0Nz4k",
+   "name": "かしこくディズニー：パークの段取り名人",
+   "author": "ratori3",
+   "description": "Plans a Disney park day: picking dates, reading crowds, smart routes and same-day plan changes.",
+   "url": "https://x.ai/bot/w_ZtwODCJMhKuq6k0Nz4k"
+  },
+  {
+   "id": "productivity-personal-assistant-ZGchiLLX_A1LAOjsg9iOD",
+   "code": "ZGchiLLX_A1LAOjsg9iOD",
+   "name": "かわいい女の子メーカー",
+   "author": "馬場",
+   "description": "When you're down or worn out, it sends a photoreal selfie of a fictional girl along with a word of encouragement.",
+   "url": "https://x.ai/bot/ZGchiLLX_A1LAOjsg9iOD"
+  },
+  {
+   "id": "productivity-personal-assistant-msP4lEtyQNghyO-mqnXyR",
+   "code": "msP4lEtyQNghyO-mqnXyR",
+   "name": "みみ",
+   "author": "ぐそくむしちゃん",
+   "description": "Casual chat as the fictional character Mimi.",
+   "url": "https://x.ai/bot/msP4lEtyQNghyO-mqnXyR"
+  },
+  {
+   "id": "productivity-personal-assistant-PqgO8EMZjN_SUdcvEmsRF",
+   "code": "PqgO8EMZjN_SUdcvEmsRF",
+   "name": "基础设施和api接入",
+   "author": "valstry",
+   "description": "Wires shared LLM APIs and keys, then spins up agents with clear roles.",
+   "url": "https://x.ai/bot/PqgO8EMZjN_SUdcvEmsRF"
+  },
+  {
+   "id": "productivity-personal-assistant-1FdFXIOGIu8DwXJqVS0lk",
+   "code": "1FdFXIOGIu8DwXJqVS0lk",
+   "name": "推し活マネージャー",
+   "author": "sidejob_AJ",
+   "description": "Each morning rounds up ticket lotteries, merch drops and appearances for the idols you follow, sorted by deadline. It never applies or buys for you.",
+   "url": "https://x.ai/bot/1FdFXIOGIu8DwXJqVS0lk"
+  },
+  {
+   "id": "productivity-personal-assistant-5-Z7B9wsV30D1giDoqM7a",
+   "code": "5-Z7B9wsV30D1giDoqM7a",
+   "name": "旅遊與日常短片睡醒自動剪輯助手",
+   "author": "wosiinmo",
+   "description": "出門玩拍了一堆影片懶得剪？把零碎片段或想法丟進來，自動幫你抓出前 3 秒吸睛鉤子、故事分鏡與大白話字幕腳本，睡醒就能輕鬆出片！.",
+   "url": "https://x.ai/bot/5-Z7B9wsV30D1giDoqM7a"
+  },
+  {
+   "id": "productivity-personal-assistant-IoAHIj45_pUJYsw7mqLP6",
+   "code": "IoAHIj45_pUJYsw7mqLP6",
+   "name": "桜草メイ",
+   "author": "Masaki",
+   "description": "Japanese companion bot for daily notes and light creative warmups.",
+   "url": "https://x.ai/bot/IoAHIj45_pUJYsw7mqLP6"
+  },
+  {
+   "id": "productivity-personal-assistant-XPiIoybgpw_Oo2QmOQ9AR",
+   "code": "XPiIoybgpw_Oo2QmOQ9AR",
+   "name": "次の日の献立 自動化",
+   "author": "フクベイ｜健康食アンバサダー",
+   "description": "今日食べたものの写真を送るだけで、明日の朝ごはん・ランチ・夜ごはんにぴったりのレシピをXから探して、ポストのスクショ付きで提案します。栄養バランスを整えたい人向けです。.",
+   "url": "https://x.ai/bot/XPiIoybgpw_Oo2QmOQ9AR"
+  },
+  {
+   "id": "productivity-personal-assistant-ldYzNC3pT-8H4S3hFXlPV",
+   "code": "ldYzNC3pT-8H4S3hFXlPV",
+   "name": "演出蹲票助手",
+   "author": "huang zheheng",
+   "description": "盯演唱会/演出官网与转售价，有开售、补票或价变才提醒；不代下单、不抢购。导入后填你要盯的场次即可。.",
+   "url": "https://x.ai/bot/ldYzNC3pT-8H4S3hFXlPV"
+  },
+  {
+   "id": "productivity-personal-assistant-ypw0jJWI7HEuitbV1DLWB",
+   "code": "ypw0jJWI7HEuitbV1DLWB",
+   "name": "玄學統計大師",
+   "author": "Twood",
+   "description": "Bilingual Chinese metaphysics assistant. BaZi-first with optional systems; English-first mode, timezone-aware casting, topic-first flow.",
+   "url": "https://x.ai/bot/ypw0jJWI7HEuitbV1DLWB"
+  },
+  {
+   "id": "productivity-personal-assistant-aeE3iKjj5xfDmx_dolbll",
+   "code": "aeE3iKjj5xfDmx_dolbll",
+   "name": "真Deviフレーム Type2トライアル",
+   "author": "星宮",
+   "description": "Trial Devi frame connector for Hoshimiya; final judgment stays with the user.",
+   "url": "https://x.ai/bot/aeE3iKjj5xfDmx_dolbll"
+  },
+  {
+   "id": "productivity-personal-assistant-ITlcCg5qmofuiQwUvSg3w",
+   "code": "ITlcCg5qmofuiQwUvSg3w",
+   "name": "知到刷课",
+   "author": "lv_chen2006",
+   "description": "帮你登录智慧树知到，查看课程进度，并连续播放未看完的视频。适合要自己盯网课进度的同学。.",
+   "url": "https://x.ai/bot/ITlcCg5qmofuiQwUvSg3w"
+  },
+  {
+   "id": "productivity-personal-assistant-Ek9omUpu5Rgg19dFiIGzC",
+   "code": "Ek9omUpu5Rgg19dFiIGzC",
+   "name": "神叨叨 MythTeller",
+   "author": "卫平 钟",
+   "description": "Tells classic Chinese myths in English for Mandarin learners, each ending with one short Chinese line to say out loud…",
+   "url": "https://x.ai/bot/Ek9omUpu5Rgg19dFiIGzC"
+  },
+  {
+   "id": "productivity-personal-assistant-ZCm7Z2hxDPeGPmMIpjCId",
+   "code": "ZCm7Z2hxDPeGPmMIpjCId",
+   "name": "精神メンタル・アドバイザー",
+   "author": "Shimpei",
+   "description": "Sorts old journal notes into fact, impression and unverified, then proposes next steps.",
+   "url": "https://x.ai/bot/ZCm7Z2hxDPeGPmMIpjCId"
+  },
+  {
+   "id": "productivity-personal-assistant-v8nMQkbhy-BxXDftZkabs",
+   "code": "v8nMQkbhy-BxXDftZkabs",
+   "name": "老闆每日 3 分鐘商業情報與早報秘書",
+   "author": "建蒲 陳",
+   "description": "不用再辛苦刷新聞！每天幫你過濾全球商業與 AI 變現趨勢，把落落長的資訊濃縮成「3 分鐘大白話重點」，讓你開會、聊天都有內行梗。.",
+   "url": "https://x.ai/bot/v8nMQkbhy-BxXDftZkabs"
+  },
+  {
+   "id": "productivity-personal-assistant-4olj8YlToV_vsMr7MFw04",
+   "code": "4olj8YlToV_vsMr7MFw04",
+   "name": "街头教练",
+   "author": "Cola",
+   "description": "A street photography coach: sets practice drills, critiques your shots, helps recrop and color grade, and finds examples for your camera and lens.",
+   "url": "https://x.ai/bot/4olj8YlToV_vsMr7MFw04"
+  },
+  {
+   "id": "productivity-personal-assistant-LzbEuYYioxCKhdpdIc7d8",
+   "code": "LzbEuYYioxCKhdpdIc7d8",
+   "name": "记忆清理",
+   "author": "Oviya",
+   "description": "Reviews agent memory by topic, shows the keep rule and old copies, then deletes only after you approve.",
+   "url": "https://x.ai/bot/LzbEuYYioxCKhdpdIc7d8"
+  },
+  {
+   "id": "productivity-personal-assistant-K5q7rTJwo5yij06zM1HR7",
+   "code": "K5q7rTJwo5yij06zM1HR7",
+   "name": "闲鱼上架助手",
+   "author": "nocommentyetinx",
+   "description": "帮你在闲鱼做对标、文案、主图和填表；默认停在发布前，你点头才发布。不代实名、人脸或收款。.",
+   "url": "https://x.ai/bot/K5q7rTJwo5yij06zM1HR7"
+  },
+  {
+   "id": "productivity-personal-assistant-hjyt5yvxhy5d548asa1ul",
+   "code": "hjyt5yvxhy5d548asa1ul",
+   "name": "音声操作PCアシスタント（スマホで挙動確認可能）",
+   "author": "Mishiro",
+   "description": "ベッドにいながら声でPCを操作できるアシスタントです。決まった操作はPCがその場で実行し、それ以外の頼みごとはGrok Botが引き受けて、結果をスマホに知らせます。.",
+   "url": "https://x.ai/bot/hjyt5yvxhy5d548asa1ul"
+  },
+  {
+   "id": "productivity-personal-assistant-g17AUEbD0Oo-5b1HDpuQB",
+   "code": "g17AUEbD0Oo-5b1HDpuQB",
+   "name": "부업봇",
+   "author": "꼬마",
+   "description": "Validates demand, makes digital goods, and lists them without chasing dead channels.",
+   "url": "https://x.ai/bot/g17AUEbD0Oo-5b1HDpuQB"
+  },
+  {
+   "id": "productivity-personal-assistant-xbQ3-2zMNc1hma58OiaTg",
+   "code": "xbQ3-2zMNc1hma58OiaTg",
+   "name": "세금 파일링 어시스턴트",
+   "author": "Brian",
+   "description": "Proactive in action: it gathers reports from the bots you already run, imagines what's coming weeks ahead, and tells you what to do next.",
+   "url": "https://x.ai/bot/xbQ3-2zMNc1hma58OiaTg"
+  },
+  {
+   "id": "productivity-personal-assistant-8mY6Sc_C7adwtSv8_ITs7",
+   "code": "8mY6Sc_C7adwtSv8_ITs7",
+   "name": "한국어 교정봇",
+   "author": "Moon Kim",
+   "description": "한국어 원고·메일·강의 대본·SNS 초안을 교정하고, 교정본과 원고 대조를 짧게 돌려주는 봇입니다.",
+   "url": "https://x.ai/bot/8mY6Sc_C7adwtSv8_ITs7"
+  }
+ ]
+}

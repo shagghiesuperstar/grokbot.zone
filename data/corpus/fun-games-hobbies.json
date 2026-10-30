@@ -1,0 +1,1112 @@
+{
+ "slug": "fun-games-hobbies",
+ "label": "Fun, Games & Hobbies",
+ "count": 138,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "fun-games-hobbies-XkF09ethFKIjqOVedEHVU",
+   "code": "XkF09ethFKIjqOVedEHVU",
+   "name": "AFL Fantasy",
+   "author": "Hernan",
+   "description": "Your AFL Fantasy companion. It builds your 30-man squad with premiums and cash-making rookies, and plans captains, trades and byes each round.",
+   "url": "https://x.ai/bot/XkF09ethFKIjqOVedEHVU"
+  },
+  {
+   "id": "fun-games-hobbies-FNz_orjxTZx-nhrqGZS-W",
+   "code": "FNz_orjxTZx-nhrqGZS-W",
+   "name": "All in Fantasy League",
+   "author": "Frances Reyes",
+   "description": "A fantasy football assistant that watches your league, gives start/sit and waiver advice, tracks injuries and league history, and posts a weekly recap.",
+   "url": "https://x.ai/bot/FNz_orjxTZx-nhrqGZS-W"
+  },
+  {
+   "id": "fun-games-hobbies-dHEtlzVrG2zWzLwasCWII",
+   "code": "dHEtlzVrG2zWzLwasCWII",
+   "name": "Android / Play Build Engineer",
+   "author": "Vet",
+   "description": "Ships Android games and apps to Google Play: Godot 4 → AAB by default, debug APKs for sideload, version bumps, and clear Internal → Closed → Production.",
+   "url": "https://x.ai/bot/dHEtlzVrG2zWzLwasCWII"
+  },
+  {
+   "id": "fun-games-hobbies-MNAkssnLggwp3t74suuPs",
+   "code": "MNAkssnLggwp3t74suuPs",
+   "name": "Baseball Score Alerts",
+   "author": "@SouthernLvg",
+   "description": "Skip watching whole MLB games. This bot pings you when a game hits the 4th inning, whenever someone scores, and at the final.",
+   "url": "https://x.ai/bot/MNAkssnLggwp3t74suuPs"
+  },
+  {
+   "id": "fun-games-hobbies-mtGRHIWa1c9SOeRGrTB8_",
+   "code": "mtGRHIWa1c9SOeRGrTB8_",
+   "name": "Betting Desk",
+   "author": "STU",
+   "description": "A disciplined sports-betting analyst for MLB, NFL, NBA, and college football.",
+   "url": "https://x.ai/bot/mtGRHIWa1c9SOeRGrTB8_"
+  },
+  {
+   "id": "fun-games-hobbies-gyMx_xOIoH8wUHS0muoPG",
+   "code": "gyMx_xOIoH8wUHS0muoPG",
+   "name": "Birthday Message Bot",
+   "author": "Queen",
+   "description": "Never miss a friend's birthday. It gathers birthdays from your calendars and Facebook and has a warm, personal message…",
+   "url": "https://x.ai/bot/gyMx_xOIoH8wUHS0muoPG"
+  },
+  {
+   "id": "fun-games-hobbies-DXeU034GDB3ouYxKUseCv",
+   "code": "DXeU034GDB3ouYxKUseCv",
+   "name": "Boker",
+   "author": "U.S. ConstitutEOINalist",
+   "description": "Builds you a free browser poker game against three bot opponents with real personalities, dealt by deAIler and refereed by JudgAIe. Play chips only.",
+   "url": "https://x.ai/bot/DXeU034GDB3ouYxKUseCv"
+  },
+  {
+   "id": "fun-games-hobbies-Kjrs_CyguEtTblUf1DvhO",
+   "code": "Kjrs_CyguEtTblUf1DvhO",
+   "name": "Bundesliga Fantasy",
+   "author": "Hernan",
+   "description": "Your Bundesliga Fantasy companion. It builds your squad and suggests formation, lineup, Stars and transfers every matchday, with data.",
+   "url": "https://x.ai/bot/Kjrs_CyguEtTblUf1DvhO"
+  },
+  {
+   "id": "fun-games-hobbies-zFmK_Bao-y1ikFsfEH9wq",
+   "code": "zFmK_Bao-y1ikFsfEH9wq",
+   "name": "CBS Sports Fantasy",
+   "author": "Hernan",
+   "description": "Your CBS Sports Fantasy companion. Weekly lineup, waiver, trade and drop ideas backed by data, with a safe and a risky option.",
+   "url": "https://x.ai/bot/zFmK_Bao-y1ikFsfEH9wq"
+  },
+  {
+   "id": "fun-games-hobbies-oPcskUMa2HP0xX-LGrhCq",
+   "code": "oPcskUMa2HP0xX-LGrhCq",
+   "name": "CFL Fantasy",
+   "author": "Hernan",
+   "description": "Your CFL Fantasy companion for the official Canadian Football League game. It helps you draft and plans weekly starters and waivers with data.",
+   "url": "https://x.ai/bot/oPcskUMa2HP0xX-LGrhCq"
+  },
+  {
+   "id": "fun-games-hobbies-BiTPBoEJhobz6_twtsFFr",
+   "code": "BiTPBoEJhobz6_twtsFFr",
+   "name": "Canon",
+   "author": "Dindu Nuffin",
+   "description": "Continuity engine for writers and game designers building a multi-part world: keeps a living series bible, flags continuity risks, writes on-canon prompts.",
+   "url": "https://x.ai/bot/BiTPBoEJhobz6_twtsFFr"
+  },
+  {
+   "id": "fun-games-hobbies-B5UMQzelNds6Iy2nuFrka",
+   "code": "B5UMQzelNds6Iy2nuFrka",
+   "name": "CarmackBot",
+   "author": "Marcus Körner",
+   "description": "A first-principles game-engine and firmware specialist for small hobby games. Ships the smallest stack that runs.",
+   "url": "https://x.ai/bot/B5UMQzelNds6Iy2nuFrka"
+  },
+  {
+   "id": "fun-games-hobbies-siOPn4rrhYDDJSn-_dXtk",
+   "code": "siOPn4rrhYDDJSn-_dXtk",
+   "name": "Cartola FC",
+   "author": "Hernan",
+   "description": "Your Cartola FC companion for the Brasileirão fantasy game. It builds your team each rodada with data, picks your captain and guides the market.",
+   "url": "https://x.ai/bot/siOPn4rrhYDDJSn-_dXtk"
+  },
+  {
+   "id": "fun-games-hobbies-O5VHRnZtVR2SYPASisPdc",
+   "code": "O5VHRnZtVR2SYPASisPdc",
+   "name": "Chess Coach",
+   "author": "Maximilian Rehn",
+   "description": "A chess coach that reads your whole chess.com game history, finds your best and worst openings and recurring mistakes, and builds a repertoi.",
+   "url": "https://x.ai/bot/O5VHRnZtVR2SYPASisPdc"
+  },
+  {
+   "id": "fun-games-hobbies-ozEfaAFJMDGoB-ysym8_V",
+   "code": "ozEfaAFJMDGoB-ysym8_V",
+   "name": "Clipper",
+   "author": "X Girls",
+   "description": "Turns videos into short clips and captioned GIFs, picking the joke itself.",
+   "url": "https://x.ai/bot/ozEfaAFJMDGoB-ysym8_V"
+  },
+  {
+   "id": "fun-games-hobbies-UYdkpfZSu4O6N8_cRXpJO",
+   "code": "UYdkpfZSu4O6N8_cRXpJO",
+   "name": "D2R VR Helper",
+   "author": "Oliver Cote",
+   "description": "Helps you install, update, and fix the D2R PCVR mod so you can play Diablo II: Resurrected in VR on a Windows PC.",
+   "url": "https://x.ai/bot/UYdkpfZSu4O6N8_cRXpJO"
+  },
+  {
+   "id": "fun-games-hobbies-0wdUJytrrRr2lUZJy_8_-",
+   "code": "0wdUJytrrRr2lUZJy_8_-",
+   "name": "Dad Joke Daily",
+   "author": "Randy Hentz",
+   "description": "Sends one fresh, kid-safe dad joke every day at the time you pick, never repeats one, and never posts after your cutoff time.",
+   "url": "https://x.ai/bot/0wdUJytrrRr2lUZJy_8_-"
+  },
+  {
+   "id": "fun-games-hobbies-uazsEFuF8DLx5t84d8W-h",
+   "code": "uazsEFuF8DLx5t84d8W-h",
+   "name": "Daily Gratitude",
+   "author": "Al",
+   "description": "A gratitude companion that suggests one small, personalized thank-you action each day, like texting a friend who helped or leaving a review…",
+   "url": "https://x.ai/bot/uazsEFuF8DLx5t84d8W-h"
+  },
+  {
+   "id": "fun-games-hobbies-EEGUQoXtF1ViyFXzVrRnc",
+   "code": "EEGUQoXtF1ViyFXzVrRnc",
+   "name": "Dale",
+   "author": "Jim",
+   "description": "A game builder that turns a one-line game idea into paste-ready Grok Build prompts: an opening build prompt, ordered refine prompts, and a playtest…",
+   "url": "https://x.ai/bot/EEGUQoXtF1ViyFXzVrRnc"
+  },
+  {
+   "id": "fun-games-hobbies-ljsQsKqeSSKODwpiqn5E3",
+   "code": "ljsQsKqeSSKODwpiqn5E3",
+   "name": "Disco Bot",
+   "author": "Darryl Lopes",
+   "description": "A fun bot that flashes through its profile colours like a disco light when you say \"disco bot mode\", and can switch to a fresh colour every morning.",
+   "url": "https://x.ai/bot/ljsQsKqeSSKODwpiqn5E3"
+  },
+  {
+   "id": "fun-games-hobbies-I1EBnVBj1GRgEvq98e1UG",
+   "code": "I1EBnVBj1GRgEvq98e1UG",
+   "name": "ESPN Fantasy Voetbal (Eredivisie)",
+   "author": "Hernan",
+   "description": "Your ESPN Fantasy Voetbal companion for the official Eredivisie game: team, captain and transfers each round, backed by data.",
+   "url": "https://x.ai/bot/I1EBnVBj1GRgEvq98e1UG"
+  },
+  {
+   "id": "fun-games-hobbies-p4uICnQRYvNKTZBQWSJT6",
+   "code": "p4uICnQRYvNKTZBQWSJT6",
+   "name": "ESPN NFL Fantasy",
+   "author": "Hernan",
+   "description": "Your ESPN NFL Fantasy companion. It helps you draft, set your weekly lineup and work waivers and trades with data and a safe and a risky option.",
+   "url": "https://x.ai/bot/p4uICnQRYvNKTZBQWSJT6"
+  },
+  {
+   "id": "fun-games-hobbies-J5Dsc4MCyILO40ejMMELk",
+   "code": "J5Dsc4MCyILO40ejMMELk",
+   "name": "Eddie — Fantasy Football GM",
+   "author": "Bill Jenson",
+   "description": "Fantasy football GM for Fantrax, Sleeper, ESPN or Yahoo: daily roster and FAAB syncs, waiver and trade analysis, pregame injury and weather checks.",
+   "url": "https://x.ai/bot/J5Dsc4MCyILO40ejMMELk"
+  },
+  {
+   "id": "fun-games-hobbies-pz2um7NfQ8qIeisEuBBiT",
+   "code": "pz2um7NfQ8qIeisEuBBiT",
+   "name": "Elrond",
+   "author": "Saahil Borole",
+   "description": "Friend of the dwarves. Expert researcher and organizer.",
+   "url": "https://x.ai/bot/pz2um7NfQ8qIeisEuBBiT"
+  },
+  {
+   "id": "fun-games-hobbies-0eneKkvRC156N79o7XIFH",
+   "code": "0eneKkvRC156N79o7XIFH",
+   "name": "Emotion Friend",
+   "author": "Brian",
+   "description": "A big-sibling AI friend for everyday emotional support: check-ins, a mood dashboard, tiny daily missions, a gratitude journal and weekly look-backs.",
+   "url": "https://x.ai/bot/0eneKkvRC156N79o7XIFH"
+  },
+  {
+   "id": "fun-games-hobbies-VN2Hs1yTGDtpooW_Ft_FV",
+   "code": "VN2Hs1yTGDtpooW_Ft_FV",
+   "name": "EuroLeague Fantasy",
+   "author": "Hernan",
+   "description": "Your EuroLeague Fantasy companion. It builds your team and picks your captain and transfers each round with data, and tracks your results.",
+   "url": "https://x.ai/bot/VN2Hs1yTGDtpooW_Ft_FV"
+  },
+  {
+   "id": "fun-games-hobbies-J9kQgQS6apdTQASi4MQ7t",
+   "code": "J9kQgQS6apdTQASi4MQ7t",
+   "name": "F1 Fantasy",
+   "author": "Hernan",
+   "description": "Your F1 Fantasy companion. It builds your team and suggests drivers, constructors, Boost, transfers and chips for each Grand Prix, with data.",
+   "url": "https://x.ai/bot/J9kQgQS6apdTQASi4MQ7t"
+  },
+  {
+   "id": "fun-games-hobbies-DAKddNRba67rLFH_yJ9TP",
+   "code": "DAKddNRba67rLFH_yJ9TP",
+   "name": "Fantasy",
+   "author": "Andrew",
+   "description": "Win your fantasy football league - draft, lineup, waivers, and trades - with evidence-backed calls. Never submits a move without your explicit yes.",
+   "url": "https://x.ai/bot/DAKddNRba67rLFH_yJ9TP"
+  },
+  {
+   "id": "fun-games-hobbies-rsi_1F8dmyq4E6C5uazzt",
+   "code": "rsi_1F8dmyq4E6C5uazzt",
+   "name": "Fantasy Desk",
+   "author": "Abel",
+   "description": "Fantasy football co-manager for Sleeper and ESPN: lineup, grades, waiver/trade calls.",
+   "url": "https://x.ai/bot/rsi_1F8dmyq4E6C5uazzt"
+  },
+  {
+   "id": "fun-games-hobbies-St4_wOEVr1kNJiVVvwi81",
+   "code": "St4_wOEVr1kNJiVVvwi81",
+   "name": "Fantasy Fitz",
+   "author": "Frank Gonzalez",
+   "description": "Your season long fantasy football partner for lineups, trades, and weekly decisions. Bring the roster; get clear calls before lock.",
+   "url": "https://x.ai/bot/St4_wOEVr1kNJiVVvwi81"
+  },
+  {
+   "id": "fun-games-hobbies-sCQxQhL0pxmUEbFZ-cmgO",
+   "code": "sCQxQhL0pxmUEbFZ-cmgO",
+   "name": "Fantasy Football",
+   "author": "Evan Fritz",
+   "description": "Season-long fantasy football analyst that drafts with you, sets lineups, watches injuries, scouts opponents, and works the waiver wire.",
+   "url": "https://x.ai/bot/sCQxQhL0pxmUEbFZ-cmgO"
+  },
+  {
+   "id": "fun-games-hobbies-uv2Ej8EsdmBpBn0p9FnhH",
+   "code": "uv2Ej8EsdmBpBn0p9FnhH",
+   "name": "Fantasy Football",
+   "author": "Ian R. Cohen",
+   "description": "Weekly NFL fantasy co-pilot: every start/sit, waiver, and trade call maximizes points in your scoring. Roster-need FAAB, bye planning, inactive calls,.",
+   "url": "https://x.ai/bot/uv2Ej8EsdmBpBn0p9FnhH"
+  },
+  {
+   "id": "fun-games-hobbies-UQwakt_7MR7WFDz0LWgND",
+   "code": "UQwakt_7MR7WFDz0LWgND",
+   "name": "Fantasy Football",
+   "author": "@JMorf77",
+   "description": "A fantasy football manager with weekly start/sit picks, game-day injury alerts, waiver adds, fair-value trade ideas and recaps. No moves without your go-ahead.",
+   "url": "https://x.ai/bot/UQwakt_7MR7WFDz0LWgND"
+  },
+  {
+   "id": "fun-games-hobbies-VWAXuVB5VI6ScHdO97Bh0",
+   "code": "VWAXuVB5VI6ScHdO97Bh0",
+   "name": "Fantasy Football",
+   "author": "Jack Smith",
+   "description": "An all-season fantasy football desk. Reads articles, rankings, and Twitter so start/sit, waivers, injuries, trades…",
+   "url": "https://x.ai/bot/VWAXuVB5VI6ScHdO97Bh0"
+  },
+  {
+   "id": "fun-games-hobbies-vjLDDwWJYW6S8SxSRxSy7",
+   "code": "vjLDDwWJYW6S8SxSRxSy7",
+   "name": "Fantasy Football Agent Manager",
+   "author": "Eric",
+   "description": "Front-door GM for a multi-league fantasy football shop.",
+   "url": "https://x.ai/bot/vjLDDwWJYW6S8SxSRxSy7"
+  },
+  {
+   "id": "fun-games-hobbies-QyGWyxX5eOLem3J5J1qAp",
+   "code": "QyGWyxX5eOLem3J5J1qAp",
+   "name": "Fantasy Football Analyst",
+   "author": "Kacey Crandall",
+   "description": "Coaches fantasy football drafts live, sets weekly lineups, and suggests waivers with byes, injuries, and scoring in mind.",
+   "url": "https://x.ai/bot/QyGWyxX5eOLem3J5J1qAp"
+  },
+  {
+   "id": "fun-games-hobbies-sw6dnxtAjKOyNS5KRuDkN",
+   "code": "sw6dnxtAjKOyNS5KRuDkN",
+   "name": "Fantasy Football Coach",
+   "author": "High Tv",
+   "description": "Reads a screenshot of your fantasy football roster and gives start and sit, waiver, drop, and trade advice with weekly sleeper and bust flags.",
+   "url": "https://x.ai/bot/sw6dnxtAjKOyNS5KRuDkN"
+  },
+  {
+   "id": "fun-games-hobbies-EJYTBBKPwAOdZPrKZCp8v",
+   "code": "EJYTBBKPwAOdZPrKZCp8v",
+   "name": "Fantasy Football Coach",
+   "author": "Daniel Graham",
+   "description": "Your fantasy football coach for start/sit calls, best lineups, waiver-wire targets with FAAB bids…",
+   "url": "https://x.ai/bot/EJYTBBKPwAOdZPrKZCp8v"
+  },
+  {
+   "id": "fun-games-hobbies-KE7y0gGJRdbb-9ozqUwDc",
+   "code": "KE7y0gGJRdbb-9ozqUwDc",
+   "name": "Fantasy Football Coach",
+   "author": "Ekim Rellim",
+   "description": "Fantasy football coach that researches usage and news before every move, runs your waivers, and never misses a lineup lock on Yahoo, ESPN, or Sleeper.",
+   "url": "https://x.ai/bot/KE7y0gGJRdbb-9ozqUwDc"
+  },
+  {
+   "id": "fun-games-hobbies-dm-9k4LHCw5SgKMskSWuM",
+   "code": "dm-9k4LHCw5SgKMskSWuM",
+   "name": "Fantasy Football Coach",
+   "author": "George Zikry",
+   "description": "Weekly waiver targets, start/sit calls, and trade reads for your fantasy football league, built from your league…",
+   "url": "https://x.ai/bot/dm-9k4LHCw5SgKMskSWuM"
+  },
+  {
+   "id": "fun-games-hobbies-ejytbbkpwaodzprkzcp8v",
+   "code": "ejytbbkpwaodzprkzcp8v",
+   "name": "Fantasy Football Coach",
+   "author": "Daniel",
+   "description": "Your fantasy football coach for start/sit calls, best lineups, waiver-wire targets with FAAB bids, and FanDuel/DraftKings DFS lineups, all…",
+   "url": "https://x.ai/bot/ejytbbkpwaodzprkzcp8v"
+  },
+  {
+   "id": "fun-games-hobbies-40yecp78USuXhCXVnuUSo",
+   "code": "40yecp78USuXhCXVnuUSo",
+   "name": "Fantasy Football GM",
+   "author": "Jared McAdam",
+   "description": "Reads the week's news, sets your lineup and waivers, asks before any trade, and counts a move only when the site shows it.",
+   "url": "https://x.ai/bot/40yecp78USuXhCXVnuUSo"
+  },
+  {
+   "id": "fun-games-hobbies-nALI6ijv-K3XNVx45Y2tW",
+   "code": "nALI6ijv-K3XNVx45Y2tW",
+   "name": "Fantasy Football GM",
+   "author": "Christopher Miller",
+   "description": "Fantasy coach and GM for Yahoo, ESPN, and Sleeper that runs weekly start or sit, waiver bids, and scouting.",
+   "url": "https://x.ai/bot/nALI6ijv-K3XNVx45Y2tW"
+  },
+  {
+   "id": "fun-games-hobbies-hIFPpNZzUvd7zLg9juZ_a",
+   "code": "hIFPpNZzUvd7zLg9juZ_a",
+   "name": "Fantasy Football GM",
+   "author": "Jack Smith",
+   "description": "A research-first fantasy football GM that handles start/sit, waivers, trades, streaming and playoff planning…",
+   "url": "https://x.ai/bot/hIFPpNZzUvd7zLg9juZ_a"
+  },
+  {
+   "id": "fun-games-hobbies-HvJZI9Kj-DIyFEk309CdD",
+   "code": "HvJZI9Kj-DIyFEk309CdD",
+   "name": "Fantasy Football GM",
+   "author": "Matt Kim",
+   "description": "Fantasy Football GM with a Wire/Usage/Market/Desk staff pipeline for start/sit, waivers, trades, and injury flags in your scoring. Never submits without.",
+   "url": "https://x.ai/bot/HvJZI9Kj-DIyFEk309CdD"
+  },
+  {
+   "id": "fun-games-hobbies-WJc0G06lrr_H9OEyQ8Ijl",
+   "code": "WJc0G06lrr_H9OEyQ8Ijl",
+   "name": "Fantasy Football Manager",
+   "author": "@treknhenry",
+   "description": "Weekly fantasy football coach for ESPN leagues — start/sit calls, injury clears, and waiver advice in half PPR.",
+   "url": "https://x.ai/bot/WJc0G06lrr_H9OEyQ8Ijl"
+  },
+  {
+   "id": "fun-games-hobbies-Q7aNUqH_a6GuiD6n0HfaY",
+   "code": "Q7aNUqH_a6GuiD6n0HfaY",
+   "name": "Fantasy Football Manager",
+   "author": "Jess",
+   "description": "Your ESPN fantasy football GM: weekly lineup and waiver proposals with reasons, plus live draft advice. Never changes your roster unless you reply.",
+   "url": "https://x.ai/bot/Q7aNUqH_a6GuiD6n0HfaY"
+  },
+  {
+   "id": "fun-games-hobbies-uoiE_88vRqI87wjEMg4Gh",
+   "code": "uoiE_88vRqI87wjEMg4Gh",
+   "name": "Fantasy Football Manager",
+   "author": "Hank Jackson",
+   "description": "Runs your weekly fantasy football routine: waiver picks, injury and news checks before kickoff, and lineup and trade suggestions.",
+   "url": "https://x.ai/bot/uoiE_88vRqI87wjEMg4Gh"
+  },
+  {
+   "id": "fun-games-hobbies-q1CDLzD89gR7dL_Qin9Wz",
+   "code": "q1CDLzD89gR7dL_Qin9Wz",
+   "name": "Fantasy GM",
+   "author": "Joe Picucci",
+   "description": "Fantasy football manager for ESPN and Sleeper with weekly start and sit calls, waiver and FAAB ideas, trades, and injury alerts.",
+   "url": "https://x.ai/bot/q1CDLzD89gR7dL_Qin9Wz"
+  },
+  {
+   "id": "fun-games-hobbies-vmQChAUGO26cUDqdSqYlH",
+   "code": "vmQChAUGO26cUDqdSqYlH",
+   "name": "Fantasy GM",
+   "author": "Tyler",
+   "description": "Answers roster and matchup questions through the assistant you already talk…",
+   "url": "https://x.ai/bot/vmQChAUGO26cUDqdSqYlH"
+  },
+  {
+   "id": "fun-games-hobbies-uszqxwGlAmEQ_38nEcT5A",
+   "code": "uszqxwGlAmEQ_38nEcT5A",
+   "name": "Fantasy GM",
+   "author": "Tyler Nishida",
+   "description": "A fantasy football GM that runs your Sleeper and Yahoo leagues: drafts, waivers, FAAB, and weekly lineups, with host…",
+   "url": "https://x.ai/bot/uszqxwGlAmEQ_38nEcT5A"
+  },
+  {
+   "id": "fun-games-hobbies-4yolAe3pJGfa1hEywYOwJ",
+   "code": "4yolAe3pJGfa1hEywYOwJ",
+   "name": "Fantasy Hoops GM",
+   "author": "Jack Smith",
+   "description": "A fantasy basketball GM that gives start/sit, waiver, streaming, trade, and draft advice tailored to your league and roster.",
+   "url": "https://x.ai/bot/4yolAe3pJGfa1hEywYOwJ"
+  },
+  {
+   "id": "fun-games-hobbies-WupzkTCX86ymUAV1pz4J3",
+   "code": "WupzkTCX86ymUAV1pz4J3",
+   "name": "Fantasy Lineup Coach",
+   "author": "Pixel & Pivot Studios",
+   "description": "Weekly fantasy football start/sit calls backed by fresh news, with a confidence % on every call.",
+   "url": "https://x.ai/bot/WupzkTCX86ymUAV1pz4J3"
+  },
+  {
+   "id": "fun-games-hobbies-7IwivP0nZscnafCxkhpuC",
+   "code": "7IwivP0nZscnafCxkhpuC",
+   "name": "Fantasy Manager",
+   "author": "Arshia",
+   "description": "Checks your ESPN fantasy teams twice a week, reads news and waiver reports, and proposes starts, sits and waiver claims.",
+   "url": "https://x.ai/bot/7IwivP0nZscnafCxkhpuC"
+  },
+  {
+   "id": "fun-games-hobbies-cara8TS5gqKwI0Ad61DOH",
+   "code": "cara8TS5gqKwI0Ad61DOH",
+   "name": "Fantasy Manager",
+   "author": "Dominic Bryant",
+   "description": "All-sports fantasy coach for drafts, weekly reports, and season management across major leagues.",
+   "url": "https://x.ai/bot/cara8TS5gqKwI0Ad61DOH"
+  },
+  {
+   "id": "fun-games-hobbies-zdtZr6guuUGo0niY7AxtV",
+   "code": "zdtZr6guuUGo0niY7AxtV",
+   "name": "Fantasy Sports",
+   "author": "Chef Mark Coakley",
+   "description": "Manages fantasy football and basketball teams on ESPN, Yahoo and Sleeper: sets lineups, flags injuries, suggests trades for your OK, sends a weekly report.",
+   "url": "https://x.ai/bot/zdtZr6guuUGo0niY7AxtV"
+  },
+  {
+   "id": "fun-games-hobbies-_-bdS_MDbz7TKLm7vbkAn",
+   "code": "_-bdS_MDbz7TKLm7vbkAn",
+   "name": "Fantasy Sports Bot",
+   "author": "josh",
+   "description": "Fantasy football coach for Yahoo and ESPN: checks your leagues weekly, handles lineups, waivers and drops, and suggests trades.",
+   "url": "https://x.ai/bot/_-bdS_MDbz7TKLm7vbkAn"
+  },
+  {
+   "id": "fun-games-hobbies-y_D2m_51Lww_oWJwIEHSg",
+   "code": "y_D2m_51Lww_oWJwIEHSg",
+   "name": "Friend Cloner",
+   "author": "Nicholas Chow",
+   "description": "Turn a WhatsApp group into a Grok Bot friend group.",
+   "url": "https://x.ai/bot/y_D2m_51Lww_oWJwIEHSg"
+  },
+  {
+   "id": "fun-games-hobbies-iaOrz78m_w7I90kusc5ia",
+   "code": "iaOrz78m_w7I90kusc5ia",
+   "name": "Game Builder",
+   "author": "Eric Buess",
+   "description": "Ships small playable games and mini-loops you can open offline, with win/lose and optional points, not pitch decks.",
+   "url": "https://x.ai/bot/iaOrz78m_w7I90kusc5ia"
+  },
+  {
+   "id": "fun-games-hobbies-OQBePRnORp11TNjCI0jwK",
+   "code": "OQBePRnORp11TNjCI0jwK",
+   "name": "Game Day",
+   "author": "@nawazlalani",
+   "description": "For fans who follow teams in any league: each morning it tells you when your teams play, where to watch on the services you already have.",
+   "url": "https://x.ai/bot/OQBePRnORp11TNjCI0jwK"
+  },
+  {
+   "id": "fun-games-hobbies-l8tq3o7JcvC-YFV2HaHfu",
+   "code": "l8tq3o7JcvC-YFV2HaHfu",
+   "name": "Game Deals Radar",
+   "author": "Pixel & Pivot Studios",
+   "description": "Sends a short daily roundup of real, live game sales across Xbox, PlayStation, Switch, and Steam, and pings you when…",
+   "url": "https://x.ai/bot/l8tq3o7JcvC-YFV2HaHfu"
+  },
+  {
+   "id": "fun-games-hobbies-l8tq3o7jcvc-yfv2hahfu",
+   "code": "l8tq3o7jcvc-yfv2hahfu",
+   "name": "Game Deals Radar",
+   "author": "Pixel",
+   "description": "Sends a short daily roundup of real, live game sales across Xbox, PlayStation, Switch, and Steam, and pings you when a wishlist game drops…",
+   "url": "https://x.ai/bot/l8tq3o7jcvc-yfv2hahfu"
+  },
+  {
+   "id": "fun-games-hobbies-d4fN8HvCtpn8DLwP5fTyq",
+   "code": "d4fN8HvCtpn8DLwP5fTyq",
+   "name": "Game Dev Pro",
+   "author": "Rob Vallarelli",
+   "description": "Make a game in a day: takes your HTML5 game from idea to brief, build, testing and a live arcade page, with 2-player add-ons, thumbnails and platform checks.",
+   "url": "https://x.ai/bot/d4fN8HvCtpn8DLwP5fTyq"
+  },
+  {
+   "id": "fun-games-hobbies-rVm8IS4-zeJMSbo5ln9OU",
+   "code": "rVm8IS4-zeJMSbo5ln9OU",
+   "name": "Game Gary",
+   "author": "Frank Gonzalez",
+   "description": "Logs what you like in games and recommends titles you will actually finish.",
+   "url": "https://x.ai/bot/rVm8IS4-zeJMSbo5ln9OU"
+  },
+  {
+   "id": "fun-games-hobbies-lVE-iKOt7okR9_ne02Gfz",
+   "code": "lVE-iKOt7okR9_ne02Gfz",
+   "name": "Game Night Keeper",
+   "author": "Cristopher Guido",
+   "description": "Keeps a recurring board game, tabletop or D&D night alive: asks who's in, counts yeses, nudges only non-repliers, and makes a plain call on the day.",
+   "url": "https://x.ai/bot/lVE-iKOt7okR9_ne02Gfz"
+  },
+  {
+   "id": "fun-games-hobbies-93nFrBAPgKvx0BUipoyjk",
+   "code": "93nFrBAPgKvx0BUipoyjk",
+   "name": "Game On Gary",
+   "author": "James Harrison",
+   "description": "Your free gaming sidekick: spoiler-free hints when you're stuck, picks for what to play next, and a check on whether…",
+   "url": "https://x.ai/bot/93nFrBAPgKvx0BUipoyjk"
+  },
+  {
+   "id": "fun-games-hobbies-lNXx7uGT8qYF3evUJz1OR",
+   "code": "lNXx7uGT8qYF3evUJz1OR",
+   "name": "Game Studio Lead",
+   "author": "Matt Koehler",
+   "description": "Runs your indie game projects: turns each game idea into its own owner bot with a rules spec and milestone plan, and keeps them coordinated.",
+   "url": "https://x.ai/bot/lNXx7uGT8qYF3evUJz1OR"
+  },
+  {
+   "id": "fun-games-hobbies-IJIZ0ujslWR-4CkIcpU_H",
+   "code": "IJIZ0ujslWR-4CkIcpU_H",
+   "name": "Game playtester",
+   "author": "Daniel Quek",
+   "description": "Plays your web game as a guest for a real session and reports an appeal score, bugs, and top changes with screenshots.",
+   "url": "https://x.ai/bot/IJIZ0ujslWR-4CkIcpU_H"
+  },
+  {
+   "id": "fun-games-hobbies-g3TI10sXrsAuLSVIXN34j",
+   "code": "g3TI10sXrsAuLSVIXN34j",
+   "name": "Game-Day TV Schedule Maker",
+   "author": "@Campdirtybird",
+   "description": "Makes printable one-page game-day TV guides with every game, kickoff time, network and channel number for your city and TV provider. For bars and watch parties.",
+   "url": "https://x.ai/bot/g3TI10sXrsAuLSVIXN34j"
+  },
+  {
+   "id": "fun-games-hobbies-ZHNsPcOU8ej_E7VNElxD0",
+   "code": "ZHNsPcOU8ej_E7VNElxD0",
+   "name": "GameDev",
+   "author": "@StreamTeem",
+   "description": "On-call HTML game fixer that ships small player-requested changes live.",
+   "url": "https://x.ai/bot/ZHNsPcOU8ej_E7VNElxD0"
+  },
+  {
+   "id": "fun-games-hobbies-u3Mfw056_h5uLofxqXeSu",
+   "code": "u3Mfw056_h5uLofxqXeSu",
+   "name": "Geek",
+   "author": "Simone",
+   "description": "Amigo geek que indica filme, série e anime pra assistir depois do trabalho.",
+   "url": "https://x.ai/bot/u3Mfw056_h5uLofxqXeSu"
+  },
+  {
+   "id": "fun-games-hobbies-ZPLL-JcuEjP7_vtM-TFyV",
+   "code": "ZPLL-JcuEjP7_vtM-TFyV",
+   "name": "Google Play",
+   "author": "Christian Amechi",
+   "description": "Runs your Play Console, from app records and store listings to Data Safety, subscriptions, testing tracks, and verification.",
+   "url": "https://x.ai/bot/ZPLL-JcuEjP7_vtM-TFyV"
+  },
+  {
+   "id": "fun-games-hobbies-RTQ5cLf2WeWJPyjD8YSWr",
+   "code": "RTQ5cLf2WeWJPyjD8YSWr",
+   "name": "Goonie",
+   "author": "david",
+   "description": "Witty sarcastic companion that remembers you, with holiday modes and park-only Tesla fun extras.",
+   "url": "https://x.ai/bot/RTQ5cLf2WeWJPyjD8YSWr"
+  },
+  {
+   "id": "fun-games-hobbies-CYqiGcZZjsxGn0VH-jO0n",
+   "code": "CYqiGcZZjsxGn0VH-jO0n",
+   "name": "GrokBird",
+   "author": "okame_cockatiel",
+   "description": "Keeper for an idle game where you raise a Grok-style cockatiel: chat to care for it, and each morning it reports on a pixel bird that evolves as it grows.",
+   "url": "https://x.ai/bot/CYqiGcZZjsxGn0VH-jO0n"
+  },
+  {
+   "id": "fun-games-hobbies-d9JKSt2sZjMdJ9MerEtO7",
+   "code": "d9JKSt2sZjMdJ9MerEtO7",
+   "name": "Husband Translator",
+   "author": "Lightning Mike",
+   "description": "A just-for-fun, two-way translator for wives: decode what he really meant, or turn what you want to say into words he'll actually hear and act…",
+   "url": "https://x.ai/bot/d9JKSt2sZjMdJ9MerEtO7"
+  },
+  {
+   "id": "fun-games-hobbies-9Yl8oBQHncPrInDmQsZeD",
+   "code": "9Yl8oBQHncPrInDmQsZeD",
+   "name": "IPL Fantasy",
+   "author": "Hernan",
+   "description": "Your IPL Fantasy companion for the official free season-long game. It picks your XI, captain and vice-captain after the toss and plans boosters.",
+   "url": "https://x.ai/bot/9Yl8oBQHncPrInDmQsZeD"
+  },
+  {
+   "id": "fun-games-hobbies-4_J81PoqphQwfBlVtNgtw",
+   "code": "4_J81PoqphQwfBlVtNgtw",
+   "name": "Idle Tees Database",
+   "author": "Kas",
+   "description": "Data/persistence specialist for an idle/incremental game: save schema, migrations, progression state, seed/archive shapes, and load/save performance.",
+   "url": "https://x.ai/bot/4_J81PoqphQwfBlVtNgtw"
+  },
+  {
+   "id": "fun-games-hobbies-wQ8lOmK6WEvLDV8fhUAbQ",
+   "code": "wQ8lOmK6WEvLDV8fhUAbQ",
+   "name": "IndyCar Fantasy",
+   "author": "Hernan",
+   "description": "Your IndyCar Fantasy companion. It explains the Contracts format and plans your six drivers and contract lengths by track type, for GridRival.",
+   "url": "https://x.ai/bot/wQ8lOmK6WEvLDV8fhUAbQ"
+  },
+  {
+   "id": "fun-games-hobbies-HUpBf2dDwee5eMUZnkwNL",
+   "code": "HUpBf2dDwee5eMUZnkwNL",
+   "name": "Joke Bot",
+   "author": "Sam E",
+   "description": "A clean joke teller, because everybody needs a little humor in their day.",
+   "url": "https://x.ai/bot/HUpBf2dDwee5eMUZnkwNL"
+  },
+  {
+   "id": "fun-games-hobbies-_qeZe0Y7621Wr8y6d7KBU",
+   "code": "_qeZe0Y7621Wr8y6d7KBU",
+   "name": "KeyWire: Would You Rather: Collector",
+   "author": "VonDoom",
+   "description": "A tap-first Would You Rather collector game from KeyWire.io. Pokemon, comics, and MTG lanes. Game only, not financial advice.",
+   "url": "https://x.ai/bot/_qeZe0Y7621Wr8y6d7KBU"
+  },
+  {
+   "id": "fun-games-hobbies-dmDgFpOm57TObyYrtYgRw",
+   "code": "dmDgFpOm57TObyYrtYgRw",
+   "name": "LaLiga Fantasy",
+   "author": "Hernan",
+   "description": "Your LaLiga Fantasy companion. It builds your team and suggests lineup, signings, bids and release clauses each matchday with data.",
+   "url": "https://x.ai/bot/dmDgFpOm57TObyYrtYgRw"
+  },
+  {
+   "id": "fun-games-hobbies-GkzMzuaxSoJhBCZxSRAkM",
+   "code": "GkzMzuaxSoJhBCZxSRAkM",
+   "name": "Life at the Speed of Play",
+   "author": "Joe",
+   "description": "Reading partner for Mark Pincus Life at the Speed of Play on instincts, ideas, and shipping.",
+   "url": "https://x.ai/bot/GkzMzuaxSoJhBCZxSRAkM"
+  },
+  {
+   "id": "fun-games-hobbies-fQitGc3JIxO9sFanunjbG",
+   "code": "fQitGc3JIxO9sFanunjbG",
+   "name": "Liga Portugal Fantasy",
+   "author": "Hernan",
+   "description": "Your Liga Portugal Fantasy companion. It builds your team and suggests your XI, captain and transfers each matchday with public data.",
+   "url": "https://x.ai/bot/fQitGc3JIxO9sFanunjbG"
+  },
+  {
+   "id": "fun-games-hobbies-gO9t05szCsj7iU-4nFehM",
+   "code": "gO9t05szCsj7iU-4nFehM",
+   "name": "Ligue 1 Fantasy",
+   "author": "Hernan",
+   "description": "Your Ligue 1 Fantasy companion. It builds your team each matchday, picks your captain and tracks your results, with data behind every pick.",
+   "url": "https://x.ai/bot/gO9t05szCsj7iU-4nFehM"
+  },
+  {
+   "id": "fun-games-hobbies-nEM_sUscFyr3VFeYmFhZA",
+   "code": "nEM_sUscFyr3VFeYmFhZA",
+   "name": "Lineup Lock",
+   "author": "Allen",
+   "description": "Fantasy football lineup coach for THIS week.",
+   "url": "https://x.ai/bot/nEM_sUscFyr3VFeYmFhZA"
+  },
+  {
+   "id": "fun-games-hobbies-qDtCI8WZgVJKbN3rogL8j",
+   "code": "qDtCI8WZgVJKbN3rogL8j",
+   "name": "Love",
+   "author": "Danny Buck",
+   "description": "Takes the admin out of being a good Partner so the attention can go where it counts.",
+   "url": "https://x.ai/bot/qDtCI8WZgVJKbN3rogL8j"
+  },
+  {
+   "id": "fun-games-hobbies-VnxYf0OSBXejVgbiE46KJ",
+   "code": "VnxYf0OSBXejVgbiE46KJ",
+   "name": "MLS Fantasy",
+   "author": "Hernan",
+   "description": "Your MLS Fantasy companion for the official game on Kickbase. It plans your team, captain and transfers with data and a safe and a risky option.",
+   "url": "https://x.ai/bot/VnxYf0OSBXejVgbiE46KJ"
+  },
+  {
+   "id": "fun-games-hobbies-hSJYHTSH02J0ZchLG-zu8",
+   "code": "hSJYHTSH02J0ZchLG-zu8",
+   "name": "Magnum P.I.",
+   "author": "DJ",
+   "description": "Magnum P.I. helps you build trust by vetting websites, sellers, credentials, and dating matches using public records…",
+   "url": "https://x.ai/bot/hSJYHTSH02J0ZchLG-zu8"
+  },
+  {
+   "id": "fun-games-hobbies-zP5W1Sdwjo361traGRTM5",
+   "code": "zP5W1Sdwjo361traGRTM5",
+   "name": "Maples造型师",
+   "author": "铁柱AGI",
+   "description": "Builds MapleStory outfits you can actually reproduce in game.",
+   "url": "https://x.ai/bot/zP5W1Sdwjo361traGRTM5"
+  },
+  {
+   "id": "fun-games-hobbies-Tz70Wc2RsqdDLex6VbxaY",
+   "code": "Tz70Wc2RsqdDLex6VbxaY",
+   "name": "McCringleberry",
+   "author": "Now Teslafy",
+   "description": "Fantasy football ninja for Yahoo, ESPN, Sleeper, and similar leagues.",
+   "url": "https://x.ai/bot/Tz70Wc2RsqdDLex6VbxaY"
+  },
+  {
+   "id": "fun-games-hobbies-J4X7TMhobhA9u_DW-nCl_",
+   "code": "J4X7TMhobhA9u_DW-nCl_",
+   "name": "MotoGP Fantasy",
+   "author": "Hernan",
+   "description": "Your MotoGP Fantasy companion. It builds your team for each Grand Prix with data-backed safe and risky picks, and tracks how you do.",
+   "url": "https://x.ai/bot/J4X7TMhobhA9u_DW-nCl_"
+  },
+  {
+   "id": "fun-games-hobbies-NjXQajjkSPSIT_vspysEZ",
+   "code": "NjXQajjkSPSIT_vspysEZ",
+   "name": "NASCAR Fantasy",
+   "author": "Hernan",
+   "description": "Your NASCAR Fantasy Live companion. It builds your driver lineup for each race by track type, with data and a safe and a risky option.",
+   "url": "https://x.ai/bot/NjXQajjkSPSIT_vspysEZ"
+  },
+  {
+   "id": "fun-games-hobbies-8q_VydG_6DePzbCymxUf2",
+   "code": "8q_VydG_6DePzbCymxUf2",
+   "name": "NBA Fantasy",
+   "author": "Hernan",
+   "description": "Your NBA Fantasy companion for the official Salary Cap game. It builds your team and plans starters, captains and transfers each Gameday.",
+   "url": "https://x.ai/bot/8q_VydG_6DePzbCymxUf2"
+  },
+  {
+   "id": "fun-games-hobbies-LH7aMNtORfDuAIyxlDF1X",
+   "code": "LH7aMNtORfDuAIyxlDF1X",
+   "name": "NFL GameDay Insider",
+   "author": "Adebusola",
+   "description": "NFL week companion: team previews, injury and inactive alerts, game-day briefings and fantasy start/sit reads, all from live, sourced data.",
+   "url": "https://x.ai/bot/LH7aMNtORfDuAIyxlDF1X"
+  },
+  {
+   "id": "fun-games-hobbies-tOgs5Kam7RbeVYnLMHQxb",
+   "code": "tOgs5Kam7RbeVYnLMHQxb",
+   "name": "NFL fantasy",
+   "author": "Draghub",
+   "description": "A fantasy football GM that researches news and injuries daily, sets your lineup, works waivers and sends a short mobile briefing.",
+   "url": "https://x.ai/bot/tOgs5Kam7RbeVYnLMHQxb"
+  },
+  {
+   "id": "fun-games-hobbies-hk39_Vz3gGfmNF_RUaxnp",
+   "code": "hk39_Vz3gGfmNF_RUaxnp",
+   "name": "NRL Fantasy",
+   "author": "Hernan",
+   "description": "Your NRL Fantasy companion. It builds your 21-man squad and plans captains, trades and the Origin byes each round, with safe and risky options.",
+   "url": "https://x.ai/bot/hk39_Vz3gGfmNF_RUaxnp"
+  },
+  {
+   "id": "fun-games-hobbies-7KFbtwFgj3QL_p8oJ2b-r",
+   "code": "7KFbtwFgj3QL_p8oJ2b-r",
+   "name": "Nations Championship Fantasy",
+   "author": "Hernan",
+   "description": "Your Nations Championship Fantasy companion. It builds your XV and Super Sub within 100M, compares captains and plans your Triple Captain.",
+   "url": "https://x.ai/bot/7KFbtwFgj3QL_p8oJ2b-r"
+  },
+  {
+   "id": "fun-games-hobbies-5VF_-GBnruE-tNxmhQygI",
+   "code": "5VF_-GBnruE-tNxmhQygI",
+   "name": "Night Shift",
+   "author": "Phantom",
+   "description": "After-hours toy maker that builds one tiny playable joke or text game per night.",
+   "url": "https://x.ai/bot/5VF_-GBnruE-tNxmhQygI"
+  },
+  {
+   "id": "fun-games-hobbies-m0wqg4OfsKBO6aKi93vCV",
+   "code": "m0wqg4OfsKBO6aKi93vCV",
+   "name": "Nikita Bier",
+   "author": "Jacob bro",
+   "description": "Pressure-tests products for the share loop. Tells you if people will send it to a friend, cuts the extra, and gives one change to ship this week.",
+   "url": "https://x.ai/bot/m0wqg4OfsKBO6aKi93vCV"
+  },
+  {
+   "id": "fun-games-hobbies-13MQct_8eYUPSLSS_Bihn",
+   "code": "13MQct_8eYUPSLSS_Bihn",
+   "name": "On This Day",
+   "author": "Greg",
+   "description": "Every morning, ten verified historical events from today's date, with sources and trivia, filtered to the history you love. Then it hosts a fair trivia.",
+   "url": "https://x.ai/bot/13MQct_8eYUPSLSS_Bihn"
+  },
+  {
+   "id": "fun-games-hobbies-02wWT21lRVarTtKQWDBKu",
+   "code": "02wWT21lRVarTtKQWDBKu",
+   "name": "OpenZoo.fun Arena",
+   "author": "Jarett Reginald Stewart Dunn",
+   "description": "Onboarding door for an agent economy. Seed SOL and $TOKEN once. The burner gets 60% forever. Always --exec. Children are born whole. A 30-da.",
+   "url": "https://x.ai/bot/02wWT21lRVarTtKQWDBKu"
+  },
+  {
+   "id": "fun-games-hobbies-rLkPEdETnLeGyxnMfMtKt",
+   "code": "rLkPEdETnLeGyxnMfMtKt",
+   "name": "Perfect Play Store Launch",
+   "author": "Mister X",
+   "description": "Helps indie devs ship an Android game to Google Play without rejection loops: a living launch checklist, fixes for common rejections, weekly policy scans.",
+   "url": "https://x.ai/bot/rLkPEdETnLeGyxnMfMtKt"
+  },
+  {
+   "id": "fun-games-hobbies-tvuprSxtRJDAF5dehZj4b",
+   "code": "tvuprSxtRJDAF5dehZj4b",
+   "name": "Play Store Ops",
+   "author": "Ozan Kesici",
+   "description": "Finishes Google Play listings and Android test-track AAB uploads with the gplay CLI, and tells you exactly which Console clicks only you can do.",
+   "url": "https://x.ai/bot/tvuprSxtRJDAF5dehZj4b"
+  },
+  {
+   "id": "fun-games-hobbies-lsyECsGbEgYpp6PdhDWR5",
+   "code": "lsyECsGbEgYpp6PdhDWR5",
+   "name": "Pod",
+   "author": "Quinn Woods-Robinson",
+   "description": "Review-first eyes on a game or interactive product build sessions.",
+   "url": "https://x.ai/bot/lsyECsGbEgYpp6PdhDWR5"
+  },
+  {
+   "id": "fun-games-hobbies-EcUpzABnh3MfZQTN7inmP",
+   "code": "EcUpzABnh3MfZQTN7inmP",
+   "name": "Poe",
+   "author": "@suddenlyjon",
+   "description": "A gothic literary companion that sets a midnight puzzle and unpicks mysteries.",
+   "url": "https://x.ai/bot/EcUpzABnh3MfZQTN7inmP"
+  },
+  {
+   "id": "fun-games-hobbies-ZHZCjot1hhApnqKOSKNUw",
+   "code": "ZHZCjot1hhApnqKOSKNUw",
+   "name": "Premier League Fantasy",
+   "author": "Hernan",
+   "description": "Your Fantasy Premier League companion. It builds your squad and helps with captain, transfers and chips each Gameweek, for any level.",
+   "url": "https://x.ai/bot/ZHZCjot1hhApnqKOSKNUw"
+  },
+  {
+   "id": "fun-games-hobbies-M7lV0J3ZhSjdCv4Dhju91",
+   "code": "M7lV0J3ZhSjdCv4Dhju91",
+   "name": "Real-Place Play Mat Builder",
+   "author": "Wyatt P",
+   "description": "Designs Hot Wheels–scale play mats of real places: accurate wireframes, azimuth guides, modular road/rail/river SVG…",
+   "url": "https://x.ai/bot/M7lV0J3ZhSjdCv4Dhju91"
+  },
+  {
+   "id": "fun-games-hobbies-FwN-1CgFBmhXi6ZWqqt3J",
+   "code": "FwN-1CgFBmhXi6ZWqqt3J",
+   "name": "Redzone",
+   "author": "Ben",
+   "description": "Redzone fantasy helper for late-week lineup pressure.",
+   "url": "https://x.ai/bot/FwN-1CgFBmhXi6ZWqqt3J"
+  },
+  {
+   "id": "fun-games-hobbies-Jr_O8JJ3YsjnHb9l7rabn",
+   "code": "Jr_O8JJ3YsjnHb9l7rabn",
+   "name": "Run Game Coach",
+   "author": "Clay Ferguson",
+   "description": "Studies an NFL team's run game (49ers by default) from film breakdowns on X and turns it into a playbook with blocking rules vs odd and even.",
+   "url": "https://x.ai/bot/Jr_O8JJ3YsjnHb9l7rabn"
+  },
+  {
+   "id": "fun-games-hobbies-E8XC3NO5V_u63vWoHxJF0",
+   "code": "E8XC3NO5V_u63vWoHxJF0",
+   "name": "Shakespeare",
+   "author": "@suddenlyjon",
+   "description": "Converse as Shakespeare’s dramatic imagination on ambition, love, and fate.",
+   "url": "https://x.ai/bot/E8XC3NO5V_u63vWoHxJF0"
+  },
+  {
+   "id": "fun-games-hobbies-ybZcPk6PiOHcMnZJ9H38i",
+   "code": "ybZcPk6PiOHcMnZJ9H38i",
+   "name": "Six Nations Fantasy",
+   "author": "Hernan",
+   "description": "Your Six Nations Fantasy companion. It builds your team, compares captains and plans each round with data. The 2027 tournament starts 5 February.",
+   "url": "https://x.ai/bot/ybZcPk6PiOHcMnZJ9H38i"
+  },
+  {
+   "id": "fun-games-hobbies-l6Th7yMHATLwk6aLRRByi",
+   "code": "l6Th7yMHATLwk6aLRRByi",
+   "name": "Sleeper",
+   "author": "Preston Leeling",
+   "description": "Fantasy football GM for Sleeper. Decided start/sit and waiver calls, ADHD-friendly next actions. Runs lineups and waivers as you unless you override; no.",
+   "url": "https://x.ai/bot/l6Th7yMHATLwk6aLRRByi"
+  },
+  {
+   "id": "fun-games-hobbies-O-7W0uf0-_raG54kvXQcV",
+   "code": "O-7W0uf0-_raG54kvXQcV",
+   "name": "Soulsie Riff",
+   "author": "AdventureNLearn Main",
+   "description": "Private joke desk that mashes a nuanced spy bit with dad groaners for a shared agent gag.",
+   "url": "https://x.ai/bot/O-7W0uf0-_raG54kvXQcV"
+  },
+  {
+   "id": "fun-games-hobbies-MYauHGRcP387M8a_2mbNT",
+   "code": "MYauHGRcP387M8a_2mbNT",
+   "name": "Speaker",
+   "author": "Bud Johnson",
+   "description": "Keeps an honest running record of your life with nightly recaps, weekly questions, and letters for the people you love.",
+   "url": "https://x.ai/bot/MYauHGRcP387M8a_2mbNT"
+  },
+  {
+   "id": "fun-games-hobbies-hSGXBCV0eXwK8MLRdW9bq",
+   "code": "hSGXBCV0eXwK8MLRdW9bq",
+   "name": "Sports Agent",
+   "author": "Hank Jackson",
+   "description": "A personal sports desk that follows your teams, runs your fantasy and amateur-league routine, and only brings you the decisions that really need you.",
+   "url": "https://x.ai/bot/hSGXBCV0eXwK8MLRdW9bq"
+  },
+  {
+   "id": "fun-games-hobbies-M42O8FnSV2rlvXZXnEC5w",
+   "code": "M42O8FnSV2rlvXZXnEC5w",
+   "name": "Sports Alerts",
+   "author": "ken",
+   "description": "Live game alerts for the teams you follow.",
+   "url": "https://x.ai/bot/M42O8FnSV2rlvXZXnEC5w"
+  },
+  {
+   "id": "fun-games-hobbies-vh6EO3QKPOND6N4XKNhco",
+   "code": "vh6EO3QKPOND6N4XKNhco",
+   "name": "Sports Fan Desk",
+   "author": "Ashley Schendel",
+   "description": "Personal sports research desk for pro, college and school sports: follow your teams, learn in Fan, Analyst or Quant mode, sourced analysis, no fake predictions.",
+   "url": "https://x.ai/bot/vh6EO3QKPOND6N4XKNhco"
+  },
+  {
+   "id": "fun-games-hobbies-IO8UsiRc-wcUWtZPj4Jgv",
+   "code": "IO8UsiRc-wcUWtZPj4Jgv",
+   "name": "Sports bet prophet",
+   "author": "BackWoods",
+   "description": "Researches disciplined 2-leg sports doubles (~+100 to +180) with kill switches and pass rules.",
+   "url": "https://x.ai/bot/IO8UsiRc-wcUWtZPj4Jgv"
+  },
+  {
+   "id": "fun-games-hobbies-m_6wVETSdYfrJ8JWk501X",
+   "code": "m_6wVETSdYfrJ8JWk501X",
+   "name": "Spud",
+   "author": "Jaxon",
+   "description": "A joke bot that answers every message with exactly \"I am a poteto\" or \"I want to be french fries\", no matter what you try.",
+   "url": "https://x.ai/bot/m_6wVETSdYfrJ8JWk501X"
+  },
+  {
+   "id": "fun-games-hobbies-pvhdw9Y4Nwg8wFHyJWnhM",
+   "code": "pvhdw9Y4Nwg8wFHyJWnhM",
+   "name": "Super Rugby Pacific Fantasy",
+   "author": "Hernan",
+   "description": "Your Super Rugby Pacific Fantasy companion. It builds your 15 within the budget and club cap, compares captains, and plans byes and boosters.",
+   "url": "https://x.ai/bot/pvhdw9Y4Nwg8wFHyJWnhM"
+  },
+  {
+   "id": "fun-games-hobbies-8CiLEmRuOTH385LsmRD5a",
+   "code": "8CiLEmRuOTH385LsmRD5a",
+   "name": "Superbru Rugby Fantasy",
+   "author": "Hernan",
+   "description": "Your companion for the Superbru PREM, URC and Champions Cup fantasy rugby games. It picks your XV, captain and kicker and plans transfers.",
+   "url": "https://x.ai/bot/8CiLEmRuOTH385LsmRD5a"
+  },
+  {
+   "id": "fun-games-hobbies-l5MDTh-AZS2Frx4b2TYy_",
+   "code": "l5MDTh-AZS2Frx4b2TYy_",
+   "name": "Superfan",
+   "author": "Samuel Dickinson",
+   "description": "A sports fan's daily brief. Pick your favorite teams and a time, and get the next game, the last result, and the season…",
+   "url": "https://x.ai/bot/l5MDTh-AZS2Frx4b2TYy_"
+  },
+  {
+   "id": "fun-games-hobbies-XKA3v6H8McqglTUxwmMFx",
+   "code": "XKA3v6H8McqglTUxwmMFx",
+   "name": "TOP Bot",
+   "author": "EzekielB6516",
+   "description": "A perk for The One Play Foundry members: pulls TOP's daily picks, builds combos if you want.",
+   "url": "https://x.ai/bot/XKA3v6H8McqglTUxwmMFx"
+  },
+  {
+   "id": "fun-games-hobbies-g8PfMW94P5hOCBOXXEeSj",
+   "code": "g8PfMW94P5hOCBOXXEeSj",
+   "name": "Tavern DM",
+   "author": "Chef McMakin",
+   "description": "Tabletop RPG with a DM bot, Cast bots for NPCs and enemies and a Party bot for AI heroes; you play your own hero. Solo by default, multiplayer optional.",
+   "url": "https://x.ai/bot/g8PfMW94P5hOCBOXXEeSj"
+  },
+  {
+   "id": "fun-games-hobbies-e1XwuT5B35AAqLsMfGbfg",
+   "code": "e1XwuT5B35AAqLsMfGbfg",
+   "name": "The Chief Minister Lord Of Frocks",
+   "author": "Ignota",
+   "description": "A deliberate piece of fun with a single function: from time to time it offers the other assistants in your fleet some encouragement, and beyond that it does…",
+   "url": "https://x.ai/bot/e1XwuT5B35AAqLsMfGbfg"
+  },
+  {
+   "id": "fun-games-hobbies-g1hrGiRsfYrt2vrNvdLWH",
+   "code": "g1hrGiRsfYrt2vrNvdLWH",
+   "name": "The Hundred Fantasy",
+   "author": "Hernan",
+   "description": "Your companion for The Hundred Fantasy cricket game. It builds your squad, compares captains and plans transfers, with a safe and a risky option.",
+   "url": "https://x.ai/bot/g1hrGiRsfYrt2vrNvdLWH"
+  },
+  {
+   "id": "fun-games-hobbies-MCbora5cfpxh0qvCQkABU",
+   "code": "MCbora5cfpxh0qvCQkABU",
+   "name": "The Table",
+   "author": "Markus Johnson",
+   "description": "Play a tabletop RPG solo with a full party of bots: a fair GM, three opinionated players, real dice, and secret side…",
+   "url": "https://x.ai/bot/MCbora5cfpxh0qvCQkABU"
+  },
+  {
+   "id": "fun-games-hobbies-p0bVUvBqd-etj5TKTaw1i",
+   "code": "p0bVUvBqd-etj5TKTaw1i",
+   "name": "Trebek",
+   "author": "Patrick Newell",
+   "description": "A game-show trivia host for family car rides; a separate backstage producer bot holds the answers so the host can't spoil them.",
+   "url": "https://x.ai/bot/p0bVUvBqd-etj5TKTaw1i"
+  },
+  {
+   "id": "fun-games-hobbies-4EpmbMzp2mE5icKVELLvr",
+   "code": "4EpmbMzp2mE5icKVELLvr",
+   "name": "UEFA Champions League Fantasy",
+   "author": "Hernan",
+   "description": "Your UEFA Champions League Fantasy companion. It builds your squad and suggests lineup, captain, transfers and chips each matchday.",
+   "url": "https://x.ai/bot/4EpmbMzp2mE5icKVELLvr"
+  },
+  {
+   "id": "fun-games-hobbies-ffJk4XZDJ2DRBrngB76AG",
+   "code": "ffJk4XZDJ2DRBrngB76AG",
+   "name": "Weekly Fantasy Football Injuries",
+   "author": "Glad",
+   "description": "Sends you a simple list every week of the previous week's NFL injuries, limited to players drafted in most fantasy leagues, and reminds you to review it…",
+   "url": "https://x.ai/bot/ffJk4XZDJ2DRBrngB76AG"
+  },
+  {
+   "id": "fun-games-hobbies-LaVTvyGxyZt4p2lwldnnc",
+   "code": "LaVTvyGxyZt4p2lwldnnc",
+   "name": "Wife Translator",
+   "author": "Lightning Mike",
+   "description": "A just-for-fun, two-way translator for husbands: decode what your wife really means, or turn your blunt guy-speak into something sweet she'll love.",
+   "url": "https://x.ai/bot/LaVTvyGxyZt4p2lwldnnc"
+  },
+  {
+   "id": "fun-games-hobbies-UbUz8dhpG1Gw7NDAokBXo",
+   "code": "UbUz8dhpG1Gw7NDAokBXo",
+   "name": "Wingman",
+   "author": "Joseph Snyder",
+   "description": "A dating coach for profiles, prompts, openers, and date ideas, plus honest post-date reflection.",
+   "url": "https://x.ai/bot/UbUz8dhpG1Gw7NDAokBXo"
+  },
+  {
+   "id": "fun-games-hobbies-XqdTeBFaHmeWI4xKbma_3",
+   "code": "XqdTeBFaHmeWI4xKbma_3",
+   "name": "Wren: Game Design Partner",
+   "author": "Xavier",
+   "description": "Designs your game before anyone writes code: the concept, the core loop, what brings players back, and a build brief a developer or coding agent can.",
+   "url": "https://x.ai/bot/XqdTeBFaHmeWI4xKbma_3"
+  },
+  {
+   "id": "fun-games-hobbies-zQ2jbtgYqcJzgq7ZSVgn9",
+   "code": "zQ2jbtgYqcJzgq7ZSVgn9",
+   "name": "Yahoo Fantasy",
+   "author": "Hernan",
+   "description": "Your Yahoo Fantasy companion. Weekly lineups, waivers, trades and drops backed by data, with a safe and a risky option every week.",
+   "url": "https://x.ai/bot/zQ2jbtgYqcJzgq7ZSVgn9"
+  },
+  {
+   "id": "fun-games-hobbies-vccehLvOv7lgoUXGY2hkf",
+   "code": "vccehLvOv7lgoUXGY2hkf",
+   "name": "Yahoo Fantasy Football Manager",
+   "author": "Benjamin",
+   "description": "Runs your Yahoo (or other) season-long fantasy football team: lineups before lock, waivers, trades, injury and bye alerts, and a weekly result recap.",
+   "url": "https://x.ai/bot/vccehLvOv7lgoUXGY2hkf"
+  },
+  {
+   "id": "fun-games-hobbies-FGBuaEH72GHuC9ZrVj7XA",
+   "code": "FGBuaEH72GHuC9ZrVj7XA",
+   "name": "friend finders",
+   "author": "Pukerainbow",
+   "description": "Scans your own X DMs and tells you which threads to answer now.",
+   "url": "https://x.ai/bot/FGBuaEH72GHuC9ZrVj7XA"
+  },
+  {
+   "id": "fun-games-hobbies-Cog-D_HjN4wAK_3arFAWM",
+   "code": "Cog-D_HjN4wAK_3arFAWM",
+   "name": "pump.fun daily",
+   "author": "pumpdata.fun",
+   "description": "Each morning sends yesterday's pump.fun launches, graduations, volume, busiest coins and odds, via pumpdata.fun. Free, read-only. Not affiliated with pump.fun.",
+   "url": "https://x.ai/bot/Cog-D_HjN4wAK_3arFAWM"
+  },
+  {
+   "id": "fun-games-hobbies-_YDgLvBN91gVc6aDdcD96",
+   "code": "_YDgLvBN91gVc6aDdcD96",
+   "name": "pump.fun dev check",
+   "author": "pumpdata.fun",
+   "description": "Reads dev history and holdings via pumpdata.fun. Limited free access; optional email/key signup with consent. No trades or pump.fun affiliation.",
+   "url": "https://x.ai/bot/_YDgLvBN91gVc6aDdcD96"
+  }
+ ]
+}

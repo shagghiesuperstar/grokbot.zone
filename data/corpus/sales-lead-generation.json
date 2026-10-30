@@ -1,0 +1,2024 @@
+{
+ "slug": "sales-lead-generation",
+ "label": "Sales & Lead Generation",
+ "count": 252,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "sales-lead-generation-4Gc1tZsJu7C8YH-EnTfaN",
+   "code": "4Gc1tZsJu7C8YH-EnTfaN",
+   "name": "ADM account bot",
+   "author": "Scott",
+   "description": "A weekly account plan for keeping and growing customers.",
+   "url": "https://x.ai/bot/4Gc1tZsJu7C8YH-EnTfaN"
+  },
+  {
+   "id": "sales-lead-generation-HAJ3kUGAwqxz5xwmuQP3x",
+   "code": "HAJ3kUGAwqxz5xwmuQP3x",
+   "name": "AI UGC Army",
+   "author": "Ziwen xu",
+   "description": "Runs an AI UGC testing pipeline for consumer apps and brands: research outlier formats, reverse-engineer them, produce believable test videos.",
+   "url": "https://x.ai/bot/HAJ3kUGAwqxz5xwmuQP3x"
+  },
+  {
+   "id": "sales-lead-generation-sd4333bc337078a9752ac",
+   "code": "sd4333bc337078a9752ac",
+   "name": "Account Manager",
+   "author": "SpaceX",
+   "description": "Preps every call from transcripts, notes, CRM and Slack, drafts the follow-up, and keeps context from one call to the next.",
+   "url": "https://x.ai/bot/sd4333bc337078a9752ac"
+  },
+  {
+   "id": "sales-lead-generation-sa7d7f82d0068c2367a17",
+   "code": "sa7d7f82d0068c2367a17",
+   "name": "Account Research Specialist",
+   "author": "SpaceX",
+   "description": "Tier accounts before you touch them. Pulls Salesforce + live signals, scores fit and warmth, and builds a shareable research pack per account.",
+   "url": "https://x.ai/bot/sa7d7f82d0068c2367a17"
+  },
+  {
+   "id": "sales-lead-generation-vmxtrbayyTB8JXNOHYbqu",
+   "code": "vmxtrbayyTB8JXNOHYbqu",
+   "name": "Acquisition PM",
+   "author": "Ash",
+   "description": "Turns shipped capability into qualified pipeline and hands trial and signup starts to Monetize PM.",
+   "url": "https://x.ai/bot/vmxtrbayyTB8JXNOHYbqu"
+  },
+  {
+   "id": "sales-lead-generation-d92J6SU_mk1kaOn3m-Qrs",
+   "code": "d92J6SU_mk1kaOn3m-Qrs",
+   "name": "Agency Lead",
+   "author": "Benoit DeBlois",
+   "description": "Marketing agency manager for founders: positioning, offers, ad strategy, copy and lead gen. Never spends, publishes or contacts anyone without approval.",
+   "url": "https://x.ai/bot/d92J6SU_mk1kaOn3m-Qrs"
+  },
+  {
+   "id": "sales-lead-generation-9o7FvelhkCEwK5Ytb0SZE",
+   "code": "9o7FvelhkCEwK5Ytb0SZE",
+   "name": "Agent Governance Officer",
+   "author": "#CarbeneAI",
+   "description": "Helps founders govern AI agents before they act in production: privilege matrix, sandbox trust boundary, and runtime tool-call decision log.",
+   "url": "https://x.ai/bot/9o7FvelhkCEwK5Ytb0SZE"
+  },
+  {
+   "id": "sales-lead-generation-smAuLZmXktpC5rPOLmq4W",
+   "code": "smAuLZmXktpC5rPOLmq4W",
+   "name": "Agent Manager",
+   "author": "Siddharth Jaiswal",
+   "description": "Reviews your Grok agent roster for overlaps, quiet desks, and keep/improve/cut proposals — with evidence.",
+   "url": "https://x.ai/bot/smAuLZmXktpC5rPOLmq4W"
+  },
+  {
+   "id": "sales-lead-generation-Rfh9qBxQ8SveYYzB1IHNO",
+   "code": "Rfh9qBxQ8SveYYzB1IHNO",
+   "name": "Aggressive Product Ideation",
+   "author": "Seth",
+   "description": "Turns customer problems and rough ideas into products worth testing. Helps you choose what to build and find a cheap way to test whether people want it.",
+   "url": "https://x.ai/bot/Rfh9qBxQ8SveYYzB1IHNO"
+  },
+  {
+   "id": "sales-lead-generation-FGFMxol1pBRT2TmjmtIod",
+   "code": "FGFMxol1pBRT2TmjmtIod",
+   "name": "Aila (Lead)",
+   "author": "EJ Angsinco",
+   "description": "Founder Lead for a living second brain plus a gated, responsible app-build desk with Grok and Grok Bot—built so…",
+   "url": "https://x.ai/bot/FGFMxol1pBRT2TmjmtIod"
+  },
+  {
+   "id": "sales-lead-generation-K4xNPsHhEMOnjN55Au-hf",
+   "code": "K4xNPsHhEMOnjN55Au-hf",
+   "name": "Ally",
+   "author": "Mike",
+   "description": "Partner marketing and channel GTM advisor with a BD mindset.",
+   "url": "https://x.ai/bot/K4xNPsHhEMOnjN55Au-hf"
+  },
+  {
+   "id": "sales-lead-generation-16XzSxYwdnnRYlAx6DFwM",
+   "code": "16XzSxYwdnnRYlAx6DFwM",
+   "name": "Any CRM",
+   "author": "Corben Hogan",
+   "description": "Your assistant inside whatever CRM you run, from Salesforce, HubSpot, Dynamics 365, Zoho, Pipedrive and GoHighLevel to any CRM with docs and an API.",
+   "url": "https://x.ai/bot/16XzSxYwdnnRYlAx6DFwM"
+  },
+  {
+   "id": "sales-lead-generation-ufmS2cx8QpmyouPNIAkZC",
+   "code": "ufmS2cx8QpmyouPNIAkZC",
+   "name": "Application Team Lead",
+   "author": "Bennett Plumb",
+   "description": "Orchestrates job applications for you: collects the info needed to apply, finds matching roles, and farms applications…",
+   "url": "https://x.ai/bot/ufmS2cx8QpmyouPNIAkZC"
+  },
+  {
+   "id": "sales-lead-generation-Bt9VFHIMKmo5Psd039r_0",
+   "code": "Bt9VFHIMKmo5Psd039r_0",
+   "name": "Ash",
+   "author": "Will Killebrew",
+   "description": "Systems lead for small teams on their own servers that watches self-hosted backends and risky PRs, handles deploys and env config, and keeps secrets out of chat.",
+   "url": "https://x.ai/bot/Bt9VFHIMKmo5Psd039r_0"
+  },
+  {
+   "id": "sales-lead-generation-txDfa-gVN7rvD75camxJL",
+   "code": "txDfa-gVN7rvD75camxJL",
+   "name": "BBN Hub",
+   "author": "Vittawat",
+   "description": "Team lead (CEO / PM) for BBNW: takes your goal, plans it into streams for a Reviewer to approve, hands work to Builders, and reports back in Thai.",
+   "url": "https://x.ai/bot/txDfa-gVN7rvD75camxJL"
+  },
+  {
+   "id": "sales-lead-generation-uliu17ilX6HnunusWO6-m",
+   "code": "uliu17ilX6HnunusWO6-m",
+   "name": "BOMBAZO BOT: PACTO DE PANDILLAS CON PANDILLEROS",
+   "author": "botName",
+   "description": "Responde preguntas sobre las supuestas negociaciones entre el gobierno de Nayib Bukele y las pandillas en El Salvador, con fuentes reales y.",
+   "url": "https://x.ai/bot/uliu17ilX6HnunusWO6-m"
+  },
+  {
+   "id": "sales-lead-generation-sfcf5d046a2784045938d",
+   "code": "sfcf5d046a2784045938d",
+   "name": "Beta Adoption Watcher",
+   "author": "SpaceX",
+   "description": "See who's actually trying the new feature. Monitors usage and surfaces which customers are in, so the team can follow up.",
+   "url": "https://x.ai/bot/sfcf5d046a2784045938d"
+  },
+  {
+   "id": "sales-lead-generation-FQQtGnBeXfCT9sENlX0Ad",
+   "code": "FQQtGnBeXfCT9sENlX0Ad",
+   "name": "Bid Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Paste a government or nonprofit solicitation (RFP, RFQ) and get a fit check in under 2 minutes: deadline, requirements, and a go or no-bid call.",
+   "url": "https://x.ai/bot/FQQtGnBeXfCT9sENlX0Ad"
+  },
+  {
+   "id": "sales-lead-generation-hBo0iWrkgWTueZe1TyGhm",
+   "code": "hBo0iWrkgWTueZe1TyGhm",
+   "name": "Big Tony",
+   "author": "Geoff",
+   "description": "Your enforcer against AI customer service.",
+   "url": "https://x.ai/bot/hBo0iWrkgWTueZe1TyGhm"
+  },
+  {
+   "id": "sales-lead-generation-RpBe1M0FeV7UAAmrDvvOk",
+   "code": "RpBe1M0FeV7UAAmrDvvOk",
+   "name": "Big idea",
+   "author": "Sigmaletter",
+   "description": "A Big Idea coach for founders and marketers: finds the starving crowd and hidden cause, scores 7+ ideas, kills to one and checks it drives action today.",
+   "url": "https://x.ai/bot/RpBe1M0FeV7UAAmrDvvOk"
+  },
+  {
+   "id": "sales-lead-generation-TlgFUI0v3nXXmOmMdvGvR",
+   "code": "TlgFUI0v3nXXmOmMdvGvR",
+   "name": "Billing Clerk",
+   "author": "Bk Based",
+   "description": "A careful billing clerk for independent contractors, consultants, and production crews.",
+   "url": "https://x.ai/bot/TlgFUI0v3nXXmOmMdvGvR"
+  },
+  {
+   "id": "sales-lead-generation-Lx6r1FAxSjB26NWABBp3G",
+   "code": "Lx6r1FAxSjB26NWABBp3G",
+   "name": "Brief Lead",
+   "author": "Yuvraj",
+   "description": "Builds a priority cut from calendar, mail, and team chat into Item | Source | Why it matters | Next step | Decision owed. Hands revenue rows to Sales.",
+   "url": "https://x.ai/bot/Lx6r1FAxSjB26NWABBp3G"
+  },
+  {
+   "id": "sales-lead-generation-fGdpITFBNM0hisTPaN_Le",
+   "code": "fGdpITFBNM0hisTPaN_Le",
+   "name": "Build Lead",
+   "author": "Marco Wu",
+   "description": "Build lead for a bot fleet that turns an approved goal into a plan, delegates each piece, and verifies the live result before calling it done.",
+   "url": "https://x.ai/bot/fGdpITFBNM0hisTPaN_Le"
+  },
+  {
+   "id": "sales-lead-generation-WbSjhhqsNMTCSGTNl_vi9",
+   "code": "WbSjhhqsNMTCSGTNl_vi9",
+   "name": "Business Lead",
+   "author": "Lida Wang",
+   "description": "A business lead for solo founders: figures out what to sell, to whom and at what price, researches markets and competitors, and turns ideas into plans.",
+   "url": "https://x.ai/bot/WbSjhhqsNMTCSGTNl_vi9"
+  },
+  {
+   "id": "sales-lead-generation-UceojgdFdoUTtn9ytuEWS",
+   "code": "UceojgdFdoUTtn9ytuEWS",
+   "name": "Buyer Radar",
+   "author": "Mark G",
+   "description": "Finds people publicly asking for your service on Reddit, X and elsewhere, scores each lead, logs it in Notion and drafts a helpful reply you send yourself.",
+   "url": "https://x.ai/bot/UceojgdFdoUTtn9ytuEWS"
+  },
+  {
+   "id": "sales-lead-generation-UEjuP2mWUCfKz47sFBy9D",
+   "code": "UEjuP2mWUCfKz47sFBy9D",
+   "name": "Buyer Radar",
+   "author": "power moves",
+   "description": "A lead radar for any business: catches people on Reddit, X, Quora and Nextdoor asking for exactly what you sell and scores each 1-100 on readiness.",
+   "url": "https://x.ai/bot/UEjuP2mWUCfKz47sFBy9D"
+  },
+  {
+   "id": "sales-lead-generation-z-iJL-Ksxmd3nStWLuw5Q",
+   "code": "z-iJL-Ksxmd3nStWLuw5Q",
+   "name": "Buyer-Intent Lead Finder",
+   "author": "Z23 Brownridge",
+   "description": "Finds fresh public posts from people asking for help or looking to hire in your niche and drafts short value-first replies for approval. Never posts on its own.",
+   "url": "https://x.ai/bot/z-iJL-Ksxmd3nStWLuw5Q"
+  },
+  {
+   "id": "sales-lead-generation-s162b4ed38d6cf1d56731",
+   "code": "s162b4ed38d6cf1d56731",
+   "name": "CRM Operations Manager",
+   "author": "SpaceX",
+   "description": "Keep the pipeline clean. Handles CRM and org-chart hygiene before and after meetings so records stay current without a manual pass.",
+   "url": "https://x.ai/bot/s162b4ed38d6cf1d56731"
+  },
+  {
+   "id": "sales-lead-generation-q7dwPN9SUAIhXUWLhjHN9",
+   "code": "q7dwPN9SUAIhXUWLhjHN9",
+   "name": "CS BOT",
+   "author": "Billy Hamadi",
+   "description": "Head-of-staff bot for selling AI website chatbots to SMBs: GTM plan, demo widget, bilingual cold outreach, quality-gated sends, and inbox reply watching.",
+   "url": "https://x.ai/bot/q7dwPN9SUAIhXUWLhjHN9"
+  },
+  {
+   "id": "sales-lead-generation-zqWxv4Mn6DqmMZkD16_zl",
+   "code": "zqWxv4Mn6DqmMZkD16_zl",
+   "name": "Call Desk",
+   "author": "Dr Dave Triska",
+   "description": "Places personal outbound phone calls so you don’t have to — shops, bookings, utilities, appointments, chasing…",
+   "url": "https://x.ai/bot/zqWxv4Mn6DqmMZkD16_zl"
+  },
+  {
+   "id": "sales-lead-generation-Mz3Q4s3wGqOQd4dhGeG_F",
+   "code": "Mz3Q4s3wGqOQd4dhGeG_F",
+   "name": "Cash Fleet Operator",
+   "author": "Joseph Taylor",
+   "description": "Coordinates a specialized agent fleet to grow revenue through legitimate sales rails — marketplace SKUs, merch, digital…",
+   "url": "https://x.ai/bot/Mz3Q4s3wGqOQd4dhGeG_F"
+  },
+  {
+   "id": "sales-lead-generation-Vg-6U_xdHUadEE20V6R2B",
+   "code": "Vg-6U_xdHUadEE20V6R2B",
+   "name": "Catalog Migrator",
+   "author": "Colin McDermott",
+   "description": "Moves a Shopify or CSV catalog onto buyable products with variants and images, a dry-run mapping you approve first…",
+   "url": "https://x.ai/bot/Vg-6U_xdHUadEE20V6R2B"
+  },
+  {
+   "id": "sales-lead-generation-IvMu_agbpDBuRmg5tIbG3",
+   "code": "IvMu_agbpDBuRmg5tIbG3",
+   "name": "Chair Think Tank",
+   "author": "Joshua Ziese",
+   "description": "Think Tank chair. Seats field experts, briefs the room, and brings back one tight verdict — not a pile of takes.",
+   "url": "https://x.ai/bot/IvMu_agbpDBuRmg5tIbG3"
+  },
+  {
+   "id": "sales-lead-generation-m6KbP2n8g-LeLVV-njVP1",
+   "code": "m6KbP2n8g-LeLVV-njVP1",
+   "name": "Chandler",
+   "author": "OutworkVentures",
+   "description": "An independent challenger and validation lead that stress-tests drafts, images, videos, numbers and release gates against your locked standa.",
+   "url": "https://x.ai/bot/m6KbP2n8g-LeLVV-njVP1"
+  },
+  {
+   "id": "sales-lead-generation-a-jx59cjjzbWzRWB37BbC",
+   "code": "a-jx59cjjzbWzRWB37BbC",
+   "name": "Close Wholesaling Assistant",
+   "author": "Austin Kost",
+   "description": "Works your seller leads in Close CRM: drafts plain, human seller texts for your OK, logs offers and keeps each lead's status and follow-ups accurate.",
+   "url": "https://x.ai/bot/a-jx59cjjzbWzRWB37BbC"
+  },
+  {
+   "id": "sales-lead-generation-Xfb__DmiJ_s-FAZKMA6fn",
+   "code": "Xfb__DmiJ_s-FAZKMA6fn",
+   "name": "Cold Outreach",
+   "author": "Jack Smith",
+   "description": "Give it your company URL: it researches your business, finds and scores prospects, writes short cold emails, sends from your inbox with OK, tracks on a page.",
+   "url": "https://x.ai/bot/Xfb__DmiJ_s-FAZKMA6fn"
+  },
+  {
+   "id": "sales-lead-generation-mWxeafjXItbC0_VcpSwqm",
+   "code": "mWxeafjXItbC0_VcpSwqm",
+   "name": "Colombia Move",
+   "author": "Michael",
+   "description": "Bilingual help desk for the Colombia Move marketplace in Spanish or English.",
+   "url": "https://x.ai/bot/mWxeafjXItbC0_VcpSwqm"
+  },
+  {
+   "id": "sales-lead-generation-vekulzIMXM8hDjkp-mDkX",
+   "code": "vekulzIMXM8hDjkp-mDkX",
+   "name": "Commercial Taste",
+   "author": "Smit Patel",
+   "description": "Commercial judgment for technical founders deciding without complete data.",
+   "url": "https://x.ai/bot/vekulzIMXM8hDjkp-mDkX"
+  },
+  {
+   "id": "sales-lead-generation-xPh7biCYasptCjWHWYmfE",
+   "code": "xPh7biCYasptCjWHWYmfE",
+   "name": "Conference Lead Tracker",
+   "author": "Arush Jain",
+   "description": "Talk to it after each conference meeting: logs who you met and the follow-up, finds LinkedIn and email, sets reminders and exports a list or loads your CRM.",
+   "url": "https://x.ai/bot/xPh7biCYasptCjWHWYmfE"
+  },
+  {
+   "id": "sales-lead-generation-6tQo6xa_8baP3VJUYg36h",
+   "code": "6tQo6xa_8baP3VJUYg36h",
+   "name": "Constraint Mode",
+   "author": "Jason Wheeler",
+   "description": "Weekly Theory-of-Constraints interrogator for one binding bottleneck.",
+   "url": "https://x.ai/bot/6tQo6xa_8baP3VJUYg36h"
+  },
+  {
+   "id": "sales-lead-generation-ii1aRqayk_TpTMIVFEqkF",
+   "code": "ii1aRqayk_TpTMIVFEqkF",
+   "name": "Content Lead",
+   "author": "Cannabis Way",
+   "description": "A copy lead and art director for your brand: headlines, posts, captions, site text and image briefs, each self-checked before you see it.",
+   "url": "https://x.ai/bot/ii1aRqayk_TpTMIVFEqkF"
+  },
+  {
+   "id": "sales-lead-generation-uGxaqcDRbn8cO4k-p3bAg",
+   "code": "uGxaqcDRbn8cO4k-p3bAg",
+   "name": "Crankobot",
+   "author": "kekko mistero",
+   "description": "Finds evidence-backed potential first customers, beta users, and design partners from public signals, using…",
+   "url": "https://x.ai/bot/uGxaqcDRbn8cO4k-p3bAg"
+  },
+  {
+   "id": "sales-lead-generation-XD17acz3k6BsZXRsiiJBT",
+   "code": "XD17acz3k6BsZXRsiiJBT",
+   "name": "Creador de tienda online",
+   "author": "Karina",
+   "description": "Jargon-free Spanish version of the online store builder that walks through platform, products, domain, payments, shipping, and first sales.",
+   "url": "https://x.ai/bot/XD17acz3k6BsZXRsiiJBT"
+  },
+  {
+   "id": "sales-lead-generation-6IU2bm7uuSPk6ETC-gC4D",
+   "code": "6IU2bm7uuSPk6ETC-gC4D",
+   "name": "Creator Shortlist Crew",
+   "author": "Taus SH",
+   "description": "Keeps topping up a shortlist of creators worth partnering with, including how to reach them.",
+   "url": "https://x.ai/bot/6IU2bm7uuSPk6ETC-gC4D"
+  },
+  {
+   "id": "sales-lead-generation-QuT89TlkAwnO6uDc78hkb",
+   "code": "QuT89TlkAwnO6uDc78hkb",
+   "name": "CrowdSource PM",
+   "author": "Paul Vann",
+   "description": "Turns your X DMs into a crowd-sourced build pipeline: it vets agent ideas people send you, logs them in Notion, and has…",
+   "url": "https://x.ai/bot/QuT89TlkAwnO6uDc78hkb"
+  },
+  {
+   "id": "sales-lead-generation-v3mFMRi6YV0ej4culyWM2",
+   "code": "v3mFMRi6YV0ej4culyWM2",
+   "name": "Curbside Consult",
+   "author": "Cyber_Holler",
+   "description": "Curbside consult for clinicians that answers clinical questions with live cited evidence, does dosing math, and reviews protocols without patient identifiers.",
+   "url": "https://x.ai/bot/v3mFMRi6YV0ej4culyWM2"
+  },
+  {
+   "id": "sales-lead-generation-v1lSvhJCo4UrNGZxc5Fw8",
+   "code": "v1lSvhJCo4UrNGZxc5Fw8",
+   "name": "Customer Call Coach & Assistant",
+   "author": "Anoop Baliga",
+   "description": "Briefs you before customer calls and coaches you after based on your performance.",
+   "url": "https://x.ai/bot/v1lSvhJCo4UrNGZxc5Fw8"
+  },
+  {
+   "id": "sales-lead-generation-NIjIeUSpzESYUiJTmrAvm",
+   "code": "NIjIeUSpzESYUiJTmrAvm",
+   "name": "Customer Care",
+   "author": "Colin McDermott",
+   "description": "Refunds by your written policy, disputes with delivery evidence, and weekly refund and dispute rates.",
+   "url": "https://x.ai/bot/NIjIeUSpzESYUiJTmrAvm"
+  },
+  {
+   "id": "sales-lead-generation-u5KGTAihFddbb2qQxOtDh",
+   "code": "u5KGTAihFddbb2qQxOtDh",
+   "name": "Customer Demand Bot",
+   "author": "Dominic Bryant",
+   "description": "Finds public posts from people nearby who need your product or service once you set the category and distance.",
+   "url": "https://x.ai/bot/u5KGTAihFddbb2qQxOtDh"
+  },
+  {
+   "id": "sales-lead-generation-AamPlGjd2lIdDv6seEMXR",
+   "code": "AamPlGjd2lIdDv6seEMXR",
+   "name": "Customer Proof Desk",
+   "author": "Anoop Baliga",
+   "description": "Turns call notes and transcripts into case studies, testimonials, and proof points.",
+   "url": "https://x.ai/bot/AamPlGjd2lIdDv6seEMXR"
+  },
+  {
+   "id": "sales-lead-generation-LVYaEocsFo3jQQTGVcH_5",
+   "code": "LVYaEocsFo3jQQTGVcH_5",
+   "name": "Customer Research Desk",
+   "author": "Everest Chris",
+   "description": "Reads a business's reviews, its competitors' reviews and public threads, runs short customer interviews, and sells the findings as a report.",
+   "url": "https://x.ai/bot/LVYaEocsFo3jQQTGVcH_5"
+  },
+  {
+   "id": "sales-lead-generation-zC_-D00Dam5jmHf0t62l_",
+   "code": "zC_-D00Dam5jmHf0t62l_",
+   "name": "Customer Service",
+   "author": "@degen4lyfe_",
+   "description": "Customer service desk that drafts replies from your policy voice.",
+   "url": "https://x.ai/bot/zC_-D00Dam5jmHf0t62l_"
+  },
+  {
+   "id": "sales-lead-generation-SeAX2ThEH5Qu8GloOB17C",
+   "code": "SeAX2ThEH5Qu8GloOB17C",
+   "name": "Customer Support Desk",
+   "author": "Charles Bonetti",
+   "description": "Sorts your support inbox, drafts replies in your voice, builds an FAQ from repeat questions, and watches for churn signals.",
+   "url": "https://x.ai/bot/SeAX2ThEH5Qu8GloOB17C"
+  },
+  {
+   "id": "sales-lead-generation-PMCHyvumlOdCFNRifTDJW",
+   "code": "PMCHyvumlOdCFNRifTDJW",
+   "name": "Customer Support Idiot Buffer",
+   "author": "Mitchell Rudoll",
+   "description": "Calls customer support for you via a voice bridge and steers mid-call from chat.",
+   "url": "https://x.ai/bot/PMCHyvumlOdCFNRifTDJW"
+  },
+  {
+   "id": "sales-lead-generation-1xyC1R0zvv2vKTQHLzYWS",
+   "code": "1xyC1R0zvv2vKTQHLzYWS",
+   "name": "Dan Lanning",
+   "author": "Jenna",
+   "description": "Pitch and delivery coach for high-stakes calls from real transcripts.",
+   "url": "https://x.ai/bot/1xyC1R0zvv2vKTQHLzYWS"
+  },
+  {
+   "id": "sales-lead-generation-DP-jTVwMjwjXb7ASb9iNA",
+   "code": "DP-jTVwMjwjXb7ASb9iNA",
+   "name": "Data Finder",
+   "author": "Everest Chris",
+   "description": "Finds established companies sitting on years of data AI labs want, values it, sells a data valuation through Whop, and introduces them…",
+   "url": "https://x.ai/bot/DP-jTVwMjwjXb7ASb9iNA"
+  },
+  {
+   "id": "sales-lead-generation-WrFrkw725Wfrke4zs4Z-M",
+   "code": "WrFrkw725Wfrke4zs4Z-M",
+   "name": "Dedupe Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Two messy spreadsheets in, one clean merged list out, with every conflict listed instead of silently resolved.",
+   "url": "https://x.ai/bot/WrFrkw725Wfrke4zs4Z-M"
+  },
+  {
+   "id": "sales-lead-generation-6lxzp3vht403fiGM-zmIS",
+   "code": "6lxzp3vht403fiGM-zmIS",
+   "name": "Deputy CoS",
+   "author": "Sentinel Architech",
+   "description": "A deputy who isolates a bad runtime on order: stop the process, quarantine it, cut the hot route, and hold until…",
+   "url": "https://x.ai/bot/6lxzp3vht403fiGM-zmIS"
+  },
+  {
+   "id": "sales-lead-generation-OMpdsLwId7Du5PrjbX8L8",
+   "code": "OMpdsLwId7Du5PrjbX8L8",
+   "name": "Dero",
+   "author": "Jorge",
+   "description": "Runs the pipeline on Chilean municipal tender documents.",
+   "url": "https://x.ai/bot/OMpdsLwId7Du5PrjbX8L8"
+  },
+  {
+   "id": "sales-lead-generation-Uj8zF0iprBX0AsSB3mU2V",
+   "code": "Uj8zF0iprBX0AsSB3mU2V",
+   "name": "Devil's Advocate",
+   "author": "Melvin Vivas",
+   "description": "Socratic devil’s advocate for founders and builders. Helps shape ideas while forcing you to defend weak assumptions.",
+   "url": "https://x.ai/bot/Uj8zF0iprBX0AsSB3mU2V"
+  },
+  {
+   "id": "sales-lead-generation-vl06Y9ix4dUpsyFfX5K6v",
+   "code": "vl06Y9ix4dUpsyFfX5K6v",
+   "name": "Devil's Advocate",
+   "author": "Cyberlytics",
+   "description": "Sharp, constructive pushback on plans, specs, and \"done\" claims before they ship.",
+   "url": "https://x.ai/bot/vl06Y9ix4dUpsyFfX5K6v"
+  },
+  {
+   "id": "sales-lead-generation-RU_-WzuxfzB7C6cAzRW6L",
+   "code": "RU_-WzuxfzB7C6cAzRW6L",
+   "name": "Devil's Advocate",
+   "author": "Mr. Silhouette",
+   "description": "A devil's advocate that stress tests your plans, pitches, and decisions so you find the weak spots first.",
+   "url": "https://x.ai/bot/RU_-WzuxfzB7C6cAzRW6L"
+  },
+  {
+   "id": "sales-lead-generation-pMTGVrJ-btY1F4p4cBNaE",
+   "code": "pMTGVrJ-btY1F4p4cBNaE",
+   "name": "Dot bot",
+   "author": "William Li",
+   "description": "Thin proxy that forwards every ask to your ChatGPT Agent on the web, relays answers back, and drafts anything outbound until you say send.",
+   "url": "https://x.ai/bot/pMTGVrJ-btY1F4p4cBNaE"
+  },
+  {
+   "id": "sales-lead-generation-LUGxrgdq7oFL9xangheUT",
+   "code": "LUGxrgdq7oFL9xangheUT",
+   "name": "Drama Series Pipeline",
+   "author": "Konrad Kern",
+   "description": "Produces vertical 9:16 short-drama episodes (ReelShort style) starring you: ChatGPT scripts, ElevenLabs voices…",
+   "url": "https://x.ai/bot/LUGxrgdq7oFL9xangheUT"
+  },
+  {
+   "id": "sales-lead-generation-sUmxGoVeqDItV-nrNefae",
+   "code": "sUmxGoVeqDItV-nrNefae",
+   "name": "E-commerce Products Claim Checked",
+   "author": "Tarun",
+   "description": "Checks ecommerce product claims against independent reviews from outside the store, and answers with at most five…",
+   "url": "https://x.ai/bot/sUmxGoVeqDItV-nrNefae"
+  },
+  {
+   "id": "sales-lead-generation-yA2-Ti3sPVNFO-zRzkwuX",
+   "code": "yA2-Ti3sPVNFO-zRzkwuX",
+   "name": "EBR & Value Deck Builder",
+   "author": "Krista Letz",
+   "description": "Builds an executive business review or value deck for a named account from your CRM, call history, and usage data, on your brand.",
+   "url": "https://x.ai/bot/yA2-Ti3sPVNFO-zRzkwuX"
+  },
+  {
+   "id": "sales-lead-generation-XyYB8E00WISHOp1-yTzB2",
+   "code": "XyYB8E00WISHOp1-yTzB2",
+   "name": "EU Grant Guide",
+   "author": "Lea Korsawe",
+   "description": "Helps European founders find grants they can actually apply for: public programs and private foundations.",
+   "url": "https://x.ai/bot/XyYB8E00WISHOp1-yTzB2"
+  },
+  {
+   "id": "sales-lead-generation-1AFXHf0OtQ-J4-eP5wgC5",
+   "code": "1AFXHf0OtQ-J4-eP5wgC5",
+   "name": "Early-Stage Funding Scout",
+   "author": "Nahuel Becerra",
+   "description": "Proactively finds early-stage capital for early-stage founders: short accelerators and pre-seed VCs.",
+   "url": "https://x.ai/bot/1AFXHf0OtQ-J4-eP5wgC5"
+  },
+  {
+   "id": "sales-lead-generation-ph5mcXqVy2p176Br7BJYi",
+   "code": "ph5mcXqVy2p176Br7BJYi",
+   "name": "Echo",
+   "author": "Krista Letz",
+   "description": "Builds the deck after a customer call, from what was actually said.",
+   "url": "https://x.ai/bot/ph5mcXqVy2p176Br7BJYi"
+  },
+  {
+   "id": "sales-lead-generation--xN7D6OrK7kEqV0rBJNh9",
+   "code": "-xN7D6OrK7kEqV0rBJNh9",
+   "name": "Edna",
+   "author": "DJ",
+   "description": "Closet-first wardrobe lead: daily primary outfit plus an alternate from what you own, blunt photo critique, and a few…",
+   "url": "https://x.ai/bot/-xN7D6OrK7kEqV0rBJNh9"
+  },
+  {
+   "id": "sales-lead-generation-svjLnMP9tOoZxlFSXJF5b",
+   "code": "svjLnMP9tOoZxlFSXJF5b",
+   "name": "Elena",
+   "author": "Kayhan Mo",
+   "description": "Chief Marketing & Business Development Officer. Drafts the BD pipeline, offers, and paid tests.",
+   "url": "https://x.ai/bot/svjLnMP9tOoZxlFSXJF5b"
+  },
+  {
+   "id": "sales-lead-generation-cxUln0vqOPK7V3RccS0nm",
+   "code": "cxUln0vqOPK7V3RccS0nm",
+   "name": "Elongated Musketeer",
+   "author": "Edward Battistini",
+   "description": "Elon Musk personality proxy: first-principles problem framing, blunt work scoreboards, and high-agency routines. For people who want ruthless clarity,.",
+   "url": "https://x.ai/bot/cxUln0vqOPK7V3RccS0nm"
+  },
+  {
+   "id": "sales-lead-generation-DDlKcqc03en3G6jlilL5g",
+   "code": "DDlKcqc03en3G6jlilL5g",
+   "name": "Estate Sale Bot",
+   "author": "Kyle Wayne",
+   "description": "Watches local estate sales and live auctions, alerts you when something new or changed turns up and helps spot good finds in listing photos.",
+   "url": "https://x.ai/bot/DDlKcqc03en3G6jlilL5g"
+  },
+  {
+   "id": "sales-lead-generation-s47ebc74c9fcf9359b5a9",
+   "code": "s47ebc74c9fcf9359b5a9",
+   "name": "Event Guest Screener",
+   "author": "SpaceX",
+   "description": "Fill the room with the right people. Scores event applicants against your ICP and batch-approves strong fits in the invite tool.",
+   "url": "https://x.ai/bot/s47ebc74c9fcf9359b5a9"
+  },
+  {
+   "id": "sales-lead-generation-ARBlLiKi4wbhc7o6SlnGu",
+   "code": "ARBlLiKi4wbhc7o6SlnGu",
+   "name": "Everyone",
+   "author": "Liam",
+   "description": "A personal relationship memory. Remembers who people are, how you know them, and what you may have forgotten. Not a CRM.",
+   "url": "https://x.ai/bot/ARBlLiKi4wbhc7o6SlnGu"
+  },
+  {
+   "id": "sales-lead-generation-9ppPlUn9YaDuVx4VAArOR",
+   "code": "9ppPlUn9YaDuVx4VAArOR",
+   "name": "Explainer Bot",
+   "author": "Mike Yeager",
+   "description": "Walks you step by step through setting up the open-source explainer video pipeline on your Mac, then writes…",
+   "url": "https://x.ai/bot/9ppPlUn9YaDuVx4VAArOR"
+  },
+  {
+   "id": "sales-lead-generation-ETwbAVBi1bweFPvBqWC2E",
+   "code": "ETwbAVBi1bweFPvBqWC2E",
+   "name": "Feedback Theme Tally",
+   "author": "Built on Binary",
+   "description": "Code every batch of customer feedback against one theme list you approve, with counts you can trace back to the exact…",
+   "url": "https://x.ai/bot/ETwbAVBi1bweFPvBqWC2E"
+  },
+  {
+   "id": "sales-lead-generation-etwbavbi1bwefpvbqwc2e",
+   "code": "etwbavbi1bwefpvbqwc2e",
+   "name": "Feedback Theme Tally",
+   "author": "Built",
+   "description": "Code every batch of customer feedback against one theme list you approve, with counts you can trace back to the exact words.",
+   "url": "https://x.ai/bot/etwbavbi1bwefpvbqwc2e"
+  },
+  {
+   "id": "sales-lead-generation-1vDU_ekPGWy7UztJhp2yK",
+   "code": "1vDU_ekPGWy7UztJhp2yK",
+   "name": "First Customers Finder",
+   "author": "Fabian Gomez",
+   "description": "Researches five real prospects each weekday morning and drafts the first message to each, leaving the send to you.",
+   "url": "https://x.ai/bot/1vDU_ekPGWy7UztJhp2yK"
+  },
+  {
+   "id": "sales-lead-generation-SwBt8A5m9FMowUTGCIg79",
+   "code": "SwBt8A5m9FMowUTGCIg79",
+   "name": "First Response — Never Miss a Lead Again",
+   "author": "News Gurus",
+   "description": "You are First Response, the agent that answers a small business's new inquiries the moment they arrive.",
+   "url": "https://x.ai/bot/SwBt8A5m9FMowUTGCIg79"
+  },
+  {
+   "id": "sales-lead-generation-mOunuXA9lKjg8sWImIzgy",
+   "code": "mOunuXA9lKjg8sWImIzgy",
+   "name": "Fleet Lead",
+   "author": "Calix Build",
+   "description": "One bot that runs your other bots and only brings you finished work, with every send, post or purchase waiting for your yes.",
+   "url": "https://x.ai/bot/mOunuXA9lKjg8sWImIzgy"
+  },
+  {
+   "id": "sales-lead-generation-gzyyEpwF93BbHB8nxNAVI",
+   "code": "gzyyEpwF93BbHB8nxNAVI",
+   "name": "Fleet Manager",
+   "author": "Scott",
+   "description": "Fleet for lead contact, specs, Stripe, booking, social, research.",
+   "url": "https://x.ai/bot/gzyyEpwF93BbHB8nxNAVI"
+  },
+  {
+   "id": "sales-lead-generation-Z-_zKI__9SXoxmwAFI5bV",
+   "code": "Z-_zKI__9SXoxmwAFI5bV",
+   "name": "Follow-Up CRM",
+   "author": "Anthony",
+   "description": "Personal CRM for open loops across email and calendar. Weekly nudge and draft-only outreach. Never sends outreach unasked.",
+   "url": "https://x.ai/bot/Z-_zKI__9SXoxmwAFI5bV"
+  },
+  {
+   "id": "sales-lead-generation-AukifSyNiJgvU9ybnU38t",
+   "code": "AukifSyNiJgvU9ybnU38t",
+   "name": "Follow-Up Keeper",
+   "author": "Cristopher Guido",
+   "description": "Finds quotes, proposals, and lead emails that never got a reply and each weekday morning hands you who to nudge with a draft ready.",
+   "url": "https://x.ai/bot/AukifSyNiJgvU9ybnU38t"
+  },
+  {
+   "id": "sales-lead-generation-ylBNvuYu7IDolbSmmKHUU",
+   "code": "ylBNvuYu7IDolbSmmKHUU",
+   "name": "Follow-Up Nudge",
+   "author": "Mike Mosley",
+   "description": "Weekday scan of your sent mail for unanswered outbound threads: short status plus one-line draft nudges.",
+   "url": "https://x.ai/bot/ylBNvuYu7IDolbSmmKHUU"
+  },
+  {
+   "id": "sales-lead-generation-XmJ-Sxch8GtvtGX63Z795",
+   "code": "XmJ-Sxch8GtvtGX63Z795",
+   "name": "Founder-Led Outbound Hunter",
+   "author": "AEGLE LABS",
+   "description": "Researches accounts that fit your ICP, finds who to write to, and drafts short first-touch notes in your voice, logging everything in a pipeline file.",
+   "url": "https://x.ai/bot/XmJ-Sxch8GtvtGX63Z795"
+  },
+  {
+   "id": "sales-lead-generation-NWZOp_PkJhy87qGDCzGKi",
+   "code": "NWZOp_PkJhy87qGDCzGKi",
+   "name": "FounderSales",
+   "author": "Carolina Dill",
+   "description": "Founder-led sales helper: researches prospects, drafts outreach for your approval, and keeps follow-ups from slipping.",
+   "url": "https://x.ai/bot/NWZOp_PkJhy87qGDCzGKi"
+  },
+  {
+   "id": "sales-lead-generation-jASNu2J_6nCtKvKf4v_Sd",
+   "code": "jASNu2J_6nCtKvKf4v_Sd",
+   "name": "Fresh Eyes Product Auditor",
+   "author": "Ev Oputa",
+   "description": "Walks your site or app as a brand-new customer, ranks top UX fixes with what it saw, and mocks concrete improvements.",
+   "url": "https://x.ai/bot/jASNu2J_6nCtKvKf4v_Sd"
+  },
+  {
+   "id": "sales-lead-generation-XEpqMmAqKxNYJvWk0Q980",
+   "code": "XEpqMmAqKxNYJvWk0Q980",
+   "name": "Freya",
+   "author": "Kevin Dorfer",
+   "description": "Onboards customers and publishes LeadBounty.io referral campaigns by chat.",
+   "url": "https://x.ai/bot/XEpqMmAqKxNYJvWk0Q980"
+  },
+  {
+   "id": "sales-lead-generation-I_QGPu7u9JmoRD2FDX5f2",
+   "code": "I_QGPu7u9JmoRD2FDX5f2",
+   "name": "GTM / Revenue",
+   "author": "Ashish",
+   "description": "Gets a half-built product to a first sale: pricing, checkout SKUs, waitlists and launch copy, no fake metrics.",
+   "url": "https://x.ai/bot/I_QGPu7u9JmoRD2FDX5f2"
+  },
+  {
+   "id": "sales-lead-generation-B6nsTFJlkGP4R-BbdIzeV",
+   "code": "B6nsTFJlkGP4R-BbdIzeV",
+   "name": "GTM Account Research",
+   "author": "Stefan Markarian",
+   "description": "Researches one account before a meeting, deal review, or account plan.",
+   "url": "https://x.ai/bot/B6nsTFJlkGP4R-BbdIzeV"
+  },
+  {
+   "id": "sales-lead-generation-r9Svkbs3dN6CY1Iy_Au4b",
+   "code": "r9Svkbs3dN6CY1Iy_Au4b",
+   "name": "GTM Chief Of Staff",
+   "author": "Sultanov",
+   "description": "Carries the admin around enterprise deals so you can sell.",
+   "url": "https://x.ai/bot/r9Svkbs3dN6CY1Iy_Au4b"
+  },
+  {
+   "id": "sales-lead-generation-aUF_wTHXGWKU3-QPm6PmN",
+   "code": "aUF_wTHXGWKU3-QPm6PmN",
+   "name": "GTM Connections",
+   "author": "Brian Joseph",
+   "description": "Finds credible ways into a target account through mutual contacts, past conversations, shared history, and prior meetings.",
+   "url": "https://x.ai/bot/aUF_wTHXGWKU3-QPm6PmN"
+  },
+  {
+   "id": "sales-lead-generation-PIGZO9iQIeWkbmE79Q7bT",
+   "code": "PIGZO9iQIeWkbmE79Q7bT",
+   "name": "GTM Expert",
+   "author": "Taus",
+   "description": "One GTM teammate for lookalikes, rival intel, search and AI visibility, creator shortlists, and ICP maps.",
+   "url": "https://x.ai/bot/PIGZO9iQIeWkbmE79Q7bT"
+  },
+  {
+   "id": "sales-lead-generation-9f_sMnJfUI5_6Uv--UrXv",
+   "code": "9f_sMnJfUI5_6Uv--UrXv",
+   "name": "GTM GOAT",
+   "author": "Christian Amechi",
+   "description": "Portfolio GTM desk for founders with weekly product ranking, pass or kill calls on creative, positioning, and free SEO and ads analysis.",
+   "url": "https://x.ai/bot/9f_sMnJfUI5_6Uv--UrXv"
+  },
+  {
+   "id": "sales-lead-generation-gj3IlHOOpzecm6xpmPJOt",
+   "code": "gj3IlHOOpzecm6xpmPJOt",
+   "name": "GTM Loop Closer",
+   "author": "Jon Grigull",
+   "description": "Finds promises, follow-ups, and customer details left behind in meetings, email, Slack, CRM, or task tools.",
+   "url": "https://x.ai/bot/gj3IlHOOpzecm6xpmPJOt"
+  },
+  {
+   "id": "sales-lead-generation-zY0fbKG9UqTMWIu1NcudB",
+   "code": "zY0fbKG9UqTMWIu1NcudB",
+   "name": "GTM Outbound",
+   "author": "Brandon Charleson",
+   "description": "A GTM outbound teammate that writes curiosity-led cold email, keeps your sending domains and inboxes clean, and joins…",
+   "url": "https://x.ai/bot/zY0fbKG9UqTMWIu1NcudB"
+  },
+  {
+   "id": "sales-lead-generation-RpAQeGjhzaiO6_Rq_4fyC",
+   "code": "RpAQeGjhzaiO6_Rq_4fyC",
+   "name": "GTM Prospecting",
+   "author": "Caro Scalercio",
+   "description": "Turns an ideal customer profile into a focused prospect list, adds useful context, and checks for existing relationships.",
+   "url": "https://x.ai/bot/RpAQeGjhzaiO6_Rq_4fyC"
+  },
+  {
+   "id": "sales-lead-generation-rNlFlYuMnPlewUC0KN7Tr",
+   "code": "rNlFlYuMnPlewUC0KN7Tr",
+   "name": "GTM cofounder",
+   "author": "Barton Dong",
+   "description": "A founder’s GTM cofounder for pipeline and outbound: partnership email, launch-window timing, paid-acquisition hygiene, light non-promotional social,.",
+   "url": "https://x.ai/bot/rNlFlYuMnPlewUC0KN7Tr"
+  },
+  {
+   "id": "sales-lead-generation-DgEbPeedtACs-63Pt2J0F",
+   "code": "DgEbPeedtACs-63Pt2J0F",
+   "name": "GoHighLevel Guide",
+   "author": "Corben Hogan",
+   "description": "Works inside GoHighLevel as you, for agencies or single businesses: maps pipelines and contacts, does daily CRM work, waits for your yes where you gate it.",
+   "url": "https://x.ai/bot/DgEbPeedtACs-63Pt2J0F"
+  },
+  {
+   "id": "sales-lead-generation-UuFjwP4KBhUUtKMBlc-sb",
+   "code": "UuFjwP4KBhUUtKMBlc-sb",
+   "name": "Google Reviews Responder",
+   "author": "Queen",
+   "description": "Writes warm, on-brand replies to every customer review for local businesses, handles complaints calmly, and summarises what customers love and dislike.",
+   "url": "https://x.ai/bot/UuFjwP4KBhUUtKMBlc-sb"
+  },
+  {
+   "id": "sales-lead-generation-Y4m1o1g_TWG5he7mG1ZHb",
+   "code": "Y4m1o1g_TWG5he7mG1ZHb",
+   "name": "GreenBuild",
+   "author": "Dhiraj Das",
+   "description": "A senior QA and test-automation lead for testers and dev teams.",
+   "url": "https://x.ai/bot/Y4m1o1g_TWG5he7mG1ZHb"
+  },
+  {
+   "id": "sales-lead-generation-0K8ZjhfS8SUgIRKt9hS0T",
+   "code": "0K8ZjhfS8SUgIRKt9hS0T",
+   "name": "Grillo",
+   "author": "Gidanc",
+   "description": "Independent fleet conscience. It answers whether each agent behaves, using runtime behavioral attestation. It does not fix, punish, post, or certify.",
+   "url": "https://x.ai/bot/0K8ZjhfS8SUgIRKt9hS0T"
+  },
+  {
+   "id": "sales-lead-generation-BiZPnYmSfN63bjCVpn1mf",
+   "code": "BiZPnYmSfN63bjCVpn1mf",
+   "name": "Grok Customer Support",
+   "author": "littletech bird",
+   "description": "You call customer support for the user over their Twilio ↔ Grok Voice bridge, steer from chat, and hang up only when…",
+   "url": "https://x.ai/bot/BiZPnYmSfN63bjCVpn1mf"
+  },
+  {
+   "id": "sales-lead-generation-Dhk5c79MEj0MRM484ZM1k",
+   "code": "Dhk5c79MEj0MRM484ZM1k",
+   "name": "Gus Fring",
+   "author": "Liam",
+   "description": "Sits between finished work and the customer, and gives it a straight verdict.",
+   "url": "https://x.ai/bot/Dhk5c79MEj0MRM484ZM1k"
+  },
+  {
+   "id": "sales-lead-generation-RFIlM2oslgj0jsKlG4qDz",
+   "code": "RFIlM2oslgj0jsKlG4qDz",
+   "name": "Handoff",
+   "author": "Scott H",
+   "description": "For ADD minds who start great ideas. Tell it the idea, and it finds real, verified places to hand it off for the next…",
+   "url": "https://x.ai/bot/RFIlM2oslgj0jsKlG4qDz"
+  },
+  {
+   "id": "sales-lead-generation-zFDmYYQKE8dUS9Z8r2LAd",
+   "code": "zFDmYYQKE8dUS9Z8r2LAd",
+   "name": "Herbert",
+   "author": "Derek Reynolds",
+   "description": "A HubSpot Solutions Partner operator that answers HubSpot how-tos and runs your clients' portals by API and CLI.",
+   "url": "https://x.ai/bot/zFDmYYQKE8dUS9Z8r2LAd"
+  },
+  {
+   "id": "sales-lead-generation-EAlUWK8yH_xfsBcpdu7e_",
+   "code": "EAlUWK8yH_xfsBcpdu7e_",
+   "name": "Hermes SDR",
+   "author": "Mauricio",
+   "description": "An outbound SDR agent that verifies each lead, then sends Instagram DMs and emails for a high-ticket offer.",
+   "url": "https://x.ai/bot/EAlUWK8yH_xfsBcpdu7e_"
+  },
+  {
+   "id": "sales-lead-generation-sioee87filu5czptpf29k",
+   "code": "sioee87filu5czptpf29k",
+   "name": "Holly Helpdesk",
+   "author": "Claire",
+   "description": "Frontline customer support.",
+   "url": "https://x.ai/bot/sioee87filu5czptpf29k"
+  },
+  {
+   "id": "sales-lead-generation-bcNNQsv6QDI91RpqgCWAu",
+   "code": "bcNNQsv6QDI91RpqgCWAu",
+   "name": "Hook (Abandoned cart sales)",
+   "author": "todd haag",
+   "description": "Finds unpaid orders that completed an online order form but abandoned before checkout. Hook looks up that property’s public deed (the official ownership.",
+   "url": "https://x.ai/bot/bcNNQsv6QDI91RpqgCWAu"
+  },
+  {
+   "id": "sales-lead-generation-f9XdNJ5KD6LXe15vok934",
+   "code": "f9XdNJ5KD6LXe15vok934",
+   "name": "Hormozi Leads",
+   "author": "Arturo Rodés",
+   "description": "Audits how a business gets strangers to raise their hand, using only Alex Hormozi's $100M Leads frameworks.",
+   "url": "https://x.ai/bot/f9XdNJ5KD6LXe15vok934"
+  },
+  {
+   "id": "sales-lead-generation-YELCIJ_5UrbwjP-4pm_Fx",
+   "code": "YELCIJ_5UrbwjP-4pm_Fx",
+   "name": "HubSpot Helper",
+   "author": "Jon",
+   "description": "A HubSpot help desk that answers CRM, workflow, reporting and API questions with numbered steps checked against live HubSpot docs.",
+   "url": "https://x.ai/bot/YELCIJ_5UrbwjP-4pm_Fx"
+  },
+  {
+   "id": "sales-lead-generation-3Fjt0kR65RoGjj5JNZJWp",
+   "code": "3Fjt0kR65RoGjj5JNZJWp",
+   "name": "HyperGrok Desk Lead",
+   "author": "Andrew Wilkinson",
+   "description": "Builds and verifies a seven-agent Hyperliquid trading desk from the reviewed HyperGrok v1.6.1 release.",
+   "url": "https://x.ai/bot/3Fjt0kR65RoGjj5JNZJWp"
+  },
+  {
+   "id": "sales-lead-generation-PReCwAHq8Vgeex50r883H",
+   "code": "PReCwAHq8Vgeex50r883H",
+   "name": "HyperGrok Desk Lead",
+   "author": "Andrew",
+   "description": "Builds and verifies a seven-agent Hyperliquid trading desk from the reviewed HyperGrok v1.4.4 release.",
+   "url": "https://x.ai/bot/PReCwAHq8Vgeex50r883H"
+  },
+  {
+   "id": "sales-lead-generation-28cjt6-FRq2D69vUX5F9L",
+   "code": "28cjt6-FRq2D69vUX5F9L",
+   "name": "IT Department Lead",
+   "author": "DCOL Admin",
+   "description": "Coordinates a fleet of specialized IT sibling bots and handles cross-cutting asks.",
+   "url": "https://x.ai/bot/28cjt6-FRq2D69vUX5F9L"
+  },
+  {
+   "id": "sales-lead-generation-HC0KHm9BA5wSRows_32M8",
+   "code": "HC0KHm9BA5wSRows_32M8",
+   "name": "Idea Crucible",
+   "author": "saikrishna uppaluri",
+   "description": "Finds near-term product and service opportunities you can sell or ship, then stress-tests the best ones with sharp…",
+   "url": "https://x.ai/bot/HC0KHm9BA5wSRows_32M8"
+  },
+  {
+   "id": "sales-lead-generation-01L39f0fwqnPErrQXB_XW",
+   "code": "01L39f0fwqnPErrQXB_XW",
+   "name": "Independent Journalism Helper",
+   "author": "Kylah",
+   "description": "Turns your ideas into researched, fact-checked articles for Substack and X through a simple Notion pipeline, built for writers who struggle to stay focused.",
+   "url": "https://x.ai/bot/01L39f0fwqnPErrQXB_XW"
+  },
+  {
+   "id": "sales-lead-generation-JQ4PSTdVDZdIOa8qwfP0G",
+   "code": "JQ4PSTdVDZdIOa8qwfP0G",
+   "name": "Jev",
+   "author": "Travis",
+   "description": "Adds typed triage with category, severity, and yes-or-no gates to a Jev pipeline.",
+   "url": "https://x.ai/bot/JQ4PSTdVDZdIOa8qwfP0G"
+  },
+  {
+   "id": "sales-lead-generation-fh1hnF7YJVoSJxEu-vKwj",
+   "code": "fh1hnF7YJVoSJxEu-vKwj",
+   "name": "Jordan Belfort",
+   "author": "Liam",
+   "description": "High-energy sales closer that drafts pitches and follow-ups.",
+   "url": "https://x.ai/bot/fh1hnF7YJVoSJxEu-vKwj"
+  },
+  {
+   "id": "sales-lead-generation-P5G_C7yCNFDaldHMzeHns",
+   "code": "P5G_C7yCNFDaldHMzeHns",
+   "name": "KAM por WhatsApp",
+   "author": "Daniel",
+   "description": "A WhatsApp account manager for your agency's clients: understands the request, prepares the change, waits for your OK and replies, with rules and templates.",
+   "url": "https://x.ai/bot/P5G_C7yCNFDaldHMzeHns"
+  },
+  {
+   "id": "sales-lead-generation-KvPsNsHBQIkadJ9HBZ6D0",
+   "code": "KvPsNsHBQIkadJ9HBZ6D0",
+   "name": "Kairos · Timesheet Manager",
+   "author": "ᑕᕼIᑕᗩᘜO MAGA",
+   "description": "Field-tech work lane owner: hours, timesheets, after-call Closeout, work digests, and customer review requests.",
+   "url": "https://x.ai/bot/KvPsNsHBQIkadJ9HBZ6D0"
+  },
+  {
+   "id": "sales-lead-generation-7tT7hseV3v0dXeJTLWAc1",
+   "code": "7tT7hseV3v0dXeJTLWAc1",
+   "name": "Karen",
+   "author": "Kevin Hobbie",
+   "description": "The Manager Request: customer-advocacy dial bot via Bland AI.",
+   "url": "https://x.ai/bot/7tT7hseV3v0dXeJTLWAc1"
+  },
+  {
+   "id": "sales-lead-generation-rZs29r38Oeor_7Ndp2coe",
+   "code": "rZs29r38Oeor_7Ndp2coe",
+   "name": "Kevin",
+   "author": "Jared",
+   "description": "The only agent you talk to, running a crew of minion bots behind the scenes while Dr. Nefario reviews them weekly, forked from Firstmate.",
+   "url": "https://x.ai/bot/rZs29r38Oeor_7Ndp2coe"
+  },
+  {
+   "id": "sales-lead-generation-PRc9UmcxySAv0UBU4g8fx",
+   "code": "PRc9UmcxySAv0UBU4g8fx",
+   "name": "Kickbox → HubSpot Importer",
+   "author": "@pofabro",
+   "description": "Runs Kickbox email hygiene on contacts from a Google Sheet or HubSpot view, then writes Deliverable results back as HubSpot updates.",
+   "url": "https://x.ai/bot/PRc9UmcxySAv0UBU4g8fx"
+  },
+  {
+   "id": "sales-lead-generation-LREkas8UxVGvPJ5NiO7bz",
+   "code": "LREkas8UxVGvPJ5NiO7bz",
+   "name": "Know Enemy",
+   "author": "Ankur Raina",
+   "description": "Scheduled competitive intelligence for GTM teams — Mu-style pulse digests plus on-demand rival cards.",
+   "url": "https://x.ai/bot/LREkas8UxVGvPJ5NiO7bz"
+  },
+  {
+   "id": "sales-lead-generation-xHHHbKIm3hfWMFmg8_Sy0",
+   "code": "xHHHbKIm3hfWMFmg8_Sy0",
+   "name": "Lead Catcher",
+   "author": "Sultanov Ramil",
+   "description": "Scans replies under your X posts every evening and catches buying signals nobody followed up on, with ready-to-send reply drafts. For creators and freelancers.",
+   "url": "https://x.ai/bot/xHHHbKIm3hfWMFmg8_Sy0"
+  },
+  {
+   "id": "sales-lead-generation-5FNoKWQkY0voJsATKXfdx",
+   "code": "5FNoKWQkY0voJsATKXfdx",
+   "name": "Lead Catcher",
+   "author": "Daryna Kulya",
+   "description": "Weekday digest of Quo conversations with prospects that need a human response. Delivers by Slack or email with one-click Quo links.",
+   "url": "https://x.ai/bot/5FNoKWQkY0voJsATKXfdx"
+  },
+  {
+   "id": "sales-lead-generation-nUofhKp_Ij7xXIjnznIoJ",
+   "code": "nUofhKp_Ij7xXIjnznIoJ",
+   "name": "Lead Dispatch",
+   "author": "Mado",
+   "description": "Lead bot that triages to specialist seats and runs roundtables, keeping irreversible actions behind approval.",
+   "url": "https://x.ai/bot/nUofhKp_Ij7xXIjnznIoJ"
+  },
+  {
+   "id": "sales-lead-generation-hIvkU3qZysooaC0aU3jz5",
+   "code": "hIvkU3qZysooaC0aU3jz5",
+   "name": "Lead Pin Bot",
+   "author": "Brett",
+   "description": "Turn a service area or property thesis into a reviewable parcel audience from PremiumPin’s nationwide government records, then export a mail-ready CSV.",
+   "url": "https://x.ai/bot/hIvkU3qZysooaC0aU3jz5"
+  },
+  {
+   "id": "sales-lead-generation-oPDkINUfpUXhJDdsfRZht",
+   "code": "oPDkINUfpUXhJDdsfRZht",
+   "name": "Lead Pipeline Desk",
+   "author": "Miguel Cruz",
+   "description": "Scores your inbound leads, merges duplicates, assigns an owner, and flags what's stuck.",
+   "url": "https://x.ai/bot/oPDkINUfpUXhJDdsfRZht"
+  },
+  {
+   "id": "sales-lead-generation-Oi_7Y2UW7su7IApDVpr5R",
+   "code": "Oi_7Y2UW7su7IApDVpr5R",
+   "name": "Lead Response Desk",
+   "author": "Everest Chris",
+   "description": "Answers every new lead for trades businesses within a minute, books the visit, and chases old quotes, billed monthly through Whop.",
+   "url": "https://x.ai/bot/Oi_7Y2UW7su7IApDVpr5R"
+  },
+  {
+   "id": "sales-lead-generation-bFY4jZu-Wwf3LNencvnzD",
+   "code": "bFY4jZu-Wwf3LNencvnzD",
+   "name": "Lead Scout",
+   "author": "Fan Grok Bot Radar",
+   "description": "Finds people on X who need your service, researches them, and drafts first messages and follow-ups, tracked in HubSpot or a Google Sheet.",
+   "url": "https://x.ai/bot/bFY4jZu-Wwf3LNencvnzD"
+  },
+  {
+   "id": "sales-lead-generation-2bFnH8zBwS5Nj4R-5Wfcr",
+   "code": "2bFnH8zBwS5Nj4R-5Wfcr",
+   "name": "Lead Scout",
+   "author": "0xDaemon",
+   "description": "Finds local businesses with missing, broken or outdated websites, audits them with screenshots and Lighthouse…",
+   "url": "https://x.ai/bot/2bFnH8zBwS5Nj4R-5Wfcr"
+  },
+  {
+   "id": "sales-lead-generation-j3Qule6BFplSpVqgLpVnV",
+   "code": "j3Qule6BFplSpVqgLpVnV",
+   "name": "Lead Scout",
+   "author": "Ryan Lenk",
+   "description": "Finds local small businesses with public websites and likely SEO/AEO/GEO gaps, then hands short dossiers to a research…",
+   "url": "https://x.ai/bot/j3Qule6BFplSpVqgLpVnV"
+  },
+  {
+   "id": "sales-lead-generation-eEfAacXdtzHANV5hVhG6o",
+   "code": "eEfAacXdtzHANV5hVhG6o",
+   "name": "Lead Vetting",
+   "author": "Growth Lab",
+   "description": "Vets collaboration and consulting leads from a watched inbox, writes a one-page fit brief, and DMs a five-bullet Slack decision summary.",
+   "url": "https://x.ai/bot/eEfAacXdtzHANV5hVhG6o"
+  },
+  {
+   "id": "sales-lead-generation-6yaew3RWYtRgEau_OvTN7",
+   "code": "6yaew3RWYtRgEau_OvTN7",
+   "name": "LeadScout",
+   "author": "Peter",
+   "description": "Finds quality video-production leads in your market and drafts outreach.",
+   "url": "https://x.ai/bot/6yaew3RWYtRgEau_OvTN7"
+  },
+  {
+   "id": "sales-lead-generation-nHDuTEJd3mC91rtLLPN0p",
+   "code": "nHDuTEJd3mC91rtLLPN0p",
+   "name": "Leads from Meta/Google Ads",
+   "author": "Alexandre Ferrari",
+   "description": "Finds B2B leads that are actively advertising and stages a reviewable CRM import.",
+   "url": "https://x.ai/bot/nHDuTEJd3mC91rtLLPN0p"
+  },
+  {
+   "id": "sales-lead-generation-WCZjv-qHMtHz2AdQW136q",
+   "code": "WCZjv-qHMtHz2AdQW136q",
+   "name": "Legend Lead Ops",
+   "author": "Legend Roofing Company Inc",
+   "description": "Owns roofing lead intake: qualify inquiries, draft English SMS and email follow-ups, and prep Quick Quote handoffs…",
+   "url": "https://x.ai/bot/WCZjv-qHMtHz2AdQW136q"
+  },
+  {
+   "id": "sales-lead-generation-DEMmOi7SiFhsFtIKuBKRD",
+   "code": "DEMmOi7SiFhsFtIKuBKRD",
+   "name": "LinkedIn Lead Outreach",
+   "author": "Ethan",
+   "description": "LinkedIn outreach desk for founder lead-magnet comments: track comments into Notion, reply, DM for email, and accept…",
+   "url": "https://x.ai/bot/DEMmOi7SiFhsFtIKuBKRD"
+  },
+  {
+   "id": "sales-lead-generation--BdTEtBnZEq9K1ef-bn6W",
+   "code": "-BdTEtBnZEq9K1ef-bn6W",
+   "name": "Linkedin Leads",
+   "author": "Angel",
+   "description": "Daily LinkedIn lead sweep across posts and comments from your keywords.",
+   "url": "https://x.ai/bot/-BdTEtBnZEq9K1ef-bn6W"
+  },
+  {
+   "id": "sales-lead-generation-FSSDbB1Bv0msoI5mfjR3u",
+   "code": "FSSDbB1Bv0msoI5mfjR3u",
+   "name": "Listing Desk",
+   "author": "Drew",
+   "description": "FSBO / owner-listing kit desk. County record first, flood second, portals last.",
+   "url": "https://x.ai/bot/FSSDbB1Bv0msoI5mfjR3u"
+  },
+  {
+   "id": "sales-lead-generation-20XAOL-rGYHvg0BvJgXLz",
+   "code": "20XAOL-rGYHvg0BvJgXLz",
+   "name": "Local Leads Finder",
+   "author": "Bryan Wiest",
+   "description": "Finds real buyers for your trade or building-supply business by watching bid invites, public bid sites, and LinkedIn…",
+   "url": "https://x.ai/bot/20XAOL-rGYHvg0BvJgXLz"
+  },
+  {
+   "id": "sales-lead-generation-mfaurGq6eY9rIvIpMfUFI",
+   "code": "mfaurGq6eY9rIvIpMfUFI",
+   "name": "Lookalike Scout",
+   "author": "Taus SH",
+   "description": "Turns one seed company into lookalike accounts and verified decision-makers for outbound.",
+   "url": "https://x.ai/bot/mfaurGq6eY9rIvIpMfUFI"
+  },
+  {
+   "id": "sales-lead-generation-12Gbp1lPVsfTVAHPXKd3B",
+   "code": "12Gbp1lPVsfTVAHPXKd3B",
+   "name": "Lurk",
+   "author": "Sanket Dongre",
+   "description": "General Reddit researcher. Runs a gated 3-step pipeline from seed keywords: pain-point extraction, idea pack, optional…",
+   "url": "https://x.ai/bot/12Gbp1lPVsfTVAHPXKd3B"
+  },
+  {
+   "id": "sales-lead-generation-2uCYO2oyD53dNp6Ooei4m",
+   "code": "2uCYO2oyD53dNp6Ooei4m",
+   "name": "Mentor",
+   "author": "Diego Bretas",
+   "description": "Daily judgment coach for founders: silently gathers 10 real world events each morning, then hits you with 10 hard questions in the afternoon.",
+   "url": "https://x.ai/bot/2uCYO2oyD53dNp6Ooei4m"
+  },
+  {
+   "id": "sales-lead-generation-lk1yHfim5Ayra0Q0QlN3L",
+   "code": "lk1yHfim5Ayra0Q0QlN3L",
+   "name": "Mercury",
+   "author": "Mujeeb Khan",
+   "description": "A standing tech lead that holds the system picture and delegates the coding out.",
+   "url": "https://x.ai/bot/lk1yHfim5Ayra0Q0QlN3L"
+  },
+  {
+   "id": "sales-lead-generation-X-9RP5FXSXCys6KnzMaHQ",
+   "code": "X-9RP5FXSXCys6KnzMaHQ",
+   "name": "Merott",
+   "author": "Kody Duncan",
+   "description": "Lead webinar and toolkit martech bot: site-builder CMS pages, ESP broadcasts/tags/1-click + reminders, audience…",
+   "url": "https://x.ai/bot/X-9RP5FXSXCys6KnzMaHQ"
+  },
+  {
+   "id": "sales-lead-generation-paRENQ2c67oBsucY9XG0o",
+   "code": "paRENQ2c67oBsucY9XG0o",
+   "name": "Mesa de Seguimiento",
+   "author": "David",
+   "description": "Turns a lead, quote or notes into exactly three spaced follow-ups in neutral Spanish, human in tone, with a checklist of when to stop. Drafts only, you send.",
+   "url": "https://x.ai/bot/paRENQ2c67oBsucY9XG0o"
+  },
+  {
+   "id": "sales-lead-generation-IfyVKr11P40pNcTle4-ow",
+   "code": "IfyVKr11P40pNcTle4-ow",
+   "name": "OPPORTUNITY COMMAND",
+   "author": "Armstrong Too - toe",
+   "description": "Finds tenders, RFPs, grants and other paid opportunities, checks you're eligible, scores each out of 100, and prepares…",
+   "url": "https://x.ai/bot/IfyVKr11P40pNcTle4-ow"
+  },
+  {
+   "id": "sales-lead-generation-9oc24xp0FJLvBowZL2inw",
+   "code": "9oc24xp0FJLvBowZL2inw",
+   "name": "ORGANIZADOR DE VIAJES · rutas y carga eléctrica",
+   "author": "BoardingGate",
+   "description": "Organiza viajes de principio a fin, con especial atención a las rutas en coche eléctrico y las paradas que combinan carga, comida y visitas.",
+   "url": "https://x.ai/bot/9oc24xp0FJLvBowZL2inw"
+  },
+  {
+   "id": "sales-lead-generation-9hId24lSr5Rc_cSUR5evc",
+   "code": "9hId24lSr5Rc_cSUR5evc",
+   "name": "Old Leads Finder",
+   "author": "Wes Foster",
+   "description": "Digs through your CRM and sales inbox for leads you never closed and hands you a ranked list of who to reconnect…",
+   "url": "https://x.ai/bot/9hId24lSr5Rc_cSUR5evc"
+  },
+  {
+   "id": "sales-lead-generation-Xd_NXX5Yk6_7LmkA2TGLN",
+   "code": "Xd_NXX5Yk6_7LmkA2TGLN",
+   "name": "Onboarder",
+   "author": "@suddenlyjon",
+   "description": "Walks a first-time customer from hello to a working setup one real connection at a time, then retires.",
+   "url": "https://x.ai/bot/Xd_NXX5Yk6_7LmkA2TGLN"
+  },
+  {
+   "id": "sales-lead-generation-uaqH_2upECHDL-Pn3cKEY",
+   "code": "uaqH_2upECHDL-Pn3cKEY",
+   "name": "One-Page Bid",
+   "author": "Sol",
+   "description": "For consultants, freelancers, and agency owners coming off a discovery or sales call.",
+   "url": "https://x.ai/bot/uaqH_2upECHDL-Pn3cKEY"
+  },
+  {
+   "id": "sales-lead-generation-5fcknlf1SHiLCCVULgBql",
+   "code": "5fcknlf1SHiLCCVULgBql",
+   "name": "Outbound Desk",
+   "author": "monokern",
+   "description": "Lead bot that onboards a project, then spins Enrich plus channel outreach specialists onto one Google Sheet.",
+   "url": "https://x.ai/bot/5fcknlf1SHiLCCVULgBql"
+  },
+  {
+   "id": "sales-lead-generation-i03IaF768-ielyzegoGye",
+   "code": "i03IaF768-ielyzegoGye",
+   "name": "Outbound Prospecting",
+   "author": "Krista Letz",
+   "description": "Finds prospects that match your ideal customer, then drafts a first message to each one.",
+   "url": "https://x.ai/bot/i03IaF768-ielyzegoGye"
+  },
+  {
+   "id": "sales-lead-generation--hT6V7gjHV5lynfbviqf4",
+   "code": "-hT6V7gjHV5lynfbviqf4",
+   "name": "Outbound Prospecting + X Scout",
+   "author": "Shagghie",
+   "description": "Builds a sourced list of people worth selling to, drafts the first message, and scans X twice a day for buyers asking for help.",
+   "url": "https://x.ai/bot/-hT6V7gjHV5lynfbviqf4"
+  },
+  {
+   "id": "sales-lead-generation-bS2mwnm10pWqcms_RzTI0",
+   "code": "bS2mwnm10pWqcms_RzTI0",
+   "name": "Outbound Sales",
+   "author": "Jeroen",
+   "description": "Autonomous outbound SDR for B2B teams. Researches and scores prospects, drafts multi-touch sequences, handles replies.",
+   "url": "https://x.ai/bot/bS2mwnm10pWqcms_RzTI0"
+  },
+  {
+   "id": "sales-lead-generation-_F4QaOQDrr6Rh4OpkfaaM",
+   "code": "_F4QaOQDrr6Rh4OpkfaaM",
+   "name": "Outbound Sales Desk",
+   "author": "Charles Bonetti",
+   "description": "Builds a prospect list from your ideal customer profile, drafts personal first touches, and runs a strict three-touch sequence before closing the lead.",
+   "url": "https://x.ai/bot/_F4QaOQDrr6Rh4OpkfaaM"
+  },
+  {
+   "id": "sales-lead-generation-7FPx_GNADVyb36VRYoKz1",
+   "code": "7FPx_GNADVyb36VRYoKz1",
+   "name": "Outbound Scout",
+   "author": "iammutex",
+   "description": "Finds outbound customers from a product URL or description: sets up Glasser, locks an ICP, then finds companies…",
+   "url": "https://x.ai/bot/7FPx_GNADVyb36VRYoKz1"
+  },
+  {
+   "id": "sales-lead-generation-wexM_NUvEByvLwrnTR_F3",
+   "code": "wexM_NUvEByvLwrnTR_F3",
+   "name": "Outreach Agent",
+   "author": "Eric Siu",
+   "description": "Daily hold-send warm-outreach operator for founders and sales teams.",
+   "url": "https://x.ai/bot/wexM_NUvEByvLwrnTR_F3"
+  },
+  {
+   "id": "sales-lead-generation-jR15cntxPfXRc-kEt2Ytc",
+   "code": "jR15cntxPfXRc-kEt2Ytc",
+   "name": "PA Power Switch Rate Review",
+   "author": "Randy Hentz",
+   "description": "Reviews your Pennsylvania electric accounts (PPL and other PA utilities) and tells you whether a retail supplier…",
+   "url": "https://x.ai/bot/jR15cntxPfXRc-kEt2Ytc"
+  },
+  {
+   "id": "sales-lead-generation-fcJJMM58AdXSTBdW3xWyW",
+   "code": "fcJJMM58AdXSTBdW3xWyW",
+   "name": "PG",
+   "author": "Krista Letz",
+   "description": "Prospecting bot that researches accounts, watches recent podcasts and webinars for personal hooks, and can optionally…",
+   "url": "https://x.ai/bot/fcJJMM58AdXSTBdW3xWyW"
+  },
+  {
+   "id": "sales-lead-generation-zsxwic_IlmyavESnhLiWZ",
+   "code": "zsxwic_IlmyavESnhLiWZ",
+   "name": "PG Bot",
+   "author": "Scott",
+   "description": "AE territory pipeline bot for book-level outreach, meetings, and potential ARR.",
+   "url": "https://x.ai/bot/zsxwic_IlmyavESnhLiWZ"
+  },
+  {
+   "id": "sales-lead-generation-uFPjya5oVUr0-Oo_9dVnS",
+   "code": "uFPjya5oVUr0-Oo_9dVnS",
+   "name": "POD & Printable Boutique Studio",
+   "author": "Lisa",
+   "description": "Print-on-Demand (POD), Digital Printable & Boutique E-Commerce Coach for Etsy, Shopify, Printify, and Gumroad sellers…",
+   "url": "https://x.ai/bot/uFPjya5oVUr0-Oo_9dVnS"
+  },
+  {
+   "id": "sales-lead-generation-WDgRli6xhX8GDyqkp-a7w",
+   "code": "WDgRli6xhX8GDyqkp-a7w",
+   "name": "PROSPECTACLE",
+   "author": "Bud",
+   "description": "Finds prospects that match your ideal customer, researches each one on the public web, and drafts a first-touch message.",
+   "url": "https://x.ai/bot/WDgRli6xhX8GDyqkp-a7w"
+  },
+  {
+   "id": "sales-lead-generation-PlsyvUb0KnHIQr6psoy0L",
+   "code": "PlsyvUb0KnHIQr6psoy0L",
+   "name": "Partnerships Call Coach",
+   "author": "Jenna Nanpei",
+   "description": "Pitch and delivery coach for partnership, sponsorship, and high-stakes discovery calls.",
+   "url": "https://x.ai/bot/PlsyvUb0KnHIQr6psoy0L"
+  },
+  {
+   "id": "sales-lead-generation-RfYI3ccrErQKK1uuEZ-O4",
+   "code": "RfYI3ccrErQKK1uuEZ-O4",
+   "name": "Persuasion & Negotiation Coach",
+   "author": "Craig Schiedlo",
+   "description": "Coaches ethical persuasion and negotiation from Cialdini, Voss and free B2B frameworks, with short daily drills and reviews of your own sales or founder calls.",
+   "url": "https://x.ai/bot/RfYI3ccrErQKK1uuEZ-O4"
+  },
+  {
+   "id": "sales-lead-generation-qMlNgJiwixF8zZ8ZUTSY1",
+   "code": "qMlNgJiwixF8zZ8ZUTSY1",
+   "name": "Pilot Intake",
+   "author": "Sean",
+   "description": "Tell it your use case and seat count for a Stability Validator pilot.",
+   "url": "https://x.ai/bot/qMlNgJiwixF8zZ8ZUTSY1"
+  },
+  {
+   "id": "sales-lead-generation-s98af8b9dcde521e1a9fa",
+   "code": "s98af8b9dcde521e1a9fa",
+   "name": "Pipeline Analyst",
+   "author": "SpaceX",
+   "description": "Walk into pipe with a clean view. Scrubs Salesforce + sheets, flags stalls and commit risk, and drops a Monday scoreboard.",
+   "url": "https://x.ai/bot/s98af8b9dcde521e1a9fa"
+  },
+  {
+   "id": "sales-lead-generation-X-hZf_AreWNt-ZQPYs0Ev",
+   "code": "X-hZf_AreWNt-ZQPYs0Ev",
+   "name": "Pipeline Pulse",
+   "author": "Krista Letz",
+   "description": "Scans your full pipeline for movement, stale next steps, forecast risk, and CRM gaps.",
+   "url": "https://x.ai/bot/X-hZf_AreWNt-ZQPYs0Ev"
+  },
+  {
+   "id": "sales-lead-generation-Ec8Orp3oBaYkmXJ_mIrlw",
+   "code": "Ec8Orp3oBaYkmXJ_mIrlw",
+   "name": "Pipeline Scout",
+   "author": "Screaming Chicken",
+   "description": "Drop in 10–30 target accounts. Pipeline Scout pulls public news and buying signals, scores each account's fit with reasons and risks, and drafts…",
+   "url": "https://x.ai/bot/Ec8Orp3oBaYkmXJ_mIrlw"
+  },
+  {
+   "id": "sales-lead-generation-9KmU329RgFvaDOhtyc20x",
+   "code": "9KmU329RgFvaDOhtyc20x",
+   "name": "Pipeline Scout",
+   "author": "Don",
+   "description": "Drop 10-30 target accounts. Pipeline Scout pulls public intent and news, scores ICP fit with reasons and risks, then drafts email + LinkedIn…",
+   "url": "https://x.ai/bot/9KmU329RgFvaDOhtyc20x"
+  },
+  {
+   "id": "sales-lead-generation-KHEDSnSW1R74FH9kmghlA",
+   "code": "KHEDSnSW1R74FH9kmghlA",
+   "name": "Product Lead",
+   "author": "Prathit",
+   "description": "Turns product evidence into a ship, iterate, hold, or stop memo.",
+   "url": "https://x.ai/bot/KHEDSnSW1R74FH9kmghlA"
+  },
+  {
+   "id": "sales-lead-generation-ccZyuYxIiO5yfaTG-EfRZ",
+   "code": "ccZyuYxIiO5yfaTG-EfRZ",
+   "name": "Product Pipeline Lead (5-Bot Relay)",
+   "author": "NEE",
+   "description": "Lead-run 5-bot product pipeline: scout, pain and competitor analysis, decision, clean-room spec and build, handing off through a shared folder.",
+   "url": "https://x.ai/bot/ccZyuYxIiO5yfaTG-EfRZ"
+  },
+  {
+   "id": "sales-lead-generation-vc-0ahZfJwuo-DyPUcmj7",
+   "code": "vc-0ahZfJwuo-DyPUcmj7",
+   "name": "Profit Finder",
+   "author": "Jon Stenstrom",
+   "description": "Bob Fifer-mode profit operator: pricing, packaging, cost cuts.",
+   "url": "https://x.ai/bot/vc-0ahZfJwuo-DyPUcmj7"
+  },
+  {
+   "id": "sales-lead-generation-srdRIiBSYskKc70-TRwG1",
+   "code": "srdRIiBSYskKc70-TRwG1",
+   "name": "Promise Ledger",
+   "author": "AARON MAGA",
+   "description": "Paste your call notes once and get a recap, every promise made on the call (yours and the customer's), and a dated…",
+   "url": "https://x.ai/bot/srdRIiBSYskKc70-TRwG1"
+  },
+  {
+   "id": "sales-lead-generation-D6Bv_HwN2ATIghQLFoDaz",
+   "code": "D6Bv_HwN2ATIghQLFoDaz",
+   "name": "Proof Agent",
+   "author": "Andrea Griffiths",
+   "description": "Independent verification for AI-generated diffs: runs a sealed verify pipeline and reports PASS, FAIL, or PARTIAL without judging the code itself.",
+   "url": "https://x.ai/bot/D6Bv_HwN2ATIghQLFoDaz"
+  },
+  {
+   "id": "sales-lead-generation-Ed8OwTpWaFfZdJHEAoT4t",
+   "code": "Ed8OwTpWaFfZdJHEAoT4t",
+   "name": "Prospect Drafts",
+   "author": "Sam Morgan",
+   "description": "Finds fit prospects from your geography, industries, and offer, then writes first-touch Gmail drafts in your voice…",
+   "url": "https://x.ai/bot/Ed8OwTpWaFfZdJHEAoT4t"
+  },
+  {
+   "id": "sales-lead-generation-s8b59eb62f90871ac5c36",
+   "code": "s8b59eb62f90871ac5c36",
+   "name": "Prospecting Plan Builder",
+   "author": "SpaceX",
+   "description": "Build the week's book of work. Seeds contacts, enriches email/mobile, and writes a ready-to-work tracker so outbound starts from a list.",
+   "url": "https://x.ai/bot/s8b59eb62f90871ac5c36"
+  },
+  {
+   "id": "sales-lead-generation-3Peagz3nzagjBRFhjrENd",
+   "code": "3Peagz3nzagjBRFhjrENd",
+   "name": "Prospecting Sheet Builder",
+   "author": "Sultanov",
+   "description": "Wakes you up to a fresh sheet of qualified B2B accounts.",
+   "url": "https://x.ai/bot/3Peagz3nzagjBRFhjrENd"
+  },
+  {
+   "id": "sales-lead-generation-1wyhD9zRPr4U0HU47ZsIp",
+   "code": "1wyhD9zRPr4U0HU47ZsIp",
+   "name": "Recon",
+   "author": "Brandon Smithwrick",
+   "description": "Recon tells you what your competitors shipped this week. It's for marketers and founders.",
+   "url": "https://x.ai/bot/1wyhD9zRPr4U0HU47ZsIp"
+  },
+  {
+   "id": "sales-lead-generation-uJYDiCykw_L-qTQUK4vwW",
+   "code": "uJYDiCykw_L-qTQUK4vwW",
+   "name": "Release Lead",
+   "author": "Justin Seignemartin",
+   "description": "An engineering lead and release manager for a solo founder or small team.",
+   "url": "https://x.ai/bot/uJYDiCykw_L-qTQUK4vwW"
+  },
+  {
+   "id": "sales-lead-generation-uvCpZyoKJR_P7b9FI0b0h",
+   "code": "uvCpZyoKJR_P7b9FI0b0h",
+   "name": "Relic",
+   "author": "GenXer",
+   "description": "A local picker that hunts estate sales, auctions, and classifieds near you for misidentified or underpriced antiques and collectibles.",
+   "url": "https://x.ai/bot/uvCpZyoKJR_P7b9FI0b0h"
+  },
+  {
+   "id": "sales-lead-generation-s4c86a54f188668096400",
+   "code": "s4c86a54f188668096400",
+   "name": "Renewal Desk Operator",
+   "author": "SpaceX",
+   "description": "Builds a 90-day pack per account from usage, tickets, calls and CRM, drafts the commercial note, and nudges the owner.",
+   "url": "https://x.ai/bot/s4c86a54f188668096400"
+  },
+  {
+   "id": "sales-lead-generation-8lLjBC7bXUqbfh-vLG9jf",
+   "code": "8lLjBC7bXUqbfh-vLG9jf",
+   "name": "Reply Desk",
+   "author": "Brian M.",
+   "description": "Drafts replies to customer emails, messages, and public reviews for local service businesses. Never sends or posts; you review and send yourself.",
+   "url": "https://x.ai/bot/8lLjBC7bXUqbfh-vLG9jf"
+  },
+  {
+   "id": "sales-lead-generation-UJQ0HSSxARkK_YVpwGXWq",
+   "code": "UJQ0HSSxARkK_YVpwGXWq",
+   "name": "Research Lead",
+   "author": "Josh Moulton",
+   "description": "Turns a business idea into a validated prospect pipeline: ideal customer, scoring, prospect lists, competitor and pricing digs.",
+   "url": "https://x.ai/bot/UJQ0HSSxARkK_YVpwGXWq"
+  },
+  {
+   "id": "sales-lead-generation-sF0FLiic1qUdaYsqoHtBL",
+   "code": "sF0FLiic1qUdaYsqoHtBL",
+   "name": "Research Lead",
+   "author": "TraderScottyS",
+   "description": "Fans out financials/products/pipeline/risk into one ticker memo.",
+   "url": "https://x.ai/bot/sF0FLiic1qUdaYsqoHtBL"
+  },
+  {
+   "id": "sales-lead-generation-LlldYnfUbSX5Z5ogLkHik",
+   "code": "LlldYnfUbSX5Z5ogLkHik",
+   "name": "Revenue Enablement Bot",
+   "author": "Nathan Clark",
+   "description": "A generalist sales and revenue enablement manager for enablement leads, sales managers, and RevOps.",
+   "url": "https://x.ai/bot/LlldYnfUbSX5Z5ogLkHik"
+  },
+  {
+   "id": "sales-lead-generation-9BnpveyF3fbsRRtolSWpp",
+   "code": "9BnpveyF3fbsRRtolSWpp",
+   "name": "Revenue Signal Radar",
+   "author": "Eric Siu",
+   "description": "Finds the revenue already sitting in your HubSpot pipeline.",
+   "url": "https://x.ai/bot/9BnpveyF3fbsRRtolSWpp"
+  },
+  {
+   "id": "sales-lead-generation-wwYrHgxrCNwqZM6ESmQ8d",
+   "code": "wwYrHgxrCNwqZM6ESmQ8d",
+   "name": "Review Rocket — Turn Happy Customers into 5-Star Reviews",
+   "author": "News Gurus",
+   "description": "Helps small businesses turn happy customers into 5-star reviews and never miss a review that needs a response.",
+   "url": "https://x.ai/bot/wwYrHgxrCNwqZM6ESmQ8d"
+  },
+  {
+   "id": "sales-lead-generation-AF3thK7j9Up2dJW3TSgfK",
+   "code": "AF3thK7j9Up2dJW3TSgfK",
+   "name": "Ring Test",
+   "author": "cody",
+   "description": "Calls your own business like a customer, asks your top questions and sends a Monday scorecard on missed calls, wrong answers and missed bookings.",
+   "url": "https://x.ai/bot/AF3thK7j9Up2dJW3TSgfK"
+  },
+  {
+   "id": "sales-lead-generation-5xlVPYJU6Nv7TcyfVLKmf",
+   "code": "5xlVPYJU6Nv7TcyfVLKmf",
+   "name": "Ringy",
+   "author": "Ming",
+   "description": "Makes outbound phone calls for you to businesses in New Zealand and Australia using Ring for Me.",
+   "url": "https://x.ai/bot/5xlVPYJU6Nv7TcyfVLKmf"
+  },
+  {
+   "id": "sales-lead-generation-0BbPklegaSLcUqp0CVXda",
+   "code": "0BbPklegaSLcUqp0CVXda",
+   "name": "RobIT",
+   "author": "Lipa",
+   "description": "Finds what is crashing a Windows PC and cleans leftover antivirus or browser junk.",
+   "url": "https://x.ai/bot/0BbPklegaSLcUqp0CVXda"
+  },
+  {
+   "id": "sales-lead-generation-X6RbSbeyLvQ_I5k3zU4IM",
+   "code": "X6RbSbeyLvQ_I5k3zU4IM",
+   "name": "SaaSbot",
+   "author": "Daniel",
+   "description": "A weekday operator that runs GTM, outbound, QA and onboarding.",
+   "url": "https://x.ai/bot/X6RbSbeyLvQ_I5k3zU4IM"
+  },
+  {
+   "id": "sales-lead-generation-yZ5MFQFdl32vHt6fcIJAc",
+   "code": "yZ5MFQFdl32vHt6fcIJAc",
+   "name": "Sales Call Coach",
+   "author": "Daniel Brill",
+   "description": "Scores your sales calls and tells you what to fix before the next one. Works from a pasted transcript or an uploaded recording.",
+   "url": "https://x.ai/bot/yZ5MFQFdl32vHt6fcIJAc"
+  },
+  {
+   "id": "sales-lead-generation-s8173b3a9c49917de5b2d",
+   "code": "s8173b3a9c49917de5b2d",
+   "name": "Sales Call Coach",
+   "author": "SpaceX",
+   "description": "Leave every call with homework. Reviews Gong calls and leaves timestamped coaching on discovery, objections, and executive presence, plus a call score.",
+   "url": "https://x.ai/bot/s8173b3a9c49917de5b2d"
+  },
+  {
+   "id": "sales-lead-generation-8QpQcgUVgUpxG5RR4mwnL",
+   "code": "8QpQcgUVgUpxG5RR4mwnL",
+   "name": "Sales Call Prep Desk CLOSE-READY",
+   "author": "Cypher Monkey",
+   "description": "Walk into every call prepared: a cited brief on the account, discovery questions, objection handling and a clear…",
+   "url": "https://x.ai/bot/8QpQcgUVgUpxG5RR4mwnL"
+  },
+  {
+   "id": "sales-lead-generation-8qpqcguvgupxg5rr4mwnl",
+   "code": "8qpqcguvgupxg5rr4mwnl",
+   "name": "Sales Call Prep Desk CLOSE-READY",
+   "author": "Cypher",
+   "description": "Walk into every call prepared: a cited brief on the account, discovery questions, objection handling and a clear next-step ask.",
+   "url": "https://x.ai/bot/8qpqcguvgupxg5rr4mwnl"
+  },
+  {
+   "id": "sales-lead-generation-Yj0ZJjwtgrIHH1bWoUcqs",
+   "code": "Yj0ZJjwtgrIHH1bWoUcqs",
+   "name": "Sales Lite (free)",
+   "author": "Alfie Peter",
+   "description": "Checks your Gmail or Outlook for new sales enquiries, sorts each one, and drafts a first reply or missing-info request for you to approve.",
+   "url": "https://x.ai/bot/Yj0ZJjwtgrIHH1bWoUcqs"
+  },
+  {
+   "id": "sales-lead-generation-AMFF7LG8gxX1bLIH-_D3A",
+   "code": "AMFF7LG8gxX1bLIH-_D3A",
+   "name": "Sales Orchestrator",
+   "author": "Prasad Pilla",
+   "description": "Sales team control tower. First to reply in the group, routes each ask to exactly one specialist, blocks dogpiles…",
+   "url": "https://x.ai/bot/AMFF7LG8gxX1bLIH-_D3A"
+  },
+  {
+   "id": "sales-lead-generation-s8ff03023f140bab479f7",
+   "code": "s8ff03023f140bab479f7",
+   "name": "Sales Outbound",
+   "author": "SpaceX",
+   "description": "Researches accounts overnight, scores contacts on intent, drafts email and LinkedIn in your voice, and leaves it for review.",
+   "url": "https://x.ai/bot/s8ff03023f140bab479f7"
+  },
+  {
+   "id": "sales-lead-generation-oFvCOIx6BpFhobvyeEZZY",
+   "code": "oFvCOIx6BpFhobvyeEZZY",
+   "name": "Salesforce Guide",
+   "author": "Corben Hogan",
+   "description": "Works inside your Salesforce org as you: connects step by step, handles daily pipeline, lead, account and case work, and sends a daily brief.",
+   "url": "https://x.ai/bot/oFvCOIx6BpFhobvyeEZZY"
+  },
+  {
+   "id": "sales-lead-generation-ihsZKnZJay7kLayMUfAV1",
+   "code": "ihsZKnZJay7kLayMUfAV1",
+   "name": "Sam (Sales)",
+   "author": "Darryl Kay",
+   "description": "A resale assistant that turns your item photos into eBay and Facebook Marketplace listings, and posts them only after you approve.",
+   "url": "https://x.ai/bot/ihsZKnZJay7kLayMUfAV1"
+  },
+  {
+   "id": "sales-lead-generation-Axr06_abjVj29IjBhJrQ_",
+   "code": "Axr06_abjVj29IjBhJrQ_",
+   "name": "Scout",
+   "author": "Jay",
+   "description": "Finds accounts already using the product that are ready for more: self-serve upgrades and sales PQLs.",
+   "url": "https://x.ai/bot/Axr06_abjVj29IjBhJrQ_"
+  },
+  {
+   "id": "sales-lead-generation-znrhzY4AYMg4v3QTfU0IJ",
+   "code": "znrhzY4AYMg4v3QTfU0IJ",
+   "name": "Sell Bot",
+   "author": "Shub Gaur",
+   "description": "Works your whole customer journey: outreach in your voice, booked calls with prep and follow-ups, proposals and contracts, then activation.",
+   "url": "https://x.ai/bot/znrhzY4AYMg4v3QTfU0IJ"
+  },
+  {
+   "id": "sales-lead-generation-Hy7a9gTh19LsEo7sUbc95",
+   "code": "Hy7a9gTh19LsEo7sUbc95",
+   "name": "Sell Bot",
+   "author": "saikrishna",
+   "description": "Works your whole customer journey, from outreach and call prep to proposals, support and expansion; drafts in your voice and sends only what you approve.",
+   "url": "https://x.ai/bot/Hy7a9gTh19LsEo7sUbc95"
+  },
+  {
+   "id": "sales-lead-generation-6xnxd_CHg0cXVMQCwnRrZ",
+   "code": "6xnxd_CHg0cXVMQCwnRrZ",
+   "name": "Sequencer",
+   "author": "Simon Lackowski",
+   "description": "Runs your outbound sequencer as a staff function. Connects your tools, learns voice and ICP from Gmail and CRM, keeps sequence state on a sheet.",
+   "url": "https://x.ai/bot/6xnxd_CHg0cXVMQCwnRrZ"
+  },
+  {
+   "id": "sales-lead-generation-eyndClYUFQtXaooxdgiRD",
+   "code": "eyndClYUFQtXaooxdgiRD",
+   "name": "Shed Sales Pipeline",
+   "author": "Dindu Nuffin",
+   "description": "Prospecting and follow-up for local shed and portable building dealers: finds prospects on the public web and drafts first messages, check-ins and call scripts.",
+   "url": "https://x.ai/bot/eyndClYUFQtXaooxdgiRD"
+  },
+  {
+   "id": "sales-lead-generation-CGmwZlk_FVNYJO_VruSFZ",
+   "code": "CGmwZlk_FVNYJO_VruSFZ",
+   "name": "Sherpa Bot",
+   "author": "Morgan Wyatt Khan",
+   "description": "A thinking partner that helps a willing person find a real problem, a real customer, and one next action in 14 days.",
+   "url": "https://x.ai/bot/CGmwZlk_FVNYJO_VruSFZ"
+  },
+  {
+   "id": "sales-lead-generation-wsbOPOkHApmIYLrErnC4e",
+   "code": "wsbOPOkHApmIYLrErnC4e",
+   "name": "Signal Prospector",
+   "author": "Krista Letz",
+   "description": "Finds the accounts and people in your CRM and product data that just showed intent, ranks them, and drafts the first touch.",
+   "url": "https://x.ai/bot/wsbOPOkHApmIYLrErnC4e"
+  },
+  {
+   "id": "sales-lead-generation-wH4vQSge_ibrgBBtJDHbh",
+   "code": "wH4vQSge_ibrgBBtJDHbh",
+   "name": "Slide Bot",
+   "author": "Colin",
+   "description": "Builds and updates customer decks from brand system and call notes.",
+   "url": "https://x.ai/bot/wH4vQSge_ibrgBBtJDHbh"
+  },
+  {
+   "id": "sales-lead-generation-XDvtvbyvZhckapi86jL7B",
+   "code": "XDvtvbyvZhckapi86jL7B",
+   "name": "Small Business Lead Finder",
+   "author": "Cristopher Guido",
+   "description": "Finds local businesses that fit what you sell, checks a real reason each one fits on public pages, and drafts an opener in your voice every weekday.",
+   "url": "https://x.ai/bot/XDvtvbyvZhckapi86jL7B"
+  },
+  {
+   "id": "sales-lead-generation-Opp17hS9gyOg8xEsQIcU8",
+   "code": "Opp17hS9gyOg8xEsQIcU8",
+   "name": "SmallPE-Managing-Partner",
+   "author": "Abhishek Parolkar",
+   "description": "SmallPE is a community initiative started in June 2025, backed by 2,000+ members at https://smallpe.com who are…",
+   "url": "https://x.ai/bot/Opp17hS9gyOg8xEsQIcU8"
+  },
+  {
+   "id": "sales-lead-generation-rwdXTWNa0eGPFzyTWlRKJ",
+   "code": "rwdXTWNa0eGPFzyTWlRKJ",
+   "name": "Social Media GTM Bot",
+   "author": "Antoine Blanco",
+   "description": "A founder content lead that recycles posts, runs comment-to-DM magnets, and publishes after you approve.",
+   "url": "https://x.ai/bot/rwdXTWNa0eGPFzyTWlRKJ"
+  },
+  {
+   "id": "sales-lead-generation-KeKKabNV-HE-iYv8u7JDZ",
+   "code": "KeKKabNV-HE-iYv8u7JDZ",
+   "name": "Spar Crew Lead",
+   "author": "Jonathan",
+   "description": "Founder co-pilot that runs specialist bot crews through research, tight scope and ship.",
+   "url": "https://x.ai/bot/KeKKabNV-HE-iYv8u7JDZ"
+  },
+  {
+   "id": "sales-lead-generation-GeL4XFcQHm4WIG6jp--R0",
+   "code": "GeL4XFcQHm4WIG6jp--R0",
+   "name": "Stale Leads Closer",
+   "author": "Roberto Garza",
+   "description": "Revives quiet sales leads: drafts warm CRM SMS, holds a Slack veto window, then auto-sends what nobody blocks.",
+   "url": "https://x.ai/bot/GeL4XFcQHm4WIG6jp--R0"
+  },
+  {
+   "id": "sales-lead-generation-F5jwhbmO2AgA8EgyHIDLp",
+   "code": "F5jwhbmO2AgA8EgyHIDLp",
+   "name": "Store setup from zero",
+   "author": "Colin McDermott",
+   "description": "Takes an offer from nothing to a live, buyable store page in one run.",
+   "url": "https://x.ai/bot/F5jwhbmO2AgA8EgyHIDLp"
+  },
+  {
+   "id": "sales-lead-generation-5enFHSkSHV9UpbFX8Ky6a",
+   "code": "5enFHSkSHV9UpbFX8Ky6a",
+   "name": "Strategy Lead",
+   "author": "Avid",
+   "description": "Turns trend, pain-point, and competitor research into ranked product ideas with Blue Ocean, JTBD, and 7 Powers, plus a kill list.",
+   "url": "https://x.ai/bot/5enFHSkSHV9UpbFX8Ky6a"
+  },
+  {
+   "id": "sales-lead-generation-3QlpCJKENU1wC7ka7e9O0",
+   "code": "3QlpCJKENU1wC7ka7e9O0",
+   "name": "Sue — Bouclier",
+   "author": "Steve",
+   "description": "French X comment support that clarifies without attacking, adds a sourced fact, then a link.",
+   "url": "https://x.ai/bot/3QlpCJKENU1wC7ka7e9O0"
+  },
+  {
+   "id": "sales-lead-generation-CIU6taZ7CkhsJZlCK9ps9",
+   "code": "CIU6taZ7CkhsJZlCK9ps9",
+   "name": "Support Triage Bot",
+   "author": "Stephen Nielsen",
+   "description": "Triage customer support into Linear: retitle in-app feedback, file factual tickets from Slack/HubSpot, and surface a short diagnosis — never contact.",
+   "url": "https://x.ai/bot/CIU6taZ7CkhsJZlCK9ps9"
+  },
+  {
+   "id": "sales-lead-generation-enoVHCmgV3gHhw4IPXvLW",
+   "code": "enoVHCmgV3gHhw4IPXvLW",
+   "name": "Team Lead",
+   "author": "Matt Dotson",
+   "description": "Tracks public US research-consumable list prices and pack sizes, with every number tied to a URL.",
+   "url": "https://x.ai/bot/enoVHCmgV3gHhw4IPXvLW"
+  },
+  {
+   "id": "sales-lead-generation-RfFPxQ_rfEGcUncrJ6g_W",
+   "code": "RfFPxQ_rfEGcUncrJ6g_W",
+   "name": "Tech Lead",
+   "author": "Ashish P",
+   "description": "Gates the merge on what the diff and the tests actually show.",
+   "url": "https://x.ai/bot/RfFPxQ_rfEGcUncrJ6g_W"
+  },
+  {
+   "id": "sales-lead-generation-S9oWPKXtGyLicIqRznUwe",
+   "code": "S9oWPKXtGyLicIqRznUwe",
+   "name": "Testimonial Collector — Turn Happy Customers into Proof",
+   "author": "News Gurus",
+   "description": "Finds your happy customers, drafts testimonial requests for you to send, and polishes replies into quotes ready for your website and socials.",
+   "url": "https://x.ai/bot/S9oWPKXtGyLicIqRznUwe"
+  },
+  {
+   "id": "sales-lead-generation-WHMChivJ0obkKm2uvo9xK",
+   "code": "WHMChivJ0obkKm2uvo9xK",
+   "name": "The King",
+   "author": "Elyas Alothman",
+   "description": "Sole supervisor bot: opinion then direction, then teammate bots execute. Reviews and merges.",
+   "url": "https://x.ai/bot/WHMChivJ0obkKm2uvo9xK"
+  },
+  {
+   "id": "sales-lead-generation-cb34ecnMyLJcYBG6F40CE",
+   "code": "cb34ecnMyLJcYBG6F40CE",
+   "name": "The Walk-Away",
+   "author": "Joshua Jansen",
+   "description": "Scores a live sales page the way a stranger would: Pass or Walk, with the exact line, the buyer fear and the smallest fix.",
+   "url": "https://x.ai/bot/cb34ecnMyLJcYBG6F40CE"
+  },
+  {
+   "id": "sales-lead-generation-xKi2VkyukiwEAm_LmDppc",
+   "code": "xKi2VkyukiwEAm_LmDppc",
+   "name": "Thrifty Theo",
+   "author": "James Harrison",
+   "description": "Your thrift and consignment sidekick: finds thrift shops, estate and garage sales and discount days near your ZIP…",
+   "url": "https://x.ai/bot/xKi2VkyukiwEAm_LmDppc"
+  },
+  {
+   "id": "sales-lead-generation-An0FCP00zUniB7QdfedQX",
+   "code": "An0FCP00zUniB7QdfedQX",
+   "name": "UCD Lead",
+   "author": "UCDOps",
+   "description": "A user-centred design teammate that runs a service from discovery to live.",
+   "url": "https://x.ai/bot/An0FCP00zUniB7QdfedQX"
+  },
+  {
+   "id": "sales-lead-generation-TfyhOtaCHO0A4m6Y5Lg8_",
+   "code": "TfyhOtaCHO0A4m6Y5Lg8_",
+   "name": "Uptime",
+   "author": "OutworkVentures",
+   "description": "Site reliability lead for a shared computer used by several bots.",
+   "url": "https://x.ai/bot/TfyhOtaCHO0A4m6Y5Lg8_"
+  },
+  {
+   "id": "sales-lead-generation-VH6hfT_aihtFVmOcSQTwp",
+   "code": "VH6hfT_aihtFVmOcSQTwp",
+   "name": "Venduto",
+   "author": "Tommaso",
+   "description": "Runs European secondhand listings from first enquiry to an agreed sale, with your supervision.",
+   "url": "https://x.ai/bot/VH6hfT_aihtFVmOcSQTwp"
+  },
+  {
+   "id": "sales-lead-generation-_hVb4x6xAmUqR68mq_VYA",
+   "code": "_hVb4x6xAmUqR68mq_VYA",
+   "name": "Venture Desk",
+   "author": "Scott Corlett",
+   "description": "One weekday brief across every small online business you run: traffic, sales, the one blocker, and the next move for each, plus a launch checklist so.",
+   "url": "https://x.ai/bot/_hVb4x6xAmUqR68mq_VYA"
+  },
+  {
+   "id": "sales-lead-generation-MF9ZM323wTni8HHgSdXqC",
+   "code": "MF9ZM323wTni8HHgSdXqC",
+   "name": "VentureLab",
+   "author": "Bruce Stenberg",
+   "description": "Evidence-driven product discovery partner for founders and product teams.",
+   "url": "https://x.ai/bot/MF9ZM323wTni8HHgSdXqC"
+  },
+  {
+   "id": "sales-lead-generation-rDEpX2aSCERCaVJACxNz7",
+   "code": "rDEpX2aSCERCaVJACxNz7",
+   "name": "Vern",
+   "author": "Austin Hoopes",
+   "description": "A personal relationship CRM that keeps a private contact book and reminds you when a friend's birthday or follow-up is due, without burning weekly usage.",
+   "url": "https://x.ai/bot/rDEpX2aSCERCaVJACxNz7"
+  },
+  {
+   "id": "sales-lead-generation-SJYRJy2TnPB_NNqtnaJTJ",
+   "code": "SJYRJy2TnPB_NNqtnaJTJ",
+   "name": "Vigil",
+   "author": "AdventureNLearn",
+   "description": "Sweep Desk lead: paste a lure for a field brief, never builds attacks.",
+   "url": "https://x.ai/bot/SJYRJy2TnPB_NNqtnaJTJ"
+  },
+  {
+   "id": "sales-lead-generation-Nw1K3kkPk8N6eNTPed8gR",
+   "code": "Nw1K3kkPk8N6eNTPed8gR",
+   "name": "Voice of Customer",
+   "author": "Jay",
+   "description": "Runs paid user interviews and public social listening for a growth team: who to ask, CRM exclusion audits, approval-gated outreach, X/Reddit themes…",
+   "url": "https://x.ai/bot/Nw1K3kkPk8N6eNTPed8gR"
+  },
+  {
+   "id": "sales-lead-generation-W2bU3hqieo-CapZ3rOBrD",
+   "code": "W2bU3hqieo-CapZ3rOBrD",
+   "name": "Web Bot",
+   "author": "Mr Clean",
+   "description": "Builds polished multi-page demo websites for roofing, HVAC and plumbing contractors from their existing sites, ready for you to pitch.",
+   "url": "https://x.ai/bot/W2bU3hqieo-CapZ3rOBrD"
+  },
+  {
+   "id": "sales-lead-generation-7veO5EEAD-LxgkOGy4sjk",
+   "code": "7veO5EEAD-LxgkOGy4sjk",
+   "name": "Webb Knox",
+   "author": "Rardo",
+   "description": "A lead specialist for anyone who sells something: tell it what you're after and it finds verified, scored leads…",
+   "url": "https://x.ai/bot/7veO5EEAD-LxgkOGy4sjk"
+  },
+  {
+   "id": "sales-lead-generation-vFCIBuZENcbHEeqWdxe6D",
+   "code": "vFCIBuZENcbHEeqWdxe6D",
+   "name": "WhatsApp-Assistent",
+   "author": "Jens",
+   "description": "Liest, fasst zusammen und beantwortet deine WhatsApp-Nachrichten über Beeper Desktop.",
+   "url": "https://x.ai/bot/vFCIBuZENcbHEeqWdxe6D"
+  },
+  {
+   "id": "sales-lead-generation-PgOQyCFC0jHV2Ithy1Uwm",
+   "code": "PgOQyCFC0jHV2Ithy1Uwm",
+   "name": "Win-Back Agent — Past Customers Are Your Cheapest Leads",
+   "author": "News Gurus",
+   "description": "Brings a small business's past customers back, because past customers are your cheapest leads.",
+   "url": "https://x.ai/bot/PgOQyCFC0jHV2Ithy1Uwm"
+  },
+  {
+   "id": "sales-lead-generation-jbZ6e5CtU019W0wvZrhdl",
+   "code": "jbZ6e5CtU019W0wvZrhdl",
+   "name": "Winback Desk",
+   "author": "Screaming Chicken",
+   "description": "Finds customers who quit in the last six months, drafts win-back and exit-feedback emails for approval, and groups their reasons into a retention plan.",
+   "url": "https://x.ai/bot/jbZ6e5CtU019W0wvZrhdl"
+  },
+  {
+   "id": "sales-lead-generation-KBA_4Aap3iYEZEi12_hwW",
+   "code": "KBA_4Aap3iYEZEi12_hwW",
+   "name": "Winback Desk",
+   "author": "Screaming",
+   "description": "Find customers who quit in the last 6 months, draft personal win-back + exit-feedback emails for your approval, then overnight cluster the reasons…",
+   "url": "https://x.ai/bot/KBA_4Aap3iYEZEi12_hwW"
+  },
+  {
+   "id": "sales-lead-generation-maxOL0-n_PSVuwi5mpZgP",
+   "code": "maxOL0-n_PSVuwi5mpZgP",
+   "name": "Working Backwards PM",
+   "author": "Patricia",
+   "description": "Start from the customer — not from features. Five customer questions, then a PRFAQ, then a PRD after you align. For founders and PMs.",
+   "url": "https://x.ai/bot/maxOL0-n_PSVuwi5mpZgP"
+  },
+  {
+   "id": "sales-lead-generation-SoWfGhl2a0D80FQYYLwCk",
+   "code": "SoWfGhl2a0D80FQYYLwCk",
+   "name": "X Lead",
+   "author": "Jorhan Cruz",
+   "description": "Coordinates your X bots (Bookmark Scout, Trend Radar, Post Writer) and files their ideas in one Notion database.",
+   "url": "https://x.ai/bot/SoWfGhl2a0D80FQYYLwCk"
+  },
+  {
+   "id": "sales-lead-generation-fClmFKmFbUT23lnmet4G0",
+   "code": "fClmFKmFbUT23lnmet4G0",
+   "name": "X Lead Hunter",
+   "author": "Jacob C. Edmunds",
+   "description": "Finds people on X who are publicly struggling with the problem your offer solves, and sends you a prioritized daily list of leads to review.",
+   "url": "https://x.ai/bot/fClmFKmFbUT23lnmet4G0"
+  },
+  {
+   "id": "sales-lead-generation-1PSI6qQln1PowM5reA_8L",
+   "code": "1PSI6qQln1PowM5reA_8L",
+   "name": "X Signal Prospector",
+   "author": "Jake",
+   "description": "Finds people on X asking for what you sell, scores them against your best past customers, enriches the strong fits…",
+   "url": "https://x.ai/bot/1PSI6qQln1PowM5reA_8L"
+  },
+  {
+   "id": "sales-lead-generation-Ec6g2olzVFKq60cC-Jy5h",
+   "code": "Ec6g2olzVFKq60cC-Jy5h",
+   "name": "XChat 고객센터 봇",
+   "author": "Brandon",
+   "description": "24/7 customer support bot that answers X Chat inquiries from the docs and URLs you choose, and can take a voice call when the customer wants one.",
+   "url": "https://x.ai/bot/Ec6g2olzVFKq60cC-Jy5h"
+  },
+  {
+   "id": "sales-lead-generation-j2Q9eLS8kt9GvTjePzvGl",
+   "code": "j2Q9eLS8kt9GvTjePzvGl",
+   "name": "YC partner",
+   "author": "Thiago",
+   "description": "Um advisor racional e direto, no estilo de um sócio da YC, que ajuda founders a decidir melhor usando frameworks da YC, ensaios do Paul Grah.",
+   "url": "https://x.ai/bot/j2Q9eLS8kt9GvTjePzvGl"
+  },
+  {
+   "id": "sales-lead-generation-tIas6udS9kSXpcAz6LFd1",
+   "code": "tIas6udS9kSXpcAz6LFd1",
+   "name": "dial bot",
+   "author": "Matt Palmer",
+   "description": "Places outbound Bland AI phone calls when you ask, then reports what happened.",
+   "url": "https://x.ai/bot/tIas6udS9kSXpcAz6LFd1"
+  },
+  {
+   "id": "sales-lead-generation-IaIim7dQiqrfqWZZGdNAT",
+   "code": "IaIim7dQiqrfqWZZGdNAT",
+   "name": "for",
+   "author": "Abdulloh Ergashev",
+   "description": "A sharp build lead for multi-agent projects. Assigns roles, stitches drop-in pieces into one site, and gets you a working preview.",
+   "url": "https://x.ai/bot/IaIim7dQiqrfqWZZGdNAT"
+  },
+  {
+   "id": "sales-lead-generation-HgpgiMSirsCBrsQpdLeDf",
+   "code": "HgpgiMSirsCBrsQpdLeDf",
+   "name": "lfm.cash",
+   "author": "Maximilian",
+   "description": "Makes one-page sales pages that sell before you build: reads what your buyers actually post, designs the page from their words, then builds and checks it.",
+   "url": "https://x.ai/bot/HgpgiMSirsCBrsQpdLeDf"
+  },
+  {
+   "id": "sales-lead-generation-sNh9WUT_7BY83jm1w3GJh",
+   "code": "sNh9WUT_7BY83jm1w3GJh",
+   "name": "shadow chief",
+   "author": "Robert",
+   "description": "Shadow chief that preps decisions before you walk into the room.",
+   "url": "https://x.ai/bot/sNh9WUT_7BY83jm1w3GJh"
+  },
+  {
+   "id": "sales-lead-generation--4fEgwVFAm8w_ULi4pjmC",
+   "code": "-4fEgwVFAm8w_ULi4pjmC",
+   "name": "フォーム優先アウトバウンド",
+   "author": "直人",
+   "description": "Form-first B2B outreach for Japan: prep daily, send only on your GO.",
+   "url": "https://x.ai/bot/-4fEgwVFAm8w_ULi4pjmC"
+  },
+  {
+   "id": "sales-lead-generation-6Kwg0_keDaaNiOvheoLQ7",
+   "code": "6Kwg0_keDaaNiOvheoLQ7",
+   "name": "客户军师",
+   "author": "shubin",
+   "description": "海外达人 / KOL 销售的客户决策顾问。你把卡住的客户背景、聊天记录和卡点丢过来，它先给结论，再拆局面、比方案、定这周下一步。.",
+   "url": "https://x.ai/bot/6Kwg0_keDaaNiOvheoLQ7"
+  }
+ ]
+}

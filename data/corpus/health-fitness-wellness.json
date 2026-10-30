@@ -1,0 +1,1496 @@
+{
+ "slug": "health-fitness-wellness",
+ "label": "Health, Fitness & Wellness",
+ "count": 186,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "health-fitness-wellness-MlsEJVyRmdz7KP8qmlcBH",
+   "code": "MlsEJVyRmdz7KP8qmlcBH",
+   "name": "AI fitness coach",
+   "author": "Debbie O'Brien",
+   "description": "Builds a training and eating plan around the time and kit you actually have.",
+   "url": "https://x.ai/bot/MlsEJVyRmdz7KP8qmlcBH"
+  },
+  {
+   "id": "health-fitness-wellness-s5465ebb9e192551741f7",
+   "code": "s5465ebb9e192551741f7",
+   "name": "Account Health",
+   "author": "SpaceX",
+   "description": "See risk and expansion before the QBR. Reads usage and signals across your book and turns portfolio noise into a clear watch list.",
+   "url": "https://x.ai/bot/s5465ebb9e192551741f7"
+  },
+  {
+   "id": "health-fitness-wellness-06tpoFLueyctkd80J__Jg",
+   "code": "06tpoFLueyctkd80J__Jg",
+   "name": "AgentWatch",
+   "author": "Robert",
+   "description": "Health monitor for solo operators and lean teams running multiple bots.",
+   "url": "https://x.ai/bot/06tpoFLueyctkd80J__Jg"
+  },
+  {
+   "id": "health-fitness-wellness-OuHK7dyYD8C6Joqw80yfJ",
+   "code": "OuHK7dyYD8C6Joqw80yfJ",
+   "name": "Ai Health",
+   "author": "Knut Schevik",
+   "description": "Practical coach for sleep, recovery, budget nutrition, and fat loss while keeping sport or training.",
+   "url": "https://x.ai/bot/OuHK7dyYD8C6Joqw80yfJ"
+  },
+  {
+   "id": "health-fitness-wellness-MxgOLBbOpSBsrnYcUulNh",
+   "code": "MxgOLBbOpSBsrnYcUulNh",
+   "name": "Andrej Karpathy-style",
+   "author": "Codila Yarik",
+   "description": "Thinks like Karpathy. Runs your AI agents, attacks every result and keeps building while you sleep. The Chief of Staff you could never afford.",
+   "url": "https://x.ai/bot/MxgOLBbOpSBsrnYcUulNh"
+  },
+  {
+   "id": "health-fitness-wellness-62xEf6aI2zDz6NILuIniU",
+   "code": "62xEf6aI2zDz6NILuIniU",
+   "name": "Arnie",
+   "author": "Daniel",
+   "description": "A German-language fitness coach for cutting and bulking: counts calories and macros, plans your meals and keeps you on track.",
+   "url": "https://x.ai/bot/62xEf6aI2zDz6NILuIniU"
+  },
+  {
+   "id": "health-fitness-wellness-Waw-nx8VWg1lxX8dMkfie",
+   "code": "Waw-nx8VWg1lxX8dMkfie",
+   "name": "Arnold",
+   "author": "Matt Altman",
+   "description": "A gym coach in your pocket. Check in when you arrive, log sets by text or voice, and Arnold calls your next set from your last session, tracks…",
+   "url": "https://x.ai/bot/Waw-nx8VWg1lxX8dMkfie"
+  },
+  {
+   "id": "health-fitness-wellness-qjhr1bOXLdfDdyH8xl6Zz",
+   "code": "qjhr1bOXLdfDdyH8xl6Zz",
+   "name": "ArnoldBot",
+   "author": "Manuel",
+   "description": "A personal trainer bot that tracks your gym in an Obsidian vault, runs Push/Pull/Legs suggestions, and checks in honestly without shaming missed days.",
+   "url": "https://x.ai/bot/qjhr1bOXLdfDdyH8xl6Zz"
+  },
+  {
+   "id": "health-fitness-wellness-qOgnc_Aef6dVpQvr_mJbt",
+   "code": "qOgnc_Aef6dVpQvr_mJbt",
+   "name": "Be Effective Coach: Nutrition & Fitness",
+   "author": "Martin Barna",
+   "description": "Send a meal photo for calories and macros, plus a food diary, training and a weekly report on Martin Barna's method. Not a doctor, 18+.",
+   "url": "https://x.ai/bot/qOgnc_Aef6dVpQvr_mJbt"
+  },
+  {
+   "id": "health-fitness-wellness-cNkusQWq-rped3eR9tZhn",
+   "code": "cNkusQWq-rped3eR9tZhn",
+   "name": "Beside",
+   "author": "Alex",
+   "description": "A warm listening companion for hard days — depression, anxiety, grief, loneliness. Not a doctor or therapist.",
+   "url": "https://x.ai/bot/cNkusQWq-rped3eR9tZhn"
+  },
+  {
+   "id": "health-fitness-wellness-tZd9mNpvCmnm4pxr-pBpA",
+   "code": "tZd9mNpvCmnm4pxr-pBpA",
+   "name": "Better Sleep For Better Health",
+   "author": "@kaialyna",
+   "description": "A free 30-day sleep coach that starts with your sleep habits, sends a daily food, activity, and bedtime tip, checks in and adapts.",
+   "url": "https://x.ai/bot/tZd9mNpvCmnm4pxr-pBpA"
+  },
+  {
+   "id": "health-fitness-wellness-PivGbBN3dBMmD-xAbb63r",
+   "code": "PivGbBN3dBMmD-xAbb63r",
+   "name": "Body Lab",
+   "author": "Dave Gambrill",
+   "description": "Conversational health and fitness tracker: tell it what you ate, took or trained and it keeps verified records in your Google Sheet with totals and progression.",
+   "url": "https://x.ai/bot/PivGbBN3dBMmD-xAbb63r"
+  },
+  {
+   "id": "health-fitness-wellness-yi-DUpczI7Gvzc2oGDesm",
+   "code": "yi-DUpczI7Gvzc2oGDesm",
+   "name": "Body of Evidence",
+   "author": "Diggity",
+   "description": "Personal medical research advisor: reads lab reports, checks medications for interactions, works through symptoms and preps doctor visits.",
+   "url": "https://x.ai/bot/yi-DUpczI7Gvzc2oGDesm"
+  },
+  {
+   "id": "health-fitness-wellness-H2uuf8bBrAx-CTyZdRb1h",
+   "code": "H2uuf8bBrAx-CTyZdRb1h",
+   "name": "BodyBot: 40+ men's body recomp coach",
+   "author": "@DadBodWorx",
+   "description": "A warm, evidence-weighted coach for men 40+ that builds diet, training, strength, and cardio plans from your own numbers and reviews supplem.",
+   "url": "https://x.ai/bot/H2uuf8bBrAx-CTyZdRb1h"
+  },
+  {
+   "id": "health-fitness-wellness-ug20hy7rQtr37O8IBoeSm",
+   "code": "ug20hy7rQtr37O8IBoeSm",
+   "name": "Bot Doctor",
+   "author": "Salim Habash",
+   "description": "Diagnoses an assistant that has gone vague, then proposes repairs you approve.",
+   "url": "https://x.ai/bot/ug20hy7rQtr37O8IBoeSm"
+  },
+  {
+   "id": "health-fitness-wellness-lBqaV-hht-_BO8TbMZYnM",
+   "code": "lBqaV-hht-_BO8TbMZYnM",
+   "name": "Bot Doctor",
+   "author": "Aung chanmin",
+   "description": "Tell it what you want automated and it designs a custom Grok Bot: name, description, avatar, routines and safety warnings, buildable in ten minutes.",
+   "url": "https://x.ai/bot/lBqaV-hht-_BO8TbMZYnM"
+  },
+  {
+   "id": "health-fitness-wellness-9xNbMqiBC9gWhTwrh7S80",
+   "code": "9xNbMqiBC9gWhTwrh7S80",
+   "name": "Bot Doctor",
+   "author": "Texas Based G-Pa",
+   "description": "Designs and tunes tight Grok Bots for a company work account: one job, one voice, clear anti-jobs, no leftover tools…",
+   "url": "https://x.ai/bot/9xNbMqiBC9gWhTwrh7S80"
+  },
+  {
+   "id": "health-fitness-wellness-1V0ybroSf1jP_59Kzaqyf",
+   "code": "1V0ybroSf1jP_59Kzaqyf",
+   "name": "Bot Doctor",
+   "author": "mtb",
+   "description": "Your AI agents need a check-up. Bot Doctor spots duplicated routines, broken connectors, security risks and weak…",
+   "url": "https://x.ai/bot/1V0ybroSf1jP_59Kzaqyf"
+  },
+  {
+   "id": "health-fitness-wellness-VIa-xsiXV8DvMVfm4UugI",
+   "code": "VIa-xsiXV8DvMVfm4UugI",
+   "name": "Bot Health Check",
+   "author": "Sahaiww",
+   "description": "Say \"check my bots\" and it reviews your other bots' chat histories, says which need a fresh copy now, soon or not yet, and writes handoff summaries.",
+   "url": "https://x.ai/bot/VIa-xsiXV8DvMVfm4UugI"
+  },
+  {
+   "id": "health-fitness-wellness-mYhLoI8gP8A0qrFGOHxWU",
+   "code": "mYhLoI8gP8A0qrFGOHxWU",
+   "name": "Bot Renovator",
+   "author": "Magnus",
+   "description": "Keeps multi-bot setups cheap and sharp. Weekly health check, clear refresh scores, short handoff briefs — never swaps…",
+   "url": "https://x.ai/bot/mYhLoI8gP8A0qrFGOHxWU"
+  },
+  {
+   "id": "health-fitness-wellness-nLVsSuD8_hN5rhLTGtbw9",
+   "code": "nLVsSuD8_hN5rhLTGtbw9",
+   "name": "Bot Team Health Check",
+   "author": "Antonio Rubén de las Nieves Stoner",
+   "description": "Reviews how your Grok Bot assistants are set up and returns one numbered list of fixes.",
+   "url": "https://x.ai/bot/nLVsSuD8_hN5rhLTGtbw9"
+  },
+  {
+   "id": "health-fitness-wellness-nlvssud8_hn5rhltgtbw9",
+   "code": "nlvssud8_hn5rhltgtbw9",
+   "name": "Bot Team Health Check",
+   "author": "Antonio",
+   "description": "Reviews how your Grok Bot assistants are set up and returns one numbered list of fixes.",
+   "url": "https://x.ai/bot/nlvssud8_hn5rhltgtbw9"
+  },
+  {
+   "id": "health-fitness-wellness-fRKdGqUmfUYJCs1vtGnt3",
+   "code": "fRKdGqUmfUYJCs1vtGnt3",
+   "name": "Box Janitor",
+   "author": "Alvin",
+   "description": "Keeps a computer shared by several AI agents fast and tidy. Twice a day it checks health and deletes idle leftovers like stray browsers and temp files.",
+   "url": "https://x.ai/bot/fRKdGqUmfUYJCs1vtGnt3"
+  },
+  {
+   "id": "health-fitness-wellness-FV1pduq73e3Yn0TI8X-lP",
+   "code": "FV1pduq73e3Yn0TI8X-lP",
+   "name": "Cadence",
+   "author": "Stacy Kerr",
+   "description": "Data-driven health and wellness coach for training, nutrition, GLP-1 integration, supplements, and symptoms.",
+   "url": "https://x.ai/bot/FV1pduq73e3Yn0TI8X-lP"
+  },
+  {
+   "id": "health-fitness-wellness-ukPdB_Nh6TNldMJNjF7L9",
+   "code": "ukPdB_Nh6TNldMJNjF7L9",
+   "name": "CalBot",
+   "author": "slopulus",
+   "description": "A friendly calorie and macro tracker. Type what you ate or send a photo, and it estimates calories, protein, carbs, and fat, keeps a daily log.",
+   "url": "https://x.ai/bot/ukPdB_Nh6TNldMJNjF7L9"
+  },
+  {
+   "id": "health-fitness-wellness-PtnSyeoj7X_aCrZxAi7Lb",
+   "code": "PtnSyeoj7X_aCrZxAi7Lb",
+   "name": "Call Bot",
+   "author": "Christian Cesar",
+   "description": "Owns the phone and voice lane: inbound reception, gated outbound calls, health watches, and vendor knowledge for Twilio, ElevenLabs, and voice APIs.",
+   "url": "https://x.ai/bot/PtnSyeoj7X_aCrZxAi7Lb"
+  },
+  {
+   "id": "health-fitness-wellness-zK27ouDr1l7fMT9DHB6oZ",
+   "code": "zK27ouDr1l7fMT9DHB6oZ",
+   "name": "Calorie Log",
+   "author": "Terry Haynes",
+   "description": "A personal calorie and weight tracker. Tell it what you ate in any wording or units and it estimates calories, keeps…",
+   "url": "https://x.ai/bot/zK27ouDr1l7fMT9DHB6oZ"
+  },
+  {
+   "id": "health-fitness-wellness-yAQwdu1ppzNP98grV_uy_",
+   "code": "yAQwdu1ppzNP98grV_uy_",
+   "name": "Calorie Police",
+   "author": "Uzair Ahmed",
+   "description": "A friendly, no-lecture calorie coach for anyone who wants to lose fat or eat healthier.",
+   "url": "https://x.ai/bot/yAQwdu1ppzNP98grV_uy_"
+  },
+  {
+   "id": "health-fitness-wellness-XZ4-6jnXoB5txeXZY6hlM",
+   "code": "XZ4-6jnXoB5txeXZY6hlM",
+   "name": "Checkup",
+   "author": "BurnerAccount",
+   "description": "A personal health assistant that helps you run your own care through your patient portal (like MyChart): plain-words test results and appointments.",
+   "url": "https://x.ai/bot/XZ4-6jnXoB5txeXZY6hlM"
+  },
+  {
+   "id": "health-fitness-wellness-6MHDA-LzErngNoRBaktLZ",
+   "code": "6MHDA-LzErngNoRBaktLZ",
+   "name": "Chief Health",
+   "author": "AJAC",
+   "description": "A daily check-in that keeps a training week on track when a session slips.",
+   "url": "https://x.ai/bot/6MHDA-LzErngNoRBaktLZ"
+  },
+  {
+   "id": "health-fitness-wellness-PwWb6fJXpeG857af6tEYi",
+   "code": "PwWb6fJXpeG857af6tEYi",
+   "name": "Chief Health Officer",
+   "author": "AJAC",
+   "description": "You're the Chief Health Officer. Every day, ask if training happened. If it did not, rewrite the next session so the week still holds.",
+   "url": "https://x.ai/bot/PwWb6fJXpeG857af6tEYi"
+  },
+  {
+   "id": "health-fitness-wellness-pipXVVxoIV8Efwk_lvUyD",
+   "code": "pipXVVxoIV8Efwk_lvUyD",
+   "name": "Clinical Orchestrator",
+   "author": "Santi",
+   "description": "A personal clinical orchestrator: warm 1:1 check-ins, 1-2 lenses per update (CBT, psychodynamic, systemic, affective tone), challenge at block close.",
+   "url": "https://x.ai/bot/pipXVVxoIV8Efwk_lvUyD"
+  },
+  {
+   "id": "health-fitness-wellness-f731prTfSFiKjT-arnNgH",
+   "code": "f731prTfSFiKjT-arnNgH",
+   "name": "Clopen Proof",
+   "author": "Kuten26",
+   "description": "For shift workers on rotating schedules. Type your shifts and it puts them on your calendar, blocks sleep and meals around them, flags short nights.",
+   "url": "https://x.ai/bot/f731prTfSFiKjT-arnNgH"
+  },
+  {
+   "id": "health-fitness-wellness-pYdKDyNIZLhGo5HQgwRhD",
+   "code": "pYdKDyNIZLhGo5HQgwRhD",
+   "name": "Cloudflare Worker Health Bot",
+   "author": "Jono Chowdhury",
+   "description": "Watches your Cloudflare Workers for errors, exception spikes, and failed production builds or deploys.",
+   "url": "https://x.ai/bot/pYdKDyNIZLhGo5HQgwRhD"
+  },
+  {
+   "id": "health-fitness-wellness-3zE_2sCWH3YTIyIVw8ieK",
+   "code": "3zE_2sCWH3YTIyIVw8ieK",
+   "name": "Coach",
+   "author": "Phillip Holland",
+   "description": "A personal fitness coach that plans your workouts, logs sets and meals from quick texts or plate photos, adapts to WHOOP, Oura, or Fitbit recovery.",
+   "url": "https://x.ai/bot/3zE_2sCWH3YTIyIVw8ieK"
+  },
+  {
+   "id": "health-fitness-wellness-he2XcxXmWZVLyao1esDv-",
+   "code": "he2XcxXmWZVLyao1esDv-",
+   "name": "Coach",
+   "author": "Ryan Furne",
+   "description": "A personal fitness coach for strength, running, mobility, walking, sauna, and recovery.",
+   "url": "https://x.ai/bot/he2XcxXmWZVLyao1esDv-"
+  },
+  {
+   "id": "health-fitness-wellness-bT0goMlObmvdG6nXDTkas",
+   "code": "bT0goMlObmvdG6nXDTkas",
+   "name": "Coach",
+   "author": "Oscar Morales",
+   "description": "Friendly personal trainer for busy people: builds short, flexible routines around your real calendar and sends daily check-ins using your WHOOP data.",
+   "url": "https://x.ai/bot/bT0goMlObmvdG6nXDTkas"
+  },
+  {
+   "id": "health-fitness-wellness-pC0n6aHDTevS5BpCBLmnQ",
+   "code": "pC0n6aHDTevS5BpCBLmnQ",
+   "name": "Coach",
+   "author": "Terry",
+   "description": "A warm health habits coach for busy people.",
+   "url": "https://x.ai/bot/pC0n6aHDTevS5BpCBLmnQ"
+  },
+  {
+   "id": "health-fitness-wellness-0VoMKg4bZbmfq3eUPchsS",
+   "code": "0VoMKg4bZbmfq3eUPchsS",
+   "name": "Coach G",
+   "author": "Mike Yeager",
+   "description": "A setup-first fitness coach. It walks you through piping in wearable data, then a daily brief for your sport…",
+   "url": "https://x.ai/bot/0VoMKg4bZbmfq3eUPchsS"
+  },
+  {
+   "id": "health-fitness-wellness-xD5CDo0JbqHI9Eio_3hn1",
+   "code": "xD5CDo0JbqHI9Eio_3hn1",
+   "name": "Coach Sam",
+   "author": "john klacynski",
+   "description": "No-nonsense fitness and nutrition coach that pulls your real training, wearable and food data first and ends every message with one concrete next step.",
+   "url": "https://x.ai/bot/xD5CDo0JbqHI9Eio_3hn1"
+  },
+  {
+   "id": "health-fitness-wellness-ayqybahqurm7x7lnboeoq",
+   "code": "ayqybahqurm7x7lnboeoq",
+   "name": "Consider It Marketed",
+   "author": "Cindy",
+   "description": "Clinic CEO for a medical practice.",
+   "url": "https://x.ai/bot/ayqybahqurm7x7lnboeoq"
+  },
+  {
+   "id": "health-fitness-wellness-lnd5ErImPDh4h7eBb5n8Z",
+   "code": "lnd5ErImPDh4h7eBb5n8Z",
+   "name": "Contractor Supplement & Missed-Call Front Desk",
+   "author": "Lisa",
+   "description": "Turns jobsite photos and voice notes into insurance adjuster-ready IRC & IICRC code-upgrade supplement letters (outside Xactimate).",
+   "url": "https://x.ai/bot/lnd5ErImPDh4h7eBb5n8Z"
+  },
+  {
+   "id": "health-fitness-wellness-Rm6VqcE8cOWXwotPth9qM",
+   "code": "Rm6VqcE8cOWXwotPth9qM",
+   "name": "Cost-Smart Health Brief",
+   "author": "Amina Guleid",
+   "description": "Helps doctors, patients, and families turn one health or health-system question into a 3-minute brief: evidence…",
+   "url": "https://x.ai/bot/Rm6VqcE8cOWXwotPth9qM"
+  },
+  {
+   "id": "health-fitness-wellness-pmaYkbv50yT2tHFrU5o7h",
+   "code": "pmaYkbv50yT2tHFrU5o7h",
+   "name": "Crux",
+   "author": "@Brbaumhoff",
+   "description": "Indoor-to-outdoor climbing coach. Send a photo of your gym wall and the outdoor route you’re training for , Crux builds a practice line on that wall…",
+   "url": "https://x.ai/bot/pmaYkbv50yT2tHFrU5o7h"
+  },
+  {
+   "id": "health-fitness-wellness-6-AdkGhgFNEsyB1hIWw_M",
+   "code": "6-AdkGhgFNEsyB1hIWw_M",
+   "name": "Daily Check-In Coach",
+   "author": "Ellodia Forrester",
+   "description": "Friendly coach that checks in each morning and evening, tracks habit streaks on a simple page and nudges you to wind down at bedtime. Voice or text.",
+   "url": "https://x.ai/bot/6-AdkGhgFNEsyB1hIWw_M"
+  },
+  {
+   "id": "health-fitness-wellness-bE4a5oiApYRpO-Bn9dqBB",
+   "code": "bE4a5oiApYRpO-Bn9dqBB",
+   "name": "Dashboard",
+   "author": "Kris Huff",
+   "description": "Presents the metrics you agree on for any operation (a cupcake shop, a gym, a shop floor) by building 3 to 5 focused dashboards from a few quick questions.",
+   "url": "https://x.ai/bot/bE4a5oiApYRpO-Bn9dqBB"
+  },
+  {
+   "id": "health-fitness-wellness-zReFhsDYUwyt8YM93ahNL",
+   "code": "zReFhsDYUwyt8YM93ahNL",
+   "name": "Delta-X",
+   "author": "Courtney Tischler",
+   "description": "Weekly planner that finds forgotten subscriptions in email, cancels the ones you pick, and plans around sleep.",
+   "url": "https://x.ai/bot/zReFhsDYUwyt8YM93ahNL"
+  },
+  {
+   "id": "health-fitness-wellness-CC_ZVQsT4S5p1zL5RdNHr",
+   "code": "CC_ZVQsT4S5p1zL5RdNHr",
+   "name": "Disability Claim Desk",
+   "author": "Mike",
+   "description": "Your private desk for a public disability benefit claim: a claim file, medical source list, work history, and a daily-function diary in your own words.",
+   "url": "https://x.ai/bot/CC_ZVQsT4S5p1zL5RdNHr"
+  },
+  {
+   "id": "health-fitness-wellness-EVQ-0yhShRgL-2qAfdD-8",
+   "code": "EVQ-0yhShRgL-2qAfdD-8",
+   "name": "Disk Doctor",
+   "author": "Nick Salerni",
+   "description": "Frees up Mac storage safely, only with your approval.",
+   "url": "https://x.ai/bot/EVQ-0yhShRgL-2qAfdD-8"
+  },
+  {
+   "id": "health-fitness-wellness-Va3fg4mNOJ7XHSmI_b7R5",
+   "code": "Va3fg4mNOJ7XHSmI_b7R5",
+   "name": "Disk Saver",
+   "author": "Hovhannes Mkhitaryan",
+   "description": "Screens a computer's health and storage, finds large, duplicate or stale files and caches, and proposes safe cleanup plans for your approval.",
+   "url": "https://x.ai/bot/Va3fg4mNOJ7XHSmI_b7R5"
+  },
+  {
+   "id": "health-fitness-wellness-vPj8mlryYRn2ZwC5w5-bV",
+   "code": "vPj8mlryYRn2ZwC5w5-bV",
+   "name": "Doctor",
+   "author": "Vincenzo Palazzo",
+   "description": "A personal health follow-up assistant that tracks dental work, allergy testing, medicines and supplements, and medical…",
+   "url": "https://x.ai/bot/vPj8mlryYRn2ZwC5w5-bV"
+  },
+  {
+   "id": "health-fitness-wellness-djlVFbW-J-pFXRdpIq0mP",
+   "code": "djlVFbW-J-pFXRdpIq0mP",
+   "name": "Doctor Visit Prep for Women",
+   "author": "Adebusola",
+   "description": "For women tired of being brushed off by doctors: turns your age, concerns and history into a one-page prep note with questions, pushback lines and follow-up.",
+   "url": "https://x.ai/bot/djlVFbW-J-pFXRdpIq0mP"
+  },
+  {
+   "id": "health-fitness-wellness-SR14quBvqUyS-K0DqlDL8",
+   "code": "SR14quBvqUyS-K0DqlDL8",
+   "name": "Doctor.mD",
+   "author": "Pete Blankenship",
+   "description": "Evidence-based longevity and wellness guidance for busy professionals and families.",
+   "url": "https://x.ai/bot/SR14quBvqUyS-K0DqlDL8"
+  },
+  {
+   "id": "health-fitness-wellness-5ugiIXTxpQY7tr5j9tt6r",
+   "code": "5ugiIXTxpQY7tr5j9tt6r",
+   "name": "Dr Grok",
+   "author": "RIAAN VAN DER MERWE",
+   "description": "A friendly health assistant that explains symptoms, medications, conditions, and test results in plain language and helps you prepare for doctor visits.",
+   "url": "https://x.ai/bot/5ugiIXTxpQY7tr5j9tt6r"
+  },
+  {
+   "id": "health-fitness-wellness-d3Ab1XrF1JtVRVJw97nVD",
+   "code": "d3Ab1XrF1JtVRVJw97nVD",
+   "name": "Dr. Bot",
+   "author": "sarah rovnak",
+   "description": "Personal medical assistant that tracks symptoms of any condition, plus meds, sleep and labs, with a warm daily check-in. Never diagnoses or changes meds.",
+   "url": "https://x.ai/bot/d3Ab1XrF1JtVRVJw97nVD"
+  },
+  {
+   "id": "health-fitness-wellness-ox4qgFnskp1Fm9D8f0SCq",
+   "code": "ox4qgFnskp1Fm9D8f0SCq",
+   "name": "Dr. Crusher",
+   "author": "Matt",
+   "description": "A calm, plain-spoken helper that walks you or a family member through health coverage enrollment: Medicare, Marketplace, TRICARE or employer plans.",
+   "url": "https://x.ai/bot/ox4qgFnskp1Fm9D8f0SCq"
+  },
+  {
+   "id": "health-fitness-wellness-1_HBfW3r_vfLv622v7gQ6",
+   "code": "1_HBfW3r_vfLv622v7gQ6",
+   "name": "Dr. ICann",
+   "author": "Sentinel Architech",
+   "description": "A warm clinic for health-professions teaching. Looks up medical and clinical facts from CDC, NIH, and MedlinePlus for whoever needs them.",
+   "url": "https://x.ai/bot/1_HBfW3r_vfLv622v7gQ6"
+  },
+  {
+   "id": "health-fitness-wellness-ZCrfVPExFK2JbazyGXL3L",
+   "code": "ZCrfVPExFK2JbazyGXL3L",
+   "name": "Dr. Sweet",
+   "author": "Michael Sweet",
+   "description": "Kidney-aware strength and wellness coach: daily training plans, meal logging, blood-pressure habits, and weekly check-ins that protect kidney integrity…",
+   "url": "https://x.ai/bot/ZCrfVPExFK2JbazyGXL3L"
+  },
+  {
+   "id": "health-fitness-wellness-HDvf7U-TDnNdLaCb78IHZ",
+   "code": "HDvf7U-TDnNdLaCb78IHZ",
+   "name": "ESXi Doctor",
+   "author": "Александр",
+   "description": "Russian-language helper for VMware ESXi hosts: VM and VMFS recovery, disk checks (SMART, VOMA, ddrescue) and backups, with step-by-step commands.",
+   "url": "https://x.ai/bot/HDvf7U-TDnNdLaCb78IHZ"
+  },
+  {
+   "id": "health-fitness-wellness-tQBhNcc6YIsCkfMx-BDV4",
+   "code": "tQBhNcc6YIsCkfMx-BDV4",
+   "name": "Easy Jog Check-in",
+   "author": "CK Agent Chan",
+   "description": "Gentle slow-jog check-in buddy—not a doctor or coach. Helps you note if you ran and about how long.",
+   "url": "https://x.ai/bot/tQBhNcc6YIsCkfMx-BDV4"
+  },
+  {
+   "id": "health-fitness-wellness-7-mMTGK20-vZrBGH1NQim",
+   "code": "7-mMTGK20-vZrBGH1NQim",
+   "name": "Ernährungs Bot",
+   "author": "Andreas",
+   "description": "Relaxed German-language calorie and protein tracker: tell it what you eat, it estimates kcal and protein, keeps a daily log and sends evening and weekly checks.",
+   "url": "https://x.ai/bot/7-mMTGK20-vZrBGH1NQim"
+  },
+  {
+   "id": "health-fitness-wellness-vetE_J1PyooGr9AsbeHRm",
+   "code": "vetE_J1PyooGr9AsbeHRm",
+   "name": "Ernährungscoach",
+   "author": "Michael Fischer",
+   "description": "A warm, practical nutrition coach that logs your meals, supplements and body values from text, voice or photos…",
+   "url": "https://x.ai/bot/vetE_J1PyooGr9AsbeHRm"
+  },
+  {
+   "id": "health-fitness-wellness-bArDsRk2ADxWvI0ChJD1a",
+   "code": "bArDsRk2ADxWvI0ChJD1a",
+   "name": "Farm Manager",
+   "author": "Luke",
+   "description": "A steady, plain-spoken farm hand for a small homestead: livestock lineages and health records, garden and orchard calendars and maps, and beehives.",
+   "url": "https://x.ai/bot/bArDsRk2ADxWvI0ChJD1a"
+  },
+  {
+   "id": "health-fitness-wellness-UcYXKan8sL_dgPUMhUIAn",
+   "code": "UcYXKan8sL_dgPUMhUIAn",
+   "name": "Fit",
+   "author": "Dave Jones",
+   "description": "A fitness coach bot that tracks your progress from Fitbit (via Google Health) and your Hevy log, and writes your next workouts straight into Hevy.",
+   "url": "https://x.ai/bot/UcYXKan8sL_dgPUMhUIAn"
+  },
+  {
+   "id": "health-fitness-wellness-ut-RMpK1WeJ1W29WNdmsT",
+   "code": "ut-RMpK1WeJ1W29WNdmsT",
+   "name": "Fit & Fuel",
+   "author": "Jeremy Mahoney",
+   "description": "A fitness coach and meal planner in one. It builds your training plan and weekly menus around a single calorie and protein target.",
+   "url": "https://x.ai/bot/ut-RMpK1WeJ1W29WNdmsT"
+  },
+  {
+   "id": "health-fitness-wellness-029xyNepam5LGMNYLIDP8",
+   "code": "029xyNepam5LGMNYLIDP8",
+   "name": "Fit Coach",
+   "author": "realMAG1775",
+   "description": "Asks two daily questions about how your body feels and when you last trained, then picks a strength, power, speed or recovery day and writes the workout.",
+   "url": "https://x.ai/bot/029xyNepam5LGMNYLIDP8"
+  },
+  {
+   "id": "health-fitness-wellness-arpIlNG9WYxhAwM24b82I",
+   "code": "arpIlNG9WYxhAwM24b82I",
+   "name": "Fitness",
+   "author": "Josh Ferguson",
+   "description": "A blunt, warm daily fitness accountability coach. It sends a short morning plan, checks in every night, sends a Sunday progress summary.",
+   "url": "https://x.ai/bot/arpIlNG9WYxhAwM24b82I"
+  },
+  {
+   "id": "health-fitness-wellness-2rxFV5IiG0kZY6BfXJ7kf",
+   "code": "2rxFV5IiG0kZY6BfXJ7kf",
+   "name": "Fitness",
+   "author": "Steve",
+   "description": "A training coach for races, mileage challenges, and military fitness (ACFT). Builds workout plans around your home gym, Whoop recovery, and a daily.",
+   "url": "https://x.ai/bot/2rxFV5IiG0kZY6BfXJ7kf"
+  },
+  {
+   "id": "health-fitness-wellness-bcKod_vgutcj7jnK2L1QW",
+   "code": "bcKod_vgutcj7jnK2L1QW",
+   "name": "Fitness & Health Coach",
+   "author": "Robert Tiller",
+   "description": "A friendly fitness coach that learns about you with a few quick cards, builds a training plan with you and puts it in a free workout tracker on your phone.",
+   "url": "https://x.ai/bot/bcKod_vgutcj7jnK2L1QW"
+  },
+  {
+   "id": "health-fitness-wellness-vpsfo9EnOdJZhIbF2jKrn",
+   "code": "vpsfo9EnOdJZhIbF2jKrn",
+   "name": "Fitness Bot",
+   "author": "₿eevo",
+   "description": "A training partner that builds your workout plan, sends day-of sessions, runs weekly check-ins, and adjusts to your real progress.",
+   "url": "https://x.ai/bot/vpsfo9EnOdJZhIbF2jKrn"
+  },
+  {
+   "id": "health-fitness-wellness-3v6ebv-qBDNCFkTDeH68W",
+   "code": "3v6ebv-qBDNCFkTDeH68W",
+   "name": "Fitness Bot",
+   "author": "Daniel Grinberg",
+   "description": "Training and nutrition coach that starts from your goal and equipment, and breaks down form from a photo or clip.",
+   "url": "https://x.ai/bot/3v6ebv-qBDNCFkTDeH68W"
+  },
+  {
+   "id": "health-fitness-wellness-s98xfhpL_T32hwckQyjwg",
+   "code": "s98xfhpL_T32hwckQyjwg",
+   "name": "Fitness Coach",
+   "author": "Paul Blanche",
+   "description": "A free fitness coach for any sport. It turns your wearable exports (Apple Watch, Garmin, Fitbit, Android and more) into a daily readiness verdict.",
+   "url": "https://x.ai/bot/s98xfhpL_T32hwckQyjwg"
+  },
+  {
+   "id": "health-fitness-wellness-KywgZj-K8XrKhkVRdCX9Y",
+   "code": "KywgZj-K8XrKhkVRdCX9Y",
+   "name": "Fitness Coach",
+   "author": "preston rainey",
+   "description": "A data-first coach for lifting, running, swimming, biking, triathlon and HYROX that connects to your trackers and builds structured weekly plans.",
+   "url": "https://x.ai/bot/KywgZj-K8XrKhkVRdCX9Y"
+  },
+  {
+   "id": "health-fitness-wellness-cA9uzca3M66V1hk6Au94p",
+   "code": "cA9uzca3M66V1hk6Au94p",
+   "name": "Fitness Coach",
+   "author": "Grease",
+   "description": "A home-gym fitness coach that sends your next workout each morning with form-video links, logs what you report into a tracker.",
+   "url": "https://x.ai/bot/cA9uzca3M66V1hk6Au94p"
+  },
+  {
+   "id": "health-fitness-wellness-vozk3T0YOhIt5fPNw8Szx",
+   "code": "vozk3T0YOhIt5fPNw8Szx",
+   "name": "Fitness Coach",
+   "author": "Hector Diaz",
+   "description": "Marathon coach for a goal race while keeping strength and physique.",
+   "url": "https://x.ai/bot/vozk3T0YOhIt5fPNw8Szx"
+  },
+  {
+   "id": "health-fitness-wellness-BhDn5_-jxTIhbB9-QPic1",
+   "code": "BhDn5_-jxTIhbB9-QPic1",
+   "name": "Fitness Coach",
+   "author": "Jenna Gonzales",
+   "description": "Evidence-based fat-loss and lifting coach in the Jeff Nippard / Dr. Mike Israetel style.",
+   "url": "https://x.ai/bot/BhDn5_-jxTIhbB9-QPic1"
+  },
+  {
+   "id": "health-fitness-wellness-dDQlyGHOFnYxmE_DJ0XzK",
+   "code": "dDQlyGHOFnYxmE_DJ0XzK",
+   "name": "Fitness Coach Pro",
+   "author": "Jeremy Mahoney",
+   "description": "A friendly fitness coach that builds a training plan around your goal, equipment, and schedule, adjusts it from your log, and checks in without guilt.",
+   "url": "https://x.ai/bot/dDQlyGHOFnYxmE_DJ0XzK"
+  },
+  {
+   "id": "health-fitness-wellness-o8GhVSuUBto7mo3VfZoqZ",
+   "code": "o8GhVSuUBto7mo3VfZoqZ",
+   "name": "Fitness Trend Coach",
+   "author": "Patriot Agent BoOnE",
+   "description": "Turns fitness data you share from Apple, Android or any tracker into daily, weekly or monthly trend notes and simple meal ideas. Not medical advice.",
+   "url": "https://x.ai/bot/o8GhVSuUBto7mo3VfZoqZ"
+  },
+  {
+   "id": "health-fitness-wellness-3XNjsdnzil3sWrbYBT37-",
+   "code": "3XNjsdnzil3sWrbYBT37-",
+   "name": "Fitness and Habit Coach",
+   "author": "Josh",
+   "description": "A warm coach that logs weigh-ins, workouts and habits to a Google Sheet, coaches simple kettlebell sessions and checks in weekly. Not medical advice.",
+   "url": "https://x.ai/bot/3XNjsdnzil3sWrbYBT37-"
+  },
+  {
+   "id": "health-fitness-wellness-dO9rojWVgFL5kjmWYYu_y",
+   "code": "dO9rojWVgFL5kjmWYYu_y",
+   "name": "Fleet Doctor",
+   "author": "DBCrypto",
+   "description": "Keeps an eye on all your Grok Bots. Every weekday it checks that their routines actually ran and pings you only about failures.",
+   "url": "https://x.ai/bot/dO9rojWVgFL5kjmWYYu_y"
+  },
+  {
+   "id": "health-fitness-wellness-v4t3NW6yfGuvTB5JKHyQm",
+   "code": "v4t3NW6yfGuvTB5JKHyQm",
+   "name": "Fleet Doctor",
+   "author": "Dallin Watts",
+   "description": "Finds which of your Grok Bots are most likely burning your usage and hands you one safe, reversible fix to paste. No setup, just list your bots.",
+   "url": "https://x.ai/bot/v4t3NW6yfGuvTB5JKHyQm"
+  },
+  {
+   "id": "health-fitness-wellness-s8DLSqL4iSknCpXBuCtuN",
+   "code": "s8DLSqL4iSknCpXBuCtuN",
+   "name": "Flubber",
+   "author": "Jenna",
+   "description": "Step-pet fitness buddy whose energy tracks daily movement.",
+   "url": "https://x.ai/bot/s8DLSqL4iSknCpXBuCtuN"
+  },
+  {
+   "id": "health-fitness-wellness-ZBDynmT5k_WrRqQwoxdrI",
+   "code": "ZBDynmT5k_WrRqQwoxdrI",
+   "name": "Forge Coach",
+   "author": "Coffee",
+   "description": "Answer a few quick questions about your age, fitness, health, gear, and space. Get a workout built for you every morning at the time you pick.",
+   "url": "https://x.ai/bot/ZBDynmT5k_WrRqQwoxdrI"
+  },
+  {
+   "id": "health-fitness-wellness-8hPOxXnsAPlcHRcIjdK_a",
+   "code": "8hPOxXnsAPlcHRcIjdK_a",
+   "name": "Forge Log",
+   "author": "Jasper Saunders",
+   "description": "Append-only daily fitness logger that records meals, habits, steps, and weekly floors, and sends short factual reminders when a habit isn't logged yet.",
+   "url": "https://x.ai/bot/8hPOxXnsAPlcHRcIjdK_a"
+  },
+  {
+   "id": "health-fitness-wellness-7dHh-kr8rz5r5z_RKE-VM",
+   "code": "7dHh-kr8rz5r5z_RKE-VM",
+   "name": "Gluco",
+   "author": "Brian Hill",
+   "description": "Chat-based glucose, carb, and medication logger with a daily carb tally and a simple day summary, no clinic-grade claims.",
+   "url": "https://x.ai/bot/7dHh-kr8rz5r5z_RKE-VM"
+  },
+  {
+   "id": "health-fitness-wellness-QABMbqsOH8ki_Flc1BiZf",
+   "code": "QABMbqsOH8ki_Flc1BiZf",
+   "name": "GogBot",
+   "author": "Hunter Yeagley",
+   "description": "David Goggins in your pocket. The accountability mirror that talks back. Raw, loud, no fluff. Daily habit check-ins and a log you cannot rewrite.",
+   "url": "https://x.ai/bot/QABMbqsOH8ki_Flc1BiZf"
+  },
+  {
+   "id": "health-fitness-wellness-rzP2etY8_D1Pof_Y9uQHa",
+   "code": "rzP2etY8_D1Pof_Y9uQHa",
+   "name": "Groku Health Coach",
+   "author": "VolkNasty",
+   "description": "A voice-first workout coach that builds safe, progressive ~45-minute sessions around your equipment, injuries…",
+   "url": "https://x.ai/bot/rzP2etY8_D1Pof_Y9uQHa"
+  },
+  {
+   "id": "health-fitness-wellness-3mtiwFoZcEMq59w-49DMS",
+   "code": "3mtiwFoZcEMq59w-49DMS",
+   "name": "Gym Bod",
+   "author": "peter",
+   "description": "Claims your spot in busy gym classes as registration opens.",
+   "url": "https://x.ai/bot/3mtiwFoZcEMq59w-49DMS"
+  },
+  {
+   "id": "health-fitness-wellness-G4Qddx9kqlcjyq451PAQ1",
+   "code": "G4Qddx9kqlcjyq451PAQ1",
+   "name": "Gym Bot",
+   "author": "Rakshita Philip",
+   "description": "Daily gym and calorie coach for HYROX and strength training with wearable recovery and meal suggestions.",
+   "url": "https://x.ai/bot/G4Qddx9kqlcjyq451PAQ1"
+  },
+  {
+   "id": "health-fitness-wellness--lS-I13J2OsQ73B4YZths",
+   "code": "-lS-I13J2OsQ73B4YZths",
+   "name": "Gym and Fitness Companion",
+   "author": "Chidi",
+   "description": "Gym buddy that builds strength and fat-loss plans and tracks protein with real meals.",
+   "url": "https://x.ai/bot/-lS-I13J2OsQ73B4YZths"
+  },
+  {
+   "id": "health-fitness-wellness-wi-v_TmB07CH5-0iFeli7",
+   "code": "wi-v_TmB07CH5-0iFeli7",
+   "name": "Habit Coach",
+   "author": "Jenna Gonzales",
+   "description": "A warm habit coach that helps you build routines that stick, with daily check-ins, reminders, and gentle accountability.",
+   "url": "https://x.ai/bot/wi-v_TmB07CH5-0iFeli7"
+  },
+  {
+   "id": "health-fitness-wellness-1wZEbQUoQWsR3nKzd4x90",
+   "code": "1wZEbQUoQWsR3nKzd4x90",
+   "name": "Habit Referee",
+   "author": "GrokBotGod God",
+   "description": "Habit tracker for one habit. It checks in daily, stays quiet when you do it and nags once when you don't.",
+   "url": "https://x.ai/bot/1wZEbQUoQWsR3nKzd4x90"
+  },
+  {
+   "id": "health-fitness-wellness-NSx13j49zrCfjGRnJVQ2I",
+   "code": "NSx13j49zrCfjGRnJVQ2I",
+   "name": "Habito",
+   "author": "Jorge Galarza",
+   "description": "A calm daily habit companion. It helps you build small habits with one gentle check-in a day, simple progress grids…",
+   "url": "https://x.ai/bot/NSx13j49zrCfjGRnJVQ2I"
+  },
+  {
+   "id": "health-fitness-wellness-tB0PeTmsSkX0zkOvAWy5o",
+   "code": "tB0PeTmsSkX0zkOvAWy5o",
+   "name": "Healer",
+   "author": "Sentinel Architech",
+   "description": "Warm guide for the human brain and physiological self-reliance. Speaks from public health sources only. Aids a health lead.",
+   "url": "https://x.ai/bot/tB0PeTmsSkX0zkOvAWy5o"
+  },
+  {
+   "id": "health-fitness-wellness-xyw9RJlxNlyXtfjYvcvsT",
+   "code": "xyw9RJlxNlyXtfjYvcvsT",
+   "name": "Health",
+   "author": "Christian Amechi",
+   "description": "A private personal health desk that pulls your sleep, weight, lab, and dose-tracker data into one chat, logs what you say you took.",
+   "url": "https://x.ai/bot/xyw9RJlxNlyXtfjYvcvsT"
+  },
+  {
+   "id": "health-fitness-wellness-JzTaCh9Lxw4iqzv4cL85w",
+   "code": "JzTaCh9Lxw4iqzv4cL85w",
+   "name": "Health",
+   "author": "Andrew",
+   "description": "Owns training, sleep, nutrition, and recovery with simple systems that stick.",
+   "url": "https://x.ai/bot/JzTaCh9Lxw4iqzv4cL85w"
+  },
+  {
+   "id": "health-fitness-wellness-eYWjoOgPpWlSiJAuHXzPD",
+   "code": "eYWjoOgPpWlSiJAuHXzPD",
+   "name": "Health & Coach",
+   "author": "Sultanov Ramil",
+   "description": "A personal home coach: a daily sleep and recovery brief with a workout for your equipment and schedule, plus an honest…",
+   "url": "https://x.ai/bot/eYWjoOgPpWlSiJAuHXzPD"
+  },
+  {
+   "id": "health-fitness-wellness-8u3y6L3ENt7tQKARvlVID",
+   "code": "8u3y6L3ENt7tQKARvlVID",
+   "name": "Health & Medical Expert",
+   "author": "kmkonline",
+   "description": "Family health desk for home measurement logs, meds tracking, report explainers and clinician visit prep. Cantonese-friendly; tracking only, not a doctor.",
+   "url": "https://x.ai/bot/8u3y6L3ENt7tQKARvlVID"
+  },
+  {
+   "id": "health-fitness-wellness-HHoMGHnkrubRG_TIqcoSV",
+   "code": "HHoMGHnkrubRG_TIqcoSV",
+   "name": "Health & Safety Manager",
+   "author": "Ryan Mallin",
+   "description": "A practical health and safety manager for owners, managers and supervisors.",
+   "url": "https://x.ai/bot/HHoMGHnkrubRG_TIqcoSV"
+  },
+  {
+   "id": "health-fitness-wellness-jwWCnlq7VAvEodiz8zlgX",
+   "code": "jwWCnlq7VAvEodiz8zlgX",
+   "name": "Health Assistant",
+   "author": "Arlo Health",
+   "description": "A healthcare helper built on Arlo Health. It compares care prices under your insurance, reviews medical bills and claims.",
+   "url": "https://x.ai/bot/jwWCnlq7VAvEodiz8zlgX"
+  },
+  {
+   "id": "health-fitness-wellness-BA6zs_5Y93mZxR8BEfIT5",
+   "code": "BA6zs_5Y93mZxR8BEfIT5",
+   "name": "Health Bot",
+   "author": "Bauti",
+   "description": "Personal health bot: each morning reads your wearable's night, asks how you feel and sends a short word report with a game-style status screen.",
+   "url": "https://x.ai/bot/BA6zs_5Y93mZxR8BEfIT5"
+  },
+  {
+   "id": "health-fitness-wellness-_5N1Ov6ac1S_MGijPXtvO",
+   "code": "_5N1Ov6ac1S_MGijPXtvO",
+   "name": "Health Bot",
+   "author": "@karthashok008",
+   "description": "Builds personalized supplement schedules, skincare routines, and workouts from the products and equipment you already own.",
+   "url": "https://x.ai/bot/_5N1Ov6ac1S_MGijPXtvO"
+  },
+  {
+   "id": "health-fitness-wellness-YT5ogjDNfbE9AW4OhfEo1",
+   "code": "YT5ogjDNfbE9AW4OhfEo1",
+   "name": "Health Coach",
+   "author": "Hank Jackson",
+   "description": "Keeps workouts, meals and check-ins in one place, explains health claims in plain words, preps questions before appointments, and sends a weekly recap.",
+   "url": "https://x.ai/bot/YT5ogjDNfbE9AW4OhfEo1"
+  },
+  {
+   "id": "health-fitness-wellness-ns3Wo_EYJfm6YQFLHR-Cc",
+   "code": "ns3Wo_EYJfm6YQFLHR-Cc",
+   "name": "Health Coach",
+   "author": "Brandon",
+   "description": "Turns sleep, recovery, and lab numbers into one daily coaching brief.",
+   "url": "https://x.ai/bot/ns3Wo_EYJfm6YQFLHR-Cc"
+  },
+  {
+   "id": "health-fitness-wellness--YEuSma6Nu6nD0iObXkj1",
+   "code": "-YEuSma6Nu6nD0iObXkj1",
+   "name": "Health Coach",
+   "author": "Adnan",
+   "description": "An everyday nutrition and fitness coach that logs food from photos or text, tracks calories, macros and water, and sends a morning brief.",
+   "url": "https://x.ai/bot/-YEuSma6Nu6nD0iObXkj1"
+  },
+  {
+   "id": "health-fitness-wellness-HBKDOnEeqhfLyev8MalAt",
+   "code": "HBKDOnEeqhfLyev8MalAt",
+   "name": "Health Coach",
+   "author": "Matt Matthews",
+   "description": "A direct fitness coach that logs workouts, rolls load targets forward, and sends the next session on a schedule.",
+   "url": "https://x.ai/bot/HBKDOnEeqhfLyev8MalAt"
+  },
+  {
+   "id": "health-fitness-wellness-48ehVK1SKr4ztzMjR2Qyu",
+   "code": "48ehVK1SKr4ztzMjR2Qyu",
+   "name": "Health Concierge",
+   "author": "Dave Gambrill",
+   "description": "A calm health-admin clerk for your family: tracks insurance, labs, doctors and reimbursements, and preps you for appointments.",
+   "url": "https://x.ai/bot/48ehVK1SKr4ztzMjR2Qyu"
+  },
+  {
+   "id": "health-fitness-wellness-yjAwplgsr8UNOSCVbLDRs",
+   "code": "yjAwplgsr8UNOSCVbLDRs",
+   "name": "Health Dashboard",
+   "author": "Emil",
+   "description": "Turns your Garmin, Withings, food-log or other health data into one dashboard Page ordered by your goals, with a weekly call and next step. Not medical advice.",
+   "url": "https://x.ai/bot/yjAwplgsr8UNOSCVbLDRs"
+  },
+  {
+   "id": "health-fitness-wellness-nVZ7_iBke2l0zXsHhsYME",
+   "code": "nVZ7_iBke2l0zXsHhsYME",
+   "name": "Health Helper",
+   "author": "Jeremy Mahoney",
+   "description": "A kind, patient health organizer for an older adult who isn't comfortable with technology.",
+   "url": "https://x.ai/bot/nVZ7_iBke2l0zXsHhsYME"
+  },
+  {
+   "id": "health-fitness-wellness-KN9j80u_RdjdnP1YNbC4g",
+   "code": "KN9j80u_RdjdnP1YNbC4g",
+   "name": "Health Insurance Claims",
+   "author": "Arsenio",
+   "description": "Helps health plan members understand benefits, appeal claim denials and get visits, specialists and procedures covered, with plain-language checklists.",
+   "url": "https://x.ai/bot/KN9j80u_RdjdnP1YNbC4g"
+  },
+  {
+   "id": "health-fitness-wellness-E6O_rj5aW0sWo_s-GEa2y",
+   "code": "E6O_rj5aW0sWo_s-GEa2y",
+   "name": "Health Pot",
+   "author": "MeenWile",
+   "description": "Keeps a dated health log, translates between you and your doctor, preps visits and spots patterns across years of records. Not a doctor, says so.",
+   "url": "https://x.ai/bot/E6O_rj5aW0sWo_s-GEa2y"
+  },
+  {
+   "id": "health-fitness-wellness-5HXvWB3uMmlY_qTQDa0Jb",
+   "code": "5HXvWB3uMmlY_qTQDa0Jb",
+   "name": "HealthAgent Coach",
+   "author": "Teemu Harju",
+   "description": "Personal trainer that coaches you with your real Apple Health data via the HealthAgent iPhone app.",
+   "url": "https://x.ai/bot/5HXvWB3uMmlY_qTQDa0Jb"
+  },
+  {
+   "id": "health-fitness-wellness-3Ym82dfQRKTgV6m-ZE7dw",
+   "code": "3Ym82dfQRKTgV6m-ZE7dw",
+   "name": "Healthspan Coach",
+   "author": "Michael",
+   "description": "Turns your goals, wearable data and lab reports into an evidence-based weekly plan for training, sleep and nutrition, on your calendar.",
+   "url": "https://x.ai/bot/3Ym82dfQRKTgV6m-ZE7dw"
+  },
+  {
+   "id": "health-fitness-wellness-Aq0hS2Z-fEtENFItAZeRI",
+   "code": "Aq0hS2Z-fEtENFItAZeRI",
+   "name": "Highlight Reel",
+   "author": "Michael Heckert",
+   "description": "Sports & fitness short-form content on autopilot. Drop your raw training footage and get scroll-stopping, looping 9:16 hype reels.",
+   "url": "https://x.ai/bot/Aq0hS2Z-fEtENFItAZeRI"
+  },
+  {
+   "id": "health-fitness-wellness-CShykAaCVsQA4m3C2wmY5",
+   "code": "CShykAaCVsQA4m3C2wmY5",
+   "name": "HomePilot",
+   "author": "MOPROD Music",
+   "description": "Keeps your Apple Home healthy: honest health checks, fixes it walks you through and double-checks, and safe automations designed for your real devices.",
+   "url": "https://x.ai/bot/CShykAaCVsQA4m3C2wmY5"
+  },
+  {
+   "id": "health-fitness-wellness-zZr88f32ojF8OBvLSZ8V7",
+   "code": "zZr88f32ojF8OBvLSZ8V7",
+   "name": "Hormones & Woman",
+   "author": "@kaialyna",
+   "description": "Plain-spoken guide to cycles, sleep, mood, perimenopause, fertility and birth control, plus prep for doctor visits.",
+   "url": "https://x.ai/bot/zZr88f32ojF8OBvLSZ8V7"
+  },
+  {
+   "id": "health-fitness-wellness-jYajAanyKBO7aTMQ3zxUL",
+   "code": "jYajAanyKBO7aTMQ3zxUL",
+   "name": "IME Chart Review",
+   "author": "Emily Kurokawa",
+   "description": "Reviews and summarizes medical reports and charts for pain and personal-injury practices — grammar, pain scores…",
+   "url": "https://x.ai/bot/jYajAanyKBO7aTMQ3zxUL"
+  },
+  {
+   "id": "health-fitness-wellness-oXjpkueeC6BqnKnKBLRCN",
+   "code": "oXjpkueeC6BqnKnKBLRCN",
+   "name": "Is This Health Claim True?",
+   "author": "Adebusola",
+   "description": "Paste a health claim from a group chat or TikTok and get a clear verdict, real sources, and a kind reply to send back.",
+   "url": "https://x.ai/bot/oXjpkueeC6BqnKnKBLRCN"
+  },
+  {
+   "id": "health-fitness-wellness-jDAOcACdnrCtgz2Vb3h1m",
+   "code": "jDAOcACdnrCtgz2Vb3h1m",
+   "name": "Jolie",
+   "author": "toradoon",
+   "description": "Polishes user-supplied HTML: natural Thai when asked, warmer sweeter tone, cleaner layout and typography — without changing meaning or inventing medical…",
+   "url": "https://x.ai/bot/jDAOcACdnrCtgz2Vb3h1m"
+  },
+  {
+   "id": "health-fitness-wellness-A26SuAqgUsZhJ9CtFmCsA",
+   "code": "A26SuAqgUsZhJ9CtFmCsA",
+   "name": "Kilo",
+   "author": "MOPROD Music",
+   "description": "Plans today's workout from where you are, recovery, recent training, and meals, with form clips.",
+   "url": "https://x.ai/bot/A26SuAqgUsZhJ9CtFmCsA"
+  },
+  {
+   "id": "health-fitness-wellness-6I-yjMRU1BmiYNfZgWXBK",
+   "code": "6I-yjMRU1BmiYNfZgWXBK",
+   "name": "Life",
+   "author": "Tyler Nishida",
+   "description": "Personal EA for life ops — weekday commitment digests, urgent mail, calendar, travel, home, health admin, vehicles…",
+   "url": "https://x.ai/bot/6I-yjMRU1BmiYNfZgWXBK"
+  },
+  {
+   "id": "health-fitness-wellness-6i-yjmru1bmiynfzgwxbk",
+   "code": "6i-yjmru1bmiynfzgwxbk",
+   "name": "Life",
+   "author": "Tyler",
+   "description": "Personal EA for life ops — weekday commitment digests, urgent mail, calendar, travel, home, health admin, vehicles, and shopping.",
+   "url": "https://x.ai/bot/6i-yjmru1bmiynfzgwxbk"
+  },
+  {
+   "id": "health-fitness-wellness-hOJli2-3VyJs256JXFBWY",
+   "code": "hOJli2-3VyJs256JXFBWY",
+   "name": "Lift & Fuel",
+   "author": "Chidi",
+   "description": "Gym and nutrition partner with Google Calendar training reminders, workout check-ins, protein nudges, and weekly…",
+   "url": "https://x.ai/bot/hOJli2-3VyJs256JXFBWY"
+  },
+  {
+   "id": "health-fitness-wellness-_jHOMIvGlQoK8l4vewrhf",
+   "code": "_jHOMIvGlQoK8l4vewrhf",
+   "name": "Longevity Fitness Coach",
+   "author": "Sydney Nelson",
+   "description": "The FITNESS half of a two-coach pair, built to run with Longevity Health Coach.",
+   "url": "https://x.ai/bot/_jHOMIvGlQoK8l4vewrhf"
+  },
+  {
+   "id": "health-fitness-wellness-VffMG7y0XbYelHTFX78T-",
+   "code": "VffMG7y0XbYelHTFX78T-",
+   "name": "Longevity Health Coach",
+   "author": "Sydney Nelson",
+   "description": "The HEALTH half of a two-coach pair, built to run with Longevity Fitness Coach.",
+   "url": "https://x.ai/bot/VffMG7y0XbYelHTFX78T-"
+  },
+  {
+   "id": "health-fitness-wellness-YhMATZ1fjXlMFSow6ui_n",
+   "code": "YhMATZ1fjXlMFSow6ui_n",
+   "name": "Louie",
+   "author": "Joey",
+   "description": "Plans and tracks Loui-style gym workouts.",
+   "url": "https://x.ai/bot/YhMATZ1fjXlMFSow6ui_n"
+  },
+  {
+   "id": "health-fitness-wellness-c7pqyD5GI7c_x_sPOXu_Z",
+   "code": "c7pqyD5GI7c_x_sPOXu_Z",
+   "name": "Many Hands",
+   "author": "Peter Camamis",
+   "description": "A friendly health-check helper that checks all your machines at once and tells you plainly which ones need attention.",
+   "url": "https://x.ai/bot/c7pqyD5GI7c_x_sPOXu_Z"
+  },
+  {
+   "id": "health-fitness-wellness-mY1kadT1EfGNPBx8k_8t-",
+   "code": "mY1kadT1EfGNPBx8k_8t-",
+   "name": "MedCash Guide",
+   "author": "Tyler Jewell",
+   "description": "Cash-pay medical claims coach that files superbills to Drive, matches charges to reimbursements, and sends claim emails only with your approval.",
+   "url": "https://x.ai/bot/mY1kadT1EfGNPBx8k_8t-"
+  },
+  {
+   "id": "health-fitness-wellness-votBDCP9sCx48hvfxfD_B",
+   "code": "votBDCP9sCx48hvfxfD_B",
+   "name": "Medi",
+   "author": "@CharlesGuy4646",
+   "description": "A simple, friendly medication reminder for parents and grandparents.",
+   "url": "https://x.ai/bot/votBDCP9sCx48hvfxfD_B"
+  },
+  {
+   "id": "health-fitness-wellness-rB9CBpOPXvWgmkcFr4DjN",
+   "code": "rB9CBpOPXvWgmkcFr4DjN",
+   "name": "Medical Aid",
+   "author": "Shane Bowyer",
+   "description": "Tracks medical-scheme invoices, claims, remittances, and doctor/pharmacy slips from Gmail (read-only) or pasted PDFs. Builds tax-ready medical expense.",
+   "url": "https://x.ai/bot/rB9CBpOPXvWgmkcFr4DjN"
+  },
+  {
+   "id": "health-fitness-wellness-6WDjYuRuZN23rSKzl8H_F",
+   "code": "6WDjYuRuZN23rSKzl8H_F",
+   "name": "Medical Bill Auditor",
+   "author": "",
+   "description": "Questions every line of your medical bills and insurance statements, flags double billing, upcoding, and junk fees in a color-coded report, then drafts disputes you approve one tap at a time.",
+   "url": "https://x.ai/bot/6WDjYuRuZN23rSKzl8H_F"
+  },
+  {
+   "id": "health-fitness-wellness-VIzC_UeWYI7m1S9Xs-5sG",
+   "code": "VIzC_UeWYI7m1S9Xs-5sG",
+   "name": "Medical Bill Checker",
+   "author": "RMK Real Estate",
+   "description": "Medical Bill Checker, powered by MedBillAnalyzer, checks a medical bill against your insurer's EOB for the same care.",
+   "url": "https://x.ai/bot/VIzC_UeWYI7m1S9Xs-5sG"
+  },
+  {
+   "id": "health-fitness-wellness-vyAGsd2VgoZjCp00GiIxS",
+   "code": "vyAGsd2VgoZjCp00GiIxS",
+   "name": "Medical Bill Fighter",
+   "author": "Chris Hadges",
+   "description": "Checks your medical bill against your EOB and policy, flags likely errors and denials worth appealing, and drafts…",
+   "url": "https://x.ai/bot/vyAGsd2VgoZjCp00GiIxS"
+  },
+  {
+   "id": "health-fitness-wellness-V3kUu1ClNwmGxOMYn4grP",
+   "code": "V3kUu1ClNwmGxOMYn4grP",
+   "name": "Medical Bill Second Look",
+   "author": "Thuong P. Nguyen",
+   "description": "Checks your medical bill against your insurance EOB for duplicates, code and math errors, then drafts the letters.",
+   "url": "https://x.ai/bot/V3kUu1ClNwmGxOMYn4grP"
+  },
+  {
+   "id": "health-fitness-wellness-kkEKe1Sl-Ic4sEoDcts-6",
+   "code": "kkEKe1Sl-Ic4sEoDcts-6",
+   "name": "Medical Vault",
+   "author": "Marshall Moorman",
+   "description": "A dedicated medical-records agent for a private dual-track vault on NAS or cloud drive: immutable Originals, living notes, OCR/visit ingest, portal.",
+   "url": "https://x.ai/bot/kkEKe1Sl-Ic4sEoDcts-6"
+  },
+  {
+   "id": "health-fitness-wellness-TZW4lXhdPw-lKBXUc0MSD",
+   "code": "TZW4lXhdPw-lKBXUc0MSD",
+   "name": "Medicare Appeals Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "When Medicare or a plan says no, or a hospital or rehab stay is ending: finds the right appeal and deadline, drafts the request and doctor letter, tracks it.",
+   "url": "https://x.ai/bot/TZW4lXhdPw-lKBXUc0MSD"
+  },
+  {
+   "id": "health-fitness-wellness-3foGoeh6ksDhD4jTxYjyE",
+   "code": "3foGoeh6ksDhD4jTxYjyE",
+   "name": "Melissa",
+   "author": "Tobias Goebel",
+   "description": "Fitness and nutrition coach for daily PT, meals, and a simple eating plan.",
+   "url": "https://x.ai/bot/3foGoeh6ksDhD4jTxYjyE"
+  },
+  {
+   "id": "health-fitness-wellness-3fogoeh6ksdhd4jtxyjye",
+   "code": "3fogoeh6ksdhd4jtxyjye",
+   "name": "Melissa",
+   "author": "Tobias",
+   "description": "Fitness and nutrition coach for daily PT, meals, and a simple eating plan.",
+   "url": "https://x.ai/bot/3fogoeh6ksdhd4jtxyjye"
+  },
+  {
+   "id": "health-fitness-wellness-oslk813R6omf07tzuvR5n",
+   "code": "oslk813R6omf07tzuvR5n",
+   "name": "Mend & Move",
+   "author": "Oliver Parsons",
+   "description": "You get a coach that builds workouts at your level, progresses your strength training, plans meals around your protein and calorie targets.",
+   "url": "https://x.ai/bot/oslk813R6omf07tzuvR5n"
+  },
+  {
+   "id": "health-fitness-wellness-d3sWwu8vVtmPEa2wNx1MW",
+   "code": "d3sWwu8vVtmPEa2wNx1MW",
+   "name": "Menopause Coach",
+   "author": "Adebusola",
+   "description": "Clear, honest answers about perimenopause and menopause, plus symptom tracking and questions to bring to your appointment.",
+   "url": "https://x.ai/bot/d3sWwu8vVtmPEa2wNx1MW"
+  },
+  {
+   "id": "health-fitness-wellness-6jV9JYRKSoq4aaV-r-JvT",
+   "code": "6jV9JYRKSoq4aaV-r-JvT",
+   "name": "Meraki Health",
+   "author": "Lee Van",
+   "description": "Read-only health checks, quiet monitoring and weekly digests for your Cisco Meraki network.",
+   "url": "https://x.ai/bot/6jV9JYRKSoq4aaV-r-JvT"
+  },
+  {
+   "id": "health-fitness-wellness-KTKo6uwSzARNo1K9fmdw1",
+   "code": "KTKo6uwSzARNo1K9fmdw1",
+   "name": "Mind",
+   "author": "Sentinel Architech",
+   "description": "A warm psychology educator. Looks up mental health from government sources, cites what is shown to help, and never diagnoses. No plugin required.",
+   "url": "https://x.ai/bot/KTKo6uwSzARNo1K9fmdw1"
+  },
+  {
+   "id": "health-fitness-wellness-wUGvc7oqCZPj_mHaYxYbi",
+   "code": "wUGvc7oqCZPj_mHaYxYbi",
+   "name": "Mr. Health",
+   "author": "Jonathan Souza",
+   "description": "A firm, practical health and fitness coach that tracks your weight and wearable data and builds weekly workout plans with beginner, standard.",
+   "url": "https://x.ai/bot/wUGvc7oqCZPj_mHaYxYbi"
+  },
+  {
+   "id": "health-fitness-wellness-31D69UiAib5rf67Ag1_Ba",
+   "code": "31D69UiAib5rf67Ag1_Ba",
+   "name": "My First Health Bot",
+   "author": "TrevorGilman",
+   "description": "A young adult's first health and fitness coach: simple workouts, cheap and easy meal ideas, and help finding a doctor…",
+   "url": "https://x.ai/bot/31D69UiAib5rf67Ag1_Ba"
+  },
+  {
+   "id": "health-fitness-wellness-6tcn195_OUTz2--si-nd0",
+   "code": "6tcn195_OUTz2--si-nd0",
+   "name": "My Health Watch",
+   "author": "Kevin Wimer",
+   "description": "A research team for your medical condition: every day, what's new for you, sourced and in plain English.",
+   "url": "https://x.ai/bot/6tcn195_OUTz2--si-nd0"
+  },
+  {
+   "id": "health-fitness-wellness-2WORXc-tiWkdWFW-BqeIV",
+   "code": "2WORXc-tiWkdWFW-BqeIV",
+   "name": "NAS Desk",
+   "author": "Loungeless",
+   "description": "Operator for your Ugreen NAS: storage, backups, Docker, and quiet health — nothing destructive without a yes.",
+   "url": "https://x.ai/bot/2WORXc-tiWkdWFW-BqeIV"
+  },
+  {
+   "id": "health-fitness-wellness-hHi18RsdYNRzehXwCZvmS",
+   "code": "hHi18RsdYNRzehXwCZvmS",
+   "name": "NETWORK",
+   "author": "Jeremiah Bailey Jr.",
+   "description": "UniFi-heavy network ops for health checks and changes you approve.",
+   "url": "https://x.ai/bot/hHi18RsdYNRzehXwCZvmS"
+  },
+  {
+   "id": "health-fitness-wellness-l2X92A_HyqiLTIVbz7F7L",
+   "code": "l2X92A_HyqiLTIVbz7F7L",
+   "name": "Newt",
+   "author": "FireSmoke",
+   "description": "A friendly nutrition coach that logs your meals from text or photos, tracks calories and macros against your own targets, and plans your week of meals.",
+   "url": "https://x.ai/bot/l2X92A_HyqiLTIVbz7F7L"
+  },
+  {
+   "id": "health-fitness-wellness-bdcSxv_pSQEH0E571N_fC",
+   "code": "bdcSxv_pSQEH0E571N_fC",
+   "name": "Nom Nom",
+   "author": "Nikola Babic",
+   "description": "A calorie tracker for anyone who wants a simple food log.",
+   "url": "https://x.ai/bot/bdcSxv_pSQEH0E571N_fC"
+  },
+  {
+   "id": "health-fitness-wellness-cBqufpQDxJ9Zy5YmvqeTw",
+   "code": "cBqufpQDxJ9Zy5YmvqeTw",
+   "name": "Ollie",
+   "author": "Kevin Margatan",
+   "description": "Newborn log for feeds, diapers, pumping, sleep, tummy time and growth against AAP/CDC guidance, with reminders, visit prep and daily briefings.",
+   "url": "https://x.ai/bot/cBqufpQDxJ9Zy5YmvqeTw"
+  },
+  {
+   "id": "health-fitness-wellness-RilkaH5YhNYhl1tcslvXr",
+   "code": "RilkaH5YhNYhl1tcslvXr",
+   "name": "Open Enrollment",
+   "author": "@GroksRules",
+   "description": "Helps decide whether to switch health plans at open enrollment, reading your plan documents and modeling total yearly cost with and without major care.",
+   "url": "https://x.ai/bot/RilkaH5YhNYhl1tcslvXr"
+  },
+  {
+   "id": "health-fitness-wellness-ZGrwyUduJe4XvVspPsz3Z",
+   "code": "ZGrwyUduJe4XvVspPsz3Z",
+   "name": "P.C.A. Roshi",
+   "author": "𝔻 𝕌 ℝ 𝔻 𝕐",
+   "description": "P.C.A. Roshi — Personal Health Care Agent. Calm practical navigator that finds $0 / preferred-care pathways, tracks labs and appointments, and keeps.",
+   "url": "https://x.ai/bot/ZGrwyUduJe4XvVspPsz3Z"
+  },
+  {
+   "id": "health-fitness-wellness-nooY_fiizqHxS9TB4z74g",
+   "code": "nooY_fiizqHxS9TB4z74g",
+   "name": "PepeTrack",
+   "author": "Tye Gordon",
+   "description": "A reading, math and notes log for your peptide and GLP-1 study.",
+   "url": "https://x.ai/bot/nooY_fiizqHxS9TB4z74g"
+  },
+  {
+   "id": "health-fitness-wellness-nooy_fiizqhxs9tb4z74g",
+   "code": "nooy_fiizqhxs9tb4z74g",
+   "name": "PepeTrack",
+   "author": "Tye",
+   "description": "Your peptide & GLP-1 research and tracking companion.",
+   "url": "https://x.ai/bot/nooy_fiizqhxs9tb4z74g"
+  },
+  {
+   "id": "health-fitness-wellness-NRrBNgLUTE5b4KZ7uiThF",
+   "code": "NRrBNgLUTE5b4KZ7uiThF",
+   "name": "Peptide Bot",
+   "author": "Conor Chepenik",
+   "description": "Plain-words peptide research guide for BPC-157, semaglutide, GHK-Cu and 150 more: what each does, human vs animal evidence, FDA status, safety and citations.",
+   "url": "https://x.ai/bot/NRrBNgLUTE5b4KZ7uiThF"
+  },
+  {
+   "id": "health-fitness-wellness-NHDcLbHnQyb1nWlfkVAjm",
+   "code": "NHDcLbHnQyb1nWlfkVAjm",
+   "name": "Personal Trainer",
+   "author": "Virag",
+   "description": "Strength coach for an A/B/C lifting rebuild with a simple sleep log that adjusts loads from energy, sleep, and joints.",
+   "url": "https://x.ai/bot/NHDcLbHnQyb1nWlfkVAjm"
+  },
+  {
+   "id": "health-fitness-wellness-t9tike_igiteqd6toyyrd",
+   "code": "t9tike_igiteqd6toyyrd",
+   "name": "Personal Trainer",
+   "author": "Nathan",
+   "description": "Warm, brief nutrition and workout logging bot for one client.",
+   "url": "https://x.ai/bot/t9tike_igiteqd6toyyrd"
+  },
+  {
+   "id": "health-fitness-wellness-nkmFntyGYALNwmUBMXCWj",
+   "code": "nkmFntyGYALNwmUBMXCWj",
+   "name": "Pulse",
+   "author": "@FariborzBaghaei",
+   "description": "Vision-first work–health balance coach. Drop gym snaps, meal labels, and calendar shots — get a green/yellow/red balance plan morning and evening…",
+   "url": "https://x.ai/bot/nkmFntyGYALNwmUBMXCWj"
+  },
+  {
+   "id": "health-fitness-wellness-DdNlDzU_cYi-JJv2YR2CS",
+   "code": "DdNlDzU_cYi-JJv2YR2CS",
+   "name": "Pulse",
+   "author": "Wilson",
+   "description": "Doctor-built health coach that learns your diet, exercise, and sleep from chat, meal photos, and sleep screenshots and sends one useful tip at a time.",
+   "url": "https://x.ai/bot/DdNlDzU_cYi-JJv2YR2CS"
+  },
+  {
+   "id": "health-fitness-wellness-JQu6e3mIfy588elZm7BTo",
+   "code": "JQu6e3mIfy588elZm7BTo",
+   "name": "Quency",
+   "author": "Jaime Hernandez",
+   "description": "QC officer for public ships. Owns fitness for use, consistency, and ship/no-ship.",
+   "url": "https://x.ai/bot/JQu6e3mIfy588elZm7BTo"
+  },
+  {
+   "id": "health-fitness-wellness-hbzAWQX-CBMF2uAa00jEs",
+   "code": "hbzAWQX-CBMF2uAa00jEs",
+   "name": "Raven",
+   "author": "Josiah Anjos",
+   "description": "Goth-mommy nutrition coach. Log meals (text or a photo), get kcal + protein estimates, and a running day total vs…",
+   "url": "https://x.ai/bot/hbzAWQX-CBMF2uAa00jEs"
+  },
+  {
+   "id": "health-fitness-wellness-rpW60FrGhNSw_9eSWYYI5",
+   "code": "rpW60FrGhNSw_9eSWYYI5",
+   "name": "Retention PM",
+   "author": "Ash",
+   "description": "Picks up operating accounts, runs penetration plans and health monitoring, and reports retention status.",
+   "url": "https://x.ai/bot/rpW60FrGhNSw_9eSWYYI5"
+  },
+  {
+   "id": "health-fitness-wellness-uCLHK1cqHXnKeUqWfYat4",
+   "code": "uCLHK1cqHXnKeUqWfYat4",
+   "name": "SKU Doctor",
+   "author": "Zaeem Khan",
+   "description": "Sourcing-finance analyst for marketplace sellers. Flags which SKUs still make money after landed cost, fees, returns, and ads — and what to change.",
+   "url": "https://x.ai/bot/uCLHK1cqHXnKeUqWfYat4"
+  },
+  {
+   "id": "health-fitness-wellness-dvYvna5UyVZ4UxqhjFvVz",
+   "code": "dvYvna5UyVZ4UxqhjFvVz",
+   "name": "Safety Desk",
+   "author": "Nomis",
+   "description": "Workplace health and safety manager for one organisation.",
+   "url": "https://x.ai/bot/dvYvna5UyVZ4UxqhjFvVz"
+  },
+  {
+   "id": "health-fitness-wellness-qY09SWmeyq-wqOSW6SFHD",
+   "code": "qY09SWmeyq-wqOSW6SFHD",
+   "name": "Sleep Coach",
+   "author": "Ethan Trump",
+   "description": "Sleep coach that sets a gradual bedtime and wake schedule, adds wind-down reminders and alarms, logs your nights and gives a weekly review. No medical advice.",
+   "url": "https://x.ai/bot/qY09SWmeyq-wqOSW6SFHD"
+  },
+  {
+   "id": "health-fitness-wellness-fB68VTA4W-1fQxWiCQnS9",
+   "code": "fB68VTA4W-1fQxWiCQnS9",
+   "name": "Sparkle",
+   "author": "M.C.A Hogarth",
+   "description": "A warm daily inspiration bot that finds one good treasure for family conversation and writing fuel, keeping ideas fresh so you avoid mental ruts.",
+   "url": "https://x.ai/bot/fB68VTA4W-1fQxWiCQnS9"
+  },
+  {
+   "id": "health-fitness-wellness-db0Id7fXXTQiRZIApY-8Q",
+   "code": "db0Id7fXXTQiRZIApY-8Q",
+   "name": "SpotiBot",
+   "author": "Fermin",
+   "description": "Builds Spotify playlists, recommends music and can refresh playlists automatically, like one for the gym.",
+   "url": "https://x.ai/bot/db0Id7fXXTQiRZIApY-8Q"
+  },
+  {
+   "id": "health-fitness-wellness-zb-IMGVSmOd-EmlA9-8dR",
+   "code": "zb-IMGVSmOd-EmlA9-8dR",
+   "name": "Strong & Graceful Fitness",
+   "author": "Lisa",
+   "description": "Realistic 20-minute joint-friendly strength workouts, walking plans, spoken pep talks, and 30g protein meal ideas for busy women.",
+   "url": "https://x.ai/bot/zb-IMGVSmOd-EmlA9-8dR"
+  },
+  {
+   "id": "health-fitness-wellness-Zn4ai_ZQYRyXP8G72q3WW",
+   "code": "Zn4ai_ZQYRyXP8G72q3WW",
+   "name": "SuperAging.AI",
+   "author": "Steve Q",
+   "description": "Aging is your superpower. Now you can measure it. One monthly statement tracks your Health, Mind, and Retirement Wealth, so you can see your progress.",
+   "url": "https://x.ai/bot/Zn4ai_ZQYRyXP8G72q3WW"
+  },
+  {
+   "id": "health-fitness-wellness-1xAJYJPes3X7dUM2mk9Di",
+   "code": "1xAJYJPes3X7dUM2mk9Di",
+   "name": "The Morning Newspaper",
+   "author": "@CodeChap",
+   "description": "A newspaper customized to you. It pulls from your email and calendar, lays it out for you, and prints while you sleep…",
+   "url": "https://x.ai/bot/1xAJYJPes3X7dUM2mk9Di"
+  },
+  {
+   "id": "health-fitness-wellness-HzH9d2YwZFhJ36prvFW1n",
+   "code": "HzH9d2YwZFhJ36prvFW1n",
+   "name": "Therapy Scribe",
+   "author": "Fernand",
+   "description": "Skilled PT note drafts from a post-session voice dump, audio, or bullets. Paste into your EHR yourself , audio and transcript are wiped so PHI is not kept.",
+   "url": "https://x.ai/bot/HzH9d2YwZFhJ36prvFW1n"
+  },
+  {
+   "id": "health-fitness-wellness-NgVzsPCqf9_qdNWLs9NAQ",
+   "code": "NgVzsPCqf9_qdNWLs9NAQ",
+   "name": "UK HealthOps",
+   "author": "Philip Neeson",
+   "description": "The gentle nudge that finally gets your health sorted — retaining detailed medical history, reviewing and correlating…",
+   "url": "https://x.ai/bot/NgVzsPCqf9_qdNWLs9NAQ"
+  },
+  {
+   "id": "health-fitness-wellness-Vf87y6yydZBhgHJYWBsLX",
+   "code": "Vf87y6yydZBhgHJYWBsLX",
+   "name": "UniFi",
+   "author": "Joe Martin",
+   "description": "UniFi Network + Protect house bot. Customize with your UniFi MCP and Notion databases for morning health and overnight…",
+   "url": "https://x.ai/bot/Vf87y6yydZBhgHJYWBsLX"
+  },
+  {
+   "id": "health-fitness-wellness-mFhBFJhKItbV4FyUl96Za",
+   "code": "mFhBFJhKItbV4FyUl96Za",
+   "name": "UniFi Network Admin",
+   "author": "Gustavo Cadena",
+   "description": "A careful home or small-office UniFi network admin. It watches your Ubiquiti gear read-only, runs quiet daily health checks.",
+   "url": "https://x.ai/bot/mFhBFJhKItbV4FyUl96Za"
+  },
+  {
+   "id": "health-fitness-wellness-IOgcDjrtCRSuyHudPI39d",
+   "code": "IOgcDjrtCRSuyHudPI39d",
+   "name": "Usage Doctor",
+   "author": "adrian marroquin",
+   "description": "Audits your Grok Bot fleet for token waste: chatty bots, routines that run too often, checks a script could do. Fixes the safe ones and asks about the rest.",
+   "url": "https://x.ai/bot/IOgcDjrtCRSuyHudPI39d"
+  },
+  {
+   "id": "health-fitness-wellness-Vqj_yirM0hWY4SUCFMDFm",
+   "code": "Vqj_yirM0hWY4SUCFMDFm",
+   "name": "Vital",
+   "author": "Xavier Ortiz",
+   "description": "A natural-health coach that puts food and lifestyle first, using Barbara O'Neill's basics and Frank Suárez's El poder del metabolismo.",
+   "url": "https://x.ai/bot/Vqj_yirM0hWY4SUCFMDFm"
+  },
+  {
+   "id": "health-fitness-wellness-axsAabBC39PmcWS91EFCe",
+   "code": "axsAabBC39PmcWS91EFCe",
+   "name": "Vitamin Vera",
+   "author": "Frank Gonzalez",
+   "description": "Turns how you feel into a simple supplement starting map with tracking, brand options, and light research context. Not medical advice.",
+   "url": "https://x.ai/bot/axsAabBC39PmcWS91EFCe"
+  },
+  {
+   "id": "health-fitness-wellness-m1BopNHP2eYY4CNmw1iB-",
+   "code": "m1BopNHP2eYY4CNmw1iB-",
+   "name": "Weight Loss & Fitness Coach",
+   "author": "MERICA MEMED",
+   "description": "Lose fat without losing the plot — photo and label food logs, locked macros, stall fixes, travel and sick modes…",
+   "url": "https://x.ai/bot/m1BopNHP2eYY4CNmw1iB-"
+  },
+  {
+   "id": "health-fitness-wellness-QgaJT0uOGomJ6B1mLPOgW",
+   "code": "QgaJT0uOGomJ6B1mLPOgW",
+   "name": "Wellbeing",
+   "author": "@CattoIs2Pure",
+   "description": "A warm wellbeing coach that helps you track and improve the areas of health you pick, such as haircare, skincare, diet, sleep, mental health and fitness.",
+   "url": "https://x.ai/bot/QgaJT0uOGomJ6B1mLPOgW"
+  },
+  {
+   "id": "health-fitness-wellness-FFhovhcaV2-0eX2uwPiBJ",
+   "code": "FFhovhcaV2-0eX2uwPiBJ",
+   "name": "Wife Bot",
+   "author": "Eran Hertz",
+   "description": "Partner-persona household copilot that carries the family mental load across calendar, gifts, groceries, diapers, bills, and appointments.",
+   "url": "https://x.ai/bot/FFhovhcaV2-0eX2uwPiBJ"
+  },
+  {
+   "id": "health-fitness-wellness-jlhI3BgCZ-Nl5byywfMsu",
+   "code": "jlhI3BgCZ-Nl5byywfMsu",
+   "name": "Winnie",
+   "author": "Erin Galarza",
+   "description": "A household appointment assistant that books and reschedules medical, dental, school, and personal-care appointments…",
+   "url": "https://x.ai/bot/jlhI3BgCZ-Nl5byywfMsu"
+  },
+  {
+   "id": "health-fitness-wellness-EE8sm1OWmn3sZyaj3st_F",
+   "code": "EE8sm1OWmn3sZyaj3st_F",
+   "name": "X High Coach",
+   "author": "High",
+   "description": "Drop an X username and get a score, health flags, unfollow watch, and punchy rewrites.",
+   "url": "https://x.ai/bot/EE8sm1OWmn3sZyaj3st_F"
+  },
+  {
+   "id": "health-fitness-wellness-WxzU8wMPauBgXeUAb3hzy",
+   "code": "WxzU8wMPauBgXeUAb3hzy",
+   "name": "Zabbadat Movement Hub",
+   "author": "Zabbadat",
+   "description": "A tongue-in-cheek wellness program for your Grok bots: a daily breathing-and-steps circuit, five small workout tasks and an arm badge that grows over time.",
+   "url": "https://x.ai/bot/WxzU8wMPauBgXeUAb3hzy"
+  },
+  {
+   "id": "health-fitness-wellness-pUabqJa_ch2WgbRi5JJvi",
+   "code": "pUabqJa_ch2WgbRi5JJvi",
+   "name": "健康作息",
+   "author": "shubin",
+   "description": "Chinese assistant for sleep, exercise, meals, weight logs and checkup reminders; just tell it what you ate.",
+   "url": "https://x.ai/bot/pUabqJa_ch2WgbRi5JJvi"
+  },
+  {
+   "id": "health-fitness-wellness-zGpQc37mhqqWkPNgPpfTu",
+   "code": "zGpQc37mhqqWkPNgPpfTu",
+   "name": "欧布--Whoop管家",
+   "author": "鹏",
+   "description": "Manages your Whoop only: read recovery, sleep and strain day by day; pings in private chat when you miss your lines. No diagnosis, supplements, or training Rx.",
+   "url": "https://x.ai/bot/zGpQc37mhqqWkPNgPpfTu"
+  },
+  {
+   "id": "health-fitness-wellness-eMmUvHswRGf5ff37JTAlC",
+   "code": "eMmUvHswRGf5ff37JTAlC",
+   "name": "英語スピーキング練習コーチ",
+   "author": "Haruki",
+   "description": "Voice coach that builds a daily habit of speaking English aloud a few minutes a day, starting from very simple sentences (instant composition). Japanese.",
+   "url": "https://x.ai/bot/eMmUvHswRGf5ff37JTAlC"
+  }
+ ]
+}

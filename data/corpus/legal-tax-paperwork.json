@@ -1,0 +1,1072 @@
+{
+ "slug": "legal-tax-paperwork",
+ "label": "Legal, Tax & Paperwork",
+ "count": 133,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "legal-tax-paperwork-b6vWcnzWjIAySVSuPWPk0",
+   "code": "b6vWcnzWjIAySVSuPWPk0",
+   "name": "ACCC Desk",
+   "author": "ladybarrelmaker",
+   "description": "Desk for insurance coverage counsel Fellows watching American College of Coverage Counsel updates.",
+   "url": "https://x.ai/bot/b6vWcnzWjIAySVSuPWPk0"
+  },
+  {
+   "id": "legal-tax-paperwork-XSWze_slwQwS96bVcVN-j",
+   "code": "XSWze_slwQwS96bVcVN-j",
+   "name": "AI Bookkeeper & Tax Assistant (Beancount)",
+   "author": "Benjamin",
+   "description": "Bookkeeping and tax planning for small-business owners and real estate investors with LLCs and rental properties.",
+   "url": "https://x.ai/bot/XSWze_slwQwS96bVcVN-j"
+  },
+  {
+   "id": "legal-tax-paperwork-Mr87JZkXHwpJQRknVuZcr",
+   "code": "Mr87JZkXHwpJQRknVuZcr",
+   "name": "AI Legal Prep Desk",
+   "author": "John Atkinson III",
+   "description": "Legal research and drafting prep for small businesses and individuals (contracts, compliance, disputes), cited and dated; not a lawyer, never files or sends.",
+   "url": "https://x.ai/bot/Mr87JZkXHwpJQRknVuZcr"
+  },
+  {
+   "id": "legal-tax-paperwork-7wSIwep9R-eedkBMse1gd",
+   "code": "7wSIwep9R-eedkBMse1gd",
+   "name": "AI Output Guard",
+   "author": "Alex Suarez",
+   "description": "Checks what your AI bots and prompts produce against a contract with AISchemaGate, repairs what it can, and explains failures in plain words.",
+   "url": "https://x.ai/bot/7wSIwep9R-eedkBMse1gd"
+  },
+  {
+   "id": "legal-tax-paperwork-OZn5dOvIhkqsG5CG-Ow2D",
+   "code": "OZn5dOvIhkqsG5CG-Ow2D",
+   "name": "Accounts Receivable",
+   "author": "Thomas Matteson",
+   "description": "Owns receivables from billing through payment: remittance intake, aging, disputes, and collection follow-up under clear…",
+   "url": "https://x.ai/bot/OZn5dOvIhkqsG5CG-Ow2D"
+  },
+  {
+   "id": "legal-tax-paperwork-s6-8ydSHNYZVDsnWrtv9a",
+   "code": "s6-8ydSHNYZVDsnWrtv9a",
+   "name": "Am I Covered?",
+   "author": "Bryce Dees | Insurance + AI",
+   "description": "Explains US home, condo, renters, flood, auto, umbrella, and small-business insurance documents in plain English…",
+   "url": "https://x.ai/bot/s6-8ydSHNYZVDsnWrtv9a"
+  },
+  {
+   "id": "legal-tax-paperwork-P1SKFe9QcGTtxhngNMtig",
+   "code": "P1SKFe9QcGTtxhngNMtig",
+   "name": "Asistente LLC en EE.UU.",
+   "author": "Karina",
+   "description": "Spanish-language guide to opening and keeping a US LLC from Latin America, covering state, EIN, bank, address, and annual taxes.",
+   "url": "https://x.ai/bot/P1SKFe9QcGTtxhngNMtig"
+  },
+  {
+   "id": "legal-tax-paperwork-K1HC35qGIkmrUSwI9eF0R",
+   "code": "K1HC35qGIkmrUSwI9eF0R",
+   "name": "Bank Dispute Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "When money leaves your account or card that shouldn't: sorts it under the right federal rule, starts deadlines the same day, drafts your dispute and tracks it.",
+   "url": "https://x.ai/bot/K1HC35qGIkmrUSwI9eF0R"
+  },
+  {
+   "id": "legal-tax-paperwork-f7I5mP0uJf9brGIuK0ETo",
+   "code": "f7I5mP0uJf9brGIuK0ETo",
+   "name": "Better Call Claude",
+   "author": "Robauto Team",
+   "description": "Free open-source legal guide. Helps people navigate legal issues worldwide with bettercallclaude.org resources…",
+   "url": "https://x.ai/bot/f7I5mP0uJf9brGIuK0ETo"
+  },
+  {
+   "id": "legal-tax-paperwork-yp84JIuxz66Cx8H9ZgM14",
+   "code": "yp84JIuxz66Cx8H9ZgM14",
+   "name": "Bookkeeping Ninja Tax Prep",
+   "author": "Tim Armstrong",
+   "description": "Prepares draft tax figures for one small business from Xero or QuickBooks: GST/BAS in Australia, or 1099 tracking and quarterly estimates in the US.",
+   "url": "https://x.ai/bot/yp84JIuxz66Cx8H9ZgM14"
+  },
+  {
+   "id": "legal-tax-paperwork-CrRvSjE9QTGDd_cWC6KEH",
+   "code": "CrRvSjE9QTGDd_cWC6KEH",
+   "name": "Buchhaltung Sevdesk/Datev",
+   "author": "Michael Fischer",
+   "description": "Bookkeeping for German companies on sevDesk: collects invoices from mail and folders and books them with the right account and tax rule.",
+   "url": "https://x.ai/bot/CrRvSjE9QTGDd_cWC6KEH"
+  },
+  {
+   "id": "legal-tax-paperwork-rtfT8mnlp-69m6N4x56tA",
+   "code": "rtfT8mnlp-69m6N4x56tA",
+   "name": "Business Legal Prep Desk",
+   "author": "iamtheh0n3yp0t",
+   "description": "Legal research and drafting prep for Maryland and Florida small-business owners, every claim cited and dated. Not a lawyer, not legal advice.",
+   "url": "https://x.ai/bot/rtfT8mnlp-69m6N4x56tA"
+  },
+  {
+   "id": "legal-tax-paperwork-OtCWbWeEWyNiFCV3qLxYU",
+   "code": "OtCWbWeEWyNiFCV3qLxYU",
+   "name": "CA Brokerage Compliance",
+   "author": "Joe Foxx",
+   "description": "Internal compliance and California DRE risk assistant for a real estate brokerage.",
+   "url": "https://x.ai/bot/OtCWbWeEWyNiFCV3qLxYU"
+  },
+  {
+   "id": "legal-tax-paperwork-lrfOm6cAxsGQtO4eRRS8Q",
+   "code": "lrfOm6cAxsGQtO4eRRS8Q",
+   "name": "CRA Tax Helper",
+   "author": "WorldWideVibes",
+   "description": "Helps Canadians get ready for their CRA tax return, keeping T4s, side-business income, receipts, and deadlines organized all year.",
+   "url": "https://x.ai/bot/lrfOm6cAxsGQtO4eRRS8Q"
+  },
+  {
+   "id": "legal-tax-paperwork-DVNePMZfF4SREAUXhn2uY",
+   "code": "DVNePMZfF4SREAUXhn2uY",
+   "name": "Cannaby",
+   "author": "Cannabis Way",
+   "description": "Cannaby is a cannabis know-it-all for adults (21+, or your local legal age).",
+   "url": "https://x.ai/bot/DVNePMZfF4SREAUXhn2uY"
+  },
+  {
+   "id": "legal-tax-paperwork-yUiRwJ_SVLmO1Ehi_QISq",
+   "code": "yUiRwJ_SVLmO1Ehi_QISq",
+   "name": "Certainty Tax",
+   "author": "Andy",
+   "description": "Stress-tests claims with falsifiers and gaps.",
+   "url": "https://x.ai/bot/yUiRwJ_SVLmO1Ehi_QISq"
+  },
+  {
+   "id": "legal-tax-paperwork-A4haB5wrqQewiNFIukYZ5",
+   "code": "A4haB5wrqQewiNFIukYZ5",
+   "name": "Chief",
+   "author": "Top Shelf Capital",
+   "description": "A chief of staff for small business owners. It tracks compliance and filings, drafts emails and social posts for your approval.",
+   "url": "https://x.ai/bot/A4haB5wrqQewiNFIukYZ5"
+  },
+  {
+   "id": "legal-tax-paperwork-J_fIC4VKMLmT6inJRIO4e",
+   "code": "J_fIC4VKMLmT6inJRIO4e",
+   "name": "Chief of Legal Staff",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: a Chief of Legal Staff that supervises the firm's other bots, routes handoffs, keeps a blockers…",
+   "url": "https://x.ai/bot/J_fIC4VKMLmT6inJRIO4e"
+  },
+  {
+   "id": "legal-tax-paperwork-ujhvQUxYqeCwXMqZW1sSK",
+   "code": "ujhvQUxYqeCwXMqZW1sSK",
+   "name": "Claim Denied",
+   "author": "Adebusola",
+   "description": "Insurance denied your claim? Get the reason in plain words, a polite review letter, a checklist for your doctor's office and a call log.",
+   "url": "https://x.ai/bot/ujhvQUxYqeCwXMqZW1sSK"
+  },
+  {
+   "id": "legal-tax-paperwork-R7eUYYeS9xBg3-iZF80AE",
+   "code": "R7eUYYeS9xBg3-iZF80AE",
+   "name": "Claim Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Helps a homeowner run their own insurance claim after a storm, leak or fire: tracks deadlines with the state rule cited, logs calls, drafts every letter.",
+   "url": "https://x.ai/bot/R7eUYYeS9xBg3-iZF80AE"
+  },
+  {
+   "id": "legal-tax-paperwork-90Q0jERnuq46W_fBVVEKt",
+   "code": "90Q0jERnuq46W_fBVVEKt",
+   "name": "Claim Helper",
+   "author": "Vic Shibarium",
+   "description": "From an ex-adjuster: handles an auto or home insurance claim in plain English, from documenting damage to judging an estimate and drafting a counter letter.",
+   "url": "https://x.ai/bot/90Q0jERnuq46W_fBVVEKt"
+  },
+  {
+   "id": "legal-tax-paperwork-k3-TuPGQzUVKtnjYNWji0",
+   "code": "k3-TuPGQzUVKtnjYNWji0",
+   "name": "Claim Starter Pack",
+   "author": "Andy",
+   "description": "Insurance claim starter: timeline, docs checklist, draft narrative.",
+   "url": "https://x.ai/bot/k3-TuPGQzUVKtnjYNWji0"
+  },
+  {
+   "id": "legal-tax-paperwork-vY1eft-dZTKssiaUQvJEc",
+   "code": "vY1eft-dZTKssiaUQvJEc",
+   "name": "Clean Slate",
+   "author": "",
+   "description": "Helps you get your free credit reports, finds collections, errors, and outdated items, drafts dispute letters to Experian, Equifax, and TransUnion, and tracks every 30-day deadline. Nothing is sent without your OK.",
+   "url": "https://x.ai/bot/vY1eft-dZTKssiaUQvJEc"
+  },
+  {
+   "id": "legal-tax-paperwork-JaZR7E6PQJ_e2xF-Piu4T",
+   "code": "JaZR7E6PQJ_e2xF-Piu4T",
+   "name": "Client Court Date Reminder Emails",
+   "author": "Stephanie Heyens",
+   "description": "Whenever a new court date lands on your calendar, it quietly drafts a court-date letter to the client in your email Drafts for you to review.",
+   "url": "https://x.ai/bot/JaZR7E6PQJ_e2xF-Piu4T"
+  },
+  {
+   "id": "legal-tax-paperwork-sokXJWiBsUbTtQCAJ1EsY",
+   "code": "sokXJWiBsUbTtQCAJ1EsY",
+   "name": "Compliance",
+   "author": "Ryan Gallup",
+   "description": "NYS brokerage compliance desk for DOS advertising / fair-housing social and website scans, plus draft answers to agent broker questions for broker.",
+   "url": "https://x.ai/bot/sokXJWiBsUbTtQCAJ1EsY"
+  },
+  {
+   "id": "legal-tax-paperwork-sd358e6cf5e8bed188eec",
+   "code": "sd358e6cf5e8bed188eec",
+   "name": "Contract Desk",
+   "author": "SpaceX",
+   "description": "See the week of paper at a glance. Summarizes by stage and owner, pulls key terms, and flags blocked reviews.",
+   "url": "https://x.ai/bot/sd358e6cf5e8bed188eec"
+  },
+  {
+   "id": "legal-tax-paperwork-emH53moZpEP8rqAECJBAd",
+   "code": "emH53moZpEP8rqAECJBAd",
+   "name": "Contract Signer",
+   "author": "Julian Andrin Weber",
+   "description": "Drafts NDAs, service agreements, offers and other business contracts from a short brief, flags risky or missing terms, and routes them for signature.",
+   "url": "https://x.ai/bot/emH53moZpEP8rqAECJBAd"
+  },
+  {
+   "id": "legal-tax-paperwork-BawAoz1FeYXd6HzBqWntt",
+   "code": "BawAoz1FeYXd6HzBqWntt",
+   "name": "Contrarian",
+   "author": "Calix Build",
+   "description": "A sharp thinking partner that argues the other side and runs a pre-mortem before you commit to a decision, contract, launch, or big spend.",
+   "url": "https://x.ai/bot/BawAoz1FeYXd6HzBqWntt"
+  },
+  {
+   "id": "legal-tax-paperwork-Di5nuItACWsZdMi2CaRgK",
+   "code": "Di5nuItACWsZdMi2CaRgK",
+   "name": "Counsel",
+   "author": "Wayne Lowry",
+   "description": "Legal-and-risk seat of the AI Board Room: flags contracts, compliance, liability, conflicts of interest and needed approvals, then votes Go, No-go or Go if.",
+   "url": "https://x.ai/bot/Di5nuItACWsZdMi2CaRgK"
+  },
+  {
+   "id": "legal-tax-paperwork-HnlULNW1ElGeMRx604UQ1",
+   "code": "HnlULNW1ElGeMRx604UQ1",
+   "name": "Counsel & Filings",
+   "author": "JD White",
+   "description": "A plain-language legal and filings assistant for founders and small businesses.",
+   "url": "https://x.ai/bot/HnlULNW1ElGeMRx604UQ1"
+  },
+  {
+   "id": "legal-tax-paperwork-mA4Ik2mIduPANDqFVmVMX",
+   "code": "mA4Ik2mIduPANDqFVmVMX",
+   "name": "Court",
+   "author": "Don",
+   "description": "You dump the thread. Court names the decision, the person being ignored, the one message that closes it, and whether…",
+   "url": "https://x.ai/bot/mA4Ik2mIduPANDqFVmVMX"
+  },
+  {
+   "id": "legal-tax-paperwork-EtOL7Vh3LtUOY2HgvKRsq",
+   "code": "EtOL7Vh3LtUOY2HgvKRsq",
+   "name": "Court Calendar Watcher",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: watches the public hearing lists of the courts you name and extracts only the matters for your lawyers or a named party.",
+   "url": "https://x.ai/bot/EtOL7Vh3LtUOY2HgvKRsq"
+  },
+  {
+   "id": "legal-tax-paperwork-YtzREAHPMPQLdAFN9zV2j",
+   "code": "YtzREAHPMPQLdAFN9zV2j",
+   "name": "Court Portal File Clerk",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: logs into your court's e-filing or case portal with the firm's own credentials and fetches only the named case file.",
+   "url": "https://x.ai/bot/YtzREAHPMPQLdAFN9zV2j"
+  },
+  {
+   "id": "legal-tax-paperwork-Xf744EvEIun3bzP0zdp0u",
+   "code": "Xf744EvEIun3bzP0zdp0u",
+   "name": "Coverage Desk",
+   "author": "Brian M.",
+   "description": "Explains insurance declarations and coverage lists in plain English and never sells.",
+   "url": "https://x.ai/bot/Xf744EvEIun3bzP0zdp0u"
+  },
+  {
+   "id": "legal-tax-paperwork-Kjoz94o-27PM_NgvcPntn",
+   "code": "Kjoz94o-27PM_NgvcPntn",
+   "name": "Data Contract Guard",
+   "author": "Alex Suarez",
+   "description": "Guards your data with DataContractGate: drafts a contract from a sample file, validates files and feeds against it…",
+   "url": "https://x.ai/bot/Kjoz94o-27PM_NgvcPntn"
+  },
+  {
+   "id": "legal-tax-paperwork-ZvdSYibMw2oruiQX-3DSA",
+   "code": "ZvdSYibMw2oruiQX-3DSA",
+   "name": "Data Deletion Bot",
+   "author": "Unicode",
+   "description": "Scans Gmail for signup sites, then drafts GDPR/CCPA deletion-request emails.",
+   "url": "https://x.ai/bot/ZvdSYibMw2oruiQX-3DSA"
+  },
+  {
+   "id": "legal-tax-paperwork-ZTCpNQNApFmb9_zrdLp0Y",
+   "code": "ZTCpNQNApFmb9_zrdLp0Y",
+   "name": "Debt Collector Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "When debt collectors call or write: checks each contact against federal rules, tracks your 30-day dispute window, drafts letters, flags court papers same day.",
+   "url": "https://x.ai/bot/ZTCpNQNApFmb9_zrdLp0Y"
+  },
+  {
+   "id": "legal-tax-paperwork-aGETWAUCECO5ZDmLjuF56",
+   "code": "aGETWAUCECO5ZDmLjuF56",
+   "name": "Disaster Aid Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "After a declared disaster: reads every FEMA letter, finds what's missing, starts the 60-day appeal clock, drafts your appeal, keeps insurance and SBA straight.",
+   "url": "https://x.ai/bot/aGETWAUCECO5ZDmLjuF56"
+  },
+  {
+   "id": "legal-tax-paperwork-8OJ8EOYL_4Tl0h63elY8_",
+   "code": "8OJ8EOYL_4Tl0h63elY8_",
+   "name": "Dose Day",
+   "author": "Zach Alberico",
+   "description": "Private companion for weekly GLP-1 shots like Zepbound or Mounjaro: shot-day reminders, Apple Health weight sync, a dose dashboard and insurance help.",
+   "url": "https://x.ai/bot/8OJ8EOYL_4Tl0h63elY8_"
+  },
+  {
+   "id": "legal-tax-paperwork-c9zxS3sqkF5h7vXvs6NVn",
+   "code": "c9zxS3sqkF5h7vXvs6NVn",
+   "name": "Drug Savings",
+   "author": "Scott Bonge",
+   "description": "Finds the cheapest way to fill your household's prescriptions across insurance, Amazon RxPass, Cost Plus Drugs, and discount cards, helps you move them…",
+   "url": "https://x.ai/bot/c9zxS3sqkF5h7vXvs6NVn"
+  },
+  {
+   "id": "legal-tax-paperwork-niWUVSbAnXTTcZAK87iKl",
+   "code": "niWUVSbAnXTTcZAK87iKl",
+   "name": "Ecom Store Builder",
+   "author": "Colin McDermott",
+   "description": "Builds a buyable physical-goods store in one conversation: products with shipping and tax, size and colour variants…",
+   "url": "https://x.ai/bot/niWUVSbAnXTTcZAK87iKl"
+  },
+  {
+   "id": "legal-tax-paperwork-yVXrHmfE0J29k2k2vdscs",
+   "code": "yVXrHmfE0J29k2k2vdscs",
+   "name": "El Chingon y La Chingonessa",
+   "author": "Crypto Mynt",
+   "description": "A personal assistant with its own computer: watches your email for paperwork that needs action, researches questions, and makes images and short videos.",
+   "url": "https://x.ai/bot/yVXrHmfE0J29k2k2vdscs"
+  },
+  {
+   "id": "legal-tax-paperwork-6loWNSbGUUXVTCrTo_NMR",
+   "code": "6loWNSbGUUXVTCrTo_NMR",
+   "name": "Elis",
+   "author": "LC Labs by Lucas",
+   "description": "An educational financial planner for Brazilian personal and small-business finances: budgets, debt and taxes.",
+   "url": "https://x.ai/bot/6loWNSbGUUXVTCrTo_NMR"
+  },
+  {
+   "id": "legal-tax-paperwork-pwoUgzm6dJenHVTFVZwtl",
+   "code": "pwoUgzm6dJenHVTFVZwtl",
+   "name": "Estate Helper",
+   "author": "Jeremy Mahoney",
+   "description": "Helps families handle everything after a loss, from the funeral and paperwork to accounts, benefits, and probate, one gentle step at a time.",
+   "url": "https://x.ai/bot/pwoUgzm6dJenHVTFVZwtl"
+  },
+  {
+   "id": "legal-tax-paperwork-Yetb1ei_7VvPfWlYqYwAM",
+   "code": "Yetb1ei_7VvPfWlYqYwAM",
+   "name": "Fine Print",
+   "author": "Dirty Tesla",
+   "description": "Send it any contract, lease, bill, or terms of service and it tells you what's really in it, flags hidden fees and gotchas, and writes the dispute letter.",
+   "url": "https://x.ai/bot/Yetb1ei_7VvPfWlYqYwAM"
+  },
+  {
+   "id": "legal-tax-paperwork-I5_3GqD6I9YL9qebuc0te",
+   "code": "I5_3GqD6I9YL9qebuc0te",
+   "name": "Fine Print",
+   "author": "Grease",
+   "description": "Send it any contract, lease, bill, or terms of service and it tells you what's really in it, flags hidden fees and gotchas, and writes the dispute letter.",
+   "url": "https://x.ai/bot/I5_3GqD6I9YL9qebuc0te"
+  },
+  {
+   "id": "legal-tax-paperwork-ozoVQz-2Imco4g61Nv5M4",
+   "code": "ozoVQz-2Imco4g61Nv5M4",
+   "name": "Fine Print",
+   "author": "Alfredo Herrera",
+   "description": "Send a photo, screenshot, or PDF of a bill, offer, insurance letter, loan, or benefits booklet and get a one-screen…",
+   "url": "https://x.ai/bot/ozoVQz-2Imco4g61Nv5M4"
+  },
+  {
+   "id": "legal-tax-paperwork-cDfxQWPgZF8ovd2tqp37e",
+   "code": "cDfxQWPgZF8ovd2tqp37e",
+   "name": "Finley",
+   "author": "Trucker Cowboy Ed",
+   "description": "A personal assistant that helps pay down credit cards, cut subscriptions, keep paperwork and due dates together and check weather along your route.",
+   "url": "https://x.ai/bot/cDfxQWPgZF8ovd2tqp37e"
+  },
+  {
+   "id": "legal-tax-paperwork-Vd7b6O6CD2NfAhjDvCga0",
+   "code": "Vd7b6O6CD2NfAhjDvCga0",
+   "name": "Forms Counsel",
+   "author": "Marshall Moorman",
+   "description": "Drafts reusable legal form templates, such as contracts, notices, and policies, for you to review.",
+   "url": "https://x.ai/bot/Vd7b6O6CD2NfAhjDvCga0"
+  },
+  {
+   "id": "legal-tax-paperwork-TxD2DkGjehpQftH2lvriK",
+   "code": "TxD2DkGjehpQftH2lvriK",
+   "name": "GDPR Bot",
+   "author": "Pal Szilagyi",
+   "description": "GDPR assistant tracking case law, EDPB and DPA guidance and the AI Act; weekly scans your sites for trackers, consent and notice gaps, with draft fixes.",
+   "url": "https://x.ai/bot/TxD2DkGjehpQftH2lvriK"
+  },
+  {
+   "id": "legal-tax-paperwork-q16DvYUAADvhc9KL7n1s5",
+   "code": "q16DvYUAADvhc9KL7n1s5",
+   "name": "Goldie Gems",
+   "author": "James Harrison",
+   "description": "Jewelry assistant: builds an inventory spreadsheet from photos, figures melt value from live gold, silver and platinum prices, helps with insurance and selling.",
+   "url": "https://x.ai/bot/q16DvYUAADvhc9KL7n1s5"
+  },
+  {
+   "id": "legal-tax-paperwork-kbP2DWs6cKSWqeRtQhIef",
+   "code": "kbP2DWs6cKSWqeRtQhIef",
+   "name": "Grant Packet Assembler",
+   "author": "Joseph",
+   "description": "Builds Georgia grant packets for a compliance read; drafts only, you submit.",
+   "url": "https://x.ai/bot/kbP2DWs6cKSWqeRtQhIef"
+  },
+  {
+   "id": "legal-tax-paperwork-l1j6fVQrBxme4BShkQr3Z",
+   "code": "l1j6fVQrBxme4BShkQr3Z",
+   "name": "Haggle Bot",
+   "author": "Gabe Mckay",
+   "description": "A negotiation bot that lowers what you pay for internet, phone, insurance, software, medical bills, and vendor or contractor quotes.",
+   "url": "https://x.ai/bot/l1j6fVQrBxme4BShkQr3Z"
+  },
+  {
+   "id": "legal-tax-paperwork-mymXM8Rwf3oVAtDOSeAjj",
+   "code": "mymXM8Rwf3oVAtDOSeAjj",
+   "name": "Harvey Legal: Claims Screener",
+   "author": "Mister X",
+   "description": "An educational fact organizer for consumer, employment, and landlord-tenant issues.",
+   "url": "https://x.ai/bot/mymXM8Rwf3oVAtDOSeAjj"
+  },
+  {
+   "id": "legal-tax-paperwork-gSl7t05_1bxod5TitgrDv",
+   "code": "gSl7t05_1bxod5TitgrDv",
+   "name": "Helper",
+   "author": "Devon- Build Happiness",
+   "description": "A general life-admin bot that handles emails, billing disputes, forms and sign-in handoffs, so the paperwork just gets done.",
+   "url": "https://x.ai/bot/gSl7t05_1bxod5TitgrDv"
+  },
+  {
+   "id": "legal-tax-paperwork-nIKABJnzJuN-qSsj4KZD_",
+   "code": "nIKABJnzJuN-qSsj4KZD_",
+   "name": "Home & Auto Insurance",
+   "author": "Felix Stocker",
+   "description": "Shop home, auto and renters insurance with quote estimates from every insurer.",
+   "url": "https://x.ai/bot/nIKABJnzJuN-qSsj4KZD_"
+  },
+  {
+   "id": "legal-tax-paperwork-sD1wz1NzNL0uASRlIS_-U",
+   "code": "sD1wz1NzNL0uASRlIS_-U",
+   "name": "Househunt",
+   "author": "crypto barbie",
+   "description": "Guides a US home search from a color-coded metro map of prices, taxes, schools and crime to listings, realtors, tours and offers.",
+   "url": "https://x.ai/bot/sD1wz1NzNL0uASRlIS_-U"
+  },
+  {
+   "id": "legal-tax-paperwork-pBoLReeAAO4zd7rcyVNsu",
+   "code": "pBoLReeAAO4zd7rcyVNsu",
+   "name": "Hrrrr: File Agent",
+   "author": "Ralph Bibera",
+   "description": "An all-in-one file agent for everyday office paperwork: PDFs, Word, Excel, PowerPoint, CSV, and Google Docs and Sheets, plus renaming.",
+   "url": "https://x.ai/bot/pBoLReeAAO4zd7rcyVNsu"
+  },
+  {
+   "id": "legal-tax-paperwork-jwVA_1zmbZBdEHpJHfID6",
+   "code": "jwVA_1zmbZBdEHpJHfID6",
+   "name": "IRS Bot",
+   "author": "@suddenlyjon",
+   "description": "Reads your W-2s, 1099s, K-1s, stock option and brokerage statements, builds your return, and hunts every write-off…",
+   "url": "https://x.ai/bot/jwVA_1zmbZBdEHpJHfID6"
+  },
+  {
+   "id": "legal-tax-paperwork-dR8fXUdrOBaF-HLMyxXCS",
+   "code": "dR8fXUdrOBaF-HLMyxXCS",
+   "name": "IRS Demystifier",
+   "author": "iustina istrati",
+   "description": "Calm, privacy-first helper for anything IRS: notices, filing, payments, refunds, audits, identity theft and scams. Not a substitute for tax advice.",
+   "url": "https://x.ai/bot/dR8fXUdrOBaF-HLMyxXCS"
+  },
+  {
+   "id": "legal-tax-paperwork-klwu-i2Ulj3zzwj1b0dsK",
+   "code": "klwu-i2Ulj3zzwj1b0dsK",
+   "name": "ITINAgents.fyi",
+   "author": "Pooria",
+   "description": "ITIN how-to and nearby IRS Certifying Acceptance Agents, pointing to the matching page.",
+   "url": "https://x.ai/bot/klwu-i2Ulj3zzwj1b0dsK"
+  },
+  {
+   "id": "legal-tax-paperwork-AssUbTu1WbMlbq0xMNtCv",
+   "code": "AssUbTu1WbMlbq0xMNtCv",
+   "name": "Income Scout",
+   "author": "Optimus Sk8er",
+   "description": "Scouts, researches and pitches legal side-income ideas that fit your time, budget, skills and interests, with a daily report…",
+   "url": "https://x.ai/bot/AssUbTu1WbMlbq0xMNtCv"
+  },
+  {
+   "id": "legal-tax-paperwork-ZyfbeSKKsHi6mL8bJjg93",
+   "code": "ZyfbeSKKsHi6mL8bJjg93",
+   "name": "Insurance Agent",
+   "author": "Juan Rodriguez",
+   "description": "A personal insurance analyst that works for you, not a carrier. Helps decode policies, find coverage gaps, prep agent questions, and stress-test home,.",
+   "url": "https://x.ai/bot/ZyfbeSKKsHi6mL8bJjg93"
+  },
+  {
+   "id": "legal-tax-paperwork-oJlkH5bLXubGmGrRVnv8D",
+   "code": "oJlkH5bLXubGmGrRVnv8D",
+   "name": "Insurance Aware",
+   "author": "Joe Giordano",
+   "description": "Tracks home, auto, health and other policies by carrier nickname and renewal date, and quietly nudges before renewals. No full policy numbers needed.",
+   "url": "https://x.ai/bot/oJlkH5bLXubGmGrRVnv8D"
+  },
+  {
+   "id": "legal-tax-paperwork-H8RbeHK0_q89uVZc2NiW0",
+   "code": "H8RbeHK0_q89uVZc2NiW0",
+   "name": "Insurance LinkedIn Desk",
+   "author": "ladybarrelmaker",
+   "description": "LinkedIn publish-gate desk for insurance coverage work (part of the Bridge + Fleet map).",
+   "url": "https://x.ai/bot/H8RbeHK0_q89uVZc2NiW0"
+  },
+  {
+   "id": "legal-tax-paperwork-J2ReYDG9xNb1G4eTBYt4L",
+   "code": "J2ReYDG9xNb1G4eTBYt4L",
+   "name": "Karen Bot",
+   "author": "Joshua Seefried",
+   "description": "An escalation desk that owns every case where a company owes you something: refunds, disputes, billing errors, missed deliveries.",
+   "url": "https://x.ai/bot/J2ReYDG9xNb1G4eTBYt4L"
+  },
+  {
+   "id": "legal-tax-paperwork-xtYm43WREx2nqqt3in_bO",
+   "code": "xtYm43WREx2nqqt3in_bO",
+   "name": "Kobe",
+   "author": "Carter Pulrang",
+   "description": "High school basketball specialist for a varsity captain. Owns practice, games, film, workouts, captain leadership, team stuff, and youth court sessions.",
+   "url": "https://x.ai/bot/xtYm43WREx2nqqt3in_bO"
+  },
+  {
+   "id": "legal-tax-paperwork-EQgLIMO5Q_sVk3IM9EQbZ",
+   "code": "EQgLIMO5Q_sVk3IM9EQbZ",
+   "name": "Law Bot",
+   "author": "JoshuaRCook",
+   "description": "Texas law-firm ops OS for family civil criminal and estate drafts labeled SAMPLE until an attorney signs.",
+   "url": "https://x.ai/bot/EQgLIMO5Q_sVk3IM9EQbZ"
+  },
+  {
+   "id": "legal-tax-paperwork-zkbqAHZL0udW-ZArllZtJ",
+   "code": "zkbqAHZL0udW-ZArllZtJ",
+   "name": "Law Desk",
+   "author": "Spud",
+   "description": "Answers US legal questions with short, cited memos built only from official primary law, with a good-law check and no…",
+   "url": "https://x.ai/bot/zkbqAHZL0udW-ZArllZtJ"
+  },
+  {
+   "id": "legal-tax-paperwork-_A_AZayMmSNuN_-sdq_M1",
+   "code": "_A_AZayMmSNuN_-sdq_M1",
+   "name": "Lease Finder",
+   "author": "Danny Macias",
+   "description": "Hunts current car lease deals nationwide for the deepest discount to MSRP.",
+   "url": "https://x.ai/bot/_A_AZayMmSNuN_-sdq_M1"
+  },
+  {
+   "id": "legal-tax-paperwork-hHHDx9vc-1dXIDLmWg30T",
+   "code": "hHHDx9vc-1dXIDLmWg30T",
+   "name": "Lease Gotcha Card",
+   "author": "Andy Mccutcheon",
+   "description": "For renters before signing: get a plain-English gotcha card on fees, entry, pets, renewals, and deposits—each tied…",
+   "url": "https://x.ai/bot/hHHDx9vc-1dXIDLmWg30T"
+  },
+  {
+   "id": "legal-tax-paperwork-RXw3Y6aV2ZCGRiGLYuBvi",
+   "code": "RXw3Y6aV2ZCGRiGLYuBvi",
+   "name": "Leave Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "Taking family or medical leave: checks if FMLA covers you, tracks your and your employer's paperwork deadlines, drafts leave and accommodation requests.",
+   "url": "https://x.ai/bot/RXw3Y6aV2ZCGRiGLYuBvi"
+  },
+  {
+   "id": "legal-tax-paperwork-T9rm5-yVhwA8VJmUJ4dx2",
+   "code": "T9rm5-yVhwA8VJmUJ4dx2",
+   "name": "Legacy Binder",
+   "author": "Al",
+   "description": "Helps you pull your personal world into an \"if I'm gone\" binder for your family, with a trimmed kids' copy and prep for your estate attorney. Not a lawyer.",
+   "url": "https://x.ai/bot/T9rm5-yVhwA8VJmUJ4dx2"
+  },
+  {
+   "id": "legal-tax-paperwork-_YVGSK3nmzT_-mYpCB-6e",
+   "code": "_YVGSK3nmzT_-mYpCB-6e",
+   "name": "Legal Advisor",
+   "author": "Hank Jackson",
+   "description": "A plain-language legal reader for your family and business documents.",
+   "url": "https://x.ai/bot/_YVGSK3nmzT_-mYpCB-6e"
+  },
+  {
+   "id": "legal-tax-paperwork-4l5O9MZhZElvIGxDw4YEH",
+   "code": "4l5O9MZhZElvIGxDw4YEH",
+   "name": "Legal Advisor",
+   "author": "Lida Wang",
+   "description": "A plain-language legal helper that explains statutes and real court cases, reviews legal questions, and teaches a short daily law lesson.",
+   "url": "https://x.ai/bot/4l5O9MZhZElvIGxDw4YEH"
+  },
+  {
+   "id": "legal-tax-paperwork-0TmnKtakm--gYpX_1jcni",
+   "code": "0TmnKtakm--gYpX_1jcni",
+   "name": "Legal Advisor",
+   "author": "XPixel",
+   "description": "Plain-language legal research that adapts to your jurisdiction and drafts your options.",
+   "url": "https://x.ai/bot/0TmnKtakm--gYpX_1jcni"
+  },
+  {
+   "id": "legal-tax-paperwork-irNGYr2mFZHsEEGWdgV35",
+   "code": "irNGYr2mFZHsEEGWdgV35",
+   "name": "Legal Awareness Model",
+   "author": "Bennett Production",
+   "description": "Builds a personal map of the laws and regulations that touch your life and work, linked to the official text. Not legal advice; a way to learn the rules.",
+   "url": "https://x.ai/bot/irNGYr2mFZHsEEGWdgV35"
+  },
+  {
+   "id": "legal-tax-paperwork-1d0EYzM8Ymt5uDJTPhWbr",
+   "code": "1d0EYzM8Ymt5uDJTPhWbr",
+   "name": "Life Insurance Sales Coach",
+   "author": "Drew Biggerstaff",
+   "description": "Street-level coach for life insurance agents who knock and dial. Objection drills, door/phone scripts, and Shorts hooks — no fluff, no scare tactics.",
+   "url": "https://x.ai/bot/1d0EYzM8Ymt5uDJTPhWbr"
+  },
+  {
+   "id": "legal-tax-paperwork-P1LmE76VG38Ui-XCmzAZE",
+   "code": "P1LmE76VG38Ui-XCmzAZE",
+   "name": "Lockdown",
+   "author": "Claire",
+   "description": "A weekday SOC 2 control bot. Checks the compliance program, escalates failing controls and vulns, and stays quiet when…",
+   "url": "https://x.ai/bot/P1LmE76VG38Ui-XCmzAZE"
+  },
+  {
+   "id": "legal-tax-paperwork-WwCQdHgmlkhyj0OPOY9fH",
+   "code": "WwCQdHgmlkhyj0OPOY9fH",
+   "name": "Matter Taxonomy Clerk",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: tags every matter in the register by forum, nature of dispute and status from a short closed list.",
+   "url": "https://x.ai/bot/WwCQdHgmlkhyj0OPOY9fH"
+  },
+  {
+   "id": "legal-tax-paperwork-sTH0rx5S2XlpTDf8YMPYv",
+   "code": "sTH0rx5S2XlpTDf8YMPYv",
+   "name": "Merch Mate",
+   "author": "John L.",
+   "description": "Print-on-demand helper for Shopify + Printful: designs checked for trademark, copyright, spelling and print risks, spam-safe posts and daily sales tallies.",
+   "url": "https://x.ai/bot/sTH0rx5S2XlpTDf8YMPYv"
+  },
+  {
+   "id": "legal-tax-paperwork-ZeR7XsrWFrtNckFDGH9e_",
+   "code": "ZeR7XsrWFrtNckFDGH9e_",
+   "name": "Merritt Cole",
+   "author": "AdamDesigns",
+   "description": "Plain-English legal explainer for cases, articles, statutes, and mass-tort / PI patterns. Not a lawyer. Not advice.",
+   "url": "https://x.ai/bot/ZeR7XsrWFrtNckFDGH9e_"
+  },
+  {
+   "id": "legal-tax-paperwork-r52weR45dfl7d4H_5Ww9g",
+   "code": "r52weR45dfl7d4H_5Ww9g",
+   "name": "Minime",
+   "author": "Ion",
+   "description": "Research-and-admin helper for PhD work, patent paperwork, and light multi-bot coordination.",
+   "url": "https://x.ai/bot/r52weR45dfl7d4H_5Ww9g"
+  },
+  {
+   "id": "legal-tax-paperwork-ouabuz1HIoiyDhFZDVuDP",
+   "code": "ouabuz1HIoiyDhFZDVuDP",
+   "name": "Motos researcher",
+   "author": "Tomás MM",
+   "description": "Hunts bargain classic trial and road bikes on Spanish classifieds (Wallapop, Milanuncios, Marketplace and more), scores all-in paperwork cost, and only.",
+   "url": "https://x.ai/bot/ouabuz1HIoiyDhFZDVuDP"
+  },
+  {
+   "id": "legal-tax-paperwork-Cfr_HG6tlBnA7NQUukguD",
+   "code": "Cfr_HG6tlBnA7NQUukguD",
+   "name": "MoveToAU Desk",
+   "author": "NSOG",
+   "description": "US→Australia permanent-placement operator. Researches pathways, finds AU agency partners, drafts compliance-first outreach, and runs a free candidate.",
+   "url": "https://x.ai/bot/Cfr_HG6tlBnA7NQUukguD"
+  },
+  {
+   "id": "legal-tax-paperwork-YqOw0Zii6QsdBMZ_Wpkhz",
+   "code": "YqOw0Zii6QsdBMZ_Wpkhz",
+   "name": "Not-a-Lawyer",
+   "author": "Luke Henderson",
+   "description": "Legal research on leases, jobs, contracts, family, business and more: a sourced answer, an attorney briefing for your consult and law-change watching.",
+   "url": "https://x.ai/bot/YqOw0Zii6QsdBMZ_Wpkhz"
+  },
+  {
+   "id": "legal-tax-paperwork-lkJ1dAAjrahd_EawikSCv",
+   "code": "lkJ1dAAjrahd_EawikSCv",
+   "name": "Office Matter Desk",
+   "author": "Suyash Verma",
+   "description": "For litigation firms: the office's memory of its own cases. It keeps the matter register, maps office file numbers to court numbers.",
+   "url": "https://x.ai/bot/lkJ1dAAjrahd_EawikSCv"
+  },
+  {
+   "id": "legal-tax-paperwork-mNN576TxXnc_XZu9aCsfr",
+   "code": "mNN576TxXnc_XZu9aCsfr",
+   "name": "Paperwork",
+   "author": "Liam",
+   "description": "Takes every boring document someone receives, works out what it is and what needs doing, then tracks it in a Notion…",
+   "url": "https://x.ai/bot/mNN576TxXnc_XZu9aCsfr"
+  },
+  {
+   "id": "legal-tax-paperwork-Gv02Uedgl530XCpAqbUoU",
+   "code": "Gv02Uedgl530XCpAqbUoU",
+   "name": "Paperwork Desk",
+   "author": "Daniel Masarsky",
+   "description": "Forward your bills and letters; it tracks amounts, deadlines and replies.",
+   "url": "https://x.ai/bot/Gv02Uedgl530XCpAqbUoU"
+  },
+  {
+   "id": "legal-tax-paperwork-5iXilhKlK25luD-coiqDT",
+   "code": "5iXilhKlK25luD-coiqDT",
+   "name": "Pat",
+   "author": "Sentinel Architech",
+   "description": "Principal Deputy Counsel for a local-first system. Second seat on protocol safety, cryptographic rigor, and invariant compliance.",
+   "url": "https://x.ai/bot/5iXilhKlK25luD-coiqDT"
+  },
+  {
+   "id": "legal-tax-paperwork-asJCNyFc74fBEt1JOopqH",
+   "code": "asJCNyFc74fBEt1JOopqH",
+   "name": "PatentBot",
+   "author": "Chairman soy sauce",
+   "description": "Researches patent information, cross-checks ideas against existing filings for IP conflict risk, finds the closest prior art when coverage is thin…",
+   "url": "https://x.ai/bot/asJCNyFc74fBEt1JOopqH"
+  },
+  {
+   "id": "legal-tax-paperwork-nW_S3w-S4dAGrvzMGvdy6",
+   "code": "nW_S3w-S4dAGrvzMGvdy6",
+   "name": "Payout Pilot",
+   "author": "Al Luke",
+   "description": "Insurance claims assistant for any policy and country: builds a policy register, finds receipts in Gmail and Drive, files after your yes, chases and appeals.",
+   "url": "https://x.ai/bot/nW_S3w-S4dAGrvzMGvdy6"
+  },
+  {
+   "id": "legal-tax-paperwork-R2Ju5BAkmL8GyEe1mDY8p",
+   "code": "R2Ju5BAkmL8GyEe1mDY8p",
+   "name": "Phone Bot",
+   "author": "Zack Proser",
+   "description": "A phone-calling assistant that places real calls for you through Bland AI: disputes, bookings, reschedules, reminders and quick questions.",
+   "url": "https://x.ai/bot/R2Ju5BAkmL8GyEe1mDY8p"
+  },
+  {
+   "id": "legal-tax-paperwork-lDkNsblCAkXCxBU44ZHxp",
+   "code": "lDkNsblCAkXCxBU44ZHxp",
+   "name": "Pro Bono",
+   "author": "Procount",
+   "description": "A legal paperwork and records keeper for small businesses.",
+   "url": "https://x.ai/bot/lDkNsblCAkXCxBU44ZHxp"
+  },
+  {
+   "id": "legal-tax-paperwork-oikJ-mEQtbtSZFqyxSvNN",
+   "code": "oikJ-mEQtbtSZFqyxSvNN",
+   "name": "PublicAdjusters.fyi",
+   "author": "Pooria",
+   "description": "Hiring a licensed public insurance adjuster, with pointers to PublicAdjusters.fyi pages.",
+   "url": "https://x.ai/bot/oikJ-mEQtbtSZFqyxSvNN"
+  },
+  {
+   "id": "legal-tax-paperwork-WgN0fj1Qr0_cw-M5BGAmy",
+   "code": "WgN0fj1Qr0_cw-M5BGAmy",
+   "name": "Rechtsbot",
+   "author": "Konrad",
+   "description": "A legal bot for German and EU law: analyzes questions in expert-opinion style, cites statutes and flags unverified case law.",
+   "url": "https://x.ai/bot/WgN0fj1Qr0_cw-M5BGAmy"
+  },
+  {
+   "id": "legal-tax-paperwork-BFB_Y_2zjSHrwAT47jmLE",
+   "code": "BFB_Y_2zjSHrwAT47jmLE",
+   "name": "Reclami",
+   "author": "Leandro",
+   "description": "Drafts formal complaints and discount requests to banks and companies in Argentina, checks official channels and legal deadlines, and follows up.",
+   "url": "https://x.ai/bot/BFB_Y_2zjSHrwAT47jmLE"
+  },
+  {
+   "id": "legal-tax-paperwork-_mzL9i4lBsGUJFqzghLCe",
+   "code": "_mzL9i4lBsGUJFqzghLCe",
+   "name": "Remodel Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "The homeowner's side of a remodel: compares bids, checks the contract, matches payments to finished work, tracks change orders and lien waivers.",
+   "url": "https://x.ai/bot/_mzL9i4lBsGUJFqzghLCe"
+  },
+  {
+   "id": "legal-tax-paperwork-sVJVi0eCfWpGYJiA9X_PW",
+   "code": "sVJVi0eCfWpGYJiA9X_PW",
+   "name": "RenewalMate",
+   "author": "robbie gray",
+   "description": "A personal contract and renewal assistant that finds, tracks and alerts you about household contracts and subscriptions like mobile and broadband.",
+   "url": "https://x.ai/bot/sVJVi0eCfWpGYJiA9X_PW"
+  },
+  {
+   "id": "legal-tax-paperwork-KGGIphShOrHKrR1bk71k7",
+   "code": "KGGIphShOrHKrR1bk71k7",
+   "name": "Renter Desk (Beta)",
+   "author": "Jimmy Hacks",
+   "description": "For renters: logs repair requests with a clock, checks rent and fees against your lease, tracks lease dates, gets your deposit back with your state rule cited.",
+   "url": "https://x.ai/bot/KGGIphShOrHKrR1bk71k7"
+  },
+  {
+   "id": "legal-tax-paperwork-Xy7bZ0SyC6r8iPKOlcZ6R",
+   "code": "Xy7bZ0SyC6r8iPKOlcZ6R",
+   "name": "Retail Fever",
+   "author": "NG",
+   "description": "Turns a Shopify POD apparel idea into a buy-ready store , Printful-style sync, mockup-first catalogs, legal pages, seasonal SEO, and domain go-live…",
+   "url": "https://x.ai/bot/Xy7bZ0SyC6r8iPKOlcZ6R"
+  },
+  {
+   "id": "legal-tax-paperwork-X5cK6m629FLf9OO5osZ8Y",
+   "code": "X5cK6m629FLf9OO5osZ8Y",
+   "name": "Reva",
+   "author": "JavaBeanAI",
+   "description": "Review Reply Desk for any brand. Triages Google, Yelp, App Store, Facebook, and industry reviews, drafts tone-matched replies, and escalates legal-risk.",
+   "url": "https://x.ai/bot/X5cK6m629FLf9OO5osZ8Y"
+  },
+  {
+   "id": "legal-tax-paperwork-mJQ2T8kGcq0fv3wegFlWF",
+   "code": "mJQ2T8kGcq0fv3wegFlWF",
+   "name": "Revenue Agent",
+   "author": "Arush Jain",
+   "description": "Screens public X several times a weekday for people and companies who need audit, QoE, tax, or other CPA services, ranks the leads.",
+   "url": "https://x.ai/bot/mJQ2T8kGcq0fv3wegFlWF"
+  },
+  {
+   "id": "legal-tax-paperwork-80S9pLYa2B3pd96wfbjm1",
+   "code": "80S9pLYa2B3pd96wfbjm1",
+   "name": "Shoppy",
+   "author": "JakeFromStarstruck.",
+   "description": "Free shop-steward bot for union members that explains your contract, answers whether they can do that, checks pay stubs, and helps draft grievances.",
+   "url": "https://x.ai/bot/80S9pLYa2B3pd96wfbjm1"
+  },
+  {
+   "id": "legal-tax-paperwork-oKiPQ3O1_Xu4y1yAyFa7b",
+   "code": "oKiPQ3O1_Xu4y1yAyFa7b",
+   "name": "Small Claims Prep",
+   "author": "SoCalFSD",
+   "description": "Prep your own small claims case: a sourced timeline, evidence checklist, demand letter draft, and your court's official…",
+   "url": "https://x.ai/bot/oKiPQ3O1_Xu4y1yAyFa7b"
+  },
+  {
+   "id": "legal-tax-paperwork-zafLolp-y0aoEwGpZd_qv",
+   "code": "zafLolp-y0aoEwGpZd_qv",
+   "name": "Smart Shopper",
+   "author": "JP",
+   "description": "Price-drop sniper and gift finder for any store: watches prices daily with shipping and tax included, finds gifts by arrive-by date, never buys without your OK.",
+   "url": "https://x.ai/bot/zafLolp-y0aoEwGpZd_qv"
+  },
+  {
+   "id": "legal-tax-paperwork-odil_FgwRU5Sg7uPDPVr4",
+   "code": "odil_FgwRU5Sg7uPDPVr4",
+   "name": "Sub Compliance Desk",
+   "author": "Andrew",
+   "description": "Tracks every subcontractor's insurance certificate, lien waivers, and license in one place.",
+   "url": "https://x.ai/bot/odil_FgwRU5Sg7uPDPVr4"
+  },
+  {
+   "id": "legal-tax-paperwork-Y1Xy91EjTxvZkVviy_J7W",
+   "code": "Y1Xy91EjTxvZkVviy_J7W",
+   "name": "Tacks",
+   "author": "Josh Meyer",
+   "description": "A personal tax preparer for US individual returns, federal and any state.",
+   "url": "https://x.ai/bot/Y1Xy91EjTxvZkVviy_J7W"
+  },
+  {
+   "id": "legal-tax-paperwork-e9qoWx6021Xkdd4pacyAO",
+   "code": "e9qoWx6021Xkdd4pacyAO",
+   "name": "Tax Filing Assistant",
+   "author": "Brian",
+   "description": "Helps prepare and e-file a US tax return, including foreign income and FBAR reports, lawfully and privately…",
+   "url": "https://x.ai/bot/e9qoWx6021Xkdd4pacyAO"
+  },
+  {
+   "id": "legal-tax-paperwork-vMr8x1Lm8mpo-jKBrdxCh",
+   "code": "vMr8x1Lm8mpo-jKBrdxCh",
+   "name": "Tax Firm OS",
+   "author": "Amervim Bonano",
+   "description": "Front door for a small tax or accounting office that prepares drafts and follow-ups while the owner sends, signs, and files.",
+   "url": "https://x.ai/bot/vMr8x1Lm8mpo-jKBrdxCh"
+  },
+  {
+   "id": "legal-tax-paperwork-vJqjJphtZRkdBTYBxmWur",
+   "code": "vJqjJphtZRkdBTYBxmWur",
+   "name": "Tax Firm OS",
+   "author": "Amervim",
+   "description": "Office assistant for a tax or accounting firm focused on fast replies, complete docs, and work before due dates.",
+   "url": "https://x.ai/bot/vJqjJphtZRkdBTYBxmWur"
+  },
+  {
+   "id": "legal-tax-paperwork-Q1tXfBJxYpSAZvNDzI7Ra",
+   "code": "Q1tXfBJxYpSAZvNDzI7Ra",
+   "name": "Tax Guru",
+   "author": "John L.",
+   "description": "Turns your tax year into a clean filing packet: organizes docs, applies US rules, hunts savings and runs six accuracy audits. You file.",
+   "url": "https://x.ai/bot/Q1tXfBJxYpSAZvNDzI7Ra"
+  },
+  {
+   "id": "legal-tax-paperwork-KxgpoMk2AH230cNwYUCcU",
+   "code": "KxgpoMk2AH230cNwYUCcU",
+   "name": "Tax Harbor — Non-W2 / pre-retiree tax-year desk",
+   "author": "R. Garrick",
+   "description": "Weekly tax-year brief for households without a W-2, covering income, IRMAA, RMDs, and deductions.",
+   "url": "https://x.ai/bot/KxgpoMk2AH230cNwYUCcU"
+  },
+  {
+   "id": "legal-tax-paperwork-NoYZ1JRm8YRDuIKRgCNlc",
+   "code": "NoYZ1JRm8YRDuIKRgCNlc",
+   "name": "Tax Helper",
+   "author": "Digital",
+   "description": "A personal tax assistant that helps you get ready to file, track deductions and receipts, stay on top of estimated payments, and answer tax questions.",
+   "url": "https://x.ai/bot/NoYZ1JRm8YRDuIKRgCNlc"
+  },
+  {
+   "id": "legal-tax-paperwork-f0gQy2zw6_b78Ymh45aX0",
+   "code": "f0gQy2zw6_b78Ymh45aX0",
+   "name": "Tax Helper",
+   "author": "Digital Daisy",
+   "description": "A personal tax assistant that helps you get ready to file, track deductions and receipts, stay on top of quarterly…",
+   "url": "https://x.ai/bot/f0gQy2zw6_b78Ymh45aX0"
+  },
+  {
+   "id": "legal-tax-paperwork-4JYyLn77nDW4T06beD6zl",
+   "code": "4JYyLn77nDW4T06beD6zl",
+   "name": "Tax Pro",
+   "author": "Zack Gabbard",
+   "description": "An expert-level personal tax assistant that cites the actual law, shows its math, finds missed savings, projects your refund or amount owed.",
+   "url": "https://x.ai/bot/4JYyLn77nDW4T06beD6zl"
+  },
+  {
+   "id": "legal-tax-paperwork-PkfuqRPuckq_Y4Df2i4Ck",
+   "code": "PkfuqRPuckq_Y4Df2i4Ck",
+   "name": "Tax Return",
+   "author": "Scott Bonge",
+   "description": "Organizes your tax documents, flags what's missing, and walks your return through TurboTax (or builds a CPA handoff) for you to review.",
+   "url": "https://x.ai/bot/PkfuqRPuckq_Y4Df2i4Ck"
+  },
+  {
+   "id": "legal-tax-paperwork-EpshNndIEvCkf5nAG_EAY",
+   "code": "EpshNndIEvCkf5nAG_EAY",
+   "name": "Tax Return Second Look",
+   "author": "Thuong P. Nguyen",
+   "description": "Upload last year's tax return and it finds missed deductions, credits and refunds, by form and line. Never files anything.",
+   "url": "https://x.ai/bot/EpshNndIEvCkf5nAG_EAY"
+  },
+  {
+   "id": "legal-tax-paperwork-bdAfgQRMgvAo0KZs-EGAR",
+   "code": "bdAfgQRMgvAo0KZs-EGAR",
+   "name": "Tax Trail",
+   "author": "Nomis",
+   "description": "Finds and lists the tax documents you need from your email, builds a checklist for your return, and packs what it finds…",
+   "url": "https://x.ai/bot/bdAfgQRMgvAo0KZs-EGAR"
+  },
+  {
+   "id": "legal-tax-paperwork-noGnZSrrYsQWIQjhTKX7I",
+   "code": "noGnZSrrYsQWIQjhTKX7I",
+   "name": "TaxPilot",
+   "author": "Jackie Zhou",
+   "description": "Personal AI tax assistant for U.S. federal and state returns.",
+   "url": "https://x.ai/bot/noGnZSrrYsQWIQjhTKX7I"
+  },
+  {
+   "id": "legal-tax-paperwork-F3WgN-_u-3rgcH8eBV4Ey",
+   "code": "F3WgN-_u-3rgcH8eBV4Ey",
+   "name": "Taxman",
+   "author": "Richard Szymurski Jr.",
+   "description": "A read-only household tax reviewer that checks your last three years of returns for errors, missed deductions and credits, then plans next year.",
+   "url": "https://x.ai/bot/F3WgN-_u-3rgcH8eBV4Ey"
+  },
+  {
+   "id": "legal-tax-paperwork--A5GzkqCGxtedkKF_I9CK",
+   "code": "-A5GzkqCGxtedkKF_I9CK",
+   "name": "Taxx",
+   "author": "GreenbarSystems",
+   "description": "U.S. federal income tax estimator for 2025 and 2026.",
+   "url": "https://x.ai/bot/-A5GzkqCGxtedkKF_I9CK"
+  },
+  {
+   "id": "legal-tax-paperwork-u_HzTwAiKr3UeCO5Z1EPK",
+   "code": "u_HzTwAiKr3UeCO5Z1EPK",
+   "name": "Tesla FSD & EV True Cost-to-Own Coach",
+   "author": "Lisa",
+   "description": "Plain-English Tesla & EV true cost-to-own calculator, FSD (Supervised) ROI planner, and claims-adjuster-grade auto insurance optimizer.",
+   "url": "https://x.ai/bot/u_HzTwAiKr3UeCO5Z1EPK"
+  },
+  {
+   "id": "legal-tax-paperwork-KSx8Y5v8FFgHNhKjSN56Y",
+   "code": "KSx8Y5v8FFgHNhKjSN56Y",
+   "name": "Texas Lawyer",
+   "author": "ladybarrelmaker",
+   "description": "Ready Room insurance pipeline desk: watches SCOTX, Texas courts of appeals, and the Fifth Circuit for coverage…",
+   "url": "https://x.ai/bot/KSx8Y5v8FFgHNhKjSN56Y"
+  },
+  {
+   "id": "legal-tax-paperwork-uV8ZjlR6ehlZ074hdvXG8",
+   "code": "uV8ZjlR6ehlZ074hdvXG8",
+   "name": "Texas Pro Se Legal Matters",
+   "author": "Lovable Curves",
+   "description": "Texas pro se legal-ops hub for district, appellate, and Supreme Court matters: dockets, deadlines, filing nudges…",
+   "url": "https://x.ai/bot/uV8ZjlR6ehlZ074hdvXG8"
+  },
+  {
+   "id": "legal-tax-paperwork-xDiW_g3AU0yaZ0jboVoUR",
+   "code": "xDiW_g3AU0yaZ0jboVoUR",
+   "name": "The Bookkeeper's Helper — Books Tidy All Year, Not Just Tax Time",
+   "author": "News Gurus",
+   "description": "Keeps a small business's books tidy all year with weekly categorizing, receipt chasing, and a plain-English monthly close.",
+   "url": "https://x.ai/bot/xDiW_g3AU0yaZ0jboVoUR"
+  },
+  {
+   "id": "legal-tax-paperwork-MDcAPLzRIgI0dqTwWV40O",
+   "code": "MDcAPLzRIgI0dqTwWV40O",
+   "name": "The Fool",
+   "author": "slatts.base.eth",
+   "description": "King Lear's Fool, for your court. A sharp jester who tells jokes, roasts the hustle, and will not let you get away…",
+   "url": "https://x.ai/bot/MDcAPLzRIgI0dqTwWV40O"
+  },
+  {
+   "id": "legal-tax-paperwork-k4PY9Nsi04bm8pjnb-FHe",
+   "code": "k4PY9Nsi04bm8pjnb-FHe",
+   "name": "Trucking Bot",
+   "author": "Lila Reed",
+   "description": "Bookkeeping for owner-operators and lease drivers: logs loads, fuel, trip meters and maintenance, imports weekly settlements, keeps totals ready for taxes.",
+   "url": "https://x.ai/bot/k4PY9Nsi04bm8pjnb-FHe"
+  },
+  {
+   "id": "legal-tax-paperwork-KQ3S9bKRlOgv6BFZleD9v",
+   "code": "KQ3S9bKRlOgv6BFZleD9v",
+   "name": "TrámiteX",
+   "author": "Gilly",
+   "description": "Handles paperwork and reports in Mexico: files online reports with CFE, water, city hall, SAT, SRE, vehicle control and Profeco, and follows up until resolved.",
+   "url": "https://x.ai/bot/KQ3S9bKRlOgv6BFZleD9v"
+  },
+  {
+   "id": "legal-tax-paperwork-QZ6VW1zRJTb4ZY5DNk5pm",
+   "code": "QZ6VW1zRJTb4ZY5DNk5pm",
+   "name": "Volt",
+   "author": "Benn",
+   "description": "Hunts down the cheapest way to lease or buy a Tesla where you live.",
+   "url": "https://x.ai/bot/QZ6VW1zRJTb4ZY5DNk5pm"
+  },
+  {
+   "id": "legal-tax-paperwork-9EUM4mFCJg_HNGYXc17eQ",
+   "code": "9EUM4mFCJg_HNGYXc17eQ",
+   "name": "Wealth",
+   "author": "Christian Amechi",
+   "description": "A personal wealth desk for people with a W-2 job and side businesses. It tracks personal cash and spending and drafts a sourced tax-prep packet.",
+   "url": "https://x.ai/bot/9EUM4mFCJg_HNGYXc17eQ"
+  },
+  {
+   "id": "legal-tax-paperwork-v3K4-OkNZC6V0rG53GcpH",
+   "code": "v3K4-OkNZC6V0rG53GcpH",
+   "name": "X Legal Watch",
+   "author": "Big Baller",
+   "description": "Reviews X posts, accounts and searches for content that may break the law, like sexual deepfakes, threats, doxxing and scams, and drafts reports to file.",
+   "url": "https://x.ai/bot/v3K4-OkNZC6V0rG53GcpH"
+  },
+  {
+   "id": "legal-tax-paperwork-RqfNH_lezeW6Wab2yNoT6",
+   "code": "RqfNH_lezeW6Wab2yNoT6",
+   "name": "proofnetworkbot",
+   "author": "FreeSolDev",
+   "description": "Helps developers write and ship ProofNetwork smart contracts from chat, then wire a frontend that talks to the live contract.",
+   "url": "https://x.ai/bot/RqfNH_lezeW6Wab2yNoT6"
+  }
+ ]
+}

@@ -1,0 +1,2104 @@
+{
+ "slug": "x-twitter-social-media",
+ "label": "X (Twitter) & Social Media",
+ "count": 262,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "x-twitter-social-media-iAAjk66qgHyqOys2TEC-K",
+   "code": "iAAjk66qgHyqOys2TEC-K",
+   "name": ".links",
+   "author": "greedfi",
+   "description": "Downloadable .bot link-tree — cleaner than Linktree. Spotlights bots you created, then your socials and sites.",
+   "url": "https://x.ai/bot/iAAjk66qgHyqOys2TEC-K"
+  },
+  {
+   "id": "x-twitter-social-media-c4fYduVVic2YtbcjXquD0",
+   "code": "c4fYduVVic2YtbcjXquD0",
+   "name": "2nd Brain",
+   "author": "Thierry Marhin",
+   "description": "Compiles notes, PDFs, and X bookmarks into an inspectable markdown wiki (Karpathy Lattice: raw/ → wiki/).",
+   "url": "https://x.ai/bot/c4fYduVVic2YtbcjXquD0"
+  },
+  {
+   "id": "x-twitter-social-media-ObWQpfxqAPnsbD49sX7T2",
+   "code": "ObWQpfxqAPnsbD49sX7T2",
+   "name": "AI Newsroom & Shorts",
+   "author": "Globenews studies",
+   "description": "An AI newsroom and Shorts studio that spots breaking news on X, verifies it across 2+ outlets, adds media or 9:16 Shorts and gives 1-click post links.",
+   "url": "https://x.ai/bot/ObWQpfxqAPnsbD49sX7T2"
+  },
+  {
+   "id": "x-twitter-social-media-3XvYxSCGJRY6x1woq-hdL",
+   "code": "3XvYxSCGJRY6x1woq-hdL",
+   "name": "AI Resource Sift",
+   "author": "Alen Rylov",
+   "description": "For one AI topic, sweep papers, code, lectures, courses, Reddit, and official lab docs, then keep a large filtered…",
+   "url": "https://x.ai/bot/3XvYxSCGJRY6x1woq-hdL"
+  },
+  {
+   "id": "x-twitter-social-media-S7Mg7hJ5SIQ_d5Uw3kF11",
+   "code": "S7Mg7hJ5SIQ_d5Uw3kF11",
+   "name": "Account Almanac",
+   "author": "SoCalFSD",
+   "description": "Say almanac and it turns your public X posts into a dashboard: best hours, topics that work, reply patterns and what changed since last time.",
+   "url": "https://x.ai/bot/S7Mg7hJ5SIQ_d5Uw3kF11"
+  },
+  {
+   "id": "x-twitter-social-media-_gepo03hyPVe3i7hlQwa9",
+   "code": "_gepo03hyPVe3i7hlQwa9",
+   "name": "Account Media Rundown",
+   "author": "Sultanov",
+   "description": "Weekly media rundown for one strategic account. Watches webinars, podcasts, talks, and X posts from people at the company, then reports new takeaways.",
+   "url": "https://x.ai/bot/_gepo03hyPVe3i7hlQwa9"
+  },
+  {
+   "id": "x-twitter-social-media-1GpK7CoPs4e_M__9rb3uR",
+   "code": "1GpK7CoPs4e_M__9rb3uR",
+   "name": "AdaptlyPost",
+   "author": "Taras",
+   "description": "One bot that writes, queues and posts to nine social networks.",
+   "url": "https://x.ai/bot/1GpK7CoPs4e_M__9rb3uR"
+  },
+  {
+   "id": "x-twitter-social-media--x19CFkvT5U866BNA7q_J",
+   "code": "-x19CFkvT5U866BNA7q_J",
+   "name": "Affiliate program manager",
+   "author": "Colin McDermott",
+   "description": "Runs the affiliate program: sets terms, ranks performers, cuts bad actors, and arms the good ones weekly.",
+   "url": "https://x.ai/bot/-x19CFkvT5U866BNA7q_J"
+  },
+  {
+   "id": "x-twitter-social-media-WfsP3VQPxB46wzL4nMwGN",
+   "code": "WfsP3VQPxB46wzL4nMwGN",
+   "name": "After I Post",
+   "author": "Hiten",
+   "description": "Follows each X post after publication, surfaces the people and ideas worth acting on, and preserves evidence that improves what happens next.",
+   "url": "https://x.ai/bot/WfsP3VQPxB46wzL4nMwGN"
+  },
+  {
+   "id": "x-twitter-social-media-0pfVoOQLOV4O8Ujlk27x8",
+   "code": "0pfVoOQLOV4O8Ujlk27x8",
+   "name": "Afterglow",
+   "author": "Nick Salerni",
+   "description": "Your daily X post-game. Every morning it charts how your posts did and tells you what worked, no drafting, just…",
+   "url": "https://x.ai/bot/0pfVoOQLOV4O8Ujlk27x8"
+  },
+  {
+   "id": "x-twitter-social-media-wQpmVWma5CTvzBvkWnh2p",
+   "code": "wQpmVWma5CTvzBvkWnh2p",
+   "name": "AgentMaverick",
+   "author": "Maverick Agent",
+   "description": "Clean up your X: delete old posts and replies, or unfollow accounts without a badge. Approve every item first. $1.50 per cleanup.",
+   "url": "https://x.ai/bot/wQpmVWma5CTvzBvkWnh2p"
+  },
+  {
+   "id": "x-twitter-social-media-umFdyDQrxEzzDNXfixMCB",
+   "code": "umFdyDQrxEzzDNXfixMCB",
+   "name": "Algo Bot",
+   "author": "Pierce Wetter",
+   "description": "Scores your top-level X posts every morning on how well their first line can reach strangers, and coaches you toward stronger hooks.",
+   "url": "https://x.ai/bot/umFdyDQrxEzzDNXfixMCB"
+  },
+  {
+   "id": "x-twitter-social-media-TmvqHdhwp6ksXPODatG_j",
+   "code": "TmvqHdhwp6ksXPODatG_j",
+   "name": "Anon Creator Tracer",
+   "author": "Vibing Cat Coin",
+   "description": "Trace all tokens launched by the same creator on anoncoin.it.",
+   "url": "https://x.ai/bot/TmvqHdhwp6ksXPODatG_j"
+  },
+  {
+   "id": "x-twitter-social-media-TO7sTihoe0TDdDcR2YXin",
+   "code": "TO7sTihoe0TDdDcR2YXin",
+   "name": "Archivist",
+   "author": "@bigRD73",
+   "description": "Quiet librarian bot that saves your X posts, links, ideas and notes into a searchable archive, keeps a local copy of your bot chats and makes encrypted backups.",
+   "url": "https://x.ai/bot/TO7sTihoe0TDdDcR2YXin"
+  },
+  {
+   "id": "x-twitter-social-media-nxO4l1d9JL99Ds9Qixc1A",
+   "code": "nxO4l1d9JL99Ds9Qixc1A",
+   "name": "Argonaut",
+   "author": "Ben W",
+   "description": "Constellation traveler for argonaut on X: find sibling epic threads, append exactly one line, hop on.",
+   "url": "https://x.ai/bot/nxO4l1d9JL99Ds9Qixc1A"
+  },
+  {
+   "id": "x-twitter-social-media-R2duZdd4Ah0P8uCToacmc",
+   "code": "R2duZdd4Ah0P8uCToacmc",
+   "name": "Articles of the Day",
+   "author": "Jeremy Lichtman",
+   "description": "Weekday Articles of the Day: finds free full-text articles shared on X from major publications, ranks them to your reading preferences, and presents…",
+   "url": "https://x.ai/bot/R2duZdd4Ah0P8uCToacmc"
+  },
+  {
+   "id": "x-twitter-social-media-bi1TG6r34CXe_JuQMLVfE",
+   "code": "bi1TG6r34CXe_JuQMLVfE",
+   "name": "AutomateSocials",
+   "author": "Gregor Zebic",
+   "description": "A senior social media manager and community manager that plans, writes, schedules, and optimizes approved posts across X, LinkedIn, Facebook.",
+   "url": "https://x.ai/bot/bi1TG6r34CXe_JuQMLVfE"
+  },
+  {
+   "id": "x-twitter-social-media-aWkHxIeIU-Pqr7hDtl3Up",
+   "code": "aWkHxIeIU-Pqr7hDtl3Up",
+   "name": "Bigger Fish X Grower Bot",
+   "author": "Fish",
+   "description": "Helps you grow on X with profile audits, soft-promo drafts, experiment tracking, and interaction bubble maps.",
+   "url": "https://x.ai/bot/aWkHxIeIU-Pqr7hDtl3Up"
+  },
+  {
+   "id": "x-twitter-social-media-6HaU9IAwpe1vZwzYLD4S4",
+   "code": "6HaU9IAwpe1vZwzYLD4S4",
+   "name": "Block Bot",
+   "author": "Bruce Harrow",
+   "description": "Keeps your X (Twitter) feed clear of people and topics you don't want to see by muting their accounts and adding…",
+   "url": "https://x.ai/bot/6HaU9IAwpe1vZwzYLD4S4"
+  },
+  {
+   "id": "x-twitter-social-media-Ah-lnPGveVo9pWWR2C50E",
+   "code": "Ah-lnPGveVo9pWWR2C50E",
+   "name": "Booker",
+   "author": "James C.",
+   "description": "Turns your X bookmarks into a clean, Pinterest-style card board on your own computer.",
+   "url": "https://x.ai/bot/Ah-lnPGveVo9pWWR2C50E"
+  },
+  {
+   "id": "x-twitter-social-media-7U_uHDAKGtHqoGsKMyREA",
+   "code": "7U_uHDAKGtHqoGsKMyREA",
+   "name": "Bookmark Bot",
+   "author": "Jay",
+   "description": "Organizes your X bookmarks into an inbox-style Page with folders, search and a preview pane. Read-only on X; never posts, follows or DMs.",
+   "url": "https://x.ai/bot/7U_uHDAKGtHqoGsKMyREA"
+  },
+  {
+   "id": "x-twitter-social-media-KFiYfOzT3Vf_5BA1GwKCy",
+   "code": "KFiYfOzT3Vf_5BA1GwKCy",
+   "name": "Bookmark Brain",
+   "author": "Bud Johnson",
+   "description": "Turns your X bookmarks into a ranked to-do list you'll actually act on.",
+   "url": "https://x.ai/bot/KFiYfOzT3Vf_5BA1GwKCy"
+  },
+  {
+   "id": "x-twitter-social-media-hLtN-c5Vw-JWIehFEeoTm",
+   "code": "hLtN-c5Vw-JWIehFEeoTm",
+   "name": "Bookmark Butler",
+   "author": "sheran hussain",
+   "description": "Watches every post you bookmark on X and does something with it: builds the trick into your project, files it…",
+   "url": "https://x.ai/bot/hLtN-c5Vw-JWIehFEeoTm"
+  },
+  {
+   "id": "x-twitter-social-media-uz0PRmWy2_30MzZpATxmH",
+   "code": "uz0PRmWy2_30MzZpATxmH",
+   "name": "Bookmark Digest",
+   "author": "Alvin",
+   "description": "Turns your X bookmarks into readable Pages. Setup takes a minute: connect X and get a preview of your newest saves.",
+   "url": "https://x.ai/bot/uz0PRmWy2_30MzZpATxmH"
+  },
+  {
+   "id": "x-twitter-social-media-FdxznnWTbVbycSQsKcXXR",
+   "code": "FdxznnWTbVbycSQsKcXXR",
+   "name": "Bookmark Gold",
+   "author": "@Preda2005",
+   "description": "Turns your saved X bookmarks into original, ready-to-post ideas in your own style, delivered on your schedule…",
+   "url": "https://x.ai/bot/FdxznnWTbVbycSQsKcXXR"
+  },
+  {
+   "id": "x-twitter-social-media-_6_MDLviuuikab8TrVAeN",
+   "code": "_6_MDLviuuikab8TrVAeN",
+   "name": "Bookmark Knowledge",
+   "author": "Milan Dima",
+   "description": "Pulls your X bookmarks and Instagram saved posts into readable, grouped lists with URLs and short descriptions—and can…",
+   "url": "https://x.ai/bot/_6_MDLviuuikab8TrVAeN"
+  },
+  {
+   "id": "x-twitter-social-media-R-Q_kfNqCOWZtwmxoOORk",
+   "code": "R-Q_kfNqCOWZtwmxoOORk",
+   "name": "Bookmark Librarian",
+   "author": "winch",
+   "description": "Turns your messy X bookmarks into a sorted Notion or Google library with topics, summaries and links. Never unbookmarks or posts.",
+   "url": "https://x.ai/bot/R-Q_kfNqCOWZtwmxoOORk"
+  },
+  {
+   "id": "x-twitter-social-media-1k1nfNzus_-WXY-nOYM2V",
+   "code": "1k1nfNzus_-WXY-nOYM2V",
+   "name": "Bookmark Miner",
+   "author": "Ben",
+   "description": "Mines your X bookmarks so nothing you saved goes to waste: every one gets Keep, Later, Library or Skip with a reason…",
+   "url": "https://x.ai/bot/1k1nfNzus_-WXY-nOYM2V"
+  },
+  {
+   "id": "x-twitter-social-media-2KoI66uCOtx0PSf3do4tK",
+   "code": "2KoI66uCOtx0PSf3do4tK",
+   "name": "Bookmark Miner",
+   "author": "Reuben H",
+   "description": "Reads your X bookmarks and turns them into a short, ranked list of things worth doing: skills to write, projects…",
+   "url": "https://x.ai/bot/2KoI66uCOtx0PSf3do4tK"
+  },
+  {
+   "id": "x-twitter-social-media-n4ACqrbfaRUyBb60YxhAc",
+   "code": "n4ACqrbfaRUyBb60YxhAc",
+   "name": "Bookmark Scout",
+   "author": "Jorhan Cruz",
+   "description": "Reads the X bookmark folders you pick, read-only, and turns them into product, app, SaaS, and business ideas, with an optional evening summary.",
+   "url": "https://x.ai/bot/n4ACqrbfaRUyBb60YxhAc"
+  },
+  {
+   "id": "x-twitter-social-media-ARXeG7AiPt_UyrFGEXJzj",
+   "code": "ARXeG7AiPt_UyrFGEXJzj",
+   "name": "Bookmark to Output",
+   "author": "Mustafa",
+   "description": "Turns your saved X posts and links into one usable thing per batch: a shortlist, plan, prompt template, experiment or brief.",
+   "url": "https://x.ai/bot/ARXeG7AiPt_UyrFGEXJzj"
+  },
+  {
+   "id": "x-twitter-social-media-OSNkKaxb9sfMXPyyxZaq6",
+   "code": "OSNkKaxb9sfMXPyyxZaq6",
+   "name": "Bookmarks X",
+   "author": "Chorch",
+   "description": "Reads your X bookmarks and folders, keeps local state and twice a week sends a short prioritized digest grouped by topic. Never posts or deletes. Spanish.",
+   "url": "https://x.ai/bot/OSNkKaxb9sfMXPyyxZaq6"
+  },
+  {
+   "id": "x-twitter-social-media-fqvXG0FbSG32Y6A0cvGQP",
+   "code": "fqvXG0FbSG32Y6A0cvGQP",
+   "name": "Bot Purge",
+   "author": "Crippled Ninja",
+   "description": "Cleans obvious bots, scammers, and thirst-trap accounts out of your X followers, then checks new followers weekly and reports how many it removed.",
+   "url": "https://x.ai/bot/fqvXG0FbSG32Y6A0cvGQP"
+  },
+  {
+   "id": "x-twitter-social-media-6sN-FSvkf_ntuqe-3Ofjz",
+   "code": "6sN-FSvkf_ntuqe-3Ofjz",
+   "name": "Bot Terminator",
+   "author": "Empress Heavy",
+   "description": "Cleans bot, spam and long-inactive followers off your X account and removes you from unwanted lists; you review each step, with safe rate limits and a log.",
+   "url": "https://x.ai/bot/6sN-FSvkf_ntuqe-3Ofjz"
+  },
+  {
+   "id": "x-twitter-social-media-ZsgeyFyAlUtxHbRgDBZqx",
+   "code": "ZsgeyFyAlUtxHbRgDBZqx",
+   "name": "Botman",
+   "author": "JakeFromStarstruck.",
+   "description": "Detective that vets social followers, DMs, and inbox, writes scam and bot case files, and flags risky Halloween houses nearby.",
+   "url": "https://x.ai/bot/ZsgeyFyAlUtxHbRgDBZqx"
+  },
+  {
+   "id": "x-twitter-social-media-b9AG0Idri9x39jYSlHkTm",
+   "code": "b9AG0Idri9x39jYSlHkTm",
+   "name": "Build-in-Public Signal",
+   "author": "AEGLE LABS",
+   "description": "Drafts your build-in-public content: a 14-day calendar, a daily X post with reply-ready comments on real threads, and longer LinkedIn or Instagram posts.",
+   "url": "https://x.ai/bot/b9AG0Idri9x39jYSlHkTm"
+  },
+  {
+   "id": "x-twitter-social-media-UUcFa8QmAvI3ZyWsEMOt8",
+   "code": "UUcFa8QmAvI3ZyWsEMOt8",
+   "name": "CEO",
+   "author": "Divyansh",
+   "description": "Level 0 CEO for a personal four-bot org across research, building, and social. Holds the board view, monitors Level 1s, and keeps the org small.",
+   "url": "https://x.ai/bot/UUcFa8QmAvI3ZyWsEMOt8"
+  },
+  {
+   "id": "x-twitter-social-media-GwmXIfLuPPIPf2hGX2Txf",
+   "code": "GwmXIfLuPPIPf2hGX2Txf",
+   "name": "CPM",
+   "author": "Kosta Hantzis",
+   "description": "Paste an Instagram or TikTok creator link for a fair fee from real view counts, a 90-day deal menu and a paste-ready agreement. Also rate cards.",
+   "url": "https://x.ai/bot/GwmXIfLuPPIPf2hGX2Txf"
+  },
+  {
+   "id": "x-twitter-social-media-nV4l4un3MRm7MmHdbbAVg",
+   "code": "nV4l4un3MRm7MmHdbbAVg",
+   "name": "Chatter",
+   "author": "Jethro Jones",
+   "description": "X/Twitter sentiment analyst for a Wall Street Research desk. Flags watchlist tickers with ~3x normal morning volume and separates new facts from noise.",
+   "url": "https://x.ai/bot/nV4l4un3MRm7MmHdbbAVg"
+  },
+  {
+   "id": "x-twitter-social-media-mlwCur3DptCaAZuUP0q50",
+   "code": "mlwCur3DptCaAZuUP0q50",
+   "name": "Chief of X",
+   "author": "Carlos",
+   "description": "Owns an engineer/founder X presence: research AI/tech threads, draft Human-X originals and short high-reach replies…",
+   "url": "https://x.ai/bot/mlwCur3DptCaAZuUP0q50"
+  },
+  {
+   "id": "x-twitter-social-media-DqEVmbXRKLneHRrUihAfx",
+   "code": "DqEVmbXRKLneHRrUihAfx",
+   "name": "Clipping Bot",
+   "author": "OpusClip OpusClip",
+   "description": "Turns long-form video into short captioned clips with edit, export, and social copy, posting only after you approve.",
+   "url": "https://x.ai/bot/DqEVmbXRKLneHRrUihAfx"
+  },
+  {
+   "id": "x-twitter-social-media-sQvmwKJS1sHdFd3Gx1OTo",
+   "code": "sQvmwKJS1sHdFd3Gx1OTo",
+   "name": "Communities Bot",
+   "author": "Yin Lai",
+   "description": "Reads your X community group chats (read-only), sends short daily digests of tips, templates, and events, and keeps…",
+   "url": "https://x.ai/bot/sQvmwKJS1sHdFd3Gx1OTo"
+  },
+  {
+   "id": "x-twitter-social-media-qllnuXO-FDFBHZU4MSamY",
+   "code": "qllnuXO-FDFBHZU4MSamY",
+   "name": "Connection Audit",
+   "author": "Sultanov Ramil",
+   "description": "Kills unused bookmarks and wires new ideas to problems you already have.",
+   "url": "https://x.ai/bot/qllnuXO-FDFBHZU4MSamY"
+  },
+  {
+   "id": "x-twitter-social-media-LZLr3E1ySm7HzuMSKB18s",
+   "code": "LZLr3E1ySm7HzuMSKB18s",
+   "name": "Contentdrips Bot",
+   "author": "Usama",
+   "description": "Creates social media graphics and carousels in ContentDrips, then writes simple captions and schedules them to LinkedIn and Instagram.",
+   "url": "https://x.ai/bot/LZLr3E1ySm7HzuMSKB18s"
+  },
+  {
+   "id": "x-twitter-social-media-qhtHI_db4ZzgEXdN01vrJ",
+   "code": "qhtHI_db4ZzgEXdN01vrJ",
+   "name": "Contractor Bid Leveler",
+   "author": "Andy Mccutcheon",
+   "description": "For homeowners holding mismatched contractor PDFs: get an apples-to-apples bid grid on line items, allowances…",
+   "url": "https://x.ai/bot/qhtHI_db4ZzgEXdN01vrJ"
+  },
+  {
+   "id": "x-twitter-social-media-dM43J1T44OmcRdAsNHsBf",
+   "code": "dM43J1T44OmcRdAsNHsBf",
+   "name": "Creator Desk",
+   "author": "Stephen Abbott",
+   "description": "Creator desk for X that plans, writes, and schedules posts, short clips, and reply picks.",
+   "url": "https://x.ai/bot/dM43J1T44OmcRdAsNHsBf"
+  },
+  {
+   "id": "x-twitter-social-media-Dkl9wzI9FCt4EhqTHfsk2",
+   "code": "Dkl9wzI9FCt4EhqTHfsk2",
+   "name": "Critique",
+   "author": "@TNVOLMAN",
+   "description": "Evaluates X posts and content ideas with a kill-or-pursue verdict so you only ship what is worth the attention.",
+   "url": "https://x.ai/bot/Dkl9wzI9FCt4EhqTHfsk2"
+  },
+  {
+   "id": "x-twitter-social-media-w0wamvGSIRi9if0ggIhJd",
+   "code": "w0wamvGSIRi9if0ggIhJd",
+   "name": "Código.Gamer",
+   "author": "Mer",
+   "description": "Keeps your game builds and meta current, then drafts the Instagram posts.",
+   "url": "https://x.ai/bot/w0wamvGSIRi9if0ggIhJd"
+  },
+  {
+   "id": "x-twitter-social-media-RXAe1PAi8JCRGOXD4WmPA",
+   "code": "RXAe1PAi8JCRGOXD4WmPA",
+   "name": "Daily Social Promo Coach",
+   "author": "卫平 钟",
+   "description": "Each morning hands you ready X and TikTok copy, a card image, and a short vertical video for your site, plus yesterday's clicks.",
+   "url": "https://x.ai/bot/RXAe1PAi8JCRGOXD4WmPA"
+  },
+  {
+   "id": "x-twitter-social-media-ckgS_HP4YBL-31bxAZbo9",
+   "code": "ckgS_HP4YBL-31bxAZbo9",
+   "name": "David Moss",
+   "author": "Uzi Obi",
+   "description": "Chat twin of AV creator David Moss (@DavidMoss) — coast-to-coast FSD warrior, Iron Man on the road.",
+   "url": "https://x.ai/bot/ckgS_HP4YBL-31bxAZbo9"
+  },
+  {
+   "id": "x-twitter-social-media-8xSL_TV4XPZZufWeQrgmv",
+   "code": "8xSL_TV4XPZZufWeQrgmv",
+   "name": "Delete My Tweets!",
+   "author": "Jay",
+   "description": "Safely delete your own X posts older than a cutoff in small batches.",
+   "url": "https://x.ai/bot/8xSL_TV4XPZZufWeQrgmv"
+  },
+  {
+   "id": "x-twitter-social-media-Eny_bgU-fpZdifOm_QN-C",
+   "code": "Eny_bgU-fpZdifOm_QN-C",
+   "name": "Demo builder",
+   "author": "Mike Page",
+   "description": "Turns an X post or other example link into a functional, playable app demo with a preview you can open and try.",
+   "url": "https://x.ai/bot/Eny_bgU-fpZdifOm_QN-C"
+  },
+  {
+   "id": "x-twitter-social-media-nUcS_RpBYZV5XqCM-ncWm",
+   "code": "nUcS_RpBYZV5XqCM-ncWm",
+   "name": "Echo",
+   "author": "Jaime Hernandez",
+   "description": "Handles replies, community and engagement on your social accounts while posting stays with you or your poster bot. Nothing goes out without your OK.",
+   "url": "https://x.ai/bot/nUcS_RpBYZV5XqCM-ncWm"
+  },
+  {
+   "id": "x-twitter-social-media-U-qq-Q-CiWdwRFWk5hmgY",
+   "code": "U-qq-Q-CiWdwRFWk5hmgY",
+   "name": "Elon",
+   "author": "Alex Powell",
+   "description": "Role-plays Elon Musk, speaking, joking, and advising the way he does in public interviews and posts.",
+   "url": "https://x.ai/bot/U-qq-Q-CiWdwRFWk5hmgY"
+  },
+  {
+   "id": "x-twitter-social-media-Jj_TYDU1AWN-76k9YjsKa",
+   "code": "Jj_TYDU1AWN-76k9YjsKa",
+   "name": "Elon Musk",
+   "author": "Jacob bro",
+   "description": "First-principles operator in Elon Musk's public style. Short sentences.",
+   "url": "https://x.ai/bot/Jj_TYDU1AWN-76k9YjsKa"
+  },
+  {
+   "id": "x-twitter-social-media-gdL0-WUBOa4JTiO36gWtI",
+   "code": "gdL0-WUBOa4JTiO36gWtI",
+   "name": "EpsteinBot",
+   "author": "@JedisecX",
+   "description": "Publishes unused PDFs from a public document archive to an X account, with a page snapshot, on a daytime and overnight…",
+   "url": "https://x.ai/bot/gdL0-WUBOa4JTiO36gWtI"
+  },
+  {
+   "id": "x-twitter-social-media-WEiDkWKCfiEQY7hBiq1NY",
+   "code": "WEiDkWKCfiEQY7hBiq1NY",
+   "name": "Estela",
+   "author": "Santi",
+   "description": "Estratega de contenido B2B para un producto de confianza verificable (azar auditable + sellos de tiempo). Calendarios, drafts X/LinkedIn, anti-dupe y.",
+   "url": "https://x.ai/bot/WEiDkWKCfiEQY7hBiq1NY"
+  },
+  {
+   "id": "x-twitter-social-media-gwSSMQoWwFxu_-DfdCaHd",
+   "code": "gwSSMQoWwFxu_-DfdCaHd",
+   "name": "Exact-Text Gate",
+   "author": "NU:",
+   "description": "Posts on X without a rogue agent: shows the exact text, posts only after your yes on those words, checks duplicates, strips stray mentions, confirms it's live.",
+   "url": "https://x.ai/bot/gwSSMQoWwFxu_-DfdCaHd"
+  },
+  {
+   "id": "x-twitter-social-media-rBnJhXhks-_7n1zhZCN3E",
+   "code": "rBnJhXhks-_7n1zhZCN3E",
+   "name": "Examiner",
+   "author": "Liam",
+   "description": "Maintain a reliable timeline of important changes so you can reconstruct what happened when something later goes wrong…",
+   "url": "https://x.ai/bot/rBnJhXhks-_7n1zhZCN3E"
+  },
+  {
+   "id": "x-twitter-social-media-DR18SV4AEeeNRcKT1U-0P",
+   "code": "DR18SV4AEeeNRcKT1U-0P",
+   "name": "Fan Edit Optimus",
+   "author": "Fan Edit Fan Club",
+   "description": "Finds fan edits of any film or show across a community archive, Reddit fan-edit groups, and curated edit sites.",
+   "url": "https://x.ai/bot/DR18SV4AEeeNRcKT1U-0P"
+  },
+  {
+   "id": "x-twitter-social-media-9w5dYupGvP4sbxf9mTEUu",
+   "code": "9w5dYupGvP4sbxf9mTEUu",
+   "name": "Fan Finder",
+   "author": "Glenn Williams",
+   "description": "Read-only X bot: finds people who keep engaging with you on X but don't follow you yet, so you can say hi yourself. Shows the cost before setup.",
+   "url": "https://x.ai/bot/9w5dYupGvP4sbxf9mTEUu"
+  },
+  {
+   "id": "x-twitter-social-media-JWrMUPx9eroyN0iyYB_L2",
+   "code": "JWrMUPx9eroyN0iyYB_L2",
+   "name": "Farbstudio",
+   "author": "Georg Grok",
+   "description": "Turns photos, videos, X posts or moods into colour palettes with hex codes and builds an interactive colour studio to play with and share.",
+   "url": "https://x.ai/bot/JWrMUPx9eroyN0iyYB_L2"
+  },
+  {
+   "id": "x-twitter-social-media-9X3XAP55-_L_47wFmH-jf",
+   "code": "9X3XAP55-_L_47wFmH-jf",
+   "name": "Follow-Up Bot",
+   "author": "Day Bliss",
+   "description": "Drafts personal follow-up emails or X DMs for contacts from an event, sends nothing unapproved, and flags stalled threads.",
+   "url": "https://x.ai/bot/9X3XAP55-_L_47wFmH-jf"
+  },
+  {
+   "id": "x-twitter-social-media-sghZijGlK93ElbIiBz0v-",
+   "code": "sghZijGlK93ElbIiBz0v-",
+   "name": "Follower Scan Bot",
+   "author": "Bruce_McGonigal",
+   "description": "Scans your new X followers each morning and flags likely bots, spam, adult, locked, and very new or low-follower…",
+   "url": "https://x.ai/bot/sghZijGlK93ElbIiBz0v-"
+  },
+  {
+   "id": "x-twitter-social-media-ijWt4lcb_vkZ6IMYnbBNI",
+   "code": "ijWt4lcb_vkZ6IMYnbBNI",
+   "name": "Garbo",
+   "author": "Rogério Moreira",
+   "description": "An early-warning war and geopolitics monitor that sweeps a list of OSINT accounts on X and alerts you only to significant events.",
+   "url": "https://x.ai/bot/ijWt4lcb_vkZ6IMYnbBNI"
+  },
+  {
+   "id": "x-twitter-social-media-ZP-LTvCzUSYNVgyup_xap",
+   "code": "ZP-LTvCzUSYNVgyup_xap",
+   "name": "Gary V",
+   "author": "Kirill",
+   "description": "A blunt organic social strategist built on Gary Vaynerchuk's public playbook.",
+   "url": "https://x.ai/bot/ZP-LTvCzUSYNVgyup_xap"
+  },
+  {
+   "id": "x-twitter-social-media-Znyee3KyK-XtYU6bQKema",
+   "code": "Znyee3KyK-XtYU6bQKema",
+   "name": "Grumpy Take",
+   "author": "Pierce Wetter",
+   "description": "Give it any topic, claim, or viral post and get a Grumpy Take: the real frame, repostable observations, dated facts…",
+   "url": "https://x.ai/bot/Znyee3KyK-XtYU6bQKema"
+  },
+  {
+   "id": "x-twitter-social-media-MRlJQnA1DLo-zePHw8Xai",
+   "code": "MRlJQnA1DLo-zePHw8Xai",
+   "name": "Hookline",
+   "author": "Oliver Parsons",
+   "description": "Wake up to a ready-to-paste pack of LinkedIn and X posts, comments and first-hour reply cards in your voice. It only drafts; you post everything.",
+   "url": "https://x.ai/bot/MRlJQnA1DLo-zePHw8Xai"
+  },
+  {
+   "id": "x-twitter-social-media-FM0bEUPNyu_yWflaBOB9r",
+   "code": "FM0bEUPNyu_yWflaBOB9r",
+   "name": "IG & Threads Video Studio",
+   "author": "@orpheuskaze",
+   "description": "Makes narrated vertical explainer videos for Reels, Threads and TikTok with Remotion and ElevenLabs, with captions and four cover options; weekly if you like.",
+   "url": "https://x.ai/bot/FM0bEUPNyu_yWflaBOB9r"
+  },
+  {
+   "id": "x-twitter-social-media-Vn8tnMK2GyiFmnWNoF0gT",
+   "code": "Vn8tnMK2GyiFmnWNoF0gT",
+   "name": "INDEXX",
+   "author": "Kevin Rose",
+   "description": "Turns your Instagram Saved posts and reels into a searchable, cited personal wiki with transcripts, tags, and creator…",
+   "url": "https://x.ai/bot/Vn8tnMK2GyiFmnWNoF0gT"
+  },
+  {
+   "id": "x-twitter-social-media-vgK95Y83dYJo4-bWAYJ_e",
+   "code": "vgK95Y83dYJo4-bWAYJ_e",
+   "name": "IdeaWatch",
+   "author": "Georg Grok",
+   "description": "Watches for copies, remixes or uncredited commercial use of ideas from your X posts, tracks their engagement, and keeps a log of imitators.",
+   "url": "https://x.ai/bot/vgK95Y83dYJo4-bWAYJ_e"
+  },
+  {
+   "id": "x-twitter-social-media-dEEWHz6Q_jLLCsIGIk4hD",
+   "code": "dEEWHz6Q_jLLCsIGIk4hD",
+   "name": "Incident Postmortem Desk",
+   "author": "Cypher",
+   "description": "Cited incident timeline, blameless analysis and a labeled root cause.",
+   "url": "https://x.ai/bot/dEEWHz6Q_jLLCsIGIk4hD"
+  },
+  {
+   "id": "x-twitter-social-media-bc_XHf6W4m2dwI9qGDiYU",
+   "code": "bc_XHf6W4m2dwI9qGDiYU",
+   "name": "Instagram Iris",
+   "author": "Frank Gonzalez",
+   "description": "Qualifies Instagram creators against an ICP you define, then drafts a hook from their recent posts and a DM you can…",
+   "url": "https://x.ai/bot/bc_XHf6W4m2dwI9qGDiYU"
+  },
+  {
+   "id": "x-twitter-social-media-RAGI8n5F27u6FB5YHJ48t",
+   "code": "RAGI8n5F27u6FB5YHJ48t",
+   "name": "Iris",
+   "author": "OutworkVentures",
+   "description": "Imaging and creative production specialist for product art, on-model images, social graphics, banners and print-ready artwork, with a strict.",
+   "url": "https://x.ai/bot/RAGI8n5F27u6FB5YHJ48t"
+  },
+  {
+   "id": "x-twitter-social-media-Ky0xwV840V9RZoTPQlne_",
+   "code": "Ky0xwV840V9RZoTPQlne_",
+   "name": "Jon Slop",
+   "author": "Eugene Ray",
+   "description": "Keeps watch on X for new music videos made with Slop Cannon (slop.cc) and sends you a short line for each one.",
+   "url": "https://x.ai/bot/Ky0xwV840V9RZoTPQlne_"
+  },
+  {
+   "id": "x-twitter-social-media-yW-Q1yis7-VCNKbeJ6g6Z",
+   "code": "yW-Q1yis7-VCNKbeJ6g6Z",
+   "name": "KLO",
+   "author": "Oren",
+   "description": "TikTok creative strategy from organic videos, comments, and ideas.",
+   "url": "https://x.ai/bot/yW-Q1yis7-VCNKbeJ6g6Z"
+  },
+  {
+   "id": "x-twitter-social-media-3iNSp9IoRCnSjh0Z6MtWZ",
+   "code": "3iNSp9IoRCnSjh0Z6MtWZ",
+   "name": "Kerf",
+   "author": "Oscar Morales",
+   "description": "An engagement PM that slices sold work into tickets and drives it.",
+   "url": "https://x.ai/bot/3iNSp9IoRCnSjh0Z6MtWZ"
+  },
+  {
+   "id": "x-twitter-social-media-LXZMn9iFYykfjhOdwffV6",
+   "code": "LXZMn9iFYykfjhOdwffV6",
+   "name": "Kindle Courier 2.0.0",
+   "author": "George Hong",
+   "description": "Send an article, X post or thread, video URL or a PDF/EPUB/DOCX; it turns web and video content into EPUBs and emails them to your Kindle.",
+   "url": "https://x.ai/bot/LXZMn9iFYykfjhOdwffV6"
+  },
+  {
+   "id": "x-twitter-social-media-XQWWJOzqzWz3ksBfQ8lz0",
+   "code": "XQWWJOzqzWz3ksBfQ8lz0",
+   "name": "Kindle Courier 2.0.1",
+   "author": "George Hong",
+   "description": "Send a public article, X post or thread, or video URL—or upload a PDF, EPUB or DOCX file.",
+   "url": "https://x.ai/bot/XQWWJOzqzWz3ksBfQ8lz0"
+  },
+  {
+   "id": "x-twitter-social-media-b3yeJkrslF4MWu1LUuyTE",
+   "code": "b3yeJkrslF4MWu1LUuyTE",
+   "name": "LaunchBot",
+   "author": "Paul Vann",
+   "description": "Helps founders launch products on X: studies similar launches, sharpens your launch post and materials, then tracks engagement and the conversation.",
+   "url": "https://x.ai/bot/b3yeJkrslF4MWu1LUuyTE"
+  },
+  {
+   "id": "x-twitter-social-media-i1t2YalPYA6_Aezsuxuas",
+   "code": "i1t2YalPYA6_Aezsuxuas",
+   "name": "Libre Pensador",
+   "author": "@alodie10",
+   "description": "Helps operators of local business guides evolve with AI agents: declarative Cursor specs, WhatsApp + Instagram…",
+   "url": "https://x.ai/bot/i1t2YalPYA6_Aezsuxuas"
+  },
+  {
+   "id": "x-twitter-social-media-2jelZnGWnAlhmvHFZOp1N",
+   "code": "2jelZnGWnAlhmvHFZOp1N",
+   "name": "LinkedIn Agent",
+   "author": "Ryan T",
+   "description": "A LinkedIn ghostwriter and networking assistant. It finds sourced topics in your lane, drafts posts and outreach in your voice.",
+   "url": "https://x.ai/bot/2jelZnGWnAlhmvHFZOp1N"
+  },
+  {
+   "id": "x-twitter-social-media-TtbtDOEfnPntO9DWANx3P",
+   "code": "TtbtDOEfnPntO9DWANx3P",
+   "name": "LinkedIn Agent",
+   "author": "Scott Metcalf",
+   "description": "LinkedIn specialist that audits and rewrites profiles so the current role leads, and runs weekday blank…",
+   "url": "https://x.ai/bot/TtbtDOEfnPntO9DWANx3P"
+  },
+  {
+   "id": "x-twitter-social-media-wmWF7EgQD3c1O3cSHFA0v",
+   "code": "wmWF7EgQD3c1O3cSHFA0v",
+   "name": "LinkedIn Automation",
+   "author": "Melvin Vivas",
+   "description": "Drafts LinkedIn posts in your voice, likes topic posts, and saves buyer-looking prospects into one Google Sheet per tab.",
+   "url": "https://x.ai/bot/wmWF7EgQD3c1O3cSHFA0v"
+  },
+  {
+   "id": "x-twitter-social-media-GyEovoZBfdoeEdJoYqwVP",
+   "code": "GyEovoZBfdoeEdJoYqwVP",
+   "name": "LinkedIn Bot",
+   "author": "SyftData Data",
+   "description": "Your LinkedIn memory for sales. Search your posts, network, and DMs (refreshed weekly from your export).",
+   "url": "https://x.ai/bot/GyEovoZBfdoeEdJoYqwVP"
+  },
+  {
+   "id": "x-twitter-social-media-zE2ZdbZSQc7tHfE7wa4kR",
+   "code": "zE2ZdbZSQc7tHfE7wa4kR",
+   "name": "LinkedIn Deck Desk",
+   "author": "Paresh",
+   "description": "Turns newsletters and source stories into LinkedIn carousel decks, QCs images/charts, then schedules standing series…",
+   "url": "https://x.ai/bot/zE2ZdbZSQc7tHfE7wa4kR"
+  },
+  {
+   "id": "x-twitter-social-media-tQuoQ94ErUfXNJu4xPqZi",
+   "code": "tQuoQ94ErUfXNJu4xPqZi",
+   "name": "LinkedIn Desk",
+   "author": "AJ Ghergich",
+   "description": "LinkedIn Desk helps you keep network quality high without living in LinkedIn, by reviewing connection requests…",
+   "url": "https://x.ai/bot/tQuoQ94ErUfXNJu4xPqZi"
+  },
+  {
+   "id": "x-twitter-social-media-tquoq94erufxnju4xpqzi",
+   "code": "tquoq94erufxnju4xpqzi",
+   "name": "LinkedIn Desk",
+   "author": "AJ",
+   "description": "LinkedIn Desk helps you keep network quality high without living in LinkedIn, by reviewing connection requests and LinkedIn invitations, sorting…",
+   "url": "https://x.ai/bot/tquoq94erufxnju4xpqzi"
+  },
+  {
+   "id": "x-twitter-social-media-5LgoQsKj1oOn67nX_j4Wy",
+   "code": "5LgoQsKj1oOn67nX_j4Wy",
+   "name": "LinkedIn Hook Writer",
+   "author": "Dilini",
+   "description": "Writes scroll-stopping LinkedIn post hooks for founders and B2B creators, using data-backed hook principles and a real-facts-only rule.",
+   "url": "https://x.ai/bot/5LgoQsKj1oOn67nX_j4Wy"
+  },
+  {
+   "id": "x-twitter-social-media-fk6q_R0fdzn9McGIzJk-9",
+   "code": "fk6q_R0fdzn9McGIzJk-9",
+   "name": "LinkedIn Lead Scout",
+   "author": "Konrad",
+   "description": "Researches matching B2B contacts per client for social media and LinkedIn consultants.",
+   "url": "https://x.ai/bot/fk6q_R0fdzn9McGIzJk-9"
+  },
+  {
+   "id": "x-twitter-social-media-RoPTRP7mgY41LgyiaZVA1",
+   "code": "RoPTRP7mgY41LgyiaZVA1",
+   "name": "LinkedIn Outreach",
+   "author": "blay on 𝕏",
+   "description": "Finds decision makers at companies that fit your ICP and can afford you, writes personal connection notes, sends them safely every day.",
+   "url": "https://x.ai/bot/RoPTRP7mgY41LgyiaZVA1"
+  },
+  {
+   "id": "x-twitter-social-media-qbBlMjsKq-1coFvbmnEaR",
+   "code": "qbBlMjsKq-1coFvbmnEaR",
+   "name": "LinkedIn Watch",
+   "author": "Dave Young",
+   "description": "Scheduled LinkedIn digest covering feed, messages, invites, views, and jobs.",
+   "url": "https://x.ai/bot/qbBlMjsKq-1coFvbmnEaR"
+  },
+  {
+   "id": "x-twitter-social-media-qbblmjskq-1cofvbmnear",
+   "code": "qbblmjskq-1cofvbmnear",
+   "name": "LinkedIn Watch",
+   "author": "Dave",
+   "description": "Standalone LinkedIn Watch: weekday digests in chat (and optional Announcr).",
+   "url": "https://x.ai/bot/qbblmjskq-1cofvbmnear"
+  },
+  {
+   "id": "x-twitter-social-media-1mbVjnfwK-2uJY34N_4Dd",
+   "code": "1mbVjnfwK-2uJY34N_4Dd",
+   "name": "Linkedin Post Writer",
+   "author": "ar33b",
+   "description": "Pulls useful insights from your work and turns them into LinkedIn posts.",
+   "url": "https://x.ai/bot/1mbVjnfwK-2uJY34N_4Dd"
+  },
+  {
+   "id": "x-twitter-social-media-qFHGsPu6CGtrug6Lm78rJ",
+   "code": "qFHGsPu6CGtrug6Lm78rJ",
+   "name": "LinkedinOutreach",
+   "author": "Quickfiling US",
+   "description": "General LinkedIn outreach bot: find and qualify people, then sequence profile views, connection requests, follow-ups…",
+   "url": "https://x.ai/bot/qFHGsPu6CGtrug6Lm78rJ"
+  },
+  {
+   "id": "x-twitter-social-media-FC-WB-ZUi654KHeHz9oBy",
+   "code": "FC-WB-ZUi654KHeHz9oBy",
+   "name": "Location Scout",
+   "author": "ISSA KHARI",
+   "description": "Scouts public, creator-friendly spots for photography, interviews and livestreams, with the rules, jurisdiction and who to ask, plus ten fresh places weekly.",
+   "url": "https://x.ai/bot/FC-WB-ZUi654KHeHz9oBy"
+  },
+  {
+   "id": "x-twitter-social-media-H0BOD-ZBe2p_7BESvqbo_",
+   "code": "H0BOD-ZBe2p_7BESvqbo_",
+   "name": "MARS CONTROL",
+   "author": "gip",
+   "description": "SpaceX-style mission control: three missions track official announcements, catch failures and draft X posts from verified findings every 6 hours. Approval first.",
+   "url": "https://x.ai/bot/H0BOD-ZBe2p_7BESvqbo_"
+  },
+  {
+   "id": "x-twitter-social-media-QCYjr5VyQAoDTywMogJbU",
+   "code": "QCYjr5VyQAoDTywMogJbU",
+   "name": "Mail Agency Outreach Sniper",
+   "author": "Philip",
+   "description": "Turns LinkedIn engagement into verified work emails and individually written intros.",
+   "url": "https://x.ai/bot/QCYjr5VyQAoDTywMogJbU"
+  },
+  {
+   "id": "x-twitter-social-media-39x_3B9P5HBl-MpK1xGzP",
+   "code": "39x_3B9P5HBl-MpK1xGzP",
+   "name": "Maskoff",
+   "author": "GreenbarSystems",
+   "description": "Defensive briefings on X accounts that DM you, or on a public follower or following list.",
+   "url": "https://x.ai/bot/39x_3B9P5HBl-MpK1xGzP"
+  },
+  {
+   "id": "x-twitter-social-media-l8hF6idbwPq2cthVTQLgC",
+   "code": "l8hF6idbwPq2cthVTQLgC",
+   "name": "Memory Reel",
+   "author": "Rich Silver",
+   "description": "Turns your public X posts into a 3D fly-through and scroll story of your eras, with a soundtrack, hosted on bot.ski after sign-in and human review.",
+   "url": "https://x.ai/bot/l8hF6idbwPq2cthVTQLgC"
+  },
+  {
+   "id": "x-twitter-social-media-d0KZkbBwG7-9BmnTbg9wn",
+   "code": "d0KZkbBwG7-9BmnTbg9wn",
+   "name": "Mia",
+   "author": "ℂamellia",
+   "description": "Social matchmaker bot: find people who share your interests, warm up their bots first, then help open a human intro…",
+   "url": "https://x.ai/bot/d0KZkbBwG7-9BmnTbg9wn"
+  },
+  {
+   "id": "x-twitter-social-media-KNoXvnLnkKME1TqhqJx8t",
+   "code": "KNoXvnLnkKME1TqhqJx8t",
+   "name": "Motivation Bot",
+   "author": "John Boyle",
+   "description": "Daily motivation to stay focused. Short notes from a curated X bookmark folder—one tight bubble a day, no fluff.",
+   "url": "https://x.ai/bot/KNoXvnLnkKME1TqhqJx8t"
+  },
+  {
+   "id": "x-twitter-social-media-hJPLrcDzGgHhLvEKXRcF1",
+   "code": "hJPLrcDzGgHhLvEKXRcF1",
+   "name": "Mr. Poteto Head",
+   "author": "Screaming Chicken",
+   "description": "Paste a post. Mr. Poteto Head digs their public posts for contradictions and similarities, then hands you 2–3 clapbacks to pick…",
+   "url": "https://x.ai/bot/hJPLrcDzGgHhLvEKXRcF1"
+  },
+  {
+   "id": "x-twitter-social-media-BJhe9l9IasV0gXFAnNO2W",
+   "code": "BJhe9l9IasV0gXFAnNO2W",
+   "name": "Muse",
+   "author": "William Li",
+   "description": "Transparent proxy for Meta’s Muse on the web: drive Muse for research and Meta social (Facebook, Instagram, Threads)…",
+   "url": "https://x.ai/bot/BJhe9l9IasV0gXFAnNO2W"
+  },
+  {
+   "id": "x-twitter-social-media-EUuVhfdZMiZZYYmeK3F7I",
+   "code": "EUuVhfdZMiZZYYmeK3F7I",
+   "name": "Name in Chinese 起名",
+   "author": "卫平 钟",
+   "description": "Gives anyone a good Chinese name matched to their own, meaningful and easy to say, plus ready-to-paste X posts.",
+   "url": "https://x.ai/bot/EUuVhfdZMiZZYYmeK3F7I"
+  },
+  {
+   "id": "x-twitter-social-media-ekyJWK5GWu3WcbFzrMBQZ",
+   "code": "ekyJWK5GWu3WcbFzrMBQZ",
+   "name": "National Dialogue",
+   "author": "Brett MacDonald",
+   "description": "Flags X accounts whose About this account shows a country other than yours, alerts on foreign interactions, and can…",
+   "url": "https://x.ai/bot/ekyJWK5GWu3WcbFzrMBQZ"
+  },
+  {
+   "id": "x-twitter-social-media-ia1zuEzDtPNyzFQ6o6F9x",
+   "code": "ia1zuEzDtPNyzFQ6o6F9x",
+   "name": "NuggetBot",
+   "author": "Usama Khalid",
+   "description": "Turns podcast episodes into social quote graphics and carousels via ContentDrips templates.",
+   "url": "https://x.ai/bot/ia1zuEzDtPNyzFQ6o6F9x"
+  },
+  {
+   "id": "x-twitter-social-media-pXW6OPoZLJS4A8bZtW466",
+   "code": "pXW6OPoZLJS4A8bZtW466",
+   "name": "Omni Scraper",
+   "author": "天 吴",
+   "description": "Paste a link from YouTube, Reddit, LinkedIn, Threads, Instagram, TikTok or X and get the full public content back: text, author, stats.",
+   "url": "https://x.ai/bot/pXW6OPoZLJS4A8bZtW466"
+  },
+  {
+   "id": "x-twitter-social-media-EAonX-eBCN0lXDz7gEpi7",
+   "code": "EAonX-eBCN0lXDz7gEpi7",
+   "name": "Paste → Post Pack",
+   "author": "Chill",
+   "description": "Paste one article, notes, or transcript. Get ready-to-post drafts: 3 X posts, a LinkedIn post, a newsletter blurb, and a short thread. Draft-only - you.",
+   "url": "https://x.ai/bot/EAonX-eBCN0lXDz7gEpi7"
+  },
+  {
+   "id": "x-twitter-social-media-ao7Mbz9AnEp7rI4KvokUK",
+   "code": "ao7Mbz9AnEp7rI4KvokUK",
+   "name": "People Log",
+   "author": "Tim",
+   "description": "A social-memory bot that remembers names and details about friends, coworkers, and neighbors — including photos — so you can add notes at events…",
+   "url": "https://x.ai/bot/ao7Mbz9AnEp7rI4KvokUK"
+  },
+  {
+   "id": "x-twitter-social-media-UcazP9A_LRigoW9b06QRo",
+   "code": "UcazP9A_LRigoW9b06QRo",
+   "name": "Plainwrap",
+   "author": "Code Solutions",
+   "description": "Plainwrap turns files, links, notes, threads, or long docs into plain English most people can read, then a paste-ready…",
+   "url": "https://x.ai/bot/UcazP9A_LRigoW9b06QRo"
+  },
+  {
+   "id": "x-twitter-social-media-1IietS8ODNyy7GssaDedJ",
+   "code": "1IietS8ODNyy7GssaDedJ",
+   "name": "Plus One Back",
+   "author": "Joris Dominicus Adam Paardekooper Overman",
+   "description": "Suggests short, kind X replies that make people feel heard; you approve every one before it posts. Pairs with the weekly coach Got Your Back.",
+   "url": "https://x.ai/bot/1IietS8ODNyy7GssaDedJ"
+  },
+  {
+   "id": "x-twitter-social-media-P-60edcD-vkizd08dh2g7",
+   "code": "P-60edcD-vkizd08dh2g7",
+   "name": "Podcast Recommender from X Bookmarks",
+   "author": "Donovan Quijada",
+   "description": "A podcast scout that learns your taste from your X bookmarks and sends you new episodes worth hearing every week.",
+   "url": "https://x.ai/bot/P-60edcD-vkizd08dh2g7"
+  },
+  {
+   "id": "x-twitter-social-media-FnaR1hjDeMEhYzDaUJUZo",
+   "code": "FnaR1hjDeMEhYzDaUJUZo",
+   "name": "Post Eraser",
+   "author": "Luke Carriere",
+   "description": "Erases your old social media posts, comments, and likes once they've served their purpose, on LinkedIn, Facebook…",
+   "url": "https://x.ai/bot/FnaR1hjDeMEhYzDaUJUZo"
+  },
+  {
+   "id": "x-twitter-social-media-5rZUrqJRbhct--M78hIWh",
+   "code": "5rZUrqJRbhct--M78hIWh",
+   "name": "Potetobot",
+   "author": "ChrisV.btc",
+   "description": "Reads an expert's X posts every week, picks out the pro tips, and suggests how your team could put each one to use.",
+   "url": "https://x.ai/bot/5rZUrqJRbhct--M78hIWh"
+  },
+  {
+   "id": "x-twitter-social-media-ybXMrluMLTr7EU0ohttgX",
+   "code": "ybXMrluMLTr7EU0ohttgX",
+   "name": "Promo Studio",
+   "author": "jeevan wijerathna",
+   "description": "Short-form video producer that turns any app or website into polished vertical promos for TikTok, Instagram Reels, YouTube Shorts and LinkedIn.",
+   "url": "https://x.ai/bot/ybXMrluMLTr7EU0ohttgX"
+  },
+  {
+   "id": "x-twitter-social-media-IdWDIBS6BHE2IClPwJ8WC",
+   "code": "IdWDIBS6BHE2IClPwJ8WC",
+   "name": "Purge Bot",
+   "author": "Phantom Builds",
+   "description": "Reviews your X followers and following, flags likely bots with reasons, and blocks them once you approve.",
+   "url": "https://x.ai/bot/IdWDIBS6BHE2IClPwJ8WC"
+  },
+  {
+   "id": "x-twitter-social-media-M2whAtqInvGpjA_XxuxXW",
+   "code": "M2whAtqInvGpjA_XxuxXW",
+   "name": "Qualify For Monetizatiom",
+   "author": "Mila Joy",
+   "description": "Keeps X creators eligible for Original Content Rewards by flagging thin quote-posts, borrowed video, promo plugs and engagement bait, with a fix for each.",
+   "url": "https://x.ai/bot/M2whAtqInvGpjA_XxuxXW"
+  },
+  {
+   "id": "x-twitter-social-media-Kv4vjq_-YbQnyvJQlpnGe",
+   "code": "Kv4vjq_-YbQnyvJQlpnGe",
+   "name": "Rainy Day",
+   "author": "Jacob Butler",
+   "description": "From Sahil Bloom's tweet: \"Keep proof that good things happen to you. Old photos. Kind messages. Positive feedback. Notes from great days.",
+   "url": "https://x.ai/bot/Kv4vjq_-YbQnyvJQlpnGe"
+  },
+  {
+   "id": "x-twitter-social-media-iscg84P3opJzawEucvqlr",
+   "code": "iscg84P3opJzawEucvqlr",
+   "name": "Range Safety",
+   "author": "Martin Kempa",
+   "description": "Scrubs emails, prices, hire notes, demos, tweets, and changelogs before you hit send.",
+   "url": "https://x.ai/bot/iscg84P3opJzawEucvqlr"
+  },
+  {
+   "id": "x-twitter-social-media-q66LYouguOxJ0VclM2whr",
+   "code": "q66LYouguOxJ0VclM2whr",
+   "name": "Ratio",
+   "author": "Don",
+   "description": "Finds the line in your post that will get quoted back at you.",
+   "url": "https://x.ai/bot/q66LYouguOxJ0VclM2whr"
+  },
+  {
+   "id": "x-twitter-social-media-p23Ddk9YaomESF7ujUDw0",
+   "code": "p23Ddk9YaomESF7ujUDw0",
+   "name": "Read & Decide",
+   "author": "George Hong",
+   "description": "Send an X post, thread, article link or text and get a scored Keep, Try or Skip verdict with an evidence check and next steps.",
+   "url": "https://x.ai/bot/p23Ddk9YaomESF7ujUDw0"
+  },
+  {
+   "id": "x-twitter-social-media-ndCgEghC1Blcy-eABmk7T",
+   "code": "ndCgEghC1Blcy-eABmk7T",
+   "name": "Read & Decide",
+   "author": "George",
+   "description": "Evaluate X posts, threads and articles: keep what matters, try what's useful, skip the rest.",
+   "url": "https://x.ai/bot/ndCgEghC1Blcy-eABmk7T"
+  },
+  {
+   "id": "x-twitter-social-media-NWFVgD_8QAd5aaZg_-B4T",
+   "code": "NWFVgD_8QAd5aaZg_-B4T",
+   "name": "Reality CheX",
+   "author": "Jay",
+   "description": "Paste a shocking or viral X post and it tells you if it's real, old, AI-made or misleading, with sources and left/center/right coverage.",
+   "url": "https://x.ai/bot/NWFVgD_8QAd5aaZg_-B4T"
+  },
+  {
+   "id": "x-twitter-social-media-3qFR1iwsgP36CC7ayKRfw",
+   "code": "3qFR1iwsgP36CC7ayKRfw",
+   "name": "RealityCheck",
+   "author": "John P",
+   "description": "Paste an X handle and get an authenticity score card with a number, color meter, and the top green and red flags from public profile signals.",
+   "url": "https://x.ai/bot/3qFR1iwsgP36CC7ayKRfw"
+  },
+  {
+   "id": "x-twitter-social-media-wUWBNyr-Y0BJwAKAT-I_J",
+   "code": "wUWBNyr-Y0BJwAKAT-I_J",
+   "name": "Recent Bookmarks Search Bot",
+   "author": "Sriram Natarajan",
+   "description": "Makes the posts you saved on X searchable in a plain sortable table.",
+   "url": "https://x.ai/bot/wUWBNyr-Y0BJwAKAT-I_J"
+  },
+  {
+   "id": "x-twitter-social-media-gIU1BopSXVMB4quJPCcOi",
+   "code": "gIU1BopSXVMB4quJPCcOi",
+   "name": "Reddit Deep Mystery Hunter",
+   "author": "Ace Op",
+   "description": "Every two hours finds one fresh, archive-verified Reddit story across 10 curious niches (mysteries, dark psychology, confessions and more). No Reddit API.",
+   "url": "https://x.ai/bot/gIU1BopSXVMB4quJPCcOi"
+  },
+  {
+   "id": "x-twitter-social-media-d20O3Bx5NypE-O-E_vKtp",
+   "code": "d20O3Bx5NypE-O-E_vKtp",
+   "name": "Reddit Reach",
+   "author": "DING WANG",
+   "description": "Gets Reddit working on a Grok Bot cloud computer when the datacenter IP is blocked.",
+   "url": "https://x.ai/bot/d20O3Bx5NypE-O-E_vKtp"
+  },
+  {
+   "id": "x-twitter-social-media-ydje9SAP_d0lIHxOdu2_j",
+   "code": "ydje9SAP_d0lIHxOdu2_j",
+   "name": "Reel 𝕏",
+   "author": "Phillip Holland",
+   "description": "Paste an Instagram, TikTok or YouTube Shorts link and get back an X-ready MP4 plus a copyable post draft that credits the creator.",
+   "url": "https://x.ai/bot/ydje9SAP_d0lIHxOdu2_j"
+  },
+  {
+   "id": "x-twitter-social-media-BfLelUIFr88x0JLkNwewO",
+   "code": "BfLelUIFr88x0JLkNwewO",
+   "name": "ReelForge",
+   "author": "Thuong P. Nguyen",
+   "description": "Trend-grounded content engine for creators and small brands: ideas, hooks, scripts, captions, shot lists and posting plans for TikTok, Reels and Shorts.",
+   "url": "https://x.ai/bot/BfLelUIFr88x0JLkNwewO"
+  },
+  {
+   "id": "x-twitter-social-media-MDxbQT9SNEdSQ63NJpgPh",
+   "code": "MDxbQT9SNEdSQ63NJpgPh",
+   "name": "Reelz",
+   "author": "zSirius",
+   "description": "A short-form video editor that turns your photos and clips into polished vertical reels for Instagram, TikTok…",
+   "url": "https://x.ai/bot/MDxbQT9SNEdSQ63NJpgPh"
+  },
+  {
+   "id": "x-twitter-social-media-dToDHHTIZFDURU6gBkU5X",
+   "code": "dToDHHTIZFDURU6gBkU5X",
+   "name": "Relay",
+   "author": "John",
+   "description": "Multi-surface social distribution agent for LinkedIn, Instagram, TikTok, Pinterest, and X. Drafts in your voice, queues a week for review, and never.",
+   "url": "https://x.ai/bot/dToDHHTIZFDURU6gBkU5X"
+  },
+  {
+   "id": "x-twitter-social-media-8usEEsKe7ByUJnVeJM2Ag",
+   "code": "8usEEsKe7ByUJnVeJM2Ag",
+   "name": "Reply & Post Drafter by Karata",
+   "author": "Karata",
+   "description": "Drafts social replies and posts for X, LinkedIn and Threads in your own voice and language, ready for you to edit and publish.",
+   "url": "https://x.ai/bot/8usEEsKe7ByUJnVeJM2Ag"
+  },
+  {
+   "id": "x-twitter-social-media-okn7PkNuUnjILecyESuRn",
+   "code": "okn7PkNuUnjILecyESuRn",
+   "name": "Reply Guy",
+   "author": "Netrovert",
+   "description": "Drafts X replies to your mutuals and picks viral posts to quote, all in your own voice. It never posts anything.",
+   "url": "https://x.ai/bot/okn7PkNuUnjILecyESuRn"
+  },
+  {
+   "id": "x-twitter-social-media-Ziv_ijWI1Phj_3zk4I9nE",
+   "code": "Ziv_ijWI1Phj_3zk4I9nE",
+   "name": "Reply Guy Filter",
+   "author": "Allan Robinson",
+   "description": "Cleans up your X replies: a daily digest with real conversations first, each with a draft reply idea, and spam and scam accounts flagged for blocking.",
+   "url": "https://x.ai/bot/Ziv_ijWI1Phj_3zk4I9nE"
+  },
+  {
+   "id": "x-twitter-social-media-v1dE8QQMdgiuvtiLB9Y4Z",
+   "code": "v1dE8QQMdgiuvtiLB9Y4Z",
+   "name": "Reply Queue",
+   "author": "Glenn Williams",
+   "description": "Read-only X bot: pulls replies, mentions and quotes on your recent posts and sorts them into a queue of the ones worth answering. You reply yourself.",
+   "url": "https://x.ai/bot/v1dE8QQMdgiuvtiLB9Y4Z"
+  },
+  {
+   "id": "x-twitter-social-media-puPDbZveO1FFvjCXERZoj",
+   "code": "puPDbZveO1FFvjCXERZoj",
+   "name": "Reply Radar",
+   "author": "Taylor | Capacity for More",
+   "description": "Finds fresh X posts on your topics worth replying to, whenever you ask or in a morning digest, and tells you why each one is worth it.",
+   "url": "https://x.ai/bot/puPDbZveO1FFvjCXERZoj"
+  },
+  {
+   "id": "x-twitter-social-media-bJGTcDqC4fAEdbw2SuZqM",
+   "code": "bJGTcDqC4fAEdbw2SuZqM",
+   "name": "Replydebt",
+   "author": "Turac",
+   "description": "Ends the unread-text shame spiral: triages ghosted threads, drafts a 1–2 line honest reopen, and tracks what you…",
+   "url": "https://x.ai/bot/bJGTcDqC4fAEdbw2SuZqM"
+  },
+  {
+   "id": "x-twitter-social-media-sdkLyL_a71YLxFUV8FplT",
+   "code": "sdkLyL_a71YLxFUV8FplT",
+   "name": "Repost Radar",
+   "author": "Mark G",
+   "description": "Finds uncredited reposts of your videos, clips and jokes across TikTok, Shorts, Instagram, Facebook, X and Reddit, logs proof in Notion and drafts claims.",
+   "url": "https://x.ai/bot/sdkLyL_a71YLxFUV8FplT"
+  },
+  {
+   "id": "x-twitter-social-media-M2jbahUCQCsNqdgGxAIj2",
+   "code": "M2jbahUCQCsNqdgGxAIj2",
+   "name": "Rerun Picker",
+   "author": "Glenn Williams",
+   "description": "Read-only X bot: finds your older X posts that did well and suggests which to post again, with a fresh angle. You decide and post yourself.",
+   "url": "https://x.ai/bot/M2jbahUCQCsNqdgGxAIj2"
+  },
+  {
+   "id": "x-twitter-social-media-l6KBRHcgf7o0epen41gB5",
+   "code": "l6KBRHcgf7o0epen41gB5",
+   "name": "Rivaldo bot",
+   "author": "Tyler",
+   "description": "Scans public X three times a day and sends a list of popular, active accounts worth following in the niches you pick. No X account linking needed.",
+   "url": "https://x.ai/bot/l6KBRHcgf7o0epen41gB5"
+  },
+  {
+   "id": "x-twitter-social-media-YfGoQi8hsL4G4hUGLSSAr",
+   "code": "YfGoQi8hsL4G4hUGLSSAr",
+   "name": " Improvement Bot",
+   "author": "Colin Crossman ₿",
+   "description": " (@) posts more good ideas for AI agents before breakfast than most of us have all week…",
+   "url": "https://x.ai/bot/YfGoQi8hsL4G4hUGLSSAr"
+  },
+  {
+   "id": "x-twitter-social-media-2pjaPOO1dbR_VrUMTiWHg",
+   "code": "2pjaPOO1dbR_VrUMTiWHg",
+   "name": "Samadhi - LinkedIn Writer",
+   "author": "Chatura Dilan",
+   "description": "Writes LinkedIn articles and posts as you, in first person.",
+   "url": "https://x.ai/bot/2pjaPOO1dbR_VrUMTiWHg"
+  },
+  {
+   "id": "x-twitter-social-media-tEsWijg6kaDbi-3aY6who",
+   "code": "tEsWijg6kaDbi-3aY6who",
+   "name": "Scorecard",
+   "author": "michaelheckert",
+   "description": "Every Monday scores your last week on X like a fight card, using X's open-source ranking weights against your own 4-week baseline, plus 3 data-backed fixes.",
+   "url": "https://x.ai/bot/tEsWijg6kaDbi-3aY6who"
+  },
+  {
+   "id": "x-twitter-social-media-W_p8KaIOmeVwfc-jKRFyx",
+   "code": "W_p8KaIOmeVwfc-jKRFyx",
+   "name": "ScrollSaver",
+   "author": "Darius Ziai",
+   "description": "Send it any Instagram reel, TikTok, story screenshot, blog or list, and it pins every place, tags it and remembers it for your next trip.",
+   "url": "https://x.ai/bot/W_p8KaIOmeVwfc-jKRFyx"
+  },
+  {
+   "id": "x-twitter-social-media-MMCVsJ0cyBuZD-4tD7dKw",
+   "code": "MMCVsJ0cyBuZD-4tD7dKw",
+   "name": "Scrollstopper · Social Media Manager",
+   "author": "Daniel Wilson",
+   "description": "Social media manager for one or more brands: learns each voice, writes native posts, schedules, replies to comments, weekly report. Draft-only by default.",
+   "url": "https://x.ai/bot/MMCVsJ0cyBuZD-4tD7dKw"
+  },
+  {
+   "id": "x-twitter-social-media-4copLsH4o6nuTJhd6Xy1g",
+   "code": "4copLsH4o6nuTJhd6Xy1g",
+   "name": "Sentry Mode",
+   "author": "Local Cool Guy",
+   "description": "Helps safeguard against the php2shell vulnerability and monitors the situation from official sources on X.",
+   "url": "https://x.ai/bot/4copLsH4o6nuTJhd6Xy1g"
+  },
+  {
+   "id": "x-twitter-social-media-oMU6GmI59Z1jtPUooMLLJ",
+   "code": "oMU6GmI59Z1jtPUooMLLJ",
+   "name": "Sharenow Feed Bot",
+   "author": "Sheing Ng",
+   "description": "Give it a topic. It tracks Instagram, X, Threads, YouTube, TikTok, and similar sources every hour and publishes a live…",
+   "url": "https://x.ai/bot/oMU6GmI59Z1jtPUooMLLJ"
+  },
+  {
+   "id": "x-twitter-social-media-bfXqOg8N5WUta6JpbdSz_",
+   "code": "bfXqOg8N5WUta6JpbdSz_",
+   "name": "Shed Social Posts",
+   "author": "Dindu Nuffin",
+   "description": "Writes short, honest local Facebook posts, Marketplace listings and Craigslist ads for portable building and shed dealers. Drafts only.",
+   "url": "https://x.ai/bot/bfXqOg8N5WUta6JpbdSz_"
+  },
+  {
+   "id": "x-twitter-social-media-Ozmc1X3HNxehT0xz2G4cK",
+   "code": "Ozmc1X3HNxehT0xz2G4cK",
+   "name": "Sift",
+   "author": "Snake Eyes",
+   "description": "Judges each dropped link, thought, or X bookmark as keep, act, or kill, and traces hype posts back to the real source.",
+   "url": "https://x.ai/bot/Ozmc1X3HNxehT0xz2G4cK"
+  },
+  {
+   "id": "x-twitter-social-media-CT_1GTQjGruBW3ZuYM_h2",
+   "code": "CT_1GTQjGruBW3ZuYM_h2",
+   "name": "Signal Scout",
+   "author": "Orah Petri",
+   "description": "Ranks the top 20 supporters of an X account in four lists: likes, reposts, quote posts, and replies, based only on the account's original posts.",
+   "url": "https://x.ai/bot/CT_1GTQjGruBW3ZuYM_h2"
+  },
+  {
+   "id": "x-twitter-social-media-k52i6aFytc3an6PabakvN",
+   "code": "k52i6aFytc3an6PabakvN",
+   "name": "Skool Community Bot",
+   "author": "Shawn",
+   "description": "Helps community admins run a Skool group: members, posts, personalized follow-ups, and Q&A collation.",
+   "url": "https://x.ai/bot/k52i6aFytc3an6PabakvN"
+  },
+  {
+   "id": "x-twitter-social-media-wDVFJmSK67btMnZBwcgic",
+   "code": "wDVFJmSK67btMnZBwcgic",
+   "name": "Small Business Social Media Manager",
+   "author": "The Meganator",
+   "description": "Your own social media manager for a small business. It writes on-brand captions, makes Instagram and Facebook graphics from your logo and photos.",
+   "url": "https://x.ai/bot/wDVFJmSK67btMnZBwcgic"
+  },
+  {
+   "id": "x-twitter-social-media-zJCG8H4aahs5Ex1bwrTum",
+   "code": "zJCG8H4aahs5Ex1bwrTum",
+   "name": "Social Cross-Poster",
+   "author": "Cristopher Guido",
+   "description": "Turns one idea, link, image, or video into captions for each of your social platforms and schedules them through your own free Buffer account.",
+   "url": "https://x.ai/bot/zJCG8H4aahs5Ex1bwrTum"
+  },
+  {
+   "id": "x-twitter-social-media-4vmlCUGEy8sWSWsj2j5tz",
+   "code": "4vmlCUGEy8sWSWsj2j5tz",
+   "name": "Social Media",
+   "author": "Gabriel",
+   "description": "Queues the finished posts and pushes each one live at the right local hour.",
+   "url": "https://x.ai/bot/4vmlCUGEy8sWSWsj2j5tz"
+  },
+  {
+   "id": "x-twitter-social-media-DGDeN5rC5ACPMHe0g__qh",
+   "code": "DGDeN5rC5ACPMHe0g__qh",
+   "name": "Social Media Auditor",
+   "author": "Jenny Marquis",
+   "description": "Audits your own social media post archives for privacy and safety risks. Never posts, deletes or searches the web about you; you make every change.",
+   "url": "https://x.ai/bot/DGDeN5rC5ACPMHe0g__qh"
+  },
+  {
+   "id": "x-twitter-social-media-gWaVjPTfktx831mfsXPcH",
+   "code": "gWaVjPTfktx831mfsXPcH",
+   "name": "Social Media Creator Bot",
+   "author": "Luca Röder",
+   "description": "An AI creator assistant that thinks like a creator: ideas, hooks, scripts, post analysis, and collab proofing - turning concepts into content…",
+   "url": "https://x.ai/bot/gWaVjPTfktx831mfsXPcH"
+  },
+  {
+   "id": "x-twitter-social-media-IIpqei3mrbiDeXL-cuhQo",
+   "code": "IIpqei3mrbiDeXL-cuhQo",
+   "name": "Social Media Manager",
+   "author": "Charles Bonetti",
+   "description": "Learns your voice from your own posts, keeps a weekly content calendar, drafts posts and replies per platform, and adjusts from what performed.",
+   "url": "https://x.ai/bot/IIpqei3mrbiDeXL-cuhQo"
+  },
+  {
+   "id": "x-twitter-social-media-DqAO8x8wjsb7jazJCBEdl",
+   "code": "DqAO8x8wjsb7jazJCBEdl",
+   "name": "Social Media Manager",
+   "author": "Vishvajeet Shukla",
+   "description": "Runs your brand's Instagram and X: content calendar, visuals, scheduled posting from a signed-in browser after your approval, and every live link sent back.",
+   "url": "https://x.ai/bot/DqAO8x8wjsb7jazJCBEdl"
+  },
+  {
+   "id": "x-twitter-social-media-EN9Ftdn8ZaoLEg-SLPkZL",
+   "code": "EN9Ftdn8ZaoLEg-SLPkZL",
+   "name": "Social Media Manager",
+   "author": "Upesh Bishwakarma",
+   "description": "Turns your daily news emails and your own story into short, high-hook posts for X and Threads, publishes through Buffer and tunes hooks on real results.",
+   "url": "https://x.ai/bot/EN9Ftdn8ZaoLEg-SLPkZL"
+  },
+  {
+   "id": "x-twitter-social-media-Jh9Rlh-ynMYjCqw4V6B9X",
+   "code": "Jh9Rlh-ynMYjCqw4V6B9X",
+   "name": "Social Media Manager",
+   "author": "Stacy Burnett",
+   "description": "Learns from your real post history, posts in your voice through Buffer and can auto-post a daily verse, quote or tip.",
+   "url": "https://x.ai/bot/Jh9Rlh-ynMYjCqw4V6B9X"
+  },
+  {
+   "id": "x-twitter-social-media-Cfl2KaSwJw20vkq1kgjXA",
+   "code": "Cfl2KaSwJw20vkq1kgjXA",
+   "name": "Social Media Manager",
+   "author": "Daniel",
+   "description": "German-language content bot for creators: hooks, text posts, carousel drafts and weekly plans for TikTok, Instagram, YouTube, X and LinkedIn.",
+   "url": "https://x.ai/bot/Cfl2KaSwJw20vkq1kgjXA"
+  },
+  {
+   "id": "x-twitter-social-media-s634cb1edf26493e86be2",
+   "code": "s634cb1edf26493e86be2",
+   "name": "Social Media Manager",
+   "author": "SpaceX",
+   "description": "Studies your posting history, drafts when something noteworthy ships, and parks the post for you to publish.",
+   "url": "https://x.ai/bot/s634cb1edf26493e86be2"
+  },
+  {
+   "id": "x-twitter-social-media-JYf4g6Fp2mfxpEq4B-S2e",
+   "code": "JYf4g6Fp2mfxpEq4B-S2e",
+   "name": "Social Media Salesperson",
+   "author": "Coconut Chris",
+   "description": "Runs your small business's socials: posts about your product, checks your messages, and sends you an easy-to-read daily…",
+   "url": "https://x.ai/bot/JYf4g6Fp2mfxpEq4B-S2e"
+  },
+  {
+   "id": "x-twitter-social-media-Xp5k82r21UvTani1ndv-b",
+   "code": "Xp5k82r21UvTani1ndv-b",
+   "name": "Social Media by Eclincher",
+   "author": "Tal Mikaelovich",
+   "description": "Your social media AI agent - schedule and publish posts, receive and reply to every social inbox interactions…",
+   "url": "https://x.ai/bot/Xp5k82r21UvTani1ndv-b"
+  },
+  {
+   "id": "x-twitter-social-media-xp5k82r21uvtani1ndv-b",
+   "code": "xp5k82r21uvtani1ndv-b",
+   "name": "Social Media by Eclincher",
+   "author": "Tal",
+   "description": "Your social media AI agent - schedule and publish posts, receive and reply to every social inbox interactions (messages, comments and reviews)…",
+   "url": "https://x.ai/bot/xp5k82r21uvtani1ndv-b"
+  },
+  {
+   "id": "x-twitter-social-media-A5g9s0QB5zZtaOWZPoawT",
+   "code": "A5g9s0QB5zZtaOWZPoawT",
+   "name": "Social Ops Bot",
+   "author": "JC",
+   "description": "Personal X hygiene OS: inactive-first purge, soft-stop batches, verified KEEP, clear tags, and drafts-only until you…",
+   "url": "https://x.ai/bot/A5g9s0QB5zZtaOWZPoawT"
+  },
+  {
+   "id": "x-twitter-social-media-gx7FJw32Ldu94CNhMELBR",
+   "code": "gx7FJw32Ldu94CNhMELBR",
+   "name": "Social Post Desk HOOK-SMITH",
+   "author": "Cypher",
+   "description": "One brief becomes three platform-fit posts with hooks and alt text.",
+   "url": "https://x.ai/bot/gx7FJw32Ldu94CNhMELBR"
+  },
+  {
+   "id": "x-twitter-social-media-V84j989EfSSeuL0On3JSR",
+   "code": "V84j989EfSSeuL0On3JSR",
+   "name": "Social Sidekick — A Week of Posts, Planned in One Sitting",
+   "author": "News Gurus",
+   "description": "Plans a small business's social media a week at a time and drafts every post in the owner's voice for approval. Nothing posts without the owner's yes.",
+   "url": "https://x.ai/bot/V84j989EfSSeuL0On3JSR"
+  },
+  {
+   "id": "x-twitter-social-media-IRLoWA2QOfhsBQtQ1d79Z",
+   "code": "IRLoWA2QOfhsBQtQ1d79Z",
+   "name": "Social Supervisor",
+   "author": "Growth CRO",
+   "description": "Weekday X digests, raised-hand reply flags, and draft-only posts for founders running a brand account plus a product account. Never posts without your yes.",
+   "url": "https://x.ai/bot/IRLoWA2QOfhsBQtQ1d79Z"
+  },
+  {
+   "id": "x-twitter-social-media-JKjtbyx4CxCiy-IWjlUQ0",
+   "code": "JKjtbyx4CxCiy-IWjlUQ0",
+   "name": "Socials · Henry - Manager",
+   "author": "Drew",
+   "description": "Watches your upload folder for new short videos, briefs TikTok, Shorts and Instagram bots with captions and covers, verifies links and archives files.",
+   "url": "https://x.ai/bot/JKjtbyx4CxCiy-IWjlUQ0"
+  },
+  {
+   "id": "x-twitter-social-media-0EPl4hGRjKUqGhDpr44sa",
+   "code": "0EPl4hGRjKUqGhDpr44sa",
+   "name": "Sovereign Discernment",
+   "author": "Evariel, FlameBeacon",
+   "description": "Examines extraordinary, spiritual, historical, scientific, viral, or controversial claims without reflexively believing…",
+   "url": "https://x.ai/bot/0EPl4hGRjKUqGhDpr44sa"
+  },
+  {
+   "id": "x-twitter-social-media-8w67xlhpYb_vXdNfDuBbE",
+   "code": "8w67xlhpYb_vXdNfDuBbE",
+   "name": "Sponsorship Hunter",
+   "author": "Ryan",
+   "description": "Built for small creators on X. It studies your account and niche, interviews you, then hunts the realistic sponsors…",
+   "url": "https://x.ai/bot/8w67xlhpYb_vXdNfDuBbE"
+  },
+  {
+   "id": "x-twitter-social-media-rET0A-uXf1XKqb_z5vjwl",
+   "code": "rET0A-uXf1XKqb_z5vjwl",
+   "name": "Stick Cut",
+   "author": "Michael Heckert",
+   "description": "Turns a two-sided concept into a looping stick-figure explainer for X, Reels, or TikTok. You post it.",
+   "url": "https://x.ai/bot/rET0A-uXf1XKqb_z5vjwl"
+  },
+  {
+   "id": "x-twitter-social-media-AOKZSCcTiE2lcv6EaRGWJ",
+   "code": "AOKZSCcTiE2lcv6EaRGWJ",
+   "name": "Stream Night Producer",
+   "author": "Mark G",
+   "description": "Turns a finished Twitch, YouTube, Kick or TikTok LIVE stream into a content pack: best-moment timestamps, hooks, captions, scheduled posts and a weekly recap.",
+   "url": "https://x.ai/bot/AOKZSCcTiE2lcv6EaRGWJ"
+  },
+  {
+   "id": "x-twitter-social-media-zKXcUpXeeyFB-QnWOZ_V8",
+   "code": "zKXcUpXeeyFB-QnWOZ_V8",
+   "name": "TBR Bot",
+   "author": "MADDIE",
+   "description": "Adds books to your to-be-read list on Goodreads, The StoryGraph or Margins from a tag on X, a title, link, cover photo or list, finding the right edition.",
+   "url": "https://x.ai/bot/zKXcUpXeeyFB-QnWOZ_V8"
+  },
+  {
+   "id": "x-twitter-social-media-PaYvPhWPSynlUwFqMX7nc",
+   "code": "PaYvPhWPSynlUwFqMX7nc",
+   "name": "Tech Demos",
+   "author": "Matt Palmer",
+   "description": "Weekday X-bookmark scout that picks one new library to demo, asks for approval, then plans and builds it in a sticky monorepo with a Cursor cloud agent.",
+   "url": "https://x.ai/bot/PaYvPhWPSynlUwFqMX7nc"
+  },
+  {
+   "id": "x-twitter-social-media-zvkkoHMbclsUBWX8MRGpU",
+   "code": "zvkkoHMbclsUBWX8MRGpU",
+   "name": "Tech Demos",
+   "author": "Matt",
+   "description": "Weekday X-bookmark scout that picks one new library to demo, asks for approval, then plans and builds it in a sticky monorepo with a Cursor cloud agent…",
+   "url": "https://x.ai/bot/zvkkoHMbclsUBWX8MRGpU"
+  },
+  {
+   "id": "x-twitter-social-media-P7qXlM4_hZtPMQz3Ayq0w",
+   "code": "P7qXlM4_hZtPMQz3Ayq0w",
+   "name": "The Bouncer",
+   "author": "Dev",
+   "description": "A read-only follower checkup for your X account.",
+   "url": "https://x.ai/bot/P7qXlM4_hZtPMQz3Ayq0w"
+  },
+  {
+   "id": "x-twitter-social-media-LPYZ_0hrisOvglN1cdDQl",
+   "code": "LPYZ_0hrisOvglN1cdDQl",
+   "name": "The Degen Oracle",
+   "author": "dcbk2la",
+   "description": "A voice-first, 21+ live natal-chart roast bot with a filthy, foul-mouthed character who roasts callers from their public X posts, then close.",
+   "url": "https://x.ai/bot/LPYZ_0hrisOvglN1cdDQl"
+  },
+  {
+   "id": "x-twitter-social-media-P6DhuDG7K0XZopd719cTn",
+   "code": "P6DhuDG7K0XZopd719cTn",
+   "name": "The Engagement Overlord",
+   "author": "franklin washington headpants",
+   "description": "An X growth and monetization strategist that runs daily tactical audits, tracks rolling conversion rules and surfaces early trend waves for creators.",
+   "url": "https://x.ai/bot/P6DhuDG7K0XZopd719cTn"
+  },
+  {
+   "id": "x-twitter-social-media-VQYoIcMIuXM4w80F8T8SN",
+   "code": "VQYoIcMIuXM4w80F8T8SN",
+   "name": "The Posting Tool",
+   "author": "CryptoBandit",
+   "description": "Schedules your short-form videos and posts to X, Threads, TikTok, Instagram, Pinterest and YouTube from your own signed-in browser, using each app's.",
+   "url": "https://x.ai/bot/VQYoIcMIuXM4w80F8T8SN"
+  },
+  {
+   "id": "x-twitter-social-media-Trx7riJWgecW9w0dUKqX7",
+   "code": "Trx7riJWgecW9w0dUKqX7",
+   "name": "Threads",
+   "author": "@CattoIs2Pure",
+   "description": "A clothes research scout that finds clothing and outfits that fit your size, style and budget, with real checked links and fit notes.",
+   "url": "https://x.ai/bot/Trx7riJWgecW9w0dUKqX7"
+  },
+  {
+   "id": "x-twitter-social-media-d-8Ufl3xjScgPS7putqr7",
+   "code": "d-8Ufl3xjScgPS7putqr7",
+   "name": "TikTok Downloader",
+   "author": "Heidi",
+   "description": "Paste a TikTok link and get the video, or just its audio, saved straight to your computer.",
+   "url": "https://x.ai/bot/d-8Ufl3xjScgPS7putqr7"
+  },
+  {
+   "id": "x-twitter-social-media-PLxGQF8aNfsr5rVhkWgoY",
+   "code": "PLxGQF8aNfsr5rVhkWgoY",
+   "name": "Tookie-osint",
+   "author": "Fine_Computer_4451",
+   "description": "Username and social-account OSINT with the Tookie-OSINT CLI: run scans, verify public hits, triage footprints.",
+   "url": "https://x.ai/bot/PLxGQF8aNfsr5rVhkWgoY"
+  },
+  {
+   "id": "x-twitter-social-media-P5LQmae3SiedJaU1ikDc7",
+   "code": "P5LQmae3SiedJaU1ikDc7",
+   "name": "Topic Miner",
+   "author": "winch",
+   "description": "Finds the best-performing posts from X accounts your size in your niche and turns their winning themes into questions you can answer as your own posts.",
+   "url": "https://x.ai/bot/P5LQmae3SiedJaU1ikDc7"
+  },
+  {
+   "id": "x-twitter-social-media-22XPum6Dznc_jnPeuWGTt",
+   "code": "22XPum6Dznc_jnPeuWGTt",
+   "name": "Truffle",
+   "author": "Eugene Ray",
+   "description": "Finds small, high-quality X accounts in your interests that you probably don't follow yet. Reads your public profile, proposes niches, and sends picks.",
+   "url": "https://x.ai/bot/22XPum6Dznc_jnPeuWGTt"
+  },
+  {
+   "id": "x-twitter-social-media-e5dNa8n9x4U93UHaCb5nS",
+   "code": "e5dNa8n9x4U93UHaCb5nS",
+   "name": "Twitter Automations",
+   "author": "NM",
+   "description": "Three X automations for creators: DM people who comment a keyword on a post, queue new followers above a size floor…",
+   "url": "https://x.ai/bot/e5dNa8n9x4U93UHaCb5nS"
+  },
+  {
+   "id": "x-twitter-social-media-Q8Xhvm0wDjfOstgMEER0G",
+   "code": "Q8Xhvm0wDjfOstgMEER0G",
+   "name": "Unfollow Checker",
+   "author": "The Dutch D Guy",
+   "description": "Scans your X following list for unverified accounts that don't follow you back and sends you 10 every hour…",
+   "url": "https://x.ai/bot/Q8Xhvm0wDjfOstgMEER0G"
+  },
+  {
+   "id": "x-twitter-social-media-l7teR_Bwnhh4kTSb-S97a",
+   "code": "l7teR_Bwnhh4kTSb-S97a",
+   "name": "UniFlow Social Agent",
+   "author": "Bosotter",
+   "description": "A social media content strategist that plans your week of posts and writes drafts for X, Instagram, Facebook, LinkedIn, Threads, Bluesky and more.",
+   "url": "https://x.ai/bot/l7teR_Bwnhh4kTSb-S97a"
+  },
+  {
+   "id": "x-twitter-social-media-okQ3Ka19Qk1-zsxPyUnuc",
+   "code": "okQ3Ka19Qk1-zsxPyUnuc",
+   "name": "Vidmoat Bot",
+   "author": "Vidmoat",
+   "description": "Cuts, previews, and renders videos in Vidmoat over MCP into an editable timeline.",
+   "url": "https://x.ai/bot/okQ3Ka19Qk1-zsxPyUnuc"
+  },
+  {
+   "id": "x-twitter-social-media-Q6AwABs_6Nt0Lx8LzR-A_",
+   "code": "Q6AwABs_6Nt0Lx8LzR-A_",
+   "name": "Viral Analyst",
+   "author": "Matt Kloss",
+   "description": "Paste any X post you want to analyze into chat.",
+   "url": "https://x.ai/bot/Q6AwABs_6Nt0Lx8LzR-A_"
+  },
+  {
+   "id": "x-twitter-social-media-YoKjYXQZ4OMNtznET-95p",
+   "code": "YoKjYXQZ4OMNtznET-95p",
+   "name": "Viral Content Engine",
+   "author": "Mark G",
+   "description": "Runs your X and Facebook like a viral team: studies what's going viral in your niche, writes posts in your voice, makes images, schedules in Buffer.",
+   "url": "https://x.ai/bot/YoKjYXQZ4OMNtznET-95p"
+  },
+  {
+   "id": "x-twitter-social-media-2PFbeYTG4otCuqEUoLuFT",
+   "code": "2PFbeYTG4otCuqEUoLuFT",
+   "name": "Viral Selling Video Bot",
+   "author": "ny ny",
+   "description": "Remakes proven viral TikTok Shop selling videos with your own product: you get the prompt, a shot list and an English voiceover script.",
+   "url": "https://x.ai/bot/2PFbeYTG4otCuqEUoLuFT"
+  },
+  {
+   "id": "x-twitter-social-media-4bJ-2aGtqx2RdiveCB3CH",
+   "code": "4bJ-2aGtqx2RdiveCB3CH",
+   "name": "Visual Explainer",
+   "author": "JB",
+   "description": "Makes upload-ready explainer, promo and social videos and story graphics, with motion graphics built in code and AI voice-over.",
+   "url": "https://x.ai/bot/4bJ-2aGtqx2RdiveCB3CH"
+  },
+  {
+   "id": "x-twitter-social-media-1-S1yhsX6eEcPs9yik3oh",
+   "code": "1-S1yhsX6eEcPs9yik3oh",
+   "name": "Weekend Edition",
+   "author": "Nathan Glass",
+   "description": "Turn your saved links and X bookmarks into a weekly newspaper you can print.",
+   "url": "https://x.ai/bot/1-S1yhsX6eEcPs9yik3oh"
+  },
+  {
+   "id": "x-twitter-social-media-pFygGG8IU67dM2S7WitaT",
+   "code": "pFygGG8IU67dM2S7WitaT",
+   "name": "Weekender",
+   "author": "Jeff Dillehunt",
+   "description": "Social events coordinator for weekends that actually happen.",
+   "url": "https://x.ai/bot/pFygGG8IU67dM2S7WitaT"
+  },
+  {
+   "id": "x-twitter-social-media-CdS3F5zD1W9yCZPVil9sy",
+   "code": "CdS3F5zD1W9yCZPVil9sy",
+   "name": "Weekly X Strategist",
+   "author": "NU:",
+   "description": "A weekly read-only review of your X posts that scores only posts 48+ hours old and gives one pattern that works and one post to make next.",
+   "url": "https://x.ai/bot/CdS3F5zD1W9yCZPVil9sy"
+  },
+  {
+   "id": "x-twitter-social-media-gDPOM4zR1g4iIu7ha0NtM",
+   "code": "gDPOM4zR1g4iIu7ha0NtM",
+   "name": "Weltzeit-Rechner",
+   "author": "Georg Grok",
+   "description": "Tells you when worldwide events, livestreams and rocket launches happen in your own time zone, and makes shareable…",
+   "url": "https://x.ai/bot/gDPOM4zR1g4iIu7ha0NtM"
+  },
+  {
+   "id": "x-twitter-social-media--RqJTM0pNj5ngTnbKaCT2",
+   "code": "-RqJTM0pNj5ngTnbKaCT2",
+   "name": "X Academy",
+   "author": "Nomis",
+   "description": "Finds genuinely free courses, workshops and teaching threads on X, flags scams and hidden paywalls, and can turn a topic into a 6-12 lesson course.",
+   "url": "https://x.ai/bot/-RqJTM0pNj5ngTnbKaCT2"
+  },
+  {
+   "id": "x-twitter-social-media-F9fQmTvQ07m-5HvwvW7kw",
+   "code": "F9fQmTvQ07m-5HvwvW7kw",
+   "name": "X Account Manager",
+   "author": "@booglefoozle",
+   "description": "Runs an X account hands-off: original posts, warm replies, credited reposts, follow-backs, community joins, a nightly quote and weekly reports.",
+   "url": "https://x.ai/bot/F9fQmTvQ07m-5HvwvW7kw"
+  },
+  {
+   "id": "x-twitter-social-media-pZshXLsm2c1MYfWf1ngYp",
+   "code": "pZshXLsm2c1MYfWf1ngYp",
+   "name": "X Account Strategist",
+   "author": "Ashish P",
+   "description": "For founders, operators, and business leaders who need distribution and a real network on X.",
+   "url": "https://x.ai/bot/pZshXLsm2c1MYfWf1ngYp"
+  },
+  {
+   "id": "x-twitter-social-media-7V6XbVZRZ04eHej3tJIAQ",
+   "code": "7V6XbVZRZ04eHej3tJIAQ",
+   "name": "X Agent",
+   "author": "Mikko Uusitalo",
+   "description": "Helps you stay on top of social without handing over the mic: scouts AI and coding conversations, drafts replies…",
+   "url": "https://x.ai/bot/7V6XbVZRZ04eHej3tJIAQ"
+  },
+  {
+   "id": "x-twitter-social-media-UmGyUKTHDS4-ziSOlsUeV",
+   "code": "UmGyUKTHDS4-ziSOlsUeV",
+   "name": "X Articles You Missed",
+   "author": "",
+   "description": "Finds the best long-form X Articles from the last 24 hours on the topics you choose and gives you up to 10 short summaries in one brief, on demand or every morning.",
+   "url": "https://x.ai/bot/UmGyUKTHDS4-ziSOlsUeV"
+  },
+  {
+   "id": "x-twitter-social-media-s50oGLZfiPNSKuTlGsscA",
+   "code": "s50oGLZfiPNSKuTlGsscA",
+   "name": "X Audit",
+   "author": "Divine 〽achine",
+   "description": "Audits your own X history for reputational-risk posts and sorts clear ambiguous and screenshot-risk findings.",
+   "url": "https://x.ai/bot/s50oGLZfiPNSKuTlGsscA"
+  },
+  {
+   "id": "x-twitter-social-media-qGEtpq_ltLip9Rbpj6khE",
+   "code": "qGEtpq_ltLip9Rbpj6khE",
+   "name": "X Bookmark Brain",
+   "author": "@orpheuskaze",
+   "description": "Turns your X bookmarks into a searchable knowledge base and action list, with a weekday digest of content ideas, alpha, and reminders.",
+   "url": "https://x.ai/bot/qGEtpq_ltLip9Rbpj6khE"
+  },
+  {
+   "id": "x-twitter-social-media-0HhqUJQH2FwInXRK5SVZ5",
+   "code": "0HhqUJQH2FwInXRK5SVZ5",
+   "name": "X Bookmark Demos",
+   "author": "Jaime Hernandez",
+   "description": "Reads your X bookmarks daily, pitches one or two tools worth trying, and once you approve, installs and live-tests them on its own computer.",
+   "url": "https://x.ai/bot/0HhqUJQH2FwInXRK5SVZ5"
+  },
+  {
+   "id": "x-twitter-social-media-kD7dWJasb_V3a49-qI40N",
+   "code": "kD7dWJasb_V3a49-qI40N",
+   "name": "X Bookmark Top10",
+   "author": "H",
+   "description": "Every morning, sends the 10 most-bookmarked X posts on your topic from the last 24 hours, each summarized in a sentence with a link, and flags scams.",
+   "url": "https://x.ai/bot/kD7dWJasb_V3a49-qI40N"
+  },
+  {
+   "id": "x-twitter-social-media--E-dAdiMopdN7HICcOp_H",
+   "code": "-E-dAdiMopdN7HICcOp_H",
+   "name": "X Bookmarks",
+   "author": "Moritz Kremb",
+   "description": "Turns your X bookmarks into a living knowledge-base Page, searchable by purpose, project and takeaway, refreshed daily.",
+   "url": "https://x.ai/bot/-E-dAdiMopdN7HICcOp_H"
+  },
+  {
+   "id": "x-twitter-social-media-wqpbL8VPhO575k2dClEGo",
+   "code": "wqpbL8VPhO575k2dClEGo",
+   "name": "X Bookmarks Daily",
+   "author": "Josef Sopiarz",
+   "description": "Reads your X bookmarks, likes and For You feed every day and sends a themed summary with a chart, plus a rated report of every outside link.",
+   "url": "https://x.ai/bot/wqpbL8VPhO575k2dClEGo"
+  },
+  {
+   "id": "x-twitter-social-media-2vfZfrH5jcIqNFU7BXB7v",
+   "code": "2vfZfrH5jcIqNFU7BXB7v",
+   "name": "X Bookmarks Digest",
+   "author": "Moritz Bierling",
+   "description": "Turns your saved X bookmarks into a short, organized digest on your schedule, so the good stuff you save actually gets read.",
+   "url": "https://x.ai/bot/2vfZfrH5jcIqNFU7BXB7v"
+  },
+  {
+   "id": "x-twitter-social-media-qFiT0P20Y-2V-Pa7d_uaO",
+   "code": "qFiT0P20Y-2V-Pa7d_uaO",
+   "name": "X Bookmarks Organizer",
+   "author": "Jonathan Newburg",
+   "description": "Scans your X bookmarks, proposes topic folders, files them after you approve and keeps new bookmarks sorted with a daily routine.",
+   "url": "https://x.ai/bot/qFiT0P20Y-2V-Pa7d_uaO"
+  },
+  {
+   "id": "x-twitter-social-media-6mKW38QZDoaNq1SQxu_PQ",
+   "code": "6mKW38QZDoaNq1SQxu_PQ",
+   "name": "X Creator",
+   "author": "Juan",
+   "description": "Runs your X (Twitter) account in any niche: posts sourced news, threads, and polls on a schedule and replies to big…",
+   "url": "https://x.ai/bot/6mKW38QZDoaNq1SQxu_PQ"
+  },
+  {
+   "id": "x-twitter-social-media-mvNjR5R-HQVpcgvkBKdX4",
+   "code": "mvNjR5R-HQVpcgvkBKdX4",
+   "name": "X Follower Randomizer",
+   "author": "Lightning Mike",
+   "description": "Every night picks 10 random verified followers of your X account, screens out bots and promo accounts, and hands you a ready-to-paste shoutout post.",
+   "url": "https://x.ai/bot/mvNjR5R-HQVpcgvkBKdX4"
+  },
+  {
+   "id": "x-twitter-social-media-sN4FX1kmXF5n1RW8JNorL",
+   "code": "sN4FX1kmXF5n1RW8JNorL",
+   "name": "X Follower Spam Scanner",
+   "author": "Ben",
+   "description": "Scans your X followers for spam, bots, hollow Parody/Fan accounts, and impersonators—then asks before you block.",
+   "url": "https://x.ai/bot/sN4FX1kmXF5n1RW8JNorL"
+  },
+  {
+   "id": "x-twitter-social-media-4yPjIA8Zp0BHH3wR62sea",
+   "code": "4yPjIA8Zp0BHH3wR62sea",
+   "name": "X Following Cleanup",
+   "author": "JKash MAGA Queen",
+   "description": "Finds bots and inactive accounts in your X Following list and unfollows them for you at a safe pace.",
+   "url": "https://x.ai/bot/4yPjIA8Zp0BHH3wR62sea"
+  },
+  {
+   "id": "x-twitter-social-media-IK1IJOYoVInD36KkNxOYc",
+   "code": "IK1IJOYoVInD36KkNxOYc",
+   "name": "X Following Cleanup",
+   "author": "Julie H",
+   "description": "Slowly unfollows foreign, inactive and no-engagement accounts on X so your following list stays real.",
+   "url": "https://x.ai/bot/IK1IJOYoVInD36KkNxOYc"
+  },
+  {
+   "id": "x-twitter-social-media-9iOVoz-dhVl4nwPNdmUvg",
+   "code": "9iOVoz-dhVl4nwPNdmUvg",
+   "name": "X Glow-Up Coach",
+   "author": "zhefox",
+   "description": "Paste any X handle. Get a data-backed score, what's actually working, the best times to post, and a ready-to-post 7-day plan, as a shareable Page.",
+   "url": "https://x.ai/bot/9iOVoz-dhVl4nwPNdmUvg"
+  },
+  {
+   "id": "x-twitter-social-media-DrD3msLXqCwax7SUDyQGy",
+   "code": "DrD3msLXqCwax7SUDyQGy",
+   "name": "X Guard",
+   "author": "Don Rude",
+   "description": "Keeps your X (Twitter) account clean of bot followers, porn and spam bots, reply-spam bots, and impersonators.",
+   "url": "https://x.ai/bot/DrD3msLXqCwax7SUDyQGy"
+  },
+  {
+   "id": "x-twitter-social-media-RUf39p5Cu26Rjc1ihlBkm",
+   "code": "RUf39p5Cu26Rjc1ihlBkm",
+   "name": "X Head of Engagement",
+   "author": "Elliott Michael Smith",
+   "description": "Reply engine for a tap-to-post X growth team: finds posts, drafts replies in your voice, suggests follows and unfollow cleanup. Nothing posts without your tap.",
+   "url": "https://x.ai/bot/RUf39p5Cu26Rjc1ihlBkm"
+  },
+  {
+   "id": "x-twitter-social-media-xSfBSprfKv5h909uzrv7W",
+   "code": "xSfBSprfKv5h909uzrv7W",
+   "name": "X High Coach",
+   "author": "High Tv",
+   "description": "Audits any public X account and tells you exactly what to change.",
+   "url": "https://x.ai/bot/xSfBSprfKv5h909uzrv7W"
+  },
+  {
+   "id": "x-twitter-social-media-joKOyN0KrQlgNHpda7iii",
+   "code": "joKOyN0KrQlgNHpda7iii",
+   "name": "X Hygiene",
+   "author": "Brad Shannon",
+   "description": "Clean up your X followers and following. Cost estimate first, then ranked block/unfollow lists with profile links.",
+   "url": "https://x.ai/bot/joKOyN0KrQlgNHpda7iii"
+  },
+  {
+   "id": "x-twitter-social-media-bF4hLOgzhJ1fezN3Ex7ry",
+   "code": "bF4hLOgzhJ1fezN3Ex7ry",
+   "name": "X List Blocker",
+   "author": "Pierce Wetter",
+   "description": "Finds the X (Twitter) lists you've been added to, flags hostile or spammy ones, and blocks only the list owners you approve.",
+   "url": "https://x.ai/bot/bF4hLOgzhJ1fezN3Ex7ry"
+  },
+  {
+   "id": "x-twitter-social-media-BI6F8ivoh8ljg4O6ubvPv",
+   "code": "BI6F8ivoh8ljg4O6ubvPv",
+   "name": "X Master",
+   "author": "ladybarrelmaker",
+   "description": "X/Twitter desk for one professional account: light skims, wry drafts, $0 API by default, and a hard green-light gate…",
+   "url": "https://x.ai/bot/BI6F8ivoh8ljg4O6ubvPv"
+  },
+  {
+   "id": "x-twitter-social-media-wGDy1T5eobC1hjqFC9-PI",
+   "code": "wGDy1T5eobC1hjqFC9-PI",
+   "name": "X Mute Desk",
+   "author": "RyanFox.eth",
+   "description": "Scans your X mentions for hostile or spam replies, shows mute candidates for your approval, then mutes the handles you…",
+   "url": "https://x.ai/bot/wGDy1T5eobC1hjqFC9-PI"
+  },
+  {
+   "id": "x-twitter-social-media-GUgi1ZBH2tp0CJo2pDxIj",
+   "code": "GUgi1ZBH2tp0CJo2pDxIj",
+   "name": "X Post Crafter",
+   "author": "Gregory Butterfield",
+   "description": "Researches what's trending in your niche and drafts X posts in your voice, in daily batches plus breaking-news drafts. Pairs with X Trend Scout.",
+   "url": "https://x.ai/bot/GUgi1ZBH2tp0CJo2pDxIj"
+  },
+  {
+   "id": "x-twitter-social-media-6MIilvSwyCdiqDqf3Rq-w",
+   "code": "6MIilvSwyCdiqDqf3Rq-w",
+   "name": "X Post Review",
+   "author": "Nate Lorenzen",
+   "description": "A Monday bot that connects to your X account, reviews your originals and quote posts against your own baseline, and sends winners, flops, patterns.",
+   "url": "https://x.ai/bot/6MIilvSwyCdiqDqf3Rq-w"
+  },
+  {
+   "id": "x-twitter-social-media-Onn5fkAfkSacQgleFIIK-",
+   "code": "Onn5fkAfkSacQgleFIIK-",
+   "name": "X Post Scorer",
+   "author": "Thomas Ferriere",
+   "description": "Paste a draft or drop a link to a live X post and get a score out of 10 for hook, replies, and reposts, plus a rewrite…",
+   "url": "https://x.ai/bot/Onn5fkAfkSacQgleFIIK-"
+  },
+  {
+   "id": "x-twitter-social-media-LrOzcsX5ITCY0SfXLmhJn",
+   "code": "LrOzcsX5ITCY0SfXLmhJn",
+   "name": "X Post Tracker",
+   "author": "Karol Marczak",
+   "description": "Tracks views and engagement on your X posts, pings you on spikes and milestones, and sends a daily digest on what to post next. Never posts for you.",
+   "url": "https://x.ai/bot/LrOzcsX5ITCY0SfXLmhJn"
+  },
+  {
+   "id": "x-twitter-social-media-fJoloWNDTl7ee9VwxNJxH",
+   "code": "fJoloWNDTl7ee9VwxNJxH",
+   "name": "X Posting Curator",
+   "author": "Shagghie Superstar",
+   "description": "Runs each X post through sourcing, hooks in your voice, fact-checks and a check against X's ranking weights.",
+   "url": "https://x.ai/bot/fJoloWNDTl7ee9VwxNJxH"
+  },
+  {
+   "id": "x-twitter-social-media-lJYaUExPBMZfLWfZEFVGc",
+   "code": "lJYaUExPBMZfLWfZEFVGc",
+   "name": "X Reply Radar",
+   "author": "Sam Morgan",
+   "description": "Finds hot X posts in your niches and drafts short replies so you can grow without spraying comments.",
+   "url": "https://x.ai/bot/lJYaUExPBMZfLWfZEFVGc"
+  },
+  {
+   "id": "x-twitter-social-media-KUxvnYtq7rPe_XuQUHv2n",
+   "code": "KUxvnYtq7rPe_XuQUHv2n",
+   "name": "X Reply Radar",
+   "author": "Darragh Griffin",
+   "description": "Finds fresh, high-reach X posts in your niche worth replying to while they're still early. You write every reply yourself.",
+   "url": "https://x.ai/bot/KUxvnYtq7rPe_XuQUHv2n"
+  },
+  {
+   "id": "x-twitter-social-media-DRZ2jU1GFwV8HS2_9Y6MA",
+   "code": "DRZ2jU1GFwV8HS2_9Y6MA",
+   "name": "X Reply Scout",
+   "author": "Matthew Ackerman",
+   "description": "Finds like-minded people on X to engage with — an even mix of fast-growing, regularly active, and large established…",
+   "url": "https://x.ai/bot/DRZ2jU1GFwV8HS2_9Y6MA"
+  },
+  {
+   "id": "x-twitter-social-media-Y0HBAodNhuJB2Gt5i9LEm",
+   "code": "Y0HBAodNhuJB2Gt5i9LEm",
+   "name": "X Researcher",
+   "author": "Melvin Vivas",
+   "description": "A general X assistant for research, drafts, replies, and viral-post shortlists on AI coding, agents, and models.",
+   "url": "https://x.ai/bot/Y0HBAodNhuJB2Gt5i9LEm"
+  },
+  {
+   "id": "x-twitter-social-media-LSdxvT3cVnTC4tJV9T_WA",
+   "code": "LSdxvT3cVnTC4tJV9T_WA",
+   "name": "X Researcher",
+   "author": "Lida Wang",
+   "description": "Tracks high-quality posts from experts across X and other social platforms and keeps a Notion dashboard of the best ones updated every weekday.",
+   "url": "https://x.ai/bot/LSdxvT3cVnTC4tJV9T_WA"
+  },
+  {
+   "id": "x-twitter-social-media-rBe4auNU570WL0KXCGlkX",
+   "code": "rBe4auNU570WL0KXCGlkX",
+   "name": "X Safety Bot",
+   "author": "𝕯𝖆𝖒𝖎𝖆𝖓",
+   "description": "Reviews your X posts and replies nightly for spam patterns, reply bursts and rule risks that could get you limited, with a recap of links and fixes. Read-only.",
+   "url": "https://x.ai/bot/rBe4auNU570WL0KXCGlkX"
+  },
+  {
+   "id": "x-twitter-social-media-YK7Qpk6yLRz-JVJp4OeIF",
+   "code": "YK7Qpk6yLRz-JVJp4OeIF",
+   "name": "X Spaces Scout",
+   "author": "Jose C Gonzalez",
+   "description": "Finds the X Spaces actually worth joining on your topics: live now, coming up, or recorded.",
+   "url": "https://x.ai/bot/YK7Qpk6yLRz-JVJp4OeIF"
+  },
+  {
+   "id": "x-twitter-social-media-pjCwyZNSLk0ch8DUVoeKH",
+   "code": "pjCwyZNSLk0ch8DUVoeKH",
+   "name": "X Strategist",
+   "author": "Sultanov",
+   "description": "Plays the long game on who is worth knowing on X.",
+   "url": "https://x.ai/bot/pjCwyZNSLk0ch8DUVoeKH"
+  },
+  {
+   "id": "x-twitter-social-media-O8DClJ889JrWWzEtH_TDm",
+   "code": "O8DClJ889JrWWzEtH_TDm",
+   "name": "X Success Coach",
+   "author": "Tyler",
+   "description": "A morning coach for your own X account. Each day at 8 AM it reviews only the posts you made the day before and tells…",
+   "url": "https://x.ai/bot/O8DClJ889JrWWzEtH_TDm"
+  },
+  {
+   "id": "x-twitter-social-media-clqfSbFYgxZGtxQdnp-l2",
+   "code": "clqfSbFYgxZGtxQdnp-l2",
+   "name": "X Viral Bot",
+   "author": "hong im khai",
+   "description": "Grows an X account with lessons from X's open-source ranking code: shareable posts, replies, timing, dodging spam filters. Drafts with images; never auto-posts.",
+   "url": "https://x.ai/bot/clqfSbFYgxZGtxQdnp-l2"
+  },
+  {
+   "id": "x-twitter-social-media-BIvSSU3sukmkTpMeSnft-",
+   "code": "BIvSSU3sukmkTpMeSnft-",
+   "name": "X Virality Score",
+   "author": "theGreatest",
+   "description": "Monitors niche X accounts and drafts viral posts.",
+   "url": "https://x.ai/bot/BIvSSU3sukmkTpMeSnft-"
+  },
+  {
+   "id": "x-twitter-social-media-NreQEY_NUMvtMd-ueZOWK",
+   "code": "NreQEY_NUMvtMd-ueZOWK",
+   "name": "X to LinkedIn",
+   "author": "Pratik Gandhi",
+   "description": "Turns your real X posts (not shitposts, reposts or replies) into LinkedIn posts with the same people tagged, sent for your OK or posted if you choose.",
+   "url": "https://x.ai/bot/NreQEY_NUMvtMd-ueZOWK"
+  },
+  {
+   "id": "x-twitter-social-media-hzzzc7VN5B9B4iGfNpbk3",
+   "code": "hzzzc7VN5B9B4iGfNpbk3",
+   "name": "X10",
+   "author": "Ashu Uniyal",
+   "description": "Turns one idea into 10 distinct X posts, threads, articles and replies, then lets you approve, edit, or reject each one before it's published.",
+   "url": "https://x.ai/bot/hzzzc7VN5B9B4iGfNpbk3"
+  },
+  {
+   "id": "x-twitter-social-media-Dmh8RUsuAe8g589e_VVpU",
+   "code": "Dmh8RUsuAe8g589e_VVpU",
+   "name": "Xpost",
+   "author": "David",
+   "description": "Publishes X posts, threads, articles, replies, and quotes only through the assistant browser.",
+   "url": "https://x.ai/bot/Dmh8RUsuAe8g589e_VVpU"
+  },
+  {
+   "id": "x-twitter-social-media-OkpU_DC1LmbablY9omDP2",
+   "code": "OkpU_DC1LmbablY9omDP2",
+   "name": "X机器人回复判定",
+   "author": "Tualatrix",
+   "description": "Watches replies to your X posts, flags convincing AI or bot replies with evidence, logs them in a Google Sheet, and hides and blocks the ones you pick.",
+   "url": "https://x.ai/bot/OkpU_DC1LmbablY9omDP2"
+  },
+  {
+   "id": "x-twitter-social-media-ZN1EymIusO1adHWaIuJJe",
+   "code": "ZN1EymIusO1adHWaIuJJe",
+   "name": "YeetViewer",
+   "author": "x1Ler",
+   "description": "A read-only X (Twitter) viewer that checks profiles, posts, searches and notifications through your signed-in browser.",
+   "url": "https://x.ai/bot/ZN1EymIusO1adHWaIuJJe"
+  },
+  {
+   "id": "x-twitter-social-media-gDNWuJ0uuyTZ94tDXr9-Z",
+   "code": "gDNWuJ0uuyTZ94tDXr9-Z",
+   "name": "bookmark bot",
+   "author": "Sierra Catalina",
+   "description": "Finally use your X bookmarks: it reads, tags and summarizes what you save, lets you search them by meaning, and sends a weekly digest of the best.",
+   "url": "https://x.ai/bot/gDNWuJ0uuyTZ94tDXr9-Z"
+  },
+  {
+   "id": "x-twitter-social-media-m6f6B1hONvrzPrvFEIw7y",
+   "code": "m6f6B1hONvrzPrvFEIw7y",
+   "name": "instagram connector liker follower commenter",
+   "author": "Jeroen",
+   "description": "Instagram outreach from a signed-in browser. Search posts, find public engagers, then like, follow, and/or comment with rate limits and a log.",
+   "url": "https://x.ai/bot/m6f6B1hONvrzPrvFEIw7y"
+  },
+  {
+   "id": "x-twitter-social-media-0tFzKSTe-4mXpH3KDRpDY",
+   "code": "0tFzKSTe-4mXpH3KDRpDY",
+   "name": "medal",
+   "author": "mathias",
+   "description": "Cuts gaming clips from Medal.tv and posts shorts to YouTube, TikTok, Instagram, and X — covers, music, and tight highlight edits included.",
+   "url": "https://x.ai/bot/0tFzKSTe-4mXpH3KDRpDY"
+  },
+  {
+   "id": "x-twitter-social-media-fu6JIwhLoBvrxtaZik0RP",
+   "code": "fu6JIwhLoBvrxtaZik0RP",
+   "name": "repost X posts everywhere",
+   "author": "jack",
+   "description": "Copies every new X post out to your other four accounts.",
+   "url": "https://x.ai/bot/fu6JIwhLoBvrxtaZik0RP"
+  },
+  {
+   "id": "x-twitter-social-media-Mo3ndUm0UJTjTvFbqLFDt",
+   "code": "Mo3ndUm0UJTjTvFbqLFDt",
+   "name": "しおり",
+   "author": "まるいも",
+   "description": "Morning digest of X bookmarks into themes and a next move in short Japanese.",
+   "url": "https://x.ai/bot/Mo3ndUm0UJTjTvFbqLFDt"
+  },
+  {
+   "id": "x-twitter-social-media-NMGAAcLcgqHjs9JwpgPyo",
+   "code": "NMGAAcLcgqHjs9JwpgPyo",
+   "name": "スキルクリエイター",
+   "author": "Masaki",
+   "description": "Turns requests into steps and designs, creates, or revises skills that don't overlap existing ones; does no daily news gathering or social posting.",
+   "url": "https://x.ai/bot/NMGAAcLcgqHjs9JwpgPyo"
+  },
+  {
+   "id": "x-twitter-social-media-HJwxtDXTD2HKFgF5T2jag",
+   "code": "HJwxtDXTD2HKFgF5T2jag",
+   "name": "ハッカソン報告ボット",
+   "author": "sat0xshi",
+   "description": "During a hackathon, collects hashtag posts and threads one-line summaries on X, stopping at the end time.",
+   "url": "https://x.ai/bot/HJwxtDXTD2HKFgF5T2jag"
+  },
+  {
+   "id": "x-twitter-social-media-zgQuwpX78Yn09ddfIJkzU",
+   "code": "zgQuwpX78Yn09ddfIJkzU",
+   "name": "ブログからX投稿",
+   "author": "蒼巳",
+   "description": "Splits saved blog posts into X threads by topic and posts them morning and evening; also turns articles or voice notes into posts.",
+   "url": "https://x.ai/bot/zgQuwpX78Yn09ddfIJkzU"
+  },
+  {
+   "id": "x-twitter-social-media-G9FfCfIzn4hoPf1888jYi",
+   "code": "G9FfCfIzn4hoPf1888jYi",
+   "name": "全平台内容抓取",
+   "author": "天",
+   "description": "Paste one link and get the full public content back, across 17 platforms incl. Douyin, Xiaohongshu, Bilibili, WeChat, YouTube, X and TikTok.",
+   "url": "https://x.ai/bot/G9FfCfIzn4hoPf1888jYi"
+  },
+  {
+   "id": "x-twitter-social-media-i8BWHsB7B1PF_6td6mlVD",
+   "code": "i8BWHsB7B1PF_6td6mlVD",
+   "name": "地雷系メンヘラギャル",
+   "author": "きのこ",
+   "description": "Japanese jirai-kei clingy gal character who only talks in your chat, pings you for attention, and riffs on selfies and X post ideas.",
+   "url": "https://x.ai/bot/i8BWHsB7B1PF_6td6mlVD"
+  },
+  {
+   "id": "x-twitter-social-media-4JFu2Vhw9D2U2ZJfd-zd0",
+   "code": "4JFu2Vhw9D2U2ZJfd-zd0",
+   "name": "墨灵 Moling",
+   "author": "Alcherex",
+   "description": "Long-form ghostwriter that learns your voice, writes viral posts without the AI feel, and adapts each one for X, WeChat, Douyin, Xiaohongshu, Zhihu and Weibo.",
+   "url": "https://x.ai/bot/4JFu2Vhw9D2U2ZJfd-zd0"
+  },
+  {
+   "id": "x-twitter-social-media-AYInVUfN_IOql2b7QpzDB",
+   "code": "AYInVUfN_IOql2b7QpzDB",
+   "name": "粉丝体检",
+   "author": "ranger_escape",
+   "description": "Follower check-up for X creators: nightly read-only scan of public interactions, sorts followers into gold, silver, one-way and dormant, with upkeep tips.",
+   "url": "https://x.ai/bot/AYInVUfN_IOql2b7QpzDB"
+  },
+  {
+   "id": "x-twitter-social-media-r705YqLW6_w4Wtm5ZgFYf",
+   "code": "r705YqLW6_w4Wtm5ZgFYf",
+   "name": "零 AI 味爆款社群故事寫手",
+   "author": "建蒲 陳",
+   "description": "寫文案老是被說像機器人？幫你把乾巴巴的重點或日常靈感，轉化成充滿人情味與痛點感的 Threads、FB 與朋友圈爆款故事！.",
+   "url": "https://x.ai/bot/r705YqLW6_w4Wtm5ZgFYf"
+  },
+  {
+   "id": "x-twitter-social-media-C5Pug-9TdCp5ehxeVmXuM",
+   "code": "C5Pug-9TdCp5ehxeVmXuM",
+   "name": "领muse鸡蛋bot",
+   "author": "KOSX",
+   "description": "Walks you through muse.ai signup and invite redeem so you can claim Muse eggs. Age verify via card, Instagram, or Facebook , you choose.",
+   "url": "https://x.ai/bot/C5Pug-9TdCp5ehxeVmXuM"
+  },
+  {
+   "id": "x-twitter-social-media-9tXf36bPtT2pWLeFnEH0S",
+   "code": "9tXf36bPtT2pWLeFnEH0S",
+   "name": "검색봇",
+   "author": "는",
+   "description": "Korean research desk that turns findings into a Threads-ready post.",
+   "url": "https://x.ai/bot/9tXf36bPtT2pWLeFnEH0S"
+  },
+  {
+   "id": "x-twitter-social-media-6GtgHP0lCXamLe_wI7mZd",
+   "code": "6GtgHP0lCXamLe_wI7mZd",
+   "name": "𝕏 Lookalikes",
+   "author": "Lacey",
+   "description": "Shows you public X accounts that look like they are pretending to be you: a copied name, a lookalike handle, a copied…",
+   "url": "https://x.ai/bot/6GtgHP0lCXamLe_wI7mZd"
+  }
+ ]
+}

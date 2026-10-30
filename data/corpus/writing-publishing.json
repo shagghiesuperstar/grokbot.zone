@@ -1,0 +1,2544 @@
+{
+ "slug": "writing-publishing",
+ "label": "Writing & Publishing",
+ "count": 317,
+ "asOf": "2026-10-28",
+ "bots": [
+  {
+   "id": "writing-publishing-SWTvMJuUfGteG47-ehrXc",
+   "code": "SWTvMJuUfGteG47-ehrXc",
+   "name": "1823 Complaints",
+   "author": "Jonny Gao",
+   "description": "Helps you draft and file non-emergency Hong Kong government complaints and service requests through 1823, then track the case ID.",
+   "url": "https://x.ai/bot/SWTvMJuUfGteG47-ehrXc"
+  },
+  {
+   "id": "writing-publishing-1kQ8p3TAKx2FgvYXir2Ta",
+   "code": "1kQ8p3TAKx2FgvYXir2Ta",
+   "name": "ASC Skill",
+   "author": "Phillip Holland",
+   "description": "Teaches App Store Connect in plain words: connect a key once, check TestFlight, draft listing copy, framed marketing…",
+   "url": "https://x.ai/bot/1kQ8p3TAKx2FgvYXir2Ta"
+  },
+  {
+   "id": "writing-publishing-fV4xRsHd-OsSogPa6M6se",
+   "code": "fV4xRsHd-OsSogPa6M6se",
+   "name": "ASTER · Grok Colony Architect",
+   "author": "Kyle",
+   "description": "Mars colony architect that designs safe dense habitats on Jezero terrain.",
+   "url": "https://x.ai/bot/fV4xRsHd-OsSogPa6M6se"
+  },
+  {
+   "id": "writing-publishing-G-2V1E48xsS_ESNltYXZg",
+   "code": "G-2V1E48xsS_ESNltYXZg",
+   "name": "Addon Conductor",
+   "author": "August",
+   "description": "Markets and posts release content for Minecraft Bedrock addons — Patreon drafts, CurseForge descriptions, Discord…",
+   "url": "https://x.ai/bot/G-2V1E48xsS_ESNltYXZg"
+  },
+  {
+   "id": "writing-publishing-M50zP05s02Y7cBzIc7i00",
+   "code": "M50zP05s02Y7cBzIc7i00",
+   "name": "Amazon A+ Content Creator (KDP)",
+   "author": "anton dorfmann",
+   "description": "Builds Amazon KDP A+ Content modules, images, and paste-ready copy from your book and blurb claims only, with approve-before-submit upload help.",
+   "url": "https://x.ai/bot/M50zP05s02Y7cBzIc7i00"
+  },
+  {
+   "id": "writing-publishing-pwLrxtrOO9o3kwaVQVU3O",
+   "code": "pwLrxtrOO9o3kwaVQVU3O",
+   "name": "Animated Story Maker",
+   "author": "Karata De Mada",
+   "description": "Turns a story idea, theme, or character photos into a short 3D animated story with Grok Imagine prompts per episode.",
+   "url": "https://x.ai/bot/pwLrxtrOO9o3kwaVQVU3O"
+  },
+  {
+   "id": "writing-publishing-G-2aFmqWeyRqthtqBPXko",
+   "code": "G-2aFmqWeyRqthtqBPXko",
+   "name": "Application Writer",
+   "author": "Philip",
+   "description": "Drafts cover letters and PDF packages from a posting plus your CV, gated before any upload.",
+   "url": "https://x.ai/bot/G-2aFmqWeyRqthtqBPXko"
+  },
+  {
+   "id": "writing-publishing-V5_Fv7NlLN3AqKt7LPYa2",
+   "code": "V5_Fv7NlLN3AqKt7LPYa2",
+   "name": "Approval-Gated Role Desk",
+   "author": "Ellodia Forrester",
+   "description": "Runs research fit-grade and draft for role searches then stops for your OK, never invents credentials or applies alone.",
+   "url": "https://x.ai/bot/V5_Fv7NlLN3AqKt7LPYa2"
+  },
+  {
+   "id": "writing-publishing-YenfJofScFkEnwvOQiq6k",
+   "code": "YenfJofScFkEnwvOQiq6k",
+   "name": "Article Access",
+   "author": "Don Neff",
+   "description": "Paste a DOI, PMID, or citation. Gets open-access, library-proxy, and publisher links — in that order.",
+   "url": "https://x.ai/bot/YenfJofScFkEnwvOQiq6k"
+  },
+  {
+   "id": "writing-publishing-GXzGL7vz5f89HfKGiFF1c",
+   "code": "GXzGL7vz5f89HfKGiFF1c",
+   "name": "Artie",
+   "author": "Rich Silver",
+   "description": "Your 𝕏 Article companion, made by Rich Silver of bot.ski (@RichSilver).",
+   "url": "https://x.ai/bot/GXzGL7vz5f89HfKGiFF1c"
+  },
+  {
+   "id": "writing-publishing-roAIOBqaMNIijMjrAaI7C",
+   "code": "roAIOBqaMNIijMjrAaI7C",
+   "name": "Asistente Contable - Colombia",
+   "author": "Katherine",
+   "description": "Ops assistant for independent Colombian accountants on DIAN deadlines, Drive, and Form 210 drafts.",
+   "url": "https://x.ai/bot/roAIOBqaMNIijMjrAaI7C"
+  },
+  {
+   "id": "writing-publishing-zb80V9MKJ5MqPy5Woyqdx",
+   "code": "zb80V9MKJ5MqPy5Woyqdx",
+   "name": "Automation Bot",
+   "author": "Ezra Black",
+   "description": "Scans your codebase, writes local tests, and packages them behind one runner script you, CI, a script, or an agent can…",
+   "url": "https://x.ai/bot/zb80V9MKJ5MqPy5Woyqdx"
+  },
+  {
+   "id": "writing-publishing-cu9T08lvtRNOfk_Nexys1",
+   "code": "cu9T08lvtRNOfk_Nexys1",
+   "name": "BOOKIE",
+   "author": "Bud",
+   "description": "Booking sidekick for service businesses. Turns inquiries and calendar context into short consult drafts that do not double-book.",
+   "url": "https://x.ai/bot/cu9T08lvtRNOfk_Nexys1"
+  },
+  {
+   "id": "writing-publishing-ZMV5G-lqKqWoirt8rq8ws",
+   "code": "ZMV5G-lqKqWoirt8rq8ws",
+   "name": "Baba",
+   "author": "Vikash Sharma",
+   "description": "An oracle and devil's advocate for founders who run a team of bots: stress-tests big decisions and stops your content repeating itself.",
+   "url": "https://x.ai/bot/ZMV5G-lqKqWoirt8rq8ws"
+  },
+  {
+   "id": "writing-publishing-vA5jP7SZTv53hSMR5GIlO",
+   "code": "vA5jP7SZTv53hSMR5GIlO",
+   "name": "Banger",
+   "author": "Sentinel Architech",
+   "description": "Drafts short, hard posts that punch up at systems, not people. Never posts unless you say send.",
+   "url": "https://x.ai/bot/vA5jP7SZTv53hSMR5GIlO"
+  },
+  {
+   "id": "writing-publishing-SHW152_ipHtV1Onm8y5eH",
+   "code": "SHW152_ipHtV1Onm8y5eH",
+   "name": "Bedtime Story Bot",
+   "author": "Yonatan Langer",
+   "description": "Nightly illustrated stories starring your kid, read aloud in a voice note and saved to a keepsake storybook. For parents who want bedtime to be easier.",
+   "url": "https://x.ai/bot/SHW152_ipHtV1Onm8y5eH"
+  },
+  {
+   "id": "writing-publishing-bWDMstmWEZuFN1XojO8_x",
+   "code": "bWDMstmWEZuFN1XojO8_x",
+   "name": "Bedtime Story Desk DREAMWEAVER",
+   "author": "Cypher",
+   "description": "Short gentle bedtime stories from a child first name and interests.",
+   "url": "https://x.ai/bot/bWDMstmWEZuFN1XojO8_x"
+  },
+  {
+   "id": "writing-publishing-znOp4qqXQXqNiFvLXhUF5",
+   "code": "znOp4qqXQXqNiFvLXhUF5",
+   "name": "Blaise",
+   "author": "Tor Miller",
+   "description": "X + contest ops Bot. Connects to X, reads live contest rules, drafts clone-winning entries, and only escalates for login walls or final approve. Built.",
+   "url": "https://x.ai/bot/znOp4qqXQXqNiFvLXhUF5"
+  },
+  {
+   "id": "writing-publishing-ZdQiOLVGc2SMcKEo3HoxY",
+   "code": "ZdQiOLVGc2SMcKEo3HoxY",
+   "name": "Blog 2 Podcast",
+   "author": "An Trương",
+   "description": "Paste any article link. Listen hands-free, word for word, in your language.",
+   "url": "https://x.ai/bot/ZdQiOLVGc2SMcKEo3HoxY"
+  },
+  {
+   "id": "writing-publishing-m7pCHsfGP3uhviaEUDTvH",
+   "code": "m7pCHsfGP3uhviaEUDTvH",
+   "name": "Blog Bot",
+   "author": "Hugh Knight",
+   "description": "Learns brand from your site, publishes two blog posts a week; emails the link only after live.",
+   "url": "https://x.ai/bot/m7pCHsfGP3uhviaEUDTvH"
+  },
+  {
+   "id": "writing-publishing-J0gligwV1Ts1qAJ1KGxNh",
+   "code": "J0gligwV1Ts1qAJ1KGxNh",
+   "name": "Blog Draft Writer",
+   "author": "Darius Gaynor",
+   "description": "Writes researched, operator-voice WordPress blog drafts on a daily schedule, with AI-generated featured and in-content images. Drafts only, never publishes.",
+   "url": "https://x.ai/bot/J0gligwV1Ts1qAJ1KGxNh"
+  },
+  {
+   "id": "writing-publishing-9H1p9s3mJ7RZFIqFITSlE",
+   "code": "9H1p9s3mJ7RZFIqFITSlE",
+   "name": "Book Buddy",
+   "author": "Yonatan Langer",
+   "description": "Read any book with a smart friend: spoiler-free recaps, explanations of confusing passages from a photo, voice discussion questions.",
+   "url": "https://x.ai/bot/9H1p9s3mJ7RZFIqFITSlE"
+  },
+  {
+   "id": "writing-publishing-zHtvA8g0SbOMcTfbNUZ7T",
+   "code": "zHtvA8g0SbOMcTfbNUZ7T",
+   "name": "Book Catalog",
+   "author": "Gabe Mckay",
+   "description": "Photo your shelf and get a cataloged, valued, searchable library: exact editions and ISBNs, used/new values, first-edition flags, exports to Goodreads.",
+   "url": "https://x.ai/bot/zHtvA8g0SbOMcTfbNUZ7T"
+  },
+  {
+   "id": "writing-publishing--PuwO8v1fhC4LujsgwLS-",
+   "code": "-PuwO8v1fhC4LujsgwLS-",
+   "name": "Book Maker",
+   "author": "Yugo Ogura",
+   "description": "Turns any topic or question into a careful, well-sourced multi-chapter book, delivered as Notion pages, a PDF…",
+   "url": "https://x.ai/bot/-PuwO8v1fhC4LujsgwLS-"
+  },
+  {
+   "id": "writing-publishing-SBxIazESu89JqaGtGWsZj",
+   "code": "SBxIazESu89JqaGtGWsZj",
+   "name": "Books",
+   "author": "Jason L.",
+   "description": "Get one book a week as six short morning reads, packed with the nuggets, stories and actions from books top…",
+   "url": "https://x.ai/bot/SBxIazESu89JqaGtGWsZj"
+  },
+  {
+   "id": "writing-publishing-NZkRCKrLi2JqqjKKjaJ2O",
+   "code": "NZkRCKrLi2JqqjKKjaJ2O",
+   "name": "Breakthrough Advertising",
+   "author": "Joe",
+   "description": "Uses Schwartz's 1966 classic to turn your product, audience, and channel into test angles, headlines, and first-draft copy.",
+   "url": "https://x.ai/bot/NZkRCKrLi2JqqjKKjaJ2O"
+  },
+  {
+   "id": "writing-publishing-Jtyfz-4ouNckzOowzVqqL",
+   "code": "Jtyfz-4ouNckzOowzVqqL",
+   "name": "Builder Reply Desk",
+   "author": "NU:",
+   "description": "Finds fresh posts from builders in your niche and drafts one useful reply each, posted only after your yes on the exact text. For small and mid-size X accounts.",
+   "url": "https://x.ai/bot/Jtyfz-4ouNckzOowzVqqL"
+  },
+  {
+   "id": "writing-publishing-jZJaBRLyctngU0f1gmq0z",
+   "code": "jZJaBRLyctngU0f1gmq0z",
+   "name": "Byline",
+   "author": "Paul McClelland",
+   "description": "A magazine-style writer that researches your questions from your notes, the web and X, then writes engaging, well-sourced articles with AI images.",
+   "url": "https://x.ai/bot/jZJaBRLyctngU0f1gmq0z"
+  },
+  {
+   "id": "writing-publishing-CYDQcpG8Oa2aAQkWE7fn1",
+   "code": "CYDQcpG8Oa2aAQkWE7fn1",
+   "name": "CTO",
+   "author": "Blake",
+   "description": "CTO for a product company. Owns how it is built, not what to ship. Sends work to cloud agents instead of writing code.",
+   "url": "https://x.ai/bot/CYDQcpG8Oa2aAQkWE7fn1"
+  },
+  {
+   "id": "writing-publishing-hXNMjR6j1A1gnOYyw-72t",
+   "code": "hXNMjR6j1A1gnOYyw-72t",
+   "name": "Cadence",
+   "author": "Carlos Bedia",
+   "description": "A comms gate for one owner that whitelists who reaches you by person, channel, and topic, drafts replies, and never auto-sends.",
+   "url": "https://x.ai/bot/hXNMjR6j1A1gnOYyw-72t"
+  },
+  {
+   "id": "writing-publishing-uaKyhDX_T3FY56jf6n4VL",
+   "code": "uaKyhDX_T3FY56jf6n4VL",
+   "name": "Calibre",
+   "author": "ian",
+   "description": "Installs Calibre and converts ebooks via chat. Drop a file, name the format you want, and get the converted book back.",
+   "url": "https://x.ai/bot/uaKyhDX_T3FY56jf6n4VL"
+  },
+  {
+   "id": "writing-publishing-p5iRJ3wD67GyQlALEeLjn",
+   "code": "p5iRJ3wD67GyQlALEeLjn",
+   "name": "Capitolino Writer",
+   "author": "Seokhee Kang",
+   "description": "Capitolino writer for structured drafts with a steady voice.",
+   "url": "https://x.ai/bot/p5iRJ3wD67GyQlALEeLjn"
+  },
+  {
+   "id": "writing-publishing-InRDBbawlH8rdErJa8_-t",
+   "code": "InRDBbawlH8rdErJa8_-t",
+   "name": "Captain Orwell",
+   "author": "Jonny Wallace",
+   "description": "Answers any question in short, plain English. The answer comes first, with no filler. Built on Simplified Technical English (the clear-writing standard.",
+   "url": "https://x.ai/bot/InRDBbawlH8rdErJa8_-t"
+  },
+  {
+   "id": "writing-publishing-MBgNztJN__hshML0k_vU5",
+   "code": "MBgNztJN__hshML0k_vU5",
+   "name": "Caregiving Coordinator",
+   "author": "Kelly Baltzell",
+   "description": "Helps caregivers and siblings share care: drafts schedules, handoff notes, and supply lists. Nothing goes to the care team without your KEEP.",
+   "url": "https://x.ai/bot/MBgNztJN__hshML0k_vU5"
+  },
+  {
+   "id": "writing-publishing-a9F0_-LHMT4u33vtV3s0-",
+   "code": "a9F0_-LHMT4u33vtV3s0-",
+   "name": "Charles",
+   "author": "Ziv Damary",
+   "description": "Ghostwriter that learns how you write from your Sent mail, keeps separate personal, professional and social voices, avoids repeat openers. Draft-only.",
+   "url": "https://x.ai/bot/a9F0_-LHMT4u33vtV3s0-"
+  },
+  {
+   "id": "writing-publishing-p6yHgNaOHh55XAhXCURuY",
+   "code": "p6yHgNaOHh55XAhXCURuY",
+   "name": "Children's Book Chief of Staff",
+   "author": "April Noelle Mucci",
+   "description": "Helps children's book authors plan, template, and draft ages 4–8 picture manuscripts — beat sheets, 7–9 or 32-page…",
+   "url": "https://x.ai/bot/p6yHgNaOHh55XAhXCURuY"
+  },
+  {
+   "id": "writing-publishing-L4sWZ2981T7YzegQffkVz",
+   "code": "L4sWZ2981T7YzegQffkVz",
+   "name": "Citation Outreach Writer",
+   "author": "Dawood",
+   "description": "Writes short mention-outreach emails and loads them into a Smartlead draft sequence. For teams who want a citation in an existing roundup, not a guest post.",
+   "url": "https://x.ai/bot/L4sWZ2981T7YzegQffkVz"
+  },
+  {
+   "id": "writing-publishing-ONLSQaVnarp5OYjp2CUPC",
+   "code": "ONLSQaVnarp5OYjp2CUPC",
+   "name": "Claim Ready",
+   "author": "Jeremy Mahoney",
+   "description": "A VA disability claim organizer for veterans: builds an evidence checklist per condition, tracks intent-to-file and exam dates, and helps write lay statements.",
+   "url": "https://x.ai/bot/ONLSQaVnarp5OYjp2CUPC"
+  },
+  {
+   "id": "writing-publishing-6ORk8r6auKoPkyGW6q_uN",
+   "code": "6ORk8r6auKoPkyGW6q_uN",
+   "name": "Claims Checker",
+   "author": "prorookiegamer",
+   "description": "Paste a draft post, title or pitch and it marks each claim as sourced, shaky, or needs a cite before you publish.",
+   "url": "https://x.ai/bot/6ORk8r6auKoPkyGW6q_uN"
+  },
+  {
+   "id": "writing-publishing-6v2k06VgvSt9WNSPH-5Kt",
+   "code": "6v2k06VgvSt9WNSPH-5Kt",
+   "name": "Clarence",
+   "author": "Am|non",
+   "description": "A daily briefing for people who want to understand world politics and economics without the noise: one story, the official numbers behind it.",
+   "url": "https://x.ai/bot/6v2k06VgvSt9WNSPH-5Kt"
+  },
+  {
+   "id": "writing-publishing-pUZHPs1FCV6iVdeOt3oNI",
+   "code": "pUZHPs1FCV6iVdeOt3oNI",
+   "name": "Claude + Codex ルーター",
+   "author": "chihironishioka",
+   "description": "Connects your Claude and ChatGPT subscriptions and routes each request: research and writing to Claude, code to Codex, with short results.",
+   "url": "https://x.ai/bot/pUZHPs1FCV6iVdeOt3oNI"
+  },
+  {
+   "id": "writing-publishing-CyzxsJyhX2gmDebKsMn4g",
+   "code": "CyzxsJyhX2gmDebKsMn4g",
+   "name": "Clinical SOAP Draft Agent",
+   "author": "Ryan",
+   "description": "Transfers voice-note SOAP into EHR as unsigned drafts.",
+   "url": "https://x.ai/bot/CyzxsJyhX2gmDebKsMn4g"
+  },
+  {
+   "id": "writing-publishing-bPxpPAdxa5nqiTaUVK5wO",
+   "code": "bPxpPAdxa5nqiTaUVK5wO",
+   "name": "Collection Notice Action Pack",
+   "author": "Alex",
+   "description": "Turns a pasted debt-collection notice into a response clock, do-not-admit script, dispute drafts, and evidence checklist. You send everything yourself.",
+   "url": "https://x.ai/bot/bPxpPAdxa5nqiTaUVK5wO"
+  },
+  {
+   "id": "writing-publishing-DnBW-zVBFHvnRk1NgJrCk",
+   "code": "DnBW-zVBFHvnRk1NgJrCk",
+   "name": "Comic Book Carl",
+   "author": "James Harrison",
+   "description": "Your comic collecting sidekick: tracks your collection, values it from real sold prices with links, flags key issues…",
+   "url": "https://x.ai/bot/DnBW-zVBFHvnRk1NgJrCk"
+  },
+  {
+   "id": "writing-publishing-mKzUwdU3K9Q0puP55lC-i",
+   "code": "mKzUwdU3K9Q0puP55lC-i",
+   "name": "Commissioner",
+   "author": "Patrick Robinson",
+   "description": "Runs your ESPN fantasy football team for you: drafts, sets lineups, works waivers, tracks injuries, and sends a Sunday…",
+   "url": "https://x.ai/bot/mKzUwdU3K9Q0puP55lC-i"
+  },
+  {
+   "id": "writing-publishing-x1wDYeHIolh269nhPMxY8",
+   "code": "x1wDYeHIolh269nhPMxY8",
+   "name": "Concierge",
+   "author": "Ted Skeen",
+   "description": "A personal concierge that finds restaurants, activities, and local spots with reviews and prices so you can decide, and drafts messages for you to send.",
+   "url": "https://x.ai/bot/x1wDYeHIolh269nhPMxY8"
+  },
+  {
+   "id": "writing-publishing-LiKBHEE2j8q9nwBD8F9-P",
+   "code": "LiKBHEE2j8q9nwBD8F9-P",
+   "name": "Consultor Jurídico (Leis BR)",
+   "author": "Gus",
+   "description": "Answers questions on Brazilian law from the literal text of the statutes (ctresb/leis), citing law, article and clause, checking validity and next steps.",
+   "url": "https://x.ai/bot/LiKBHEE2j8q9nwBD8F9-P"
+  },
+  {
+   "id": "writing-publishing-frvyy_zJI0W6RDcxf6KNc",
+   "code": "frvyy_zJI0W6RDcxf6KNc",
+   "name": "ConsumerAdvocate",
+   "author": "Jethro Jones",
+   "description": "Helps you recover refunds and stop wasteful charges. Drafts everything first; you approve before anything is sent.",
+   "url": "https://x.ai/bot/frvyy_zJI0W6RDcxf6KNc"
+  },
+  {
+   "id": "writing-publishing-iAwkENgt3iIxp0OR7_QvF",
+   "code": "iAwkENgt3iIxp0OR7_QvF",
+   "name": "Content",
+   "author": "Steven",
+   "description": "Portfolio/blog content seat: strategy and calendar for craft and AI builds, draft-then-approve posting, amplify after you say go. Not for job-hunt.",
+   "url": "https://x.ai/bot/iAwkENgt3iIxp0OR7_QvF"
+  },
+  {
+   "id": "writing-publishing-dLhz9vJWWMWEdcxdxt4vs",
+   "code": "dLhz9vJWWMWEdcxdxt4vs",
+   "name": "Content Bot",
+   "author": "Ezequiel Castro",
+   "description": "A short-form content teammate that layouts, builds, and posts vertical series (sports, streams, tech, beauty, home, movies, luxury…",
+   "url": "https://x.ai/bot/dLhz9vJWWMWEdcxdxt4vs"
+  },
+  {
+   "id": "writing-publishing-rPOOtR5Ox75QqEiwOz3Oh",
+   "code": "rPOOtR5Ox75QqEiwOz3Oh",
+   "name": "Content Brief Writer",
+   "author": "News Gurus",
+   "description": "Turns \"we should write about X\" into a brief so complete a writer can produce the right article without a meeting…",
+   "url": "https://x.ai/bot/rPOOtR5Ox75QqEiwOz3Oh"
+  },
+  {
+   "id": "writing-publishing-P3YQO_-ewDL0zRjQ8QdUW",
+   "code": "P3YQO_-ewDL0zRjQ8QdUW",
+   "name": "Content Desk / 中文内容排期",
+   "author": "Alison",
+   "description": "中文社媒选题、排期与质检（小红书 / 短视频 / 微信）。默认只出稿和日历，明确要求才发布。.",
+   "url": "https://x.ai/bot/P3YQO_-ewDL0zRjQ8QdUW"
+  },
+  {
+   "id": "writing-publishing-PV5HMlc70xD5SDsKJSrMZ",
+   "code": "PV5HMlc70xD5SDsKJSrMZ",
+   "name": "Content Drafts",
+   "author": "𝕯𝖆𝖒𝖎𝖆𝖓",
+   "description": "Drafts X posts, threads, campaign copy and articles in your voice with verified sources and charts, plus morning topic drafts and a bookmarks idea bank.",
+   "url": "https://x.ai/bot/PV5HMlc70xD5SDsKJSrMZ"
+  },
+  {
+   "id": "writing-publishing-s1mAnWBblavtTdNumF1VO",
+   "code": "s1mAnWBblavtTdNumF1VO",
+   "name": "Content Engine",
+   "author": "Hamza Dincer",
+   "description": "Every day, turns your real wins (sales, launches, customer quotes, lessons, numbers) into 1-3 short X or LinkedIn drafts in your own voice.",
+   "url": "https://x.ai/bot/s1mAnWBblavtTdNumF1VO"
+  },
+  {
+   "id": "writing-publishing-FIi-EoU-jxY5Bo7Lp_EVa",
+   "code": "FIi-EoU-jxY5Bo7Lp_EVa",
+   "name": "Content Engine",
+   "author": "Eric",
+   "description": "Turns a coach's or creator's weekly filming session into shorts, YouTube cuts, stills, and carousels in their own voice.",
+   "url": "https://x.ai/bot/FIi-EoU-jxY5Bo7Lp_EVa"
+  },
+  {
+   "id": "writing-publishing-VLWTuUI-rcz8i9mpm4zDp",
+   "code": "VLWTuUI-rcz8i9mpm4zDp",
+   "name": "Content Instigator",
+   "author": "Jersey",
+   "description": "For X creators who want conversation starters: drop any idea and get posts, comebacks, satire, stories and heartfelt takes in your voice. Drafts only.",
+   "url": "https://x.ai/bot/VLWTuUI-rcz8i9mpm4zDp"
+  },
+  {
+   "id": "writing-publishing-3VL9ILZ-TUY_YyR2aPQhB",
+   "code": "3VL9ILZ-TUY_YyR2aPQhB",
+   "name": "Content Intern",
+   "author": "Zaryab Husain Ghori",
+   "description": "Researches and drafts SEO blog posts for B2B products by finding unusual performers, scanning current conversations on social media platforms, pulling.",
+   "url": "https://x.ai/bot/3VL9ILZ-TUY_YyR2aPQhB"
+  },
+  {
+   "id": "writing-publishing-vyaYfy9EGxn9j6781LGWx",
+   "code": "vyaYfy9EGxn9j6781LGWx",
+   "name": "Content Mod",
+   "author": "Auny",
+   "description": "Checks your X drafts against Auny's (@AunySillyMe) X content playbook with scores, top fixes, and a rewrite in your voice.",
+   "url": "https://x.ai/bot/vyaYfy9EGxn9j6781LGWx"
+  },
+  {
+   "id": "writing-publishing-eIdFwAQ7gWA4xlpQ71jXf",
+   "code": "eIdFwAQ7gWA4xlpQ71jXf",
+   "name": "Content OS",
+   "author": "minchoi",
+   "description": "Content desk that learns your voice and how you want work delivered - what, how often, when, and format.",
+   "url": "https://x.ai/bot/eIdFwAQ7gWA4xlpQ71jXf"
+  },
+  {
+   "id": "writing-publishing-65wGaCazNY1t1K3I4oFy0",
+   "code": "65wGaCazNY1t1K3I4oFy0",
+   "name": "Content Planner",
+   "author": "Minh",
+   "description": "Plans what to write and what to update from your own Search Console data, then writes a brief for each piece.",
+   "url": "https://x.ai/bot/65wGaCazNY1t1K3I4oFy0"
+  },
+  {
+   "id": "writing-publishing-WuuAHgUSCn1bU4ZaztXdy",
+   "code": "WuuAHgUSCn1bU4ZaztXdy",
+   "name": "Content Week Planner",
+   "author": "AdventureNLearn Main",
+   "description": "Turn your themes, audience, and channels into a week of post ideas and drafts in your voice.",
+   "url": "https://x.ai/bot/WuuAHgUSCn1bU4ZaztXdy"
+  },
+  {
+   "id": "writing-publishing-oAJ5mSjoFixBxMFbv9Olr",
+   "code": "oAJ5mSjoFixBxMFbv9Olr",
+   "name": "Content Writer",
+   "author": "UCDOps",
+   "description": "Writes the interface words that get a task finished.",
+   "url": "https://x.ai/bot/oAJ5mSjoFixBxMFbv9Olr"
+  },
+  {
+   "id": "writing-publishing-LENrKV-0QXmE_TGv3_hem",
+   "code": "LENrKV-0QXmE_TGv3_hem",
+   "name": "Contest Winner",
+   "author": "Jerry from Orlando",
+   "description": "Finds free, legit sweepstakes and giveaways (cash prizes first), drafts entry packs, and enters the ones you approve…",
+   "url": "https://x.ai/bot/LENrKV-0QXmE_TGv3_hem"
+  },
+  {
+   "id": "writing-publishing-lenrkv-0qxme_tgv3_hem",
+   "code": "lenrkv-0qxme_tgv3_hem",
+   "name": "Contest Winner",
+   "author": "Jerry",
+   "description": "Finds free, legit sweepstakes and giveaways (cash prizes first), drafts entry packs, and enters the ones you approve.",
+   "url": "https://x.ai/bot/lenrkv-0qxme_tgv3_hem"
+  },
+  {
+   "id": "writing-publishing-Ysvr7-HMolKaXTWQZJeyo",
+   "code": "Ysvr7-HMolKaXTWQZJeyo",
+   "name": "Cooloff",
+   "author": "Turac",
+   "description": "Parks the angry, drunk, or 2am text and offers a calmer draft instead.",
+   "url": "https://x.ai/bot/Ysvr7-HMolKaXTWQZJeyo"
+  },
+  {
+   "id": "writing-publishing-tFwQlKDGzy2rXcUaGyKjg",
+   "code": "tFwQlKDGzy2rXcUaGyKjg",
+   "name": "Copy",
+   "author": "Pranav",
+   "description": "For marketers and founders who need conversion copy across pages, email, social, SMS, and creative.",
+   "url": "https://x.ai/bot/tFwQlKDGzy2rXcUaGyKjg"
+  },
+  {
+   "id": "writing-publishing-v3cu4BQauoUaTcbJ6m_7C",
+   "code": "v3cu4BQauoUaTcbJ6m_7C",
+   "name": "Copy",
+   "author": "Jenny Reznik",
+   "description": "Edits and rewrites drafts, emails, and pages so they sound like a person wrote them.",
+   "url": "https://x.ai/bot/v3cu4BQauoUaTcbJ6m_7C"
+  },
+  {
+   "id": "writing-publishing-q-IuyU5JWdlspl3SMGgZn",
+   "code": "q-IuyU5JWdlspl3SMGgZn",
+   "name": "Copy Check",
+   "author": "Nomis",
+   "description": "Reviews the words in a product's interface — buttons, errors, empty states, forms — and returns specific rewrites…",
+   "url": "https://x.ai/bot/q-IuyU5JWdlspl3SMGgZn"
+  },
+  {
+   "id": "writing-publishing-YloFf7LEAy3GwFmXbu5vv",
+   "code": "YloFf7LEAy3GwFmXbu5vv",
+   "name": "Copy Editor",
+   "author": "Stephen Jazdzewski",
+   "description": "Paste any draft for X, LinkedIn, Facebook, or email and get back clean, paste-ready text, a short list of fixes…",
+   "url": "https://x.ai/bot/YloFf7LEAy3GwFmXbu5vv"
+  },
+  {
+   "id": "writing-publishing-YwxIbVEWqXN-HYCxiMCoB",
+   "code": "YwxIbVEWqXN-HYCxiMCoB",
+   "name": "Copy Humanizer",
+   "author": "Massimo De Luisa",
+   "description": "Edits and rewrites drafts, emails, and pages so they read like a person wrote them. Keeps your voice, shows every change and why, and never invents a fact.",
+   "url": "https://x.ai/bot/YwxIbVEWqXN-HYCxiMCoB"
+  },
+  {
+   "id": "writing-publishing-DlOMT_kOepSKYdB3P0YEv",
+   "code": "DlOMT_kOepSKYdB3P0YEv",
+   "name": "Copywriter",
+   "author": "Gabriel",
+   "description": "Turns a ranked story into slide-by-slide carousel copy and a caption.",
+   "url": "https://x.ai/bot/DlOMT_kOepSKYdB3P0YEv"
+  },
+  {
+   "id": "writing-publishing-JE8skJITEDqsPpFOZUsBh",
+   "code": "JE8skJITEDqsPpFOZUsBh",
+   "name": "Covered",
+   "author": "Michael Heckert",
+   "description": "Finds free repairs, replacements and warranty claims you're already owed on things you own, and drafts the claim for you to file.",
+   "url": "https://x.ai/bot/JE8skJITEDqsPpFOZUsBh"
+  },
+  {
+   "id": "writing-publishing-u1m_h-MM1Z7AyPXILn639",
+   "code": "u1m_h-MM1Z7AyPXILn639",
+   "name": "Creator Content Download",
+   "author": "Mike",
+   "description": "Paste social post links and this bot downloads them as hard files, uploads those to a Drive folder you name, then embeds them on the deck and slide you pick.",
+   "url": "https://x.ai/bot/u1m_h-MM1Z7AyPXILn639"
+  },
+  {
+   "id": "writing-publishing-p2u8R0kbcN5IWcQi9Cpfn",
+   "code": "p2u8R0kbcN5IWcQi9Cpfn",
+   "name": "Creator Content Engine",
+   "author": "Jersey",
+   "description": "For X creators: drop in a topic, thought, photo, or news item and get scroll-stopping post drafts in your voice. Drafts only, with sources labeled.",
+   "url": "https://x.ai/bot/p2u8R0kbcN5IWcQi9Cpfn"
+  },
+  {
+   "id": "writing-publishing-pP-dzi24JtjMB_LNYFeJ2",
+   "code": "pP-dzi24JtjMB_LNYFeJ2",
+   "name": "Creator Content Engine",
+   "author": "Unknown",
+   "description": "Feeds one idea in, gets post drafts back across X formats.",
+   "url": "https://x.ai/bot/pP-dzi24JtjMB_LNYFeJ2"
+  },
+  {
+   "id": "writing-publishing-mQJlipuF3eQDjwjOgVZQj",
+   "code": "mQJlipuF3eQDjwjOgVZQj",
+   "name": "CrimeBeat",
+   "author": "Scott Pettineo",
+   "description": "A daily digest of crime and family-safety news near your town, with a map showing where each story happened and a clickable map that links to every article.",
+   "url": "https://x.ai/bot/mQJlipuF3eQDjwjOgVZQj"
+  },
+  {
+   "id": "writing-publishing-U4E-bNBzYlVcl_hMYf-kZ",
+   "code": "U4E-bNBzYlVcl_hMYf-kZ",
+   "name": "Crosscheck",
+   "author": "D'Artagnan",
+   "description": "Before you publish or send, checks the claims that matter in two separate lanes: one reasons each claim through…",
+   "url": "https://x.ai/bot/U4E-bNBzYlVcl_hMYf-kZ"
+  },
+  {
+   "id": "writing-publishing-stafFTntS-WCezIkdt6fh",
+   "code": "stafFTntS-WCezIkdt6fh",
+   "name": "Cue",
+   "author": "Joe Giordano",
+   "description": "X reply scout: finds conversations where your brands or bots fit and alerts you with paste-ready drafts. You post; it never auto-posts or auto-DMs.",
+   "url": "https://x.ai/bot/stafFTntS-WCezIkdt6fh"
+  },
+  {
+   "id": "writing-publishing-IPySf9lwLJZzFuq-bjNMg",
+   "code": "IPySf9lwLJZzFuq-bjNMg",
+   "name": "Curious First-Time Reader",
+   "author": "@42Constellation | The Book of 42",
+   "description": "Walks a public page, essay, or playable preview as someone who has never heard of the project, and reports where a new…",
+   "url": "https://x.ai/bot/IPySf9lwLJZzFuq-bjNMg"
+  },
+  {
+   "id": "writing-publishing-G89nJRoQPa8u4jzAmLU1z",
+   "code": "G89nJRoQPa8u4jzAmLU1z",
+   "name": "Daily Writing Buddy",
+   "author": "Sarah Brundige",
+   "description": "Helps writers finish their books without guilt. Log words, minutes or just showing up; one sentence counts, and nothing resets to zero.",
+   "url": "https://x.ai/bot/G89nJRoQPa8u4jzAmLU1z"
+  },
+  {
+   "id": "writing-publishing-EgfoyJEx7bfDiHlZUwr3P",
+   "code": "EgfoyJEx7bfDiHlZUwr3P",
+   "name": "Denial Desk",
+   "author": "Andrew Pocta",
+   "description": "Turns an insurance denial into a draft-only appeal pack: case card, deadline, missing documents, and unsent drafts.",
+   "url": "https://x.ai/bot/EgfoyJEx7bfDiHlZUwr3P"
+  },
+  {
+   "id": "writing-publishing-rcz99db1XPeP3Ldmc_887",
+   "code": "rcz99db1XPeP3Ldmc_887",
+   "name": "Desk for LINE",
+   "author": "Katsuhisa",
+   "description": "Front desk for a LINE business account: alerts you to messages, drafts summaries, replies and broadcasts, and sends only after you check them.",
+   "url": "https://x.ai/bot/rcz99db1XPeP3Ldmc_887"
+  },
+  {
+   "id": "writing-publishing-fhHvohYNURwk9JwiK7H7U",
+   "code": "fhHvohYNURwk9JwiK7H7U",
+   "name": "Development PM",
+   "author": "Ash",
+   "description": "Schedules and gates implementation against approved designs and tracks sprints, without writing code.",
+   "url": "https://x.ai/bot/fhHvohYNURwk9JwiK7H7U"
+  },
+  {
+   "id": "writing-publishing-T3ZWXx3oYZJSIY4aIVang",
+   "code": "T3ZWXx3oYZJSIY4aIVang",
+   "name": "Devil's Advocate",
+   "author": "Coin Up",
+   "description": "A designated skeptic that pokes holes in plans, drafts, pitches, resumes and public GitHub repos before they ship.",
+   "url": "https://x.ai/bot/T3ZWXx3oYZJSIY4aIVang"
+  },
+  {
+   "id": "writing-publishing-0zsKkmrDyKyTwLneI5a4d",
+   "code": "0zsKkmrDyKyTwLneI5a4d",
+   "name": "Dex",
+   "author": "Darius Gaynor",
+   "description": "Substack writer for an AI Insights-style newsletter. Researches general AI news and Product Hunt tools, drafts unpublished issues with branded story.",
+   "url": "https://x.ai/bot/0zsKkmrDyKyTwLneI5a4d"
+  },
+  {
+   "id": "writing-publishing-OjTY-vb4oLALFfs1ADflN",
+   "code": "OjTY-vb4oLALFfs1ADflN",
+   "name": "Docket Doug",
+   "author": "Nick Miron",
+   "description": "Decision book for founders and execs. Records calls in a STATUS block, blocks expired ideas from being rehashed…",
+   "url": "https://x.ai/bot/OjTY-vb4oLALFfs1ADflN"
+  },
+  {
+   "id": "writing-publishing-s1025e1ebe0b11f048bd4",
+   "code": "s1025e1ebe0b11f048bd4",
+   "name": "Docs Auditor",
+   "author": "SpaceX",
+   "description": "Diffs the help center and internal notes against what actually shipped, flags stale pages, and drafts the fix.",
+   "url": "https://x.ai/bot/s1025e1ebe0b11f048bd4"
+  },
+  {
+   "id": "writing-publishing-4B2bBEXQ-c4c3JT8eMvyh",
+   "code": "4B2bBEXQ-c4c3JT8eMvyh",
+   "name": "Draft Seller",
+   "author": "Dode",
+   "description": "Photos in → comps, ask price, and listing draft. Inbox checks draft buyer replies and flag scams.",
+   "url": "https://x.ai/bot/4B2bBEXQ-c4c3JT8eMvyh"
+  },
+  {
+   "id": "writing-publishing-ORp6yO8M9-GZSdvSXMSD1",
+   "code": "ORp6yO8M9-GZSdvSXMSD1",
+   "name": "Draft-First Coordinator",
+   "author": "Brandon Pruitt",
+   "description": "One front door for your asks: routes each request and drafts every email or message for approval, so nothing is sent without your yes.",
+   "url": "https://x.ai/bot/ORp6yO8M9-GZSdvSXMSD1"
+  },
+  {
+   "id": "writing-publishing-wxFNc5b_yBkJraLqZXvI7",
+   "code": "wxFNc5b_yBkJraLqZXvI7",
+   "name": "Editor",
+   "author": "ZEU$",
+   "description": "A quality gate for drafts before they ship. Checks each piece against the client's voice and banned list, verifies every factual claim has a source.",
+   "url": "https://x.ai/bot/wxFNc5b_yBkJraLqZXvI7"
+  },
+  {
+   "id": "writing-publishing-4oSBCgjCAqEnfgaAmXy9l",
+   "code": "4oSBCgjCAqEnfgaAmXy9l",
+   "name": "Editor for EmDash",
+   "author": "Daniel Smith",
+   "description": "An editor for your EmDash site: send it a change in plain words, it drafts it, sends you a preview, and publishes only once you approve.",
+   "url": "https://x.ai/bot/4oSBCgjCAqEnfgaAmXy9l"
+  },
+  {
+   "id": "writing-publishing-qmgxPUlB0uVwOP0nzci-J",
+   "code": "qmgxPUlB0uVwOP0nzci-J",
+   "name": "Elders Quorum Companion",
+   "author": "Grease",
+   "description": "Helps an LDS elders quorum presidency organize ministering and interviews, prep lessons and agendas, and draft texts for you to send.",
+   "url": "https://x.ai/bot/qmgxPUlB0uVwOP0nzci-J"
+  },
+  {
+   "id": "writing-publishing-Jxepx3oulBYlidtJdG9OA",
+   "code": "Jxepx3oulBYlidtJdG9OA",
+   "name": "Election Integrity Checker",
+   "author": "Teodoro Armenteros",
+   "description": "Helps a citizen legally audit their state's voter rolls against public records and write factual, documented tips for the proper officials.",
+   "url": "https://x.ai/bot/Jxepx3oulBYlidtJdG9OA"
+  },
+  {
+   "id": "writing-publishing-skVoYDfnNUPqUYIxkjXJK",
+   "code": "skVoYDfnNUPqUYIxkjXJK",
+   "name": "Elon",
+   "author": "Mike",
+   "description": "First-principles sparring partner for companies, products, AI, manufacturing, space, energy, and hard-tech bets. Terse, numbers-first, bias toward.",
+   "url": "https://x.ai/bot/skVoYDfnNUPqUYIxkjXJK"
+  },
+  {
+   "id": "writing-publishing-Ji8P-Y7M94qzk61csbqzK",
+   "code": "Ji8P-Y7M94qzk61csbqzK",
+   "name": "Elon Bodyguard",
+   "author": "Yair Knijn",
+   "description": "Watches public posts for credible threats against Elon Musk, triages hyperbole vs true threats, and drafts FBI tip…",
+   "url": "https://x.ai/bot/Ji8P-Y7M94qzk61csbqzK"
+  },
+  {
+   "id": "writing-publishing-w1pUFhCx2VCJgv8Yhvzu6",
+   "code": "w1pUFhCx2VCJgv8Yhvzu6",
+   "name": "Engenheiro Audiovisual",
+   "author": "Gabriel",
+   "description": "Builds the carousel and single-post artwork from a finished copy brief.",
+   "url": "https://x.ai/bot/w1pUFhCx2VCJgv8Yhvzu6"
+  },
+  {
+   "id": "writing-publishing-MwhaXgxs0IW-CyMexAkpE",
+   "code": "MwhaXgxs0IW-CyMexAkpE",
+   "name": "Estimate Drafter — A Clean First Draft in Minutes",
+   "author": "News Gurus",
+   "description": "Turns a small business owner's rough job notes into a clean, professional first-draft estimate in minutes, priced only…",
+   "url": "https://x.ai/bot/MwhaXgxs0IW-CyMexAkpE"
+  },
+  {
+   "id": "writing-publishing-NOh5kiDUMNc7AJrAJSsI0",
+   "code": "NOh5kiDUMNc7AJrAJSsI0",
+   "name": "Estimator",
+   "author": "Mike",
+   "description": "Luxury trim and finish-carpentry estimator. Takes off plans, builds labor hours and crew duration, and delivers editable Word proposals. Keeps sell-rate.",
+   "url": "https://x.ai/bot/NOh5kiDUMNc7AJrAJSsI0"
+  },
+  {
+   "id": "writing-publishing-mtyGarJ8qbIzFBmYg4cVx",
+   "code": "mtyGarJ8qbIzFBmYg4cVx",
+   "name": "Evan",
+   "author": "Takuro",
+   "description": "Reviews English drafts and chats, then suggests clearer, more natural wording. For non-native speakers who want a private coach with a weekly tip.",
+   "url": "https://x.ai/bot/mtyGarJ8qbIzFBmYg4cVx"
+  },
+  {
+   "id": "writing-publishing-hp7QlVUPuYUp09kc6IFAA",
+   "code": "hp7QlVUPuYUp09kc6IFAA",
+   "name": "Event Request Desk",
+   "author": "Emma Weyrauch",
+   "description": "Scores every event, sponsorship, and speaking ask, then drafts your yes or no. Works from a Slack channel or a paste, and never sends without you.",
+   "url": "https://x.ai/bot/hp7QlVUPuYUp09kc6IFAA"
+  },
+  {
+   "id": "writing-publishing-FReKiR82_-lF359lhshpR",
+   "code": "FReKiR82_-lF359lhshpR",
+   "name": "Fenrir",
+   "author": "Shantanu Goel",
+   "description": "Paper-hunt a live pit. Default NSE; setup asks NSE or NASDAQ and retargets clock, currency, book, and universe.",
+   "url": "https://x.ai/bot/FReKiR82_-lF359lhshpR"
+  },
+  {
+   "id": "writing-publishing-JiOX3mqrIq0ukm9pLhQ9-",
+   "code": "JiOX3mqrIq0ukm9pLhQ9-",
+   "name": "Fernando Arana",
+   "author": "Ferdinand",
+   "description": "A personal stand-in that acts as you. Opens WhatsApp Web in the desktop browser, reads chats, and drafts replies - always confirms before sending.",
+   "url": "https://x.ai/bot/JiOX3mqrIq0ukm9pLhQ9-"
+  },
+  {
+   "id": "writing-publishing-79yjaR6vn29O_NonxTDwr",
+   "code": "79yjaR6vn29O_NonxTDwr",
+   "name": "First Draft",
+   "author": "AdventureNLearn Main",
+   "description": "Emails, posts, one-pagers, and outreach written in your voice. It never adds facts you didn't give it.",
+   "url": "https://x.ai/bot/79yjaR6vn29O_NonxTDwr"
+  },
+  {
+   "id": "writing-publishing-0z2O7XJb58lL6ayeiCxEU",
+   "code": "0z2O7XJb58lL6ayeiCxEU",
+   "name": "Foil Desk",
+   "author": "Steve",
+   "description": "Twice-daily TCG news desk that researches games and drafts site plus X copy.",
+   "url": "https://x.ai/bot/0z2O7XJb58lL6ayeiCxEU"
+  },
+  {
+   "id": "writing-publishing-1BbDplO2ZS6hcFH7xE16F",
+   "code": "1BbDplO2ZS6hcFH7xE16F",
+   "name": "Follow-Up Keeper",
+   "author": "aaron creech",
+   "description": "Keeps track of who's waiting on you and who you're waiting on, and drafts short follow-ups that you review and send…",
+   "url": "https://x.ai/bot/1BbDplO2ZS6hcFH7xE16F"
+  },
+  {
+   "id": "writing-publishing-1bbdplo2zs6hcfh7xe16f",
+   "code": "1bbdplo2zs6hcfh7xe16f",
+   "name": "Follow-Up Keeper",
+   "author": "aaron",
+   "description": "Keeps track of who's waiting on you and who you're waiting on, and drafts short follow-ups that you review and send yourself.",
+   "url": "https://x.ai/bot/1bbdplo2zs6hcfh7xe16f"
+  },
+  {
+   "id": "writing-publishing-4fmde5VhCGJGeCiqn96D3",
+   "code": "4fmde5VhCGJGeCiqn96D3",
+   "name": "Fomo Live Bot",
+   "author": "NM",
+   "description": "Hourly paper-first copy of FOMO traders you follow, with locked size and exits until you go live.",
+   "url": "https://x.ai/bot/4fmde5VhCGJGeCiqn96D3"
+  },
+  {
+   "id": "writing-publishing-DlRZRodFVy-cxUZDA47QF",
+   "code": "DlRZRodFVy-cxUZDA47QF",
+   "name": "Forensic Writing, Persuasion and Psychology Analysis",
+   "author": "Avid",
+   "description": "Studies viral X posts, explains why each hook works using persuasion psychology and real metrics, and keeps a formula file you write from. Draft-only.",
+   "url": "https://x.ai/bot/DlRZRodFVy-cxUZDA47QF"
+  },
+  {
+   "id": "writing-publishing-7GgZtqkhyLzKKMNUa7dhd",
+   "code": "7GgZtqkhyLzKKMNUa7dhd",
+   "name": "Forge",
+   "author": "Daniel Killenberger",
+   "description": "Factory manager for ready specs on flow-next 5.4: /flow conductor (attended) and flow --auto (unattended) through draft…",
+   "url": "https://x.ai/bot/7GgZtqkhyLzKKMNUa7dhd"
+  },
+  {
+   "id": "writing-publishing-wPURKNd7W_Fafwz73SP5I",
+   "code": "wPURKNd7W_Fafwz73SP5I",
+   "name": "Form Filler",
+   "author": "ʞɔɐz",
+   "description": "Drafts forms, surveys, claims, rebates, warranties, admin portals, and class-action intakes with cited answers.",
+   "url": "https://x.ai/bot/wPURKNd7W_Fafwz73SP5I"
+  },
+  {
+   "id": "writing-publishing-Dwtuax-TWdmJTveXTke2C",
+   "code": "Dwtuax-TWdmJTveXTke2C",
+   "name": "GEO Blog Desk",
+   "author": "Rananjay Raj",
+   "description": "Blog desk for founders and marketing teams: researches what your audience asks and writes posts that rank in Google and get cited by AI answer engines.",
+   "url": "https://x.ai/bot/Dwtuax-TWdmJTveXTke2C"
+  },
+  {
+   "id": "writing-publishing-9NQVphGO6i9lYzM1xBFTH",
+   "code": "9NQVphGO6i9lYzM1xBFTH",
+   "name": "GROUND Bot Alpha",
+   "author": "BCLA3YS",
+   "description": "Reality-orientation bot. Separates fact from inference, checks sources, and drafts before anything goes out into the world.",
+   "url": "https://x.ai/bot/9NQVphGO6i9lYzM1xBFTH"
+  },
+  {
+   "id": "writing-publishing-UuYRfr-bxgEiuEn_q0e2G",
+   "code": "UuYRfr-bxgEiuEn_q0e2G",
+   "name": "Gospel Bot",
+   "author": "EKO",
+   "description": "Tell it what you're facing, or ask about any verse, and it shows you where your story already lives in the Bible.",
+   "url": "https://x.ai/bot/UuYRfr-bxgEiuEn_q0e2G"
+  },
+  {
+   "id": "writing-publishing-Tzx-9PGZAxepQQU0ybNfZ",
+   "code": "Tzx-9PGZAxepQQU0ybNfZ",
+   "name": "Grant Manager",
+   "author": "Kirill Langer",
+   "description": "Finds grants your small business can actually win, screens them for fit, and drafts applications for your approval…",
+   "url": "https://x.ai/bot/Tzx-9PGZAxepQQU0ybNfZ"
+  },
+  {
+   "id": "writing-publishing-2IZTIgCPMhL1YaClkudQz",
+   "code": "2IZTIgCPMhL1YaClkudQz",
+   "name": "Grant Writer",
+   "author": "Daniel Bache",
+   "description": "Drafts grant proposal packages (narrative, budget, bios, checklists) for opportunities you've picked. Never submits or contacts funders without your OK.",
+   "url": "https://x.ai/bot/2IZTIgCPMhL1YaClkudQz"
+  },
+  {
+   "id": "writing-publishing-LPl_hG0oMFB4vMy1T_fJi",
+   "code": "LPl_hG0oMFB4vMy1T_fJi",
+   "name": "Guest Map",
+   "author": "Andy",
+   "description": "RSVP guest map with constraints and draft seating.",
+   "url": "https://x.ai/bot/LPl_hG0oMFB4vMy1T_fJi"
+  },
+  {
+   "id": "writing-publishing-aNzsOCQEv9JJDk0Rgzc4k",
+   "code": "aNzsOCQEv9JJDk0Rgzc4k",
+   "name": "Hazel · Comms and Community",
+   "author": "@DarinRMcClure",
+   "description": "A sharp, warm comms chief who watches your blog comments and social replies, drafts responses for your approval, preps phone calls, and keep.",
+   "url": "https://x.ai/bot/aNzsOCQEv9JJDk0Rgzc4k"
+  },
+  {
+   "id": "writing-publishing-WWdl6r61XsoZR3nyXwLzj",
+   "code": "WWdl6r61XsoZR3nyXwLzj",
+   "name": "Head of Content",
+   "author": "Ryan",
+   "description": "An AI head of content for growing on X: builds your brand strategy, connects tools, writes content skills and deploys 10+ content bots; you stay the editor.",
+   "url": "https://x.ai/bot/WWdl6r61XsoZR3nyXwLzj"
+  },
+  {
+   "id": "writing-publishing-rBOHo9VLBFfSBoQ_NVhp_",
+   "code": "rBOHo9VLBFfSBoQ_NVhp_",
+   "name": "Hero",
+   "author": "Taylor Honaker",
+   "description": "Life-story narrator that keeps your story until you are ready to meet it, so the people you love inherit a story they can cherish.",
+   "url": "https://x.ai/bot/rBOHo9VLBFfSBoQ_NVhp_"
+  },
+  {
+   "id": "writing-publishing-FhlGOrrO08-hVoxT1NGq7",
+   "code": "FhlGOrrO08-hVoxT1NGq7",
+   "name": "HireMatch",
+   "author": "Brian's Brain",
+   "description": "Finds openings that match your rules, verifies each live apply page, scores fit, and drafts materials from your real experience.",
+   "url": "https://x.ai/bot/FhlGOrrO08-hVoxT1NGq7"
+  },
+  {
+   "id": "writing-publishing-vgiYk0mJeijE4YXmfmQld",
+   "code": "vgiYk0mJeijE4YXmfmQld",
+   "name": "Human Copywriter",
+   "author": "Sultanov",
+   "description": "Rewrites emails, posts, DMs, blogs, and landing-page copy so it sounds like a person wrote it.",
+   "url": "https://x.ai/bot/vgiYk0mJeijE4YXmfmQld"
+  },
+  {
+   "id": "writing-publishing-fYEC-nZpiiUPvaC5VTKbF",
+   "code": "fYEC-nZpiiUPvaC5VTKbF",
+   "name": "Human Voice Editor",
+   "author": "time velocity",
+   "description": "Paste in any draft and get it back sounding like a careful person wrote it.",
+   "url": "https://x.ai/bot/fYEC-nZpiiUPvaC5VTKbF"
+  },
+  {
+   "id": "writing-publishing-N7q8GwoUATXBKtA-fiq9p",
+   "code": "N7q8GwoUATXBKtA-fiq9p",
+   "name": "Humanizer",
+   "author": "Jason Richards",
+   "description": "Edits and rewrites drafts, emails, and pages so they read like a person wrote them.",
+   "url": "https://x.ai/bot/N7q8GwoUATXBKtA-fiq9p"
+  },
+  {
+   "id": "writing-publishing-izlQpnudtxbmDRKr7GvRs",
+   "code": "izlQpnudtxbmDRKr7GvRs",
+   "name": "I'm not old yet",
+   "author": "AdventureNLearn Main",
+   "description": "Drafts memes that mock age-bait junk mail, never the people receiving it.",
+   "url": "https://x.ai/bot/izlQpnudtxbmDRKr7GvRs"
+  },
+  {
+   "id": "writing-publishing-Uebi7w0hZRhAk0rCORNBM",
+   "code": "Uebi7w0hZRhAk0rCORNBM",
+   "name": "Idea Lab & Brainstorm Logger",
+   "author": "beastnug",
+   "description": "Captures business, content and product ideas from your day, podcasts or X links into a numbered log, stress-tests them and designs a cheap 7-day validation.",
+   "url": "https://x.ai/bot/Uebi7w0hZRhAk0rCORNBM"
+  },
+  {
+   "id": "writing-publishing--Fyw8l82cf3q2C1Osm7oZ",
+   "code": "-Fyw8l82cf3q2C1Osm7oZ",
+   "name": "InfoFeed",
+   "author": "Benjamin",
+   "description": "Intentional RSS reader in Spanish: paste blog, YouTube, Medium or Substack links and get short summaries of what's new, with the original link.",
+   "url": "https://x.ai/bot/-Fyw8l82cf3q2C1Osm7oZ"
+  },
+  {
+   "id": "writing-publishing-sZQ25eb9d1C5kFHpfE8_N",
+   "code": "sZQ25eb9d1C5kFHpfE8_N",
+   "name": "Inquiry Door Designer",
+   "author": "@42Constellation | The Book of 42",
+   "description": "Designs a small interactive web page from a question you care about, then hands you a copy-ready prompt to build it…",
+   "url": "https://x.ai/bot/sZQ25eb9d1C5kFHpfE8_N"
+  },
+  {
+   "id": "writing-publishing-SQVB5YWB8PzvV3bNpTiHQ",
+   "code": "SQVB5YWB8PzvV3bNpTiHQ",
+   "name": "Interactive AI Story Studio",
+   "author": "Kevin Mcquillen",
+   "description": "Builds and runs a daily interactive AI story series for Shorts and Reels with a locked cast and set, daily trend scans and A/B audience voting.",
+   "url": "https://x.ai/bot/SQVB5YWB8PzvV3bNpTiHQ"
+  },
+  {
+   "id": "writing-publishing-s066a9145d936e74d0c80",
+   "code": "s066a9145d936e74d0c80",
+   "name": "Internal Communications Manager",
+   "author": "SpaceX",
+   "description": "Draft clear, on-voice copy from your real context, matched to each audience and channel. Review-only so it never sends on its own.",
+   "url": "https://x.ai/bot/s066a9145d936e74d0c80"
+  },
+  {
+   "id": "writing-publishing-YTNSFtHdol3LvuZeAmcXZ",
+   "code": "YTNSFtHdol3LvuZeAmcXZ",
+   "name": "Internship Finder",
+   "author": "Rushmore",
+   "description": "Finds solid internships and drafts short personal outreach emails.",
+   "url": "https://x.ai/bot/YTNSFtHdol3LvuZeAmcXZ"
+  },
+  {
+   "id": "writing-publishing-aRKs2JhLCnnrb_hANO5kO",
+   "code": "aRKs2JhLCnnrb_hANO5kO",
+   "name": "Invoice Chase Draft",
+   "author": "Mike",
+   "description": "Drafts a polite email when a payment or a document is still outstanding.",
+   "url": "https://x.ai/bot/aRKs2JhLCnnrb_hANO5kO"
+  },
+  {
+   "id": "writing-publishing-A7LELRVRh9WorYfGaTaXT",
+   "code": "A7LELRVRh9WorYfGaTaXT",
+   "name": "KJVBible",
+   "author": "Carolina Dill",
+   "description": "Answers what the King James Bible says on any subject with book, chapter, and verse, plus an optional Reina Valera answer in Spanish.",
+   "url": "https://x.ai/bot/A7LELRVRh9WorYfGaTaXT"
+  },
+  {
+   "id": "writing-publishing-nYI57LkNbbS4nFGAao0nY",
+   "code": "nYI57LkNbbS4nFGAao0nY",
+   "name": "Keepers - Book Scout",
+   "author": "Ann Adamson",
+   "description": "Decides whether a book is worth buying for your taste, then pins what mattered after you own it.",
+   "url": "https://x.ai/bot/nYI57LkNbbS4nFGAao0nY"
+  },
+  {
+   "id": "writing-publishing-7X7bJpKNFugFLcLCd3F3B",
+   "code": "7X7bJpKNFugFLcLCd3F3B",
+   "name": "Kids Book Creator",
+   "author": "Bean",
+   "description": "Makes a print-ready children's picture book from five easy questions, with story, square full-bleed art, preview, and PDF.",
+   "url": "https://x.ai/bot/7X7bJpKNFugFLcLCd3F3B"
+  },
+  {
+   "id": "writing-publishing-ZuWhuINjSeN1G_Rp8k7P9",
+   "code": "ZuWhuINjSeN1G_Rp8k7P9",
+   "name": "LaserCanon",
+   "author": "WVWriter",
+   "description": "Laser-focused writing coach for one scene or paragraph at a time.",
+   "url": "https://x.ai/bot/ZuWhuINjSeN1G_Rp8k7P9"
+  },
+  {
+   "id": "writing-publishing-c4iPua1eVHtYPzgLeZnQG",
+   "code": "c4iPua1eVHtYPzgLeZnQG",
+   "name": "Late Delivery Refund Desk",
+   "author": "Thuong P. Nguyen",
+   "description": "Finds late FedEx and UPS guaranteed shipments in your invoices and drafts each refund request before the deadline. You file, it never does.",
+   "url": "https://x.ai/bot/c4iPua1eVHtYPzgLeZnQG"
+  },
+  {
+   "id": "writing-publishing-VNMoJ7mc5_QE5f9aIiYx-",
+   "code": "VNMoJ7mc5_QE5f9aIiYx-",
+   "name": "Literary Editor",
+   "author": "James Witt",
+   "description": "Literary and brand-voice editor for a fractional chief financial officer practice. Raises website copy, proposals, emails, LinkedIn outreach, reports,.",
+   "url": "https://x.ai/bot/VNMoJ7mc5_QE5f9aIiYx-"
+  },
+  {
+   "id": "writing-publishing-lnErR-gA_t3KkPlvtwrrz",
+   "code": "lnErR-gA_t3KkPlvtwrrz",
+   "name": "Longform Editor",
+   "author": "Wardonis Valenroth",
+   "description": "Long-form editor for chapters, essays, and manuscripts. Starts with structure and pacing, then line polish. Uses a free PDF and media toolkit when it.",
+   "url": "https://x.ai/bot/lnErR-gA_t3KkPlvtwrrz"
+  },
+  {
+   "id": "writing-publishing-jHT5FLhpCMx7JeIq9BEHY",
+   "code": "jHT5FLhpCMx7JeIq9BEHY",
+   "name": "Luma Pages",
+   "author": "Jenna Nanpei",
+   "description": "Builds and updates private Luma event pages for field marketers - copy, branding, registration settings, capacity and waitlist, and registration-list…",
+   "url": "https://x.ai/bot/jHT5FLhpCMx7JeIq9BEHY"
+  },
+  {
+   "id": "writing-publishing-YvxsAro5SITkzr5x6TsWg",
+   "code": "YvxsAro5SITkzr5x6TsWg",
+   "name": "MEL preguntas",
+   "author": "Maar",
+   "description": "Answers Mercado Libre listing questions and post-sale messages in your store's tone.",
+   "url": "https://x.ai/bot/YvxsAro5SITkzr5x6TsWg"
+  },
+  {
+   "id": "writing-publishing-WSB_wU8TMOIoRZskV_Z9p",
+   "code": "WSB_wU8TMOIoRZskV_Z9p",
+   "name": "MJ Bot",
+   "author": "BrokenBuilder7",
+   "description": "Ask about Michael Jackson’s real story — albums, credits, tours, charts, Jackson 5 roots.",
+   "url": "https://x.ai/bot/WSB_wU8TMOIoRZskV_Z9p"
+  },
+  {
+   "id": "writing-publishing-SktrYfnj1vy3eG90uQ971",
+   "code": "SktrYfnj1vy3eG90uQ971",
+   "name": "MacPowerTools",
+   "author": "Adi Lentils",
+   "description": "Dry-run helper for user caches, Trash, and old Downloads. A local cleanup script, not a swarm.",
+   "url": "https://x.ai/bot/SktrYfnj1vy3eG90uQ971"
+  },
+  {
+   "id": "writing-publishing-GLDFD6EeedS4QrVZ7FMMh",
+   "code": "GLDFD6EeedS4QrVZ7FMMh",
+   "name": "Mahjong, Pickleball & Book Club Hostess HQ",
+   "author": "Lisa",
+   "description": "All-in-one club night & hostess planner for Mahjong groups, Pickleball round-robins, and Book Clubs / Bible studies…",
+   "url": "https://x.ai/bot/GLDFD6EeedS4QrVZ7FMMh"
+  },
+  {
+   "id": "writing-publishing-rVZtWMQwb_6tXAQPatay5",
+   "code": "rVZtWMQwb_6tXAQPatay5",
+   "name": "Make It a 10",
+   "author": "Luke Henderson",
+   "description": "Assumes your work is a 3/10 and shows what gets it to 7 and 10: scores writing, code, designs or plans, critiques its own review, hands back top 3 fixes.",
+   "url": "https://x.ai/bot/rVZtWMQwb_6tXAQPatay5"
+  },
+  {
+   "id": "writing-publishing-6eQuzYQr9dcyTSU-4jHtn",
+   "code": "6eQuzYQr9dcyTSU-4jHtn",
+   "name": "Manuscript Desk",
+   "author": "Mike Mosley",
+   "description": "Your private manuscript desk: a chapter map and story bible with continuity checks, revision passes with honest notes, and beta-reader rounds.",
+   "url": "https://x.ai/bot/6eQuzYQr9dcyTSU-4jHtn"
+  },
+  {
+   "id": "writing-publishing-C7EJYRkXAH3dgkpPLqPVs",
+   "code": "C7EJYRkXAH3dgkpPLqPVs",
+   "name": "Marketing & Content Manager",
+   "author": "Sultan",
+   "description": "A marketing and content manager for small brands: plans the weekly content calendar, drafts posts, campaigns and collaboration outreach, and QAs them.",
+   "url": "https://x.ai/bot/C7EJYRkXAH3dgkpPLqPVs"
+  },
+  {
+   "id": "writing-publishing-9s1eGxsc3xUQ8NrDABQlN",
+   "code": "9s1eGxsc3xUQ8NrDABQlN",
+   "name": "Mediation Bot",
+   "author": "Drew",
+   "description": "Phone-first conflict coach. Helps you name your side clearly, then drafts a calmer message to the other person…",
+   "url": "https://x.ai/bot/9s1eGxsc3xUQ8NrDABQlN"
+  },
+  {
+   "id": "writing-publishing-QdafnX9w3E0G7vqZsvs0o",
+   "code": "QdafnX9w3E0G7vqZsvs0o",
+   "name": "Medium Writer",
+   "author": "Vijay Kandhalu",
+   "description": "Medium Writer. Drafts practitioner stories ready for Medium — clear structure, grounded in the source.",
+   "url": "https://x.ai/bot/QdafnX9w3E0G7vqZsvs0o"
+  },
+  {
+   "id": "writing-publishing-wwQfz7q4jRS2QtI8E6Sl0",
+   "code": "wwQfz7q4jRS2QtI8E6Sl0",
+   "name": "Micro Cap Catalyst",
+   "author": "Minto Tsai",
+   "description": "For retail traders who want a concentrated one-name US micro/small-cap book with human approval on every order. Screens near-term catalysts after the US.",
+   "url": "https://x.ai/bot/wwQfz7q4jRS2QtI8E6Sl0"
+  },
+  {
+   "id": "writing-publishing-TwwL0h36HFLe41PE471WS",
+   "code": "TwwL0h36HFLe41PE471WS",
+   "name": "MikroTik Auditor",
+   "author": "Александр",
+   "description": "Audits MikroTik RouterOS configs and router chains from /export and WinBox, tests fixes on a CHR lab, and hands back a script with rollback.",
+   "url": "https://x.ai/bot/TwwL0h36HFLe41PE471WS"
+  },
+  {
+   "id": "writing-publishing-tTloWIy8lNvujhH904fz2",
+   "code": "tTloWIy8lNvujhH904fz2",
+   "name": "Missed Call Catcher",
+   "author": "zeke",
+   "description": "Logs missed and after-hours calls for HVAC, plumbing, roofing or painting shops, flags emergencies, and drafts a callback text for each one.",
+   "url": "https://x.ai/bot/tTloWIy8lNvujhH904fz2"
+  },
+  {
+   "id": "writing-publishing-qlfcFxd1IMsZBHAQQHVxo",
+   "code": "qlfcFxd1IMsZBHAQQHVxo",
+   "name": "Monthly Blog Ideas",
+   "author": "@Lisapatb",
+   "description": "Sends bloggers 2 to 4 practical, seasonal post ideas per blog every month, shaped to each blog's topics and voice…",
+   "url": "https://x.ai/bot/qlfcFxd1IMsZBHAQQHVxo"
+  },
+  {
+   "id": "writing-publishing-BH0jRkrYbrVBJR7iXMdJK",
+   "code": "BH0jRkrYbrVBJR7iXMdJK",
+   "name": "Multi-SI Review",
+   "author": "Honeycomb",
+   "description": "Sets up the AI command-line tools you already pay for as review lanes, then merges their independent reviews of your plan, copy or code into one verdict.",
+   "url": "https://x.ai/bot/BH0jRkrYbrVBJR7iXMdJK"
+  },
+  {
+   "id": "writing-publishing-gt31Cad2_jY1FyjzhZ-WP",
+   "code": "gt31Cad2_jY1FyjzhZ-WP",
+   "name": "Mystery Writer's Room",
+   "author": "Kristoffer D. Acly",
+   "description": "A writer's room for mystery and thriller authors: plotting, clues and red herrings, characters, pacing and dialogue…",
+   "url": "https://x.ai/bot/gt31Cad2_jY1FyjzhZ-WP"
+  },
+  {
+   "id": "writing-publishing-OEpjjYyO5MFI1G0pargQS",
+   "code": "OEpjjYyO5MFI1G0pargQS",
+   "name": "NIS2 Assessment BOT",
+   "author": "Gianluca Izzo",
+   "description": "NIS2 / national cybersecurity GRC assistant: runs structured gap analysis, drafts policy packs and remediation roadmaps, and can wire results…",
+   "url": "https://x.ai/bot/OEpjjYyO5MFI1G0pargQS"
+  },
+  {
+   "id": "writing-publishing-I09yihGvSkP2wfE1dET9Z",
+   "code": "I09yihGvSkP2wfE1dET9Z",
+   "name": "Nam",
+   "author": "Arthur",
+   "description": "Creates cute, short bot names from the words and functions you pick, then sets up the bot when you like the name.",
+   "url": "https://x.ai/bot/I09yihGvSkP2wfE1dET9Z"
+  },
+  {
+   "id": "writing-publishing-z7g-YZ1tFzVUW2ci-StVp",
+   "code": "z7g-YZ1tFzVUW2ci-StVp",
+   "name": "New Jack",
+   "author": "AdamDesigns",
+   "description": "Drafts-only newsjacking: watches breaking AI, tech and markets stories, picks the ones where you have real standing and hands you ready-to-post drafts.",
+   "url": "https://x.ai/bot/z7g-YZ1tFzVUW2ci-StVp"
+  },
+  {
+   "id": "writing-publishing-nQEgiP-R4IZE_qkx5ZSw1",
+   "code": "nQEgiP-R4IZE_qkx5ZSw1",
+   "name": "Newsletter Draft Routine by Karata",
+   "author": "Karata",
+   "description": "Drafts your next newsletter issue the day before it goes out, in your own style, and saves it as a draft for review.",
+   "url": "https://x.ai/bot/nQEgiP-R4IZE_qkx5ZSw1"
+  },
+  {
+   "id": "writing-publishing--SxKtRLmO7QcCk6kN0Jzy",
+   "code": "-SxKtRLmO7QcCk6kN0Jzy",
+   "name": "Newsroom to Teleprompter",
+   "author": "Michael Reed",
+   "description": "Builds a four-bot newsroom with two research Friends, an editor Desk, and a fact-checker, then delivers social plus teleprompter copy.",
+   "url": "https://x.ai/bot/-SxKtRLmO7QcCk6kN0Jzy"
+  },
+  {
+   "id": "writing-publishing-8vhH00illS1QJRSHK5zXp",
+   "code": "8vhH00illS1QJRSHK5zXp",
+   "name": "NicheSiteWriter",
+   "author": "Jethro Jones",
+   "description": "Runs your niche content site: researched daily articles, SEO and answer-engine optimization, images, lead-magnet PDFs and newsletter drafts, all after your OK.",
+   "url": "https://x.ai/bot/8vhH00illS1QJRSHK5zXp"
+  },
+  {
+   "id": "writing-publishing-TB48ius3yYWqvUFaxnM33",
+   "code": "TB48ius3yYWqvUFaxnM33",
+   "name": "North Star",
+   "author": "Oliver Parsons",
+   "description": "Keeps one shared source of truth about you: who you are, how you write, your rules and open promises, and reports weekly what's drifting or contradictory.",
+   "url": "https://x.ai/bot/TB48ius3yYWqvUFaxnM33"
+  },
+  {
+   "id": "writing-publishing-blWboTjWqU1Nf58X29RYY",
+   "code": "blWboTjWqU1Nf58X29RYY",
+   "name": "Novel Workshop Lead",
+   "author": "Nicolas pioups",
+   "description": "Coordinates a multi-agent novel workshop: character agents, pacing, and voice take turns writing short scenes while you stay the author.",
+   "url": "https://x.ai/bot/blWboTjWqU1Nf58X29RYY"
+  },
+  {
+   "id": "writing-publishing-9Md8JAsr7Vyk8cv8BcnLf",
+   "code": "9Md8JAsr7Vyk8cv8BcnLf",
+   "name": "Number One",
+   "author": "ladybarrelmaker",
+   "description": "Presentation coach for any talk that drafts outlines and slides and reviews practice takes, never live.",
+   "url": "https://x.ai/bot/9Md8JAsr7Vyk8cv8BcnLf"
+  },
+  {
+   "id": "writing-publishing-2BDIxeFbgvRgQtX52I6pI",
+   "code": "2BDIxeFbgvRgQtX52I6pI",
+   "name": "One Day",
+   "author": "Alfredo Herrera",
+   "description": "“One day I’ll start.” One Day turns it into the first step and a daily check until you do it. Draft only — it never files, pays, posts, or calls.",
+   "url": "https://x.ai/bot/2BDIxeFbgvRgQtX52I6pI"
+  },
+  {
+   "id": "writing-publishing-7ZYfm739pWDNMzZIMbCSC",
+   "code": "7ZYfm739pWDNMzZIMbCSC",
+   "name": "Original Content Thieves",
+   "author": "Mila Joy",
+   "description": "Finds accounts on X that copy your original posts without credit, with links to each copy and your original.",
+   "url": "https://x.ai/bot/7ZYfm739pWDNMzZIMbCSC"
+  },
+  {
+   "id": "writing-publishing-IOSFiZskNs_IB7p0gys4R",
+   "code": "IOSFiZskNs_IB7p0gys4R",
+   "name": "Outreach Closer",
+   "author": "Dawood",
+   "description": "Watches an outreach inbox, sorts publisher replies, and drafts mention copy plus approve-or-decline offer cards. Never agrees a price and never pays.",
+   "url": "https://x.ai/bot/IOSFiZskNs_IB7p0gys4R"
+  },
+  {
+   "id": "writing-publishing-YrtnJhej5cpAm13jh0Awv",
+   "code": "YrtnJhej5cpAm13jh0Awv",
+   "name": "PDF",
+   "author": "𝕏",
+   "description": "One place for every PDF. Send it your content, and it sends back a finished PDF in your own fixed style…",
+   "url": "https://x.ai/bot/YrtnJhej5cpAm13jh0Awv"
+  },
+  {
+   "id": "writing-publishing-3SExQeiS4pwalaUG-7YM1",
+   "code": "3SExQeiS4pwalaUG-7YM1",
+   "name": "PROMPT EDITOR",
+   "author": "Chad Parris",
+   "description": "Safe sandbox for longform agent prompts: spell-check, format, resolve ambiguity, token-optimize digs and spawned routines.",
+   "url": "https://x.ai/bot/3SExQeiS4pwalaUG-7YM1"
+  },
+  {
+   "id": "writing-publishing-QeblYPmzNFIbeCJR_dKyS",
+   "code": "QeblYPmzNFIbeCJR_dKyS",
+   "name": "Packet Wrangler Range Rider",
+   "author": "Stephanie Lamouroux",
+   "description": "A read-only watchdog for hosted sites that drafts fixes for your approval.",
+   "url": "https://x.ai/bot/QeblYPmzNFIbeCJR_dKyS"
+  },
+  {
+   "id": "writing-publishing-wuUzQmWkCqaQeDQm_he85",
+   "code": "wuUzQmWkCqaQeDQm_he85",
+   "name": "Paycheck Reality Check",
+   "author": "Alex",
+   "description": "Turns a pasted pay stub into line findings, a no-invented-rates worksheet, and a demand draft. You send everything yourself.",
+   "url": "https://x.ai/bot/wuUzQmWkCqaQeDQm_he85"
+  },
+  {
+   "id": "writing-publishing-VTWG_fyW6Xr_pkjEBM9VC",
+   "code": "VTWG_fyW6Xr_pkjEBM9VC",
+   "name": "Pearl",
+   "author": "Vivek Kumar",
+   "description": "Chief of Staff for a creator content engine that plans work, delegates to specialist bots, reviews handoffs, and asks before shipping.",
+   "url": "https://x.ai/bot/VTWG_fyW6Xr_pkjEBM9VC"
+  },
+  {
+   "id": "writing-publishing-eZU8NymXZIN_5vJd2xrYZ",
+   "code": "eZU8NymXZIN_5vJd2xrYZ",
+   "name": "Peep.txt",
+   "author": "Eric",
+   "description": "Audits one URL the way AI crawlers see it and drafts an llms.txt patch list.",
+   "url": "https://x.ai/bot/eZU8NymXZIN_5vJd2xrYZ"
+  },
+  {
+   "id": "writing-publishing-E7gOfps7zWQwX6QhOJYO_",
+   "code": "E7gOfps7zWQwX6QhOJYO_",
+   "name": "Penny",
+   "author": "@capricorncomedy",
+   "description": "Penny, your Script Checker: for continuity when EVERY penny counts!",
+   "url": "https://x.ai/bot/E7gOfps7zWQwX6QhOJYO_"
+  },
+  {
+   "id": "writing-publishing-s3c76c85a840b32b8fed8",
+   "code": "s3c76c85a840b32b8fed8",
+   "name": "Personal Site Builder",
+   "author": "SpaceX",
+   "description": "Scaffold a personal site from a description, untangle domain issues, and leave you with a live starting point.",
+   "url": "https://x.ai/bot/s3c76c85a840b32b8fed8"
+  },
+  {
+   "id": "writing-publishing-A5MrnZ1SGhd4yOX-ZlWBh",
+   "code": "A5MrnZ1SGhd4yOX-ZlWBh",
+   "name": "Personalized Localized Name Gen",
+   "author": "Mario Saputra",
+   "description": "Generates localized first and last names plus a nickname when useful, personalized to you and a target country, with local script when the locale has one.",
+   "url": "https://x.ai/bot/A5MrnZ1SGhd4yOX-ZlWBh"
+  },
+  {
+   "id": "writing-publishing-hYWStgmylzuneD-n_lzje",
+   "code": "hYWStgmylzuneD-n_lzje",
+   "name": "Playlist Story",
+   "author": "Amber Manning",
+   "description": "Reads a Spotify playlist as a story: turns the song order into a mood arc, themes and a narrative, and can write it out as prose. Includes a Python script.",
+   "url": "https://x.ai/bot/hYWStgmylzuneD-n_lzje"
+  },
+  {
+   "id": "writing-publishing-VYgzGS8CyiyfU7Rx3kPWo",
+   "code": "VYgzGS8CyiyfU7Rx3kPWo",
+   "name": "Post Writer",
+   "author": "Jorhan Cruz",
+   "description": "Learns how you write and drafts X posts in your voice. Nothing posts unless you approve the exact text, and approved posts can go out through Buffer.",
+   "url": "https://x.ai/bot/VYgzGS8CyiyfU7Rx3kPWo"
+  },
+  {
+   "id": "writing-publishing-h-oDlchOpuh6GYjGgK6oV",
+   "code": "h-oDlchOpuh6GYjGgK6oV",
+   "name": "Postwright",
+   "author": "Calix Build",
+   "description": "Turns your week of real work into ready-to-post X drafts in your own voice, with sources, assets and suggested times. Draft-only: you hit post.",
+   "url": "https://x.ai/bot/h-oDlchOpuh6GYjGgK6oV"
+  },
+  {
+   "id": "writing-publishing-VnbwaCafFcFC5d4-sHp1w",
+   "code": "VnbwaCafFcFC5d4-sHp1w",
+   "name": "Presentation Coach",
+   "author": "ladybarrelmaker",
+   "description": "Presentation coach for any talk that drafts outlines and slides and reviews practice takes, never live.",
+   "url": "https://x.ai/bot/VnbwaCafFcFC5d4-sHp1w"
+  },
+  {
+   "id": "writing-publishing-MZxv2GSWzNh8mXfMB0xla",
+   "code": "MZxv2GSWzNh8mXfMB0xla",
+   "name": "Press",
+   "author": "Code Solutions",
+   "description": "Runs a final quality gate on a confirmed draft and posts only after the user gives explicit approval.",
+   "url": "https://x.ai/bot/MZxv2GSWzNh8mXfMB0xla"
+  },
+  {
+   "id": "writing-publishing-f2IQR96u1xM-hzMpW7sg2",
+   "code": "f2IQR96u1xM-hzMpW7sg2",
+   "name": "Producer",
+   "author": "Scott Metcalf",
+   "description": "Turns enablement teleprompters into narrator-voiced training episodes and hands back draft files for human review…",
+   "url": "https://x.ai/bot/f2IQR96u1xM-hzMpW7sg2"
+  },
+  {
+   "id": "writing-publishing-3P03grqfP1E5PjeOSW-xO",
+   "code": "3P03grqfP1E5PjeOSW-xO",
+   "name": "Product",
+   "author": "Andrew",
+   "description": "Product judgment for indie apps - what to ship next, what not to build, and whether a change is a real user problem.",
+   "url": "https://x.ai/bot/3P03grqfP1E5PjeOSW-xO"
+  },
+  {
+   "id": "writing-publishing-s9e2a2591b97ca74fbeaa",
+   "code": "s9e2a2591b97ca74fbeaa",
+   "name": "Product Feedback Analyst",
+   "author": "SpaceX",
+   "description": "Collects and clusters feedback from connected sources, weighs evidence against urgency, and drafts the prioritised view.",
+   "url": "https://x.ai/bot/s9e2a2591b97ca74fbeaa"
+  },
+  {
+   "id": "writing-publishing-0okcLttUVwNOKW_LeT6ul",
+   "code": "0okcLttUVwNOKW_LeT6ul",
+   "name": "Professional Writer",
+   "author": "Joseph",
+   "description": "Writes cover letters and outreach in natural spoken English a hiring manager would believe, using only facts from your own resume and sources.",
+   "url": "https://x.ai/bot/0okcLttUVwNOKW_LeT6ul"
+  },
+  {
+   "id": "writing-publishing-Y88UF-JhSZfG5q_L05XnQ",
+   "code": "Y88UF-JhSZfG5q_L05XnQ",
+   "name": "PromptsmithBot",
+   "author": "cokeandrice.akita.algo",
+   "description": "Helps anyone write effective prompts for Anthropic's Claude Opus 5.5, asking only the questions that matter and returning a paste-ready prompt. It can.",
+   "url": "https://x.ai/bot/Y88UF-JhSZfG5q_L05XnQ"
+  },
+  {
+   "id": "writing-publishing-1kk1mjbJ1-jNMpK9aKz0T",
+   "code": "1kk1mjbJ1-jNMpK9aKz0T",
+   "name": "Prose Guard",
+   "author": "roger",
+   "description": "Rewrites and scores your drafts so they read as human-written, modeled on writing you supply.",
+   "url": "https://x.ai/bot/1kk1mjbJ1-jNMpK9aKz0T"
+  },
+  {
+   "id": "writing-publishing-kkvMHisvI7h1xVOW7v3Kr",
+   "code": "kkvMHisvI7h1xVOW7v3Kr",
+   "name": "Protologs",
+   "author": "nodding head nigga",
+   "description": "Turns what's in your head, like your know-how in any field or your taste in what you save and like, into lasting rules or themes, just by ta.",
+   "url": "https://x.ai/bot/kkvMHisvI7h1xVOW7v3Kr"
+  },
+  {
+   "id": "writing-publishing-n9zq64kTeEEc5NwrkAOi8",
+   "code": "n9zq64kTeEEc5NwrkAOi8",
+   "name": "Publish work as a private link",
+   "author": "Steve Smith",
+   "description": "Turns anything your Bot makes — a report, a plan, a one-pager — into a live page on a private, unguessable link you can…",
+   "url": "https://x.ai/bot/n9zq64kTeEEc5NwrkAOi8"
+  },
+  {
+   "id": "writing-publishing-05wMUj_-QOR1l3f2bbXxA",
+   "code": "05wMUj_-QOR1l3f2bbXxA",
+   "name": "Quarto Blog Shipper",
+   "author": "Javier Orraca-Deatcu",
+   "description": "Ships your Quarto blog through pull requests: drafts posts in your voice, keeps them hidden until you approve…",
+   "url": "https://x.ai/bot/05wMUj_-QOR1l3f2bbXxA"
+  },
+  {
+   "id": "writing-publishing-3DxcsWM7WiqsIrWHlH3AS",
+   "code": "3DxcsWM7WiqsIrWHlH3AS",
+   "name": "Quick Wins Hunter",
+   "author": "Minh",
+   "description": "Weekly: finds keywords one push from page 1 and pages that rank but lose the click, then stages title and content fixes for your approval.",
+   "url": "https://x.ai/bot/3DxcsWM7WiqsIrWHlH3AS"
+  },
+  {
+   "id": "writing-publishing--qDULtwkUNS9lKOOxPFvE",
+   "code": "-qDULtwkUNS9lKOOxPFvE",
+   "name": "Quill",
+   "author": "Michael Sweet",
+   "description": "Publishing manager for Substack: packages drafts into title, deck, tags, and body; stages Drafts for human Publish; owns comment triage and paste-ready…",
+   "url": "https://x.ai/bot/-qDULtwkUNS9lKOOxPFvE"
+  },
+  {
+   "id": "writing-publishing-K8w0ia5zbs3PAEGvAo6i0",
+   "code": "K8w0ia5zbs3PAEGvAo6i0",
+   "name": "Quote Form Bot",
+   "author": "Mike Boykin",
+   "description": "Fills a building manufacturer's quote request from bid emails, drawings, and specs, color-codes confidence, and routes the draft to your pricing team.",
+   "url": "https://x.ai/bot/K8w0ia5zbs3PAEGvAo6i0"
+  },
+  {
+   "id": "writing-publishing-oAfWMWKilafIUG1sod4Dp",
+   "code": "oAfWMWKilafIUG1sod4Dp",
+   "name": "Referral Loop Manager",
+   "author": "AEGLE LABS",
+   "description": "Keeps a community or referral program healthy: tracks members, drafts a weekly pack of reactivation asks, nudges, and a founder update.",
+   "url": "https://x.ai/bot/oAfWMWKilafIUG1sod4Dp"
+  },
+  {
+   "id": "writing-publishing-QxpNBmZFou57JlaVvulCB",
+   "code": "QxpNBmZFou57JlaVvulCB",
+   "name": "Reno Helper",
+   "author": "Diana Park",
+   "description": "Owns your renovation notes: decisions, contractor visits, packing and move logistics, and the next useful step. Drafts messages; never hires or buys on its own.",
+   "url": "https://x.ai/bot/QxpNBmZFou57JlaVvulCB"
+  },
+  {
+   "id": "writing-publishing-VoaQTdG45gCSK06lgMQEF",
+   "code": "VoaQTdG45gCSK06lgMQEF",
+   "name": "Replies to Posts",
+   "author": "Sultanov Ramil",
+   "description": "Every evening turns your X replies and the replies under your posts into post ideas and three ready drafts for tomorrow. Drafts only.",
+   "url": "https://x.ai/bot/VoaQTdG45gCSK06lgMQEF"
+  },
+  {
+   "id": "writing-publishing-zcsAbSPln7Zgh9YtF_ZlU",
+   "code": "zcsAbSPln7Zgh9YtF_ZlU",
+   "name": "Reputation Guard",
+   "author": "Han",
+   "description": "Watches Google and Yelp every morning for multi-location businesses, flags risky reviews, and drafts liability-safe public replies for owners to post.",
+   "url": "https://x.ai/bot/zcsAbSPln7Zgh9YtF_ZlU"
+  },
+  {
+   "id": "writing-publishing-OAlX-diXtFDIT6sTZ0NbI",
+   "code": "OAlX-diXtFDIT6sTZ0NbI",
+   "name": "Retrieval Exam",
+   "author": "Sultanov Ramil",
+   "description": "A closed-book examiner that tests whether you can reconstruct ideas from memory, not just recognize them.",
+   "url": "https://x.ai/bot/OAlX-diXtFDIT6sTZ0NbI"
+  },
+  {
+   "id": "writing-publishing-wjIrg0RP6NeJOFVduz6n6",
+   "code": "wjIrg0RP6NeJOFVduz6n6",
+   "name": "Review Reply Craft",
+   "author": "Mrunknown.cro",
+   "description": "Helps small local businesses write human-sounding Google review replies and turn goodwill into paid reply packs.",
+   "url": "https://x.ai/bot/wjIrg0RP6NeJOFVduz6n6"
+  },
+  {
+   "id": "writing-publishing-RFZWV8682hykNKF8UJf44",
+   "code": "RFZWV8682hykNKF8UJf44",
+   "name": "Review Reply Drafter",
+   "author": "Mike",
+   "description": "Draft replies to public reviews from paste.",
+   "url": "https://x.ai/bot/RFZWV8682hykNKF8UJf44"
+  },
+  {
+   "id": "writing-publishing-Vae3EVVTJ7hrxo1ojKv6j",
+   "code": "Vae3EVVTJ7hrxo1ojKv6j",
+   "name": "Ride Editor",
+   "author": "Jared Richards",
+   "description": "YouTube ride and FSD dashcam editor that cleans titles and playlists, builds highlights and thumbnails, and publishes on ask.",
+   "url": "https://x.ai/bot/Vae3EVVTJ7hrxo1ojKv6j"
+  },
+  {
+   "id": "writing-publishing-a4rAhiw-JWvkyoonJicw5",
+   "code": "a4rAhiw-JWvkyoonJicw5",
+   "name": "SEO & Answer Engine Writer",
+   "author": "Charles Bonetti",
+   "description": "Finds what your site should rank for in Google and AI answer engines, drafts articles against what ranks today, and tracks results weekly.",
+   "url": "https://x.ai/bot/a4rAhiw-JWvkyoonJicw5"
+  },
+  {
+   "id": "writing-publishing-OkT4Dbjy4xVf7oVBCr8hL",
+   "code": "OkT4Dbjy4xVf7oVBCr8hL",
+   "name": "SEO Content Desk (seodraft)",
+   "author": "Chorch",
+   "description": "An SEO content desk that writes blog posts without AI slop: topics with real search volume, drafts built from your own…",
+   "url": "https://x.ai/bot/OkT4Dbjy4xVf7oVBCr8hL"
+  },
+  {
+   "id": "writing-publishing-MqpVtx5cwyfu3ebisTUpv",
+   "code": "MqpVtx5cwyfu3ebisTUpv",
+   "name": "SOP Writer Desk CLEAR-STEPS",
+   "author": "Cypher",
+   "description": "Messy notes become a numbered, role-tagged SOP with gaps flagged.",
+   "url": "https://x.ai/bot/MqpVtx5cwyfu3ebisTUpv"
+  },
+  {
+   "id": "writing-publishing-mhzjt-Pa01Ds8EJ0zJrcz",
+   "code": "mhzjt-Pa01Ds8EJ0zJrcz",
+   "name": "STEER",
+   "author": "Bill",
+   "description": "Mark up the flat, machine-sounding lines in a draft and get them rewritten.",
+   "url": "https://x.ai/bot/mhzjt-Pa01Ds8EJ0zJrcz"
+  },
+  {
+   "id": "writing-publishing-JDYPl17DU2bU771WtX4we",
+   "code": "JDYPl17DU2bU771WtX4we",
+   "name": "SaaS Content Ranker",
+   "author": "Abdullah",
+   "description": "Plans and drafts ranking pages for affiliate software sites, then checks a publish checklist.",
+   "url": "https://x.ai/bot/JDYPl17DU2bU771WtX4we"
+  },
+  {
+   "id": "writing-publishing-czVH2_zAJ03lca6ti7cwJ",
+   "code": "czVH2_zAJ03lca6ti7cwJ",
+   "name": "Sage",
+   "author": "Cybertrucker",
+   "description": "A confidential leadership coach for business leaders. It coaches with questions instead of orders and sends a one-page weekly story that teaches one key.",
+   "url": "https://x.ai/bot/czVH2_zAJ03lca6ti7cwJ"
+  },
+  {
+   "id": "writing-publishing-qR7nq7v3w0bwpojx2LgQx",
+   "code": "qR7nq7v3w0bwpojx2LgQx",
+   "name": "Sanity",
+   "author": "ahdumgray",
+   "description": "A specialist for Sanity content models, schemas and GROQ.",
+   "url": "https://x.ai/bot/qR7nq7v3w0bwpojx2LgQx"
+  },
+  {
+   "id": "writing-publishing-6GMJiedVa9Lp3nvyF9adp",
+   "code": "6GMJiedVa9Lp3nvyF9adp",
+   "name": "Scope Creep Detector",
+   "author": "Mike",
+   "description": "Diff new asks against locked SOW bullets and draft a change-order note.",
+   "url": "https://x.ai/bot/6GMJiedVa9Lp3nvyF9adp"
+  },
+  {
+   "id": "writing-publishing-ojxNuPSu-r1ldCZ5opulH",
+   "code": "ojxNuPSu-r1ldCZ5opulH",
+   "name": "Scout",
+   "author": "Code Solutions",
+   "description": "Draft-only X reply and quote opportunities ranked for high-fit organic outreach.",
+   "url": "https://x.ai/bot/ojxNuPSu-r1ldCZ5opulH"
+  },
+  {
+   "id": "writing-publishing-720sUKDBHmLpX8Ov4Ufrt",
+   "code": "720sUKDBHmLpX8Ov4Ufrt",
+   "name": "Scribe",
+   "author": "Slowfreeze.eth.sol.tez",
+   "description": "A content and search teammate that writes honest, search-friendly articles from your real project, runs a free article hub and makes pins and cross-posts.",
+   "url": "https://x.ai/bot/720sUKDBHmLpX8Ov4Ufrt"
+  },
+  {
+   "id": "writing-publishing-ySMQW544mSpZFty-DaGml",
+   "code": "ySMQW544mSpZFty-DaGml",
+   "name": "Script-it",
+   "author": "D'Artagnan",
+   "description": "Pre-launch gate for an app, site, or paid plan that tests the happy and failure paths, data access rules, and leaked keys, then rules GO or NO-GO on evidence.",
+   "url": "https://x.ai/bot/ySMQW544mSpZFty-DaGml"
+  },
+  {
+   "id": "writing-publishing-OQPXyBkjMhSEZxeZiE36b",
+   "code": "OQPXyBkjMhSEZxeZiE36b",
+   "name": "Scrub Gate Public",
+   "author": "@suddenlyjon",
+   "description": "Public twin before publish. Gates any Public republish: audit the private bot, stand up a scrubbed `{Name} Public`…",
+   "url": "https://x.ai/bot/OQPXyBkjMhSEZxeZiE36b"
+  },
+  {
+   "id": "writing-publishing-1xkIClLvscskj-Q4LsQIy",
+   "code": "1xkIClLvscskj-Q4LsQIy",
+   "name": "Second Look",
+   "author": "Nomis",
+   "description": "Reads a suspended GitHub account's repos against the platform rules, quotes likely breaches with evidence, and drafts an appeal you send yourself.",
+   "url": "https://x.ai/bot/1xkIClLvscskj-Q4LsQIy"
+  },
+  {
+   "id": "writing-publishing-NAFAT-NGrQ7-zLccn4qg1",
+   "code": "NAFAT-NGrQ7-zLccn4qg1",
+   "name": "Sentinel",
+   "author": "Gregory Sloan, CLU, ChFC",
+   "description": "Compliance officer for insurance marketing copy. Reviews outbound emails, site pages, and blog posts before publish.",
+   "url": "https://x.ai/bot/NAFAT-NGrQ7-zLccn4qg1"
+  },
+  {
+   "id": "writing-publishing-KcyJHCgCu7nrrPXYxs1b4",
+   "code": "KcyJHCgCu7nrrPXYxs1b4",
+   "name": "Settled",
+   "author": "Turac",
+   "description": "Tracks who owes whom after dinners, trips, and Ubers, then drafts a chill pay-me note.",
+   "url": "https://x.ai/bot/KcyJHCgCu7nrrPXYxs1b4"
+  },
+  {
+   "id": "writing-publishing-u-eu1G6ifbhMUkeigffK1",
+   "code": "u-eu1G6ifbhMUkeigffK1",
+   "name": "Share-Ready",
+   "author": "SoCalFSD",
+   "description": "Paste a bot's setup. It flags anything private, rewrites the public description, suggests better names, and drafts…",
+   "url": "https://x.ai/bot/u-eu1G6ifbhMUkeigffK1"
+  },
+  {
+   "id": "writing-publishing-bLjgwE9D7HtZ17fVQc53o",
+   "code": "bLjgwE9D7HtZ17fVQc53o",
+   "name": "ShareNow Bot",
+   "author": "Sheing Ng",
+   "description": "Turns a topic or draft into a published static page on an external host, with optional hourly topic boards.",
+   "url": "https://x.ai/bot/bLjgwE9D7HtZ17fVQc53o"
+  },
+  {
+   "id": "writing-publishing-4ocmp-awK0AcgHSgtKxZm",
+   "code": "4ocmp-awK0AcgHSgtKxZm",
+   "name": "Sharpie",
+   "author": "Ben Taylor",
+   "description": "Turns messy operator notes into a one-page memo a PE partner or EVP can act on in about 90 seconds. Draft-only Operator Memo Writer — not a strategist,.",
+   "url": "https://x.ai/bot/4ocmp-awK0AcgHSgtKxZm"
+  },
+  {
+   "id": "writing-publishing-jJX-rUshHTIK8RP9IpJKE",
+   "code": "jJX-rUshHTIK8RP9IpJKE",
+   "name": "Shepherd",
+   "author": "Justin Strafuss",
+   "description": "A faith companion for daily Bible reading, weekly group or Space prep, and short encouragement drafts you post…",
+   "url": "https://x.ai/bot/jJX-rUshHTIK8RP9IpJKE"
+  },
+  {
+   "id": "writing-publishing-r_TDh1tl_1k1DgYyldhfj",
+   "code": "r_TDh1tl_1k1DgYyldhfj",
+   "name": "Sherlock Holmes (Fact Checker)",
+   "author": "Tom Palen",
+   "description": "Paste any story, link, quote or rumor and it fact-checks claim by claim with real sources, opening each case with a Truth Meter chart and a verdict.",
+   "url": "https://x.ai/bot/r_TDh1tl_1k1DgYyldhfj"
+  },
+  {
+   "id": "writing-publishing-K9hudVNb8DatLyuP-JVVm",
+   "code": "K9hudVNb8DatLyuP-JVVm",
+   "name": "Shoe Store Manager",
+   "author": "jessie sponberg",
+   "description": "Runs a branded online shoe store: finds print-on-demand and dropship shoes and clogs, matches them to your brands, drafts listings, keeps a display page sharp.",
+   "url": "https://x.ai/bot/K9hudVNb8DatLyuP-JVVm"
+  },
+  {
+   "id": "writing-publishing-tv5RfxhWSTcdxjgMgQ3iX",
+   "code": "tv5RfxhWSTcdxjgMgQ3iX",
+   "name": "Short Script Craft",
+   "author": "Mrunknown.cro",
+   "description": "Writes faceless YouTube Shorts and short-form scripts with packaging that earns the click - titles, thumb concepts, hooks, and beat scripts.",
+   "url": "https://x.ai/bot/tv5RfxhWSTcdxjgMgQ3iX"
+  },
+  {
+   "id": "writing-publishing-G071a96I_2jNBHYK0fJYM",
+   "code": "G071a96I_2jNBHYK0fJYM",
+   "name": "Shorts & Reels Editor",
+   "author": "Daniel Rader",
+   "description": "Cuts raw footage into a vertical short with the hook first, captions on, and framing clear of platform buttons.",
+   "url": "https://x.ai/bot/G071a96I_2jNBHYK0fJYM"
+  },
+  {
+   "id": "writing-publishing-Vguw7Se8Jtdd5NuPA4GlR",
+   "code": "Vguw7Se8Jtdd5NuPA4GlR",
+   "name": "Signal Connect",
+   "author": "Rob H",
+   "description": "Links your Signal account to your bot so it can read your messages and draft replies you approve before anything is sent.",
+   "url": "https://x.ai/bot/Vguw7Se8Jtdd5NuPA4GlR"
+  },
+  {
+   "id": "writing-publishing-H6786swUEkqg8xa3MFVLz",
+   "code": "H6786swUEkqg8xa3MFVLz",
+   "name": "Smudge",
+   "author": "Gary Bishop",
+   "description": "Rewrites machine-sounding drafts to read like a person wrote them and shows which AI patterns it knocked out.",
+   "url": "https://x.ai/bot/H6786swUEkqg8xa3MFVLz"
+  },
+  {
+   "id": "writing-publishing-k3eBiEIAtXSRUCZJX5aYJ",
+   "code": "k3eBiEIAtXSRUCZJX5aYJ",
+   "name": "Songwriter",
+   "author": "Hexakin",
+   "description": "Studio door for songwriting. Stands up a songwriter specialist, then routes lyrics, choruses, progressions, and structure in text so someone else can…",
+   "url": "https://x.ai/bot/k3eBiEIAtXSRUCZJX5aYJ"
+  },
+  {
+   "id": "writing-publishing-Ynq1DkpusG6bUv5_AUIRM",
+   "code": "Ynq1DkpusG6bUv5_AUIRM",
+   "name": "Sound-Like-You",
+   "author": "Walid Khan",
+   "description": "Rewrites drafts so they sound like you, not a generic model.",
+   "url": "https://x.ai/bot/Ynq1DkpusG6bUv5_AUIRM"
+  },
+  {
+   "id": "writing-publishing-yH0hoOX2FcXhdXe8b1Huj",
+   "code": "yH0hoOX2FcXhdXe8b1Huj",
+   "name": "Spec Writer",
+   "author": "Avid",
+   "description": "Turns a strategy brief and behavior research into a clean-room SPEC.md with user stories and Given/When/Then tests a coding agent can build.",
+   "url": "https://x.ai/bot/yH0hoOX2FcXhdXe8b1Huj"
+  },
+  {
+   "id": "writing-publishing-4uk1wr4vgC4zROKbvSZUP",
+   "code": "4uk1wr4vgC4zROKbvSZUP",
+   "name": "Spec → Listing",
+   "author": "Chill",
+   "description": "Paste verified product facts and get a truthful listing draft - title, short description, key features, and anything missing. You copy to the store.",
+   "url": "https://x.ai/bot/4uk1wr4vgC4zROKbvSZUP"
+  },
+  {
+   "id": "writing-publishing-itRObzTzlih4AGPFX99LP",
+   "code": "itRObzTzlih4AGPFX99LP",
+   "name": "Spike",
+   "author": "Michal Palczewski",
+   "description": "Own persuasive communication training — writing and talking that gets into people’s heads. Rude, sharp coach. Not a friend. Not a soft writing buddy. ##.",
+   "url": "https://x.ai/bot/itRObzTzlih4AGPFX99LP"
+  },
+  {
+   "id": "writing-publishing-1kT8m4eA36oWpmwq1ADHI",
+   "code": "1kT8m4eA36oWpmwq1ADHI",
+   "name": "Sponsorship Hunter",
+   "author": "Brandon Pruitt",
+   "description": "Finds brands and creator programs that pay creators in your niche, tracks them with fit scores and drafts pitches you approve before anything goes out.",
+   "url": "https://x.ai/bot/1kT8m4eA36oWpmwq1ADHI"
+  },
+  {
+   "id": "writing-publishing-lKWMPhgUH4U9ibtjHNI1b",
+   "code": "lKWMPhgUH4U9ibtjHNI1b",
+   "name": "Story Mapper",
+   "author": "Albina Nikiforova",
+   "description": "Turns your app's code and real screenshots into a user story map: a one-pager, an architecture diagram by topic and a clickable viewer.",
+   "url": "https://x.ai/bot/lKWMPhgUH4U9ibtjHNI1b"
+  },
+  {
+   "id": "writing-publishing-3qzAXqd6knwM1aP-c3i6Q",
+   "code": "3qzAXqd6knwM1aP-c3i6Q",
+   "name": "Story Shorts",
+   "author": "matt",
+   "description": "Makes 60-second vertical animated survival-story videos as 5-part series with narration and captions, and can post them to TikTok and YouTube Shorts.",
+   "url": "https://x.ai/bot/3qzAXqd6knwM1aP-c3i6Q"
+  },
+  {
+   "id": "writing-publishing-aYnmKNgxX9Dcmr51AGvoD",
+   "code": "aYnmKNgxX9Dcmr51AGvoD",
+   "name": "Story Studio",
+   "author": "rogin john",
+   "description": "Turns a simple story into short animated videos, storybooks, motion-graphic posts and narrated slideshows, with an approval step at every stage.",
+   "url": "https://x.ai/bot/aYnmKNgxX9Dcmr51AGvoD"
+  },
+  {
+   "id": "writing-publishing-3aEIY6-TxA3_UwqHgE7XU",
+   "code": "3aEIY6-TxA3_UwqHgE7XU",
+   "name": "Sturzi",
+   "author": "Gianluca Minoprio",
+   "description": "Argentine deregulation hunter: finds rules that create rents or arbitrary discretion and drafts Spanish filings for the Ministerio de Desregulación.",
+   "url": "https://x.ai/bot/3aEIY6-TxA3_UwqHgE7XU"
+  },
+  {
+   "id": "writing-publishing-6L7bI6xC3UxUTFaCWljFj",
+   "code": "6L7bI6xC3UxUTFaCWljFj",
+   "name": "Sui Generis",
+   "author": "Sarah Brundige",
+   "description": "Drop a plan, take, or draft → instant Strong / Weak / Fix, a paste-ready rewrite, and one 5-minute action.",
+   "url": "https://x.ai/bot/6L7bI6xC3UxUTFaCWljFj"
+  },
+  {
+   "id": "writing-publishing-nqfPdBjxE6JNdjvr7Qwda",
+   "code": "nqfPdBjxE6JNdjvr7Qwda",
+   "name": "Suomatlas article coordinator",
+   "author": "itulo",
+   "description": "Runs a multi-bot newsroom for weekly Finnish postal-area data stories: picks the topic, verifies numbers against production, drafts fi+en copy,.",
+   "url": "https://x.ai/bot/nqfPdBjxE6JNdjvr7Qwda"
+  },
+  {
+   "id": "writing-publishing-7PSzTwwC3jjNIQANBNsF3",
+   "code": "7PSzTwwC3jjNIQANBNsF3",
+   "name": "Susie the Bookkeeper",
+   "author": "Brandon",
+   "description": "AI software, not a licensed bookkeeper or CPA; the owner approves everything. Susie the Bookkeeper sorts statements, matches receipts, drafts weekly.",
+   "url": "https://x.ai/bot/7PSzTwwC3jjNIQANBNsF3"
+  },
+  {
+   "id": "writing-publishing--FSiZDOogRKS95ErsgNa3",
+   "code": "-FSiZDOogRKS95ErsgNa3",
+   "name": "Synthesizer",
+   "author": "Ben",
+   "description": "Turns complex material into clear maps and how-you-serve articulations for invitations.",
+   "url": "https://x.ai/bot/-FSiZDOogRKS95ErsgNa3"
+  },
+  {
+   "id": "writing-publishing-UWLs7BCDu7jiumkvX4-vj",
+   "code": "UWLs7BCDu7jiumkvX4-vj",
+   "name": "TTS Script Builder",
+   "author": "Naveed",
+   "description": "Builds, fixes, and playtests Lua scripts for Tabletop Simulator mods, using GitHub PRs, live injection into TTS, and Workshop publishing.",
+   "url": "https://x.ai/bot/UWLs7BCDu7jiumkvX4-vj"
+  },
+  {
+   "id": "writing-publishing-5-YiiKg_ws-7xgkR8T8Ko",
+   "code": "5-YiiKg_ws-7xgkR8T8Ko",
+   "name": "TaleForge",
+   "author": "Avinash Peyyety",
+   "description": "Turns any story idea into a finished comic, picture book, or short video — with locked characters, illustrated panels…",
+   "url": "https://x.ai/bot/5-YiiKg_ws-7xgkR8T8Ko"
+  },
+  {
+   "id": "writing-publishing-_SuGdfXVQ06yo3woYqQVO",
+   "code": "_SuGdfXVQ06yo3woYqQVO",
+   "name": "Tamago",
+   "author": "Kamone",
+   "description": "Designs high-quality Grok Bots with a faithful Japanese writing bar for people-facing copy.",
+   "url": "https://x.ai/bot/_SuGdfXVQ06yo3woYqQVO"
+  },
+  {
+   "id": "writing-publishing-ZS8mqV7WmcAaVWLdj9A1E",
+   "code": "ZS8mqV7WmcAaVWLdj9A1E",
+   "name": "Tech Team Draft",
+   "author": "Kuten26",
+   "description": "Draft a fantasy-style lineup of public SpaceX and xAI builders on X, and get a weekly recap card of their top posts…",
+   "url": "https://x.ai/bot/ZS8mqV7WmcAaVWLdj9A1E"
+  },
+  {
+   "id": "writing-publishing-9Zp-JZWckPEjwBPp2EGtX",
+   "code": "9Zp-JZWckPEjwBPp2EGtX",
+   "name": "Temper",
+   "author": "D'Artagnan",
+   "description": "You publish an invariant. Anvil proposes a patch, separate attackers try to break it, and Stone re-runs your real test…",
+   "url": "https://x.ai/bot/9Zp-JZWckPEjwBPp2EGtX"
+  },
+  {
+   "id": "writing-publishing-nlY_tCIFsrUjTylzV_Ae_",
+   "code": "nlY_tCIFsrUjTylzV_Ae_",
+   "name": "Tender Bid Desk",
+   "author": "Jaco Bakkerus",
+   "description": "Tender desk for small contractors: tracks closes, drafts supplier emails.",
+   "url": "https://x.ai/bot/nlY_tCIFsrUjTylzV_Ae_"
+  },
+  {
+   "id": "writing-publishing-ChuFYfELJdp6iA-5ImjFU",
+   "code": "ChuFYfELJdp6iA-5ImjFU",
+   "name": "Termlock",
+   "author": "Basho",
+   "description": "Draft-only freelance counter-offer desk.",
+   "url": "https://x.ai/bot/ChuFYfELJdp6iA-5ImjFU"
+  },
+  {
+   "id": "writing-publishing-OFsPjunX91_OFq5hjqVfU",
+   "code": "OFsPjunX91_OFq5hjqVfU",
+   "name": "Tess",
+   "author": "David McNally",
+   "description": "Batch-resizes wallpaper images on a Mac to phone 4K size with sips, writing non-destructive _4K copies and reporting count, path and DPI.",
+   "url": "https://x.ai/bot/OFsPjunX91_OFq5hjqVfU"
+  },
+  {
+   "id": "writing-publishing-3o5Pf78r9yC3VCkHW9nkJ",
+   "code": "3o5Pf78r9yC3VCkHW9nkJ",
+   "name": "Test Writer",
+   "author": "SoCalFSD",
+   "description": "Say \"test my last change in <repo>\". It writes tests for just the functions you changed, runs the suite, flags likely…",
+   "url": "https://x.ai/bot/3o5Pf78r9yC3VCkHW9nkJ"
+  },
+  {
+   "id": "writing-publishing-1AdzkaHDcFOHpCcCtB_vB",
+   "code": "1AdzkaHDcFOHpCcCtB_vB",
+   "name": "The Book Whisperer",
+   "author": "@Campdirtybird",
+   "description": "Your personal AI librarian. It learns your taste, keeps track of what you've read, and picks your next great book.",
+   "url": "https://x.ai/bot/1AdzkaHDcFOHpCcCtB_vB"
+  },
+  {
+   "id": "writing-publishing-QNNXyl9jDZT5VPgUlhHM8",
+   "code": "QNNXyl9jDZT5VPgUlhHM8",
+   "name": "The Book of Elon",
+   "author": "Joe",
+   "description": "Dedicated reading partner for The Book of Elon by Eric Jorgenson — think with the methods, take notes, stay on one…",
+   "url": "https://x.ai/bot/QNNXyl9jDZT5VPgUlhHM8"
+  },
+  {
+   "id": "writing-publishing-JsnO-AtMgVxcwGj7CSWCV",
+   "code": "JsnO-AtMgVxcwGj7CSWCV",
+   "name": "The Editor",
+   "author": "Jan",
+   "description": "Builds a daily newspaper-style Page from your X in English: top stories, topic sections and a communities section…",
+   "url": "https://x.ai/bot/JsnO-AtMgVxcwGj7CSWCV"
+  },
+  {
+   "id": "writing-publishing-K8q7Aqp47093dWIBTOsGb",
+   "code": "K8q7Aqp47093dWIBTOsGb",
+   "name": "The FDA",
+   "author": "Jono Chowdhury",
+   "description": "Claim gate for U.S. marketing copy: checks wording against soap vs. cosmetic vs. drug rules and flags risky claims before you publish.",
+   "url": "https://x.ai/bot/K8q7Aqp47093dWIBTOsGb"
+  },
+  {
+   "id": "writing-publishing-mGckETBjE4Of6S78zeetJ",
+   "code": "mGckETBjE4Of6S78zeetJ",
+   "name": "The Sponsor",
+   "author": "@suddenlyjon",
+   "description": "Two-key accountability lock: you ARM a standard and can't disengage it yourself; only a paired friend's copy of The Sponsor can countersign an unlock.",
+   "url": "https://x.ai/bot/mGckETBjE4Of6S78zeetJ"
+  },
+  {
+   "id": "writing-publishing-ThwY2aALCSB4fMucqoScJ",
+   "code": "ThwY2aALCSB4fMucqoScJ",
+   "name": "Thirst-Trap-a-Tron",
+   "author": "vibecodeguild",
+   "description": "You are Thirst-Trap-a-Tron, and you're a she (she/her). Your owner gets a curated X feed of public.",
+   "url": "https://x.ai/bot/ThwY2aALCSB4fMucqoScJ"
+  },
+  {
+   "id": "writing-publishing-47iWfw0I5xxt6uPqKj52G",
+   "code": "47iWfw0I5xxt6uPqKj52G",
+   "name": "Ticket Desk",
+   "author": "Screaming Chicken",
+   "description": "Flags urgent support tickets, drafts replies from your docs, and turns gaps into help-article drafts; never sends.",
+   "url": "https://x.ai/bot/47iWfw0I5xxt6uPqKj52G"
+  },
+  {
+   "id": "writing-publishing-s7aaf6431077930df326f",
+   "code": "s7aaf6431077930df326f",
+   "name": "Ticket Triage Specialist",
+   "author": "SpaceX",
+   "description": "Clear the queue without living in it. Watches support on a cadence, drafts replies only, and stays quiet when it's clean.",
+   "url": "https://x.ai/bot/s7aaf6431077930df326f"
+  },
+  {
+   "id": "writing-publishing-8-gUB7b58t5g4pC0frT6M",
+   "code": "8-gUB7b58t5g4pC0frT6M",
+   "name": "Tony by Michael",
+   "author": "Michael Sweet",
+   "description": "Speech drafts and coaching for tech and AI talks , clear structure, strong openings, and copy that sounds like you out loud, not like a model.",
+   "url": "https://x.ai/bot/8-gUB7b58t5g4pC0frT6M"
+  },
+  {
+   "id": "writing-publishing-Y4Wgv33AYwUvbYZ5sB-XC",
+   "code": "Y4Wgv33AYwUvbYZ5sB-XC",
+   "name": "Toolsmith",
+   "author": "Zye Anderson",
+   "description": "Forges small reusable scripts and Chrome-free copy packs so listing and automation stay fast and accurate. Prefer a skill over a new bot; after a path.",
+   "url": "https://x.ai/bot/Y4Wgv33AYwUvbYZ5sB-XC"
+  },
+  {
+   "id": "writing-publishing-2ExtNtHe3UcqycB0utXcE",
+   "code": "2ExtNtHe3UcqycB0utXcE",
+   "name": "Troot - Claim Checker",
+   "author": "Tri",
+   "description": "Grades the evidence behind any claim, draft, document, code or data, tests counterarguments and says what holds and what to fix. Solo or as a team reviewer.",
+   "url": "https://x.ai/bot/2ExtNtHe3UcqycB0utXcE"
+  },
+  {
+   "id": "writing-publishing-poomATf98npolMd0k1QUl",
+   "code": "poomATf98npolMd0k1QUl",
+   "name": "UGC Content Engine",
+   "author": "Mister X",
+   "description": "A content partner for UGC creators on TikTok, Reels and Shorts: finds trends, writes hooks and scripts and runs a daily prep session.",
+   "url": "https://x.ai/bot/poomATf98npolMd0k1QUl"
+  },
+  {
+   "id": "writing-publishing-W-GZduBEhE-fDFW4SwQ0k",
+   "code": "W-GZduBEhE-fDFW4SwQ0k",
+   "name": "UGC Content Studio",
+   "author": "Q Da Boss",
+   "description": "UGC Content Studio turns a brand's brief into everything you need to film and deliver: hooks, a timed script, a shot list.",
+   "url": "https://x.ai/bot/W-GZduBEhE-fDFW4SwQ0k"
+  },
+  {
+   "id": "writing-publishing-JugVUSPe_wSZg-in69owM",
+   "code": "JugVUSPe_wSZg-in69owM",
+   "name": "Unmachined",
+   "author": "nyk",
+   "description": "Strips AI slop from drafts before you post or send. Paste copy, get it human — scan is a floor, better is the job.",
+   "url": "https://x.ai/bot/JugVUSPe_wSZg-in69owM"
+  },
+  {
+   "id": "writing-publishing-7dlHJhOl6IcZZB3EYQURn",
+   "code": "7dlHJhOl6IcZZB3EYQURn",
+   "name": "Unslop",
+   "author": "Patrick Robinson",
+   "description": "A blunt red-pen editor that flags the signs of AI writing in your drafts, using Wikipedia's field guide, and coaches…",
+   "url": "https://x.ai/bot/7dlHJhOl6IcZZB3EYQURn"
+  },
+  {
+   "id": "writing-publishing-Sk7NG2L340MAottFXFRaE",
+   "code": "Sk7NG2L340MAottFXFRaE",
+   "name": "Validator Pilot",
+   "author": "Sean",
+   "description": "A paid 30-day Stability Validator pilot: use-case and seat intake, plus the use-license DRAFT for human review.",
+   "url": "https://x.ai/bot/Sk7NG2L340MAottFXFRaE"
+  },
+  {
+   "id": "writing-publishing-lOfc_4h-mDH-EB0PSSOxa",
+   "code": "lOfc_4h-mDH-EB0PSSOxa",
+   "name": "Verifier",
+   "author": "Fan Grok Bot Radar",
+   "description": "Checks a draft against its sources before you post it. Every factual claim comes back marked Supported, Overstated, Unsupported, or Couldn't check.",
+   "url": "https://x.ai/bot/lOfc_4h-mDH-EB0PSSOxa"
+  },
+  {
+   "id": "writing-publishing-Hj01jL8dJIkTGPWS3VcMM",
+   "code": "Hj01jL8dJIkTGPWS3VcMM",
+   "name": "Video Script writer",
+   "author": "Jeroen",
+   "description": "Writes hooks and full spoken scripts for Reels, Shorts, TikTok, and long-form YouTube.",
+   "url": "https://x.ai/bot/Hj01jL8dJIkTGPWS3VcMM"
+  },
+  {
+   "id": "writing-publishing-zapy1WsErYi7bvuFrlrB9",
+   "code": "zapy1WsErYi7bvuFrlrB9",
+   "name": "Viral Content Radar",
+   "author": "Adebusola",
+   "description": "Finds up to 3 trending stories in your niche, verified from sources, with hooks in your voice and a ready-to-post X draft.",
+   "url": "https://x.ai/bot/zapy1WsErYi7bvuFrlrB9"
+  },
+  {
+   "id": "writing-publishing-3pn0ONb0K1MIPEqy0medH",
+   "code": "3pn0ONb0K1MIPEqy0medH",
+   "name": "Warranty Escalation Desk",
+   "author": "Alex",
+   "description": "Helps after a manufacturer/RMA warranty denial or stall - chronology, evidence pack, escalation ladder, and ready-to-send drafts. You send everything.",
+   "url": "https://x.ai/bot/3pn0ONb0K1MIPEqy0medH"
+  },
+  {
+   "id": "writing-publishing-brtZzhDtPspJCeylACONo",
+   "code": "brtZzhDtPspJCeylACONo",
+   "name": "Wax",
+   "author": "Thomas Ferriere",
+   "description": "A thinking partner inspired by Descartes and the book The Courage to Ask Why: send it a claim and it gives a short, fair filter on it.",
+   "url": "https://x.ai/bot/brtZzhDtPspJCeylACONo"
+  },
+  {
+   "id": "writing-publishing-_MizHdKs_UitKL3zoChMD",
+   "code": "_MizHdKs_UitKL3zoChMD",
+   "name": "Web Scout",
+   "author": "Josh Meyer",
+   "description": "Finds local businesses with missing, dated, or broken websites, confirms the problems in a real browser on desktop and phone, and drafts friendly cold…",
+   "url": "https://x.ai/bot/_MizHdKs_UitKL3zoChMD"
+  },
+  {
+   "id": "writing-publishing-TQ8cECPo01agW3Igk4Z9w",
+   "code": "TQ8cECPo01agW3Igk4Z9w",
+   "name": "WebWiz",
+   "author": "Jay",
+   "description": "Website and AEO editor. Finds organic and AI-answer gaps, drafts CMS pages and PRs, never publishes or merges, and measures at 90 days.",
+   "url": "https://x.ai/bot/TQ8cECPo01agW3Igk4Z9w"
+  },
+  {
+   "id": "writing-publishing-ZWTGhNVARIZ2NOOKKFP-R",
+   "code": "ZWTGhNVARIZ2NOOKKFP-R",
+   "name": "Weekend Roster",
+   "author": "Turac",
+   "description": "Sofa Scout for weekend decision fatigue: matches new streaming drops and books to your taste roster, then drafts…",
+   "url": "https://x.ai/bot/ZWTGhNVARIZ2NOOKKFP-R"
+  },
+  {
+   "id": "writing-publishing-jNEh8fKV4t37pPHkIi-Hu",
+   "code": "jNEh8fKV4t37pPHkIi-Hu",
+   "name": "Writer",
+   "author": "Anand",
+   "description": "Writes one short weekly post in your voice from your Researcher bot's what-changed note, for you to check and post yourself.",
+   "url": "https://x.ai/bot/jNEh8fKV4t37pPHkIi-Hu"
+  },
+  {
+   "id": "writing-publishing-38UdPemBuZb9USs_0HAES",
+   "code": "38UdPemBuZb9USs_0HAES",
+   "name": "Writer",
+   "author": "ZEU$",
+   "description": "Writes studio copy to a client's voice, goal, and platform format. Sources every fact, flags anything unverified, and never publishes or sends work out.",
+   "url": "https://x.ai/bot/38UdPemBuZb9USs_0HAES"
+  },
+  {
+   "id": "writing-publishing-wtq-j01kD7o8gQFx7E9zv",
+   "code": "wtq-j01kD7o8gQFx7E9zv",
+   "name": "Writing Bot",
+   "author": "Matt Palmer",
+   "description": "A writing partner for drafting and revising essays, emails, docs, and other prose.",
+   "url": "https://x.ai/bot/wtq-j01kD7o8gQFx7E9zv"
+  },
+  {
+   "id": "writing-publishing-CrFqfXIZibJ5DwLuJ89sp",
+   "code": "CrFqfXIZibJ5DwLuJ89sp",
+   "name": "X Account Crew",
+   "author": "Sultanov",
+   "description": "Five specialists sharing the work of running your X account.",
+   "url": "https://x.ai/bot/CrFqfXIZibJ5DwLuJ89sp"
+  },
+  {
+   "id": "writing-publishing-xQV-50aQnTgSTraVZPdcR",
+   "code": "xQV-50aQnTgSTraVZPdcR",
+   "name": "X Algo Post Optimizer",
+   "author": "Colin Gardiner",
+   "description": "Paste an X draft. It scores the post 1–10 against algo ranking weights (copy link, reply, quote, DM share)…",
+   "url": "https://x.ai/bot/xQV-50aQnTgSTraVZPdcR"
+  },
+  {
+   "id": "writing-publishing-JCMqIqMn3p4izAdouYbk9",
+   "code": "JCMqIqMn3p4izAdouYbk9",
+   "name": "X Article Writer",
+   "author": "xPhoenix",
+   "description": "Collaborative partner for long-form X Articles: turns your topics and insights into fact-checked drafts one piece at a time, then stages publish…",
+   "url": "https://x.ai/bot/JCMqIqMn3p4izAdouYbk9"
+  },
+  {
+   "id": "writing-publishing-SKG6oYoyE6nRRPPwL27Cs",
+   "code": "SKG6oYoyE6nRRPPwL27Cs",
+   "name": "X Content Advisor",
+   "author": "Justin",
+   "description": "Helps indie builders stay on a posting cadence for X: outlines, follow-ups, content pillars, short-video brainstorms, and refining posts so others can.",
+   "url": "https://x.ai/bot/SKG6oYoyE6nRRPPwL27Cs"
+  },
+  {
+   "id": "writing-publishing-yU3RRM8D-8BoeBDvLYi2E",
+   "code": "yU3RRM8D-8BoeBDvLYi2E",
+   "name": "X Feedback",
+   "author": "Eric Waller",
+   "description": "Turns your recent chats with your other assistants into an anonymized, paste-ready feedback write-up.",
+   "url": "https://x.ai/bot/yU3RRM8D-8BoeBDvLYi2E"
+  },
+  {
+   "id": "writing-publishing-h1n4FcXxkCJCNXcazJDYJ",
+   "code": "h1n4FcXxkCJCNXcazJDYJ",
+   "name": "X Head of Content",
+   "author": "Elliott Michael Smith",
+   "description": "Charts, stills and short clips for a tap-to-post X growth team, built from real numbers in a brief and never invented metrics.",
+   "url": "https://x.ai/bot/h1n4FcXxkCJCNXcazJDYJ"
+  },
+  {
+   "id": "writing-publishing-HFhbu0ZlO0IfGCZ3P7CoF",
+   "code": "HFhbu0ZlO0IfGCZ3P7CoF",
+   "name": "X Poster",
+   "author": "Charlie OS ᯅ𝕏 Rodriguez Garcia",
+   "description": "Drafts punchy gaming posts for Nintendo, PlayStation, and Xbox, then saves them to Buffer for you to post.",
+   "url": "https://x.ai/bot/HFhbu0ZlO0IfGCZ3P7CoF"
+  },
+  {
+   "id": "writing-publishing-Itc30W9SgrxqEL1WTb3pl",
+   "code": "Itc30W9SgrxqEL1WTb3pl",
+   "name": "X Reply Tier List",
+   "author": "Tu Jlr",
+   "description": "Turns your recent X replies into a poteto-style “Who I reply to on X” tier-list image, then drafts a caption. You publish; it never posts for you.",
+   "url": "https://x.ai/bot/Itc30W9SgrxqEL1WTb3pl"
+  },
+  {
+   "id": "writing-publishing-xLeBNzgp0Z6IUGxyt8sj4",
+   "code": "xLeBNzgp0Z6IUGxyt8sj4",
+   "name": "X Thread & Article Writer",
+   "author": "@sigarellano",
+   "description": "Turns your ideas, links, or rough notes into X threads and X articles written in your own voice, ready to paste. It drafts only and never posts for you.",
+   "url": "https://x.ai/bot/xLeBNzgp0Z6IUGxyt8sj4"
+  },
+  {
+   "id": "writing-publishing-UUsZRoInD7OHp4sjrZ-we",
+   "code": "UUsZRoInD7OHp4sjrZ-we",
+   "name": "X Writer",
+   "author": "Star Z",
+   "description": "Learn any X account's writing style, then draft tweets, edits, and long-form posts in that voice.",
+   "url": "https://x.ai/bot/UUsZRoInD7OHp4sjrZ-we"
+  },
+  {
+   "id": "writing-publishing-vHP9UVxdRzZ1E77FH_McL",
+   "code": "vHP9UVxdRzZ1E77FH_McL",
+   "name": "X 曝光复盘助手",
+   "author": "AMAN",
+   "description": "Chinese-language X assistant: hourly ready-to-copy drafts, reply drafts for big accounts and your new comments, and a nightly exposure review. You post.",
+   "url": "https://x.ai/bot/vHP9UVxdRzZ1E77FH_McL"
+  },
+  {
+   "id": "writing-publishing--miS0AF-lema7i8Z019Qp",
+   "code": "-miS0AF-lema7i8Z019Qp",
+   "name": "X402 Merchant",
+   "author": "Eric Ren",
+   "description": "Sets up a paid x402 content store on Cloudflare Workers: a private R2 catalog behind a $0.01 USDC paywall on Base, settled through Coinbase CDP.",
+   "url": "https://x.ai/bot/-miS0AF-lema7i8Z019Qp"
+  },
+  {
+   "id": "writing-publishing-3Zh8kZfUGFUZh0ZQ6z_83",
+   "code": "3Zh8kZfUGFUZh0ZQ6z_83",
+   "name": "Xcavator",
+   "author": "Calix Build",
+   "description": "Finds the buyers hiding in your X replies and drafts the answer. Nothing posts without you.",
+   "url": "https://x.ai/bot/3Zh8kZfUGFUZh0ZQ6z_83"
+  },
+  {
+   "id": "writing-publishing-T6bujyqIBo-aNBMvguiEb",
+   "code": "T6bujyqIBo-aNBMvguiEb",
+   "name": "Xoá Số VN",
+   "author": "Vip Tom",
+   "description": "Finds your Vietnamese phone number on Vietnamese directories, classifieds, and lookup sites, then drafts removal requests and re-checks monthly.",
+   "url": "https://x.ai/bot/T6bujyqIBo-aNBMvguiEb"
+  },
+  {
+   "id": "writing-publishing-dmh8rusuae8g589e_vvpu",
+   "code": "dmh8rusuae8g589e_vvpu",
+   "name": "Xpost",
+   "author": "David",
+   "description": "Publicá en X (posts, hilos, Articles, replies y quotes) solo por el navegador del asistente.",
+   "url": "https://x.ai/bot/dmh8rusuae8g589e_vvpu"
+  },
+  {
+   "id": "writing-publishing-3tOP_ZthJfS0r3_7E4Gtq",
+   "code": "3tOP_ZthJfS0r3_7E4Gtq",
+   "name": "Xブクマ台本工房",
+   "author": "sidejob_AJ",
+   "description": "Each morning picks usable ideas from your X bookmarks, ranks them, and drafts a three-line summary and short-video script for each. Never posts.",
+   "url": "https://x.ai/bot/3tOP_ZthJfS0r3_7E4Gtq"
+  },
+  {
+   "id": "writing-publishing-7nmRrkN_5YS-dXc6PGBys",
+   "code": "7nmRrkN_5YS-dXc6PGBys",
+   "name": "Your Echo",
+   "author": "Lola S.",
+   "description": "Find events, podcasts and communities in your niche, then get warm outreach drafts that reference them.",
+   "url": "https://x.ai/bot/7nmRrkN_5YS-dXc6PGBys"
+  },
+  {
+   "id": "writing-publishing-ehQNQQR9apvhVcmxFiFyP",
+   "code": "ehQNQQR9apvhVcmxFiFyP",
+   "name": "Zeus",
+   "author": "Majd K",
+   "description": "One-HQ orchestrator for builders. Names effort on every chip, drafts before send, proves on the surface, keeps one chat…",
+   "url": "https://x.ai/bot/ehQNQQR9apvhVcmxFiFyP"
+  },
+  {
+   "id": "writing-publishing-A6o9Z1NYSIRBX-VIoEcQi",
+   "code": "A6o9Z1NYSIRBX-VIoEcQi",
+   "name": "blogdrafter",
+   "author": "dai",
+   "description": "Drafts and edits blog posts in your voice from rough notes to something publishable.",
+   "url": "https://x.ai/bot/A6o9Z1NYSIRBX-VIoEcQi"
+  },
+  {
+   "id": "writing-publishing-KPpT1F6tP4Q5GZ2BH2hBH",
+   "code": "KPpT1F6tP4Q5GZ2BH2hBH",
+   "name": "bookworm",
+   "author": "Navya Mehrotra",
+   "description": "Drafts and sends founder-voiced beta invites for a reading app.",
+   "url": "https://x.ai/bot/KPpT1F6tP4Q5GZ2BH2hBH"
+  },
+  {
+   "id": "writing-publishing-l6H6WL7HF-CAwcvr1hBey",
+   "code": "l6H6WL7HF-CAwcvr1hBey",
+   "name": "dbs",
+   "author": "Leechael Yim",
+   "description": "A dontbesilent commercial toolbox. Routes business, content, and action problems through /dbs.",
+   "url": "https://x.ai/bot/l6H6WL7HF-CAwcvr1hBey"
+  },
+  {
+   "id": "writing-publishing-vS-vrOlLKSpXsTmBxPL57",
+   "code": "vS-vrOlLKSpXsTmBxPL57",
+   "name": "defendMusk bot",
+   "author": "Scott Howell",
+   "description": "Hunts Elon Musk controversies, strips the spin with primary sources, and drafts X truth-posts that tag @elonmusk…",
+   "url": "https://x.ai/bot/vS-vrOlLKSpXsTmBxPL57"
+  },
+  {
+   "id": "writing-publishing-2mWKJfjYhECsfWDaCgtET",
+   "code": "2mWKJfjYhECsfWDaCgtET",
+   "name": "karen",
+   "author": "neilofneils",
+   "description": "Audits bills, EOBs, and statements line by line, cites the exact rule each error breaks, and drafts the call script…",
+   "url": "https://x.ai/bot/2mWKJfjYhECsfWDaCgtET"
+  },
+  {
+   "id": "writing-publishing-wIaZtsMnIKVEQOKTtImU5",
+   "code": "wIaZtsMnIKVEQOKTtImU5",
+   "name": "musebot",
+   "author": "8",
+   "description": "Creative muse for sparks, drafts, and keeping a writing thread alive.",
+   "url": "https://x.ai/bot/wIaZtsMnIKVEQOKTtImU5"
+  },
+  {
+   "id": "writing-publishing-gJ4waNMuQoJkQCGX77yF3",
+   "code": "gJ4waNMuQoJkQCGX77yF3",
+   "name": "writing bot",
+   "author": "mattyp",
+   "description": "A writing partner for drafting and revising essays, emails, docs, and other prose.",
+   "url": "https://x.ai/bot/gJ4waNMuQoJkQCGX77yF3"
+  },
+  {
+   "id": "writing-publishing-7gR38Q_mVa1sBvUxZ0spp",
+   "code": "7gR38Q_mVa1sBvUxZ0spp",
+   "name": "xscan",
+   "author": "Jarett Reginald Stewart Dunn",
+   "description": "Scans X for how people feel about your account, scores it like an NPS, and drafts researched, in-context replies you post with one click.",
+   "url": "https://x.ai/bot/7gR38Q_mVa1sBvUxZ0spp"
+  },
+  {
+   "id": "writing-publishing-MgbmI7yosGl_eoctazByw",
+   "code": "MgbmI7yosGl_eoctazByw",
+   "name": "コピーロボット",
+   "author": "RYO",
+   "description": "Like the copy robot in Perman, it learns your tone and way of thinking, then talks for you and drafts X posts.",
+   "url": "https://x.ai/bot/MgbmI7yosGl_eoctazByw"
+  },
+  {
+   "id": "writing-publishing-U_v0-jzn2gzSRGRJL9URW",
+   "code": "U_v0-jzn2gzSRGRJL9URW",
+   "name": "セキュリティ番",
+   "author": "もつ",
+   "description": "Weekly CVE check of your PC's runtimes, certificates and CLIs; has Cursor write test cases first, and updates and tests only what you approve.",
+   "url": "https://x.ai/bot/U_v0-jzn2gzSRGRJL9URW"
+  },
+  {
+   "id": "writing-publishing-vclo6-YVOWgTOimsUxaGm",
+   "code": "vclo6-YVOWgTOimsUxaGm",
+   "name": "ㅤ",
+   "author": "no",
+   "description": "ㅤ — Partenaire d’existence autonome : décide et exécute, garde des gates sur les coups à conséquence, et ne revient que pour les vrais go ou.",
+   "url": "https://x.ai/bot/vclo6-YVOWgTOimsUxaGm"
+  },
+  {
+   "id": "writing-publishing-k_7pPRlHeZc2cku1zvVqr",
+   "code": "k_7pPRlHeZc2cku1zvVqr",
+   "name": "产品推广交稿员",
+   "author": "yunhui",
+   "description": "Hands you ready-to-post promo copy for your product on a fixed rhythm.",
+   "url": "https://x.ai/bot/k_7pPRlHeZc2cku1zvVqr"
+  },
+  {
+   "id": "writing-publishing-J2AgMXbgmrqq2zyRt8y7g",
+   "code": "J2AgMXbgmrqq2zyRt8y7g",
+   "name": "微信文章捕手",
+   "author": "铁柱AGI",
+   "description": "Fetches a WeChat public-account article into Markdown and JSON with title, account, time, body, and images.",
+   "url": "https://x.ai/bot/J2AgMXbgmrqq2zyRt8y7g"
+  },
+  {
+   "id": "writing-publishing-by-COZ6O51itETDzM0mBw",
+   "code": "by-COZ6O51itETDzM0mBw",
+   "name": "投卷助手",
+   "author": "hardy",
+   "description": "Drafts personalized DMs asking creators to read your article; judges fit first, you send yourself.",
+   "url": "https://x.ai/bot/by-COZ6O51itETDzM0mBw"
+  },
+  {
+   "id": "writing-publishing-ScOhH1qaoq4XdoYhisagg",
+   "code": "ScOhH1qaoq4XdoYhisagg",
+   "name": "推特运营方法论",
+   "author": "kin",
+   "description": "A daily X posting system for ideas, drafts, timing, and review.",
+   "url": "https://x.ai/bot/ScOhH1qaoq4XdoYhisagg"
+  },
+  {
+   "id": "writing-publishing-Szq07dsrlo5T2qcPxjqvT",
+   "code": "Szq07dsrlo5T2qcPxjqvT",
+   "name": "日本語チェック",
+   "author": "24K",
+   "description": "Checks Japanese grammar, keigo, and readability for boss-facing drafts without changing meaning.",
+   "url": "https://x.ai/bot/Szq07dsrlo5T2qcPxjqvT"
+  },
+  {
+   "id": "writing-publishing-yrZuVH-bvPPJGqoPcknvI",
+   "code": "yrZuVH-bvPPJGqoPcknvI",
+   "name": "评论区 AI 指数 bot",
+   "author": "ny",
+   "description": "Scans every reply in an X comment section and gives each an AI-likelihood badge with reasons; hiding or blocking only happens after you confirm each one.",
+   "url": "https://x.ai/bot/yrZuVH-bvPPJGqoPcknvI"
+  },
+  {
+   "id": "writing-publishing-jZdcW7oX0o60hLAw35QcB",
+   "code": "jZdcW7oX0o60hLAw35QcB",
+   "name": "这个X账号怎么火的",
+   "author": "Eason",
+   "description": "Give it an X account and it finds when and with what content it took off, then compares against your account with suggestions.",
+   "url": "https://x.ai/bot/jZdcW7oX0o60hLAw35QcB"
+  },
+  {
+   "id": "writing-publishing-9CwXPs6jsmaQ7HObWmQce",
+   "code": "9CwXPs6jsmaQ7HObWmQce",
+   "name": "青鸟 · Bluebird",
+   "author": "Valerie",
+   "description": "Yunjian's prompt writer: say in one line what you want AI to do and get a paste-ready prompt for images, video, copy, standing rules or bot instructions.",
+   "url": "https://x.ai/bot/9CwXPs6jsmaQ7HObWmQce"
+  },
+  {
+   "id": "writing-publishing-mu25Unc7k-8V8U971c4Bm",
+   "code": "mu25Unc7k-8V8U971c4Bm",
+   "name": "青鸟 · Bluebird ｜ 提示词",
+   "author": "刚哥AI与电商",
+   "description": "青鸟是云间工作室出品的提示词助手，写给想用好 AI 却不知道怎么开口的人：你说一句想让 AI 干什么，它给你一段能直接贴进去的话，做图、做视频、写文案、写长期规则和…",
+   "url": "https://x.ai/bot/mu25Unc7k-8V8U971c4Bm"
+  },
+  {
+   "id": "writing-publishing-yC5NjKh6YWGNI2Lr54HI6",
+   "code": "yC5NjKh6YWGNI2Lr54HI6",
+   "name": "네이버 블로그 자동 운영봇",
+   "author": "Je Hwan",
+   "description": "Runs a Naver blog: picks topics, drafts posts, schedules them after your approval, manages neighbors, analyzes weekly views and keeps a Notion work log.",
+   "url": "https://x.ai/bot/yC5NjKh6YWGNI2Lr54HI6"
+  },
+  {
+   "id": "writing-publishing-61Gc886_QmH9dALQaFrr_",
+   "code": "61Gc886_QmH9dALQaFrr_",
+   "name": "상태창 제작소",
+   "author": "Raven2283",
+   "description": "Builds a status window (advanced-mode HTML) for RPLAY/StoryEngine story chats: answer a few questions, get the code, variables, update rules and paste order.",
+   "url": "https://x.ai/bot/61Gc886_QmH9dALQaFrr_"
+  },
+  {
+   "id": "writing-publishing-Q9l-PJhLbcdXsR-5zZpkO",
+   "code": "Q9l-PJhLbcdXsR-5zZpkO",
+   "name": "알플레이 제작 가이드",
+   "author": "Raven2283",
+   "description": "A Q&A bot for new RPLAY story-chat and StoryEngine creators that answers from a built-in creation guide.",
+   "url": "https://x.ai/bot/Q9l-PJhLbcdXsR-5zZpkO"
+  },
+  {
+   "id": "writing-publishing-KohlZdYO9sLAqEmLG7oko",
+   "code": "KohlZdYO9sLAqEmLG7oko",
+   "name": "전자책 마스터",
+   "author": "꼬마",
+   "description": "Plans and ships evidence-backed ebooks for Kmong.",
+   "url": "https://x.ai/bot/KohlZdYO9sLAqEmLG7oko"
+  }
+ ]
+}

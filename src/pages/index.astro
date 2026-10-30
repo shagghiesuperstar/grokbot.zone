@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SearchBar from '../components/SearchBar.astro';
 import TrendingRail from '../components/TrendingRail.astro';
+import ReferralCTA from '../components/ReferralCTA.astro';
 import RecentRail from '../components/RecentRail.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import { allCategories, meta } from '../lib/data';
@@ -28,6 +29,7 @@ const total = meta.totalBots.toLocaleString('en-US');
   </section>
 
   <TrendingRail />
+  <div class="wrap"><ReferralCTA /></div>
   <RecentRail />
 
   <section class="block wrap" aria-labelledby="cats-h">

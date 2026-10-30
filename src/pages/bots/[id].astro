@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ReferralCTA from '../../components/ReferralCTA.astro';
 import RelatedBots from '../../components/RelatedBots.astro';
 import { allBots, categoryBySlug, botUrl, meta } from '../../lib/data';
 
@@ -48,6 +49,7 @@ const description = `${bot.name}: a Grok bot by ${bot.author} in ${cat.label}. L
       <span class="muted share-status" role="status" aria-live="polite" data-share-status></span>
     </div>
     <p class="muted note">This description is a snapshot from {meta.asOf}. The bot's own page has the current details.</p>
+    <ReferralCTA compact />
   </article>
   <RelatedBots bot={bot} />
 </Base>

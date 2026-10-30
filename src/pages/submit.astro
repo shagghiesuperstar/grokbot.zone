@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { meta } from '../lib/data';
+---
+<Base
+  title="Submit a Grok bot | GrokBot Zone"
+  description="How to get your Grok bot listed on GrokBot Zone, or have an entry corrected."
+  path="/submit/"
+>
+  <div class="wrap page-head"><h1>Get your bot<br />listed.</h1></div>
+  <div class="wrap block steps">
+    <ol>
+      <li><strong>Make the bot public.</strong> A bot can only be listed if it has a public link on the Grok platform. It looks like <code>https://x.ai/bot/&lt;code&gt;</code>.</li>
+      <li><strong>Check it is not already here.</strong> <a href="/bots/">Search</a> for its name or your name as author.</li>
+      <li><strong>Send us the link.</strong> Open an issue on <a href="https://github.com/shagghiesuperstar/grokbot.zone/issues" rel="noopener">the project's GitHub page</a> with the bot link and the category you think fits. Use the same route to correct a name, author or description.</li>
+      <li><strong>Wait for the next refresh.</strong> Added bots show up when we refresh the list, which is about weekly. The current snapshot is <time datetime={meta.asOf}>{meta.asOf}</time>.</li>
+    </ol>
+    <p class="muted">We list and link. We never run, host or copy a bot, and listing is free.</p>
+  </div>
+</Base>
+<style>
+  .steps { max-width: 760px; }
+  ol { padding-left: 1.2rem; display: grid; gap: 1rem; }
+  code { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: .1rem .4rem; }
+</style>

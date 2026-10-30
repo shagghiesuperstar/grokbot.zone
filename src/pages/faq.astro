@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { meta } from '../lib/data';
+
+const faqs = [
+  { q: 'What is a Grok bot?', a: `A Grok bot is a specialised assistant that someone has built and shared on the Grok platform. Each one has a public page on the platform with its own link. GrokBot Zone indexes those public pages by what they do. We list ${meta.totalBots.toLocaleString('en-US')} of them, sorted into ${meta.categoryCount} categories.` },
+  { q: 'How do I find a bot?', a: 'Type a few words into the search box, such as "spam call" or "resume". Every word you type must match, and results whose name starts with your words come first. Or open Categories and browse by job.' },
+  { q: 'How do I add a bot?', a: 'Open the bot from its page here with the "Open this bot" button. That takes you to the bot on the platform, where you can start using it. GrokBot Zone only links out. We never run, host or copy a bot.' },
+  { q: 'How do I get my bot listed?', a: 'Publish your bot so it has a public link, then see the Submit page. Public bots are picked up when we refresh the list, and you can ask us to add or correct one.' },
+  { q: 'How often does the list update?', a: `We aim to refresh the list about once a week. The current snapshot is dated ${meta.asOf}, and that date is shown on the home page and in the footer. Descriptions here are a snapshot, so the bot's own page always has the latest details.` },
+  { q: 'Is Trending live?', a: `No. Trending uses a popularity order recorded with the listings on ${meta.asOf}. It is a dated snapshot, not a live feed, and each Trending list shows its date.` },
+  { q: 'What does the Try Grok Bot button do?', a: 'It is a referral link to Grok Bot. If you sign up through it, we may be credited. It costs you nothing extra, and it is marked as a sponsored link.' },
+];
+---
+<Base
+  title="FAQ | GrokBot Zone"
+  description="What a Grok bot is, how to find and add one, how to get yours listed, and how often the directory updates."
+  path="/faq/"
+  jsonLd={[{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]}
+>
+  <div class="wrap page-head"><h1>Questions.<br />Answered.</h1></div>
+  <div class="wrap block faq">
+    {faqs.map((f) => (
+      <details class="panel">
+        <summary><h2>{f.q}</h2></summary>
+        <p>{f.a}</p>
+      </details>
+    ))}
+  </div>
+</Base>
+<style>
+  .faq { max-width: 820px; display: grid; gap: .75rem; padding-top: 1rem; }
+  details { padding: 1rem 1.3rem; }
+  summary { cursor: pointer; list-style-position: outside; }
+  summary h2 { display: inline; font-size: 1.35rem; }
+  details p { margin: .8rem 0 0; color: var(--text-muted); }
+</style>

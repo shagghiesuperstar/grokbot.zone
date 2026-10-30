@@ -5,6 +5,7 @@
   "type": "module",
   "description": "A searchable directory of public Grok bot listings.",
   "scripts": {
+    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts",
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",

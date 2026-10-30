@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import BotCard from '../../components/BotCard.astro';
+import { allCategories, botsByCategory, trending, meta } from '../../lib/data';
+
+export function getStaticPaths() {
+  return allCategories.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const top = (trending.perCategory as Record<string, string[]>)[c.slug] ?? [];
+const topSet = new Set(top);
+const rankOf = new Map(top.map((s, i) => [s, i]));
+const list = botsByCategory(c.slug).sort(
+  (a, b) => (rankOf.get(a.slug) ?? 1e6) - (rankOf.get(b.slug) ?? 1e6) || a.name.localeCompare(b.name) || a.slug.localeCompare(b.slug),
+);
+const path = `/categories/${c.slug}/`;
+---
+<Base
+  title={`${c.label} Grok bots (${c.count}) | GrokBot Zone`}
+  description={`${c.count} Grok bots in ${c.label}. ${c.purpose} Listings as of ${meta.asOf}.`}
+  path={path}
+  jsonLd={[
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${c.label} Grok bots`, description: c.purpose, url: `https://grokbot.zone${path}`, numberOfItems: c.count },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://grokbot.zone/' },
+      { '@type': 'ListItem', position: 2, name: 'Categories', item: 'https://grokbot.zone/categories/' },
+      { '@type': 'ListItem', position: 3, name: c.label, item: `https://grokbot.zone${path}` },
+    ] },
+  ]}
+>
+  <div class="wrap page-head">
+    <p class="crumbs"><a href="/categories/">Categories</a> / {c.label}</p>
+    <h1>{c.label}</h1>
+    <p>{c.purpose}</p>
+    <p data-count><span class="num">{c.count}</span> bots · listings as of <time datetime={c.updated}>{c.updated}</time>{top.length > 0 && <> · most popular first</>}</p>
+  </div>
+  <div class="wrap block">
+    <ul class="grid" data-bot-list>
+      {list.map((b) => <li><BotCard bot={b} trending={topSet.has(b.slug) && (rankOf.get(b.slug) ?? 99) < 5} /></li>)}
+    </ul>
+  </div>
+</Base>

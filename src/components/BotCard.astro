@@ -1,0 +1,31 @@
+---
+import type { Bot } from '../lib/data';
+import { categoryBySlug } from '../lib/data';
+interface Props { bot: Bot; trending?: boolean; showCategory?: boolean }
+const { bot, trending = false, showCategory = false } = Astro.props;
+const cat = categoryBySlug.get(bot.cat)!;
+---
+<article class="card panel">
+  <h3><a href={`/bots/${bot.slug}/`}>{bot.name}</a></h3>
+  <p class="by">by {bot.author}</p>
+  <p class="desc">{bot.description}</p>
+  <p class="foot">
+    {trending && <span class="trend"><span class="dot" aria-hidden="true"></span>Trending</span>}
+    {showCategory && <a class="cat" href={`/categories/${cat.slug}/`}>{cat.label}</a>}
+  </p>
+</article>
+<style>
+  .card { padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .35rem; }
+  .card h3 { font-size: 1.3rem; overflow-wrap: anywhere; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--olo); }
+  .by { margin: 0; color: var(--fuchsia); font-size: .9rem; font-weight: 500; overflow-wrap: anywhere; }
+  .desc { margin: .2rem 0 0; color: var(--text-muted); font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .foot { margin: auto 0 0; padding-top: .5rem; display: flex; gap: .75rem; flex-wrap: wrap; font-size: .8rem; }
+  .foot:empty { display: none; }
+  .trend { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--olo); }
+  .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--olo); animation: pulse 2s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(0 255 204 / .6); } 100% { box-shadow: 0 0 0 .6rem rgb(0 255 204 / 0); } }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+  .cat { color: var(--text-muted); }
+</style>

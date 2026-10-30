@@ -1,0 +1,16 @@
+---
+import type { Category } from '../lib/data';
+interface Props { category: Category }
+const { category: c } = Astro.props;
+---
+<a class="cc panel" href={`/categories/${c.slug}/`}>
+  <h3>{c.label}</h3>
+  <p class="p">{c.purpose}</p>
+  <p class="n"><span class="num">{c.count}</span> bots</p>
+</a>
+<style>
+  .cc { display: flex; flex-direction: column; gap: .4rem; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--text); height: 100%; }
+  .cc:hover { border-color: var(--olo); }
+  .p { margin: 0; color: var(--text-muted); font-size: .92rem; }
+  .n { margin: auto 0 0; padding-top: .4rem; color: var(--olo); font-size: .9rem; }
+</style>

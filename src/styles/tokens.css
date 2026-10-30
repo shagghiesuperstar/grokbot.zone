@@ -1,0 +1,32 @@
+/* Brand tokens: single source for palette and type. Values are locked. */
+:root {
+  /* Signature */
+  --olo: #00ffcc;
+  --ink-black: #000504; /* only label colour on an OLO fill */
+
+  /* Surfaces */
+  --canvas: #030203;
+  --panel: #080507;
+  --hairline: rgb(255 255 255 / 0.1);
+
+  /* Warm band: human / story moments only */
+  --fuchsia: #ff00bf;
+  --pink: #ff0066;
+
+  /* Errors and destructive actions only */
+  --crimson: #ff0033;
+
+  /* Ambient only: glow and grain, never text, never a control */
+  --aqua: #003329;
+  --mint: #00ff99;
+
+  /* Text. Muted values are measured in scripts/contrast.ts */
+  --text: #ffffff;
+  --text-muted: rgb(255 255 255 / 0.7);
+
+  --font-display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 12px;
+  --maxw: 1160px;
+}

@@ -1,0 +1,21 @@
+---
+const here = Astro.url.pathname;
+const links = [
+  { href: '/categories/', label: 'Categories' },
+  { href: '/bots/', label: 'Search' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/submit/', label: 'Submit' },
+];
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="GrokBot Zone, home">Grok<span>Bot</span> Zone</a>
+    <nav aria-label="Main">
+      <ul>
+        {links.map((l) => (
+          <li><a href={l.href} aria-current={here.startsWith(l.href) ? 'page' : undefined}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

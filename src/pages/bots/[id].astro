@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allBots, categoryBySlug, botUrl, meta } from '../../lib/data';
+
+export function getStaticPaths() {
+  return allBots.map((bot) => ({ params: { id: bot.slug }, props: { bot } }));
+}
+const { bot } = Astro.props;
+const cat = categoryBySlug.get(bot.cat)!;
+const path = `/bots/${bot.slug}/`;
+const url = botUrl(bot);
+// Built from fields, not copied prose, so every page gets a unique, predictable summary.
+const description = `${bot.name}: a Grok bot by ${bot.author} in ${cat.label}. Listing snapshot ${meta.asOf}.`;
+---
+<Base
+  title={`${bot.name} | Grok bot | GrokBot Zone`}
+  description={description}
+  path={path}
+  ogType="article"
+  jsonLd={[
+    {
+      '@context': 'https://schema.org', '@type': 'SoftwareApplication',
+      name: bot.name, description: bot.description, url, applicationCategory: cat.label,
+      author: { '@type': 'Person', name: bot.author }, operatingSystem: 'Web',
+      mainEntityOfPage: `https://grokbot.zone${path}`,
+    },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://grokbot.zone/' },
+      { '@type': 'ListItem', position: 2, name: cat.label, item: `https://grokbot.zone/categories/${cat.slug}/` },
+      { '@type': 'ListItem', position: 3, name: bot.name, item: `https://grokbot.zone${path}` },
+    ] },
+  ]}
+>
+  <article class="wrap bot">
+    <p class="crumbs"><a href="/categories/">Categories</a> / <a href={`/categories/${cat.slug}/`}>{cat.label}</a></p>
+    <h1>{bot.name}</h1>
+    <p class="by">by {bot.author}</p>
+    <p class="desc">{bot.description}</p>
+    <dl class="facts panel">
+      <div><dt>Category</dt><dd><a href={`/categories/${cat.slug}/`}>{cat.label}</a></dd></div>
+      <div><dt>Author</dt><dd>{bot.author}</dd></div>
+      <div><dt>Listing snapshot</dt><dd><time datetime={meta.asOf}>{meta.asOf}</time></dd></div>
+    </dl>
+    <div class="actions">
+      <a class="btn" href={url} rel="noopener noreferrer" target="_blank" data-open-bot>Open this bot</a>
+      <button type="button" class="btn ghost" data-share data-title={bot.name} data-url={`https://grokbot.zone${path}`}>Share</button>
+      <span class="muted share-status" role="status" aria-live="polite" data-share-status></span>
+    </div>
+    <p class="muted note">This description is a snapshot from {meta.asOf}. The bot's own page has the current details.</p>
+  </article>
+  <slot />
+</Base>
+<style>
+  .bot { padding: 3rem 0 1rem; max-width: 820px; }
+  .by { color: var(--fuchsia); font-weight: 600; margin: .75rem 0 0; font-size: 1.05rem; }
+  .desc { font-size: 1.15rem; margin: 1.25rem 0 1.5rem; overflow-wrap: anywhere; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; padding: 1.1rem 1.3rem; margin: 0 0 1.5rem; }
+  .facts dt { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+  .facts dd { margin: .2rem 0 0; font-weight: 600; overflow-wrap: anywhere; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+  .note { font-size: .9rem; margin-top: 1rem; }
+</style>
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('[data-share]');
+  const status = document.querySelector<HTMLElement>('[data-share-status]');
+  btn?.addEventListener('click', async () => {
+    const { title = '', url = '' } = btn.dataset;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        if (status) status.textContent = 'Link copied.';
+      }
+    } catch (e) {
+      if ((e as DOMException).name === 'AbortError') return;
+      if (status) status.textContent = `Copy this link: ${url}`;
+    }
+  });
+</script>

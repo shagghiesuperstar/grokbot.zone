@@ -1,0 +1,14 @@
+name = "grokbot-zone"
+main = "dist/_worker.js/index.js"
+compatibility_date = "2026-10-01"
+
+routes = [
+  { pattern = "grokbot.zone",     custom_domain = true },
+  { pattern = "www.grokbot.zone", custom_domain = true },
+]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = true

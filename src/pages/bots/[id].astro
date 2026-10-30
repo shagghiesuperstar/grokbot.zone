@@ -23,7 +23,7 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
   jsonLd={[
     {
       '@context': 'https://schema.org', '@type': 'SoftwareApplication',
-      name: bot.name, description: bot.description, url, applicationCategory: cat.label,
+      name: bot.name, description, url, applicationCategory: cat.label,
       author: { '@type': 'Person', name: bot.author }, operatingSystem: 'Web',
       mainEntityOfPage: `https://grokbot.zone${path}`,
     },

@@ -19,10 +19,11 @@ export const relatedFor = (slug: string) =>
   ((related as Record<string, [string, 's' | 't'][]>)[slug] ?? []).map(([s, why]) => ({ bot: botBySlug.get(s)!, why }));
 
 // Unique <title> and description per bot page. Many listings share a name, so qualify with the
-// author, then the category, then a short code prefix, only as far as needed to be unique.
+// category, then the author, then a short code prefix, only as far as needed to be unique.
 const catLabel = (b: Bot) => categoryBySlug.get(b.cat)!.label;
 const titleV: ((b: Bot) => string)[] = [
-  (b) => `${b.name} by ${b.author}`,
+  (b) => b.name,
+  (b) => `${b.name} (${catLabel(b)})`,
   (b) => `${b.name} by ${b.author} (${catLabel(b)})`,
   (b) => `${b.name} by ${b.author} (${catLabel(b)}, ${b.code.slice(0, 6)})`,
 ];

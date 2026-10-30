@@ -4,3 +4,5 @@ dist/
 .DS_Store
 .wrangler/
 public/search/
+rive/*/build/
+public/riv/rive.wasm

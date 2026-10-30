@@ -1,0 +1,16 @@
+<Rive version="1" kind="fragment">
+    <Artboard defaultStateMachineId="0:7" styleId="0:3" width="64" height="64" name="BotPulse" id="0:2">
+        <LayoutComponentStyle id="0:3"/>
+        <Shape x="32" y="32" name="core" id="0:30"><Ellipse width="16" height="16"/><Fill><SolidColor colorValue="FF00FFCC"/></Fill></Shape>
+        <Shape x="32" y="32" name="ring" id="0:31"><Ellipse width="28" height="28"/><Stroke thickness="3" cap="round"><SolidColor colorValue="FF00FFCC"/></Stroke></Shape>
+        <StateMachine name="State Machine 1" id="0:7">
+            <StateMachineLayer name="Layer 1" id="0:8">
+                <AnyState x="200" y="-120"/>
+                <ExitState x="400" y="-120"/>
+                <EntryState><StateTransition stateToId="0:12"/></EntryState>
+                <AnimationState x="200" animationId="0:6" id="0:12"/>
+            </StateMachineLayer>
+        </StateMachine>
+        <LinearAnimation loopValue="loop" duration="90" name="Pulse" id="0:6"><KeyedObject objectId="0:31"><KeyedProperty propertyKey="16"><KeyFrameDouble value="0.5" interpolationType="linear"/><KeyFrameDouble value="2.0" interpolationType="linear" frame="90"/></KeyedProperty><KeyedProperty propertyKey="17"><KeyFrameDouble value="0.5" interpolationType="linear"/><KeyFrameDouble value="2.0" interpolationType="linear" frame="90"/></KeyedProperty><KeyedProperty propertyKey="18"><KeyFrameDouble value="0.95" interpolationType="linear"/><KeyFrameDouble value="0" interpolationType="linear" frame="90"/></KeyedProperty></KeyedObject><KeyedObject objectId="0:30"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1.0" interpolationType="linear"/><KeyFrameDouble value="0.7" interpolationType="linear" frame="45"/><KeyFrameDouble value="1.0" interpolationType="linear" frame="90"/></KeyedProperty></KeyedObject></LinearAnimation>
+    </Artboard>
+</Rive>

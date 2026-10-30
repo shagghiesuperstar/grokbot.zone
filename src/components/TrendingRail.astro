@@ -1,4 +1,5 @@
 ---
+import RivePlayer from './RivePlayer.astro';
 import BotCard from './BotCard.astro';
 import { botBySlug, trending } from '../lib/data';
 const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
@@ -6,7 +7,7 @@ const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
 {bots.length > 0 && (
   <section class="block wrap" aria-labelledby="trending-h" data-rail="trending">
     <div class="section-head">
-      <h2 id="trending-h">Trending</h2>
+      <h2 id="trending-h" class="th"><RivePlayer class="pulse" src="/riv/bot-pulse.riv"><span class="pdot"></span></RivePlayer>Trending</h2>
       <p class="asof">Popularity order as of <time datetime={trending.asOf}>{trending.asOf}</time>. A dated snapshot, not a live feed.</p>
     </div>
     <ul class="grid">
@@ -14,3 +15,8 @@ const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
     </ul>
   </section>
 )}
+<style>
+  .th { display: flex; align-items: center; gap: .5rem; }
+  .pulse { width: 32px; height: 32px; flex: none; }
+  .pdot { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; border-radius: 50%; background: var(--olo); }
+</style>

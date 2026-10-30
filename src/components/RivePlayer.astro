@@ -1,0 +1,62 @@
+---
+// Thin wrapper over the Rive web runtime. The slotted fallback is what renders when motion is
+// reduced, the asset fails to load, or scripting is off. Decorative: hidden from assistive tech.
+interface Props { src: string; class?: string; fit?: 'cover' | 'contain' }
+const { src, class: cls = '', fit = 'contain' } = Astro.props;
+---
+<div class:list={['riv-host', cls]} data-riv-host aria-hidden="true">
+  <div class="riv-fallback" data-riv-fallback><slot /></div>
+  <canvas class="riv" data-riv data-src={src} data-fit={fit} hidden></canvas>
+</div>
+<style>
+  .riv-host { position: relative; }
+  .riv-fallback, canvas.riv { position: absolute; inset: 0; width: 100%; height: 100%; }
+  canvas.riv { pointer-events: none; }
+</style>
+<script>
+  import { Rive, Layout, Fit, Alignment, RuntimeLoader } from '@rive-app/canvas';
+
+  RuntimeLoader.setWasmUrl('/riv/rive.wasm');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const players: Rive[] = [];
+
+  function start(canvas: HTMLCanvasElement) {
+    const host = canvas.closest<HTMLElement>('[data-riv-host]')!;
+    const fallback = host.querySelector<HTMLElement>('[data-riv-fallback]')!;
+    try {
+      const r = new Rive({
+        src: canvas.dataset.src!,
+        canvas,
+        autoplay: true,
+        stateMachine: 'State Machine 1',
+        layout: new Layout({ fit: canvas.dataset.fit === 'cover' ? Fit.Cover : Fit.Contain, alignment: Alignment.Center }),
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+          canvas.hidden = false;
+          fallback.hidden = true;
+          host.dataset.live = 'true';
+        },
+        onLoadError: () => { /* the static fallback stays visible */ },
+      });
+      players.push(r);
+      new ResizeObserver(() => r.resizeDrawingSurfaceToCanvas()).observe(canvas);
+    } catch {
+      /* the static fallback stays visible */
+    }
+  }
+
+  // Reduced motion: never start playback; the static fallback is the final render.
+  if (!reduce.matches) document.querySelectorAll<HTMLCanvasElement>('canvas[data-riv]').forEach(start);
+  reduce.addEventListener('change', () => {
+    if (reduce.matches) {
+      players.forEach((p) => p.pause());
+      document.querySelectorAll<HTMLElement>('[data-riv-host]').forEach((h) => {
+        h.querySelector<HTMLElement>('[data-riv-fallback]')!.hidden = false;
+        h.querySelector<HTMLCanvasElement>('canvas.riv')!.hidden = true;
+        delete h.dataset.live;
+      });
+    } else if (!players.length) {
+      document.querySelectorAll<HTMLCanvasElement>('canvas[data-riv]').forEach(start);
+    }
+  });
+</script>

@@ -5,9 +5,10 @@
   "type": "module",
   "description": "A searchable directory of public Grok bot listings.",
   "scripts": {
-    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts",
+    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts && tsx scripts/copy-wasm.ts",
     "build": "astro build",
     "dev": "astro dev",
+    "riv:build": "python3 scripts/gen-rive-src.py && rive rive/hero-grid --once && rive rive/bot-pulse --once && cp rive/hero-grid/build/hero-grid.riv rive/bot-pulse/build/bot-pulse.riv public/riv/",
     "preview": "astro preview",
     "check:contrast": "tsx scripts/contrast.ts",
     "deploy": "npx --yes wrangler@4.123.0 deploy --config wrangler.toml"

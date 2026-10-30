@@ -1,0 +1,1 @@
+{"$schema":"https://opencode.ai/config.json","provider":{"mlx-serve":{"npm":"@ai-sdk/openai-compatible","name":"mlx-serve (local)","options":{"baseURL":"http://127.0.0.1:8100/v1"},"models":{"Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit":{"name":"Qwen3.8 Flash (local)"}}}},"model":"mlx-serve/Qwen3.8-Flash-Next-Uncensored-MLX-Serve-4bit"}

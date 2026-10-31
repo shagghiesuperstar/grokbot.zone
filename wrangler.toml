@@ -1,6 +1,7 @@
 name = "grokbot-zone"
 main = "dist/_worker.js/index.js"
 compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
 
 routes = [
   { pattern = "grokbot.zone",     custom_domain = true },
@@ -12,3 +13,37 @@ directory = "./dist"
 binding = "ASSETS"
 not_found_handling = "404-page"
 run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "grokbot-zone"
+database_id = "a24fa857-a56c-41ef-9fbf-d34337083a7a"
+
+[[send_email]]
+name = "EMAIL"
+
+# NOTIFY_OWNER ([[send_email]] with destination_address) is added by the operator once the
+# owner mailbox is known; the Worker runs without it.
+
+[[ratelimits]]
+name = "SUBMISSIONS_RL"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }
+
+[[ratelimits]]
+name = "SUBSCRIBE_RL"
+namespace_id = "1002"
+simple = { limit = 10, period = 60 }
+
+[triggers]
+crons = ["0 13 * * MON,THU"]
+
+# Dark-ship switches: "1" turns a feature on. All ship "0".
+[vars]
+FORM_SUBMIT_ENABLED  = "0"
+EMAIL_SUBMIT_ENABLED = "0"
+SUBSCRIBE_ENABLED    = "0"
+DIGEST_ENABLED       = "0"
+OWNER_ADDRESS        = ""
+MIN_FILL_MS          = "3000"
+DIGEST_MAX_SENDS     = "100"

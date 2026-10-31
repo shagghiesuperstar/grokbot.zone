@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { meta } from '../lib/data';
+import { meta, allCategories } from '../lib/data';
 ---
 <Base
   title="Submit a Grok bot | GrokBot Zone"
@@ -12,14 +12,66 @@ import { meta } from '../lib/data';
     <ol>
       <li><strong>Make the bot public.</strong> A bot can only be listed if it has a public link on the Grok platform. It looks like <code>https://x.ai/bot/&lt;code&gt;</code>.</li>
       <li><strong>Check it is not already here.</strong> <a href="/bots/">Search</a> for its name or your name as author.</li>
-      <li><strong>Send us the link.</strong> Open an issue on <a href="https://github.com/shagghiesuperstar/grokbot.zone/issues" rel="noopener">the project's GitHub page</a> with the bot link and the category you think fits. Use the same route to correct a name, author or description.</li>
+      <li><strong>Send us the link.</strong> Use the form below, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description. To correct a name, author or description, <a href="https://github.com/shagghiesuperstar/grokbot.zone/issues" rel="noopener">open an issue on the project's GitHub page</a>.</li>
       <li><strong>Wait for the next refresh.</strong> Added bots show up when we refresh the list, which is about weekly. The current snapshot is <time datetime={meta.asOf}>{meta.asOf}</time>.</li>
     </ol>
+    <section class="panel formbox" aria-labelledby="form-h">
+      <h2 id="form-h">Submit a bot</h2>
+      <form id="submit-form" action="/api/submit" method="post" novalidate hidden>
+        <label>Bot name<input name="name" required minlength="3" maxlength="120" autocomplete="off" /></label>
+        <label>Author (optional)<input name="author" maxlength="80" autocomplete="off" /></label>
+        <label>Bot link<input name="link" required placeholder="https://x.ai/bot/..." inputmode="url" autocomplete="off" /></label>
+        <label>Category<select name="category" required><option value="">Choose a category</option>{allCategories.map((c) => <option value={c.slug}>{c.label}</option>)}</select></label>
+        <label>One-line description<textarea name="description" required minlength="10" maxlength="500" rows="3"></textarea></label>
+        <label>Your email (for a receipt)<input name="email" type="email" required maxlength="254" autocomplete="email" /></label>
+        <label class="hp" aria-hidden="true">Company website<input name="company_website" tabindex="-1" autocomplete="off" /></label>
+        <button type="submit" class="btn">Send for review</button>
+        <p id="form-status" role="status" class="muted"></p>
+      </form>
+      <p id="form-closed" class="muted">Submissions by email open soon — meanwhile open a GitHub issue.</p>
+    </section>
     <p class="muted">We list and link. We never run, host or copy a bot, and listing is free.</p>
   </div>
 </Base>
+<script is:inline>
+  (function () {
+    var form = document.getElementById('submit-form');
+    var closed = document.getElementById('form-closed');
+    if (!form) return;
+    var shown = Date.now();
+    var status = document.getElementById('form-status');
+    fetch('/api/flags').then(function (r) { return r.json(); }).then(function (h) {
+      if (h && h.form) { form.hidden = false; closed.hidden = true; }
+    }).catch(function () {});
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = new FormData(form);
+      var body = {};
+      f.forEach(function (v, k) { body[k] = v; });
+      body.filled_ms = Date.now() - shown;
+      status.textContent = 'Sending...';
+      fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+        .then(function (x) {
+          if (x.s === 201) { status.textContent = 'Thanks. It is queued for review and a receipt is on its way.'; form.reset(); }
+          else if (x.s === 409) { status.textContent = x.j.error === 'already_listed' ? 'That bot is already listed.' : 'That bot is already queued for review.'; }
+          else if (x.s === 429) { status.textContent = 'Too many tries. Wait a minute and try again.'; }
+          else if (x.s === 400 && x.j.errors) { status.textContent = 'Please check: ' + Object.keys(x.j.errors).join(', ') + '.'; }
+          else { status.textContent = 'Submissions are closed right now. Please try again later.'; }
+        })
+        .catch(function () { status.textContent = 'Could not reach the server. Please try again.'; });
+    });
+  })();
+</script>
 <style>
   .steps { max-width: 760px; }
   ol { padding-left: 1.2rem; display: grid; gap: 1rem; }
+  [hidden] { display: none !important; }
+  .formbox { padding: 1.4rem; margin: 1.5rem 0; }
+  form { display: grid; gap: .9rem; }
+  label { display: grid; gap: .3rem; font-weight: 500; font-size: .92rem; }
+  input, select, textarea { font: inherit; padding: .55rem .7rem; border-radius: 8px; border: 1px solid var(--hairline); background: var(--bg, #030203); color: var(--text); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .btn { justify-self: start; font: inherit; font-weight: 600; padding: .6rem 1.2rem; border-radius: 999px; border: 1px solid var(--olo); background: transparent; color: var(--olo); cursor: pointer; }
   code { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: .1rem .4rem; }
 </style>

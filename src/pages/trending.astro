@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import BotCard from '../components/BotCard.astro';
+import CategoryChips from '../components/CategoryChips.astro';
+import { botBySlug, trending } from '../lib/data';
+const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
+---
+<Base
+  title="Trending Grok bots | GrokBot Zone"
+  description={`The ${bots.length} most popular public Grok bots, ranked by the popularity order recorded on ${trending.asOf}.`}
+  path="/trending/"
+  jsonLd={[{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Trending Grok bots', url: 'https://grokbot.zone/trending/' }]}
+>
+  <div class="wrap page-head">
+    <h1>Trending.<br />Most popular first.</h1>
+    <p>Last updated <time datetime={trending.asOf}>{trending.asOf}</time>. {trending.basis}. A dated snapshot, not a live feed.</p>
+  </div>
+  <div class="wrap block">
+    <CategoryChips />
+  </div>
+  <div class="wrap block list">
+    <ol class="grid ranked">
+      {bots.map((b, i) => (
+        <li data-rank={i + 1}>
+          <span class="rank" aria-label={`Rank ${i + 1}`}>{i + 1}</span>
+          <BotCard bot={b} trending showCategory level={2} />
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+<style>
+  .block { padding: 1rem 0; }
+  .ranked { list-style: none; counter-reset: none; }
+  .ranked li { position: relative; display: flex; flex-direction: column; gap: .4rem; }
+  .rank { font-family: 'Anton', sans-serif; font-size: 1.6rem; color: var(--olo); line-height: 1; }
+  .ranked li > :global(.card) { flex: 1; }
+</style>

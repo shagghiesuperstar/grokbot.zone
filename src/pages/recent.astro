@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import CategoryChips from '../components/CategoryChips.astro';
+import { recent, allCategories } from '../lib/data';
+const bySlug = new Map(allCategories.map((c) => [c.slug, c]));
+---
+<Base
+  title="Recently refreshed Grok bot categories | GrokBot Zone"
+  description={`${recent.categories.length} Grok bot categories in the order they were last refreshed. Last updated ${recent.asOf}.`}
+  path="/recent/"
+  jsonLd={[{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Recently refreshed Grok bot categories', url: 'https://grokbot.zone/recent/' }]}
+>
+  <div class="wrap page-head">
+    <h1>Recent.<br />Freshly refreshed.</h1>
+    <p>Last updated <time datetime={recent.asOf}>{recent.asOf}</time>. The platform does not publish a date per bot, so this list is ordered by category refresh.</p>
+  </div>
+  <div class="wrap block">
+    <CategoryChips />
+  </div>
+  <div class="wrap block list">
+    <ol class="grid ranked">
+      {recent.categories.map((c, i) => (
+        <li data-rank={i + 1}>
+          <a class="panel tile" href={`/categories/${c.slug}/`}>
+            <span class="rank" aria-hidden="true">{i + 1}</span>
+            <h2>{c.label}</h2>
+            <p class="muted"><span class="num">{c.count}</span> bots · refreshed <time datetime={c.asOf}>{c.asOf}</time></p>
+            <p class="p">{bySlug.get(c.slug)?.purpose}</p>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+<style>
+  .block { padding: 1rem 0; }
+  .ranked { list-style: none; }
+  .ranked li { display: flex; }
+  .tile { display: block; width: 100%; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--text); }
+  .tile:hover { border-color: var(--olo); }
+  .tile h2 { font-size: 1.3rem; }
+  .tile p { margin: .35rem 0 0; font-size: .92rem; }
+  .tile .p { color: var(--text-muted); }
+  .rank { font-family: 'Anton', sans-serif; font-size: 1.4rem; color: var(--olo); }
+</style>

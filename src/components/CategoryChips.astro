@@ -1,0 +1,13 @@
+---
+import { allCategories } from '../lib/data';
+---
+<nav class="chips" aria-label="Browse by category">
+  <ul>
+    {allCategories.map((c) => <li><a href={`/categories/${c.slug}/`}>{c.label}</a></li>)}
+  </ul>
+</nav>
+<style>
+  .chips ul { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
+  .chips a { display: inline-block; padding: .3rem .75rem; border: 1px solid var(--hairline); border-radius: 999px; color: var(--text-muted); text-decoration: none; font-size: .85rem; }
+  .chips a:hover { border-color: var(--olo); color: var(--text); }
+</style>

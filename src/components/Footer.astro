@@ -7,6 +7,15 @@ import { meta } from '../lib/data';
       GrokBot Zone is an independent index of public Grok bot listings.
       Listings are a snapshot dated <time datetime={meta.asOf}>{meta.asOf}</time>. Bot pages on the upstream platform hold the current details.
     </p>
+    <section class="signup" id="signup" aria-labelledby="signup-h" hidden>
+      <h2 id="signup-h">Get update emails Monday + Thursday</h2>
+      <form id="signup-form" action="/subscribe" method="post" novalidate>
+        <label>Email<input name="email" type="email" required maxlength="254" autocomplete="email" /></label>
+        <label class="hp" aria-hidden="true">Company website<input name="company_website" tabindex="-1" autocomplete="off" /></label>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="signup-status" role="status" class="muted"></p>
+    </section>
     <nav aria-label="Footer">
       <ul>
         <li><a href="/categories/">Categories</a></li>
@@ -16,3 +25,39 @@ import { meta } from '../lib/data';
     </nav>
   </div>
 </footer>
+<script is:inline>
+  (function () {
+    var box = document.getElementById('signup');
+    if (!box) return;
+    fetch('/api/flags').then(function (r) { return r.json(); }).then(function (h) { if (h && h.subscribe) box.hidden = false; }).catch(function () {});
+    var form = document.getElementById('signup-form');
+    var status = document.getElementById('signup-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var body = {};
+      new FormData(form).forEach(function (v, k) { body[k] = v; });
+      status.textContent = 'Sending...';
+      fetch('/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+        .then(function (x) {
+          if (x.s === 201) status.textContent = 'Check your inbox to confirm. Nothing happens until you do.';
+          else if (x.s === 200) status.textContent = 'A confirmation email is already waiting for you.';
+          else if (x.s === 409) status.textContent = 'You are already subscribed.';
+          else if (x.s === 429) status.textContent = 'Too many tries. Wait a minute and try again.';
+          else if (x.s === 400) status.textContent = 'Please enter a valid email address.';
+          else status.textContent = 'Signups are closed right now.';
+        })
+        .catch(function () { status.textContent = 'Could not reach the server. Please try again.'; });
+    });
+  })();
+</script>
+<style>
+  .signup { margin: 1.25rem 0; }
+  .signup[hidden] { display: none; }
+  .signup h2 { font-size: 1.1rem; }
+  .signup form { display: flex; flex-wrap: wrap; gap: .6rem; align-items: end; }
+  .signup label { display: grid; gap: .25rem; font-size: .85rem; }
+  .signup input { font: inherit; padding: .5rem .7rem; border-radius: 8px; border: 1px solid var(--hairline); background: transparent; color: var(--text); }
+  .signup .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .signup button { font: inherit; font-weight: 600; padding: .5rem 1.1rem; border-radius: 999px; border: 1px solid var(--olo); background: transparent; color: var(--olo); cursor: pointer; }
+</style>

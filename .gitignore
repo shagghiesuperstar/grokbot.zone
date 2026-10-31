@@ -6,3 +6,7 @@ dist/
 public/search/
 rive/*/build/
 public/riv/rive.wasm
+public/api/
+public/feed.xml
+public/feed.json
+public/digests/

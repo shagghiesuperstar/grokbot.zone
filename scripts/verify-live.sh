@@ -45,4 +45,13 @@ total="$(grep -o '"totalBots":[0-9]*' <<< "$index" | head -1 | cut -d: -f2)"
 sitemap_bots="$(grep -c . <<< "$bot_paths")"
 [ "$sitemap_bots" = "$total" ] || fail "sitemap lists $sitemap_bots bot URLs, search index says $total bots"
 
+# Backend layer: static discovery pages, read API, feeds, Worker health, and the dark-state submit route.
+for p in /trending/ /recent/ /api/; do grep -q '<h1' <<< "$(fetch "$p")" || fail "heading missing at $p"; done
+api_total="$(grep -o '"totalBots":[0-9]*' <<< "$(fetch /api/v1/index.json)" | head -1 | cut -d: -f2)"
+[ "$api_total" = "$total" ] || fail "/api/v1/index.json says $api_total bots, search index says $total"
+grep -q 'jsonfeed.org/version/1.1' <<< "$(fetch /feed.json)" || fail "/feed.json version missing"
+grep -q '<feed xmlns=' <<< "$(fetch /feed.xml)" || fail "/feed.xml is not an Atom feed"
+grep -q '"ok":true' <<< "$(fetch /api/health)" || fail "/api/health not ok"
+grep -qiE '<form[^>]+action="/api/submit"' <<< "$(fetch /submit/)" || fail "/submit/ form missing"
+
 echo "PASS: $ORIGIN verified (home, category page, bot page, $total bots in sitemap and search index, referral link)"

@@ -1,0 +1,44 @@
+---
+import Base from '../../layouts/Base.astro';
+import { meta, allCategories } from '../../lib/data';
+const rows: [string, string][] = [
+  ['/api/v1/index.json', 'Endpoint map, asOf date and total bot count.'],
+  ['/api/v1/categories.json', 'Every category: slug, label, count, purpose.'],
+  ['/api/v1/categories/{slug}.json', 'All bots in one category (compact records).'],
+  ['/api/v1/trending.json', 'Popularity order: global list and one list per category.'],
+  ['/api/v1/recent.json', 'Categories in refresh order.'],
+  ['/api/v1/bots/{id}.json', 'One bot: id, name, author, description, category, code, link, asOf.'],
+  ['/api/v1/codes.json', 'Every listed bot code, lowercased.'],
+  ['/feed.xml', 'Atom feed of the trending list.'],
+  ['/feed.json', 'JSON Feed 1.1 of the trending list.'],
+  ['/api/health', 'Worker and database check: {"ok":true,"d1":true}.'],
+];
+---
+<Base
+  title="Read API and feeds | GrokBot Zone"
+  description={`A static JSON read API and feeds for ${meta.totalBots.toLocaleString('en-US')} public Grok bot listings.`}
+  path="/api/"
+>
+  <div class="wrap page-head">
+    <h1>Read API.<br />Plain JSON.</h1>
+    <p>Static, read-only and free to use. Listings are a snapshot dated <time datetime={meta.asOf}>{meta.asOf}</time>; the data is refreshed twice a week, Monday and Thursday. {meta.totalBots.toLocaleString('en-US')} bots in {allCategories.length} categories.</p>
+  </div>
+  <div class="wrap block docs">
+    <table>
+      <thead><tr><th scope="col">Path</th><th scope="col">Content</th></tr></thead>
+      <tbody>{rows.map(([p, d]) => <tr><td><code>{p}</code></td><td>{d}</td></tr>)}</tbody>
+    </table>
+    <h2>Bot record</h2>
+    <pre><code>{`{"id":"…","name":"…","author":"…","description":"…","category":{"slug":"…","label":"…"},"code":"…","link":"https://x.ai/bot/…","asOf":"${meta.asOf}"}`}</code></pre>
+    <h2>Submitting a bot</h2>
+    <p>Writes are same-origin only: use the form on the <a href="/submit/">Submit page</a>, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description. The form posts JSON to <code>/api/submit</code>; browsers on other origins are blocked, and the endpoint is rate limited.</p>
+  </div>
+</Base>
+<style>
+  .docs { max-width: 860px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  code { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: .1rem .4rem; overflow-wrap: anywhere; }
+  pre { overflow-x: auto; }
+  pre code { display: block; padding: .8rem; }
+</style>

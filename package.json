@@ -5,12 +5,14 @@
   "type": "module",
   "description": "A searchable directory of public Grok bot listings.",
   "scripts": {
-    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts && tsx scripts/sync-readme.ts && tsx scripts/assert-counts.ts && tsx scripts/copy-wasm.ts",
-    "build": "astro build",
+    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts && tsx scripts/build-api.ts && tsx scripts/sync-readme.ts && tsx scripts/assert-counts.ts && tsx scripts/copy-wasm.ts",
+    "build": "tsx scripts/build-worker.ts && astro build",
     "dev": "astro dev",
     "riv:build": "python3 scripts/gen-rive-src.py && rive rive/hero-grid --once && rive rive/bot-pulse --once && cp rive/hero-grid/build/hero-grid.riv rive/bot-pulse/build/bot-pulse.riv public/riv/",
     "preview": "astro preview",
     "check:contrast": "tsx scripts/contrast.ts",
+    "test:submissions": "tsx scripts/test-submissions.ts",
+    "submissions:pull": "tsx scripts/submissions-pull.ts",
     "check:counts": "tsx scripts/assert-counts.ts",
     "deploy": "npx --yes wrangler@4.123.0 deploy --config wrangler.toml"
   },
@@ -19,10 +21,12 @@
     "@fontsource/anton": "^5.3.0",
     "@fontsource/inter": "^5.3.0",
     "@rive-app/canvas": "^2.49.0",
-    "astro": "^7.4.4"
+    "astro": "^7.4.4",
+    "postal-mime": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },

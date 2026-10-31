@@ -26,7 +26,7 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
     {
       '@context': 'https://schema.org', '@type': 'SoftwareApplication',
       name: bot.name, description, url, applicationCategory: cat.label,
-      author: { '@type': 'Person', name: bot.author }, operatingSystem: 'Web',
+      ...(bot.author ? { author: { '@type': 'Person', name: bot.author } } : {}), operatingSystem: 'Web',
       mainEntityOfPage: `https://grokbot.zone${path}`,
     },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -39,11 +39,11 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
   <article class="wrap bot">
     <p class="crumbs"><a href="/categories/">Categories</a> / <a href={`/categories/${cat.slug}/`}>{cat.label}</a></p>
     <h1>{bot.name}</h1>
-    <p class="by">by {bot.author}</p>
+    {bot.author && <p class="by">by {bot.author}</p>}
     <p class="desc">{bot.description}</p>
     <dl class="facts panel">
       <div><dt>Categor{allCats.length === 1 ? 'y' : 'ies'}</dt><dd>{allCats.map((c, i) => <>{i > 0 && ' · '}<a href={`/categories/${c.slug}/`}>{c.label}</a></>)}</dd></div>
-      <div><dt>Author</dt><dd>{bot.author}</dd></div>
+      {bot.author && <div><dt>Author</dt><dd>{bot.author}</dd></div>}
       <div><dt>Listing snapshot</dt><dd><time datetime={meta.asOf}>{meta.asOf}</time></dd></div>
     </dl>
     <div class="actions">

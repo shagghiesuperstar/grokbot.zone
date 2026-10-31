@@ -64,8 +64,10 @@ for (const c of index.categories) {
   if (!PURPOSE[c.slug]) fail(file, 'slug', 'no purpose line defined for this category');
   payload.bots.forEach((b: Record<string, unknown>, i: number) => {
     const where = `record #${i} (${String(b?.id ?? 'no id')})`;
-    for (const k of ['id', 'code', 'name', 'author', 'description', 'url'])
+    for (const k of ['id', 'code', 'name', 'description', 'url'])
       if (!isStr(b[k])) fail(file, where, `field "${k}" missing or empty`);
+    // An empty author is valid: the listing simply shows no author line.
+    if (typeof b.author !== 'string') fail(file, where, 'field "author" must be a string');
     const r = b as Record<string, string>;
     if (r.id !== `${c.slug}-${r.code}`) fail(file, where, `id must be "${c.slug}-<code>"`);
     if (r.url !== `https://x.ai/bot/${r.code}`) fail(file, where, 'url must be https://x.ai/bot/<code>');

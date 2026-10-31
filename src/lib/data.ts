@@ -23,11 +23,12 @@ export const relatedFor = (slug: string) =>
 // Unique <title> and description per bot page. Many listings share a name, so qualify with the
 // category, then the author, then a short code prefix, only as far as needed to be unique.
 const catLabel = (b: Bot) => categoryBySlug.get(b.cat)!.label;
+const byline = (b: Bot) => (b.author ? ` by ${b.author}` : '');
 const titleV: ((b: Bot) => string)[] = [
   (b) => b.name,
   (b) => `${b.name} (${catLabel(b)})`,
-  (b) => `${b.name} by ${b.author} (${catLabel(b)})`,
-  (b) => `${b.name} by ${b.author} (${catLabel(b)}, ${b.code.slice(0, 6)})`,
+  (b) => `${b.name}${byline(b)} (${catLabel(b)})`,
+  (b) => `${b.name}${byline(b)} (${catLabel(b)}, ${b.code.slice(0, 6)})`,
 ];
 export const seoTitle = (() => {
   const out = new Map<string, number>();

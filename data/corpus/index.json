@@ -1,6 +1,6 @@
 {
  "asOf": "2026-10-28",
- "rawTotalBots": 7415,
+ "rawTotalBots": 7414,
  "categories": [
   {
    "slug": "business-operations",
@@ -155,7 +155,7 @@
   {
    "slug": "x-twitter-social-media",
    "label": "X (Twitter) & Social Media",
-   "count": 262,
+   "count": 261,
    "path": "data/corpus/x-twitter-social-media.json"
   }
  ]

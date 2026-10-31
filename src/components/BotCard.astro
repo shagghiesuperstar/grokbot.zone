@@ -14,7 +14,7 @@ const Heading = `h${level}` as 'h2' | 'h3';
 ---
 <article class="card panel">
   <Heading class="name"><a href={`/bots/${bot.slug}/`}>{bot.name}</a></Heading>
-  <p class="by">by {bot.author}</p>
+  {bot.author && <p class="by">by {bot.author}</p>}
   <p class="desc">{bot.description}</p>
   <p class="foot">
     {trending && <span class="trend"><span class="dot" aria-hidden="true"></span>Trending</span>}

@@ -1,7 +1,7 @@
 {
  "slug": "x-twitter-social-media",
  "label": "X (Twitter) & Social Media",
- "count": 262,
+ "count": 261,
  "asOf": "2026-10-28",
  "bots": [
   {
@@ -1131,14 +1131,6 @@
    "author": "Tyler",
    "description": "Scans public X three times a day and sends a list of popular, active accounts worth following in the niches you pick. No X account linking needed.",
    "url": "https://x.ai/bot/l6KBRHcgf7o0epen41gB5"
-  },
-  {
-   "id": "x-twitter-social-media-YfGoQi8hsL4G4hUGLSSAr",
-   "code": "YfGoQi8hsL4G4hUGLSSAr",
-   "name": " Improvement Bot",
-   "author": "Colin Crossman ₿",
-   "description": " (@) posts more good ideas for AI agents before breakfast than most of us have all week…",
-   "url": "https://x.ai/bot/YfGoQi8hsL4G4hUGLSSAr"
   },
   {
    "id": "x-twitter-social-media-2pjaPOO1dbR_VrUMTiWHg",

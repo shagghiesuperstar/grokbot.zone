@@ -3,7 +3,7 @@
 A static, searchable directory of public Grok bot listings, live at https://grokbot.zone.
 
 <!-- counts:start -->
-- 7,291 distinct bots published from a raw corpus snapshot of 7,415 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
+- 7,290 distinct bots published from a raw corpus snapshot of 7,414 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
 <!-- counts:end -->
 - Search, categories, Trending, Recent, Related, a page for every bot, FAQ, submit page.
 - Trending and Recent come from committed, dated signal files in `data/signals/`. There is no live popularity feed, and the site says so.
@@ -40,9 +40,9 @@ listed in both, so the category listings add up to more than the number of bots.
 Two counts, two layers, and they are never interchangeable:
 
 <!-- layers:start -->
-- `data/corpus/index.json` `rawTotalBots` (7,415) is the **raw snapshot**: listing records.
-- `src/data/meta.json` `totalBots` (7,291) is the **published** count: distinct bots.
-- `src/data/meta.json` `totalListings` (7,330) is the category listings: a bot in two
+- `data/corpus/index.json` `rawTotalBots` (7,414) is the **raw snapshot**: listing records.
+- `src/data/meta.json` `totalBots` (7,290) is the **published** count: distinct bots.
+- `src/data/meta.json` `totalListings` (7,329) is the category listings: a bot in two
   categories is listed in both, so it is counted twice.
 <!-- layers:end -->
 

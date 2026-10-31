@@ -102,7 +102,7 @@ const { id = 'q' } = Astro.props;
     a.href = `/bots/${h.rec.i}/`;
     a.style.cssText = 'color:var(--text);text-decoration:none';
     title.append(a);
-    const by = el('p', undefined, `by ${h.rec.a} · ${h.rec.catLabel}`);
+    const by = el('p', undefined, `${h.rec.a ? `by ${h.rec.a} · ` : ''}${h.rec.catLabel}`);
     by.style.cssText = 'margin:.15rem 0 0;color:var(--fuchsia);font-size:.88rem';
     const d = el('p', 'muted', h.rec.d);
     d.style.cssText = 'margin:.3rem 0 0;font-size:.93rem';

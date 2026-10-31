@@ -7,5 +7,7 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
+  // The CSS minifier drops -webkit-backdrop-filter for modern targets; iOS before 18 still needs it for the glass.
+  vite: { build: { cssTarget: ['safari15', 'chrome100', 'firefox100'] } },
   integrations: [sitemap({ filter: (page) => !page.endsWith('/404/') })],
 });

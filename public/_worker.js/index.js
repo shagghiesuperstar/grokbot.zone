@@ -5642,15 +5642,16 @@ async function serveMedia(request, assets, url) {
     bytes = new Uint8Array(await res.arrayBuffer());
     size = bytes.length;
   }
+  const drop = () => bytes ? void 0 : res.body?.cancel();
   const range = parseRange(request.headers.get("range"), size);
   if (range === "unsatisfiable") {
-    await res.body?.cancel();
+    await drop();
     return new Response(null, { status: 416, headers: { ...base, "Content-Range": `bytes */${size}`, "Content-Length": "0" } });
   }
   if (!range) {
     const headers2 = { ...base, "Content-Length": String(size) };
     if (head) {
-      await res.body?.cancel();
+      await drop();
       return new Response(null, { status: 200, headers: headers2 });
     }
     return new Response(bytes ?? res.body, { status: 200, headers: headers2 });
@@ -5658,7 +5659,7 @@ async function serveMedia(request, assets, url) {
   const length = range.end - range.start + 1;
   const headers = { ...base, "Content-Range": `bytes ${range.start}-${range.end}/${size}`, "Content-Length": String(length) };
   if (head) {
-    await res.body?.cancel();
+    await drop();
     return new Response(null, { status: 206, headers });
   }
   bytes ??= new Uint8Array(await res.arrayBuffer());

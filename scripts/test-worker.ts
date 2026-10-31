@@ -237,21 +237,21 @@ await t('F5 email: an untouched rejected row still resubmits to pending', async 
 
 // ---- D4: /media/* byte ranges (Workers static assets ignore Range, so the Worker answers them) ----
 const MEDIA = Uint8Array.from({ length: 1000 }, (_, i) => i % 251);
-function mediaEnv() {
+function mediaEnv(withLength = true) {
   const seen: Request[] = [];
   const ASSETS = {
     fetch: async (r: Request) => {
       seen.push(r);
       const p = new URL(r.url).pathname; // like the real binding: Range is ignored, always a full 200
-      if (p === '/media/clip.mp4') return new Response(MEDIA, { headers: { 'content-type': 'video/mp4', 'content-length': '1000', etag: '"abc"' } });
+      if (p === '/media/clip.mp4') return new Response(MEDIA, { headers: { 'content-type': 'video/mp4', ...(withLength ? { 'content-length': '1000' } : {}), etag: '"abc"' } });
       if (p === '/media/missing.mp4') return new Response('not found page', { status: 404, headers: { 'content-type': 'text/html' } });
       return new Response(`asset:${p}`, { headers: { 'content-type': 'text/plain' } });
     },
   };
   return { seen, env: makeEnv({ ASSETS }) };
 }
-const getMedia = (rng?: string, method = 'GET', path = '/media/clip.mp4') => {
-  const m = mediaEnv();
+const getMedia = (rng?: string, method = 'GET', path = '/media/clip.mp4', withLength = true) => {
+  const m = mediaEnv(withLength);
   return call(path, m.env, makeCtx(), { method, headers: rng === undefined ? {} : { range: rng } }).then((res) => ({ res, seen: m.seen }));
 };
 const bytesOf = async (res: Response) => new Uint8Array(await res.arrayBuffer());
@@ -304,6 +304,14 @@ await t('D4 media: HEAD with a Range -> 206 headers, no body', async () => {
   assert.equal(res.status, 206); mediaHeaders(res);
   assert.equal(res.headers.get('content-range'), 'bytes 0-1/1000'); assert.equal(res.headers.get('content-length'), '2');
   assert.equal((await bytesOf(res)).length, 0);
+});
+// workerd streams assets without a Content-Length, so the size has to come from the body itself
+await t('D4 media: an asset response without Content-Length still gets 200 / 206 / 416 / HEAD right', async () => {
+  const full = (await getMedia(undefined, 'GET', '/media/clip.mp4', false)).res; assert.equal(full.status, 200); assert.equal(full.headers.get('content-length'), '1000'); sameBytes(await bytesOf(full), 0, 999);
+  const part = (await getMedia('bytes=-5', 'GET', '/media/clip.mp4', false)).res; assert.equal(part.status, 206); assert.equal(part.headers.get('content-range'), 'bytes 995-999/1000'); sameBytes(await bytesOf(part), 995, 999);
+  const bad = (await getMedia('bytes=1000-', 'GET', '/media/clip.mp4', false)).res; assert.equal(bad.status, 416); assert.equal(bad.headers.get('content-range'), 'bytes */1000');
+  const head = (await getMedia(undefined, 'HEAD', '/media/clip.mp4', false)).res; assert.equal(head.status, 200); assert.equal(head.headers.get('content-length'), '1000'); assert.equal((await bytesOf(head)).length, 0);
+  const headR = (await getMedia('bytes=0-1', 'HEAD', '/media/clip.mp4', false)).res; assert.equal(headR.status, 206); assert.equal(headR.headers.get('content-length'), '2');
 });
 await t('D4 media: a path outside /media/ is untouched (Range forwarded, no media headers)', async () => {
   for (const p of ['/favicon.svg', '/media', '/mediafile.mp4', '/riv/hero-grid.riv']) {

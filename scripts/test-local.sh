@@ -5,7 +5,7 @@
 set -u
 cd "$(dirname "$0")/.."
 W="npx --yes wrangler@4.123.0"
-PORT=8791; B="http://localhost:$PORT"; LOG=$(mktemp); PASS=0; FAIL=0; PID=
+PORT=${PORT:-8791}; B="http://localhost:$PORT"; LOG=$(mktemp); PASS=0; FAIL=0; PID=
 CODE_SHIPPED=7PyUClpHZH-lavGlXGRVg
 # The local workerd in this wrangler is older than the deployed compatibility date, so local runs pin an
 # older date. Assets: a copy of dist without the ~14k per-bot files, which only slow the local server down.

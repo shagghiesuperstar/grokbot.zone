@@ -42,19 +42,20 @@ export async function serveMedia(request: Request, assets: Assets, url: URL): Pr
   let bytes: Uint8Array | null = null;
   if (!Number.isFinite(size) || res.headers.get('content-length') === null) { bytes = new Uint8Array(await res.arrayBuffer()); size = bytes.length; }
 
+  const drop = () => (bytes ? undefined : res.body?.cancel()); // a body already read into `bytes` cannot be cancelled
   const range = parseRange(request.headers.get('range'), size);
   if (range === 'unsatisfiable') {
-    await res.body?.cancel();
+    await drop();
     return new Response(null, { status: 416, headers: { ...base, 'Content-Range': `bytes */${size}`, 'Content-Length': '0' } });
   }
   if (!range) {
     const headers = { ...base, 'Content-Length': String(size) };
-    if (head) { await res.body?.cancel(); return new Response(null, { status: 200, headers }); }
+    if (head) { await drop(); return new Response(null, { status: 200, headers }); }
     return new Response(bytes ?? res.body, { status: 200, headers });
   }
   const length = range.end - range.start + 1;
   const headers = { ...base, 'Content-Range': `bytes ${range.start}-${range.end}/${size}`, 'Content-Length': String(length) };
-  if (head) { await res.body?.cancel(); return new Response(null, { status: 206, headers }); }
+  if (head) { await drop(); return new Response(null, { status: 206, headers }); }
   bytes ??= new Uint8Array(await res.arrayBuffer());
   return new Response(bytes.subarray(range.start, range.end + 1), { status: 206, headers });
 }

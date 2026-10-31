@@ -49,7 +49,7 @@ const ld = jsonLd.map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
     <Footer />
     <script is:inline type="module">
       // Background video: starts after load, zooms 1.00 -> 1.50 over the first 3000px of scroll.
-      // Reduced motion or Save-Data: poster only, no src, no zoom.
+      // Reduced motion or Save-Data: poster only, no src, no zoom. A refused play() (Low Power Mode) keeps the poster until the first tap.
       const box = document.getElementById('bg-video');
       const video = box.firstElementChild;
       const reduce = matchMedia('(prefers-reduced-motion: reduce)');
@@ -59,6 +59,8 @@ const ld = jsonLd.map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
         frame = 0;
         box.style.transform = still() ? '' : `scale(${1 + 0.5 * Math.min(scrollY / 3000, 1)})`;
       };
+      const GESTURES = ['pointerup', 'touchend', 'keydown', 'click'];
+      const retry = () => { for (const g of GESTURES) removeEventListener(g, retry); start(); };
       const start = () => {
         if (started || still()) return;
         started = true;
@@ -66,6 +68,7 @@ const ld = jsonLd.map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
         video.play()?.catch((e) => {
           if (e.name !== 'NotAllowedError') return; // Low Power Mode: leave the poster
           video.removeAttribute('src'); video.load(); started = false;
+          for (const g of GESTURES) addEventListener(g, retry, { passive: true }); // first tap or key: try once more
         });
       };
       const stop = () => { video.pause(); video.removeAttribute('src'); video.load(); started = false; };

@@ -12,7 +12,7 @@ import { meta, allCategories } from '../lib/data';
     <ol>
       <li><strong>Make the bot public.</strong> A bot can only be listed if it has a public link on the Grok platform. It looks like <code>https://x.ai/bot/&lt;code&gt;</code>.</li>
       <li><strong>Check it is not already here.</strong> <a href="/bots/">Search</a> for its name or your name as author.</li>
-      <li><strong>Send us the link.</strong> Use the form below, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description. To correct a name, author or description, <a href="https://github.com/shagghiesuperstar/grokbot.zone/issues" rel="noopener">open an issue on the project's GitHub page</a>.</li>
+      <li><strong>Send us the link.</strong> Use the form below<span data-needs-email hidden>, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description</span>. To correct a name, author or description, <a href="https://github.com/shagghiesuperstar/grokbot.zone/issues" rel="noopener">open an issue on the project's GitHub page</a>.</li>
       <li><strong>Wait for the next refresh.</strong> Added bots show up when we refresh the list, which is about weekly. The current snapshot is <time datetime={meta.asOf}>{meta.asOf}</time>.</li>
     </ol>
     <section class="panel formbox" aria-labelledby="form-h">
@@ -28,7 +28,7 @@ import { meta, allCategories } from '../lib/data';
         <button type="submit" class="btn">Send for review</button>
         <p id="form-status" role="status" class="muted"></p>
       </form>
-      <p id="form-closed" class="muted">Submissions by email open soon — meanwhile open a GitHub issue.</p>
+      <p id="form-closed" class="muted">Submissions are not open yet. Meanwhile, open an issue on the project's GitHub page.</p>
     </section>
     <p class="muted">We list and link. We never run, host or copy a bot, and listing is free.</p>
   </div>
@@ -40,8 +40,10 @@ import { meta, allCategories } from '../lib/data';
     if (!form) return;
     var shown = Date.now();
     var status = document.getElementById('form-status');
+    // The mailbox is only advertised while /api/flags says it is open; the markup ships hidden.
     fetch('/api/flags').then(function (r) { return r.json(); }).then(function (h) {
       if (h && h.form) { form.hidden = false; closed.hidden = true; }
+      if (h && h.email) document.querySelectorAll('[data-needs-email]').forEach(function (el) { el.hidden = false; });
     }).catch(function () {});
     form.addEventListener('submit', function (e) {
       e.preventDefault();

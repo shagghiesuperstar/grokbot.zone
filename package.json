@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "check:contrast": "tsx scripts/contrast.ts",
     "test:submissions": "tsx scripts/test-submissions.ts",
+    "test:worker": "tsx scripts/test-worker.ts",
     "submissions:pull": "tsx scripts/submissions-pull.ts",
     "check:counts": "tsx scripts/assert-counts.ts",
     "deploy": "npx --yes wrangler@4.123.0 deploy --config wrangler.toml"

@@ -22,7 +22,12 @@ start() { # extra wrangler args...
   for _ in $(seq 1 60); do curl -s -o /dev/null "$B/api/flags" && return 0; sleep 1; done
   echo "wrangler dev did not start"; cat "$LOG"; exit 1
 }
-stop() { [[ -n "$PID" ]] && kill "$PID" 2>/dev/null; sleep 1; pkill -f "wrangler-dist/cli.js dev --port $PORT" 2>/dev/null; sleep 1; PID=; }
+# npx forks wrangler, so $PID is only the launcher: also stop whatever still LISTENS on our port.
+stop() {
+  [[ -n "$PID" ]] && kill "$PID" 2>/dev/null; sleep 1
+  local l; for l in $(lsof -ti "tcp:$PORT" -sTCP:LISTEN 2>/dev/null); do kill "$l" 2>/dev/null; done; sleep 1
+  PID=
+}
 trap stop EXIT
 sql() { $W d1 execute grokbot-zone --local --json --command "$1" 2>/dev/null | python3 -c 'import json,sys; r=json.load(sys.stdin)[0]["results"]; print(json.dumps(r,separators=(",",":")))'; }
 reset_db() { $W d1 execute grokbot-zone --local --command "DELETE FROM submissions; DELETE FROM subscribers; DELETE FROM send_log; DELETE FROM sqlite_sequence;" >/dev/null 2>&1; }
@@ -37,6 +42,11 @@ mail() { # to from subject body [extra headers]
 email() { # raw -> http status of the local email endpoint
   curl -s -m 30 -o /tmp/gz-email-out -w '%{http_code}' -X POST "$B/cdn-cgi/handler/email" --url-query "from=$2" --url-query "to=$1" --data-binary "$3"
 }
+
+echo "--- phase 0: Worker harness (no wrangler, no network)"
+if pnpm exec tsx scripts/test-worker.ts 2>&1 | grep -v -e ExperimentalWarning -e trace-warnings | tee /tmp/gz-test-worker-out | tail -3 | grep -q '^test-worker: [0-9]* passed$'; then
+  PASS=$((PASS+$(sed -n 's/^test-worker: \([0-9]*\) passed$/\1/p' /tmp/gz-test-worker-out))); echo "test-worker ok"
+else FAIL=$((FAIL+1)); grep FAIL /tmp/gz-test-worker-out; fi
 
 printf '%-62s %-10s %-10s %s\n' CASE EXPECT GOT RESULT
 echo "--- phase 1: every switch dark (the shipped config)"
@@ -57,6 +67,25 @@ check "static: /api/v1/index.json 200" 200 "$(curl -s -o /dev/null -w '%{http_co
 check "static: /trending/ 200" 200 "$(curl -s -o /dev/null -w '%{http_code}' $B/trending/)"
 check "static: /feed.json 200" 200 "$(curl -s -o /dev/null -w '%{http_code}' $B/feed.json)"
 check "security header on asset" nosniff "$(curl -sI $B/ | tr -d '\r' | awk -F': ' 'tolower($1)=="x-content-type-options"{print $2}')"
+# A reader can always leave: unsubscribe works with SUBSCRIBE_ENABLED=0 (CAN-SPAM, RFC 8058). Confirm and subscribe stay 503 (above).
+D1T=$(printf 'd%.0s' $(seq 1 32)); D2T=$(printf 'e%.0s' $(seq 1 32))
+$W d1 execute grokbot-zone --local --command "INSERT INTO subscribers (email,status,confirm_token,unsub_token) VALUES ('dark-reader@example.test','active','$(printf 'a%.0s' $(seq 1 32))','$D1T'),('dark-two@example.test','active','$(printf 'b%.0s' $(seq 1 32))','$D2T')" >/dev/null 2>&1
+BOGUS=$(printf 'f%.0s' $(seq 1 32))
+check "dark: GET unsubscribe bogus token -> 410" 410 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/unsubscribe?t=$BOGUS")"
+check "dark: POST unsubscribe bogus token -> 410" 410 "$(curl -s -o /dev/null -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$BOGUS" -d 'List-Unsubscribe=One-Click')"
+check "dark: bogus token reveals no row data" 0 "$(curl -s "$B/subscribe/unsubscribe?t=$BOGUS" | grep -c 'example.test')"
+check "dark: rows untouched by bogus tokens" '[{"n":2}]' "$(sql "SELECT COUNT(*) AS n FROM subscribers WHERE status='active'")"
+check "dark: GET unsubscribe valid token -> 200" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' "$B/subscribe/unsubscribe?t=$D1T")"
+check "dark: response never echoes an email address" 0 "$(grep -c '@' /tmp/gz-unsub-out)"
+check "dark: valid token flipped the row" '[{"status":"unsubscribed"}]' "$(sql "SELECT status FROM subscribers WHERE unsub_token='$D1T'")"
+check "dark: POST one-click valid token -> 200" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$D2T" -d 'List-Unsubscribe=One-Click')"
+check "dark: one-click response has no email address" 0 "$(grep -c '@' /tmp/gz-unsub-out)"
+check "dark: one-click flipped the row" '[{"status":"unsubscribed"}]' "$(sql "SELECT status FROM subscribers WHERE unsub_token='$D2T'")"
+check "dark: each flip wrote a send_log row of kind unsubscribe" '[{"kind":"unsubscribe","ok":1},{"kind":"unsubscribe","ok":1}]' "$(sql "SELECT kind, ok FROM send_log ORDER BY id")"
+check "dark: repeat click does not log again" 200 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/unsubscribe?t=$D1T")"
+check "dark: still two unsubscribe log rows" '[{"n":2}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='unsubscribe'")"
+check "dark: confirm still 503 after the flips" 503 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/confirm?t=$BOGUS")"
+check "dark: subscribe still 503 after the flips" 503 "$(status "$(post /subscribe 10.0.0.2 '{"email":"b@example.test"}')")"
 stop
 
 echo "--- phase 2: switches flipped LOCALLY (command line only)"

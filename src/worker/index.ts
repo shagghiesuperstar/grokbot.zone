@@ -92,9 +92,17 @@ async function sendMail(env: Env, via: Mailer | undefined, kind: Kind, msg: { to
   }
 }
 
-async function limited(rl: Limiter | undefined, key: string): Promise<boolean> {
-  if (!rl) return false;
-  try { return !(await rl.limit({ key })).success; } catch { return false; }
+/** Write routes fail CLOSED: a missing or broken limiter must never mean "no limit". */
+async function gate(rl: Limiter | undefined, key: string): Promise<'ok' | 'limited' | 'unavailable'> {
+  if (!rl) return 'unavailable';
+  try { return (await rl.limit({ key })).success ? 'ok' : 'limited'; } catch { return 'unavailable'; }
+}
+const unavailable = () => json(503, { ok: false, error: 'unavailable' });
+/** The response that stops a write request at the limiter, or null to let it through. */
+async function writeGate(rl: Limiter | undefined, key: string): Promise<Response | null> {
+  const g = await gate(rl, key);
+  if (g === 'unavailable') return unavailable();
+  return g === 'limited' ? json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' }) : null;
 }
 const clientIp = (req: Request) => req.headers.get('cf-connecting-ip') ?? 'unknown';
 const isJson = (req: Request) => (req.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json');
@@ -123,7 +131,8 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
   const ip = clientIp(req);
-  if (await limited(env.SUBMISSIONS_RL, `${ip}:submit`)) return json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' });
+  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  if (stop) return stop;
   const body = await readJson(req);
   if (body === undefined) return json(400, { ok: false, errors: { body: 'invalid JSON' } });
   const v = validateSubmission(body, CATEGORY_SLUGS, Number(env.MIN_FILL_MS ?? '3000'));
@@ -135,8 +144,10 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   let id: number;
   if (existing && existing.status !== 'rejected') return json(409, { ok: false, error: 'already_pending' });
   if (existing) {
-    await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=?")
+    // One conditional statement: a row approved since the SELECT above is left alone.
+    const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=? AND status='rejected'")
       .bind(s.name, s.author, s.description, s.code, s.category, s.email, ip, existing.id).run();
+    if (!r.meta.changes) return json(409, { ok: false, error: 'already_pending' });
     id = existing.id;
   } else {
     const r = await env.DB.prepare("INSERT INTO submissions (source, name, author, description, code, link, category, submitter_email, ip) VALUES ('webform', ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(link) DO NOTHING")
@@ -165,7 +176,8 @@ async function subscribe(req: Request, env: Env, ctx: ExecutionContext): Promise
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
-  if (await limited(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`)) return json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' });
+  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  if (stop) return stop;
   const body = (await readJson(req)) as { email?: unknown; company_website?: unknown } | undefined;
   if (!body || typeof body !== 'object') return json(400, { ok: false, errors: { body: 'invalid JSON' } });
   const errors: Record<string, string> = {};
@@ -209,14 +221,15 @@ async function confirm(req: Request, env: Env, url: URL): Promise<Response> {
 async function unsubscribe(req: Request, env: Env, url: URL): Promise<Response> {
   if (!env.DB) return disabled();
   const t = tokenOf(url);
-  const row = t ? await env.DB.prepare('SELECT id, status FROM subscribers WHERE unsub_token = ?').bind(t).first<{ id: number; status: string }>() : null;
+  const row = t ? await env.DB.prepare('SELECT id, status, email FROM subscribers WHERE unsub_token = ?').bind(t).first<{ id: number; status: string; email: string }>() : null;
   if (!row) return req.method === 'POST' ? json(410, { ok: false, error: 'bad_token' }) : badToken(req);
   if (req.method === 'POST') {
     const body = await req.text();
     if (!/List-Unsubscribe=One-Click/.test(body)) return json(400, { ok: false, error: 'expected List-Unsubscribe=One-Click' });
   }
   if (row.status === 'pending' || row.status === 'active') {
-    await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=strftime('%Y-%m-%dT%H:%M:%SZ','now') WHERE id=?").bind(row.id).run();
+    const r = await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=strftime('%Y-%m-%dT%H:%M:%SZ','now') WHERE id=? AND status IN ('pending','active')").bind(row.id).run();
+    if (r.meta.changes) await logSend(env, 'unsubscribe', row.email, null, true, null); // audit row; nothing is sent
   }
   if (req.method === 'POST') return new Response('Unsubscribed.', { status: 200, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
   return page(200, 'You are unsubscribed', 'You will not get any more update emails.', wantsText(req));
@@ -230,6 +243,10 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
   const auth = (message.headers.get('authentication-results') ?? '').trim();
   if (/^mx\.cloudflare\.net\b/i.test(auth) && /dmarc=fail/i.test(auth)) { message.setReject('dmarc'); return; }
   if (!env.DB) { message.setReject('submissions closed'); return; }
+  // Per envelope sender, before anything is parsed or written. Same binding as the form (5 per 60 s, keyed apart).
+  const sender = message.from.trim().toLowerCase();
+  const stop = await gate(env.SUBMISSIONS_RL, `${sender}:email`);
+  if (stop !== 'ok') { message.setReject(stop === 'limited' ? 'rate limited' : 'temporarily unavailable'); return; }
 
   const parsed = await new (PostalMime as unknown as new () => { parse(b: ArrayBuffer): Promise<{ subject?: string; text?: string; html?: string }> })()
     .parse(await new Response(message.raw).arrayBuffer());
@@ -251,8 +268,9 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
     if (existing && existing.status !== 'rejected') { skipped.push(code); continue; }
     let id: number;
     if (existing) {
-      await env.DB.prepare("UPDATE submissions SET status='pending', source='email', name=?, description=?, code=?, submitter_email=?, raw_excerpt=? WHERE id=?")
+      const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='email', name=?, description=?, code=?, submitter_email=?, raw_excerpt=? WHERE id=? AND status='rejected'")
         .bind(name, desc, code, message.from, excerpt, existing.id).run();
+      if (!r.meta.changes) { skipped.push(code); continue; }
       id = existing.id;
     } else {
       const r = await env.DB.prepare("INSERT INTO submissions (source, name, description, code, link, submitter_email, raw_excerpt) VALUES ('email', ?, ?, ?, ?, ?, ?) ON CONFLICT(link) DO NOTHING")

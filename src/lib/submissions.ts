@@ -16,7 +16,14 @@ export interface ValidSubmission {
 }
 export type Validation = { ok: true; value: ValidSubmission } | { ok: false; errors: Record<string, string> };
 
+/** Every control character (C0, DEL, C1) plus the Unicode line and paragraph separators. */
+const CONTROL_RUN = /[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g;
+/** One line: each run of control characters (CR, LF, tab, NUL...) becomes a single space, then the ends are trimmed. */
+export const singleLine = (s: string) => s.replace(CONTROL_RUN, ' ').trim();
+
 const str = (v: unknown) => (typeof v === 'string' ? v.trim() : undefined);
+/** Free text that ends up in a mail body: collapsed to one line before any length rule is applied. */
+const line = (v: unknown) => (typeof v === 'string' ? singleLine(v) : undefined);
 
 export function isEmail(v: unknown): v is string {
   return typeof v === 'string' && v.length <= 254 && EMAIL_RE.test(v);
@@ -40,11 +47,11 @@ export function parseBotLink(link: string): { link: string; code: string } | nul
 export function validateSubmission(body: unknown, categorySlugs: ReadonlySet<string>, minFillMs: number): Validation {
   const b = (body && typeof body === 'object' ? body : {}) as SubmissionInput;
   const errors: Record<string, string> = {};
-  const name = str(b.name);
+  const name = line(b.name);
   if (!name || name.length < 3 || name.length > 120) errors.name = 'required, 3-120 characters';
-  const author = b.author === undefined || b.author === null || b.author === '' ? null : str(b.author);
+  const author = b.author === undefined || b.author === null || b.author === '' ? null : line(b.author);
   if (author !== null && (author === undefined || author.length > 80)) errors.author = 'at most 80 characters';
-  const description = str(b.description);
+  const description = line(b.description);
   if (!description || description.length < 10 || description.length > 500) errors.description = 'required, 10-500 characters';
   const linkRaw = str(b.link);
   const parsed = linkRaw ? parseBotLink(linkRaw) : null;
@@ -90,14 +97,14 @@ export const isOn = (v: unknown) => v === '1';
 /** First non-empty line of a body that is not just a bot link, capped at 500 characters. */
 export function firstDescriptionLine(text: string | undefined | null): string {
   for (const raw of (text ?? '').split(/\r?\n/)) {
-    const line = raw.replace(BOT_LINK_SCAN, '').replace(/\s+/g, ' ').trim();
-    if (line.length >= 3 && !line.startsWith('>')) return line.slice(0, 500);
+    const text = singleLine(raw.replace(BOT_LINK_SCAN, '').replace(/\s+/g, ' '));
+    if (text.length >= 3 && !text.startsWith('>')) return text.slice(0, 500);
   }
   return '(no description supplied)';
 }
 
 /** Header-safe single line. */
-export const oneLine = (s: string) => s.replace(/[\r\n]+/g, ' ').trim();
+export const oneLine = singleLine;
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export const htmlNote = (text: string) => `<p>${esc(text).replace(/\n/g, '<br>')}</p>`;
@@ -110,10 +117,21 @@ export function ackText(name: string, link: string): string {
   return `Hi — we got "${name}" (${link}).\nIt is queued for review. If it is approved it appears with the next refresh;\nthe list updates twice a week, Monday and Thursday.\n— GrokBot Zone · ${SITE}/trending/`;
 }
 
+/**
+ * The owner mail. The approve: command goes first and every submitted field is collapsed to one line
+ * under an "untrusted" heading, so submitted text can never add a second approve: line.
+ */
 export function ownerSummary(r: { id: number; name: string; author: string | null; category: string | null; link: string; submitter: string; ip: string; description: string; source: string }) {
+  const f = (label: string, v: string | null) => `${label}: ${v === null ? '—' : singleLine(v)}`;
   return {
     subject: oneLine(`[GZ] new submission #${r.id} — ${r.name} (${r.source})`),
-    text: `name: ${r.name} | author: ${r.author ?? '—'} | category: ${r.category ?? '—'}\nlink: ${r.link} | submitter: ${r.submitter} | ip: ${r.ip}\ndesc: ${r.description}\napprove:  ${approveSql(r.id)}`,
+    text: [
+      `approve:  ${approveSql(r.id)}`,
+      '',
+      'Submitted fields (untrusted):',
+      f('name', r.name), f('author', r.author), f('category', r.category), f('link', r.link),
+      f('submitter', r.submitter), f('ip', r.ip), f('source', r.source), f('description', r.description),
+    ].join('\n'),
   };
 }
 

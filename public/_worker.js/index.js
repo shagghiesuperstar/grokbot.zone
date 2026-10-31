@@ -546,18 +546,18 @@ var PassThroughDecoder = class {
     }
     this.runBuffer = null;
   }
-  update(line, lineBreak) {
+  update(line2, lineBreak) {
     const pending = this.pendingLineBreak;
-    if (pending && this.continuesRun(pending) && line.buffer === this.runBuffer && line.byteOffset === this.runEnd + pending.byteLength) {
-      this.runEnd = line.byteOffset + line.byteLength;
+    if (pending && this.continuesRun(pending) && line2.buffer === this.runBuffer && line2.byteOffset === this.runEnd + pending.byteLength) {
+      this.runEnd = line2.byteOffset + line2.byteLength;
     } else {
       this.flushRun();
       if (pending) {
         this.chunks.push(pending);
       }
-      this.runBuffer = line.buffer;
-      this.runStart = line.byteOffset;
-      this.runEnd = line.byteOffset + line.byteLength;
+      this.runBuffer = line2.buffer;
+      this.runStart = line2.byteOffset;
+      this.runEnd = line2.byteOffset + line2.byteLength;
     }
     this.pendingLineBreak = lineBreak;
   }
@@ -690,32 +690,32 @@ var QPDecoder = class {
   // As in PassThroughDecoder, a hard line break is only written once the next line
   // arrives, so the CRLF that belongs to a following boundary is not decoded as content,
   // and the break written is the one the line came with.
-  update(line, lineBreak) {
+  update(line2, lineBreak) {
     this.writeLineBreak();
-    let len = line.length;
-    while (len > 0 && isWsp(line[len - 1])) {
+    let len = line2.length;
+    while (len > 0 && isWsp(line2[len - 1])) {
       len--;
     }
-    const softBreak = len > 0 && line[len - 1] === CHR_EQUALS;
+    const softBreak = len > 0 && line2[len - 1] === CHR_EQUALS;
     if (softBreak) {
       len--;
     }
     let literalStart = 0;
     for (let i = 0; i < len; i++) {
-      if (line[i] !== CHR_EQUALS || i + 2 >= len) {
+      if (line2[i] !== CHR_EQUALS || i + 2 >= len) {
         continue;
       }
-      const high = hexNibble(line[i + 1]);
-      const low = hexNibble(line[i + 2]);
+      const high = hexNibble(line2[i + 1]);
+      const low = hexNibble(line2[i + 2]);
       if (high < 0 || low < 0) {
         continue;
       }
-      this.output.writeBytes(line, literalStart, i);
+      this.output.writeBytes(line2, literalStart, i);
       this.output.writeByte(high << 4 | low);
       i += 2;
       literalStart = i + 1;
     }
-    this.output.writeBytes(line, literalStart, len);
+    this.output.writeBytes(line2, literalStart, len);
     this.pendingLineBreak = softBreak ? null : lineBreak;
   }
   // see PassThroughDecoder.finalize
@@ -1055,13 +1055,13 @@ var MimeNode = class {
       if (lineEnd < 0) {
         lineEnd = str2.length;
       }
-      const line = str2.slice(lineStart, lineEnd);
+      const line2 = str2.slice(lineStart, lineEnd);
       let quoteDepth = 0;
-      while (line.charCodeAt(quoteDepth) === 62) {
+      while (line2.charCodeAt(quoteDepth) === 62) {
         quoteDepth++;
       }
-      const contentStart = line.charCodeAt(quoteDepth) === 32 ? quoteDepth + 1 : quoteDepth;
-      const content = line.slice(contentStart);
+      const contentStart = line2.charCodeAt(quoteDepth) === 32 ? quoteDepth + 1 : quoteDepth;
+      const content = line2.slice(contentStart);
       const isSignature = content === "-- ";
       if (flowed && quoteDepth === depth && !isSignature) {
         if (delSp) {
@@ -1073,7 +1073,7 @@ var MimeNode = class {
         if (lineStart) {
           parts.push("\n");
         }
-        parts.push(quoteDepth ? line : content);
+        parts.push(quoteDepth ? line2 : content);
       }
       flowed = !isSignature && content.endsWith(" ");
       depth = quoteDepth;
@@ -1099,11 +1099,11 @@ var MimeNode = class {
   }
   processHeaders() {
     let foldedLines = [];
-    for (let line of this.headerLines) {
-      if (foldedLines.length && /^[ \t]/.test(line)) {
-        foldedLines[foldedLines.length - 1].push(line);
+    for (let line2 of this.headerLines) {
+      if (foldedLines.length && /^[ \t]/.test(line2)) {
+        foldedLines[foldedLines.length - 1].push(line2);
       } else {
-        foldedLines.push([line]);
+        foldedLines.push([line2]);
       }
     }
     let seenContentHeaders = /* @__PURE__ */ new Set();
@@ -1176,20 +1176,20 @@ var MimeNode = class {
   // Returns true when the line was not consumed: the headers ended with the line before
   // it, and the parser has to read it again, since the boundary this part declares was
   // not known yet when the line was checked for one
-  feed(line, lineBreak) {
+  feed(line2, lineBreak) {
     switch (this.state) {
       case "header": {
-        if (!line.length) {
+        if (!line2.length) {
           this.endHeaders();
           return false;
         }
-        this.postalMime.counters.headerSize += Math.max(line.length, HEADER_LINE_MIN_COST);
+        this.postalMime.counters.headerSize += Math.max(line2.length, HEADER_LINE_MIN_COST);
         const maxHeadersSize = this.postalMime.limits.maxHeadersSize;
         if (this.postalMime.counters.headerSize > maxHeadersSize) {
           throw createError("EMAXHEADERSIZE", `Maximum header size of ${maxHeadersSize} bytes exceeded`);
         }
-        const text = decodeUtf8OrWindows1252(line, headerDecoder);
-        if (!isWsp(line[0]) && !FIELD_START.test(text)) {
+        const text = decodeUtf8OrWindows1252(line2, headerDecoder);
+        if (!isWsp(line2[0]) && !FIELD_START.test(text)) {
           this.endHeaders();
           return true;
         }
@@ -1198,7 +1198,7 @@ var MimeNode = class {
       }
       case "body":
         if (this.contentDecoder) {
-          this.contentDecoder.update(line, lineBreak);
+          this.contentDecoder.update(line2, lineBreak);
         }
         break;
     }
@@ -3701,25 +3701,25 @@ function formatHtmlAddresses(addresses) {
 function foldLines(str2, lineLength, afterSpace) {
   str2 = (str2 || "").toString();
   lineLength = lineLength || 76;
-  let pos = 0, len = str2.length, result = "", line, match2;
+  let pos = 0, len = str2.length, result = "", line2, match2;
   while (pos < len) {
-    line = str2.slice(pos, pos + lineLength);
-    if (line.length < lineLength) {
-      result += line;
+    line2 = str2.slice(pos, pos + lineLength);
+    if (line2.length < lineLength) {
+      result += line2;
       break;
     }
-    if (match2 = line.match(/^[^\n\r]*(\r?\n|\r)/)) {
-      line = match2[0];
-      result += line;
-      pos += line.length;
+    if (match2 = line2.match(/^[^\n\r]*(\r?\n|\r)/)) {
+      line2 = match2[0];
+      result += line2;
+      pos += line2.length;
       continue;
-    } else if ((match2 = line.match(/(\s+)[^\s]*$/)) && match2[0].length - (afterSpace ? (match2[1] || "").length : 0) < line.length) {
-      line = line.slice(0, line.length - (match2[0].length - (afterSpace ? (match2[1] || "").length : 0)));
-    } else if (match2 = str2.slice(pos + line.length).match(/^[^\s]+(\s*)/)) {
-      line = line + match2[0].slice(0, match2[0].length - (!afterSpace ? (match2[1] || "").length : 0));
+    } else if ((match2 = line2.match(/(\s+)[^\s]*$/)) && match2[0].length - (afterSpace ? (match2[1] || "").length : 0) < line2.length) {
+      line2 = line2.slice(0, line2.length - (match2[0].length - (afterSpace ? (match2[1] || "").length : 0)));
+    } else if (match2 = str2.slice(pos + line2.length).match(/^[^\s]+(\s*)/)) {
+      line2 = line2 + match2[0].slice(0, match2[0].length - (!afterSpace ? (match2[1] || "").length : 0));
     }
-    result += line;
-    pos += line.length;
+    result += line2;
+    pos += line2.length;
     if (pos < len) {
       result += "\r\n";
     }
@@ -3753,8 +3753,8 @@ function formatTextHeader(message) {
     let sepLen = maxKeyLength - row.key.length;
     let prefix = `${row.key}: ${" ".repeat(sepLen)}`;
     let emptyPrefix = `${" ".repeat(row.key.length + 1)} ${" ".repeat(sepLen)}`;
-    let foldedLines = foldLines(row.val, 80, true).split(/\r?\n/).map((line) => line.trim());
-    return foldedLines.map((line, i) => `${i ? emptyPrefix : prefix}${line}`);
+    let foldedLines = foldLines(row.val, 80, true).split(/\r?\n/).map((line2) => line2.trim());
+    return foldedLines.map((line2, i) => `${i ? emptyPrefix : prefix}${line2}`);
   });
   let maxLineLength = lines.map((r) => r.length).reduce((acc, cur) => {
     return cur > acc ? cur : acc;
@@ -4829,17 +4829,17 @@ var PostalMime = class _PostalMime {
     await this.root.finalize();
   }
   /** @internal */
-  async processLine(line, lineBreak, isFinal) {
+  async processLine(line2, lineBreak, isFinal) {
     let boundaries = this.boundaries;
-    if (boundaries.length && line.length > 2 && line[0] === 45 && line[1] === 45) {
+    if (boundaries.length && line2.length > 2 && line2[0] === 45 && line2[1] === 45) {
       for (let i = 0; i < boundaries.length; i++) {
         let boundary = boundaries[i];
-        if (line.length < boundary.value.length + 2) {
+        if (line2.length < boundary.value.length + 2) {
           continue;
         }
         let boundaryMatches = true;
         for (let j = 0; j < boundary.value.length; j++) {
-          if (line[j + 2] !== boundary.value[j]) {
+          if (line2[j + 2] !== boundary.value[j]) {
             boundaryMatches = false;
             break;
           }
@@ -4849,13 +4849,13 @@ var PostalMime = class _PostalMime {
         }
         let boundaryEnd = boundary.value.length + 2;
         let isTerminator = false;
-        if (line.length >= boundary.value.length + 4 && line[boundary.value.length + 2] === 45 && line[boundary.value.length + 3] === 45) {
+        if (line2.length >= boundary.value.length + 4 && line2[boundary.value.length + 2] === 45 && line2[boundary.value.length + 3] === 45) {
           isTerminator = true;
           boundaryEnd = boundary.value.length + 4;
         }
         let hasValidTrailing = true;
-        for (let j = boundaryEnd; j < line.length; j++) {
-          if (!isWsp(line[j])) {
+        for (let j = boundaryEnd; j < line2.length; j++) {
+          if (!isWsp(line2[j])) {
             hasValidTrailing = false;
             break;
           }
@@ -4880,8 +4880,8 @@ var PostalMime = class _PostalMime {
         return;
       }
     }
-    if (this.currentNode.feed(line, lineBreak)) {
-      return this.processLine(line, lineBreak, isFinal);
+    if (this.currentNode.feed(line2, lineBreak)) {
+      return this.processLine(line2, lineBreak, isFinal);
     }
     if (isFinal) {
       return this.finalize();
@@ -5151,7 +5151,7 @@ var PostalMime = class _PostalMime {
       }))
     };
     for (const key of ["from", "sender"]) {
-      const addressHeader = headers.find((line) => line.key === key);
+      const addressHeader = headers.find((line2) => line2.key === key);
       if (addressHeader && addressHeader.value) {
         const addresses = address_parser_default(addressHeader.value);
         if (addresses && addresses.length) {
@@ -5163,7 +5163,7 @@ var PostalMime = class _PostalMime {
       ["delivered-to", "deliveredTo"],
       ["return-path", "returnPath"]
     ]) {
-      const addressHeader = headers.find((line) => line.key === key);
+      const addressHeader = headers.find((line2) => line2.key === key);
       if (addressHeader && addressHeader.value) {
         const addresses = address_parser_default(addressHeader.value);
         if (addresses && addresses.length && addresses[0].address) {
@@ -5195,12 +5195,12 @@ var PostalMime = class _PostalMime {
       ["in-reply-to", "inReplyTo"],
       ["references", "references"]
     ]) {
-      const header = headers.find((line) => line.key === key);
+      const header = headers.find((line2) => line2.key === key);
       if (header && header.value) {
         message[camelKey] = decodeWords(header.value);
       }
     }
-    let dateHeader = headers.find((line) => line.key === "date");
+    let dateHeader = headers.find((line2) => line2.key === "date");
     if (dateHeader) {
       let date = new Date(dateHeader.value);
       message.date = date.toString() === "Invalid Date" ? dateHeader.value : date.toISOString();
@@ -5262,8 +5262,8 @@ var PostalMime = class _PostalMime {
     this.av = new Uint8Array(this.buf);
     this.readPos = 0;
     while (this.readPos < this.av.length) {
-      const line = this.readLine();
-      await this.processLine(line.bytes, line.lineBreak, line.done);
+      const line2 = this.readLine();
+      await this.processLine(line2.bytes, line2.lineBreak, line2.done);
     }
     this.forceRfc822Attachments = Boolean(this.options.forceRfc822Attachments) || this.hasReportParts();
     await this.collectNode(this.root, false, false);
@@ -5466,7 +5466,10 @@ var categories_default = [
 var BOT_LINK_RE = /^https:\/\/x\.ai\/bot\/([A-Za-z0-9_-]{4,64})$/i;
 var BOT_LINK_SCAN = /https:\/\/x\.ai\/bot\/([A-Za-z0-9_-]{4,64})(?![A-Za-z0-9_-])/gi;
 var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var CONTROL_RUN = /[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g;
+var singleLine = (s) => s.replace(CONTROL_RUN, " ").trim();
 var str = (v) => typeof v === "string" ? v.trim() : void 0;
+var line = (v) => typeof v === "string" ? singleLine(v) : void 0;
 function isEmail(v) {
   return typeof v === "string" && v.length <= 254 && EMAIL_RE.test(v);
 }
@@ -5483,11 +5486,11 @@ function parseBotLink(link) {
 function validateSubmission(body, categorySlugs, minFillMs) {
   const b = body && typeof body === "object" ? body : {};
   const errors = {};
-  const name = str(b.name);
+  const name = line(b.name);
   if (!name || name.length < 3 || name.length > 120) errors.name = "required, 3-120 characters";
-  const author = b.author === void 0 || b.author === null || b.author === "" ? null : str(b.author);
+  const author = b.author === void 0 || b.author === null || b.author === "" ? null : line(b.author);
   if (author !== null && (author === void 0 || author.length > 80)) errors.author = "at most 80 characters";
-  const description = str(b.description);
+  const description = line(b.description);
   if (!description || description.length < 10 || description.length > 500) errors.description = "required, 10-500 characters";
   const linkRaw = str(b.link);
   const parsed = linkRaw ? parseBotLink(linkRaw) : null;
@@ -5529,12 +5532,12 @@ function digestRecipientCount(active, cap) {
 var isOn = (v) => v === "1";
 function firstDescriptionLine(text) {
   for (const raw of (text ?? "").split(/\r?\n/)) {
-    const line = raw.replace(BOT_LINK_SCAN, "").replace(/\s+/g, " ").trim();
-    if (line.length >= 3 && !line.startsWith(">")) return line.slice(0, 500);
+    const text2 = singleLine(raw.replace(BOT_LINK_SCAN, "").replace(/\s+/g, " "));
+    if (text2.length >= 3 && !text2.startsWith(">")) return text2.slice(0, 500);
   }
   return "(no description supplied)";
 }
-var oneLine = (s) => s.replace(/[\r\n]+/g, " ").trim();
+var oneLine = singleLine;
 var esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 var htmlNote = (text) => `<p>${esc(text).replace(/\n/g, "<br>")}</p>`;
 var SITE = "https://grokbot.zone";
@@ -5546,12 +5549,22 @@ the list updates twice a week, Monday and Thursday.
 \u2014 GrokBot Zone \xB7 ${SITE}/trending/`;
 }
 function ownerSummary(r) {
+  const f = (label, v) => `${label}: ${v === null ? "\u2014" : singleLine(v)}`;
   return {
     subject: oneLine(`[GZ] new submission #${r.id} \u2014 ${r.name} (${r.source})`),
-    text: `name: ${r.name} | author: ${r.author ?? "\u2014"} | category: ${r.category ?? "\u2014"}
-link: ${r.link} | submitter: ${r.submitter} | ip: ${r.ip}
-desc: ${r.description}
-approve:  ${approveSql(r.id)}`
+    text: [
+      `approve:  ${approveSql(r.id)}`,
+      "",
+      "Submitted fields (untrusted):",
+      f("name", r.name),
+      f("author", r.author),
+      f("category", r.category),
+      f("link", r.link),
+      f("submitter", r.submitter),
+      f("ip", r.ip),
+      f("source", r.source),
+      f("description", r.description)
+    ].join("\n")
   };
 }
 var confirmText = (token) => `Confirm: ${SITE}/subscribe/confirm?t=${token}
@@ -5611,11 +5624,11 @@ var json = (status, body, extra = {}) => new Response(JSON.stringify(body), {
   headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...extra }
 });
 var disabled = () => json(503, { ok: false, error: "disabled" });
-function page(status, title, line, wantsText2) {
+function page(status, title, line2, wantsText2) {
   if (wantsText2) return new Response(`${title}
-${line}
+${line2}
 `, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}a{color:#00ffcc}</style></head><body><main><h1>${title}</h1><p>${line}</p><p><a href="/">Back to GrokBot Zone</a></p></main></body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}a{color:#00ffcc}</style></head><body><main><h1>${title}</h1><p>${line2}</p><p><a href="/">Back to GrokBot Zone</a></p></main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 var wantsText = (req) => {
@@ -5654,13 +5667,19 @@ async function sendMail(env, via, kind, msg) {
     return { ok: false, code };
   }
 }
-async function limited(rl, key) {
-  if (!rl) return false;
+async function gate(rl, key) {
+  if (!rl) return "unavailable";
   try {
-    return !(await rl.limit({ key })).success;
+    return (await rl.limit({ key })).success ? "ok" : "limited";
   } catch {
-    return false;
+    return "unavailable";
   }
+}
+var unavailable = () => json(503, { ok: false, error: "unavailable" });
+async function writeGate(rl, key) {
+  const g = await gate(rl, key);
+  if (g === "unavailable") return unavailable();
+  return g === "limited" ? json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" }) : null;
 }
 var clientIp = (req) => req.headers.get("cf-connecting-ip") ?? "unknown";
 var isJson = (req) => (req.headers.get("content-type") ?? "").toLowerCase().startsWith("application/json");
@@ -5688,7 +5707,8 @@ async function submit(req, env, ctx) {
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
   const ip = clientIp(req);
-  if (await limited(env.SUBMISSIONS_RL, `${ip}:submit`)) return json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
+  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  if (stop) return stop;
   const body = await readJson(req);
   if (body === void 0) return json(400, { ok: false, errors: { body: "invalid JSON" } });
   const v = validateSubmission(body, CATEGORY_SLUGS, Number(env.MIN_FILL_MS ?? "3000"));
@@ -5699,7 +5719,8 @@ async function submit(req, env, ctx) {
   let id;
   if (existing && existing.status !== "rejected") return json(409, { ok: false, error: "already_pending" });
   if (existing) {
-    await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=?").bind(s.name, s.author, s.description, s.code, s.category, s.email, ip, existing.id).run();
+    const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=? AND status='rejected'").bind(s.name, s.author, s.description, s.code, s.category, s.email, ip, existing.id).run();
+    if (!r.meta.changes) return json(409, { ok: false, error: "already_pending" });
     id = existing.id;
   } else {
     const r = await env.DB.prepare("INSERT INTO submissions (source, name, author, description, code, link, category, submitter_email, ip) VALUES ('webform', ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(link) DO NOTHING").bind(s.name, s.author, s.description, s.code, s.link, s.category, s.email, ip).run();
@@ -5725,7 +5746,8 @@ async function subscribe(req, env, ctx) {
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
-  if (await limited(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`)) return json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
+  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  if (stop) return stop;
   const body = await readJson(req);
   if (!body || typeof body !== "object") return json(400, { ok: false, errors: { body: "invalid JSON" } });
   const errors = {};
@@ -5767,14 +5789,15 @@ async function confirm(req, env, url) {
 async function unsubscribe(req, env, url) {
   if (!env.DB) return disabled();
   const t = tokenOf(url);
-  const row = t ? await env.DB.prepare("SELECT id, status FROM subscribers WHERE unsub_token = ?").bind(t).first() : null;
+  const row = t ? await env.DB.prepare("SELECT id, status, email FROM subscribers WHERE unsub_token = ?").bind(t).first() : null;
   if (!row) return req.method === "POST" ? json(410, { ok: false, error: "bad_token" }) : badToken(req);
   if (req.method === "POST") {
     const body = await req.text();
     if (!/List-Unsubscribe=One-Click/.test(body)) return json(400, { ok: false, error: "expected List-Unsubscribe=One-Click" });
   }
   if (row.status === "pending" || row.status === "active") {
-    await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=strftime('%Y-%m-%dT%H:%M:%SZ','now') WHERE id=?").bind(row.id).run();
+    const r = await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=strftime('%Y-%m-%dT%H:%M:%SZ','now') WHERE id=? AND status IN ('pending','active')").bind(row.id).run();
+    if (r.meta.changes) await logSend(env, "unsubscribe", row.email, null, true, null);
   }
   if (req.method === "POST") return new Response("Unsubscribed.", { status: 200, headers: { "Content-Type": "text/plain; charset=utf-8" } });
   return page(200, "You are unsubscribed", "You will not get any more update emails.", wantsText(req));
@@ -5795,6 +5818,12 @@ async function email(message, env, _ctx) {
   }
   if (!env.DB) {
     message.setReject("submissions closed");
+    return;
+  }
+  const sender = message.from.trim().toLowerCase();
+  const stop = await gate(env.SUBMISSIONS_RL, `${sender}:email`);
+  if (stop !== "ok") {
+    message.setReject(stop === "limited" ? "rate limited" : "temporarily unavailable");
     return;
   }
   const parsed = await new PostalMime().parse(await new Response(message.raw).arrayBuffer());
@@ -5824,7 +5853,11 @@ async function email(message, env, _ctx) {
     }
     let id;
     if (existing) {
-      await env.DB.prepare("UPDATE submissions SET status='pending', source='email', name=?, description=?, code=?, submitter_email=?, raw_excerpt=? WHERE id=?").bind(name, desc, code, message.from, excerpt, existing.id).run();
+      const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='email', name=?, description=?, code=?, submitter_email=?, raw_excerpt=? WHERE id=? AND status='rejected'").bind(name, desc, code, message.from, excerpt, existing.id).run();
+      if (!r.meta.changes) {
+        skipped.push(code);
+        continue;
+      }
       id = existing.id;
     } else {
       const r = await env.DB.prepare("INSERT INTO submissions (source, name, description, code, link, submitter_email, raw_excerpt) VALUES ('email', ?, ?, ?, ?, ?, ?) ON CONFLICT(link) DO NOTHING").bind(name, desc, code, link, message.from, excerpt).run();

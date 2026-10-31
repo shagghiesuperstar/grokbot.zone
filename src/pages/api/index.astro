@@ -31,9 +31,15 @@ const rows: [string, string][] = [
     <h2>Bot record</h2>
     <pre><code>{`{"id":"…","name":"…","author":"…","description":"…","category":{"slug":"…","label":"…"},"code":"…","link":"https://x.ai/bot/…","asOf":"${meta.asOf}"}`}</code></pre>
     <h2>Submitting a bot</h2>
-    <p>Writes are same-origin only: use the form on the <a href="/submit/">Submit page</a>, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description. The form posts JSON to <code>/api/submit</code>; browsers on other origins are blocked, and the endpoint is rate limited.</p>
+    <p>Writes are same-origin only: use the form on the <a href="/submit/">Submit page</a><span data-needs-email hidden>, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description</span>. The form posts JSON to <code>/api/submit</code>; browsers on other origins are blocked, and the endpoint is rate limited.</p>
   </div>
 </Base>
+<script is:inline>
+  // The mailbox shows only while /api/flags says email intake is open; the markup ships hidden.
+  fetch('/api/flags').then(function (r) { return r.json(); }).then(function (h) {
+    if (h && h.email) document.querySelectorAll('[data-needs-email]').forEach(function (el) { el.hidden = false; });
+  }).catch(function () {});
+</script>
 <style>
   .docs { max-width: 860px; }
   table { width: 100%; border-collapse: collapse; }

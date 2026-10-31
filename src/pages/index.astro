@@ -20,7 +20,7 @@ const total = meta.totalBots.toLocaleString('en-US');
   ]}
 >
   <section class="hero">
-    <RivePlayer class="hero-motion" src="/riv/hero-grid.riv" fit="cover"><div class="hero-grid-fallback"></div></RivePlayer>
+    <RivePlayer box="backdrop" src="/riv/hero-grid.riv" fit="cover"><div class="hero-grid-fallback"></div></RivePlayer>
     <div class="wrap">
       <h1><span class="line">Find the bot.</span><span class="line accent">Skip the hunt.</span></h1>
       <p class="lede">{total} public Grok bot listings in {meta.categoryCount} categories. Search by name, author or job, then open the bot.</p>
@@ -42,6 +42,5 @@ const total = meta.totalBots.toLocaleString('en-US');
   </section>
 </Base>
 <style>
-  .hero-motion { position: absolute; inset: 0; z-index: -1; }
   .snapshot { margin: 1rem 0 0; }
 </style>

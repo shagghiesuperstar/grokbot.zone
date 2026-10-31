@@ -8,6 +8,7 @@ const { id = 'q' } = Astro.props;
     <input id={id} name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search bots: try “spam call” or “resume”" data-search-input />
   </form>
   <p class="status muted" role="status" aria-live="polite" data-search-count></p>
+  <h2 class="sr-only">Search results</h2>
   <div class="empty panel" hidden data-search-empty>
     <h3>No bots found.</h3>
     <p class="muted">Nothing matches <strong data-search-term></strong>. Try fewer or simpler words, or <a href="/categories/">browse categories</a>.</p>

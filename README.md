@@ -2,7 +2,9 @@
 
 A static, searchable directory of public Grok bot listings, live at https://grokbot.zone.
 
-- 7,415 listings in 26 function categories, as a dated snapshot (see `data/corpus/index.json`, `asOf`).
+<!-- counts:start -->
+- 7,291 distinct bots published from a raw corpus snapshot of 7,415 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
+<!-- counts:end -->
 - Search, categories, Trending, Recent, Related, a page for every bot, FAQ, submit page.
 - Trending and Recent come from committed, dated signal files in `data/signals/`. There is no live popularity feed, and the site says so.
 
@@ -14,7 +16,7 @@ pnpm build      # validates the corpus, generates site data, builds static HTML 
 pnpm preview    # serves dist/
 ```
 
-`pnpm build` first runs `scripts/build-data.ts` (fails loudly, naming the file and record, on any malformed record), `scripts/build-trending.ts`, and copies the Rive WASM runtime into `public/riv/`.
+`pnpm build` first runs `scripts/build-data.ts` (fails loudly, naming the file and record, on any malformed record), `scripts/build-trending.ts`, `scripts/sync-readme.ts` (writes the counts above from the generated data), `scripts/assert-counts.ts` (fails if a published number drifts from the data it describes), and copies the Rive WASM runtime into `public/riv/`.
 
 Other scripts: `pnpm check:contrast` (WCAG ratio for every text colour pair), `pnpm riv:build` (re-author the Rive assets with the Rive CLI), `scripts/assert-search.sh [origin]` (browser DOM assertions for search).
 
@@ -29,7 +31,24 @@ public/riv/      hero-grid.riv, bot-pulse.riv
 public/_worker.js/  minimal edge handler (www redirect, security headers)
 ```
 
-Bot URLs use the dataset id. Where two ids differ only by letter case, the later one gets a numeric suffix so paths stay unique on case-insensitive systems.
+`data/corpus/` is a raw snapshot of the upstream listings: one record per (category, bot)
+listing, so a bot that belongs to two categories appears there twice, and the same bot can
+appear twice with a code that differs only in letter case. The build merges those into one
+record per bot, so every bot has exactly one page and one URL. A bot in two categories is
+listed in both, so the category listings add up to more than the number of bots.
+
+Two counts, two layers, and they are never interchangeable:
+
+<!-- layers:start -->
+- `data/corpus/index.json` `rawTotalBots` (7,415) is the **raw snapshot**: listing records.
+- `src/data/meta.json` `totalBots` (7,291) is the **published** count: distinct bots.
+- `src/data/meta.json` `totalListings` (7,330) is the category listings: a bot in two
+  categories is listed in both, so it is counted twice.
+<!-- layers:end -->
+
+`scripts/assert-counts.ts` fails the build if any of those three drifts from the data it
+describes, and `scripts/sync-readme.ts` writes the counts above from the generated files
+so the prose cannot drift either.
 
 ## Deploy
 

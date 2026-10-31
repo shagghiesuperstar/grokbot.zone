@@ -53,9 +53,27 @@ const { id = 'q' } = Astro.props;
         const parts = await Promise.all(
           idx.categories.map(async (c: { path: string }) => (await fetch(c.path)).json()),
         );
-        records = parts.flatMap((p: { slug: string; label: string; bots: SearchRecord[] }) =>
-          p.bots.map((b) => indexRecord(b, p.slug, p.label)),
-        );
+        const labelOf = new Map<string, string>();
+        for (const p of parts) labelOf.set(p.slug, p.label);
+        // A bot listed in two categories sits in both payloads. Index it once, tagged with
+        // every category it belongs to, so one name never returns the same bot twice.
+        const byId = new Map<string, { rec: SearchRecord; cats: string[] }>();
+        for (const p of parts) {
+          for (const b of p.bots) {
+            const cur = byId.get(b.i);
+            if (cur) {
+              if (!cur.cats.includes(p.slug)) cur.cats.push(p.slug);
+              continue;
+            }
+            byId.set(b.i, { rec: b, cats: [p.slug] });
+          }
+        }
+        records = [...byId.values()].map(({ rec, cats }) => {
+          const primary = rec.c ?? cats[0];
+          const primaryLabel = labelOf.get(primary) ?? '';
+          const extra = cats.filter((s) => s !== primary).map((s) => labelOf.get(s) ?? '');
+          return indexRecord(rec, primary, primaryLabel, extra);
+        });
         root.dataset.ready = 'true';
         root.dataset.total = String(records.length);
         countEl.textContent = '';

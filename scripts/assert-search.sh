@@ -3,6 +3,8 @@
 set -u
 ORIGIN="${1:-http://localhost:4321}"
 FIRST_ID="privacy-security-scam-protection-fUj6TYhiW_cjtzWvbsFgz"
+# The number of bots the index holds comes from the generated data, never typed here.
+INDEXED=$(python3 -I -c "import json;print(json.load(open('src/data/meta.json'))['totalBots'])")
 probe() { # $1 = query
   chrome-devtools-axi eval "(async () => {
     const root = document.querySelector('[data-search-root]');
@@ -21,6 +23,8 @@ fails=0
 check() { python3 -I -c "import sys,json;d=json.loads(sys.argv[1]);exec(sys.argv[2])" "$1" "$2" && echo "PASS: $3" || { echo "FAIL: $3"; fails=1; }; }
 echo "--- query: spam call"; A=$(probe "spam call"); echo "$A"
 check "$A" "assert d['first']['id']=='$FIRST_ID' and d['state']=='results'" "first result is $FIRST_ID"
+echo "--- query: Shikamaru"; C=$(probe "Shikamaru"); echo "$C"
+check "$C" "assert d['state']=='results' and d['rendered']==1" "a bot listed twice in the corpus returns one row"
 echo "--- query: nonexistentwordhere"; B=$(probe "nonexistentwordhere"); echo "$B"
-check "$B" "assert d['state']=='empty' and d['emptyVisible'] and d['rendered']==0 and d['indexed']=='7415'" "empty state shown, 0 rows rendered (not blank, not all 7415)"
+check "$B" "assert d['state']=='empty' and d['emptyVisible'] and d['rendered']==0 and d['indexed']=='$INDEXED'" "empty state shown, 0 rows rendered (not blank, not all $INDEXED)"
 exit $fails

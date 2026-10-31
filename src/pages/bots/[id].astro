@@ -9,6 +9,8 @@ export function getStaticPaths() {
 }
 const { bot } = Astro.props;
 const cat = categoryBySlug.get(bot.cat)!;
+// A bot listed in two categories belongs to both, so the page names every one of them.
+const allCats = bot.cats.map((s) => categoryBySlug.get(s)!);
 const path = `/bots/${bot.slug}/`;
 const url = botUrl(bot);
 // Built from fields, not copied prose, so every page gets a unique, predictable summary.
@@ -40,7 +42,7 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
     <p class="by">by {bot.author}</p>
     <p class="desc">{bot.description}</p>
     <dl class="facts panel">
-      <div><dt>Category</dt><dd><a href={`/categories/${cat.slug}/`}>{cat.label}</a></dd></div>
+      <div><dt>Categor{allCats.length === 1 ? 'y' : 'ies'}</dt><dd>{allCats.map((c, i) => <>{i > 0 && ' · '}<a href={`/categories/${c.slug}/`}>{c.label}</a></>)}</dd></div>
       <div><dt>Author</dt><dd>{bot.author}</dd></div>
       <div><dt>Listing snapshot</dt><dd><time datetime={meta.asOf}>{meta.asOf}</time></dd></div>
     </dl>

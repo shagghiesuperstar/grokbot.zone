@@ -45,12 +45,12 @@ const fail = (file: string, where: string, msg: string): never => {
 const readJson = (f: string) => JSON.parse(readFileSync(f, 'utf8'));
 const isStr = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 
-interface Bot { id: string; slug: string; code: string; name: string; author: string; description: string; cat: string }
+interface Bot { id: string; slug: string; code: string; name: string; author: string; description: string; cat: string; cats: string[] }
 
 const index = readJson(join(corpusDir, 'index.json'));
 if (!Array.isArray(index.categories) || !isStr(index.asOf)) fail('index.json', '', 'missing asOf or categories');
 
-const bots: Bot[] = [];
+const rawBots: Bot[] = [];
 const categories: { slug: string; label: string; count: number; purpose: string; updated: string }[] = [];
 const seenId = new Set<string>();
 
@@ -68,55 +68,101 @@ for (const c of index.categories) {
       if (!isStr(b[k])) fail(file, where, `field "${k}" missing or empty`);
     const r = b as Record<string, string>;
     if (r.id !== `${c.slug}-${r.code}`) fail(file, where, `id must be "${c.slug}-<code>"`);
-    if (r.url !== `https://x.ai/bot/${r.code}`) fail(file, where, `url must be https://x.ai/bot/<code>`);
+    if (r.url !== `https://x.ai/bot/${r.code}`) fail(file, where, 'url must be https://x.ai/bot/<code>');
     if (!/^[A-Za-z0-9_-]+$/.test(r.code)) fail(file, where, 'code has unexpected characters');
     if (seenId.has(r.id)) fail(file, where, 'duplicate id');
     seenId.add(r.id);
-    bots.push({ id: r.id, slug: r.id, code: r.code, name: r.name, author: r.author, description: r.description, cat: c.slug });
+    rawBots.push({ id: r.id, slug: r.id, code: r.code, name: r.name, author: r.author, description: r.description, cat: c.slug, cats: [c.slug] });
   });
   categories.push({ slug: c.slug, label: c.label, count: c.count, purpose: PURPOSE[c.slug], updated: payload.asOf });
 }
-if (bots.length !== index.totalBots) fail('index.json', 'totalBots', `index says ${index.totalBots}, found ${bots.length}`);
+if (rawBots.length !== index.rawTotalBots) fail('index.json', 'rawTotalBots', `index says ${index.rawTotalBots}, found ${rawBots.length}`);
 
-// ---- URL slugs ----
-// Ids are case-sensitive upstream, but URL paths must stay unique on case-insensitive
-// filesystems and CDNs. Where ids differ only by letter case, the first (by byte order) keeps
-// its id as slug and the rest get a numeric suffix. Dataset ids are never altered.
+// ---- dedupe: one bot listed twice with codes differing only by letter case ----
+// The corpus stores one record per (category, bot) listing, so a bot that belongs to two
+// categories is stored twice, under spellings that differ only by letter case. They are the
+// same bot on x.ai, so one record survives. Survivor: longest description, then longest
+// author (the shorter author is the shortened form), then first code by byte order. The
+// survivor keeps its corpus casing, so https://x.ai/bot/<code> still resolves.
+//
+// A bot listed in two categories keeps both: the survivor takes the union of the group's
+// categories, so no listing is lost. `cat` stays the survivor's own category (it names the
+// page and the SEO category); `cats` is the union, used for listing a bot under each
+// category it belongs to.
+const bots: Bot[] = [];
 {
   const groups = new Map<string, Bot[]>();
-  for (const b of bots) (groups.get(b.id.toLowerCase()) ?? groups.set(b.id.toLowerCase(), []).get(b.id.toLowerCase())!).push(b);
-  const taken = new Set(bots.map((b) => b.id.toLowerCase()));
-  for (const g of groups.values()) {
-    if (g.length < 2) continue;
-    g.sort((a, b) => (a.id < b.id ? -1 : 1));
-    g.slice(1).forEach((b, k) => {
-      let n = k + 2;
-      while (taken.has(`${b.id.toLowerCase()}-${n}`)) n++;
-      b.slug = `${b.id}-${n}`;
-      taken.add(b.slug.toLowerCase());
-    });
+  for (const b of rawBots) {
+    const k = b.code.toLowerCase();
+    const g = groups.get(k);
+    if (g) g.push(b);
+    else groups.set(k, [b]);
   }
+  const merged = new Map<string, Bot>(); // lowercased code -> surviving record
+  for (const g of groups.values()) {
+    // Codes are ASCII (validated above), so code-unit order is byte order.
+    const sorted = [...g].sort(
+      (a, b) =>
+        b.description.length - a.description.length ||
+        b.author.length - a.author.length ||
+        (a.code < b.code ? -1 : a.code > b.code ? 1 : 0),
+    );
+    const [winner, ...losers] = sorted;
+    const cats = [winner.cat, ...[...new Set(losers.map((l) => l.cat))].filter((c) => c !== winner.cat).sort()];
+    merged.set(winner.code.toLowerCase(), { ...winner, cats });
+  }
+  // Keep the corpus order: each bot is emitted at the position of its first listing.
+  const emitted = new Set<string>();
+  for (const b of rawBots) {
+    const k = b.code.toLowerCase();
+    if (emitted.has(k)) continue;
+    emitted.add(k);
+    bots.push(merged.get(k)!);
+  }
+}
+// A category lists every bot that belongs to it, so its count is the number of listings,
+// not the number of distinct bots: a bot in two categories is listed in both.
+const catCounts = new Map<string, number>();
+for (const b of bots) for (const c of b.cats) catCounts.set(c, (catCounts.get(c) ?? 0) + 1);
+for (const c of categories) c.count = catCounts.get(c.slug) ?? 0;
+
+// ---- URL slugs ----
+// The slug is the dataset id. The dedupe above leaves one record per code.toLowerCase(), so no
+// two ids can differ only by letter case: the slug is unique as-is, with no numeric suffix.
+// The check below stays as the guard that proves it.
+{
   const seen = new Set<string>();
   for (const b of bots) {
-    if (seen.has(b.slug.toLowerCase())) fail('corpus', b.id, 'slug collision after disambiguation');
+    if (seen.has(b.slug.toLowerCase())) fail('corpus', b.id, 'duplicate slug after dedupe');
     seen.add(b.slug.toLowerCase());
   }
 }
 
 // ---- popularity rank for search tie-breaks (lower is better) ----
+// Lookups are by lowercased code. A signal entry may name the spelling that the dedupe
+// dropped; the survivor of that group differs only by letter case, so the lowercased key
+// resolves both spellings to the same bot and the signal keeps its bot and its order.
 const pop = readJson(join(signalsDir, 'popularity.json'));
-const byCode = new Map(bots.map((b) => [b.code, b]));
+const byCode = new Map(bots.map((b) => [b.code.toLowerCase(), b]));
 const labelToSlug = new Map(categories.map((c) => [c.label, c.slug]));
 const rank = new Map<string, number>();
+const seenGlobal = new Set<string>();
 (pop.global as string[]).forEach((code, i) => {
-  if (!byCode.has(code)) fail('popularity.json', 'global', `unknown code ${code}`);
-  rank.set(code, i);
+  const k = code.toLowerCase();
+  if (!byCode.has(k)) fail('popularity.json', 'global', `unknown code ${code}`);
+  if (seenGlobal.has(k)) fail('popularity.json', 'global', `duplicate code ${code} after dedupe`);
+  seenGlobal.add(k);
+  rank.set(k, i);
 });
 for (const [label, codes] of Object.entries(pop.perCategory as Record<string, string[]>)) {
   if (!labelToSlug.has(label)) fail('popularity.json', 'perCategory', `unknown category ${label}`);
+  const seen = new Set<string>();
   codes.forEach((code, i) => {
-    if (!byCode.has(code)) fail('popularity.json', label, `unknown code ${code}`);
-    if (!rank.has(code)) rank.set(code, 100 + i);
+    const k = code.toLowerCase();
+    if (!byCode.has(k)) fail('popularity.json', label, `unknown code ${code}`);
+    if (seen.has(k)) fail('popularity.json', label, `duplicate code ${code} after dedupe`);
+    seen.add(k);
+    if (!rank.has(k)) rank.set(k, 100 + i);
   });
 }
 const NO_RANK = 1_000_000;
@@ -139,9 +185,11 @@ bots.forEach((b, i) => {
     for (const j of p) if (j !== i) score.set(j, (score.get(j) ?? 0) + w);
   }
   const order = (a: number, c: number) =>
-    (score.get(c) ?? 0) - (score.get(a) ?? 0) || (rank.get(bots[a].code) ?? NO_RANK) - (rank.get(bots[c].code) ?? NO_RANK) || (bots[a].slug < bots[c].slug ? -1 : 1);
+    (score.get(c) ?? 0) - (score.get(a) ?? 0) || (rank.get(bots[a].code.toLowerCase()) ?? NO_RANK) - (rank.get(bots[c].code.toLowerCase()) ?? NO_RANK) || (bots[a].slug < bots[c].slug ? -1 : 1);
+  // "Same" is the bot's own category (the page it sits on); "cross" is a bot it shares no
+  // category with, so a bot listed in two categories never appears as an outsider.
   const same = bots.map((_, j) => j).filter((j) => j !== i && bots[j].cat === b.cat).sort(order).slice(0, SAME);
-  const cross = [...score.keys()].filter((j) => bots[j].cat !== b.cat).sort(order).slice(0, CROSS);
+  const cross = [...score.keys()].filter((j) => !bots[j].cats.some((c) => b.cats.includes(c))).sort(order).slice(0, CROSS);
   related[b.slug] = [...same.map((j) => [bots[j].slug, 's'] as [string, 's']), ...cross.map((j) => [bots[j].slug, 't'] as [string, 't'])];
 });
 
@@ -149,16 +197,24 @@ bots.forEach((b, i) => {
 mkdirSync(outData, { recursive: true });
 rmSync(outSearch, { recursive: true, force: true });
 mkdirSync(outSearch, { recursive: true });
-const meta = { asOf: index.asOf as string, totalBots: bots.length, categoryCount: categories.length };
+// totalBots counts distinct bots; totalListings counts category listings, which is higher
+// because a bot in two categories is listed twice.
+const totalListings = categories.reduce((n, c) => n + c.count, 0);
+const meta = { asOf: index.asOf as string, totalBots: bots.length, totalListings, categoryCount: categories.length };
 writeFileSync(join(outData, 'meta.json'), JSON.stringify(meta, null, 1) + '\n');
 writeFileSync(join(outData, 'bots.json'), JSON.stringify(bots) + '\n');
 writeFileSync(join(outData, 'categories.json'), JSON.stringify(categories, null, 1) + '\n');
 writeFileSync(join(outData, 'related.json'), JSON.stringify(related) + '\n');
 
 // Per-category search payloads (lazy-fetched by the browser) + tiny index.
+// A category's payload holds every bot LISTED in that category, so a bot that belongs to
+// two categories appears in both payloads and `count` is the category's listing count.
+// The browser indexes one row per bot, so a name never returns the same bot twice.
 for (const c of categories) {
-  const recs = bots.filter((b) => b.cat === c.slug).map((b) => ({ i: b.slug, n: b.name, a: b.author, d: b.description, r: rank.get(b.code) ?? NO_RANK }));
-  writeFileSync(join(outSearch, `${c.slug}.json`), JSON.stringify({ slug: c.slug, label: c.label, count: c.count, bots: recs }));
+  const recs = bots
+    .filter((b) => b.cats.includes(c.slug))
+    .map((b) => ({ i: b.slug, n: b.name, a: b.author, d: b.description, r: rank.get(b.code.toLowerCase()) ?? NO_RANK, c: b.cat }));
+  writeFileSync(join(outSearch, `${c.slug}.json`), JSON.stringify({ slug: c.slug, label: c.label, count: recs.length, bots: recs }));
 }
 writeFileSync(join(outSearch, 'index.json'), JSON.stringify({ asOf: meta.asOf, totalBots: meta.totalBots, categories: categories.map((c) => ({ slug: c.slug, label: c.label, count: c.count, path: `/search/${c.slug}.json` })) }));
 console.log(`build-data: ${bots.length} bots, ${categories.length} categories (corpus: ${corpusDir})`);

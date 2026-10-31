@@ -1,6 +1,6 @@
 // R2: client-side search. AND-match over whitespace tokens, substring match,
 // minimum 2 characters, name-prefix results rank above body matches.
-export interface SearchRecord { i: string; n: string; a: string; d: string; r: number }
+export interface SearchRecord { i: string; n: string; a: string; d: string; r: number; c?: string }
 export interface IndexedRecord extends SearchRecord { cat: string; catLabel: string; nameNorm: string; hay: string }
 export interface Hit { rec: IndexedRecord; tier: 0 | 1 | 2 }
 
@@ -12,9 +12,14 @@ export function normalize(s: string): string {
   return s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 }
 
-export function indexRecord(r: SearchRecord, cat: string, catLabel: string): IndexedRecord {
+/**
+ * Index one bot. `cat`/`catLabel` are the bot's primary category; `extraLabels` are the
+ * labels of any other category it is listed in, so it matches on those too.
+ */
+export function indexRecord(r: SearchRecord, cat: string, catLabel: string, extraLabels: string[] = []): IndexedRecord {
   const nameNorm = normalize(r.n);
-  return { ...r, cat, catLabel, nameNorm, hay: `${nameNorm} ${normalize(r.a)} ${normalize(r.d)} ${normalize(catLabel)}` };
+  const labels = [catLabel, ...extraLabels].map(normalize).join(' ');
+  return { ...r, cat, catLabel, nameNorm, hay: `${nameNorm} ${normalize(r.a)} ${normalize(r.d)} ${labels}` };
 }
 
 export function search(records: IndexedRecord[], query: string): Hit[] {

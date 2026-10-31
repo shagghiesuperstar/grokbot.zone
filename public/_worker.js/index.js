@@ -5609,6 +5609,62 @@ function rawReply(r) {
   return h.join("\r\n") + "\r\n";
 }
 
+// src/worker/media.ts
+var TYPES = { mp4: "video/mp4", webp: "image/webp" };
+var CACHE = "public, max-age=31536000, immutable";
+function parseRange(header, size) {
+  const m = /^bytes=\s*(\d*)\s*-\s*(\d*)\s*$/i.exec(header ?? "");
+  if (!m || m[1] === "" && m[2] === "") return null;
+  if (m[1] === "") {
+    const n = Number(m[2]);
+    return n === 0 || size === 0 ? "unsatisfiable" : { start: Math.max(size - n, 0), end: size - 1 };
+  }
+  const start = Number(m[1]);
+  if (m[2] !== "" && Number(m[2]) < start) return null;
+  return start >= size ? "unsatisfiable" : { start, end: m[2] === "" ? size - 1 : Math.min(Number(m[2]), size - 1) };
+}
+var isMediaRequest = (request, url) => (request.method === "GET" || request.method === "HEAD") && url.pathname.startsWith("/media/");
+async function serveMedia(request, assets, url) {
+  const res = await assets.fetch(new Request(url.toString()));
+  if (res.status !== 200 || res.headers.has("content-encoding")) return res;
+  const head = request.method === "HEAD";
+  const ext = url.pathname.split(".").pop() ?? "";
+  const base = {
+    "Accept-Ranges": "bytes",
+    "Content-Type": TYPES[ext] ?? res.headers.get("content-type") ?? "application/octet-stream",
+    "Cache-Control": CACHE
+  };
+  const etag = res.headers.get("etag");
+  if (etag) base.ETag = etag;
+  let size = Number(res.headers.get("content-length"));
+  let bytes = null;
+  if (!Number.isFinite(size) || res.headers.get("content-length") === null) {
+    bytes = new Uint8Array(await res.arrayBuffer());
+    size = bytes.length;
+  }
+  const range = parseRange(request.headers.get("range"), size);
+  if (range === "unsatisfiable") {
+    await res.body?.cancel();
+    return new Response(null, { status: 416, headers: { ...base, "Content-Range": `bytes */${size}`, "Content-Length": "0" } });
+  }
+  if (!range) {
+    const headers2 = { ...base, "Content-Length": String(size) };
+    if (head) {
+      await res.body?.cancel();
+      return new Response(null, { status: 200, headers: headers2 });
+    }
+    return new Response(bytes ?? res.body, { status: 200, headers: headers2 });
+  }
+  const length = range.end - range.start + 1;
+  const headers = { ...base, "Content-Range": `bytes ${range.start}-${range.end}/${size}`, "Content-Length": String(length) };
+  if (head) {
+    await res.body?.cancel();
+    return new Response(null, { status: 206, headers });
+  }
+  bytes ??= new Uint8Array(await res.arrayBuffer());
+  return new Response(bytes.subarray(range.start, range.end + 1), { status: 206, headers });
+}
+
 // src/worker/index.ts
 var SECURITY_HEADERS = {
   "X-Content-Type-Options": "nosniff",
@@ -5950,6 +6006,7 @@ var index_default = {
 async function route(request, env, ctx, url) {
   const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
   const m = request.method;
+  if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);
   try {
     if (path === "/api/health" && (m === "GET" || m === "HEAD")) return await health(env);
     if (path === "/api/flags" && m === "GET") return flags(env);

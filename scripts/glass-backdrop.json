@@ -1,0 +1,26 @@
+{
+  "video": "public/media/hero-loop-v1-1088.mp4",
+  "sha256": "9bd3c8b0d796d5f41291ab38623f0c13f81021a48cc2bffc619de43c5b8ea957",
+  "viewport": [
+    1440,
+    900
+  ],
+  "zoom": 1.5,
+  "sampleEverySec": 0.25,
+  "frames": 48,
+  "blurPx": 20,
+  "saturate": 1.25,
+  "worstBeforeBrightness": {
+    "rgb": [
+      224.12,
+      247.87,
+      119.12
+    ],
+    "luminance": 0.84253,
+    "atSec": 11.25,
+    "atPx": [
+      342,
+      33
+    ]
+  }
+}

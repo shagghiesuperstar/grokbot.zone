@@ -19,7 +19,8 @@ const { id = 'q' } = Astro.props;
 <style>
   .search { width: 100%; max-width: 720px; }
   input[type='search'] {
-    width: 100%; font: inherit; font-size: 1.1rem; color: var(--text); background: var(--panel);
+    width: 100%; font: inherit; font-size: 1.1rem; color: var(--text); background: var(--glass-tint);
+    -webkit-backdrop-filter: var(--glass-filter); backdrop-filter: var(--glass-filter);
     border: 1px solid var(--olo); border-radius: 999px; padding: 1rem 1.4rem;
   }
   input::placeholder { color: var(--text-muted); opacity: 1; }

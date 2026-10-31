@@ -235,5 +235,89 @@ await t('F5 email: an untouched rejected row still resubmits to pending', async 
   assert.deepEqual(env.DB.rows('SELECT status, source FROM submissions'), [{ status: 'pending', source: 'email' }]);
 });
 
+// ---- D4: /media/* byte ranges (Workers static assets ignore Range, so the Worker answers them) ----
+const MEDIA = Uint8Array.from({ length: 1000 }, (_, i) => i % 251);
+function mediaEnv() {
+  const seen: Request[] = [];
+  const ASSETS = {
+    fetch: async (r: Request) => {
+      seen.push(r);
+      const p = new URL(r.url).pathname; // like the real binding: Range is ignored, always a full 200
+      if (p === '/media/clip.mp4') return new Response(MEDIA, { headers: { 'content-type': 'video/mp4', 'content-length': '1000', etag: '"abc"' } });
+      if (p === '/media/missing.mp4') return new Response('not found page', { status: 404, headers: { 'content-type': 'text/html' } });
+      return new Response(`asset:${p}`, { headers: { 'content-type': 'text/plain' } });
+    },
+  };
+  return { seen, env: makeEnv({ ASSETS }) };
+}
+const getMedia = (rng?: string, method = 'GET', path = '/media/clip.mp4') => {
+  const m = mediaEnv();
+  return call(path, m.env, makeCtx(), { method, headers: rng === undefined ? {} : { range: rng } }).then((res) => ({ res, seen: m.seen }));
+};
+const bytesOf = async (res: Response) => new Uint8Array(await res.arrayBuffer());
+const sameBytes = (got: Uint8Array, from: number, to: number) => assert.deepEqual([...got], [...MEDIA.subarray(from, to + 1)]);
+const mediaHeaders = (res: Response) => {
+  assert.equal(res.headers.get('accept-ranges'), 'bytes');
+  assert.equal(res.headers.get('content-type'), 'video/mp4');
+  assert.equal(res.headers.get('cache-control'), 'public, max-age=31536000, immutable');
+};
+
+await t('D4 media: no Range -> 200 with the full body and the media headers', async () => {
+  const { res } = await getMedia();
+  assert.equal(res.status, 200); mediaHeaders(res);
+  assert.equal(res.headers.get('content-length'), '1000'); assert.equal(res.headers.get('content-range'), null);
+  sameBytes(await bytesOf(res), 0, 999);
+});
+for (const [rng, from, to] of [['bytes=0-1', 0, 1], ['bytes=0-0', 0, 0], ['bytes=10-', 10, 999], ['bytes=-5', 995, 999], ['bytes=-99999999', 0, 999], ['bytes=990-5000', 990, 999], ['bytes=999-999', 999, 999]] as const) {
+  await t(`D4 media: ${rng} -> 206 ${from}-${to}/1000`, async () => {
+    const { res, seen } = await getMedia(rng);
+    assert.equal(res.status, 206); mediaHeaders(res);
+    assert.equal(res.headers.get('content-range'), `bytes ${from}-${to}/1000`);
+    assert.equal(res.headers.get('content-length'), String(to - from + 1));
+    sameBytes(await bytesOf(res), from, to);
+    assert.ok(seen.length === 1 && !seen[0].headers.has('range'), 'the asset is fetched without a Range header');
+  });
+}
+for (const rng of ['bytes=1000-', 'bytes=5000-6000', 'bytes=-0']) {
+  await t(`D4 media: ${rng} -> 416 with bytes */1000`, async () => {
+    const { res } = await getMedia(rng);
+    assert.equal(res.status, 416); mediaHeaders(res);
+    assert.equal(res.headers.get('content-range'), 'bytes */1000');
+    assert.equal((await bytesOf(res)).length, 0);
+  });
+}
+for (const rng of ['bytes=0-1,4-5', 'bytes=5-2', 'bytes=abc', 'bytes=-', 'items=0-1', 'bytes=0-1-2']) {
+  await t(`D4 media: ${rng} -> 200 with the full body (ignored)`, async () => {
+    const { res } = await getMedia(rng);
+    assert.equal(res.status, 200); mediaHeaders(res);
+    assert.equal(res.headers.get('content-range'), null);
+    sameBytes(await bytesOf(res), 0, 999);
+  });
+}
+await t('D4 media: HEAD -> 200, size headers, no body', async () => {
+  const { res } = await getMedia(undefined, 'HEAD');
+  assert.equal(res.status, 200); mediaHeaders(res);
+  assert.equal(res.headers.get('content-length'), '1000'); assert.equal((await bytesOf(res)).length, 0);
+});
+await t('D4 media: HEAD with a Range -> 206 headers, no body', async () => {
+  const { res } = await getMedia('bytes=0-1', 'HEAD');
+  assert.equal(res.status, 206); mediaHeaders(res);
+  assert.equal(res.headers.get('content-range'), 'bytes 0-1/1000'); assert.equal(res.headers.get('content-length'), '2');
+  assert.equal((await bytesOf(res)).length, 0);
+});
+await t('D4 media: a path outside /media/ is untouched (Range forwarded, no media headers)', async () => {
+  for (const p of ['/favicon.svg', '/media', '/mediafile.mp4', '/riv/hero-grid.riv']) {
+    const { res, seen } = await getMedia('bytes=0-1', 'GET', p);
+    assert.equal(res.status, 200); assert.equal(await res.text(), `asset:${p}`);
+    assert.equal(res.headers.get('accept-ranges'), null); assert.equal(res.headers.get('cache-control'), null);
+    assert.equal(seen[0].headers.get('range'), 'bytes=0-1');
+  }
+});
+await t('D4 media: other methods and missing files fall through to the assets unchanged', async () => {
+  const post = await getMedia('bytes=0-1', 'POST'); assert.equal(post.seen[0].method, 'POST'); assert.equal(post.seen[0].headers.get('range'), 'bytes=0-1'); assert.equal(post.res.headers.get('accept-ranges'), null); assert.equal(post.res.headers.get('cache-control'), null);
+  const miss = await getMedia('bytes=0-1', 'GET', '/media/missing.mp4');
+  assert.equal(miss.res.status, 404); assert.equal(await miss.res.text(), 'not found page'); assert.equal(miss.res.headers.get('cache-control'), null);
+});
+
 console.log(failed ? `test-worker: ${n} passed, ${failed} FAILED` : `test-worker: ${n} passed`);
 process.exit(failed ? 1 : 0);

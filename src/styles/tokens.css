@@ -27,6 +27,15 @@
   --font-display: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
+  /* Glass: every tile, the header, the footer and the fields. a and b are gated by
+     scripts/contrast.ts against the worst frame of the shipped video. */
+  --glass-tint: rgb(8 5 7 / 0.8);
+  --glass-filter: blur(20px) saturate(1.25) brightness(0.4);
+  --glass-edge: rgb(255 255 255 / 0.12);
+  --glass-highlight: inset 0 1px 0 rgb(255 255 255 / 0.06);
+  /* A field sitting inside a glass tile: a backdrop-filter nested in another one blurs nothing, so it is tint only. */
+  --glass-inset: rgb(0 0 0 / 0.28);
+
   --radius: 12px;
   --maxw: 1160px;
 }

@@ -42,9 +42,42 @@ const ld = jsonLd.map((o) => JSON.stringify(o).replace(/</g, '\\u003c'));
     {ld.map((j) => <script type="application/ld+json" set:html={j} />)}
   </head>
   <body>
+    <div id="bg-video" aria-hidden="true"><video muted loop playsinline preload="none" disablepictureinpicture tabindex="-1" poster="/media/hero-poster-v1.webp"></video></div>
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <main id="main"><slot /></main>
     <Footer />
+    <script is:inline type="module">
+      // Background video: starts after load, zooms 1.00 -> 1.50 over the first 3000px of scroll.
+      // Reduced motion or Save-Data: poster only, no src, no zoom.
+      const box = document.getElementById('bg-video');
+      const video = box.firstElementChild;
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+      const still = () => reduce.matches || navigator.connection?.saveData === true;
+      let frame = 0, started = false;
+      const zoom = () => {
+        frame = 0;
+        box.style.transform = still() ? '' : `scale(${1 + 0.5 * Math.min(scrollY / 3000, 1)})`;
+      };
+      const start = () => {
+        if (started || still()) return;
+        started = true;
+        video.src = matchMedia('(max-width: 640px)').matches ? '/media/hero-loop-v1-720.mp4' : '/media/hero-loop-v1-1088.mp4';
+        video.play()?.catch((e) => {
+          if (e.name !== 'NotAllowedError') return; // Low Power Mode: leave the poster
+          video.removeAttribute('src'); video.load(); started = false;
+        });
+      };
+      const stop = () => { video.pause(); video.removeAttribute('src'); video.load(); started = false; };
+      addEventListener('scroll', () => { frame ||= requestAnimationFrame(zoom); }, { passive: true });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) video.pause();
+        else if (started && !still()) video.play()?.catch(() => {});
+      });
+      reduce.addEventListener('change', () => { if (still()) stop(); else if (document.readyState === 'complete') start(); zoom(); });
+      const begin = () => (window.requestIdleCallback ? requestIdleCallback(start, { timeout: 2000 }) : setTimeout(start, 200));
+      zoom();
+      if (document.readyState === 'complete') begin(); else addEventListener('load', begin, { once: true });
+    </script>
   </body>
 </html>

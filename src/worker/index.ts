@@ -9,6 +9,7 @@ import {
   isEmail, honeypotOk, isOn, makeToken, oneLine, ownerSummary, validateSubmission, TOKEN_RE,
   type DigestPayload,
 } from '../lib/submissions';
+import { isMediaRequest, serveMedia } from './media';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -356,6 +357,7 @@ export default {
 async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL): Promise<Response> {
   const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname;
   const m = request.method;
+  if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);
   try {
     if (path === '/api/health' && (m === 'GET' || m === 'HEAD')) return await health(env);
     if (path === '/api/flags' && m === 'GET') return flags(env);

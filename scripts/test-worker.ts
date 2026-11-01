@@ -3,7 +3,7 @@
 // Covers the failure modes the local wrangler run cannot stage: a throwing limiter, a row that changes
 // between a read and a write. Usage: pnpm test:worker
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -27,13 +27,13 @@ const worker = (await import(pathToFileURL(out).href)).default as {
 
 // ---- fakes ----
 const SHIPPED = 'ShippedCode1';
-const MIGRATION = readFileSync(join(ROOT, 'migrations/0001_init.sql'), 'utf8');
+const MIGRATIONS = readdirSync(join(ROOT, 'migrations')).filter((f) => f.endsWith('.sql')).sort().map((f) => readFileSync(join(ROOT, 'migrations', f), 'utf8'));
 
 /** D1 over node:sqlite. `afterRead` runs once a `first()` has returned its row: the window a concurrent writer can use. */
 class FakeD1 {
   db = new DatabaseSync(':memory:');
   afterRead: ((sql: string) => void) | null = null;
-  constructor() { this.db.exec(MIGRATION); }
+  constructor() { for (const m of MIGRATIONS) this.db.exec(m); }
   prepare(sql: string) {
     const st = this.db.prepare(sql);
     const self = this;

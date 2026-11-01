@@ -10,6 +10,11 @@ import {
   type DigestPayload,
 } from '../lib/submissions';
 import { isMediaRequest, serveMedia } from './media';
+import { runDataPlane } from './dp/cron';
+import { denylist } from './dp/ingest';
+import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
+import { go, isDead, record } from './dp/telemetry';
+import { CATEGORY_NONE } from './dp/util';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -27,6 +32,8 @@ interface Env {
   OWNER_ADDRESS?: string;
   MIN_FILL_MS?: string;
   DIGEST_MAX_SENDS?: string;
+  NOREF_TOKENS?: string;
+  TELEMETRY_START?: string;
 }
 type Kind = 'ack' | 'owner_summary' | 'confirm' | 'digest' | 'unsubscribe';
 
@@ -36,6 +43,7 @@ const SECURITY_HEADERS: Record<string, string> = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
 };
+const DIGEST_CRON = '0 13 * * MON,THU';
 const SUBMIT_FROM = 'submit@grokbot.zone';
 const UPDATES_FROM = 'updates@grokbot.zone';
 const CATEGORY_SLUGS = new Set((categories as { slug: string }[]).map((c) => c.slug));
@@ -114,9 +122,10 @@ async function readJson(req: Request): Promise<unknown | undefined> {
 // ---- GET /api/health ----
 
 async function health(env: Env): Promise<Response> {
-  let d1 = false;
-  try { d1 = !!env.DB && !!(await env.DB.prepare('SELECT 1 AS ok').first()); } catch { d1 = false; }
-  return json(d1 ? 200 : 503, { ok: d1, d1 });
+  const switches = { FORM_SUBMIT_ENABLED: env.FORM_SUBMIT_ENABLED ?? '0', EMAIL_SUBMIT_ENABLED: env.EMAIL_SUBMIT_ENABLED ?? '0', SUBSCRIBE_ENABLED: env.SUBSCRIBE_ENABLED ?? '0', DIGEST_ENABLED: env.DIGEST_ENABLED ?? '0' };
+  const now = Date.now();
+  const body = await healthBody(env.DB, now, new Date(now).toISOString(), denylist(env.NOREF_TOKENS).length > 0, switches);
+  return json(body.ok ? 200 : 503, body);
 }
 
 // GET /api/flags: which dynamic features are switched on. The static submit page and footer
@@ -350,7 +359,9 @@ export default {
   },
   email,
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
-    ctx.waitUntil(digest(controller, env));
+    // Two triggers share this handler: the digest keeps its own expression, everything else is the data plane.
+    if (controller.cron === DIGEST_CRON) ctx.waitUntil(digest(controller, env));
+    else ctx.waitUntil(runDataPlane(env, controller.scheduledTime).then((r) => console.log('dataplane', JSON.stringify(r))).catch((e) => console.error('dataplane failed:', (e as Error).message)));
   },
 };
 
@@ -375,5 +386,45 @@ async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL
     console.error('route error', path, (e as Error).message);
     return json(500, { ok: false, error: 'internal' });
   }
-  return env.ASSETS.fetch(request);
+  return dataPlane(request, env, ctx, path);
+}
+
+// ---- data plane: /go/, stored read files, live pages, dead bots, view counting ----
+
+const BOT_PAGE_RE = /^\/bots\/([^/]+)$/;
+/** "<category>-<code>" -> [category, code]. Codes contain "-", so strip a known category prefix instead of splitting. */
+function splitId(id: string): [string | null, string] {
+  let best: string | null = null;
+  for (const s of CATEGORY_SLUGS) if (id.startsWith(`${s}-`) && (!best || s.length > best.length)) best = s;
+  return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
+}
+
+async function dataPlane(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
+  // Whatever goes wrong in the data plane, the static site still answers.
+  try { return await dataPlaneInner(request, env, ctx, path); } catch (e) {
+    console.error('dataplane route error', path, (e as Error).message);
+    return path === '/go' || path.startsWith('/go/') ? new Response('Not found\n', { status: 404 }) : env.ASSETS.fetch(request);
+  }
+}
+
+async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
+  const get = request.method === 'GET' || request.method === 'HEAD';
+  if (path === '/go' || path.startsWith('/go/')) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ''), (p) => ctx.waitUntil(p));
+  if (get && isStoredFile(path)) {
+    const stored = await storedFile(env.DB, path);
+    if (stored) return stored;
+    if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
+  }
+  const res = await env.ASSETS.fetch(request);
+  if (!get) return res;
+  const m = BOT_PAGE_RE.exec(path);
+  if (m && res.status === 200) {
+    const [cat, code] = splitId(m[1]);
+    const lc = code.toLowerCase();
+    if (await isDead(env.DB, lc)) return gonePage(res, m[1], cat);
+    if (request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
+    return res;
+  }
+  if (request.method === 'GET' && (path === '/' || path === '/trending' || path === '/recent')) return livePage(res, env.DB, path);
+  return res;
 }

@@ -170,6 +170,57 @@ await t('D1 queries per invocation: POST /api/submit and the email handler (5 fr
   assert.ok(form <= 50 && email <= 50, `${form} / ${email}`);
 });
 
+// ---- O2 (email-on): acknowledgments are best-effort; production runs with OWNER_ADDRESS empty ----
+const sendLog = (env: Record<string, any>) => env.DB.rows('SELECT kind, recipient, ok, error_code FROM send_log ORDER BY id') as { kind: string; recipient: string; ok: number; error_code: string | null }[];
+const throwingMailer = (code?: string) => ({ send: async () => { throw Object.assign(new Error('send refused'), code ? { code } : {}); } });
+await t('O2 form: the send binding throws -> the submission is stored, 201, and send_log records the failure', async () => {
+  for (const code of ['E_SENDER_NOT_VERIFIED', undefined]) {
+    const env = makeEnv({ EMAIL: throwingMailer(code), NOTIFY_OWNER: undefined, OWNER_ADDRESS: '' }); const ctx = makeCtx();
+    const res = await postJson('/api/submit', env, ctx, { ...GOOD, link: VALID });
+    assert.equal(res.status, 201); assert.deepEqual(await res.json(), { ok: true, id: 1, status: 'pending' });
+    await ctx.drain();
+    assert.equal(count(env, 'submissions'), 1); assert.equal(botRow(env, 'intakecode00000000001')!.status, 'pending');
+    const log = sendLog(env);
+    assert.deepEqual(log.map((r) => [r.kind, r.ok, r.error_code]), [['ack', 0, code ?? 'E_SEND_FAILED'], ['owner_summary', 0, 'E_NO_OWNER_ADDRESS']]);
+  }
+});
+await t('O2 form: the send binding is missing -> still 201 and stored', async () => {
+  const env = makeEnv({ EMAIL: undefined, NOTIFY_OWNER: undefined, OWNER_ADDRESS: '' }); const ctx = makeCtx();
+  assert.equal((await postJson('/api/submit', env, ctx, { ...GOOD, link: VALID })).status, 201); await ctx.drain();
+  assert.equal(count(env, 'submissions'), 1); assert.equal(sendLog(env)[0].error_code, 'E_NO_BINDING');
+});
+await t('O2 form: the ack is not awaited by the response (a send that never settles cannot delay the 201)', async () => {
+  const env = makeEnv({ EMAIL: { send: () => new Promise(() => {}) }, NOTIFY_OWNER: undefined, OWNER_ADDRESS: '' });
+  const res = await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: VALID }); // ctx is never drained
+  assert.equal(res.status, 201); assert.equal(count(env, 'submissions'), 1);
+});
+await t('email-on: switch "1", RFC 5322 message with Message-ID, OWNER_ADDRESS empty -> stored, reply attempted, no forward', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined });
+  const m = await sendEmail(env, { body: 'Helps with taxes.\n' + VALID });
+  assert.deepEqual(m.rejects, []);
+  assert.equal(botRow(env, 'intakecode00000000001')!.status, 'pending'); assert.equal(count(env, 'submissions'), 1);
+  assert.equal(m.replies.length, 1, 'one reply attempted'); assert.deepEqual(m.forwards, []);
+  const reply = m.replies[0] as { from: string; to: string; raw: string };
+  assert.equal(reply.from, 'submit@grokbot.zone'); assert.equal(reply.to, 'author@example.test');
+  assert.match(reply.raw, /In-Reply-To: <t1@example\.test>/i);
+  const [hdr, ...rest] = reply.raw.split('\r\n\r\n'); const payload = rest.join('\r\n\r\n').trim();
+  const body = /base64/i.test(hdr) ? Buffer.from(payload, 'base64').toString('utf8') : payload; // the sign-off has an em dash, so the body is base64
+  assert.match(body, /Queued for review: https:\/\/x\.ai\/bot\/IntakeCode00000000001/);
+  assert.deepEqual(sendLog(env).map((r) => [r.kind, r.ok, r.error_code]), [['owner_summary', 0, 'E_NO_OWNER_ADDRESS'], ['ack', 1, null], ['owner_summary', 0, 'E_NO_OWNER_ADDRESS']]); // per queued code, the ack, then the end-of-event check
+  assert.equal(env.EMAIL.sent.length, 0, 'no EMAIL.send needed when message.reply works');
+});
+await t('email-on: reply and the fallback send both throw -> the submission stays stored and the handler does not throw', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined, EMAIL: throwingMailer('E_SENDER_NOT_VERIFIED') });
+  const m = fakeMail({ body: 'Helps.\n' + VALID }); (m.msg as any).reply = async () => { throw new Error('reply refused'); };
+  await worker.email(m.msg, env, makeCtx());
+  assert.deepEqual(m.rejects, []); assert.equal(botRow(env, 'intakecode00000000001')!.status, 'pending'); assert.equal(count(env, 'submissions'), 1);
+  assert.ok(sendLog(env).some((r) => r.kind === 'ack' && r.ok === 0 && r.error_code === 'E_SENDER_NOT_VERIFIED'));
+});
+await t('email-on: switch "0" still rejects politely and stores nothing', async () => {
+  const env = makeEnv({ EMAIL_SUBMIT_ENABLED: '0' }); const m = await sendEmail(env, { body: 'x\n' + VALID });
+  assert.deepEqual(m.rejects, ['submissions closed']); assert.equal(count(env, 'bots'), 0); assert.equal(m.replies.length, 0);
+});
+
 // ---- F2: unsubscribe while SUBSCRIBE_ENABLED is "0" ----
 const seedSub = (env: Record<string, any>, status = 'active') =>
   env.DB.db.prepare('INSERT INTO subscribers (email, status, confirm_token, unsub_token) VALUES (?, ?, ?, ?)').run('reader@example.test', status, 'c'.repeat(32), 'a'.repeat(32));

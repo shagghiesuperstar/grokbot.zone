@@ -39,10 +39,11 @@ simple = { limit = 10, period = 60 }
 # The digest keeps its own expression (dark); */10 is the data plane (spec 07 D14).
 crons = ["0 13 * * MON,THU", "*/10 * * * *"]
 
-# Dark-ship switches: "1" turns a feature on. All ship "0".
+# Dark-ship switches: "1" turns a feature on. Submissions (form + email) are on since 2026-11-01;
+# subscriptions and the digest stay "0" until the first send is approved.
 [vars]
-FORM_SUBMIT_ENABLED  = "0"
-EMAIL_SUBMIT_ENABLED = "0"
+FORM_SUBMIT_ENABLED  = "1"
+EMAIL_SUBMIT_ENABLED = "1"
 SUBSCRIBE_ENABLED    = "0"
 DIGEST_ENABLED       = "0"
 OWNER_ADDRESS        = ""

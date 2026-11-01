@@ -50,7 +50,7 @@ else FAIL=$((FAIL+1)); grep FAIL /tmp/gz-test-worker-out; fi
 
 printf '%-62s %-10s %-10s %s\n' CASE EXPECT GOT RESULT
 echo "--- phase 1: every switch dark (the shipped config)"
-reset_db; start
+reset_db; start --var FORM_SUBMIT_ENABLED:0 --var EMAIL_SUBMIT_ENABLED:0
 check "GET /api/health" 200 "$(curl -s -o /dev/null -w '%{http_code}' $B/api/health)"
 check "health body ok+d1" '{"ok":true,"d1":true}' "$(curl -s $B/api/health)"
 check "POST /api/submit empty body (dark)" 503 "$(curl -s -o /dev/null -w '%{http_code}' -X POST $B/api/submit)"

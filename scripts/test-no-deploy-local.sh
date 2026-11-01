@@ -2,7 +2,7 @@
 # Spec 08 section 2, the `wrangler dev --local` half: Worker-rendered bot pages, merged lists and the submission
 # intake, against a local D1 only. POST goes to the LOCAL dev server and nowhere else. The cron runs with
 # `throttled_until` set, so it makes zero requests to any platform host (the mocked-x.ai half lives in
-# scripts/test-dataplane.ts). FORM_SUBMIT_ENABLED=1 is a local --var here; wrangler.toml keeps "0".
+# scripts/test-dataplane.ts). FORM_SUBMIT_ENABLED=1 is a local --var here (wrangler.toml now ships it "1" too).
 # Needs a fresh `pnpm build`. Usage: scripts/test-no-deploy-local.sh
 set -u
 cd "$(dirname "$0")/.."
@@ -94,7 +94,7 @@ $W d1 execute grokbot-zone --local --file /tmp/gz-nd-cap.sql >/dev/null 2>&1
 check "form: the 201st new row of the day -> 429" 429 "$(post "${GOODJ//$SUBC/CapOverflow0000000001}")"
 check "429 stored nothing" 0 "$(sql "SELECT COUNT(*) AS n FROM bots WHERE code_lc=lower('CapOverflow0000000001')" | python3 -c 'import json,sys;print(json.load(sys.stdin)[0]["n"])')"
 check "typed text appears in no public page or API output" 0 "$( (curl -s "$B/api/v1/catalog/changes.json"; curl -s "$B/search/live.json"; curl -s "$B/feed.xml"; curl -s "$B/recent/"; curl -s "$B/") | grep -c 'Typed Name\|typed@example')"
-check "switches in health all 0 by default (this run sets FORM only as a local var)" "1 0 0 0" "$(curl -s "$B/api/health" | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)["switches"].values()))')"
-grep -E '^(FORM_SUBMIT_ENABLED|EMAIL_SUBMIT_ENABLED|SUBSCRIBE_ENABLED|DIGEST_ENABLED)\s*=\s*"0"' wrangler.toml | wc -l | tr -d ' ' | { read n; check "wrangler.toml keeps all four switches at \"0\"" 4 "$n"; }
+check "switches in health: FORM and EMAIL on, SUBSCRIBE and DIGEST dark" "1 1 0 0" "$(curl -s "$B/api/health" | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)["switches"].values()))')"
+grep -E '^(SUBSCRIBE_ENABLED|DIGEST_ENABLED)\s*=\s*"0"' wrangler.toml | wc -l | tr -d ' ' | { read n; check "wrangler.toml keeps SUBSCRIBE and DIGEST at \"0\"" 2 "$n"; }
 echo "test-no-deploy-local: PASS=$PASS FAIL=$FAIL"
 [[ $FAIL -eq 0 ]]

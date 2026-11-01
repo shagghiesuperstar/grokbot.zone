@@ -77,6 +77,6 @@ sleep 2
 check "opens=1 views=1 after repeats (once per visitor per day)" '[{"o":1,"v":1}]' "$(sql "SELECT SUM(opens) AS o, SUM(views) AS v FROM bot_daily")"
 check "visit_seen holds no raw IP" 0 "$(sql "SELECT COUNT(*) AS n FROM visit_seen WHERE vh LIKE '%203.0%'" | python3 -c 'import json,sys;print(json.load(sys.stdin)[0]["n"])')"
 check "robots.txt Disallow /go/" 1 "$(curl -s "$B/robots.txt" | grep -c '^Disallow: /go/')"
-check "switches in health all 0" "0 0 0 0" "$(curl -s "$B/api/health" | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)["switches"].values()))')"
+check "switches in health: FORM and EMAIL on, SUBSCRIBE and DIGEST dark" "1 1 0 0" "$(curl -s "$B/api/health" | python3 -c 'import json,sys;print(" ".join(json.load(sys.stdin)["switches"].values()))')"
 echo "test-dataplane-local: PASS=$PASS FAIL=$FAIL"
 [[ $FAIL -eq 0 ]]

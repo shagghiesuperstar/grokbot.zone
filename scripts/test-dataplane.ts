@@ -684,9 +684,9 @@ await t('D24: readLive keeps categorised adds, drops category-less and malformed
 });
 
 // ================= switches =================
-await t('switches: wrangler.toml still ships FORM/EMAIL/SUBSCRIBE/DIGEST at "0", two crons, TELEMETRY_START set', () => {
+await t('switches: wrangler.toml ships FORM/EMAIL at "1", SUBSCRIBE/DIGEST at "0", no owner address, two crons, TELEMETRY_START set', () => {
   const toml = readFileSync(join(ROOT, 'wrangler.toml'), 'utf8');
-  for (const k of ['FORM_SUBMIT_ENABLED', 'EMAIL_SUBMIT_ENABLED', 'SUBSCRIBE_ENABLED', 'DIGEST_ENABLED']) assert.match(toml, new RegExp(`^${k}\\s*=\\s*"0"`, 'm'));
+  for (const [k, v] of [['FORM_SUBMIT_ENABLED', '1'], ['EMAIL_SUBMIT_ENABLED', '1'], ['SUBSCRIBE_ENABLED', '0'], ['DIGEST_ENABLED', '0'], ['OWNER_ADDRESS', '']]) assert.match(toml, new RegExp(`^${k}\\s*=\\s*"${v}"`, 'm'));
   assert.match(toml, /crons = \["0 13 \* \* MON,THU", "\*\/10 \* \* \* \*"\]/); assert.match(toml, /^TELEMETRY_START\s*=\s*"\d{4}-\d{2}-\d{2}"/m);
 });
 await t('noref: this test file and the worker sources carry no denylist from the audit script', () => {

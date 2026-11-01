@@ -458,7 +458,7 @@ await t('scheduled: the digest cron runs the digest, */10 runs the data plane (n
 });
 // ================= D27/D28/O10/O11: pages and lists without a deploy =================
 import { existsSync } from 'node:fs';
-import { mergeLive } from '../src/lib/search';
+import { indexRecord, mergeLive, search } from '../src/lib/search';
 const DIST = join(ROOT, 'dist');
 if (!existsSync(join(DIST, 'bot-template/index.html'))) throw new Error('run `pnpm build` before the dataplane tests (they read dist/)');
 const distFile = (p: string) => readFileSync(join(DIST, p), 'utf8');
@@ -467,7 +467,7 @@ const SEED_BOT2 = (JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'ut
 const STATIC: Record<string, [string, string]> = {
   '/bot-template/': ['bot-template/index.html', 'text/html'], '/api/v1/seed-codes.json': ['api/v1/seed-codes.json', 'application/json'],
   '/feed.json': ['feed.json', 'application/json'], '/feed.xml': ['feed.xml', 'application/xml'], '/sitemap-index.xml': ['sitemap-index.xml', 'application/xml'], '/sitemap-0.xml': ['sitemap-0.xml', 'application/xml'],
-  '/search/live.json': ['search/live.json', 'application/json'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
+  '/search/live.json': ['search/live.json', 'application/json'], '/categories/travel/': ['categories/travel/index.html', 'text/html'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
 };
 const distAssets = { fetch: async (r: Request) => {
   const p = new URL(r.url).pathname; const hit = STATIC[p];
@@ -522,6 +522,11 @@ await t('D27: dead -> 410, excluded / pending / unknown / wrong id -> 404, the t
   assert.equal((await get(env, '/bot-template/')).res.status, 404); assert.equal((await get(env, '/bot-template')).res.status, 404);
   assert.match(distFile('bot-template/index.html'), /name="robots" content="noindex"/); assert.ok(!distFile('sitemap-0.xml').includes('bot-template'));
 });
+await t('D27: only a missing page falls through to D1; the asset binding\'s redirect for a no-slash seed URL is returned as is', async () => {
+  const db = liveDb(); const redir = { fetch: async (r: Request) => new URL(r.url).pathname === `/bots/${SEED_BOT.slug}` ? new Response(null, { status: 307, headers: { location: `/bots/${SEED_BOT.slug}/` } }) : distAssets.fetch(r) };
+  const r = await get(envOf(db, { ASSETS: redir }), `/bots/${SEED_BOT.slug}`); assert.equal(r.res.status, 307);
+  assert.equal(r.res.headers.get('location'), `/bots/${SEED_BOT.slug}/`);
+});
 await t('O11: a seed bot page and the static JSON/feeds/sitemaps are byte-for-byte the built files when D1 has nothing for them', async () => {
   const db = liveDb(); const env = envOf(db, { ASSETS: distAssets });
   const page = await get(env, `/bots/${SEED_BOT.slug}/`, { 'user-agent': HUMAN }); assert.equal(await page.res.text(), distFile(`bots/${SEED_BOT.slug}/index.html`));
@@ -541,8 +546,16 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   const byId = new Map<string, { rec: never; cats: string[] }>([[SEED_BOT2.slug, { rec: { i: SEED_BOT2.slug, n: 'x', a: '', d: '', r: 1 } as never, cats: [SEED_BOT2.cat] }]]);
   mergeLive(byId, live as never, ['travel', SEED_BOT.cat]);
   assert.ok(!byId.has(SEED_BOT2.slug), 'a dead seed bot leaves search'); assert.ok(byId.has(`travel-${NEW_A}`) && byId.get(`uncategorized-${NEW_B}`)!.cats[0] === 'uncategorized');
-  const cat = await g('/categories/travel/'); // travel has no seed bot of SEED_BOT.cat necessarily; use the page of the seed category too
-  void cat;
+  // a bot with a category is on its category page, linked to its own page, and the printed count follows
+  const tv = await g('/categories/travel/'); const tvStatic = distFile('categories/travel/index.html');
+  assert.ok(tv.includes(`<li data-code="${NEW_A.toLowerCase()}">`) && tv.includes(`href="/bots/travel-${NEW_A}/"`), 'the live bot is on its category page');
+  assert.ok(tv.includes(`<li data-code="${NEW_X.toLowerCase()}">`) && !tv.includes('<script>alert(1)') && !tv.includes(NEW_DEAD) && !tv.includes(NEW_EXC), 'escaped; dead and excluded are absent');
+  const tn0 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(tvStatic)![1]); const tn1 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(tv)![1]);
+  assert.equal(tn1, tn0 + 2, 'travel: static + two live bots');
+  assert.ok(!(await g('/categories/travel/')).includes(`data-code="${NEW_B.toLowerCase()}"`), 'a bot with no category has no category page');
+  // search finds the live D1-only bot (the real index + search code, fed the merged map); a dead one is gone
+  const recs = [...byId.values()].map(({ rec, cats }) => indexRecord(rec as never, (rec as { c?: string }).c ?? cats[0], cats[0] === 'uncategorized' ? 'Uncategorized' : cats[0], []));
+  assert.deepEqual(search(recs, 'Fresh Trip').map((h) => h.rec.i), [`travel-${NEW_A}`]); assert.equal(search(recs, 'No Category').length, 1); assert.equal(search(recs, 'Gone Bot').length, 0);
   const sc = await g(`/categories/${SEED_BOT.cat}/`); const stat = distFile(`categories/${SEED_BOT.cat}/index.html`);
   assert.ok(!sc.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`) && stat.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`), 'the dead seed bot is dropped from its category page');
   const n0 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(stat)![1]); const n1 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(sc)![1]);

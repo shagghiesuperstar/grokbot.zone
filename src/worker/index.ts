@@ -503,6 +503,7 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
       if (request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
       return res; // a static page wins
     }
+    if (res.status !== 404) return res; // e.g. the asset binding's trailing-slash redirect: not a missing page
     return dbBotPage(request, env, ctx, res, m[1], cat, lc);
   }
   return livePage(res, env.DB, path);

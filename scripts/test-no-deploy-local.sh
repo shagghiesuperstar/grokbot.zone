@@ -63,6 +63,8 @@ check "pending bot -> 404" 404 "$(code "/bots/uncategorized-$NEWP/")"
 check "unknown bot -> 404" 404 "$(code /bots/travel-ZZZZZZZZZZZZZZZZZZZZZ/)"
 check "template URL not reachable -> 404" 404 "$(code /bot-template/)"
 check "seed bot static page byte-for-byte" 0 "$(curl -s -A "$UA" "$B/bots/$SEEDSLUG/" | cmp - "dist/bots/$SEEDSLUG/index.html" >/dev/null 2>&1; echo $?)"
+check "seed bot without the trailing slash: not rendered by the Worker (redirect, never a 200)" 1 "$([[ "$(curl -s -o /dev/null -w '%{http_code}' "$B/bots/$SEEDSLUG")" =~ ^30[78]$ ]] && echo 1 || echo 0)"
+check "seed bot with the trailing slash -> 200" 200 "$(code "/bots/$SEEDSLUG/")"
 sleep 2
 check "view counted for the D1 page (once per visitor)" '[{"v":1}]' "$(sql "SELECT SUM(views) AS v FROM bot_daily WHERE code_lc=lower('$NEWA')")"
 

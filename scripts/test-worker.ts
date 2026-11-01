@@ -33,18 +33,20 @@ const MIGRATIONS = readdirSync(join(ROOT, 'migrations')).filter((f) => f.endsWit
 class FakeD1 {
   db = new DatabaseSync(':memory:');
   afterRead: ((sql: string) => void) | null = null;
+  queries = 0;
   constructor() { for (const m of MIGRATIONS) this.db.exec(m); }
   prepare(sql: string) {
     const st = this.db.prepare(sql);
     const self = this;
     const bound = (args: unknown[]) => ({
           async first() {
+            self.queries++;
             const row = (st.get(...(args as never[])) as Record<string, unknown> | undefined) ?? null;
             const hook = self.afterRead; self.afterRead = null; hook?.(sql);
             return row ? { ...row } : null;
           },
-          async run() { const r = st.run(...(args as never[])); return { success: true, meta: { changes: Number(r.changes), last_row_id: Number(r.lastInsertRowid) } }; },
-          async all() { return { results: st.all(...(args as never[])).map((r) => ({ ...(r as object) })) }; },
+          async run() { self.queries++; const r = st.run(...(args as never[])); return { success: true, meta: { changes: Number(r.changes), last_row_id: Number(r.lastInsertRowid) } }; },
+          async all() { self.queries++; return { results: st.all(...(args as never[])).map((r) => ({ ...(r as object) })) }; },
     });
     return { bind: (...args: unknown[]) => bound(args), ...bound([]) };
   }
@@ -154,6 +156,18 @@ await t('D30 email: a valid new code -> pending bot; a short code -> no link fou
   for (let i = 0; i < 200; i++) { const c = `Cap${String(i).padStart(18, '0')}`; ins.run(c.toLowerCase(), c, today); }
   const capped = await sendEmail(env, { from: 'c@example.test', body: 'x\nhttps://x.ai/bot/CapMore00000000000001' }); assert.equal(capped.rejects.length, 1);
   assert.equal(botRow(env, 'capmore00000000000001'), undefined);
+});
+
+await t('D1 queries per invocation: POST /api/submit and the email handler (5 fresh codes) stay <= 50', async () => {
+  const env = makeEnv(); const q0 = env.DB.queries; const ctx = makeCtx();
+  assert.equal((await postJson('/api/submit', env, ctx, { ...GOOD, link: VALID })).status, 201); await ctx.drain();
+  const form = env.DB.queries - q0;
+  const env2 = makeEnv(); const q1 = env2.DB.queries;
+  const codes = [1, 2, 3, 4, 5].map((i) => `https://x.ai/bot/Many${i}0000000000000000`).join('\n');
+  const m = await sendEmail(env2, { body: `Helps.\n${codes}` }); assert.equal(m.rejects.length, 0);
+  const email = env2.DB.queries - q1; assert.equal(count(env2, 'bots'), 5);
+  console.log(`      POST /api/submit: ${form} D1 queries; email with 5 fresh codes: ${email}`);
+  assert.ok(form <= 50 && email <= 50, `${form} / ${email}`);
 });
 
 // ---- F2: unsubscribe while SUBSCRIBE_ENABLED is "0" ----

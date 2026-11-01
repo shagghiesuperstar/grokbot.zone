@@ -8237,6 +8237,7 @@ async function dataPlaneInner(request, env, ctx, path) {
       if (request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
       return res;
     }
+    if (res.status !== 404) return res;
     return dbBotPage(request, env, ctx, res, m[1], cat, lc);
   }
   return livePage(res, env.DB, path);

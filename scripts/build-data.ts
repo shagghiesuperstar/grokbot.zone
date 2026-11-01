@@ -2,6 +2,7 @@
 // Usage: tsx scripts/build-data.ts [corpusDir]   (default: data/corpus, or $CORPUS_DIR)
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { stripEmails } from '../src/lib/strip-emails';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const corpusDir = resolve(process.argv[2] ?? process.env.CORPUS_DIR ?? join(ROOT, 'data/corpus'));
@@ -215,7 +216,7 @@ writeFileSync(join(outData, 'related.json'), JSON.stringify(related) + '\n');
 for (const c of categories) {
   const recs = bots
     .filter((b) => b.cats.includes(c.slug))
-    .map((b) => ({ i: b.slug, n: b.name, a: b.author, d: b.description, r: rank.get(b.code.toLowerCase()) ?? NO_RANK, c: b.cat }));
+    .map((b) => ({ i: b.slug, n: b.name, a: stripEmails(b.author), d: stripEmails(b.description), r: rank.get(b.code.toLowerCase()) ?? NO_RANK, c: b.cat }));
   writeFileSync(join(outSearch, `${c.slug}.json`), JSON.stringify({ slug: c.slug, label: c.label, count: recs.length, bots: recs }));
 }
 writeFileSync(join(outSearch, 'index.json'), JSON.stringify({ asOf: meta.asOf, totalBots: meta.totalBots, categories: categories.map((c) => ({ slug: c.slug, label: c.label, count: c.count, path: `/search/${c.slug}.json` })) }));

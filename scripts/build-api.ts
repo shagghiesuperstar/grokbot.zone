@@ -3,13 +3,15 @@
 // a malformed record or a count that does not match the dataset.
 import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { stripEmails } from '../src/lib/strip-emails';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SITE = 'https://grokbot.zone';
 const read = (f: string) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
 
 interface Bot { id: string; slug: string; code: string; name: string; author: string; description: string; cat: string; cats: string[] }
-const bots: Bot[] = read('src/data/bots.json');
+// src/data/bots.json stays as harvested; every public output gets the scrubbed copy.
+const bots: Bot[] = (read('src/data/bots.json') as Bot[]).map((b) => ({ ...b, author: stripEmails(b.author), description: stripEmails(b.description) }));
 const cats: { slug: string; label: string; count: number }[] = read('src/data/categories.json');
 const trending = read('src/data/trending.json');
 const recent = read('src/data/recent.json');

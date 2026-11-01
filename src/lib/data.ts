@@ -1,4 +1,5 @@
 import bots from '../data/bots.json';
+import { stripEmails } from './strip-emails';
 import categories from '../data/categories.json';
 import related from '../data/related.json';
 import trending from '../data/trending.json';
@@ -9,7 +10,7 @@ export interface Bot { id: string; slug: string; code: string; name: string; aut
 export interface Category { slug: string; label: string; count: number; purpose: string; updated: string }
 
 export { meta, trending, recent };
-export const allBots = bots as Bot[];
+export const allBots = (bots as Bot[]).map((b) => ({ ...b, author: stripEmails(b.author), description: stripEmails(b.description) }));
 export const allCategories = categories as Category[];
 export const botBySlug = new Map(allBots.map((b) => [b.slug, b]));
 export const categoryBySlug = new Map(allCategories.map((c) => [c.slug, c]));

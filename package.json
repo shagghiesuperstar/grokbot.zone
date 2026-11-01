@@ -6,7 +6,7 @@
   "description": "A searchable directory of public Grok bot listings.",
   "scripts": {
     "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts && tsx scripts/build-api.ts && tsx scripts/sync-readme.ts && tsx scripts/assert-counts.ts && tsx scripts/copy-wasm.ts",
-    "build": "tsx scripts/build-worker.ts && astro build",
+    "build": "tsx scripts/build-worker.ts && astro build && tsx scripts/assert-no-emails.ts",
     "dev": "astro dev",
     "riv:build": "python3 scripts/gen-rive-src.py && rive rive/hero-grid --once && rive rive/bot-pulse --once && cp rive/hero-grid/build/hero-grid.riv rive/bot-pulse/build/bot-pulse.riv public/riv/",
     "preview": "astro preview",

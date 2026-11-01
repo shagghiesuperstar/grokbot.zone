@@ -415,16 +415,25 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     if (stored) return stored;
     if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
   }
-  const res = await env.ASSETS.fetch(request);
-  if (!get) return res;
+  if (!get) return env.ASSETS.fetch(request);
   const m = BOT_PAGE_RE.exec(path);
-  if (m && res.status === 200) {
+  const livePath = path === '/' || path === '/trending' || path === '/recent';
+  if (!m && !(livePath && request.method === 'GET')) return env.ASSETS.fetch(request);
+  // Pages the data plane rewrites or replaces are always fetched unconditionally: a 304 from the static
+  // asset would otherwise hide the live list, the 410 and the view from a returning browser.
+  const res = await env.ASSETS.fetch(unconditional(request));
+  if (m) {
     const [cat, code] = splitId(m[1]);
     const lc = code.toLowerCase();
     if (await isDead(env.DB, lc)) return gonePage(res, m[1], cat);
-    if (request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
+    if (res.status === 200 && request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
     return res;
   }
-  if (request.method === 'GET' && (path === '/' || path === '/trending' || path === '/recent')) return livePage(res, env.DB, path);
-  return res;
+  return livePage(res, env.DB, path);
+}
+
+function unconditional(req: Request): Request {
+  const h = new Headers(req.headers);
+  for (const k of ['if-none-match', 'if-modified-since', 'if-match', 'if-unmodified-since', 'if-range']) h.delete(k);
+  return new Request(req, { headers: h });
 }

@@ -21,14 +21,14 @@ export async function visitorHash(salt: string, ip: string, ua: string): Promise
   return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${salt}|${ip}|${ua}`))).slice(0, 16);
 }
 
-let saltCache: { day: string; salt: string } | null = null;
+let saltCache: { db: D1Database; day: string; salt: string } | null = null;
 export const resetSaltCache = () => { saltCache = null; };
 async function dailySalt(db: D1Database, day: string): Promise<string> {
-  if (saltCache?.day === day) return saltCache.salt;
+  if (saltCache?.db === db && saltCache.day === day) return saltCache.salt;
   const fresh = hex(crypto.getRandomValues(new Uint8Array(16)).buffer);
   await db.prepare('INSERT OR IGNORE INTO meta(k, v) VALUES(?, ?)').bind(`salt:${day}`, fresh).run();
   const row = await db.prepare('SELECT v FROM meta WHERE k = ?').bind(`salt:${day}`).first<{ v: string }>();
-  saltCache = { day, salt: row?.v ?? fresh };
+  saltCache = { db, day, salt: row?.v ?? fresh };
   return saltCache.salt;
 }
 
@@ -70,14 +70,14 @@ export async function go(req: Request, db: D1Database | undefined, code: string,
 }
 
 // ---- dead bots: the cron stores the list; handlers keep it for a few minutes ----
-let deadCache: { at: number; set: Set<string> } | null = null;
+let deadCache: { db: D1Database; at: number; set: Set<string> } | null = null;
 export const resetDeadCache = () => { deadCache = null; };
 export async function isDead(db: D1Database | undefined, codeLc: string, nowMs = Date.now()): Promise<boolean> {
   if (!db) return false;
   try {
-    if (!deadCache || nowMs - deadCache.at > 300_000) {
+    if (!deadCache || deadCache.db !== db || nowMs - deadCache.at > 300_000) {
       const row = await db.prepare("SELECT v FROM meta WHERE k = 'dead_json'").first<{ v: string }>();
-      deadCache = { at: nowMs, set: new Set<string>(row ? JSON.parse(row.v) : []) };
+      deadCache = { db, at: nowMs, set: new Set<string>(row ? JSON.parse(row.v) : []) };
     }
     return deadCache.set.has(codeLc);
   } catch { return false; }

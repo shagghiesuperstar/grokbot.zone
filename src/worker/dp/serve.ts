@@ -12,13 +12,13 @@ const jsonHeaders = (maxAge: number) => ({ 'Content-Type': 'application/json; ch
 export const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 // ---- stored JSON with a short in-isolate cache ----
-let cache: { at: number; meta: Meta } | null = null;
+let cache: { db: D1Database; at: number; meta: Meta } | null = null;
 export const resetServeCache = () => { cache = null; };
 const KEYS = ['trending_json', 'recent_json', 'signals_json', 'changes_json', 'cards_json', 'trending_at'];
 async function stored(db: D1Database, nowMs: number): Promise<Meta> {
-  if (cache && nowMs - cache.at < 60_000) return cache.meta;
+  if (cache && cache.db === db && nowMs - cache.at < 60_000) return cache.meta;
   const meta = await readMeta(db, KEYS);
-  if (meta.trending_at) cache = { at: nowMs, meta }; // never pin an empty answer: the first cron run fills it
+  if (meta.trending_at) cache = { db, at: nowMs, meta }; // never pin an empty answer: the first cron run fills it
   return meta;
 }
 function fresh(meta: Meta, nowMs: number): boolean {
@@ -126,18 +126,29 @@ export async function livePage(res: Response, db: D1Database | undefined, path: 
         .on('[data-live="recent-asof"]', { element(e) { e.setInnerContent(RECENT_NOTE); } })
         .on('[data-live="recent-basis"]', { element(e) { e.remove(); } });
     } else return res;
-    return rw.transform(res);
+    const out = rw.transform(res);
+    // The rewritten body is not the asset's body, so it must not keep the asset's validators.
+    const h = new Headers(out.headers);
+    for (const k of ['etag', 'last-modified', 'content-length']) h.delete(k);
+    h.set('Cache-Control', 'no-cache');
+    return new Response(out.body, { status: out.status, headers: h });
   } catch { return res; }
 }
 
-/** A dead bot's page: the normal page chrome with one line and a link to its category. */
+/** A dead bot's page (D23): 410 with one line and a link to its category, whether or not a static page exists. */
 export function gonePage(res: Response, id: string, categorySlug: string | null): Response {
   const label = categorySlug ? LABEL.get(categorySlug) : undefined;
   const link = categorySlug && label ? ` <a href="/categories/${esc(categorySlug)}/">More in ${esc(label)}</a>.` : ' <a href="/categories/">Browse categories</a>.';
-  const rw = new HTMLRewriter().on('article.bot', { element(e) { e.setInnerContent(`<h1>This bot is no longer shared</h1><p class="desc">The bot's owner has stopped sharing it.${link}</p>`, { html: true }); } })
-    .on('title', { element(e) { e.setInnerContent('Bot no longer shared | GrokBot Zone'); } })
-    .on('meta[name="robots"]', { element(e) { e.remove(); } })
-    .on('head', { element(e) { e.append('<meta name="robots" content="noindex">', { html: true }); } });
-  const out = rw.transform(res);
-  return new Response(out.body, { status: 410, headers: out.headers });
+  const headers = { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache', 'X-Robots-Tag': 'noindex' };
+  const minimal = () => new Response(
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Bot no longer shared | GrokBot Zone</title></head>` +
+    `<body><main><h1>This bot is no longer shared</h1><p>The bot's owner has stopped sharing it.${link}</p></main></body></html>`,
+    { status: 410, headers });
+  if (res.status !== 200 || !(res.headers.get('content-type') ?? '').includes('text/html')) return minimal();
+  try {
+    const rw = new HTMLRewriter().on('article.bot', { element(e) { e.setInnerContent(`<h1>This bot is no longer shared</h1><p class="desc">The bot's owner has stopped sharing it.${link}</p>`, { html: true }); } })
+      .on('title', { element(e) { e.setInnerContent('Bot no longer shared | GrokBot Zone'); } })
+      .on('head', { element(e) { e.append('<meta name="robots" content="noindex">', { html: true }); } });
+    return new Response(rw.transform(res).body, { status: 410, headers });
+  } catch { return minimal(); }
 }

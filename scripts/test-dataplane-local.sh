@@ -59,6 +59,8 @@ $W d1 execute grokbot-zone --local --command "UPDATE bots SET status='dead' WHER
 code '/cdn-cgi/handler/scheduled?cron=*/10+*+*+*+*' >/dev/null; sleep 4
 check "dead bot page -> 410" 410 "$(code "/bots/$SLUG2/")"
 check "dead bot page text" 1 "$(curl -s "$B/bots/$SLUG2/" | grep -q 'This bot is no longer shared' && echo 1 || echo 0)"
+check "conditional GET (If-None-Match/If-Modified-Since): live list still 200" 200 "$(code /trending/ -H 'If-None-Match: "x"' -H 'If-Modified-Since: Sat, 01 Nov 2026 00:00:00 GMT')"
+check "conditional GET: dead bot page still 410" 410 "$(code "/bots/$SLUG2/" -H 'If-None-Match: "x"' -H 'If-Modified-Since: Sat, 01 Nov 2026 00:00:00 GMT')"
 check "live bot page still 200" 200 "$(code "/bots/$SLUG/")"
 check "/go/<live> HEAD -> 302" 302 "$(curl -sI -o /dev/null -w '%{http_code}' -A "$UA" "$B/go/$CODE")"
 check "/go/<live> Location" "https://x.ai/bot/$CODE" "$(curl -sI -A "$UA" "$B/go/$CODE" | tr -d '\r' | awk -F': ' 'tolower($1)=="location"{print $2}')"

@@ -386,6 +386,41 @@ await t('read files: served from meta once the cron has run; static fallback bef
   const ch = JSON.parse(await (await get(env, '/api/v1/catalog/changes.json')).res.text()); assert.ok('added' in ch && 'dead' in ch);
   const rc = JSON.parse(await (await get(env, '/api/v1/recent.json')).res.text()); assert.ok(rc.bots.length > 0 && rc.generatedAt && rc.categories);
 });
+await t('conditional requests: a validator never turns a live page, a dead bot or a view into a 304', async () => {
+  resetSaltCache(); resetDeadCache(); const db = new FakeD1(); insertBot(db, LIVE); insertBot(db, 'DeadBot00000000000001', { status: 'dead' });
+  db.db.prepare("INSERT INTO meta(k,v) VALUES('dead_json', ?)").run(JSON.stringify(['deadbot00000000000001']));
+  const seen: (string | null)[] = [];
+  const assets = { fetch: async (r: Request) => { seen.push(r.headers.get('if-none-match')); return r.headers.get('if-none-match') ? new Response(null, { status: 304 }) : new Response('<html>page</html>', { status: new URL(r.url).pathname.includes('absent') ? 404 : 200, headers: { 'content-type': 'text/html', etag: '"abc"' } }); } };
+  const env = envOf(db, { ASSETS: assets });
+  const h = { 'user-agent': HUMAN, 'cf-connecting-ip': '192.0.2.9', 'if-none-match': '"abc"' };
+  const view = await get(env, `/bots/coding-software-${LIVE}/`, h); assert.equal(view.res.status, 200);
+  assert.deepEqual(opens(db), { o: 0, v: 1 }, 'the view is counted');
+  const gone = await get(env, '/bots/coding-software-DeadBot00000000000001/', h); assert.equal(gone.res.status, 410);
+  assert.match(await gone.res.text(), /no longer shared/);
+  const none = await get(env, '/bots/coding-software-DeadBot00000000000001absent/', h);
+  const goneNoPage = await get(env, '/bots/coding-software-DeadBot00000000000001/', { ...h, 'if-modified-since': 'Sat, 01 Nov 2026 00:00:00 GMT' });
+  assert.equal(goneNoPage.res.status, 410);
+  assert.ok(seen.every((v) => v === null), 'no validator reached the asset fetch');
+  void none;
+  for (const p of ['/trending/', '/recent/', '/']) assert.equal((await get(env, p, h)).res.status, 200, p);
+});
+await t('dead bot with no static page still answers 410 (the page was dropped by a rebuild)', async () => {
+  resetDeadCache(); const db = new FakeD1(); insertBot(db, 'GoneBot0000000000001', { status: 'dead' });
+  db.db.prepare("INSERT INTO meta(k,v) VALUES('dead_json', ?)").run(JSON.stringify(['gonebot0000000000001']));
+  const env = envOf(db, { ASSETS: { fetch: async () => new Response('missing', { status: 404 }) } });
+  const r = await get(env, '/bots/travel-GoneBot0000000000001/'); assert.equal(r.res.status, 410);
+  const body = await r.res.text(); assert.ok(body.includes('/categories/travel/') && body.includes('noindex'));
+});
+await t('D1 queries per handler, measured (each <= 50)', async () => {
+  resetSaltCache(); resetDeadCache(); const db = new FakeD1(); for (let i = 0; i < 5; i++) insertBot(db, CODE(i)); const env = envOf(db);
+  const c = clock(Date.now()); const p = platform(() => ({ status: 200 }), c); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  const h = { 'user-agent': HUMAN, 'cf-connecting-ip': '192.0.2.77' };
+  const rows: [string, number][] = [];
+  for (const [label, path] of [['/go/<code>', `/go/${CODE(1)}`], ['/bots/<id>/', `/bots/coding-software-${CODE(2)}/`], ['/api/health', '/api/health'], ['/api/v1/trending.json', '/api/v1/trending.json'], ['/api/v1/recent.json', '/api/v1/recent.json'], ['/api/v1/signals/daily.json', '/api/v1/signals/daily.json'], ['/api/v1/catalog/changes.json', '/api/v1/catalog/changes.json'], ['/trending/ (live page)', '/trending/'], ['/recent/ (live page)', '/recent/'], ['/ (home rails)', '/']] as const) {
+    const r = await get(env, path, h); rows.push([label, r.queries]); assert.ok(r.queries <= 50, `${label}: ${r.queries}`);
+  }
+  console.log('      ' + rows.map(([l, q]) => `${l}=${q}`).join('  '));
+});
 await t('health: liveness block, noref, switches, and a D1 query count <= 50', async () => {
   resetSaltCache(); const db = new FakeD1(); for (let i = 0; i < 5; i++) insertBot(db, CODE(i)); const env = envOf(db);
   const c = clock(Date.now()); const p = platform(() => ({ status: 200 }), c);

@@ -7280,9 +7280,9 @@ var esc2 = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "
 var cache = null;
 var KEYS = ["trending_json", "recent_json", "signals_json", "changes_json", "cards_json", "trending_at"];
 async function stored(db, nowMs) {
-  if (cache && nowMs - cache.at < 6e4) return cache.meta;
+  if (cache && cache.db === db && nowMs - cache.at < 6e4) return cache.meta;
   const meta = await readMeta(db, KEYS);
-  if (meta.trending_at) cache = { at: nowMs, meta };
+  if (meta.trending_at) cache = { db, at: nowMs, meta };
   return meta;
 }
 function fresh(meta, nowMs) {
@@ -7400,7 +7400,11 @@ async function livePage(res, db, path, nowMs = Date.now()) {
         e.remove();
       } });
     } else return res;
-    return rw.transform(res);
+    const out = rw.transform(res);
+    const h = new Headers(out.headers);
+    for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
+    h.set("Cache-Control", "no-cache");
+    return new Response(out.body, { status: out.status, headers: h });
   } catch {
     return res;
   }
@@ -7408,17 +7412,24 @@ async function livePage(res, db, path, nowMs = Date.now()) {
 function gonePage(res, id, categorySlug) {
   const label = categorySlug ? LABEL.get(categorySlug) : void 0;
   const link = categorySlug && label ? ` <a href="/categories/${esc2(categorySlug)}/">More in ${esc2(label)}</a>.` : ' <a href="/categories/">Browse categories</a>.';
-  const rw = new HTMLRewriter().on("article.bot", { element(e) {
-    e.setInnerContent(`<h1>This bot is no longer shared</h1><p class="desc">The bot's owner has stopped sharing it.${link}</p>`, { html: true });
-  } }).on("title", { element(e) {
-    e.setInnerContent("Bot no longer shared | GrokBot Zone");
-  } }).on('meta[name="robots"]', { element(e) {
-    e.remove();
-  } }).on("head", { element(e) {
-    e.append('<meta name="robots" content="noindex">', { html: true });
-  } });
-  const out = rw.transform(res);
-  return new Response(out.body, { status: 410, headers: out.headers });
+  const headers = { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache", "X-Robots-Tag": "noindex" };
+  const minimal = () => new Response(
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Bot no longer shared | GrokBot Zone</title></head><body><main><h1>This bot is no longer shared</h1><p>The bot's owner has stopped sharing it.${link}</p></main></body></html>`,
+    { status: 410, headers }
+  );
+  if (res.status !== 200 || !(res.headers.get("content-type") ?? "").includes("text/html")) return minimal();
+  try {
+    const rw = new HTMLRewriter().on("article.bot", { element(e) {
+      e.setInnerContent(`<h1>This bot is no longer shared</h1><p class="desc">The bot's owner has stopped sharing it.${link}</p>`, { html: true });
+    } }).on("title", { element(e) {
+      e.setInnerContent("Bot no longer shared | GrokBot Zone");
+    } }).on("head", { element(e) {
+      e.append('<meta name="robots" content="noindex">', { html: true });
+    } });
+    return new Response(rw.transform(res).body, { status: 410, headers });
+  } catch {
+    return minimal();
+  }
 }
 
 // src/worker/dp/telemetry.ts
@@ -7438,11 +7449,11 @@ async function visitorHash(salt, ip, ua) {
 }
 var saltCache = null;
 async function dailySalt(db, day) {
-  if (saltCache?.day === day) return saltCache.salt;
+  if (saltCache?.db === db && saltCache.day === day) return saltCache.salt;
   const fresh2 = hex(crypto.getRandomValues(new Uint8Array(16)).buffer);
   await db.prepare("INSERT OR IGNORE INTO meta(k, v) VALUES(?, ?)").bind(`salt:${day}`, fresh2).run();
   const row = await db.prepare("SELECT v FROM meta WHERE k = ?").bind(`salt:${day}`).first();
-  saltCache = { day, salt: row?.v ?? fresh2 };
+  saltCache = { db, day, salt: row?.v ?? fresh2 };
   return saltCache.salt;
 }
 async function record(db, kind, codeLc, req, nowMs = Date.now()) {
@@ -7480,9 +7491,9 @@ var deadCache = null;
 async function isDead(db, codeLc, nowMs = Date.now()) {
   if (!db) return false;
   try {
-    if (!deadCache || nowMs - deadCache.at > 3e5) {
+    if (!deadCache || deadCache.db !== db || nowMs - deadCache.at > 3e5) {
       const row = await db.prepare("SELECT v FROM meta WHERE k = 'dead_json'").first();
-      deadCache = { at: nowMs, set: new Set(row ? JSON.parse(row.v) : []) };
+      deadCache = { db, at: nowMs, set: new Set(row ? JSON.parse(row.v) : []) };
     }
     return deadCache.set.has(codeLc);
   } catch {
@@ -7872,18 +7883,24 @@ async function dataPlaneInner(request, env, ctx, path) {
     if (stored2) return stored2;
     if (path !== "/api/v1/trending.json" && path !== "/api/v1/recent.json") return json(503, { ok: false, error: "not_ready" }, { "Retry-After": "600" });
   }
-  const res = await env.ASSETS.fetch(request);
-  if (!get) return res;
+  if (!get) return env.ASSETS.fetch(request);
   const m = BOT_PAGE_RE.exec(path);
-  if (m && res.status === 200) {
+  const livePath = path === "/" || path === "/trending" || path === "/recent";
+  if (!m && !(livePath && request.method === "GET")) return env.ASSETS.fetch(request);
+  const res = await env.ASSETS.fetch(unconditional(request));
+  if (m) {
     const [cat, code] = splitId(m[1]);
     const lc = code.toLowerCase();
     if (await isDead(env.DB, lc)) return gonePage(res, m[1], cat);
-    if (request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
+    if (res.status === 200 && request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
     return res;
   }
-  if (request.method === "GET" && (path === "/" || path === "/trending" || path === "/recent")) return livePage(res, env.DB, path);
-  return res;
+  return livePage(res, env.DB, path);
+}
+function unconditional(req) {
+  const h = new Headers(req.headers);
+  for (const k of ["if-none-match", "if-modified-since", "if-match", "if-unmodified-since", "if-range"]) h.delete(k);
+  return new Request(req, { headers: h });
 }
 export {
   index_default as default

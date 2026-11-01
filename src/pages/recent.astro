@@ -12,13 +12,13 @@ const bySlug = new Map(allCategories.map((c) => [c.slug, c]));
 >
   <div class="wrap page-head">
     <h1>Recent.<br />Freshly refreshed.</h1>
-    <p>Last updated <time datetime={recent.asOf}>{recent.asOf}</time>. The platform does not publish a date per bot, so this list is ordered by category refresh.</p>
+    <p data-live="recent-note">Last updated <time datetime={recent.asOf}>{recent.asOf}</time>. The platform does not publish a date per bot, so this list is ordered by category refresh.</p>
   </div>
-  <div class="wrap block">
+  <div class="wrap block gz-block">
     <CategoryChips />
   </div>
-  <div class="wrap block list">
-    <ol class="grid ranked">
+  <div class="wrap block gz-block list">
+    <ol class="grid ranked gz-ranked" data-live="recent-list">
       {recent.categories.map((c, i) => (
         <li data-rank={i + 1}>
           <a class="panel tile" href={`/categories/${c.slug}/`}>

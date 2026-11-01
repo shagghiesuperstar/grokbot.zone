@@ -12,7 +12,7 @@ const { bot, trending = false, showCategory = false, level = 3 } = Astro.props;
 const cat = categoryBySlug.get(bot.cat)!;
 const Heading = `h${level}` as 'h2' | 'h3';
 ---
-<article class="card panel">
+<article class="card panel gz-botcard">
   <Heading class="name"><a href={`/bots/${bot.slug}/`}>{bot.name}</a></Heading>
   {bot.author && <p class="by">by {bot.author}</p>}
   <p class="desc">{bot.description}</p>
@@ -21,18 +21,20 @@ const Heading = `h${level}` as 'h2' | 'h3';
     {showCategory && <a class="cat" href={`/categories/${cat.slug}/`}>{cat.label}</a>}
   </p>
 </article>
-<style>
-  .card { padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .35rem; }
-  .name { font-size: 1.3rem; overflow-wrap: anywhere; }
-  .name a { color: var(--text); text-decoration: none; }
-  .name a:hover { color: var(--olo); }
-  .by { margin: 0; color: var(--fuchsia); font-size: .9rem; font-weight: 500; overflow-wrap: anywhere; }
-  .desc { margin: .2rem 0 0; color: var(--text-muted); font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .foot { margin: auto 0 0; padding-top: .5rem; display: flex; gap: .75rem; flex-wrap: wrap; font-size: .8rem; }
-  .foot:empty { display: none; }
-  .trend { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--olo); }
-  .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--olo); animation: pulse 2s ease-out infinite; }
-  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(0 255 204 / .6); } 100% { box-shadow: 0 0 0 .6rem rgb(0 255 204 / 0); } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
-  .cat { color: var(--text-muted); }
+<style is:global>
+  /* Global and namespaced: the Worker renders the same markup for the live lists, so the rules
+     must not depend on Astro's per-component attribute. */
+  .gz-botcard { padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: .35rem; }
+  .gz-botcard .name { font-size: 1.3rem; overflow-wrap: anywhere; }
+  .gz-botcard .name a { color: var(--text); text-decoration: none; }
+  .gz-botcard .name a:hover { color: var(--olo); }
+  .gz-botcard .by { margin: 0; color: var(--fuchsia); font-size: .9rem; font-weight: 500; overflow-wrap: anywhere; }
+  .gz-botcard .desc { margin: .2rem 0 0; color: var(--text-muted); font-size: .95rem; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .gz-botcard .foot { margin: auto 0 0; padding-top: .5rem; display: flex; gap: .75rem; flex-wrap: wrap; font-size: .8rem; }
+  .gz-botcard .foot:empty { display: none; }
+  .gz-botcard .trend { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--olo); }
+  .gz-botcard .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--olo); animation: gz-pulse 2s ease-out infinite; }
+  @keyframes gz-pulse { 0% { box-shadow: 0 0 0 0 rgb(0 255 204 / .6); } 100% { box-shadow: 0 0 0 .6rem rgb(0 255 204 / 0); } }
+  @media (prefers-reduced-motion: reduce) { .gz-botcard .dot { animation: none; } }
+  .gz-botcard .cat { color: var(--text-muted); }
 </style>

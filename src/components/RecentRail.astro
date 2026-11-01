@@ -7,10 +7,10 @@ const cats = recent.categories.slice(0, 8);
   <section class="block wrap" aria-labelledby="recent-h" data-rail="recent">
     <div class="section-head">
       <h2 id="recent-h">Recently refreshed</h2>
-      <p class="asof">Categories refreshed <time datetime={recent.asOf}>{recent.asOf}</time>.</p>
+      <p class="asof" data-live="recent-asof">Categories refreshed <time datetime={recent.asOf}>{recent.asOf}</time>.</p>
     </div>
-    <p class="muted basis">The platform does not publish a date per bot, so this list is ordered by category refresh. Each category below was last refreshed on {recent.asOf}.</p>
-    <ul class="grid">
+    <p class="muted basis" data-live="recent-basis">The platform does not publish a date per bot, so this list is ordered by category refresh. Each category below was last refreshed on {recent.asOf}.</p>
+    <ul class="grid" data-live="recent-rail">
       {cats.map((c) => (
         <li>
           <a class="panel tile" href={`/categories/${c.slug}/`}>

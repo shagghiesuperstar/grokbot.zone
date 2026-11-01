@@ -94,3 +94,10 @@ section.block { padding: 3rem 0; }
 .page-head p { max-width: 62ch; color: var(--text-muted); }
 
 [hidden] { display: none !important; }
+
+/* Ranked and live lists. Global because the Worker renders the same markup into the static pages. */
+.gz-block { padding: 1rem 0; }
+.gz-ranked { list-style: none; counter-reset: none; }
+.gz-ranked li { position: relative; display: flex; flex-direction: column; gap: .4rem; }
+.gz-ranked .rank { font-family: 'Anton', sans-serif; font-size: 1.6rem; color: var(--olo); line-height: 1; }
+.gz-ranked li > .card { flex: 1; }

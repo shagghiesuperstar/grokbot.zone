@@ -47,7 +47,7 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
       <div><dt>Listing snapshot</dt><dd><time datetime={meta.asOf}>{meta.asOf}</time></dd></div>
     </dl>
     <div class="actions">
-      <a class="btn" href={url} rel="noopener noreferrer" target="_blank" data-open-bot>Open this bot</a>
+      <a class="btn" href={`/go/${bot.code}`} rel="nofollow noopener" target="_blank" data-open-bot>Open this bot</a>
       <button type="button" class="btn ghost" data-share data-title={bot.name} data-url={`https://grokbot.zone${path}`}>Share</button>
       <span class="muted share-status" role="status" aria-live="polite" data-share-status></span>
     </div>

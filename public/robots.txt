@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /go/
 
 Sitemap: https://grokbot.zone/sitemap-index.xml

@@ -8,9 +8,9 @@ const bots = trending.global.map((s) => botBySlug.get(s)!).filter(Boolean);
   <section class="block wrap" aria-labelledby="trending-h" data-rail="trending">
     <div class="section-head">
       <h2 id="trending-h" class="th"><RivePlayer box="inline" size="32px" src="/riv/bot-pulse.riv"><span class="pdot"></span></RivePlayer>Trending</h2>
-      <p class="asof">Popularity order as of <time datetime={trending.asOf}>{trending.asOf}</time>. A dated snapshot, not a live feed.</p>
+      <p class="asof" data-live="trending-asof">Popularity order as of <time datetime={trending.asOf}>{trending.asOf}</time>. A dated snapshot, not a live feed.</p>
     </div>
-    <ul class="grid">
+    <ul class="grid" data-live="trending-rail">
       {bots.map((b) => <li><BotCard bot={b} trending showCategory /></li>)}
     </ul>
   </section>

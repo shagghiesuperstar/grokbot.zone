@@ -25,7 +25,7 @@ jobs:
           ref: main
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: 22
+          node-version: 22.23.4 # Astro 7 needs >= 22.23.4; the runner's cached 22.x can be older
       - run: corepack enable && corepack prepare pnpm@10.11.1 --activate
       - name: Fetch the live snapshot (GET only)
         run: |

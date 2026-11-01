@@ -5,7 +5,7 @@ import classifierJson from '../../data/classifier.json';
 import type { Classifier } from './classify';
 import { discover } from './discovery';
 import { denylist, scrub } from './ingest';
-import { MAX_UPSTREAM, THROTTLE_HOLD_MS, Upstream, runChecks, type BotRow, type Patch } from './liveness';
+import { MAX_PENDING_PER_RUN, MAX_UPSTREAM, THROTTLE_HOLD_MS, Upstream, runChecks, type BotRow, type Patch } from './liveness';
 import { build } from './trending';
 import { HOUR, addDays, dayOf, iso, metaPut, readMeta, realClock, type Clock } from './util';
 
@@ -84,7 +84,7 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
     const room = up.left;
     if (room > 0) {
       const sel = (status: string, n: number) => db.prepare(`SELECT ${COLS} FROM bots WHERE status = ? ORDER BY last_checked LIMIT ?`).bind(status, n);
-      const [pending, live, dead] = await db.batch<BotRow>([sel('pending', list.length ? room : 0), sel('live', room), sel('dead', room)]);
+      const [pending, live, dead] = await db.batch<BotRow>([sel('pending', list.length ? Math.min(room, MAX_PENDING_PER_RUN) : 0), sel('live', room), sel('dead', room)]);
       const cmp = (a: BotRow, b: BotRow) => (a.last_checked ?? '').localeCompare(b.last_checked ?? '') || (a.code_lc < b.code_lc ? -1 : 1);
       const rows = [...pending.results, ...[...live.results, ...dead.results].sort(cmp)];
       const run = await runChecks(up, rows, clock, list, MODEL);

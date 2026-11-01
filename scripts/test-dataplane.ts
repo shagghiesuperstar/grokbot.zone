@@ -218,6 +218,15 @@ await t('cron: a pending bot is read, scrubbed and filed; an excluded one is nev
   assert.equal(ch.excluded, 1); assert.equal(ch.added.length, 1); assert.ok(!JSON.stringify(ch).includes(FAKE));
   assert.ok(!JSON.stringify(db.rows('SELECT k, v FROM meta')).includes(FAKE), 'no denylist token in stored output');
 });
+await t('pending: a 200 page without a title is stamped so it rotates; pending cannot starve live checks', async () => {
+  const db = new FakeD1(); for (let i = 0; i < 50; i++) insertBot(db, CODE(i), { source: 'archive', status: 'pending', name: '', category: null, cats: null });
+  for (let i = 100; i < 140; i++) insertBot(db, CODE(i));
+  const c = clock(); const p = platform((url) => ({ status: 200, body: url.endsWith('/marketplace') || url.includes('archive') ? '' : '<head><title>x</title></head>' }), c);
+  await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' }, c.t, { fetch: p.f, clock: c });
+  assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE status='pending' AND last_checked IS NOT NULL").n, 30);
+  assert.ok(db.one("SELECT COUNT(*) AS n FROM bots WHERE status='live' AND last_checked IS NOT NULL").n >= 5, 'live rows still checked');
+  assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE status='pending'").n, 50);
+});
 await t('O1: NOREF_TOKENS missing -> non-seed bots stay pending, never fetched, health says missing', async () => {
   const db = new FakeD1(); insertBot(db, CODE(1), { source: 'listing', status: 'pending', name: '', category: null, cats: null });
   const c = clock(); const p = platform(() => ({ status: 200, body: '<head><meta property="og:title" content="X by Y"></head>' }), c);
@@ -338,6 +347,8 @@ await t('telemetry: crawler UA = 0, HEAD = 0, prefetch = 0, no UA = 0', async ()
   await get(env, `/go/${LIVE}`, { 'user-agent': HUMAN, purpose: 'prefetch' }); await get(env, `/go/${LIVE}`, { 'user-agent': HUMAN, 'sec-purpose': 'prefetch;prerender' });
   assert.deepEqual(opens(db), { o: 0, v: 0 });
   assert.equal(isHuman(new Request('https://x/', { headers: { 'user-agent': HUMAN } })), true);
+  assert.equal(isHuman(new Request('https://x/', { headers: { 'user-agent': HUMAN, 'sec-fetch-dest': 'document' } })), true);
+  for (const dest of ['image', 'script', 'empty', 'iframe']) assert.equal(isHuman(new Request('https://x/', { headers: { 'user-agent': HUMAN, 'sec-fetch-dest': dest } })), false, dest);
 });
 await t('telemetry: a bot page view counts once for a human GET with a 200, not HEAD and not a 404', async () => {
   resetSaltCache(); resetDeadCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);

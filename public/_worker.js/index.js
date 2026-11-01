@@ -5847,6 +5847,7 @@ async function discover(up, st, nowMs) {
 
 // src/worker/dp/liveness.ts
 var MAX_UPSTREAM = 40;
+var MAX_PENDING_PER_RUN = 30;
 var GAP_MS = 1100;
 var THROTTLE_HOLD_MS = 6 * 36e5;
 var MIN_SAMPLE = 4;
@@ -5932,19 +5933,20 @@ async function judge(up, row, r, method) {
 async function ingestCheck(up, row, clock, list, model) {
   const r = await up.request(botUrl(row.code), { method: "GET", redirect: "manual" });
   if (!r) return {};
+  const retryLater = { last_checked: iso(clock.now()) };
   const v = await judge(up, row, r, "GET");
   if (v.kind === "live") {
     let res = r.status === 200 ? r.res : null;
     let code = row.code;
     if (!res && v.code) {
       const r2 = await up.request(botUrl(v.code), { method: "GET", redirect: "manual" });
-      if (!r2 || r2.status !== 200) return {};
+      if (!r2 || r2.status !== 200) return retryLater;
       res = r2.res;
       code = v.code;
-    } else if (!res) return {};
+    } else if (!res) return retryLater;
     const head = parseHead(await readHead(res));
     const got = ingest(head, code, list, model);
-    if (!got) return {};
+    if (!got) return retryLater;
     return {
       ...applyVerdict(row, { kind: "live", code }, clock.now()),
       name: got.name,
@@ -7189,7 +7191,7 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
     const room = up.left;
     if (room > 0) {
       const sel = (status, n) => db.prepare(`SELECT ${COLS} FROM bots WHERE status = ? ORDER BY last_checked LIMIT ?`).bind(status, n);
-      const [pending, live, dead] = await db.batch([sel("pending", list.length ? room : 0), sel("live", room), sel("dead", room)]);
+      const [pending, live, dead] = await db.batch([sel("pending", list.length ? Math.min(room, MAX_PENDING_PER_RUN) : 0), sel("live", room), sel("dead", room)]);
       const cmp = (a, b) => (a.last_checked ?? "").localeCompare(b.last_checked ?? "") || (a.code_lc < b.code_lc ? -1 : 1);
       const rows = [...pending.results, ...[...live.results, ...dead.results].sort(cmp)];
       const run = await runChecks(up, rows, clock, list, MODEL);
@@ -7424,6 +7426,8 @@ function isHuman(req) {
   if (req.method !== "GET") return false;
   const ua = req.headers.get("user-agent") ?? "";
   if (!ua || BLOCKED_UA.test(ua)) return false;
+  const dest = req.headers.get("sec-fetch-dest");
+  if (dest && dest !== "document") return false;
   if (/prefetch/i.test(req.headers.get("purpose") ?? "") || /prefetch/i.test(req.headers.get("sec-purpose") ?? "")) return false;
   return true;
 }

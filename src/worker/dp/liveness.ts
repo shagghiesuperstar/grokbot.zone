@@ -10,6 +10,8 @@ export interface BotRow {
 }
 
 export const MAX_UPSTREAM = 40;
+/** Pending bots take at most this many requests of a run, so live and dead rows are always checked too. */
+export const MAX_PENDING_PER_RUN = 30;
 export const GAP_MS = 1100;
 export const THROTTLE_HOLD_MS = 6 * 3600_000;
 const MIN_SAMPLE = 4; // a 403/429 share is only meaningful over a handful of answers
@@ -98,6 +100,8 @@ async function judge(up: Upstream, row: BotRow, r: { status: number; res: Respon
 async function ingestCheck(up: Upstream, row: BotRow, clock: Clock, list: string[], model: Classifier): Promise<Patch> {
   const r = await up.request(botUrl(row.code), { method: 'GET', redirect: 'manual' });
   if (!r) return {};
+  // Every answered attempt stamps last_checked, so a page that never yields a title rotates to the back of the queue.
+  const retryLater: Patch = { last_checked: iso(clock.now()) };
   const v = await judge(up, row, r, 'GET');
   if (v.kind === 'live') {
     // judge() only read the status; the page is parsed here from whichever response answered 200.
@@ -105,12 +109,12 @@ async function ingestCheck(up: Upstream, row: BotRow, clock: Clock, list: string
     let code = row.code;
     if (!res && v.code) {
       const r2 = await up.request(botUrl(v.code), { method: 'GET', redirect: 'manual' });
-      if (!r2 || r2.status !== 200) return {};
+      if (!r2 || r2.status !== 200) return retryLater;
       res = r2.res; code = v.code;
-    } else if (!res) return {};
+    } else if (!res) return retryLater;
     const head = parseHead(await readHead(res!));
     const got = ingest(head, code, list, model);
-    if (!got) return {}; // 200 without a title: leave it pending, it is looked at again later
+    if (!got) return retryLater; // 200 without a title: stays pending, looked at again after the rest of the queue
     return {
       ...applyVerdict(row, { kind: 'live', code }, clock.now()),
       name: got.name, author: got.author, description: got.description,

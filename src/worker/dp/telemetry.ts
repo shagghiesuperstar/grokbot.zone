@@ -9,6 +9,9 @@ export function isHuman(req: Request): boolean {
   if (req.method !== 'GET') return false;
   const ua = req.headers.get('user-agent') ?? '';
   if (!ua || BLOCKED_UA.test(ua)) return false;
+  // A page load is a document navigation; an <img>, <script> or fetch() from another site is not a visit.
+  const dest = req.headers.get('sec-fetch-dest');
+  if (dest && dest !== 'document') return false;
   if (/prefetch/i.test(req.headers.get('purpose') ?? '') || /prefetch/i.test(req.headers.get('sec-purpose') ?? '')) return false;
   return true;
 }

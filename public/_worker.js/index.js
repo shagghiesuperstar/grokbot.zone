@@ -5793,6 +5793,7 @@ var metaPut = (db, k, v) => db.prepare("INSERT INTO meta(k, v) VALUES(?, ?) ON C
 var LISTING_URL = "https://x.ai/bot/marketplace";
 var CDX = "https://web.archive.org/cdx/search/cdx";
 var CDX_ROWS = 500;
+var ARCHIVE_TIMEOUT_MS = 9e4;
 function parseListing(html) {
   const out = /* @__PURE__ */ new Map();
   for (const m of html.matchAll(/href=["'](?:https?:\/\/(?:www\.)?x\.ai)?\/bot\/([A-Za-z0-9_-]+)["'/?#]/g)) {
@@ -5827,7 +5828,7 @@ async function discover(up, st, nowMs) {
     q.set("showResumeKey", "true");
     if (st.archive_resume) q.set("resumeKey", st.archive_resume);
   }
-  const a = await up.request(`${CDX}?${q}`, { method: "GET" }, false);
+  const a = await up.request(`${CDX}?${q}`, { method: "GET" }, false, ARCHIVE_TIMEOUT_MS);
   if (a && a.status === 200 && a.res) {
     let rows = null;
     try {
@@ -5868,7 +5869,7 @@ var Upstream = class {
     return this.responses >= MIN_SAMPLE && this.blocked / this.responses >= 0.5;
   }
   /** null = budget spent or throttled; status 0 = network error or timeout. */
-  async request(url, init = {}, track = true) {
+  async request(url, init = {}, track = true, timeoutMs = 9e3) {
     if (this.left <= 0 || this.throttled) return null;
     this.left--;
     this.used++;
@@ -5876,7 +5877,7 @@ var Upstream = class {
     if (wait > 0) await this.clock.sleep(wait);
     this.last = this.clock.now();
     try {
-      const res = await this.f(url, { ...init, headers: { "User-Agent": UA, ...init.headers ?? {} }, signal: AbortSignal.timeout(9e3) });
+      const res = await this.f(url, { ...init, headers: { "User-Agent": UA, ...init.headers ?? {} }, signal: AbortSignal.timeout(timeoutMs) });
       if (track) {
         this.responses++;
         if (res.status === 403 || res.status === 429) this.blocked++;

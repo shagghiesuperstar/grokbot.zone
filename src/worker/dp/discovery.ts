@@ -6,6 +6,7 @@ import { iso } from './util';
 export const LISTING_URL = 'https://x.ai/bot/marketplace';
 const CDX = 'https://web.archive.org/cdx/search/cdx';
 export const CDX_ROWS = 500;
+const ARCHIVE_TIMEOUT_MS = 90_000;
 
 export interface Found { code: string; source: 'listing' | 'archive' }
 
@@ -52,7 +53,8 @@ export async function discover(up: Upstream, st: DiscoveryState, nowMs: number):
   const q = new URLSearchParams({ url: 'x.ai/bot/', matchType: 'prefix', output: 'json', fl: 'timestamp,original', 'filter': 'statuscode:200', collapse: 'urlkey', limit: String(CDX_ROWS) });
   if (st.archive_from) q.set('from', st.archive_from);
   else { q.set('showResumeKey', 'true'); if (st.archive_resume) q.set('resumeKey', st.archive_resume); }
-  const a = await up.request(`${CDX}?${q}`, { method: 'GET' }, false);
+  // A 500-row archive page takes ~40 s (measured), far beyond the 9 s a platform HEAD gets.
+  const a = await up.request(`${CDX}?${q}`, { method: 'GET' }, false, ARCHIVE_TIMEOUT_MS);
   if (a && a.status === 200 && a.res) {
     let rows: unknown = null;
     try { rows = await a.res.json(); } catch { /* an unreadable page is retried tomorrow */ }

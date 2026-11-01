@@ -28,14 +28,14 @@ export class Upstream {
   get throttled() { return this.responses >= MIN_SAMPLE && this.blocked / this.responses >= 0.5; }
 
   /** null = budget spent or throttled; status 0 = network error or timeout. */
-  async request(url: string, init: RequestInit = {}, track = true): Promise<{ status: number; res: Response | null } | null> {
+  async request(url: string, init: RequestInit = {}, track = true, timeoutMs = 9000): Promise<{ status: number; res: Response | null } | null> {
     if (this.left <= 0 || this.throttled) return null;
     this.left--; this.used++;
     const wait = GAP_MS - (this.clock.now() - this.last);
     if (wait > 0) await this.clock.sleep(wait);
     this.last = this.clock.now();
     try {
-      const res = await this.f(url, { ...init, headers: { 'User-Agent': UA, ...(init.headers ?? {}) }, signal: AbortSignal.timeout(9000) });
+      const res = await this.f(url, { ...init, headers: { 'User-Agent': UA, ...(init.headers ?? {}) }, signal: AbortSignal.timeout(timeoutMs) });
       if (track) { this.responses++; if (res.status === 403 || res.status === 429) this.blocked++; }
       return { status: res.status, res };
     } catch {

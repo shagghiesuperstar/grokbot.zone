@@ -144,7 +144,7 @@ function flags(env: Env): Response {
 
 // ---- submission intake (spec 08 D30): a submitted code becomes a pending bot, exactly like a discovered one ----
 
-export const SUBMISSIONS_PER_DAY = 200;
+const SUBMISSIONS_PER_DAY = 200;
 /** known = a bots row (any status) already exists; cap = today's 200 new rows are used; new = the pending row was inserted. */
 async function intakeBot(db: D1Database, code: string, nowMs = Date.now()): Promise<'new' | 'known' | 'cap'> {
   const lc = code.toLowerCase();

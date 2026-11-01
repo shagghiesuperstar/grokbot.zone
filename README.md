@@ -3,7 +3,7 @@
 A static, searchable directory of public Grok bot listings, live at https://grokbot.zone.
 
 <!-- counts:start -->
-- 7,290 distinct bots published from a raw corpus snapshot of 7,414 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
+- 7,292 distinct bots published from a raw corpus snapshot of 7,414 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
 <!-- counts:end -->
 - Search, categories, Trending, Recent, Related, a page for every bot, FAQ, submit page.
 - Trending and Recent come from committed, dated signal files in `data/signals/`. There is no live popularity feed, and the site says so.
@@ -41,14 +41,18 @@ Two counts, two layers, and they are never interchangeable:
 
 <!-- layers:start -->
 - `data/corpus/index.json` `rawTotalBots` (7,414) is the **raw snapshot**: listing records.
-- `src/data/meta.json` `totalBots` (7,290) is the **published** count: distinct bots.
-- `src/data/meta.json` `totalListings` (7,329) is the category listings: a bot in two
+- `src/data/meta.json` `totalBots` (7,292) is the **published** count: distinct bots.
+- `src/data/meta.json` `totalListings` (7,331) is the category listings: a bot in two
   categories is listed in both, so it is counted twice.
 <!-- layers:end -->
 
 `scripts/assert-counts.ts` fails the build if any of those three drifts from the data it
 describes, and `scripts/sync-readme.ts` writes the counts above from the generated files
 so the prose cannot drift either.
+
+## New bots need no deploy
+
+The Worker's `*/10` job finds bots and writes them to D1. A bot that has no static page gets its page rendered from D1 into the built `/bot-template/` (never indexed itself, answered 404 publicly), and search, category pages, the feeds and the sitemap merge D1's live and dead bots at request time. A submitted bot link becomes a pending row and is handled like a discovered one, with no person approving it. `.github/workflows/refresh.yml` only backs the live catalog up into `data/live/` once a day; it does not deploy.
 
 ## Deploy
 

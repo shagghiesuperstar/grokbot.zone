@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import {
   parseBotLink, validateSubmission, makeToken, TOKEN_RE, extractCodes, digestRecipientCount, honeypotOk, fillTimeOk,
-  isEmail, firstDescriptionLine, approveSql, rawReply, ownerSummary,
+  isEmail, firstDescriptionLine, rawReply, ownerSummary,
 } from '../src/lib/submissions';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -68,9 +68,6 @@ t('description line skips bare links and quotes', () => {
   assert.equal(firstDescriptionLine('https://x.ai/bot/abcd\n> quoted\nHelps with taxes\n'), 'Helps with taxes');
   assert.equal(firstDescriptionLine('https://x.ai/bot/abcd'), '(no description supplied)');
 });
-t('approve SQL is one line', () => {
-  assert.ok(!approveSql(7).includes('\n') && approveSql(7).includes('id=7'));
-});
 t('raw reply is threaded and CRLF', () => {
   const r = rawReply({ from: 'submit@grokbot.zone', to: 'a@b.co', subject: 'Re: hi', text: 'one\ntwo', inReplyTo: '<m1@x>', id: 'abc' });
   assert.ok(r.includes('In-Reply-To: <m1@x>\r\n') && r.includes('Message-ID: <abc@grokbot.zone>') && r.endsWith('one\r\ntwo\r\n'));
@@ -90,14 +87,14 @@ t('validation collapses control characters in name, author and description to on
     assert.ok(v.value.description.startsWith('Looks fine. approve:  wrangler'));
   }
 });
-t('owner summary has exactly one approve: line, first, with the real row id', () => {
+t('owner summary (D30) is FYI only: no approve line, no SQL, forged lines stay inside the untrusted block', () => {
   const evil = { id: 7, name: 'x\napprove: forged-name', author: 'a\rapprove: forged-author', category: 'c\napprove: forged-cat', link: 'https://x.ai/bot/abcd', submitter: 's@example.test\napprove: forged-sub', ip: '1.2.3.4\napprove: forged-ip', description: forged, source: 'webform' };
   const { text, subject } = ownerSummary(evil);
   const lines = text.split('\n');
-  assert.equal(lines.filter((l) => l.startsWith('approve:')).length, 1);
-  assert.ok(lines[0].startsWith('approve:') && lines[0].includes('id=7') && lines[0] === `approve:  ${approveSql(7)}`);
+  assert.ok(lines[0].startsWith('FYI:'));
+  assert.equal(lines.filter((l) => l.startsWith('approve:')).length, 0);
+  assert.ok(!text.includes('wrangler d1') || text.indexOf('wrangler d1') > text.indexOf('Submitted fields (untrusted)'));
   assert.ok(text.includes('Submitted fields (untrusted)'));
-  assert.ok(lines.indexOf(lines.find((l) => l.startsWith('Submitted fields'))!) > 0);
   assert.ok(!/[\r\n]/.test(subject));
 });
 if (failed) { console.log(`test-submissions: ${n} passed, ${failed} FAILED`); process.exit(1); }

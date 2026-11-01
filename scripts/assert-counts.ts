@@ -3,6 +3,7 @@
 // Usage: tsx scripts/assert-counts.ts
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { readLive } from './lib-live';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const readJson = (f: string) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
@@ -22,7 +23,9 @@ const fails: string[] = [];
 if (bots.length !== published) fails.push(`src/data/bots.json has ${bots.length} records, meta.totalBots says ${published}`);
 const sum = (categories as { count: number }[]).reduce((n, c) => n + c.count, 0);
 if (sum !== listings) fails.push(`category counts sum to ${sum}, meta.totalListings says ${listings}`);
-if (published > raw) fails.push(`published ${published} exceeds the raw corpus ${raw}`);
+// Bots the data plane added after the seed are published without being in the raw corpus.
+const liveAdded = readLive(new Set((readJson('src/data/categories.json') as { slug: string }[]).map((c) => c.slug))).added.length;
+if (published > raw + liveAdded) fails.push(`published ${published} exceeds the raw corpus ${raw} plus ${liveAdded} added since`);
 if (listings < published) fails.push(`listing total ${listings} is below the bot total ${published}`);
 
 // Every category count is the number of bots whose category set contains it, and every bot

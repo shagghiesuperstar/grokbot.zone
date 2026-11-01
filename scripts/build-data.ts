@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { stripEmails } from '../src/lib/strip-emails';
+import { readLive } from './lib-live';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const corpusDir = resolve(process.argv[2] ?? process.env.CORPUS_DIR ?? join(ROOT, 'data/corpus'));
@@ -123,6 +124,15 @@ const bots: Bot[] = [];
     bots.push(merged.get(k)!);
   }
 }
+// ---- live changes (D24): seed + added - dead ----
+// data/live/changes.json is the daily snapshot of what the data plane found. A bot the platform no longer
+// shares is dropped; a bot it found, with a category, gets a page. No file means no change.
+const live = readLive(new Set(categories.map((c) => c.slug)));
+if (live.dead.size) { const keep = bots.filter((b) => !live.dead.has(b.code.toLowerCase())); bots.length = 0; bots.push(...keep); }
+{
+  const have = new Set(bots.map((b) => b.code.toLowerCase()));
+  for (const a of live.added) if (!have.has(a.code.toLowerCase()) && !live.dead.has(a.code.toLowerCase())) { bots.push(a); have.add(a.code.toLowerCase()); }
+}
 // A category lists every bot that belongs to it, so its count is the number of listings,
 // not the number of distinct bots: a bot in two categories is listed in both.
 const catCounts = new Map<string, number>();
@@ -152,6 +162,7 @@ const rank = new Map<string, number>();
 const seenGlobal = new Set<string>();
 (pop.global as string[]).forEach((code, i) => {
   const k = code.toLowerCase();
+  if (live.dead.has(k)) return; // dropped as dead; the seed order simply skips it
   if (!byCode.has(k)) fail('popularity.json', 'global', `unknown code ${code}`);
   if (seenGlobal.has(k)) fail('popularity.json', 'global', `duplicate code ${code} after dedupe`);
   seenGlobal.add(k);
@@ -162,6 +173,7 @@ for (const [label, codes] of Object.entries(pop.perCategory as Record<string, st
   const seen = new Set<string>();
   codes.forEach((code, i) => {
     const k = code.toLowerCase();
+    if (live.dead.has(k)) return;
     if (!byCode.has(k)) fail('popularity.json', label, `unknown code ${code}`);
     if (seen.has(k)) fail('popularity.json', label, `duplicate code ${code} after dedupe`);
     seen.add(k);

@@ -1,6 +1,7 @@
 // R4/R5: dated signal files -> trending.json + recent.json. Every output carries its own asOf.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { readLive } from './lib-live';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const outData = process.env.OUT_DATA ? resolve(process.env.OUT_DATA) : join(ROOT, 'src/data');
@@ -10,6 +11,7 @@ const cats: { slug: string; label: string; count: number }[] = read(join(outData
 // Look up by lowercased code: a signal entry may name the spelling that the dedupe
 // dropped; the survivor of that group differs only by letter case, so the lowercased key
 // resolves both spellings to the same bot and the signal keeps its bot and its order.
+const dead = readLive(new Set(cats.map((c) => c.slug))).dead; // bots dropped as dead leave the seed order
 const idOf = new Map(bots.map((b) => [b.code.toLowerCase(), b.slug]));
 const codeOf = new Map(bots.map((b) => [b.code.toLowerCase(), b.code]));
 const slugOf = new Map(cats.map((c) => [c.label, c.slug]));
@@ -42,11 +44,11 @@ const pop = read(join(ROOT, 'data/signals/popularity.json'));
 const trending = {
   asOf: pop.asOf as string,
   basis: pop.basis as string,
-  global: unique((pop.global as string[]).map((c) => slugFor(c)), 'global trending'),
+  global: unique((pop.global as string[]).filter((c) => !dead.has(c.toLowerCase())).map((c) => slugFor(c)), 'global trending'),
   perCategory: Object.fromEntries(
     Object.entries(pop.perCategory as Record<string, string[]>).map(([label, codes]) => [
       must(slugOf.get(label), `category ${label}`),
-      unique(codes.map((c) => slugFor(c)), `category ${label}`),
+      unique(codes.filter((c) => !dead.has(c.toLowerCase())).map((c) => slugFor(c)), `category ${label}`),
     ]),
   ),
 };

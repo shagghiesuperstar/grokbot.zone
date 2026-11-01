@@ -1,0 +1,69 @@
+name: refresh
+
+# D24: once a day, pull what the data plane found from the live site, rebuild, commit the snapshot to main,
+# and deploy only when the Cloudflare secrets exist. The daily commit also keeps the schedule alive
+# (GitHub disables scheduled workflows after 60 days without repository activity).
+on:
+  schedule:
+    - cron: '40 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: main
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - run: corepack enable && corepack prepare pnpm@10.11.1 --activate
+      - name: Fetch the live snapshot (GET only)
+        run: |
+          mkdir -p data/live
+          for f in catalog/changes trending recent; do
+            curl -fsS --retry 3 --retry-delay 10 -A 'GrokBotZone-refresh/1.0 (+https://grokbot.zone/)' "https://grokbot.zone/api/v1/$f.json" -o "data/live/$(basename "$f").json.new"
+          done
+          node -e '
+            const fs = require("fs");
+            const c = JSON.parse(fs.readFileSync("data/live/changes.json.new", "utf8"));
+            if (!Array.isArray(c.added) || !Array.isArray(c.dead)) throw new Error("changes.json: added/dead missing");
+            for (const f of ["trending", "recent"]) { const j = JSON.parse(fs.readFileSync(`data/live/${f}.json.new`, "utf8")); if (!j.generatedAt) throw new Error(`${f}.json: not live data`); }
+          '
+          for f in changes trending recent; do mv "data/live/$f.json.new" "data/live/$f.json"; done
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm check:counts
+      - name: Commit the snapshot
+        run: |
+          git config user.name "grokbot-zone refresh"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/live
+          if git diff --cached --quiet; then echo "no change in data/live"; else git commit -m "data(live): daily snapshot $(date -u +%F)" && git push origin HEAD:main; fi
+      - name: Check deploy credentials
+        id: creds
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID are not set, so the rebuilt site is not deployed. Operator item."
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.creds.outputs.present == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@4.123.0 deploy --config wrangler.toml
+      - if: steps.creds.outputs.present == 'true'
+        run: scripts/verify-live.sh https://grokbot.zone

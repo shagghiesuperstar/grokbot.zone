@@ -16,6 +16,7 @@ import { runDataPlane } from '../src/worker/dp/cron';
 import { recentList, trendingList } from '../src/worker/dp/serve';
 import { isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
+import { readLive } from './lib-live';
 import model from '../src/data/classifier.json';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -418,6 +419,21 @@ await t('submissions: an approved submission becomes a pending bot (source submi
   assert.ok(r && r.source === 'submission' && r.category === 'coding-software'); assert.ok(!/@/.test(r.author + r.description));
   assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE code_lc='pendcode0001'").n, 0);
   assert.equal(r.status, 'live', 'a submission that answers 200 goes live');
+});
+
+// ================= D24: the static build's view of the live snapshot =================
+await t('D24: readLive keeps categorised adds, drops category-less and malformed ones, scrubs emails, lists dead codes', () => {
+  const f = join(tmp, 'changes.json');
+  writeFileSync(f, JSON.stringify({ added: [
+    { code: 'AddedOne00000000001', name: 'Added', author: 'a@b.co', description: 'Mail a@b.co', category: 'coding-software' },
+    { code: 'NoCat0000000000001', name: 'No category', author: '', description: 'x', category: null },
+    { code: 'bad code!', name: 'Bad', author: '', description: 'x', category: 'coding-software' },
+    { code: 'AddedOne00000000001', name: 'Duplicate', author: '', description: 'x', category: 'coding-software' },
+  ], dead: ['DeadOne0000000000001'] }));
+  const r = readLive(new Set(['coding-software']), f);
+  assert.equal(r.added.length, 1); assert.equal(r.added[0].id, 'coding-software-AddedOne00000000001'); assert.ok(!/@/.test(r.added[0].author + r.added[0].description));
+  assert.ok(r.dead.has('deadone0000000000001'));
+  assert.deepEqual(readLive(new Set(), join(tmp, 'absent.json')).added, []);
 });
 
 // ================= switches =================

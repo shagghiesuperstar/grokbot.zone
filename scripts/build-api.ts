@@ -76,6 +76,8 @@ for (const b of bots) {
     asOf,
   });
 }
+// Spelling-preserving twin of codes.json: the Worker's /go/ falls back to it only when D1 is unavailable (spec 08 O6).
+put(join(apiDir, 'seed-codes.json'), { codes: [...new Set(bots.map((b) => b.code))].sort() });
 put(join(apiDir, 'codes.json'), { codes: [...new Set(bots.map((b) => b.code.toLowerCase()))].sort() });
 
 // Count guard: files emitted == dataset == meta.totalBots.

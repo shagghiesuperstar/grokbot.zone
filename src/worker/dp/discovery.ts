@@ -47,7 +47,11 @@ export async function discover(up: Upstream, st: DiscoveryState, nowMs: number):
   const found: Found[] = [];
   const state: Record<string, string> = {};
   const l = await up.request(LISTING_URL, { method: 'GET' }, true);
-  if (l && l.status === 200 && l.res) for (const code of parseListing(await l.res.text())) found.push({ code, source: 'listing' });
+  if (l && l.status === 200 && l.res) {
+    let html = '';
+    try { html = await l.res.text(); } catch { /* a reset body read: no listing today, the archive part still runs (O7) */ }
+    for (const code of parseListing(html)) found.push({ code, source: 'listing' });
+  }
 
   // Backfill with resume keys until the archive is read through, then ask only for what is newer.
   const q = new URLSearchParams({ url: 'x.ai/bot/', matchType: 'prefix', output: 'json', fl: 'timestamp,original', 'filter': 'statuscode:200', collapse: 'urlkey', limit: String(CDX_ROWS) });

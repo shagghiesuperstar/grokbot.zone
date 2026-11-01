@@ -312,9 +312,9 @@ const envOf = (db: FakeD1, over: Record<string, unknown> = {}) => ({
 });
 const HUMAN = 'Mozilla/5.0 (Macintosh) AppleWebKit/605 Safari/605';
 const get = async (env: unknown, path: string, headers: Record<string, string> = {}, method = 'GET') => {
-  const ctx = ctxOf(); const q0 = (env as { DB: FakeD1 }).DB.queries;
+  const ctx = ctxOf(); const q0 = (env as { DB?: FakeD1 }).DB?.queries ?? 0;
   const res = await worker.fetch(new Request(`https://grokbot.zone${path}`, { method, redirect: 'manual', headers }), env, ctx); await ctx.drain();
-  return { res, queries: (env as { DB: FakeD1 }).DB.queries - q0 };
+  return { res, queries: ((env as { DB?: FakeD1 }).DB?.queries ?? 0) - q0 };
 };
 const opens = (db: FakeD1, code = LIVE.toLowerCase()) => db.one('SELECT COALESCE(SUM(opens),0) AS o, COALESCE(SUM(views),0) AS v FROM bot_daily WHERE code_lc=?', code);
 
@@ -367,11 +367,24 @@ await t('telemetry: a D1 error never reaches the visitor', async () => {
   const p = await get(env, `/bots/coding-software-${LIVE}/`, { 'user-agent': HUMAN }); assert.equal(p.res.status, 200);
   await record(db as never, 'view', 'x', new Request('https://x/', { headers: { 'user-agent': HUMAN } }));
 });
-await t('/go/ never redirects off x.ai even when D1 is down', async () => {
-  const db = new FakeD1(); const env = envOf(db); (db as any).prepare = () => { throw new Error('down'); };
-  const r = await get(env, `/go/${LIVE}`, { 'user-agent': HUMAN });
-  assert.equal(r.res.status, 302); assert.ok(r.res.headers.get('location')!.startsWith('https://x.ai/bot/'));
-  assert.equal((await get(env, '/go/bad%20code')).res.status, 404);
+const SEED_JSON = JSON.stringify({ codes: ['SeedCodeAbCdEfGhIjKl1', 'ShortSeed11'] });
+const seedAssets = { fetch: async (r: Request) => new URL(r.url).pathname === '/api/v1/seed-codes.json' ? new Response(SEED_JSON, { headers: { 'content-type': 'application/json' } }) : new Response('<html></html>', { status: 200, headers: { 'content-type': 'text/html' } }) };
+for (const [label, mode] of [['D1 throws', 'throw'], ['D1 binding missing', 'missing']] as const) {
+  await t(`O6 /go/ fails closed when ${label}: seed codes 302 to their own spelling, every other code 404, nothing recorded`, async () => {
+    resetSaltCache();
+    const db = new FakeD1(); const env = envOf(db, { ASSETS: seedAssets }); const writes: string[] = [];
+    if (mode === 'throw') (db as any).prepare = (sql: string) => { writes.push(sql); throw new Error('down'); }; else delete (env as any).DB;
+    for (const bad of [`/go/zzzzzzzzzzzzzzzzzzzz0`, '/go/short', '/go/' + 'a'.repeat(64), '/go/bad%20code']) { const r = await get(env, bad, { 'user-agent': HUMAN }); assert.equal(r.res.status, 404, bad); assert.equal(r.res.headers.get('location'), null, bad); }
+    const ok = await get(env, '/go/seedcodeabcdefghijkl1', { 'user-agent': HUMAN });
+    assert.equal(ok.res.status, 302); assert.equal(ok.res.headers.get('location'), 'https://x.ai/bot/SeedCodeAbCdEfGhIjKl1', 'the spelling comes from the built list, not the request');
+    assert.equal((await get(env, '/go/ShortSeed11', { 'user-agent': HUMAN })).res.status, 302, 'the 11-character seed bot still opens');
+    assert.ok(!writes.some((q) => /INSERT|UPDATE/i.test(q)), 'no telemetry write on the fallback path');
+  });
+}
+await t('O6 /go/ fails closed when D1 is down and the seed list cannot be read: 404, never a 5xx', async () => {
+  const db = new FakeD1(); (db as any).prepare = () => { throw new Error('down'); };
+  const env = envOf(db, { ASSETS: { fetch: async () => { throw new Error('assets down'); } } });
+  for (const p of [`/go/${LIVE}`, '/go/seedcodeabcdefghijkl1']) assert.equal((await get(env, p)).res.status, 404, p);
 });
 await t('read files: served from meta once the cron has run; static fallback before; D1 queries <= 50 each', async () => {
   resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
@@ -454,6 +467,47 @@ await t('submissions: an approved submission becomes a pending bot (source submi
   assert.ok(r && r.source === 'submission' && r.category === 'coding-software'); assert.ok(!/@/.test(r.author + r.description));
   assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE code_lc='pendcode0001'").n, 0);
   assert.equal(r.status, 'live', 'a submission that answers 200 goes live');
+});
+
+// ================= O7: one failed body read never ends the run =================
+const brokenBody = () => new ReadableStream({ pull() { throw new Error('connection reset'); } });
+function brokenPlatform(c: { t: number }, broken: (url: string) => boolean, ok: (url: string) => { status: number; body?: string }) {
+  const calls: string[] = [];
+  const f = (async (url: string, init: RequestInit = {}) => {
+    calls.push(String(url));
+    if (broken(String(url))) return new Response(brokenBody(), { status: 200 });
+    const r = ok(String(url)); return new Response(init.method === 'HEAD' ? null : r.body ?? '', { status: r.status });
+  }) as unknown as typeof fetch;
+  void c; return { f, calls };
+}
+await t('O7 F2: a listing page whose body read throws does not end the run (liveness and last_run still happen)', async () => {
+  const db = new FakeD1(); for (let i = 0; i < 5; i++) insertBot(db, CODE(i));
+  const c = clock(Date.parse('2026-11-10T04:10:00Z'));
+  const p = brokenPlatform(c, (u) => u.endsWith('/marketplace'), () => ({ status: 200 }));
+  const rep = await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' }, c.t, { fetch: p.f, clock: c });
+  assert.ok(rep.checked >= 5, `checked ${rep.checked}`); assert.ok(db.one("SELECT v FROM meta WHERE k='last_run'"), 'last_run stamped');
+  assert.equal(db.one('SELECT COUNT(*) AS n FROM bots WHERE last_checked IS NOT NULL').n >= 5, true);
+});
+await t('O7 F2: a pending bot whose page body throws is stamped and stays pending; the next rows are still checked', async () => {
+  const db = new FakeD1(); insertBot(db, CODE(1), { source: 'listing', status: 'pending', name: '', category: null, cats: null });
+  insertBot(db, CODE(2), { source: 'listing', status: 'pending', name: '', category: null, cats: null }); for (let i = 10; i < 14; i++) insertBot(db, CODE(i));
+  const c = clock(); const page = '<head><meta property="og:title" content="Tax Helper by Ann"><meta property="og:description" content="d"></head>';
+  const p = brokenPlatform(c, (u) => u.endsWith(CODE(1)), (u) => ({ status: 200, body: u.endsWith(CODE(2)) ? page : '' }));
+  const rep = await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' }, c.t, { fetch: p.f, clock: c });
+  const a = db.one('SELECT * FROM bots WHERE code_lc=?', CODE(1).toLowerCase());
+  assert.equal(a.status, 'pending'); assert.ok(a.last_checked, 'stamped so it rotates'); assert.equal(db.one('SELECT status FROM bots WHERE code_lc=?', CODE(2).toLowerCase()).status, 'live');
+  assert.ok(db.one("SELECT v FROM meta WHERE k='last_run'")); assert.ok(rep.checked >= 6, `checked ${rep.checked}`);
+});
+await t('O7: each phase has its own try; a failing phase is recorded as last_error and the run goes on', async () => {
+  const db = new FakeD1(); for (let i = 0; i < 3; i++) insertBot(db, CODE(i));
+  const orig = db.prepare.bind(db);
+  (db as any).prepare = (sql: string) => { if (/FROM bot_daily d JOIN bots/.test(sql)) throw new Error('D1_ERROR: boom sk-secret-stack\n    at x (file.js:1:1)'); return orig(sql); };
+  const c = clock(Date.parse('2026-11-10T12:05:00Z')); const p = platform(() => ({ status: 200 }), c);
+  const env = envOf(db); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  const le = JSON.parse(db.one("SELECT v FROM meta WHERE k='last_error'").v);
+  assert.equal(le.phase, 'trending'); assert.ok(le.at); assert.ok(!le.message.includes('\n') && !le.message.includes(' at x'), 'no stack');
+  assert.ok(db.one("SELECT v FROM meta WHERE k='last_run'"), 'last_run still stamped'); assert.ok(db.one("SELECT v FROM meta WHERE k='changes_json'"), 'recent/changes phase still ran');
+  const h = JSON.parse(await (await get(env, '/api/health')).res.text()); assert.equal(h.last_error.phase, 'trending');
 });
 
 // ================= D24: the static build's view of the live snapshot =================

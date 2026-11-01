@@ -112,7 +112,9 @@ async function ingestCheck(up: Upstream, row: BotRow, clock: Clock, list: string
       if (!r2 || r2.status !== 200) return retryLater;
       res = r2.res; code = v.code;
     } else if (!res) return retryLater;
-    const head = parseHead(await readHead(res!));
+    let html: string;
+    try { html = await readHead(res!); } catch { return retryLater; } // O7: a failed body read is a parse_fail, retried later
+    const head = parseHead(html);
     const got = ingest(head, code, list, model);
     if (!got) return retryLater; // 200 without a title: stays pending, looked at again after the rest of the queue
     return {
@@ -125,19 +127,30 @@ async function ingestCheck(up: Upstream, row: BotRow, clock: Clock, list: string
   return applyVerdict(row, v, clock.now());
 }
 
+/** At most this many of a run's upstream requests go to submission-sourced pending rows (spec 08 D30). */
+export const MAX_SUBMISSION_REQUESTS = 10;
+
 export interface RunResult { patches: { row: BotRow; patch: Patch }[]; checked: number; stoppedThrottled: boolean }
 
-/** Check rows in the order given until the budget or the throttle stops the run. */
+/** Check rows in the order given until the budget or the throttle stops the run. One row that throws never ends the run (O7). */
 export async function runChecks(up: Upstream, rows: BotRow[], clock: Clock, list: string[], model: Classifier): Promise<RunResult> {
   const patches: RunResult['patches'] = [];
+  let subSpent = 0;
   for (const row of rows) {
     if (up.left <= 0 || up.throttled) break;
+    const sub = row.status === 'pending' && row.source === 'submission';
+    if (sub && subSpent >= MAX_SUBMISSION_REQUESTS) continue;
+    // A submission row gets its own sub-limit: count requests (a redirect follow costs two), not rows.
+    const before = up.used, saved = up.left;
+    if (sub) up.left = Math.min(up.left, MAX_SUBMISSION_REQUESTS - subSpent);
     let patch: Patch;
-    if (row.status === 'pending' && row.name === '') {
-      patch = await ingestCheck(up, row, clock, list, model);
-    } else {
-      patch = applyVerdict(row, await headCheck(up, row), clock.now());
+    try {
+      if (row.status === 'pending' && row.name === '') patch = await ingestCheck(up, row, clock, list, model);
+      else patch = applyVerdict(row, await headCheck(up, row), clock.now());
+    } catch {
+      patch = { last_checked: iso(clock.now()) }; // parse_fail: status unchanged, looked at again after the rest of the queue
     }
+    if (sub) { const spent = up.used - before; subSpent += spent; up.left = saved - spent; }
     if (Object.keys(patch).length) patches.push({ row, patch });
   }
   return { patches, checked: patches.length, stoppedThrottled: up.throttled };

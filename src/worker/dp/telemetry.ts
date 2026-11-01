@@ -49,24 +49,33 @@ export async function record(db: D1Database | undefined, kind: Kind, codeLc: str
 }
 
 const GO_RE = /^[A-Za-z0-9_-]{1,64}$/;
-/** GET /go/<code>: 302 to the platform page for a catalog code; 404 for everything else. */
-export async function go(req: Request, db: D1Database | undefined, code: string, wait: (p: Promise<unknown>) => void): Promise<Response> {
+/** GET /go/<code>: 302 to the platform page for a catalog code; 404 for everything else.
+ *  O6: the gate fails CLOSED. When D1 is missing or a query throws, only a code in the deployed seed list
+ *  (`seed` returns its stored spelling) is sent on; every other code is a 404 and nothing is recorded. */
+export async function go(req: Request, db: D1Database | undefined, code: string, wait: (p: Promise<unknown>) => void, seed: (codeLc: string) => Promise<string | null> = async () => null): Promise<Response> {
   const notFound = () => new Response('Not found\n', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' } });
+  const redirect = (target: string) => new Response(null, { status: 302, headers: { Location: botUrl(target), 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex', 'Referrer-Policy': 'no-referrer' } });
   if (req.method !== 'GET' && req.method !== 'HEAD') return new Response('Method not allowed\n', { status: 405, headers: { Allow: 'GET, HEAD' } });
   if (!GO_RE.test(code)) return notFound();
-  let target = code;
+  const lc = code.toLowerCase();
+  let target: string | null = null;
+  let verified = false;
   if (db) {
     try {
-      const row = await db.prepare("SELECT code FROM bots WHERE code_lc = ? AND status IN ('live', 'pending')").bind(code.toLowerCase()).first<{ code: string }>();
+      const row = await db.prepare("SELECT code FROM bots WHERE code_lc = ? AND status IN ('live', 'pending')").bind(lc).first<{ code: string }>();
       if (!row) return notFound();
-      target = row.code;
+      target = row.code; verified = true;
     } catch (e) {
-      // A database error must not strand a visitor; the shape check above keeps this on x.ai/bot/.
       console.error('go lookup failed:', (e as Error).message);
     }
   }
-  wait(record(db, 'open', code.toLowerCase(), req));
-  return new Response(null, { status: 302, headers: { Location: botUrl(target), 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex', 'Referrer-Policy': 'no-referrer' } });
+  if (!verified) {
+    try { target = await seed(lc); } catch { target = null; }
+    if (!target) return notFound();
+    return redirect(target);
+  }
+  wait(record(db, 'open', lc, req));
+  return redirect(target!);
 }
 
 // ---- dead bots: the cron stores the list; handlers keep it for a few minutes ----

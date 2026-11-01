@@ -23,8 +23,13 @@ $W d1 execute grokbot-zone --local --command "DROP TABLE IF EXISTS bots; DROP TA
 $W d1 migrations apply grokbot-zone --local >/dev/null 2>&1
 SEED=$(npx tsx scripts/seed-d1.ts --dry | sed 's/.*-> //'); $W d1 execute grokbot-zone --local --file "$SEED" >/dev/null 2>&1
 check "seed rows (local)" "$(python3 -c "import json;print(len(json.load(open('src/data/bots.json'))))")" "$(sql 'SELECT COUNT(*) AS n FROM bots' | python3 -c 'import json,sys;print(json.load(sys.stdin)[0]["n"])')"
-$W d1 execute grokbot-zone --local --file "$SEED" >/dev/null 2>&1
-check "seed run twice: count unchanged" "$(sql 'SELECT COUNT(*) AS n FROM bots')" "$(sql 'SELECT COUNT(*) AS n FROM bots')"
+# O13: the count is captured after the FIRST seed and compared after the second run. GZ_TEST_EXTRA_ROW=1 makes the
+# second run insert one extra row, which proves this check can fail.
+AFTER_FIRST=$(sql 'SELECT COUNT(*) AS n FROM bots')
+SEED2="$SEED"
+if [[ -n "${GZ_TEST_EXTRA_ROW:-}" ]]; then SEED2=$(mktemp); cp "$SEED" "$SEED2"; echo "INSERT INTO bots(code_lc, code, source, status, first_seen) VALUES('zzdupezzdupezzdupezz1','zzdupezzdupezzdupezz1','seed','live','2026-10-30');" >> "$SEED2"; fi
+$W d1 execute grokbot-zone --local --file "$SEED2" >/dev/null 2>&1
+check "seed run twice: count unchanged" "$AFTER_FIRST" "$(sql 'SELECT COUNT(*) AS n FROM bots')"
 $W d1 execute grokbot-zone --local --command "INSERT INTO meta(k,v) VALUES('throttled_until','2099-01-01T00:00:00Z'); INSERT INTO meta(k,v) VALUES('discovery_last_run','2026-11-01T00:00:00Z');" >/dev/null 2>&1
 
 : > "$LOG"

@@ -46,12 +46,14 @@ export interface Card { n: string; a: string; d: string; c: string | null; k: st
 const CARD_COLS = 'code_lc, code, name, author, description, category, source';
 const cardOf = (r: Record<string, string | null>): Card => ({ n: r.name ?? '', a: r.author ?? '', d: (r.description ?? '').slice(0, 220), c: r.category ?? null, k: r.code ?? '', s: r.source ?? '' });
 
-export interface Built {
-  trending: TrendingPayload; recent: Record<string, unknown>; signals: Record<string, unknown>; changes: Record<string, unknown>;
-  cards: Record<string, Card>; dead: string[]; stats: Record<string, number>;
-}
+export interface BuiltTrending { trending: TrendingPayload; signals: Record<string, unknown>; cards: Record<string, Card> }
+export interface BuiltRecent { recent: Record<string, unknown>; changes: Record<string, unknown>; cards: Record<string, Card>; dead: string[]; stats: Record<string, number> }
+export type Built = BuiltTrending & BuiltRecent;
+/** Largest stored changes blob (D1 allows 2,000,000 bytes per row; spec 08 O10 keeps well under it). */
+export const MAX_CHANGES_BYTES = 1_200_000;
 
-export async function build(db: D1Database, nowMs: number, telemetryStart: string): Promise<Built> {
+/** Trending, its card text and the signals file (spec 08 O7: its own phase). */
+export async function buildTrendingPhase(db: D1Database, nowMs: number, telemetryStart: string): Promise<BuiltTrending> {
   const today = dayOf(nowMs);
   const generatedAt = iso(nowMs);
   const t = dayDiff(telemetryStart, today);
@@ -125,7 +127,14 @@ export async function build(db: D1Database, nowMs: number, telemetryStart: strin
     generatedAt, window_days: WINDOW, days: [...days].reverse(), fields: ['opens', 'views'],
     method: trending.method, bots: botsSig,
   };
+  return { trending, signals, cards };
+}
 
+/** Recent, the changes file, the dead list and the status counts (spec 08 O7: its own phase). */
+export async function buildRecentPhase(db: D1Database, nowMs: number): Promise<BuiltRecent> {
+  const today = dayOf(nowMs);
+  const generatedAt = iso(nowMs);
+  const cards: Record<string, Card> = {};
   // Q5: Recent = live bots, newest first_seen first, then code ascending.
   const rec = await db.prepare(`SELECT ${CARD_COLS}, first_seen FROM bots WHERE status = 'live' ORDER BY first_seen DESC, code_lc ASC LIMIT ?`).bind(RECENT_N).all<Record<string, string | null>>();
   const recentIds: string[] = [];
@@ -137,16 +146,30 @@ export async function build(db: D1Database, nowMs: number, telemetryStart: strin
   const recent = { ...recentStatic, asOf: today, basis: 'live bots, newest additions first', bots: recentIds, generatedAt };
 
   // Q6/Q7/Q8: what changed since the seed.
-  const added = await db.prepare(`SELECT code, name, author, description, category, cats, source, first_seen FROM bots WHERE source != 'seed' AND status = 'live' ORDER BY first_seen, code_lc`).all<Record<string, string | null>>();
+  // D27a: a bot that has been live at least once stays in `added` after it dies (its code is then in `dead` too).
+  // `excluded` rows also carry last_live, so the status filter is what keeps them out.
+  const added = await db.prepare(`SELECT code, name, author, description, category, cats, source, first_seen FROM bots WHERE source != 'seed' AND last_live IS NOT NULL AND status IN ('live', 'dead') ORDER BY first_seen, code_lc`).all<Record<string, string | null>>();
   const deadRows = await db.prepare(`SELECT code, code_lc FROM bots WHERE status = 'dead' ORDER BY code_lc`).all<{ code: string; code_lc: string }>();
   const st = await db.prepare(`SELECT status, COUNT(*) AS n FROM bots GROUP BY status`).all<{ status: string; n: number }>();
   const stats: Record<string, number> = { live: 0, dead: 0, pending: 0, excluded: 0 };
   for (const r of st.results) stats[r.status] = r.n;
+  let list = added.results;
+  const row = (r: Record<string, string | null>) => ({ id: botId(r.category, r.code as string), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(',') : [], source: r.source, first_seen: r.first_seen });
+  // Keep the stored blob far below the 2,000,000-byte row limit: oldest entries go first.
+  let truncated = 0;
+  while (list.length > 1 && JSON.stringify(list.map(row)).length > MAX_CHANGES_BYTES) { const drop = Math.ceil(list.length / 10); truncated += drop; list = list.slice(drop); }
   const changes = {
     generatedAt, since: '2026-10-30',
-    added: added.results.map((r) => ({ id: botId(r.category, r.code as string), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(',') : [], source: r.source, first_seen: r.first_seen })),
+    ...(truncated ? { truncated } : {}),
+    added: list.map((r) => ({ id: botId(r.category, r.code as string), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(',') : [], source: r.source, first_seen: r.first_seen })),
     dead: deadRows.results.map((r) => r.code),
     excluded: stats.excluded,
   };
-  return { trending, recent, signals, changes, cards, dead: deadRows.results.map((r) => r.code_lc), stats };
+  return { recent, changes, cards, dead: deadRows.results.map((r) => r.code_lc), stats };
+}
+
+export async function build(db: D1Database, nowMs: number, telemetryStart: string): Promise<Built> {
+  const t = await buildTrendingPhase(db, nowMs, telemetryStart);
+  const r = await buildRecentPhase(db, nowMs);
+  return { ...t, ...r, cards: { ...r.cards, ...t.cards } };
 }

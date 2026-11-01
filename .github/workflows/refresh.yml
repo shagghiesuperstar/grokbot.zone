@@ -1,8 +1,9 @@
 name: refresh
 
-# D24: once a day, pull what the data plane found from the live site, rebuild, commit the snapshot to main,
-# and deploy only when the Cloudflare secrets exist. The daily commit also keeps the schedule alive
-# (GitHub disables scheduled workflows after 60 days without repository activity).
+# Spec 08 D29: a daily backup of the live catalog. Pull what the data plane found from the live site, build as a
+# check, commit the snapshot to main. It never deploys: new bots get their pages from the Worker (spec 08 D27),
+# so no site change waits on this job. The daily commit also keeps the schedule alive (GitHub disables scheduled
+# workflows after 60 days without repository activity).
 on:
   schedule:
     - cron: '40 5 * * *'
@@ -48,22 +49,3 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/live
           if git diff --cached --quiet; then echo "no change in data/live"; else git commit -m "data(live): daily snapshot $(date -u +%F)" && git push origin HEAD:main; fi
-      - name: Check deploy credentials
-        id: creds
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID are not set, so the rebuilt site is not deployed. Operator item."
-            echo "present=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "present=true" >> "$GITHUB_OUTPUT"
-          fi
-      - if: steps.creds.outputs.present == 'true'
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@4.123.0 deploy --config wrangler.toml
-      - if: steps.creds.outputs.present == 'true'
-        run: scripts/verify-live.sh https://grokbot.zone

@@ -1,20 +1,20 @@
 // The */10 job (spec 07): discovery (daily), liveness, submissions and trending (hourly), purge (daily).
 // Free-plan shape: at most 40 upstream requests and well under 50 D1 queries per run (a batch counts as one).
-import categories from '../../data/categories.json';
 import classifierJson from '../../data/classifier.json';
 import type { Classifier } from './classify';
 import { discover } from './discovery';
-import { denylist, scrub } from './ingest';
-import { MAX_PENDING_PER_RUN, MAX_UPSTREAM, THROTTLE_HOLD_MS, Upstream, runChecks, type BotRow, type Patch } from './liveness';
-import { build } from './trending';
+import { denylist } from './ingest';
+import { MAX_PENDING_PER_RUN, MAX_SUBMISSION_REQUESTS, MAX_UPSTREAM, THROTTLE_HOLD_MS, Upstream, runChecks, type BotRow, type Patch } from './liveness';
+import { buildRecentPhase, buildTrendingPhase } from './trending';
 import { HOUR, addDays, dayOf, iso, metaPut, readMeta, realClock, type Clock } from './util';
 
 export interface CronEnv { DB?: D1Database; NOREF_TOKENS?: string; TELEMETRY_START?: string }
 export interface CronDeps { fetch: typeof fetch; clock: Clock }
 
 const MODEL = classifierJson as unknown as Classifier;
-const SLUGS = new Set((categories as { slug: string }[]).map((c) => c.slug));
 const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', 'discovery_last_run', 'discovery_new', 'archive_resume', 'archive_from', 'last_run'];
+export const PHASES = ['discovery', 'checks', 'submissions', 'trending', 'recent', 'purge'] as const;
+export type Phase = (typeof PHASES)[number];
 export const TRENDING_EVERY_MS = 55 * 60_000;
 
 const COLS = 'code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail';
@@ -39,6 +39,13 @@ export function counted(db: D1Database): { db: D1Database; count: () => number }
   return { db: wrapped as unknown as D1Database, count: () => n };
 }
 
+/** One line, no stack, no denylist token: what is safe to store and show in /api/health. */
+export function safeMessage(e: unknown, list: string[]): string {
+  let m = (e instanceof Error ? e.message : String(e)).split('\n')[0].replace(/\s+/g, ' ').trim().slice(0, 200);
+  for (const w of list) m = m.split(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'ig')).join('[x]');
+  return m;
+}
+
 export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: CronDeps = { fetch: (...a) => fetch(...a), clock: realClock }): Promise<Report> {
   if (!env.DB) return { upstream: 0, checked: 0, discovered: 0, throttled: false, hourly: false, queries: 0, skipped: 'no DB binding' };
   const { db, count } = counted(env.DB);
@@ -50,6 +57,16 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
   const report: Report = { upstream: 0, checked: 0, discovered: 0, throttled: false, hourly: false, queries: 0 };
   const writes: D1PreparedStatement[] = [];
   const setMeta = (k: string, v: string) => writes.push(metaPut(db, k, v));
+  let lastError: { phase: Phase; at: string; message: string } | null = null;
+  /** O7: each phase has its own try; a failure is recorded and the run goes on. */
+  const phase = async <T>(name: Phase, fn: () => Promise<T>): Promise<T | undefined> => {
+    try { return await fn(); } catch (e) {
+      lastError = { phase: name, at: iso(clock.now()), message: safeMessage(e, list) };
+      console.error(`dataplane phase ${name} failed:`, lastError.message);
+      report.skipped = `${name} failed`;
+      return undefined;
+    }
+  };
 
   const stats: Record<string, number> = meta.stats ? JSON.parse(meta.stats) : { live: 0, dead: 0, pending: 0, excluded: 0 };
   const heldUntil = meta.throttled_until ? Date.parse(meta.throttled_until) : 0;
@@ -62,7 +79,7 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
     const t = new Date(scheduledTime);
     const inWindow = t.getUTCHours() === 4 && t.getUTCMinutes() >= 10 && t.getUTCMinutes() < 20;
     const doDiscovery = inWindow || !meta.discovery_last_run;
-    if (doDiscovery) {
+    if (doDiscovery) await phase('discovery', async () => {
       const found = await discover(up, { archive_resume: meta.archive_resume, archive_from: meta.archive_from }, now);
       if (found.found.length) {
         const r = await db.prepare(
@@ -78,15 +95,25 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
       dn[dayOf(now)] = (dn[dayOf(now)] ?? 0) + report.discovered;
       for (const k of Object.keys(dn)) if (k < addDays(dayOf(now), -8)) delete dn[k];
       setMeta('discovery_new', JSON.stringify(dn));
-    }
+    });
 
-    // ---- liveness: pending first, then live and dead by oldest check ----
+    // ---- liveness: submissions and pending first, then live and dead by oldest check ----
     const room = up.left;
-    if (room > 0) {
+    if (room > 0) await phase('checks', async () => {
+      const pend = list.length ? 1 : 0; // an empty denylist closes ingest: no pending row is read
+      const subCap = pend * Math.min(room, MAX_SUBMISSION_REQUESTS);
+      const otherCap = pend * Math.min(room, MAX_PENDING_PER_RUN);
       const sel = (status: string, n: number) => db.prepare(`SELECT ${COLS} FROM bots WHERE status = ? ORDER BY last_checked LIMIT ?`).bind(status, n);
-      const [pending, live, dead] = await db.batch<BotRow>([sel('pending', list.length ? Math.min(room, MAX_PENDING_PER_RUN) : 0), sel('live', room), sel('dead', room)]);
+      // Submission-sourced pending rows take at most 10 rows (and 10 requests); the others fill the rest of the 30 pending slots.
+      const pendSql = (cmp: string, n: number) => db.prepare(
+        `SELECT ${COLS} FROM bots WHERE status = 'pending' AND source ${cmp} 'submission' ORDER BY last_checked LIMIT ${n}`);
+      const [subs, others, live, dead] = await db.batch<BotRow>([
+        pendSql('=', subCap),
+        db.prepare(`SELECT ${COLS} FROM bots WHERE status = 'pending' AND source != 'submission' ORDER BY last_checked LIMIT MAX(0, MIN(?, ? - (SELECT MIN(?, COUNT(*)) FROM bots WHERE status = 'pending' AND source = 'submission')))`)
+          .bind(otherCap, MAX_PENDING_PER_RUN, subCap),
+        sel('live', room), sel('dead', room)]);
       const cmp = (a: BotRow, b: BotRow) => (a.last_checked ?? '').localeCompare(b.last_checked ?? '') || (a.code_lc < b.code_lc ? -1 : 1);
-      const rows = [...pending.results, ...[...live.results, ...dead.results].sort(cmp)];
+      const rows = [...subs.results, ...others.results, ...[...live.results, ...dead.results].sort(cmp)];
       const run = await runChecks(up, rows, clock, list, MODEL);
       report.checked = run.checked;
       if (run.patches.length) {
@@ -108,59 +135,57 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
         setMeta('checks_hourly', meta.checks_hourly);
       }
       if (run.stoppedThrottled) { report.throttled = true; setMeta('throttled_until', iso(now + THROTTLE_HOLD_MS)); }
-    }
+    });
     report.upstream = up.used;
   }
 
-  // ---- hourly: submissions -> bots, then trending / recent / signals / changes / stats ----
+  // ---- hourly: submissions settle, then trending / recent / signals / changes / stats ----
   const due = !meta.trending_at || now - Date.parse(meta.trending_at) >= TRENDING_EVERY_MS;
   if (due) {
     report.hourly = true;
-    try {
-    if (list.length) await upsertSubmissions(db, list, now);
-    const b = await build(db, now, start);
-    setMeta('trending_json', JSON.stringify(b.trending));
-    setMeta('recent_json', JSON.stringify(b.recent));
-    setMeta('signals_json', JSON.stringify(b.signals));
-    setMeta('changes_json', JSON.stringify(b.changes));
-    setMeta('cards_json', JSON.stringify(b.cards));
-    setMeta('dead_json', JSON.stringify(b.dead));
-    setMeta('trending_at', iso(now));
-    Object.assign(stats, b.stats);
+    // D30: a submission's row follows its bot, no person involved.
+    await phase('submissions', async () => { await settleSubmissions(db); });
+    const tr = await phase('trending', () => buildTrendingPhase(db, now, start));
+    const rc = await phase('recent', () => buildRecentPhase(db, now));
+    if (tr) {
+      setMeta('trending_json', JSON.stringify(tr.trending));
+      setMeta('signals_json', JSON.stringify(tr.signals));
+      setMeta('cards_json', JSON.stringify({ ...(rc?.cards ?? {}), ...tr.cards }));
+      if (rc) setMeta('recent_json', JSON.stringify(rc.recent));
+      setMeta('trending_at', iso(now));
+    }
+    if (rc) {
+      setMeta('changes_json', JSON.stringify(rc.changes));
+      setMeta('dead_json', JSON.stringify(rc.dead));
+      Object.assign(stats, rc.stats);
+    }
     // Daily purge rides on the discovery window run.
-    const t = new Date(scheduledTime);
-    if (t.getUTCHours() === 4) {
+    if (new Date(scheduledTime).getUTCHours() === 4) await phase('purge', async () => {
       const today = dayOf(now);
       await db.batch([
         db.prepare('DELETE FROM visit_seen WHERE day < ?').bind(addDays(today, -2)),
         db.prepare("DELETE FROM meta WHERE k LIKE 'salt:%' AND k < ?").bind(`salt:${addDays(today, -2)}`),
         db.prepare('DELETE FROM bot_daily WHERE day < ?').bind(addDays(today, -60)),
       ]);
-    }
-    } catch (e) {
-      // The next run retries the hourly job; the liveness work above is already stored.
-      console.error('dataplane hourly failed:', (e as Error).message);
-      report.skipped = 'hourly failed';
-    }
+    });
   }
   setMeta('stats', JSON.stringify(stats));
   setMeta('last_run', iso(clock.now()));
-  await db.batch(writes);
+  if (lastError) setMeta('last_error', JSON.stringify(lastError));
+  try { await db.batch(writes); } catch (e) {
+    // One bad value (say an oversized blob) must not cost the run its timestamp or its error record.
+    const le = { phase: 'recent', at: iso(clock.now()), message: safeMessage(e, list) };
+    await db.batch([metaPut(db, 'last_error', JSON.stringify(le)), metaPut(db, 'last_run', iso(clock.now()))]);
+    report.skipped = 'meta write failed';
+  }
   report.queries = count();
   return report;
 }
 
-/** D16: an approved submission becomes a bot row, scrubbed like any other ingest. */
-async function upsertSubmissions(db: D1Database, list: string[], now: number) {
-  const { results } = await db.prepare(
-    `SELECT s.name, s.author, s.description, s.code, s.category FROM submissions s
-       LEFT JOIN bots b ON b.code_lc = lower(s.code) WHERE s.status = 'approved' AND b.code_lc IS NULL LIMIT 50`,
-  ).all<{ name: string; author: string | null; description: string; code: string; category: string | null }>();
-  if (!results.length) return;
-  await db.batch(results.map((s) => {
-    const c = scrub({ name: s.name, author: s.author ?? '', description: s.description }, list);
-    const cat = s.category && SLUGS.has(s.category) ? s.category : null;
-    return db.prepare(`INSERT OR IGNORE INTO bots(code_lc, code, name, author, description, category, cats, source, status, first_seen) VALUES(?,?,?,?,?,?,?,'submission',?,?)`)
-      .bind(s.code.toLowerCase(), s.code, c.name, c.author, c.description, cat, cat, c.excluded ? 'excluded' : 'pending', iso(now));
-  }));
+/** D30: a submission is approved when its bot goes live, rejected when it ends dead or excluded. One statement pair, no person. */
+async function settleSubmissions(db: D1Database) {
+  await db.batch([
+    db.prepare(`UPDATE submissions SET status = 'approved' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status = 'live')`),
+    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`),
+  ]);
 }

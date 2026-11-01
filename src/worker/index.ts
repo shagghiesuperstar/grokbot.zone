@@ -76,6 +76,18 @@ async function shippedCodes(env: Env): Promise<Set<string>> {
   return codesCache;
 }
 
+let seedCache: { assets: Env['ASSETS']; map: Map<string, string> } | null = null;
+/** O6: the stored spelling of a code in the deployed static seed list, read from the built assets (never D1). */
+async function seedSpelling(env: Env, codeLc: string): Promise<string | null> {
+  if (!seedCache || seedCache.assets !== env.ASSETS) {
+    const res = await env.ASSETS.fetch(new Request(`${SITE}/api/v1/seed-codes.json`));
+    if (!res.ok) return null;
+    const codes = ((await res.json()) as { codes: string[] }).codes;
+    seedCache = { assets: env.ASSETS, map: new Map(codes.map((c) => [c.toLowerCase(), c])) };
+  }
+  return seedCache.map.get(codeLc) ?? null;
+}
+
 async function logSend(env: Env, kind: Kind, recipient: string, messageId: string | null, ok: boolean, errorCode: string | null) {
   if (!env.DB) return;
   try {
@@ -409,7 +421,7 @@ async function dataPlane(request: Request, env: Env, ctx: ExecutionContext, path
 
 async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
   const get = request.method === 'GET' || request.method === 'HEAD';
-  if (path === '/go' || path.startsWith('/go/')) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ''), (p) => ctx.waitUntil(p));
+  if (path === '/go' || path.startsWith('/go/')) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ''), (p) => ctx.waitUntil(p), (lc) => seedSpelling(env, lc));
   if (get && isStoredFile(path)) {
     const stored = await storedFile(env.DB, path);
     if (stored) return stored;

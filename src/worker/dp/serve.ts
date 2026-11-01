@@ -52,7 +52,7 @@ export async function healthBody(db: D1Database | undefined, nowMs: number, nowI
   try {
     d1 = !!db && !!(await db.prepare('SELECT 1 AS ok').first());
     if (db) {
-      Object.assign(m, await readMeta(db, ['last_run', 'checks_hourly', 'stats', 'throttled_until', 'discovery_last_run', 'discovery_new', 'trending_at']));
+      Object.assign(m, await readMeta(db, ['last_run', 'checks_hourly', 'stats', 'throttled_until', 'discovery_last_run', 'discovery_new', 'trending_at', 'last_error']));
       const day = nowIso.slice(0, 10);
       const e = await db.prepare('SELECT COALESCE(SUM(views + opens), 0) AS n FROM bot_daily WHERE day = ?').bind(day).first<{ n: number }>();
       events = e?.n ?? 0;
@@ -72,6 +72,7 @@ export async function healthBody(db: D1Database | undefined, nowMs: number, nowI
     discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0) },
     telemetry: { events_today: events },
     trending: { generatedAt: m.trending_at ?? null },
+    last_error: parse<{ phase: string; at: string; message: string } | null>(m.last_error, null),
     noref: nosecret ? 'ok' : 'missing',
     switches,
   };

@@ -19,6 +19,8 @@ import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
 import model from '../src/data/classifier.json';
 
+// workerd provides HTMLRewriter; under Node the test uses the same lol-html engine from the `htmlrewriter` package.
+(globalThis as unknown as { HTMLRewriter: unknown }).HTMLRewriter = (await import('htmlrewriter')).HTMLRewriter;
 const ROOT = resolve(import.meta.dirname, '..');
 const FAKE = 'zzfaketokenzz';
 const MIGRATIONS = readdirSync(join(ROOT, 'migrations')).filter((f) => f.endsWith('.sql')).sort().map((f) => readFileSync(join(ROOT, 'migrations', f), 'utf8'));
@@ -403,7 +405,7 @@ await t('conditional requests: a validator never turns a live page, a dead bot o
   resetSaltCache(); resetDeadCache(); const db = new FakeD1(); insertBot(db, LIVE); insertBot(db, 'DeadBot00000000000001', { status: 'dead' });
   db.db.prepare("INSERT INTO meta(k,v) VALUES('dead_json', ?)").run(JSON.stringify(['deadbot00000000000001']));
   const seen: (string | null)[] = [];
-  const assets = { fetch: async (r: Request) => { seen.push(r.headers.get('if-none-match')); return r.headers.get('if-none-match') ? new Response(null, { status: 304 }) : new Response('<html>page</html>', { status: new URL(r.url).pathname.includes('absent') ? 404 : 200, headers: { 'content-type': 'text/html', etag: '"abc"' } }); } };
+  const assets = { fetch: async (r: Request) => { seen.push(r.headers.get('if-none-match')); return r.headers.get('if-none-match') ? new Response(null, { status: 304 }) : new Response('<html><head><title>x</title></head><body><article class="wrap bot"><h1>X</h1></article></body></html>', { status: new URL(r.url).pathname.includes('absent') ? 404 : 200, headers: { 'content-type': 'text/html', etag: '"abc"' } }); } };
   const env = envOf(db, { ASSETS: assets });
   const h = { 'user-agent': HUMAN, 'cf-connecting-ip': '192.0.2.9', 'if-none-match': '"abc"' };
   const view = await get(env, `/bots/coding-software-${LIVE}/`, h); assert.equal(view.res.status, 200);
@@ -454,6 +456,121 @@ await t('scheduled: the digest cron runs the digest, */10 runs the data plane (n
   assert.ok(logs.some((l) => l.startsWith('digest:')), logs.join('\n')); assert.ok(logs.some((l) => l.startsWith('dataplane')), logs.join('\n'));
   assert.equal(logs.filter((l) => l.startsWith('digest:')).length, 1);
 });
+// ================= D27/D28/O10/O11: pages and lists without a deploy =================
+import { existsSync } from 'node:fs';
+import { mergeLive } from '../src/lib/search';
+const DIST = join(ROOT, 'dist');
+if (!existsSync(join(DIST, 'bot-template/index.html'))) throw new Error('run `pnpm build` before the dataplane tests (they read dist/)');
+const distFile = (p: string) => readFileSync(join(DIST, p), 'utf8');
+const SEED_BOT = (JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'utf8')) as { slug: string; code: string; cat: string }[])[0];
+const SEED_BOT2 = (JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'utf8')) as { slug: string; code: string; cat: string }[]).find((b) => b.cat === SEED_BOT.cat && b.slug !== SEED_BOT.slug)!;
+const STATIC: Record<string, [string, string]> = {
+  '/bot-template/': ['bot-template/index.html', 'text/html'], '/api/v1/seed-codes.json': ['api/v1/seed-codes.json', 'application/json'],
+  '/feed.json': ['feed.json', 'application/json'], '/feed.xml': ['feed.xml', 'application/xml'], '/sitemap-index.xml': ['sitemap-index.xml', 'application/xml'], '/sitemap-0.xml': ['sitemap-0.xml', 'application/xml'],
+  '/search/live.json': ['search/live.json', 'application/json'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
+};
+const distAssets = { fetch: async (r: Request) => {
+  const p = new URL(r.url).pathname; const hit = STATIC[p];
+  return hit ? new Response(distFile(hit[0]), { headers: { 'content-type': hit[1] } }) : new Response(distFile('404.html'), { status: 404, headers: { 'content-type': 'text/html' } });
+} };
+const NEW_A = 'NewTravel000000000001', NEW_B = 'NewNoCat0000000000001', NEW_X = 'NewScript00000000001', NEW_DEAD = 'NewDead00000000000001', NEW_EXC = 'NewExcl00000000000001', NEW_PEND = 'NewPend0000000000001';
+function liveDb() {
+  resetDeadCache(); resetSaltCache(); const db = new FakeD1();
+  insertBot(db, SEED_BOT.code, { category: SEED_BOT.cat, cats: SEED_BOT.cat }); insertBot(db, SEED_BOT2.code, { category: SEED_BOT2.cat, cats: SEED_BOT2.cat });
+  insertBot(db, NEW_A, { source: 'listing', name: 'Fresh Trip Bot', author: 'Mia', description: 'Plans trips quickly.', category: 'travel', cats: 'travel', first_seen: '2026-11-05' });
+  insertBot(db, NEW_B, { source: 'archive', name: 'No Category Bot', author: '', description: 'Does odd jobs.', category: null, cats: null, first_seen: '2026-11-04' });
+  insertBot(db, NEW_X, { source: 'listing', name: '"><script>alert(1)</script>', author: '<b>x</b>', description: 'a & b <i>', category: 'travel', cats: 'travel', first_seen: '2026-11-03' });
+  insertBot(db, NEW_DEAD, { source: 'listing', status: 'dead', name: 'Gone Bot', category: 'travel', cats: 'travel' });
+  insertBot(db, NEW_EXC, { source: 'listing', status: 'excluded', name: 'Hidden Bot', category: 'travel', cats: 'travel' });
+  insertBot(db, NEW_PEND, { source: 'listing', status: 'pending', name: '', category: null, cats: null });
+  db.db.prepare("UPDATE bots SET last_live='2026-11-02T00:00:00Z' WHERE source != 'seed' AND status IN ('live','dead','excluded')").run();
+  return db;
+}
+const fillStore = async (db: FakeD1, over: Record<string, unknown> = {}) => {
+  const c = clock(Date.parse('2026-11-10T12:05:00Z'));
+  // the dead seed bot answers 404 so it stays dead; everything else answers 200
+  const p = platform((u) => (u.endsWith(SEED_BOT2.code) || u.endsWith(NEW_DEAD)) ? { status: 404 } : { status: 200, body: '<head></head>' }, c);
+  db.db.prepare("UPDATE bots SET status='dead' WHERE code_lc=?").run(SEED_BOT2.code.toLowerCase());
+  const env = envOf(db, { ASSETS: distAssets, ...over }); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  db.db.prepare("UPDATE bots SET status='dead', fail_count=3, first_fail='2026-10-01T00:00:00Z' WHERE code_lc=?").run(NEW_DEAD.toLowerCase());
+  return env;
+};
+await t('D27: a live D1-only bot gets its page (200, escaped, head, /go/ link); a <script> name renders inert', async () => {
+  const db = liveDb(); const env = envOf(db, { ASSETS: distAssets }); const h = { 'user-agent': HUMAN, 'cf-connecting-ip': '198.51.100.9' };
+  const ok = await get(env, `/bots/travel-${NEW_A}/`, h); const html = await ok.res.text();
+  assert.equal(ok.res.status, 200); assert.equal(ok.res.headers.get('cache-control'), 'public, s-maxage=3600'); assert.ok(ok.queries <= 50, `${ok.queries}`); console.log(`      D1-rendered bot page: ${ok.queries} D1 queries`);
+  assert.ok(html.includes('<title>Fresh Trip Bot by Mia (Travel) | Grok bot | GrokBot Zone</title>') && html.includes(`rel="canonical" href="https://grokbot.zone/bots/travel-${NEW_A}/"`));
+  assert.ok(html.includes(`href="/go/${NEW_A}"`) && /rel="nofollow noopener"[^>]*data-open-bot|data-open-bot[^>]*rel="nofollow noopener"|rel="nofollow noopener" target="_blank"/.test(html));
+  assert.ok(!/name="robots"/.test(html), 'a filled page is indexable'); assert.ok(html.includes('og:title') && html.includes('application/ld+json'));
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]));
+  assert.equal(ld[0]['@type'], 'SoftwareApplication'); assert.equal(ld[1].itemListElement.length, 3);
+  assert.deepEqual(opens(db, NEW_A.toLowerCase()), { o: 0, v: 1 }, 'the view is counted (D17b)');
+  const xs = await (await get(env, `/bots/travel-${NEW_X}/`, h)).res.text();
+  // Inside a double-quoted attribute `<` is inert (the quote is escaped), so look at the markup with attribute values removed.
+  const markup = xs.replace(/="[^"]*"/g, '=""').replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  assert.ok(!markup.includes('<script>alert(1)') && !markup.includes('<b>x</b>') && xs.includes('&lt;script&gt;alert(1)&lt;/script&gt;'), 'name is inert');
+  const scripts = (h: string) => (h.replace(/="[^"]*"/g, '=""').match(/<script\b/g) ?? []).length;
+  assert.equal(scripts(xs), scripts(distFile('bot-template/index.html')), 'no extra script element'); assert.ok(!/<script>alert/.test(markup));
+  const ldx = [...xs.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1])); assert.equal(ldx[0].name, '"><script>alert(1)</script>');
+  const nocat = await get(env, `/bots/uncategorized-${NEW_B}/`, h); const nc = await nocat.res.text();
+  assert.equal(nocat.res.status, 200); assert.ok(!nc.includes('/categories/travel/') && JSON.parse([...nc.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)][1][1]).itemListElement.length === 2);
+});
+await t('D27: dead -> 410, excluded / pending / unknown / wrong id -> 404, the template URL -> 404', async () => {
+  const db = liveDb(); const env = envOf(db, { ASSETS: distAssets }); db.db.prepare("INSERT INTO meta(k,v) VALUES('dead_json', ?)").run(JSON.stringify([NEW_DEAD.toLowerCase()]));
+  assert.equal((await get(env, `/bots/travel-${NEW_DEAD}/`)).res.status, 410);
+  for (const id of [`travel-${NEW_EXC}`, `uncategorized-${NEW_PEND}`, 'travel-ZZZZZZZZZZZZZZZZZZZZZ', `coding-software-${NEW_A}`, `uncategorized-${NEW_A}`, NEW_A]) assert.equal((await get(env, `/bots/${id}/`)).res.status, 404, id);
+  assert.equal((await get(env, '/bot-template/')).res.status, 404); assert.equal((await get(env, '/bot-template')).res.status, 404);
+  assert.match(distFile('bot-template/index.html'), /name="robots" content="noindex"/); assert.ok(!distFile('sitemap-0.xml').includes('bot-template'));
+});
+await t('O11: a seed bot page and the static JSON/feeds/sitemaps are byte-for-byte the built files when D1 has nothing for them', async () => {
+  const db = liveDb(); const env = envOf(db, { ASSETS: distAssets });
+  const page = await get(env, `/bots/${SEED_BOT.slug}/`, { 'user-agent': HUMAN }); assert.equal(await page.res.text(), distFile(`bots/${SEED_BOT.slug}/index.html`));
+  for (const [path, file] of [['/feed.json', 'feed.json'], ['/feed.xml', 'feed.xml'], ['/sitemap-index.xml', 'sitemap-index.xml'], ['/sitemap-0.xml', 'sitemap-0.xml'], [`/categories/${SEED_BOT.cat}/`, `categories/${SEED_BOT.cat}/index.html`], ['/search/live.json', 'search/live.json']] as const)
+    assert.equal(await (await get(env, path)).res.text(), distFile(file), `${path} before the first hourly job`);
+  const filled = await fillStore(liveDb());
+  const page2 = await get(filled, `/bots/${SEED_BOT.slug}/`, { 'user-agent': HUMAN }); assert.equal(await page2.res.text(), distFile(`bots/${SEED_BOT.slug}/index.html`), 'a live seed page is never touched');
+});
+await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bots and lose dead ones, each within 50 D1 queries', async () => {
+  const db = liveDb(); const env = await fillStore(db); resetDeadCache(); const q: [string, number][] = [];
+  const g = async (path: string) => { const r = await get(env, path); q.push([path, r.queries]); assert.ok(r.queries <= 50, `${path} ${r.queries}`); return r.res.text(); };
+  const live = JSON.parse(await g('/search/live.json')) as { bots: { i: string; n: string; cats: string[]; c?: string }[]; dead: string[] };
+  const ids = live.bots.map((b) => b.i);
+  assert.deepEqual(ids.sort(), [`travel-${NEW_A}`, `travel-${NEW_X}`, `uncategorized-${NEW_B}`].sort());
+  assert.ok(live.dead.includes(NEW_DEAD.toLowerCase()) && live.dead.includes(SEED_BOT2.code.toLowerCase()) && !JSON.stringify(live).includes('Hidden Bot') && !JSON.stringify(live).includes('Gone Bot'));
+  assert.deepEqual(live.bots.find((b) => b.i === `uncategorized-${NEW_B}`)!.cats, []);
+  const byId = new Map<string, { rec: never; cats: string[] }>([[SEED_BOT2.slug, { rec: { i: SEED_BOT2.slug, n: 'x', a: '', d: '', r: 1 } as never, cats: [SEED_BOT2.cat] }]]);
+  mergeLive(byId, live as never, ['travel', SEED_BOT.cat]);
+  assert.ok(!byId.has(SEED_BOT2.slug), 'a dead seed bot leaves search'); assert.ok(byId.has(`travel-${NEW_A}`) && byId.get(`uncategorized-${NEW_B}`)!.cats[0] === 'uncategorized');
+  const cat = await g('/categories/travel/'); // travel has no seed bot of SEED_BOT.cat necessarily; use the page of the seed category too
+  void cat;
+  const sc = await g(`/categories/${SEED_BOT.cat}/`); const stat = distFile(`categories/${SEED_BOT.cat}/index.html`);
+  assert.ok(!sc.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`) && stat.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`), 'the dead seed bot is dropped from its category page');
+  const n0 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(stat)![1]); const n1 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(sc)![1]);
+  assert.equal(n1, n0 - 1 + (SEED_BOT.cat === 'travel' ? 2 : 0));
+  const nodes = await Promise.all(['/feed.json', '/feed.xml', '/sitemap-index.xml', '/sitemap-0.xml', '/sitemap-live.xml'].map(g));
+  const [fj, fx, si, s0, sl] = nodes;
+  const items = JSON.parse(fj).items.map((i: { url: string }) => i.url);
+  assert.ok(items.includes(`https://grokbot.zone/bots/travel-${NEW_A}/`) && !items.some((u: string) => u.toLowerCase().endsWith(`-${SEED_BOT2.code.toLowerCase()}/`)));
+  assert.ok(fx.includes(`/bots/travel-${NEW_A}/`) && !fx.toLowerCase().includes(SEED_BOT2.code.toLowerCase()) && !fx.includes('<script>'));
+  assert.ok(si.includes('sitemap-live.xml')); assert.ok(!s0.toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`) && distFile('sitemap-0.xml').toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`));
+  assert.ok(sl.includes(`/bots/travel-${NEW_A}/`) && sl.includes(`/bots/uncategorized-${NEW_B}/`) && !sl.includes(NEW_DEAD) && !sl.includes(NEW_EXC));
+  console.log('      ' + q.map(([p, n]) => `${p}=${n}`).join('  '));
+});
+await t('D27a: changes.json added lists every bot that was live once (id + code), keeps a dead one, never an excluded or pending one', async () => {
+  const db = liveDb(); const env = await fillStore(db);
+  const ch = JSON.parse(await (await get(env, '/api/v1/catalog/changes.json')).res.text()) as { added: { id: string; code: string }[]; dead: string[] };
+  const codes = ch.added.map((a) => a.code);
+  assert.ok(codes.includes(NEW_A) && codes.includes(NEW_B) && codes.includes(NEW_DEAD)); assert.ok(!codes.includes(NEW_EXC) && !codes.includes(NEW_PEND));
+  assert.ok(ch.dead.includes(NEW_DEAD)); assert.ok(ch.added.every((a) => a.id.endsWith(a.code) && /^[a-z-]+-/.test(a.id)));
+  assert.ok(!JSON.stringify(ch).includes('Hidden Bot'));
+});
+await t('D28: a live non-seed bot is in the stored extras only until the build ships a page; a static one is not duplicated', async () => {
+  const db = liveDb(); const env = await fillStore(db);
+  const only = { fetch: async (r: Request) => { const p = new URL(r.url).pathname; if (p === '/api/v1/seed-codes.json') return new Response(JSON.stringify({ codes: [NEW_A] })); return distAssets.fetch(r); } };
+  const e2 = { ...(env as object), ASSETS: only } as never; resetDeadCache();
+  const live = JSON.parse(await (await get(e2, '/search/live.json')).res.text()); assert.ok(!live.bots.some((b: { i: string }) => b.i.endsWith(NEW_A)), 'already in the static files');
+});
+
 // ================= D30: submissions are processed like discovery =================
 const SUB = (n: number) => `SubCode${String(n).padStart(14, '0')}`; // 21 chars
 const subRow = (db: FakeD1, code: string, status = 'pending') => db.db.prepare("INSERT INTO submissions(source, status, name, author, description, code, link, category, submitter_email) VALUES('webform',?,'Typed Name','Typed Author','Typed description text',?,?,'travel','typed@example.test')").run(status, code, `https://x.ai/bot/${code.toLowerCase()}`);
@@ -564,7 +681,7 @@ await t('noref: this test file and the worker sources carry no denylist from the
   const m = /TOKENS=\(([\s\S]*?)\)/.exec(audit);
   const toks = [...(m?.[1] ?? '').matchAll(/["']([^"']+)["']/g)].map((x) => x[1].toLowerCase()).filter((x) => x.length > 3);
   if (!toks.length) return; // audit script not present on this machine
-  const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'trending', 'telemetry', 'serve', 'classify', 'util'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
+  const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'trending', 'telemetry', 'serve', 'classify', 'util', 'page', 'merge'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
   for (const f of files) { const src = readFileSync(f, 'utf8').toLowerCase(); for (const tk of toks) assert.ok(!src.includes(tk), `${f} contains a denylist token`); }
 });
 

@@ -33,6 +33,9 @@ importers:
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
+      htmlrewriter:
+        specifier: ^0.0.13
+        version: 0.0.13
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -1036,6 +1039,9 @@ packages:
 
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
+
+  htmlrewriter@0.0.13:
+    resolution: {integrity: sha512-HPxT+y/i9RzNeKrJ6MBFXwB+FeTfHPfcBzoKHVnk3oiKn2s6x13tLoxjggI+0/yOSBG1n8SV//PGDBJYT/4XQw==}
 
   http-cache-semantics@4.3.0:
     resolution: {integrity: sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==}
@@ -2430,6 +2436,8 @@ snapshots:
   html-escaper@3.0.3: {}
 
   html-void-elements@3.0.0: {}
+
+  htmlrewriter@0.0.13: {}
 
   http-cache-semantics@4.3.0: {}
 

@@ -5,7 +5,7 @@
   "type": "module",
   "description": "A searchable directory of public Grok bot listings.",
   "scripts": {
-    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-trending.ts && tsx scripts/build-api.ts && tsx scripts/sync-readme.ts && tsx scripts/assert-counts.ts && tsx scripts/copy-wasm.ts",
+    "prebuild": "tsx scripts/build-data.ts && tsx scripts/build-classifier.ts && tsx scripts/build-trending.ts && tsx scripts/build-api.ts && tsx scripts/sync-readme.ts && tsx scripts/assert-counts.ts && tsx scripts/copy-wasm.ts",
     "build": "tsx scripts/build-worker.ts && astro build && tsx scripts/assert-no-emails.ts",
     "dev": "astro dev",
     "riv:build": "python3 scripts/gen-rive-src.py && rive rive/hero-grid --once && rive rive/bot-pulse --once && cp rive/hero-grid/build/hero-grid.riv rive/bot-pulse/build/bot-pulse.riv public/riv/",
@@ -13,6 +13,8 @@
     "check:contrast": "tsx scripts/contrast.ts",
     "test:submissions": "tsx scripts/test-submissions.ts",
     "test:worker": "tsx scripts/test-worker.ts",
+    "test:dataplane": "tsx scripts/test-dataplane.ts",
+    "seed:remote": "tsx scripts/seed-d1.ts --remote",
     "submissions:pull": "tsx scripts/submissions-pull.ts",
     "check:counts": "tsx scripts/assert-counts.ts",
     "deploy": "npx --yes wrangler@4.123.0 deploy --config wrangler.toml"

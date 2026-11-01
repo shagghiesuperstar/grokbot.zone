@@ -56,17 +56,23 @@ export function searchLive(m: Merge): Response {
 }
 
 // ---- category pages ----
+// String work, not HTMLRewriter: the page is read once, dead bots' <li data-code="..."> items are cut out, the live bots'
+// items are added at the end of the list, and the printed count follows. Cheap enough for the Free plan's CPU limit.
 export async function categoryPage(res: Response, slug: string, m: Merge): Promise<Response> {
   if (res.status !== 200) return res;
+  let text = await res.text();
   const add = m.extras.filter((b) => catsOfEntry(b).includes(slug));
   let removed = 0;
-  const html = add.map((b) => `<li data-code="${esc(b.code.toLowerCase())}">${cardHtml(b.id, cardOf(b), 2, false, false)}</li>`).join('');
-  const mid = new HTMLRewriter()
-    .on('[data-bot-list] > li', { element(e) { const c = e.getAttribute('data-code'); if (c && m.dead.has(c)) { e.remove(); removed++; } } })
-    .on('[data-bot-list]', { element(e) { if (html) e.append(html, { html: true }); } })
-    .transform(res);
-  let text = await mid.text();
-  text = text.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_all, a: string, n: string, c: string) => `${a}${Number(n) - removed + add.length}${c}`);
+  if (m.dead.size) text = text.replace(/<li data-code="([a-z0-9_-]+)">[\s\S]*?<\/li>/g, (all, c: string) => (m.dead.has(c) ? (removed++, '') : all));
+  if (!add.length && !removed) return new Response(text, { status: 200, headers: res.headers });
+  if (add.length) {
+    const html = add.map((b) => `<li data-code="${esc(b.code.toLowerCase())}">${cardHtml(b.id, cardOf(b), 2, false, false)}</li>`).join('');
+    const at = text.indexOf('data-bot-list');
+    const end = at >= 0 ? text.indexOf('</ul>', at) : -1;
+    if (end >= 0) text = text.slice(0, end) + html + text.slice(end);
+    else add.length = 0;
+  }
+  text = text.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_a, x: string, n: string, y: string) => `${x}${Number(n) - removed + add.length}${y}`);
   return new Response(text, { status: 200, headers: res.headers });
 }
 

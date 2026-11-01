@@ -5442,7 +5442,7 @@ var categories_default = [
   {
     slug: "video-images-audio-design",
     label: "Video, Images, Audio & Design",
-    count: 494,
+    count: 496,
     purpose: "Make and edit video, images, audio and design work.",
     updated: "2026-10-28"
   },
@@ -5541,19 +5541,17 @@ var oneLine = singleLine;
 var esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 var htmlNote = (text) => `<p>${esc(text).replace(/\n/g, "<br>")}</p>`;
 var SITE = "https://grokbot.zone";
-var approveSql = (id) => `wrangler d1 execute grokbot-zone --remote --command "UPDATE submissions SET status='approved' WHERE id=${id}"`;
 function ackText(name, link) {
   return `Hi \u2014 we got "${name}" (${link}).
-It is queued for review. If it is approved it appears with the next refresh;
-the list updates twice a week, Monday and Thursday.
-\u2014 GrokBot Zone \xB7 ${SITE}/trending/`;
+It is queued. Once the platform page checks out, the bot is added to the site automatically, usually within an hour.
+\u2014 GrokBot Zone \xB7 ${SITE}/recent/`;
 }
 function ownerSummary(r) {
   const f = (label, v) => `${label}: ${v === null ? "\u2014" : singleLine(v)}`;
   return {
     subject: oneLine(`[GZ] new submission #${r.id} \u2014 ${r.name} (${r.source})`),
     text: [
-      `approve:  ${approveSql(r.id)}`,
+      "FYI: processed automatically, nothing to approve. It goes live when the platform page checks out.",
       "",
       "Submitted fields (untrusted):",
       f("name", r.name),
@@ -5821,7 +5819,14 @@ async function discover(up, st, nowMs) {
   const found = [];
   const state = {};
   const l = await up.request(LISTING_URL, { method: "GET" }, true);
-  if (l && l.status === 200 && l.res) for (const code of parseListing(await l.res.text())) found.push({ code, source: "listing" });
+  if (l && l.status === 200 && l.res) {
+    let html = "";
+    try {
+      html = await l.res.text();
+    } catch {
+    }
+    for (const code of parseListing(html)) found.push({ code, source: "listing" });
+  }
   const q = new URLSearchParams({ url: "x.ai/bot/", matchType: "prefix", output: "json", fl: "timestamp,original", "filter": "statuscode:200", collapse: "urlkey", limit: String(CDX_ROWS) });
   if (st.archive_from) q.set("from", st.archive_from);
   else {
@@ -5945,7 +5950,13 @@ async function ingestCheck(up, row, clock, list, model) {
       res = r2.res;
       code = v.code;
     } else if (!res) return retryLater;
-    const head = parseHead(await readHead(res));
+    let html;
+    try {
+      html = await readHead(res);
+    } catch {
+      return retryLater;
+    }
+    const head = parseHead(html);
     const got = ingest(head, code, list, model);
     if (!got) return retryLater;
     return {
@@ -5960,15 +5971,27 @@ async function ingestCheck(up, row, clock, list, model) {
   }
   return applyVerdict(row, v, clock.now());
 }
+var MAX_SUBMISSION_REQUESTS = 10;
 async function runChecks(up, rows, clock, list, model) {
   const patches = [];
+  let subSpent = 0;
   for (const row of rows) {
     if (up.left <= 0 || up.throttled) break;
+    const sub = row.status === "pending" && row.source === "submission";
+    if (sub && subSpent >= MAX_SUBMISSION_REQUESTS) continue;
+    const before = up.used, saved = up.left;
+    if (sub) up.left = Math.min(up.left, MAX_SUBMISSION_REQUESTS - subSpent);
     let patch;
-    if (row.status === "pending" && row.name === "") {
-      patch = await ingestCheck(up, row, clock, list, model);
-    } else {
-      patch = applyVerdict(row, await headCheck(up, row), clock.now());
+    try {
+      if (row.status === "pending" && row.name === "") patch = await ingestCheck(up, row, clock, list, model);
+      else patch = applyVerdict(row, await headCheck(up, row), clock.now());
+    } catch {
+      patch = { last_checked: iso(clock.now()) };
+    }
+    if (sub) {
+      const spent = up.used - before;
+      subSpent += spent;
+      up.left = saved - spent;
     }
     if (Object.keys(patch).length) patches.push({ row, patch });
   }
@@ -6855,7 +6878,7 @@ var recent_default = {
     {
       slug: "video-images-audio-design",
       label: "Video, Images, Audio & Design",
-      count: 494,
+      count: 496,
       asOf: "2026-10-28"
     },
     {
@@ -7016,7 +7039,8 @@ function order(rows) {
 }
 var CARD_COLS = "code_lc, code, name, author, description, category, source";
 var cardOf = (r) => ({ n: r.name ?? "", a: r.author ?? "", d: (r.description ?? "").slice(0, 220), c: r.category ?? null, k: r.code ?? "", s: r.source ?? "" });
-async function build(db, nowMs, telemetryStart) {
+var MAX_CHANGES_BYTES = 12e5;
+async function buildTrendingPhase(db, nowMs, telemetryStart) {
   const today = dayOf(nowMs);
   const generatedAt = iso(nowMs);
   const t = dayDiff(telemetryStart, today);
@@ -7095,6 +7119,12 @@ async function build(db, nowMs, telemetryStart) {
     method: trending.method,
     bots: botsSig
   };
+  return { trending, signals, cards };
+}
+async function buildRecentPhase(db, nowMs) {
+  const today = dayOf(nowMs);
+  const generatedAt = iso(nowMs);
+  const cards = {};
   const rec = await db.prepare(`SELECT ${CARD_COLS}, first_seen FROM bots WHERE status = 'live' ORDER BY first_seen DESC, code_lc ASC LIMIT ?`).bind(RECENT_N).all();
   const recentIds = [];
   for (const r of rec.results) {
@@ -7103,24 +7133,32 @@ async function build(db, nowMs, telemetryStart) {
     cards[id] ??= cardOf(r);
   }
   const recent = { ...recent_default, asOf: today, basis: "live bots, newest additions first", bots: recentIds, generatedAt };
-  const added = await db.prepare(`SELECT code, name, author, description, category, cats, source, first_seen FROM bots WHERE source != 'seed' AND status = 'live' ORDER BY first_seen, code_lc`).all();
+  const added = await db.prepare(`SELECT code, name, author, description, category, cats, source, first_seen FROM bots WHERE source != 'seed' AND last_live IS NOT NULL AND status IN ('live', 'dead') ORDER BY first_seen, code_lc`).all();
   const deadRows = await db.prepare(`SELECT code, code_lc FROM bots WHERE status = 'dead' ORDER BY code_lc`).all();
   const st = await db.prepare(`SELECT status, COUNT(*) AS n FROM bots GROUP BY status`).all();
   const stats = { live: 0, dead: 0, pending: 0, excluded: 0 };
   for (const r of st.results) stats[r.status] = r.n;
+  let list = added.results;
+  const row = (r) => ({ id: botId(r.category, r.code), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(",") : [], source: r.source, first_seen: r.first_seen });
+  let truncated = 0;
+  while (list.length > 1 && JSON.stringify(list.map(row)).length > MAX_CHANGES_BYTES) {
+    const drop = Math.ceil(list.length / 10);
+    truncated += drop;
+    list = list.slice(drop);
+  }
   const changes = {
     generatedAt,
     since: "2026-10-30",
-    added: added.results.map((r) => ({ id: botId(r.category, r.code), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(",") : [], source: r.source, first_seen: r.first_seen })),
+    ...truncated ? { truncated } : {},
+    added: list.map((r) => ({ id: botId(r.category, r.code), code: r.code, name: r.name, author: r.author, description: r.description, category: r.category, cats: r.cats ? r.cats.split(",") : [], source: r.source, first_seen: r.first_seen })),
     dead: deadRows.results.map((r) => r.code),
     excluded: stats.excluded
   };
-  return { trending, recent, signals, changes, cards, dead: deadRows.results.map((r) => r.code_lc), stats };
+  return { recent, changes, cards, dead: deadRows.results.map((r) => r.code_lc), stats };
 }
 
 // src/worker/dp/cron.ts
 var MODEL = classifier_default;
-var SLUGS = new Set(categories_default.map((c) => c.slug));
 var META_KEYS = ["throttled_until", "trending_at", "checks_hourly", "stats", "discovery_last_run", "discovery_new", "archive_resume", "archive_from", "last_run"];
 var TRENDING_EVERY_MS = 55 * 6e4;
 var COLS = "code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail";
@@ -7152,6 +7190,11 @@ function counted(db) {
   };
   return { db: wrapped, count: () => n };
 }
+function safeMessage(e, list) {
+  let m = (e instanceof Error ? e.message : String(e)).split("\n")[0].replace(/\s+/g, " ").trim().slice(0, 200);
+  for (const w of list) m = m.split(new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "ig")).join("[x]");
+  return m;
+}
 async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(...a), clock: realClock }) {
   if (!env.DB) return { upstream: 0, checked: 0, discovered: 0, throttled: false, hourly: false, queries: 0, skipped: "no DB binding" };
   const { db, count } = counted(env.DB);
@@ -7163,6 +7206,17 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
   const report = { upstream: 0, checked: 0, discovered: 0, throttled: false, hourly: false, queries: 0 };
   const writes = [];
   const setMeta = (k, v) => writes.push(metaPut(db, k, v));
+  let lastError = null;
+  const phase = async (name, fn) => {
+    try {
+      return await fn();
+    } catch (e) {
+      lastError = { phase: name, at: iso(clock.now()), message: safeMessage(e, list) };
+      console.error(`dataplane phase ${name} failed:`, lastError.message);
+      report.skipped = `${name} failed`;
+      return void 0;
+    }
+  };
   const stats = meta.stats ? JSON.parse(meta.stats) : { live: 0, dead: 0, pending: 0, excluded: 0 };
   const heldUntil = meta.throttled_until ? Date.parse(meta.throttled_until) : 0;
   const up = new Upstream(deps.fetch, clock, MAX_UPSTREAM);
@@ -7172,7 +7226,7 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
     const t = new Date(scheduledTime);
     const inWindow = t.getUTCHours() === 4 && t.getUTCMinutes() >= 10 && t.getUTCMinutes() < 20;
     const doDiscovery = inWindow || !meta.discovery_last_run;
-    if (doDiscovery) {
+    if (doDiscovery) await phase("discovery", async () => {
       const found = await discover(up, { archive_resume: meta.archive_resume, archive_from: meta.archive_from }, now);
       if (found.found.length) {
         const r = await db.prepare(
@@ -7188,13 +7242,24 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
       dn[dayOf(now)] = (dn[dayOf(now)] ?? 0) + report.discovered;
       for (const k of Object.keys(dn)) if (k < addDays(dayOf(now), -8)) delete dn[k];
       setMeta("discovery_new", JSON.stringify(dn));
-    }
+    });
     const room = up.left;
-    if (room > 0) {
+    if (room > 0) await phase("checks", async () => {
+      const pend = list.length ? 1 : 0;
+      const subCap = pend * Math.min(room, MAX_SUBMISSION_REQUESTS);
+      const otherCap = pend * Math.min(room, MAX_PENDING_PER_RUN);
       const sel = (status, n) => db.prepare(`SELECT ${COLS} FROM bots WHERE status = ? ORDER BY last_checked LIMIT ?`).bind(status, n);
-      const [pending, live, dead] = await db.batch([sel("pending", list.length ? Math.min(room, MAX_PENDING_PER_RUN) : 0), sel("live", room), sel("dead", room)]);
+      const pendSql = (cmp2, n) => db.prepare(
+        `SELECT ${COLS} FROM bots WHERE status = 'pending' AND source ${cmp2} 'submission' ORDER BY last_checked LIMIT ${n}`
+      );
+      const [subs, others, live, dead] = await db.batch([
+        pendSql("=", subCap),
+        db.prepare(`SELECT ${COLS} FROM bots WHERE status = 'pending' AND source != 'submission' ORDER BY last_checked LIMIT MAX(0, MIN(?, ? - (SELECT MIN(?, COUNT(*)) FROM bots WHERE status = 'pending' AND source = 'submission')))`).bind(otherCap, MAX_PENDING_PER_RUN, subCap),
+        sel("live", room),
+        sel("dead", room)
+      ]);
       const cmp = (a, b) => (a.last_checked ?? "").localeCompare(b.last_checked ?? "") || (a.code_lc < b.code_lc ? -1 : 1);
-      const rows = [...pending.results, ...[...live.results, ...dead.results].sort(cmp)];
+      const rows = [...subs.results, ...others.results, ...[...live.results, ...dead.results].sort(cmp)];
       const run = await runChecks(up, rows, clock, list, MODEL);
       report.checked = run.checked;
       if (run.patches.length) {
@@ -7222,54 +7287,56 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
         report.throttled = true;
         setMeta("throttled_until", iso(now + THROTTLE_HOLD_MS));
       }
-    }
+    });
     report.upstream = up.used;
   }
   const due = !meta.trending_at || now - Date.parse(meta.trending_at) >= TRENDING_EVERY_MS;
   if (due) {
     report.hourly = true;
-    try {
-      if (list.length) await upsertSubmissions(db, list, now);
-      const b = await build(db, now, start);
-      setMeta("trending_json", JSON.stringify(b.trending));
-      setMeta("recent_json", JSON.stringify(b.recent));
-      setMeta("signals_json", JSON.stringify(b.signals));
-      setMeta("changes_json", JSON.stringify(b.changes));
-      setMeta("cards_json", JSON.stringify(b.cards));
-      setMeta("dead_json", JSON.stringify(b.dead));
+    await phase("submissions", async () => {
+      await settleSubmissions(db);
+    });
+    const tr = await phase("trending", () => buildTrendingPhase(db, now, start));
+    const rc = await phase("recent", () => buildRecentPhase(db, now));
+    if (tr) {
+      setMeta("trending_json", JSON.stringify(tr.trending));
+      setMeta("signals_json", JSON.stringify(tr.signals));
+      setMeta("cards_json", JSON.stringify({ ...rc?.cards ?? {}, ...tr.cards }));
+      if (rc) setMeta("recent_json", JSON.stringify(rc.recent));
       setMeta("trending_at", iso(now));
-      Object.assign(stats, b.stats);
-      const t = new Date(scheduledTime);
-      if (t.getUTCHours() === 4) {
-        const today = dayOf(now);
-        await db.batch([
-          db.prepare("DELETE FROM visit_seen WHERE day < ?").bind(addDays(today, -2)),
-          db.prepare("DELETE FROM meta WHERE k LIKE 'salt:%' AND k < ?").bind(`salt:${addDays(today, -2)}`),
-          db.prepare("DELETE FROM bot_daily WHERE day < ?").bind(addDays(today, -60))
-        ]);
-      }
-    } catch (e) {
-      console.error("dataplane hourly failed:", e.message);
-      report.skipped = "hourly failed";
     }
+    if (rc) {
+      setMeta("changes_json", JSON.stringify(rc.changes));
+      setMeta("dead_json", JSON.stringify(rc.dead));
+      Object.assign(stats, rc.stats);
+    }
+    if (new Date(scheduledTime).getUTCHours() === 4) await phase("purge", async () => {
+      const today = dayOf(now);
+      await db.batch([
+        db.prepare("DELETE FROM visit_seen WHERE day < ?").bind(addDays(today, -2)),
+        db.prepare("DELETE FROM meta WHERE k LIKE 'salt:%' AND k < ?").bind(`salt:${addDays(today, -2)}`),
+        db.prepare("DELETE FROM bot_daily WHERE day < ?").bind(addDays(today, -60))
+      ]);
+    });
   }
   setMeta("stats", JSON.stringify(stats));
   setMeta("last_run", iso(clock.now()));
-  await db.batch(writes);
+  if (lastError) setMeta("last_error", JSON.stringify(lastError));
+  try {
+    await db.batch(writes);
+  } catch (e) {
+    const le = { phase: "recent", at: iso(clock.now()), message: safeMessage(e, list) };
+    await db.batch([metaPut(db, "last_error", JSON.stringify(le)), metaPut(db, "last_run", iso(clock.now()))]);
+    report.skipped = "meta write failed";
+  }
   report.queries = count();
   return report;
 }
-async function upsertSubmissions(db, list, now) {
-  const { results } = await db.prepare(
-    `SELECT s.name, s.author, s.description, s.code, s.category FROM submissions s
-       LEFT JOIN bots b ON b.code_lc = lower(s.code) WHERE s.status = 'approved' AND b.code_lc IS NULL LIMIT 50`
-  ).all();
-  if (!results.length) return;
-  await db.batch(results.map((s) => {
-    const c = scrub({ name: s.name, author: s.author ?? "", description: s.description }, list);
-    const cat = s.category && SLUGS.has(s.category) ? s.category : null;
-    return db.prepare(`INSERT OR IGNORE INTO bots(code_lc, code, name, author, description, category, cats, source, status, first_seen) VALUES(?,?,?,?,?,?,?,'submission',?,?)`).bind(s.code.toLowerCase(), s.code, c.name, c.author, c.description, cat, cat, c.excluded ? "excluded" : "pending", iso(now));
-  }));
+async function settleSubmissions(db) {
+  await db.batch([
+    db.prepare(`UPDATE submissions SET status = 'approved' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status = 'live')`),
+    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`)
+  ]);
 }
 
 // src/worker/dp/serve.ts
@@ -7278,7 +7345,7 @@ var STALE_MS = 3 * 36e5;
 var jsonHeaders = (maxAge) => ({ "Content-Type": "application/json; charset=utf-8", "Cache-Control": `public, max-age=${maxAge}` });
 var esc2 = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 var cache = null;
-var KEYS = ["trending_json", "recent_json", "signals_json", "changes_json", "cards_json", "trending_at"];
+var KEYS = ["trending_json", "recent_json", "signals_json", "changes_json", "cards_json", "trending_at", "dead_json"];
 async function stored(db, nowMs) {
   if (cache && cache.db === db && nowMs - cache.at < 6e4) return cache.meta;
   const meta = await readMeta(db, KEYS);
@@ -7314,7 +7381,7 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
   try {
     d1 = !!db && !!await db.prepare("SELECT 1 AS ok").first();
     if (db) {
-      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at"]));
+      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at", "last_error"]));
       const day = nowIso.slice(0, 10);
       const e = await db.prepare("SELECT COALESCE(SUM(views + opens), 0) AS n FROM bot_daily WHERE day = ?").bind(day).first();
       events = e?.n ?? 0;
@@ -7342,14 +7409,14 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
     discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0) },
     telemetry: { events_today: events },
     trending: { generatedAt: m.trending_at ?? null },
+    last_error: parse(m.last_error, null),
     noref: nosecret ? "ok" : "missing",
     switches
   };
 }
 var cardHtml = (id, c, level, trending, showCategory) => {
-  const seed = c.s === "seed";
-  const href = seed ? `/bots/${esc2(id)}/` : `/go/${esc2(c.k)}`;
-  const rel = seed ? "" : ' rel="nofollow noopener"';
+  const href = `/bots/${esc2(id)}/`;
+  const rel = "";
   const label = c.c ? LABEL.get(c.c) : void 0;
   const foot = [
     trending ? '<span class="trend"><span class="dot" aria-hidden="true"></span>Trending</span>' : "",
@@ -7431,6 +7498,18 @@ function gonePage(res, id, categorySlug) {
     return minimal();
   }
 }
+async function liveState(db, nowMs = Date.now()) {
+  if (!db) return null;
+  try {
+    const meta = await stored(db, nowMs);
+    if (!meta.changes_json) return null;
+    const ch = JSON.parse(meta.changes_json);
+    const dead = new Set(meta.dead_json ? JSON.parse(meta.dead_json) : []);
+    return { added: Array.isArray(ch.added) ? ch.added : [], dead };
+  } catch {
+    return null;
+  }
+}
 
 // src/worker/dp/telemetry.ts
 var BLOCKED_UA = /bot|crawl|spider|slurp|preview|headless|curl|wget|python|go-http|okhttp|java|http-client/i;
@@ -7470,22 +7549,35 @@ async function record(db, kind, codeLc, req, nowMs = Date.now()) {
   }
 }
 var GO_RE = /^[A-Za-z0-9_-]{1,64}$/;
-async function go(req, db, code, wait) {
+async function go(req, db, code, wait, seed = async () => null) {
   const notFound = () => new Response("Not found\n", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
+  const redirect = (target3) => new Response(null, { status: 302, headers: { Location: botUrl(target3), "Cache-Control": "no-store", "X-Robots-Tag": "noindex", "Referrer-Policy": "no-referrer" } });
   if (req.method !== "GET" && req.method !== "HEAD") return new Response("Method not allowed\n", { status: 405, headers: { Allow: "GET, HEAD" } });
   if (!GO_RE.test(code)) return notFound();
-  let target2 = code;
+  const lc = code.toLowerCase();
+  let target2 = null;
+  let verified = false;
   if (db) {
     try {
-      const row = await db.prepare("SELECT code FROM bots WHERE code_lc = ? AND status IN ('live', 'pending')").bind(code.toLowerCase()).first();
+      const row = await db.prepare("SELECT code FROM bots WHERE code_lc = ? AND status IN ('live', 'pending')").bind(lc).first();
       if (!row) return notFound();
       target2 = row.code;
+      verified = true;
     } catch (e) {
       console.error("go lookup failed:", e.message);
     }
   }
-  wait(record(db, "open", code.toLowerCase(), req));
-  return new Response(null, { status: 302, headers: { Location: botUrl(target2), "Cache-Control": "no-store", "X-Robots-Tag": "noindex", "Referrer-Policy": "no-referrer" } });
+  if (!verified) {
+    try {
+      target2 = await seed(lc);
+    } catch {
+      target2 = null;
+    }
+    if (!target2) return notFound();
+    return redirect(target2);
+  }
+  wait(record(db, "open", lc, req));
+  return redirect(target2);
 }
 var deadCache = null;
 async function isDead(db, codeLc, nowMs = Date.now()) {
@@ -7499,6 +7591,181 @@ async function isDead(db, codeLc, nowMs = Date.now()) {
   } catch {
     return false;
   }
+}
+
+// src/worker/dp/merge.ts
+var SLUGS = new Set(categories_default.map((c) => c.slug));
+var SITE2 = "https://grokbot.zone";
+function splitId(id) {
+  let best = null;
+  for (const s of SLUGS) if (id.startsWith(`${s}-`) && (!best || s.length > best.length)) best = s;
+  return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
+}
+var seedCache = null;
+async function seedMap(assets) {
+  if (seedCache && seedCache.assets === assets) return seedCache.map;
+  const res = await assets.fetch(new Request(`${SITE2}/api/v1/seed-codes.json`));
+  if (!res.ok) return null;
+  const codes = (await res.json()).codes;
+  seedCache = { assets, map: new Map(codes.map((c) => [c.toLowerCase(), c])) };
+  return seedCache.map;
+}
+async function mergeState(db, assets) {
+  const st = await liveState(db);
+  if (!st) return null;
+  let seed = null;
+  try {
+    seed = await seedMap(assets);
+  } catch {
+    seed = null;
+  }
+  const extras = seed ? st.added.filter((b) => !st.dead.has(b.code.toLowerCase()) && !seed.has(b.code.toLowerCase())).sort((a, b) => a.first_seen < b.first_seen ? 1 : a.first_seen > b.first_seen ? -1 : a.code < b.code ? -1 : 1) : [];
+  return { extras, dead: st.dead };
+}
+var cardOf2 = (b) => ({ n: b.name, a: b.author, d: b.description.slice(0, 220), c: b.category, k: b.code, s: b.source });
+var catsOfEntry = (b) => (b.cats?.length ? b.cats : b.category ? [b.category] : []).filter((s) => SLUGS.has(s));
+function searchLive(m) {
+  const bots = m.extras.map((b) => ({
+    i: b.id,
+    n: b.name,
+    a: b.author,
+    d: b.description.length > 140 ? b.description.slice(0, 139) + "\u2026" : b.description,
+    r: 1e6,
+    ...b.category ? { c: b.category } : {},
+    cats: catsOfEntry(b)
+  }));
+  return new Response(JSON.stringify({ bots, dead: [...m.dead] }) + "\n", { headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=300" } });
+}
+async function categoryPage(res, slug, m) {
+  if (res.status !== 200) return res;
+  let text = await res.text();
+  const add = m.extras.filter((b) => catsOfEntry(b).includes(slug));
+  let removed = 0;
+  if (m.dead.size) text = text.replace(/<li data-code="([a-z0-9_-]+)">[\s\S]*?<\/li>/g, (all, c) => m.dead.has(c) ? (removed++, "") : all);
+  if (!add.length && !removed) return new Response(text, { status: 200, headers: res.headers });
+  if (add.length) {
+    const html = add.map((b) => `<li data-code="${esc2(b.code.toLowerCase())}">${cardHtml(b.id, cardOf2(b), 2, false, false)}</li>`).join("");
+    const at = text.indexOf("data-bot-list");
+    const end = at >= 0 ? text.indexOf("</ul>", at) : -1;
+    if (end >= 0) text = text.slice(0, end) + html + text.slice(end);
+    else add.length = 0;
+  }
+  text = text.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_a, x, n, y) => `${x}${Number(n) - removed + add.length}${y}`);
+  return new Response(text, { status: 200, headers: res.headers });
+}
+var codeOfUrl = (u) => {
+  const x = /\/bots\/([^/]+)\/?$/.exec(u);
+  return x ? splitId(x[1])[1].toLowerCase() : null;
+};
+var MAX_FEED_EXTRAS = 50;
+function feedJson(body, m) {
+  const j = JSON.parse(body);
+  const keep = j.items.filter((it) => !m.dead.has(codeOfUrl(it.url) ?? ""));
+  const add = m.extras.slice(0, MAX_FEED_EXTRAS).map((b) => ({ id: `${SITE2}/bots/${b.id}/`, url: `${SITE2}/bots/${b.id}/`, title: b.name, summary: b.description, date_modified: b.first_seen }));
+  return JSON.stringify({ ...j, items: [...add, ...keep] }, null, 1) + "\n";
+}
+function feedXml(body, m, generatedAt) {
+  const entries = [...body.matchAll(/ {2}<entry>[\s\S]*?<\/entry>\n/g)];
+  let out = body;
+  for (const e of entries) {
+    const c = /<id>[^<]*\/bots\/([^/<]+)\/<\/id>/.exec(e[0]);
+    if (c && m.dead.has(splitId(c[1])[1].toLowerCase())) out = out.replace(e[0], "");
+  }
+  const add = m.extras.slice(0, MAX_FEED_EXTRAS).map((b) => `  <entry>
+    <title>${esc2(b.name)}</title>
+    <link href="${SITE2}/bots/${esc2(b.id)}/"/>
+    <id>${SITE2}/bots/${esc2(b.id)}/</id>
+    <updated>${esc2(b.first_seen)}</updated>
+    <summary>${esc2(b.description)}</summary>
+  </entry>
+`).join("");
+  if (add) {
+    const i = out.indexOf("  <entry>");
+    out = i >= 0 ? out.slice(0, i) + add + out.slice(i) : out.replace("</feed>", add + "</feed>");
+    out = out.replace(/<updated>[^<]*<\/updated>/, `<updated>${generatedAt}</updated>`);
+  }
+  return out;
+}
+function sitemapIndex(body, m) {
+  return m.extras.length ? body.replace("</sitemapindex>", `<sitemap><loc>${SITE2}/sitemap-live.xml</loc></sitemap></sitemapindex>`) : body;
+}
+function sitemapStatic(body, m) {
+  if (!m.dead.size) return body;
+  return body.split("</url>").filter((u) => {
+    const x = /\/bots\/([^/<]+)\/<\/loc>/.exec(u);
+    return !(x && m.dead.has(splitId(x[1])[1].toLowerCase()));
+  }).join("</url>");
+}
+function sitemapLive(m) {
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${m.extras.map((b) => `<url><loc>${SITE2}/bots/${esc2(b.id)}/</loc></url>`).join("")}</urlset>`;
+}
+
+// src/worker/dp/page.ts
+var LABEL2 = new Map(categories_default.map((c) => [c.slug, c.label]));
+var TEMPLATE_PATH = "/bot-template/";
+function catsOf(r) {
+  const all = [r.category, ...r.cats ? r.cats.split(",") : []].filter((s) => !!s && LABEL2.has(s));
+  return [...new Set(all)];
+}
+function seoLabel(r) {
+  const cat = r.category ? LABEL2.get(r.category) : void 0;
+  return `${r.name}${r.author ? ` by ${r.author}` : ""}${cat ? ` (${cat})` : ""}`;
+}
+function renderBotPage(tpl, r) {
+  const id = botId(r.category, r.code);
+  const path = `/bots/${id}/`;
+  const url = `https://grokbot.zone${path}`;
+  const slugs = catsOf(r);
+  const cat = slugs[0] ? LABEL2.get(slugs[0]) : null;
+  const date = (r.first_seen || "").slice(0, 10);
+  const label = seoLabel(r);
+  const title = `${label} | Grok bot | GrokBot Zone`;
+  const description = `${label}: a Grok bot${cat ? ` in ${cat}` : ""}. First listed ${date}.`;
+  const ld = [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: r.name,
+      description,
+      url: `https://x.ai/bot/${r.code}`,
+      ...cat ? { applicationCategory: cat } : {},
+      ...r.author ? { author: { "@type": "Person", name: r.author } } : {},
+      operatingSystem: "Web",
+      mainEntityOfPage: url
+    },
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://grokbot.zone/" },
+      ...slugs[0] ? [{ "@type": "ListItem", position: 2, name: cat, item: `https://grokbot.zone/categories/${slugs[0]}/` }] : [],
+      { "@type": "ListItem", position: slugs[0] ? 3 : 2, name: r.name, item: url }
+    ] }
+  ].map((o) => JSON.stringify(o).replace(/</g, "\\u003c"));
+  let ldAt = 0;
+  const attr2 = (name, value) => ({ element(e) {
+    e.setAttribute(name, value);
+  } });
+  const text = (v) => ({ element(e) {
+    e.setInnerContent(v);
+  } });
+  const drop = { element(e) {
+    e.remove();
+  } };
+  const rw = new HTMLRewriter().on('meta[name="robots"]', drop).on("title", text(title)).on('meta[name="description"]', attr2("content", description)).on('meta[property="og:title"]', attr2("content", title)).on('meta[property="og:description"]', attr2("content", description)).on('meta[property="og:url"]', attr2("content", url)).on('link[rel="canonical"]', attr2("href", url)).on('script[type="application/ld+json"]', { element(e) {
+    e.setInnerContent(ld[ldAt++] ?? "{}", { html: true });
+  } }).on('[data-f="crumb"]', slugs[0] ? {} : drop).on('[data-f="crumb-link"]', slugs[0] ? { element(e) {
+    e.setAttribute("href", `/categories/${slugs[0]}/`);
+    e.setInnerContent(cat);
+  } } : {}).on('[data-f="name"]', text(r.name)).on('[data-f="by"]', r.author ? text(`by ${r.author}`) : drop).on('[data-f="desc"]', text(r.description)).on('[data-f="cats-row"]', slugs.length ? {} : drop).on('[data-f="cats-row"] dt', text(slugs.length === 1 ? "Category" : "Categories")).on('[data-f="cats"]', { element(e) {
+    e.setInnerContent(slugs.map((s) => `<a href="/categories/${esc2(s)}/">${esc2(LABEL2.get(s))}</a>`).join(" \xB7 "), { html: true });
+  } }).on('[data-f="author-row"]', r.author ? {} : drop).on('[data-f="author"]', text(r.author)).on('[data-f="date-label"]', text("First listed")).on('[data-f="date"]', { element(e) {
+    e.setAttribute("datetime", date);
+    e.setInnerContent(date);
+  } }).on('[data-f="open"]', attr2("href", `/go/${r.code}`)).on('[data-f="share"]', { element(e) {
+    e.setAttribute("data-title", r.name);
+    e.setAttribute("data-url", url);
+  } }).on('[data-f="note"]', text(`This description is a snapshot from ${date}. The bot's own page has the current details.`));
+  const out = rw.transform(tpl);
+  const headers = new Headers({ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, s-maxage=3600" });
+  return new Response(out.body, { status: 200, headers });
 }
 
 // src/worker/index.ts
@@ -7535,6 +7802,10 @@ async function shippedCodes(env) {
   if (!res.ok) throw new Error(`codes.json ${res.status}`);
   codesCache = new Set((await res.json()).codes);
   return codesCache;
+}
+async function seedSpelling(env, codeLc) {
+  const map = await seedMap(env.ASSETS);
+  return map?.get(codeLc) ?? null;
 }
 async function logSend(env, kind, recipient, messageId, ok, errorCode) {
   if (!env.DB) return;
@@ -7592,6 +7863,24 @@ async function health(env) {
 function flags(env) {
   return json(200, { form: isOn(env.FORM_SUBMIT_ENABLED), subscribe: isOn(env.SUBSCRIBE_ENABLED), email: isOn(env.EMAIL_SUBMIT_ENABLED) });
 }
+var SUBMISSIONS_PER_DAY = 200;
+async function intakeBot(db, code, nowMs = Date.now()) {
+  const lc = code.toLowerCase();
+  const known = () => db.prepare("SELECT 1 AS x FROM bots WHERE code_lc = ?").bind(lc).first();
+  if (await known()) return "known";
+  const day = new Date(nowMs).toISOString().slice(0, 10);
+  try {
+    const r = await db.prepare(
+      `INSERT INTO bots(code_lc, code, source, status, first_seen) SELECT ?, ?, 'submission', 'pending', ?
+        WHERE (SELECT COUNT(*) FROM bots WHERE source = 'submission' AND first_seen >= ?) < ?
+          AND (SELECT COUNT(*) FROM submissions WHERE created_at >= ?) < ?`
+    ).bind(lc, code, new Date(nowMs).toISOString(), day, SUBMISSIONS_PER_DAY, day, SUBMISSIONS_PER_DAY).run();
+    if (r.meta.changes) return "new";
+  } catch {
+    return "known";
+  }
+  return await known() ? "known" : "cap";
+}
 async function submit(req, env, ctx) {
   if (!isOn(env.FORM_SUBMIT_ENABLED)) return disabled();
   if (!env.DB) return disabled();
@@ -7604,10 +7893,14 @@ async function submit(req, env, ctx) {
   const v = validateSubmission(body, CATEGORY_SLUGS, Number(env.MIN_FILL_MS ?? "3000"));
   if (!v.ok) return json(400, { ok: false, errors: v.errors });
   const s = v.value;
+  if (!CODE_RE.test(s.code)) return json(400, { ok: false, errors: { link: "must look like https://x.ai/bot/<21-character code>" } });
   if ((await shippedCodes(env)).has(s.code.toLowerCase())) return json(409, { ok: false, error: "already_listed" });
   const existing = await env.DB.prepare("SELECT id, status FROM submissions WHERE link = ?").bind(s.link).first();
   let id;
   if (existing && existing.status !== "rejected") return json(409, { ok: false, error: "already_pending" });
+  const intake = await intakeBot(env.DB, s.code);
+  if (intake === "known") return json(409, { ok: false, error: "already_listed" });
+  if (intake === "cap") return new Response("Too many new submissions today. Please try again tomorrow.\n", { status: 429, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store", "Retry-After": "3600" } });
   if (existing) {
     const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=? AND status='rejected'").bind(s.name, s.author, s.description, s.code, s.category, s.email, ip, existing.id).run();
     if (!r.meta.changes) return json(409, { ok: false, error: "already_pending" });
@@ -7717,7 +8010,7 @@ async function email(message, env, _ctx) {
     return;
   }
   const parsed = await new PostalMime().parse(await new Response(message.raw).arrayBuffer());
-  const found = extractCodes(parsed.text, parsed.html);
+  const found = extractCodes(parsed.text, parsed.html).filter((c) => CODE_RE.test(c));
   if (!found.length) {
     message.setReject("no bot link found");
     return;
@@ -7738,6 +8031,19 @@ async function email(message, env, _ctx) {
     const name = (subject || desc).slice(0, 120).padEnd(3, ".");
     const existing = await env.DB.prepare("SELECT id, status FROM submissions WHERE link = ?").bind(link).first();
     if (existing && existing.status !== "rejected") {
+      skipped.push(code);
+      continue;
+    }
+    const intake = await intakeBot(env.DB, code);
+    if (intake === "known") {
+      skipped.push(code);
+      continue;
+    }
+    if (intake === "cap") {
+      if (!queued.length) {
+        message.setReject("too many new submissions today");
+        return;
+      }
       skipped.push(code);
       continue;
     }
@@ -7765,7 +8071,7 @@ async function email(message, env, _ctx) {
     const lines = [`Hi \u2014 we got your message for GrokBot Zone.`];
     if (queued.length) lines.push(`Queued for review: ${queued.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
     if (skipped.length) lines.push(`Already listed or already queued: ${skipped.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
-    lines.push("If a bot is approved it appears with the next refresh; the list updates twice a week, Monday and Thursday.", `\u2014 GrokBot Zone \xB7 ${SITE}/trending/`);
+    lines.push("Once the platform page checks out the bot is added automatically, usually within an hour.", `\u2014 GrokBot Zone \xB7 ${SITE}/trending/`);
     const text = lines.join("\n");
     const replySubject = `Re: ${subject || "your submission"}`;
     try {
@@ -7862,10 +8168,40 @@ async function route(request, env, ctx, url) {
   return dataPlane(request, env, ctx, path);
 }
 var BOT_PAGE_RE = /^\/bots\/([^/]+)$/;
-function splitId(id) {
-  let best = null;
-  for (const s of CATEGORY_SLUGS) if (id.startsWith(`${s}-`) && (!best || s.length > best.length)) best = s;
-  return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
+var CATEGORY_RE = /^\/categories\/([a-z0-9-]+)$/;
+var notFoundPage = (request, env) => env.ASSETS.fetch(new Request(new URL("/_gz_not_found_", request.url), { headers: unconditional(request).headers }));
+async function dbBotPage(request, env, ctx, notFound, id, cat, lc) {
+  if (!env.DB) return notFound;
+  const row = await env.DB.prepare("SELECT code, name, author, description, category, cats, first_seen, status FROM bots WHERE code_lc = ?").bind(lc).first();
+  if (!row || botId(row.category, row.code).toLowerCase() !== id.toLowerCase()) return notFound;
+  if (row.status === "dead") return gonePage(notFound, id, cat);
+  if (row.status !== "live") return notFound;
+  const tpl = await env.ASSETS.fetch(new Request(new URL(TEMPLATE_PATH, request.url)));
+  if (tpl.status !== 200) return notFound;
+  if (request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
+  return renderBotPage(tpl, row);
+}
+async function mergedAsset(request, env, path) {
+  const cat = CATEGORY_RE.exec(path)?.[1];
+  const kind = path === "/search/live.json" ? "search" : cat && CATEGORY_SLUGS.has(cat) ? "category" : ["/feed.json", "/feed.xml", "/sitemap-index.xml", "/sitemap-0.xml", "/sitemap-live.xml"].includes(path) ? path : null;
+  if (!kind) return null;
+  const m = await mergeState(env.DB, env.ASSETS);
+  if (!m || !m.extras.length && !m.dead.size) return kind === "/sitemap-live.xml" ? notFoundPage(request, env) : null;
+  if (kind === "search") return searchLive(m);
+  const xml = { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=300" } };
+  if (kind === "/sitemap-live.xml") return m.extras.length ? new Response(sitemapLive(m), xml) : notFoundPage(request, env);
+  const res = await env.ASSETS.fetch(unconditional(request));
+  if (res.status !== 200) return res;
+  const h = new Headers(res.headers);
+  for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
+  h.set("Cache-Control", "no-cache");
+  if (kind === "category") {
+    const out = await categoryPage(new Response(res.body, { status: 200, headers: h }), cat, m);
+    return out;
+  }
+  const body = await res.text();
+  const merged = kind === "/feed.json" ? feedJson(body, m) : kind === "/feed.xml" ? feedXml(body, m, (/* @__PURE__ */ new Date()).toISOString()) : kind === "/sitemap-index.xml" ? sitemapIndex(body, m) : sitemapStatic(body, m);
+  return new Response(merged, { status: 200, headers: h });
 }
 async function dataPlane(request, env, ctx, path) {
   try {
@@ -7877,13 +8213,18 @@ async function dataPlane(request, env, ctx, path) {
 }
 async function dataPlaneInner(request, env, ctx, path) {
   const get = request.method === "GET" || request.method === "HEAD";
-  if (path === "/go" || path.startsWith("/go/")) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ""), (p) => ctx.waitUntil(p));
+  if (path === "/go" || path.startsWith("/go/")) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ""), (p) => ctx.waitUntil(p), (lc) => seedSpelling(env, lc));
   if (get && isStoredFile(path)) {
     const stored2 = await storedFile(env.DB, path);
     if (stored2) return stored2;
     if (path !== "/api/v1/trending.json" && path !== "/api/v1/recent.json") return json(503, { ok: false, error: "not_ready" }, { "Retry-After": "600" });
   }
+  if (path === TEMPLATE_PATH.replace(/\/$/, "")) return notFoundPage(request, env);
   if (!get) return env.ASSETS.fetch(request);
+  if (request.method === "GET") {
+    const merged = await mergedAsset(request, env, path);
+    if (merged) return merged;
+  }
   const m = BOT_PAGE_RE.exec(path);
   const livePath = path === "/" || path === "/trending" || path === "/recent";
   if (!m && !(livePath && request.method === "GET")) return env.ASSETS.fetch(request);
@@ -7892,8 +8233,11 @@ async function dataPlaneInner(request, env, ctx, path) {
     const [cat, code] = splitId(m[1]);
     const lc = code.toLowerCase();
     if (await isDead(env.DB, lc)) return gonePage(res, m[1], cat);
-    if (res.status === 200 && request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
-    return res;
+    if (res.status === 200) {
+      if (request.method === "GET") ctx.waitUntil(record(env.DB, "view", lc, request));
+      return res;
+    }
+    return dbBotPage(request, env, ctx, res, m[1], cat, lc);
   }
   return livePage(res, env.DB, path);
 }

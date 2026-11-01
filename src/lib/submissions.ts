@@ -110,23 +110,20 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 export const htmlNote = (text: string) => `<p>${esc(text).replace(/\n/g, '<br>')}</p>`;
 
 export const SITE = 'https://grokbot.zone';
-export const approveSql = (id: number) =>
-  `wrangler d1 execute grokbot-zone --remote --command "UPDATE submissions SET status='approved' WHERE id=${id}"`;
-
 export function ackText(name: string, link: string): string {
-  return `Hi — we got "${name}" (${link}).\nIt is queued for review. If it is approved it appears with the next refresh;\nthe list updates twice a week, Monday and Thursday.\n— GrokBot Zone · ${SITE}/trending/`;
+  return `Hi — we got "${name}" (${link}).\nIt is queued. Once the platform page checks out, the bot is added to the site automatically, usually within an hour.\n— GrokBot Zone · ${SITE}/recent/`;
 }
 
 /**
- * The owner mail. The approve: command goes first and every submitted field is collapsed to one line
- * under an "untrusted" heading, so submitted text can never add a second approve: line.
+ * The owner mail (spec 08 D30: for your information only, nothing to approve). Every submitted field is
+ * collapsed to one line under an "untrusted" heading, so submitted text can never add a line of its own.
  */
 export function ownerSummary(r: { id: number; name: string; author: string | null; category: string | null; link: string; submitter: string; ip: string; description: string; source: string }) {
   const f = (label: string, v: string | null) => `${label}: ${v === null ? '—' : singleLine(v)}`;
   return {
     subject: oneLine(`[GZ] new submission #${r.id} — ${r.name} (${r.source})`),
     text: [
-      `approve:  ${approveSql(r.id)}`,
+      'FYI: processed automatically, nothing to approve. It goes live when the platform page checks out.',
       '',
       'Submitted fields (untrusted):',
       f('name', r.name), f('author', r.author), f('category', r.category), f('link', r.link),

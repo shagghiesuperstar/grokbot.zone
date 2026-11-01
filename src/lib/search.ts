@@ -37,3 +37,26 @@ export function search(records: IndexedRecord[], query: string): Hit[] {
     (x, y) => x.tier - y.tier || x.rec.r - y.rec.r || x.rec.nameNorm.localeCompare(y.rec.nameNorm) || (x.rec.i < y.rec.i ? -1 : 1),
   );
 }
+
+/** The payload of /search/live.json: live bots the build does not know yet, and the codes that have died since. */
+export interface LivePayload { bots: (SearchRecord & { cats?: string[] })[]; dead: string[] }
+export const UNCATEGORIZED = 'uncategorized';
+
+/** The bot code inside a public id ("<category>-<code>"; a null category is "uncategorized-<code>"). */
+export function codeOfId(id: string, slugs: string[]): string {
+  let best = '';
+  for (const s of [...slugs, UNCATEGORIZED]) if (id.startsWith(`${s}-`) && s.length > best.length) best = s;
+  return best ? id.slice(best.length + 1) : id;
+}
+
+/** Spec 08 D28: drop dead bots and add live ones to the per-category index, in place. Bots with no category are filed under "uncategorized". */
+export function mergeLive(byId: Map<string, { rec: SearchRecord; cats: string[] }>, live: LivePayload | null, slugs: string[]): void {
+  if (!live) return;
+  const dead = new Set((live.dead ?? []).map((c) => c.toLowerCase()));
+  if (dead.size) for (const id of [...byId.keys()]) if (dead.has(codeOfId(id, slugs).toLowerCase())) byId.delete(id);
+  for (const b of live.bots ?? []) {
+    if (byId.has(b.i) || dead.has(codeOfId(b.i, slugs).toLowerCase())) continue;
+    const { cats, ...rec } = b;
+    byId.set(b.i, { rec, cats: cats && cats.length ? cats : [UNCATEGORIZED] });
+  }
+}

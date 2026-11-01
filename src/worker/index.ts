@@ -11,10 +11,12 @@ import {
 } from '../lib/submissions';
 import { isMediaRequest, serveMedia } from './media';
 import { runDataPlane } from './dp/cron';
-import { denylist } from './dp/ingest';
+import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, isDead, record } from './dp/telemetry';
-import { CATEGORY_NONE } from './dp/util';
+import { categoryPage, feedJson, feedXml, mergeState, searchLive, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
+import { renderBotPage, TEMPLATE_PATH } from './dp/page';
+import { botId } from './dp/util';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -76,16 +78,10 @@ async function shippedCodes(env: Env): Promise<Set<string>> {
   return codesCache;
 }
 
-let seedCache: { assets: Env['ASSETS']; map: Map<string, string> } | null = null;
 /** O6: the stored spelling of a code in the deployed static seed list, read from the built assets (never D1). */
 async function seedSpelling(env: Env, codeLc: string): Promise<string | null> {
-  if (!seedCache || seedCache.assets !== env.ASSETS) {
-    const res = await env.ASSETS.fetch(new Request(`${SITE}/api/v1/seed-codes.json`));
-    if (!res.ok) return null;
-    const codes = ((await res.json()) as { codes: string[] }).codes;
-    seedCache = { assets: env.ASSETS, map: new Map(codes.map((c) => [c.toLowerCase(), c])) };
-  }
-  return seedCache.map.get(codeLc) ?? null;
+  const map = await seedMap(env.ASSETS);
+  return map?.get(codeLc) ?? null;
 }
 
 async function logSend(env: Env, kind: Kind, recipient: string, messageId: string | null, ok: boolean, errorCode: string | null) {
@@ -146,6 +142,27 @@ function flags(env: Env): Response {
   return json(200, { form: isOn(env.FORM_SUBMIT_ENABLED), subscribe: isOn(env.SUBSCRIBE_ENABLED), email: isOn(env.EMAIL_SUBMIT_ENABLED) });
 }
 
+// ---- submission intake (spec 08 D30): a submitted code becomes a pending bot, exactly like a discovered one ----
+
+export const SUBMISSIONS_PER_DAY = 200;
+/** known = a bots row (any status) already exists; cap = today's 200 new rows are used; new = the pending row was inserted. */
+async function intakeBot(db: D1Database, code: string, nowMs = Date.now()): Promise<'new' | 'known' | 'cap'> {
+  const lc = code.toLowerCase();
+  const known = () => db.prepare('SELECT 1 AS x FROM bots WHERE code_lc = ?').bind(lc).first();
+  if (await known()) return 'known';
+  const day = new Date(nowMs).toISOString().slice(0, 10);
+  try {
+    // One conditional statement, so concurrent posts cannot overshoot the cap. Nothing the submitter typed goes into the bots row.
+    const r = await db.prepare(
+      `INSERT INTO bots(code_lc, code, source, status, first_seen) SELECT ?, ?, 'submission', 'pending', ?
+        WHERE (SELECT COUNT(*) FROM bots WHERE source = 'submission' AND first_seen >= ?) < ?
+          AND (SELECT COUNT(*) FROM submissions WHERE created_at >= ?) < ?`,
+    ).bind(lc, code, new Date(nowMs).toISOString(), day, SUBMISSIONS_PER_DAY, day, SUBMISSIONS_PER_DAY).run();
+    if (r.meta.changes) return 'new';
+  } catch { return 'known'; } // a concurrent insert of the same code won the primary key
+  return (await known()) ? 'known' : 'cap';
+}
+
 // ---- POST /api/submit, /api/v1/submissions ----
 
 async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
@@ -161,10 +178,14 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   if (!v.ok) return json(400, { ok: false, errors: v.errors });
   const s = v.value;
 
+  if (!CODE_RE.test(s.code)) return json(400, { ok: false, errors: { link: 'must look like https://x.ai/bot/<21-character code>' } });
   if ((await shippedCodes(env)).has(s.code.toLowerCase())) return json(409, { ok: false, error: 'already_listed' });
   const existing = await env.DB.prepare('SELECT id, status FROM submissions WHERE link = ?').bind(s.link).first<{ id: number; status: string }>();
   let id: number;
   if (existing && existing.status !== 'rejected') return json(409, { ok: false, error: 'already_pending' });
+  const intake = await intakeBot(env.DB, s.code);
+  if (intake === 'known') return json(409, { ok: false, error: 'already_listed' });
+  if (intake === 'cap') return new Response('Too many new submissions today. Please try again tomorrow.\n', { status: 429, headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store', 'Retry-After': '3600' } });
   if (existing) {
     // One conditional statement: a row approved since the SELECT above is left alone.
     const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='webform', name=?, author=?, description=?, code=?, category=?, submitter_email=?, ip=? WHERE id=? AND status='rejected'")
@@ -272,7 +293,7 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
 
   const parsed = await new (PostalMime as unknown as new () => { parse(b: ArrayBuffer): Promise<{ subject?: string; text?: string; html?: string }> })()
     .parse(await new Response(message.raw).arrayBuffer());
-  const found = extractCodes(parsed.text, parsed.html);
+  const found = extractCodes(parsed.text, parsed.html).filter((c) => CODE_RE.test(c));
   if (!found.length) { message.setReject('no bot link found'); return; }
   const shipped = await shippedCodes(env);
   const fresh = found.filter((c) => !shipped.has(c.toLowerCase()));
@@ -288,6 +309,9 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
     const name = (subject || desc).slice(0, 120).padEnd(3, '.');
     const existing = await env.DB.prepare('SELECT id, status FROM submissions WHERE link = ?').bind(link).first<{ id: number; status: string }>();
     if (existing && existing.status !== 'rejected') { skipped.push(code); continue; }
+    const intake = await intakeBot(env.DB, code);
+    if (intake === 'known') { skipped.push(code); continue; }
+    if (intake === 'cap') { if (!queued.length) { message.setReject('too many new submissions today'); return; } skipped.push(code); continue; }
     let id: number;
     if (existing) {
       const r = await env.DB.prepare("UPDATE submissions SET status='pending', source='email', name=?, description=?, code=?, submitter_email=?, raw_excerpt=? WHERE id=? AND status='rejected'")
@@ -310,7 +334,7 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
     const lines = [`Hi — we got your message for GrokBot Zone.`];
     if (queued.length) lines.push(`Queued for review: ${queued.map((c) => `https://x.ai/bot/${c}`).join(', ')}`);
     if (skipped.length) lines.push(`Already listed or already queued: ${skipped.map((c) => `https://x.ai/bot/${c}`).join(', ')}`);
-    lines.push('If a bot is approved it appears with the next refresh; the list updates twice a week, Monday and Thursday.', `— GrokBot Zone · ${SITE}/trending/`);
+    lines.push('Once the platform page checks out the bot is added automatically, usually within an hour.', `— GrokBot Zone · ${SITE}/trending/`);
     const text = lines.join('\n');
     const replySubject = `Re: ${subject || 'your submission'}`;
     try {
@@ -404,13 +428,48 @@ async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL
 // ---- data plane: /go/, stored read files, live pages, dead bots, view counting ----
 
 const BOT_PAGE_RE = /^\/bots\/([^/]+)$/;
-/** "<category>-<code>" -> [category, code]. Codes contain "-", so strip a known category prefix instead of splitting. */
-function splitId(id: string): [string | null, string] {
-  let best: string | null = null;
-  for (const s of CATEGORY_SLUGS) if (id.startsWith(`${s}-`) && (!best || s.length > best.length)) best = s;
-  return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
+const CATEGORY_RE = /^\/categories\/([a-z0-9-]+)$/;
+
+/** The asset 404 (the site's own 404 page) for a path the Worker must not serve. */
+const notFoundPage = (request: Request, env: Env) => env.ASSETS.fetch(new Request(new URL('/_gz_not_found_', request.url), { headers: unconditional(request).headers }));
+
+interface BotPageRow { code: string; name: string; author: string; description: string; category: string | null; cats: string | null; first_seen: string; status: string }
+/** D27: a bot with no static page. Live -> the template filled from D1; dead -> 410; anything else -> the asset 404. */
+async function dbBotPage(request: Request, env: Env, ctx: ExecutionContext, notFound: Response, id: string, cat: string | null, lc: string): Promise<Response> {
+  if (!env.DB) return notFound;
+  const row = await env.DB.prepare('SELECT code, name, author, description, category, cats, first_seen, status FROM bots WHERE code_lc = ?').bind(lc).first<BotPageRow>();
+  if (!row || botId(row.category, row.code).toLowerCase() !== id.toLowerCase()) return notFound; // unknown, or the wrong id for this bot
+  if (row.status === 'dead') return gonePage(notFound, id, cat);
+  if (row.status !== 'live') return notFound; // pending and excluded bots have no page
+  const tpl = await env.ASSETS.fetch(new Request(new URL(TEMPLATE_PATH, request.url)));
+  if (tpl.status !== 200) return notFound;
+  if (request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
+  return renderBotPage(tpl, row);
 }
 
+/** D28/O10: static files merged with the live bots and the dead list; null = nothing to merge, serve the asset. */
+async function mergedAsset(request: Request, env: Env, path: string): Promise<Response | null> {
+  const cat = CATEGORY_RE.exec(path)?.[1];
+  const kind = path === '/search/live.json' ? 'search' : cat && CATEGORY_SLUGS.has(cat) ? 'category'
+    : ['/feed.json', '/feed.xml', '/sitemap-index.xml', '/sitemap-0.xml', '/sitemap-live.xml'].includes(path) ? path : null;
+  if (!kind) return null;
+  const m = await mergeState(env.DB, env.ASSETS);
+  if (!m || (!m.extras.length && !m.dead.size)) return kind === '/sitemap-live.xml' ? notFoundPage(request, env) : null;
+  if (kind === 'search') return searchLive(m);
+  const xml = { headers: { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=300' } };
+  if (kind === '/sitemap-live.xml') return m.extras.length ? new Response(sitemapLive(m), xml) : notFoundPage(request, env);
+  const res = await env.ASSETS.fetch(unconditional(request));
+  if (res.status !== 200) return res;
+  // The merged body is not the asset's body, so it must not keep the asset's validators.
+  const h = new Headers(res.headers);
+  for (const k of ['etag', 'last-modified', 'content-length']) h.delete(k);
+  h.set('Cache-Control', 'no-cache');
+  if (kind === 'category') { const out = await categoryPage(new Response(res.body, { status: 200, headers: h }), cat!, m); return out; }
+  const body = await res.text();
+  const merged = kind === '/feed.json' ? feedJson(body, m) : kind === '/feed.xml' ? feedXml(body, m, new Date().toISOString())
+    : kind === '/sitemap-index.xml' ? sitemapIndex(body, m) : sitemapStatic(body, m);
+  return new Response(merged, { status: 200, headers: h });
+}
 async function dataPlane(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
   // Whatever goes wrong in the data plane, the static site still answers.
   try { return await dataPlaneInner(request, env, ctx, path); } catch (e) {
@@ -427,7 +486,9 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     if (stored) return stored;
     if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
   }
+  if (path === TEMPLATE_PATH.replace(/\/$/, '')) return notFoundPage(request, env); // the Worker reads the template through ASSETS only
   if (!get) return env.ASSETS.fetch(request);
+  if (request.method === 'GET') { const merged = await mergedAsset(request, env, path); if (merged) return merged; }
   const m = BOT_PAGE_RE.exec(path);
   const livePath = path === '/' || path === '/trending' || path === '/recent';
   if (!m && !(livePath && request.method === 'GET')) return env.ASSETS.fetch(request);
@@ -438,8 +499,11 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     const [cat, code] = splitId(m[1]);
     const lc = code.toLowerCase();
     if (await isDead(env.DB, lc)) return gonePage(res, m[1], cat);
-    if (res.status === 200 && request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
-    return res;
+    if (res.status === 200) {
+      if (request.method === 'GET') ctx.waitUntil(record(env.DB, 'view', lc, request));
+      return res; // a static page wins
+    }
+    return dbBotPage(request, env, ctx, res, m[1], cat, lc);
   }
   return livePage(res, env.DB, path);
 }

@@ -44,7 +44,7 @@ for (const c of categories as { slug: string; count: number }[]) {
 // category it belongs to: the listings add up, and the distinct bots do not.
 const searchDir = join(ROOT, 'public/search');
 if (existsSync(searchDir)) {
-  const files = readdirSync(searchDir).filter((f) => f.endsWith('.json') && f !== 'index.json');
+  const files = readdirSync(searchDir).filter((f) => f.endsWith('.json') && f !== 'index.json' && f !== 'live.json'); // live.json is the Worker's merge file, not a category
   const ids = new Set<string>();
   let recs = 0;
   for (const f of files) {

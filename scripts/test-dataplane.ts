@@ -290,7 +290,7 @@ await t('HTML escape: a name containing <script> renders inert in the live lists
   const html = trendingList(['coding-software-zzcode'], { 'coding-software-zzcode': card }, 2, 10, true) + recentList(['coding-software-zzcode'], { 'coding-software-zzcode': card }, 3, 10);
   assert.ok(!html.includes('<script') && !html.includes('<img') && !html.includes('<b>'), html);
   assert.ok(html.includes('&lt;script&gt;'));
-  assert.ok(html.includes('href="/go/zzcode" rel="nofollow noopener"'));
+  assert.ok(html.includes('href="/bots/coding-software-zzcode/"'), 'every live card links to its own page (D27)');
 });
 
 // ================= telemetry + routes through the bundled Worker =================
@@ -454,19 +454,47 @@ await t('scheduled: the digest cron runs the digest, */10 runs the data plane (n
   assert.ok(logs.some((l) => l.startsWith('digest:')), logs.join('\n')); assert.ok(logs.some((l) => l.startsWith('dataplane')), logs.join('\n'));
   assert.equal(logs.filter((l) => l.startsWith('digest:')).length, 1);
 });
-await t('submissions: an approved submission becomes a pending bot (source submission), scrubbed', async () => {
-  const db = new FakeD1(); insertBot(db, 'seedone0');
-  db.db.exec("INSERT INTO submissions(source, status, name, author, description, code, link, category) VALUES('webform','approved','Subm Bot','a@b.co','Mail a@b.co','SubmCode0001','https://x.ai/bot/submcode0001','coding-software'), ('webform','pending','Nope','','d','PendCode0001','https://x.ai/bot/pendcode0001',NULL)");
-  const c = clock(); const p = platform(() => ({ status: 200 }), c);
-  const env = { DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' };
-  await runDataPlane(env, c.t, { fetch: p.f, clock: c });
-  assert.equal(db.one("SELECT status FROM bots WHERE code_lc='submcode0001'").status, 'pending');
-  c.t += 600_000;
-  await runDataPlane(env, c.t, { fetch: p.f, clock: c });
-  const r = db.one("SELECT * FROM bots WHERE code_lc='submcode0001'");
-  assert.ok(r && r.source === 'submission' && r.category === 'coding-software'); assert.ok(!/@/.test(r.author + r.description));
-  assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE code_lc='pendcode0001'").n, 0);
-  assert.equal(r.status, 'live', 'a submission that answers 200 goes live');
+// ================= D30: submissions are processed like discovery =================
+const SUB = (n: number) => `SubCode${String(n).padStart(14, '0')}`; // 21 chars
+const subRow = (db: FakeD1, code: string, status = 'pending') => db.db.prepare("INSERT INTO submissions(source, status, name, author, description, code, link, category, submitter_email) VALUES('webform',?,'Typed Name','Typed Author','Typed description text',?,?,'travel','typed@example.test')").run(status, code, `https://x.ai/bot/${code.toLowerCase()}`);
+const subBot = (db: FakeD1, code: string) => insertBot(db, code, { source: 'submission', status: 'pending', name: '', author: '', description: '', category: null, cats: null });
+const headPage = (title: string) => `<head><link rel="canonical" href="x"><meta property="og:title" content="${title}"><meta property="og:description" content="Plans trips."></head><body>`;
+await t('D30: a submitted bot goes live with the x.ai page title, its submission is approved, and the typed text is nowhere public', async () => {
+  const db = new FakeD1(); insertBot(db, 'seedone0'); subRow(db, SUB(1)); subBot(db, SUB(1));
+  const c = clock(Date.parse('2026-11-10T12:05:00Z')); const p = platform(() => ({ status: 200, body: headPage('Trip Planner Pro by Mia') }), c);
+  const env = envOf(db); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  const r = db.one('SELECT * FROM bots WHERE code_lc=?', SUB(1).toLowerCase());
+  assert.deepEqual([r.status, r.source, r.name, r.author], ['live', 'submission', 'Trip Planner Pro', 'Mia']);
+  assert.equal(db.one('SELECT status FROM submissions').status, 'approved', 'settled in the same hourly pass, no person');
+  const stored = db.rows('SELECT k, v FROM meta').map((x) => x.v).join('\n');
+  for (const typed of ['Typed Name', 'Typed Author', 'Typed description', 'typed@example.test']) assert.ok(!stored.includes(typed), typed);
+  for (const path of ['/api/v1/catalog/changes.json', '/api/v1/recent.json', '/api/v1/trending.json']) assert.ok(!(await (await get(env, path)).res.text()).includes('Typed'), path);
+});
+await t('D30: a submission whose bot ends dead or excluded is rejected automatically', async () => {
+  const db = new FakeD1(); insertBot(db, 'seedone0'); subRow(db, SUB(2)); subBot(db, SUB(2)); subRow(db, SUB(3)); subBot(db, SUB(3));
+  const c = clock(Date.parse('2026-11-10T12:05:00Z'));
+  const p = platform((u) => u.endsWith(SUB(3)) ? { status: 404 } : u.endsWith(SUB(2)) ? { status: 200, body: headPage(`${FAKE} thing by Ann`) } : { status: 200, body: headPage('Fine Bot by Ann') }, c);
+  db.db.prepare("UPDATE bots SET status='dead' WHERE code_lc=?").run(SUB(3).toLowerCase());
+  const env = envOf(db); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  assert.equal(db.one('SELECT status FROM bots WHERE code_lc=?', SUB(2).toLowerCase()).status, 'excluded');
+  assert.deepEqual(db.rows('SELECT code, status FROM submissions ORDER BY id').map((x) => x.status), ['rejected', 'rejected']);
+});
+await t('D30 budget: with 100 submission-sourced pending rows a run sends <= 10 requests for them and <= 40 in total', async () => {
+  const db = new FakeD1(); for (let i = 0; i < 100; i++) subBot(db, SUB(100 + i)); for (let i = 0; i < 60; i++) insertBot(db, CODE(i));
+  const c = clock(Date.parse('2026-11-10T12:05:00Z'));
+  const p = platform((u) => u.includes('/bot/' + SUB(0).slice(0, 7)) ? { status: 308, headers: { location: '/bot/' + u.split('/bot/')[1].toLowerCase() } } : { status: 200, body: headPage('X by Y') }, c);
+  const rep = await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01', ...{} } as never, c.t, { fetch: p.f, clock: c });
+  const forSub = p.calls.filter((x) => x.url.includes('/bot/SubCode') || x.url.includes('/bot/subcode')).length;
+  assert.ok(forSub <= 10 && forSub >= 5, `submission requests ${forSub}`); assert.ok(p.calls.length <= 40, `total ${p.calls.length}`); assert.ok(rep.queries <= 50);
+  assert.ok(p.calls.filter((x) => x.url.includes('/bot/Bot')).length >= 15, 'live rows still get the rest of the run');
+});
+await t('D30 budget: a redirect follow costs a request, so 10 redirecting submissions stop at 10 requests', async () => {
+  const db = new FakeD1(); for (let i = 0; i < 20; i++) subBot(db, SUB(200 + i));
+  const c = clock(Date.parse('2026-11-10T12:05:00Z'));
+  const p = platform((u) => { const code = u.split('/bot/')[1]; return code === code.toLowerCase() ? { status: 200, body: headPage('X by Y') } : { status: 308, headers: { location: '/bot/' + code.toLowerCase() } }; }, c);
+  await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' }, c.t, { fetch: p.f, clock: c });
+  const forSub = p.calls.filter((x) => /\/bot\/[Ss]ub[Cc]ode/.test(x.url)).length;
+  assert.ok(forSub <= 10, `submission requests ${forSub}`);
 });
 
 // ================= O7: one failed body read never ends the run =================

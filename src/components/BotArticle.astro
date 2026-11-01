@@ -1,0 +1,55 @@
+---
+import ReferralCTA from './ReferralCTA.astro';
+// The bot article, shared by the static page and the Worker's template (spec 08 D27). The data-f hooks are what the
+// Worker fills; a static page carries them too and nothing reads them there.
+interface Cat { slug: string; label: string }
+interface Props { name: string; author: string; description: string; cats: Cat[]; code: string; path: string; dateLabel: string; date: string; noteLabel: string }
+const { name, author, description, cats, code, path, dateLabel, date, noteLabel } = Astro.props;
+const cat = cats[0];
+---
+<article class="wrap bot">
+    <p class="crumbs"><a href="/categories/">Categories</a>{cat && <span data-f="crumb"> / <a href={`/categories/${cat.slug}/`} data-f="crumb-link">{cat.label}</a></span>}</p>
+    <h1 data-f="name">{name}</h1>
+    {author && <p class="by" data-f="by">by {author}</p>}
+    <p class="desc" data-f="desc">{description}</p>
+    <dl class="facts panel">
+      {cats.length > 0 && <div data-f="cats-row"><dt>Categor{cats.length === 1 ? 'y' : 'ies'}</dt><dd data-f="cats">{cats.map((c, i) => <>{i > 0 && ' · '}<a href={`/categories/${c.slug}/`}>{c.label}</a></>)}</dd></div>}
+      {author && <div data-f="author-row"><dt>Author</dt><dd data-f="author">{author}</dd></div>}
+      <div><dt data-f="date-label">{dateLabel}</dt><dd><time datetime={date} data-f="date">{date}</time></dd></div>
+    </dl>
+    <div class="actions">
+      <a class="btn" href={`/go/${code}`} rel="nofollow noopener" target="_blank" data-open-bot data-f="open">Open this bot</a>
+      <button type="button" class="btn ghost" data-share data-title={name} data-url={`https://grokbot.zone${path}`} data-f="share">Share</button>
+      <span class="muted share-status" role="status" aria-live="polite" data-share-status></span>
+    </div>
+    <p class="muted note" data-f="note">{noteLabel}</p>
+    <ReferralCTA compact />
+</article>
+<style is:global>
+  .bot { padding: 3rem 0 1rem; max-width: 820px; }
+  .by { color: var(--fuchsia); font-weight: 600; margin: .75rem 0 0; font-size: 1.05rem; }
+  .desc { font-size: 1.15rem; margin: 1.25rem 0 1.5rem; overflow-wrap: anywhere; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; padding: 1.1rem 1.3rem; margin: 0 0 1.5rem; }
+  .facts dt { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+  .facts dd { margin: .2rem 0 0; font-weight: 600; overflow-wrap: anywhere; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+  .note { font-size: .9rem; margin-top: 1rem; }
+</style>
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('[data-share]');
+  const status = document.querySelector<HTMLElement>('[data-share-status]');
+  btn?.addEventListener('click', async () => {
+    const { title = '', url = '' } = btn.dataset;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        if (status) status.textContent = 'Link copied.';
+      }
+    } catch (e) {
+      if ((e as DOMException).name === 'AbortError') return;
+      if (status) status.textContent = `Copy this link: ${url}`;
+    }
+  });
+</script>

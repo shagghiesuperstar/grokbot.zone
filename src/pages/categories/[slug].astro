@@ -36,7 +36,7 @@ const path = `/categories/${c.slug}/`;
   </div>
   <div class="wrap block">
     <ul class="grid" data-bot-list>
-      {list.map((b) => <li><BotCard bot={b} level={2} trending={topSet.has(b.slug) && (rankOf.get(b.slug) ?? 99) < 5} /></li>)}
+      {list.map((b) => <li data-code={b.code.toLowerCase()}><BotCard bot={b} level={2} trending={topSet.has(b.slug) && (rankOf.get(b.slug) ?? 99) < 5} /></li>)}
     </ul>
   </div>
 </Base>

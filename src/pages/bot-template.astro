@@ -1,0 +1,12 @@
+---
+// Spec 08 D27/O9: the template the Worker fills for a bot that has no static page. It is built like any bot page
+// (same Base, same BotArticle) but is never indexed, is not in the sitemap, and the Worker answers 404 for its
+// public URL: it is read only through the ASSETS binding.
+import Base from '../layouts/Base.astro';
+import BotArticle from '../components/BotArticle.astro';
+---
+<Base title="Bot page template" description="Template" path="/bot-template/" ogType="article" noindex={true}
+  jsonLd={[{ '@context': 'https://schema.org', '@type': 'SoftwareApplication' }, { '@context': 'https://schema.org', '@type': 'BreadcrumbList' }]}>
+  <BotArticle name="Name" author="Author" description="Description" cats={[{ slug: 'x', label: 'Category' }]} code="code" path="/bot-template/"
+    dateLabel="Listing snapshot" date="1970-01-01" noteLabel="Note" />
+</Base>

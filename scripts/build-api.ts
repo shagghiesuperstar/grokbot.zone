@@ -76,6 +76,9 @@ for (const b of bots) {
     asOf,
   });
 }
+// The search merge file the Worker fills with live bots (spec 08 D28); static builds ship it empty.
+mkdirSync(join(ROOT, 'public/search'), { recursive: true });
+writeFileSync(join(ROOT, 'public/search/live.json'), '{"bots":[],"dead":[]}\n');
 // Spelling-preserving twin of codes.json: the Worker's /go/ falls back to it only when D1 is unavailable (spec 08 O6).
 put(join(apiDir, 'seed-codes.json'), { codes: [...new Set(bots.map((b) => b.code))].sort() });
 put(join(apiDir, 'codes.json'), { codes: [...new Set(bots.map((b) => b.code.toLowerCase()))].sort() });

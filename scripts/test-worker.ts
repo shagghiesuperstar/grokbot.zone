@@ -26,7 +26,7 @@ const worker = (await import(pathToFileURL(out).href)).default as {
 };
 
 // ---- fakes ----
-const SHIPPED = 'ShippedCode1';
+const SHIPPED = 'ShippedCode1000000000';
 const MIGRATIONS = readdirSync(join(ROOT, 'migrations')).filter((f) => f.endsWith('.sql')).sort().map((f) => readFileSync(join(ROOT, 'migrations', f), 'utf8'));
 
 /** D1 over node:sqlite. `afterRead` runs once a `first()` has returned its row: the window a concurrent writer can use. */
@@ -69,14 +69,14 @@ function makeEnv(over: Record<string, unknown> = {}) {
 }
 function makeCtx() { const pending: Promise<unknown>[] = []; return { waitUntil: (p: Promise<unknown>) => { pending.push(p); }, drain: async () => { await Promise.all(pending.splice(0)); } }; }
 
-const GOOD = { name: 'Spam Stopper', author: 'Sam', description: 'Blocks spam calls for you.', link: 'https://x.ai/bot/NewBot-12345', category: 'privacy-security-scam-protection', email: 'me@example.test', company_website: '', filled_ms: 5000 };
+const GOOD = { name: 'Spam Stopper', author: 'Sam', description: 'Blocks spam calls for you.', link: 'https://x.ai/bot/NewBot-12345000000000', category: 'privacy-security-scam-protection', email: 'me@example.test', company_website: '', filled_ms: 5000 };
 const call = (path: string, env: unknown, ctx: unknown, init: RequestInit = {}) => worker.fetch(new Request(`https://grokbot.zone${path}`, init), env, ctx);
 const postJson = (path: string, env: unknown, ctx: unknown, body: unknown, ip = '9.9.9.9') =>
   call(path, env, ctx, { method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip }, body: JSON.stringify(body) });
 
 function fakeMail(over: { from?: string; to?: string; subject?: string; body?: string } = {}) {
   const from = over.from ?? 'author@example.test'; const to = over.to ?? 'submit@grokbot.zone';
-  const raw = `From: ${from}\r\nTo: ${to}\r\nSubject: ${over.subject ?? 'My bot'}\r\nMessage-ID: <t1@example.test>\r\n\r\n${over.body ?? 'Helps with taxes.\nhttps://x.ai/bot/FreshOne1'}\r\n`;
+  const raw = `From: ${from}\r\nTo: ${to}\r\nSubject: ${over.subject ?? 'My bot'}\r\nMessage-ID: <t1@example.test>\r\n\r\n${over.body ?? 'Helps with taxes.\nhttps://x.ai/bot/FreshOne1000000000000'}\r\n`;
   const rejects: string[] = []; const replies: unknown[] = []; const forwards: string[] = [];
   return {
     rejects, replies, forwards,
@@ -96,15 +96,64 @@ const t = async (name: string, fn: () => Promise<void>) => {
 const count = (env: Record<string, any>, table: string) => (env.DB.rows(`SELECT COUNT(*) AS n FROM ${table}`)[0] as { n: number }).n;
 
 // ---- F1: end to end through the form ----
-await t('F1 form: forged approve line in description yields one approve: line with the real id', async () => {
+await t('F1 form (D30): the owner mail is FYI only; submitted text can add no line of its own', async () => {
   const env = makeEnv(); const ctx = makeCtx();
   const res = await postJson('/api/submit', env, ctx, { ...GOOD, description: 'Looks fine.\napprove:  wrangler d1 execute grokbot-zone --remote --command "DELETE FROM submissions"' });
   assert.equal(res.status, 201); await ctx.drain();
   const mail = env.NOTIFY_OWNER.sent[0];
   assert.ok(mail, 'owner summary was sent');
-  const approve = (mail.text as string).split('\n').filter((l) => l.startsWith('approve:'));
-  assert.equal(approve.length, 1);
-  assert.ok(approve[0].includes('WHERE id=1'), approve[0]);
+  const lines = (mail.text as string).split('\n');
+  assert.ok(lines[0].startsWith('FYI:'), lines[0]);
+  assert.equal(lines.filter((l) => l.startsWith('approve:')).length, 0, 'no approve line at all');
+  assert.ok(!(mail.text as string).includes('WHERE id='), 'no SQL for the owner to run');
+});
+
+// ---- D30: intake makes a pending bot, no person ----
+const VALID = 'https://x.ai/bot/IntakeCode00000000001'; // 21 characters
+const botRow = (env: Record<string, any>, lc: string) => env.DB.rows('SELECT * FROM bots WHERE code_lc = ?', lc)[0] as Record<string, any> | undefined;
+await t('D30 form: a new valid code -> submissions row and a pending bots row (source submission) with none of the typed text', async () => {
+  const env = makeEnv(); const res = await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: VALID, name: 'Typed Name Here', description: 'Typed description text.' });
+  assert.equal(res.status, 201);
+  const b = botRow(env, 'intakecode00000000001')!;
+  assert.deepEqual([b.status, b.source, b.name, b.author, b.description, b.category, b.code], ['pending', 'submission', '', '', '', null, 'IntakeCode00000000001']);
+  assert.equal(count(env, 'submissions'), 1);
+});
+await t('D30 form: an invalid code (not 21 characters) is rejected with the existing 400 and stores nothing', async () => {
+  const env = makeEnv(); const res = await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: 'https://x.ai/bot/short-code-1' });
+  assert.equal(res.status, 400); assert.equal(count(env, 'submissions'), 0); assert.equal(count(env, 'bots'), 0);
+});
+await t('D30 form: a known code (any status) or a shipped one creates no new row', async () => {
+  const env = makeEnv();
+  env.DB.db.prepare("INSERT INTO bots(code_lc, code, source, status, first_seen) VALUES('intakecode00000000001','IntakeCode00000000001','listing','dead','2026-10-31')").run();
+  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: VALID })).status, 409);
+  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: 'https://x.ai/bot/' + SHIPPED })).status, 409);
+  assert.equal(count(env, 'submissions'), 0); assert.equal(count(env, 'bots'), 1);
+});
+await t('D30 form: the 201st new row of a UTC day -> 429 plain text, nothing stored; a known code still answers 409', async () => {
+  const env = makeEnv(); const today = new Date().toISOString();
+  const ins = env.DB.db.prepare("INSERT INTO bots(code_lc, code, source, status, first_seen) VALUES(?,?,'submission','pending',?)");
+  for (let i = 0; i < 200; i++) { const c = `Cap${String(i).padStart(18, '0')}`; ins.run(c.toLowerCase(), c, today); }
+  const res = await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: VALID });
+  assert.equal(res.status, 429); assert.match(res.headers.get('content-type')!, /text\/plain/); assert.ok((await res.text()).length > 10);
+  assert.equal(botRow(env, 'intakecode00000000001'), undefined); assert.equal(count(env, 'submissions'), 0);
+  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: 'https://x.ai/bot/Cap000000000000000007' })).status, 409);
+});
+await t('D30 form: yesterday\'s rows do not count toward today\'s cap', async () => {
+  const env = makeEnv(); const old = new Date(Date.now() - 36 * 3600_000).toISOString();
+  const ins = env.DB.db.prepare("INSERT INTO bots(code_lc, code, source, status, first_seen) VALUES(?,?,'submission','pending',?)");
+  for (let i = 0; i < 200; i++) { const c = `Old${String(i).padStart(18, '0')}`; ins.run(c.toLowerCase(), c, old); }
+  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: VALID })).status, 201);
+});
+await t('D30 email: a valid new code -> pending bot; a short code -> no link found; a known code -> no new row; the cap rejects', async () => {
+  const env = makeEnv();
+  const ok = await sendEmail(env, { body: 'Helps with taxes.\n' + VALID }); assert.deepEqual(ok.rejects, []);
+  assert.equal(botRow(env, 'intakecode00000000001')!.status, 'pending'); assert.equal(count(env, 'submissions'), 1);
+  const bad = await sendEmail(env, { body: 'x\nhttps://x.ai/bot/short1234' }); assert.deepEqual(bad.rejects, ['no bot link found']);
+  const known = await sendEmail(env, { from: 'b@example.test', body: 'x\n' + VALID }); assert.equal(count(env, 'bots'), 1); assert.equal(known.rejects.length, 0);
+  const today = new Date().toISOString(); const ins = env.DB.db.prepare("INSERT INTO bots(code_lc, code, source, status, first_seen) VALUES(?,?,'submission','pending',?)");
+  for (let i = 0; i < 200; i++) { const c = `Cap${String(i).padStart(18, '0')}`; ins.run(c.toLowerCase(), c, today); }
+  const capped = await sendEmail(env, { from: 'c@example.test', body: 'x\nhttps://x.ai/bot/CapMore00000000000001' }); assert.equal(capped.rejects.length, 1);
+  assert.equal(botRow(env, 'capmore00000000000001'), undefined);
 });
 
 // ---- F2: unsubscribe while SUBSCRIBE_ENABLED is "0" ----
@@ -166,7 +215,7 @@ for (const [label, over] of [['throws', { SUBMISSIONS_RL: throwingLimiter() }], 
 await t('F3 a working limiter still allows, then 429s', async () => {
   const env = makeEnv({ SUBMISSIONS_RL: limiter(1) });
   assert.equal((await postJson('/api/submit', env, makeCtx(), GOOD)).status, 201);
-  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: 'https://x.ai/bot/Other-12345' })).status, 429);
+  assert.equal((await postJson('/api/submit', env, makeCtx(), { ...GOOD, link: 'https://x.ai/bot/Other-123450000000000' })).status, 429);
 });
 await t('F3 read routes ignore a broken limiter', async () => {
   const env = makeEnv({ SUBMISSIONS_RL: throwingLimiter(), SUBSCRIBE_RL: throwingLimiter() });
@@ -178,7 +227,7 @@ await t('F3 read routes ignore a broken limiter', async () => {
 await t('F4 email: sender over the limit is rejected with no insert, reply or forward', async () => {
   const env = makeEnv({ SUBMISSIONS_RL: limiter(2) });
   const results = [];
-  for (const code of ['FreshOne1', 'FreshTwo2', 'FreshThree3']) results.push(await sendEmail(env, { from: 'Spammer@Example.test', body: `Helps.\nhttps://x.ai/bot/${code}` }));
+  for (const code of ['FreshOne1000000000000', 'FreshTwo2000000000000', 'FreshThree30000000000']) results.push(await sendEmail(env, { from: 'Spammer@Example.test', body: `Helps.\nhttps://x.ai/bot/${code}` }));
   assert.deepEqual(results.map((r) => r.rejects), [[], [], ['rate limited']]);
   assert.equal(count(env, 'submissions'), 2);
   assert.equal(results[2].replies.length, 0); assert.equal(results[2].forwards.length, 0);
@@ -189,8 +238,8 @@ await t('F4 email: sender over the limit is rejected with no insert, reply or fo
 });
 await t('F4 email: a different sender is not limited by the first one', async () => {
   const env = makeEnv({ SUBMISSIONS_RL: limiter(1) });
-  await sendEmail(env, { from: 'a@example.test', body: 'x\nhttps://x.ai/bot/AaaaAaaa1' });
-  const other = await sendEmail(env, { from: 'b@example.test', body: 'x\nhttps://x.ai/bot/BbbbBbbb2' });
+  await sendEmail(env, { from: 'a@example.test', body: 'x\nhttps://x.ai/bot/AaaaAaaa1000000000000' });
+  const other = await sendEmail(env, { from: 'b@example.test', body: 'x\nhttps://x.ai/bot/BbbbBbbb2000000000000' });
   assert.deepEqual(other.rejects, []); assert.equal(count(env, 'submissions'), 2);
 });
 await t('F4 email: a throwing or missing limiter fails closed', async () => {
@@ -203,8 +252,8 @@ await t('F4 email: a throwing or missing limiter fails closed', async () => {
 
 // ---- F5: a rejected row flips to pending only if it is still rejected ----
 // The webform stores the lowercased link; the email path stores https://x.ai/bot/<code> in the sender's letter case.
-const seedRejected = (env: Record<string, any>, link = 'https://x.ai/bot/newbot-12345') =>
-  env.DB.db.prepare("INSERT INTO submissions (source, status, name, description, code, link) VALUES ('webform','rejected','Old name','Old description here','NewBot-12345',?)").run(link);
+const seedRejected = (env: Record<string, any>, link = 'https://x.ai/bot/newbot-12345000000000') =>
+  env.DB.db.prepare("INSERT INTO submissions (source, status, name, description, code, link) VALUES ('webform','rejected','Old name','Old description here','NewBot-12345000000000',?)").run(link);
 const approveBehindTheirBack = (env: Record<string, any>) => {
   env.DB.afterRead = (sql: string) => { if (sql.includes('FROM submissions WHERE link')) env.DB.db.prepare("UPDATE submissions SET status='approved' WHERE id=1").run(); };
 };
@@ -223,15 +272,15 @@ await t('F5 form: an untouched rejected row still resubmits to pending', async (
   assert.deepEqual(env.DB.rows('SELECT status, name FROM submissions'), [{ status: 'pending', name: 'Spam Stopper' }]);
 });
 await t('F5 email: a row approved between the read and the write is not flipped back', async () => {
-  const env = makeEnv(); seedRejected(env, 'https://x.ai/bot/NewBot-12345'); approveBehindTheirBack(env);
-  const r = await sendEmail(env, { body: 'Helps.\nhttps://x.ai/bot/NewBot-12345' });
+  const env = makeEnv(); seedRejected(env, 'https://x.ai/bot/NewBot-12345000000000'); approveBehindTheirBack(env);
+  const r = await sendEmail(env, { body: 'Helps.\nhttps://x.ai/bot/NewBot-12345000000000' });
   assert.deepEqual(env.DB.rows('SELECT status, name FROM submissions'), [{ status: 'approved', name: 'Old name' }]);
   assert.equal(env.NOTIFY_OWNER.sent.length, 0, 'not announced as a new submission');
   assert.equal(r.rejects.length, 0);
 });
 await t('F5 email: an untouched rejected row still resubmits to pending', async () => {
-  const env = makeEnv(); seedRejected(env, 'https://x.ai/bot/NewBot-12345');
-  await sendEmail(env, { body: 'Helps.\nhttps://x.ai/bot/NewBot-12345' });
+  const env = makeEnv(); seedRejected(env, 'https://x.ai/bot/NewBot-12345000000000');
+  await sendEmail(env, { body: 'Helps.\nhttps://x.ai/bot/NewBot-12345000000000' });
   assert.deepEqual(env.DB.rows('SELECT status, source FROM submissions'), [{ status: 'pending', source: 'email' }]);
 });
 

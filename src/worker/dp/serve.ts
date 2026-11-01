@@ -14,7 +14,7 @@ export const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
 // ---- stored JSON with a short in-isolate cache ----
 let cache: { db: D1Database; at: number; meta: Meta } | null = null;
 export const resetServeCache = () => { cache = null; };
-const KEYS = ['trending_json', 'recent_json', 'signals_json', 'changes_json', 'cards_json', 'trending_at'];
+const KEYS = ['trending_json', 'recent_json', 'signals_json', 'changes_json', 'cards_json', 'trending_at', 'dead_json'];
 async function stored(db: D1Database, nowMs: number): Promise<Meta> {
   if (cache && cache.db === db && nowMs - cache.at < 60_000) return cache.meta;
   const meta = await readMeta(db, KEYS);
@@ -79,10 +79,10 @@ export async function healthBody(db: D1Database | undefined, nowMs: number, nowI
 }
 
 // ---- live pages ----
-const cardHtml = (id: string, c: Card, level: 2 | 3, trending: boolean, showCategory: boolean) => {
-  const seed = c.s === 'seed';
-  const href = seed ? `/bots/${esc(id)}/` : `/go/${esc(c.k)}`;
-  const rel = seed ? '' : ' rel="nofollow noopener"';
+export const cardHtml = (id: string, c: Card, level: 2 | 3, trending: boolean, showCategory: boolean) => {
+  // Every live bot has its own page now (static, or filled by the Worker from D1), so a card always links to it.
+  const href = `/bots/${esc(id)}/`;
+  const rel = '';
   const label = c.c ? LABEL.get(c.c) : undefined;
   const foot = [
     trending ? '<span class="trend"><span class="dot" aria-hidden="true"></span>Trending</span>' : '',
@@ -152,4 +152,17 @@ export function gonePage(res: Response, id: string, categorySlug: string | null)
       .on('head', { element(e) { e.append('<meta name="robots" content="noindex">', { html: true }); } });
     return new Response(rw.transform(res).body, { status: 410, headers });
   } catch { return minimal(); }
+}
+
+// ---- the stored live state the merges read (changes + dead list), cached with the other stored files ----
+export interface LiveAdded { id: string; code: string; name: string; author: string; description: string; category: string | null; cats: string[]; source: string; first_seen: string }
+export async function liveState(db: D1Database | undefined, nowMs = Date.now()): Promise<{ added: LiveAdded[]; dead: Set<string> } | null> {
+  if (!db) return null;
+  try {
+    const meta = await stored(db, nowMs);
+    if (!meta.changes_json) return null;
+    const ch = JSON.parse(meta.changes_json) as { added?: LiveAdded[] };
+    const dead = new Set<string>(meta.dead_json ? JSON.parse(meta.dead_json) : []);
+    return { added: Array.isArray(ch.added) ? ch.added : [], dead };
+  } catch { return null; }
 }

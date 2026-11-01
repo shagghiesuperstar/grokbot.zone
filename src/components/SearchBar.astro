@@ -31,7 +31,7 @@ const { id = 'q' } = Astro.props;
   .more { margin-top: 1rem; }
 </style>
 <script>
-  import { indexRecord, search, PAGE_SIZE, MIN_CHARS, type IndexedRecord, type Hit, type SearchRecord } from '../lib/search';
+  import { indexRecord, mergeLive, search, PAGE_SIZE, MIN_CHARS, UNCATEGORIZED, type IndexedRecord, type Hit, type LivePayload, type SearchRecord } from '../lib/search';
 
   const root = document.querySelector<HTMLElement>('[data-search-root]')!;
   const input = root.querySelector<HTMLInputElement>('[data-search-input]')!;
@@ -70,6 +70,11 @@ const { id = 'q' } = Astro.props;
             byId.set(b.i, { rec: b, cats: [p.slug] });
           }
         }
+        // Bots found since the deploy, and bots that died since (served by the Worker; an empty file at build time).
+        let live: LivePayload | null = null;
+        try { live = await (await fetch('/search/live.json')).json(); } catch { /* the static index alone */ }
+        mergeLive(byId, live, idx.categories.map((c: { slug: string }) => c.slug));
+        labelOf.set(UNCATEGORIZED, 'Uncategorized');
         records = [...byId.values()].map(({ rec, cats }) => {
           const primary = rec.c ?? cats[0];
           const primaryLabel = labelOf.get(primary) ?? '';

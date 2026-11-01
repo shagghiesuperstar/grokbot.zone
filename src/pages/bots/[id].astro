@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import ReferralCTA from '../../components/ReferralCTA.astro';
+import BotArticle from '../../components/BotArticle.astro';
 import RelatedBots from '../../components/RelatedBots.astro';
 import { seoTitle, allBots, categoryBySlug, botUrl, meta } from '../../lib/data';
 
@@ -36,51 +36,7 @@ const description = `${label}: a Grok bot in ${cat.label}. Listing snapshot ${me
     ] },
   ]}
 >
-  <article class="wrap bot">
-    <p class="crumbs"><a href="/categories/">Categories</a> / <a href={`/categories/${cat.slug}/`}>{cat.label}</a></p>
-    <h1>{bot.name}</h1>
-    {bot.author && <p class="by">by {bot.author}</p>}
-    <p class="desc">{bot.description}</p>
-    <dl class="facts panel">
-      <div><dt>Categor{allCats.length === 1 ? 'y' : 'ies'}</dt><dd>{allCats.map((c, i) => <>{i > 0 && ' · '}<a href={`/categories/${c.slug}/`}>{c.label}</a></>)}</dd></div>
-      {bot.author && <div><dt>Author</dt><dd>{bot.author}</dd></div>}
-      <div><dt>Listing snapshot</dt><dd><time datetime={meta.asOf}>{meta.asOf}</time></dd></div>
-    </dl>
-    <div class="actions">
-      <a class="btn" href={`/go/${bot.code}`} rel="nofollow noopener" target="_blank" data-open-bot>Open this bot</a>
-      <button type="button" class="btn ghost" data-share data-title={bot.name} data-url={`https://grokbot.zone${path}`}>Share</button>
-      <span class="muted share-status" role="status" aria-live="polite" data-share-status></span>
-    </div>
-    <p class="muted note">This description is a snapshot from {meta.asOf}. The bot's own page has the current details.</p>
-    <ReferralCTA compact />
-  </article>
+  <BotArticle name={bot.name} author={bot.author} description={bot.description} cats={allCats} code={bot.code} path={path}
+    dateLabel="Listing snapshot" date={meta.asOf} noteLabel={`This description is a snapshot from ${meta.asOf}. The bot's own page has the current details.`} />
   <RelatedBots bot={bot} />
 </Base>
-<style>
-  .bot { padding: 3rem 0 1rem; max-width: 820px; }
-  .by { color: var(--fuchsia); font-weight: 600; margin: .75rem 0 0; font-size: 1.05rem; }
-  .desc { font-size: 1.15rem; margin: 1.25rem 0 1.5rem; overflow-wrap: anywhere; }
-  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; padding: 1.1rem 1.3rem; margin: 0 0 1.5rem; }
-  .facts dt { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
-  .facts dd { margin: .2rem 0 0; font-weight: 600; overflow-wrap: anywhere; }
-  .actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
-  .note { font-size: .9rem; margin-top: 1rem; }
-</style>
-<script>
-  const btn = document.querySelector<HTMLButtonElement>('[data-share]');
-  const status = document.querySelector<HTMLElement>('[data-share-status]');
-  btn?.addEventListener('click', async () => {
-    const { title = '', url = '' } = btn.dataset;
-    try {
-      if (navigator.share) {
-        await navigator.share({ title, url });
-      } else {
-        await navigator.clipboard.writeText(url);
-        if (status) status.textContent = 'Link copied.';
-      }
-    } catch (e) {
-      if ((e as DOMException).name === 'AbortError') return;
-      if (status) status.textContent = `Copy this link: ${url}`;
-    }
-  });
-</script>

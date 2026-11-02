@@ -76,14 +76,16 @@ const call = (path: string, env: unknown, ctx: unknown, init: RequestInit = {}) 
 const postJson = (path: string, env: unknown, ctx: unknown, body: unknown, ip = '9.9.9.9') =>
   call(path, env, ctx, { method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip }, body: JSON.stringify(body) });
 
-function fakeMail(over: { from?: string; to?: string; subject?: string; body?: string } = {}) {
+/** An Authentication-Results value as Cloudflare writes it: everything the ack gate (A1) looks at. */
+const authPass = (mailfrom: string) => `mx.cloudflare.net; dkim=pass header.d=example.test; spf=pass smtp.mailfrom=${mailfrom}; dmarc=pass header.from=example.test`;
+function fakeMail(over: { from?: string; to?: string; subject?: string; body?: string; auth?: string | null; headerFrom?: string } = {}) {
   const from = over.from ?? 'author@example.test'; const to = over.to ?? 'submit@grokbot.zone';
-  const raw = `From: ${from}\r\nTo: ${to}\r\nSubject: ${over.subject ?? 'My bot'}\r\nMessage-ID: <t1@example.test>\r\n\r\n${over.body ?? 'Helps with taxes.\nhttps://x.ai/bot/FreshOne1000000000000'}\r\n`;
+  const raw = `From: ${over.headerFrom ?? from}\r\nTo: ${to}\r\nSubject: ${over.subject ?? 'My bot'}\r\nMessage-ID: <t1@example.test>\r\n\r\n${over.body ?? 'Helps with taxes.\nhttps://x.ai/bot/FreshOne1000000000000'}\r\n`;
   const rejects: string[] = []; const replies: unknown[] = []; const forwards: string[] = [];
   return {
     rejects, replies, forwards,
     msg: {
-      from, to, headers: new Headers({ 'message-id': '<t1@example.test>', 'authentication-results': 'mx.cloudflare.net; dmarc=pass' }),
+      from, to, headers: new Headers({ 'message-id': '<t1@example.test>', ...(over.auth === null ? {} : { 'authentication-results': over.auth ?? authPass(from) }), ...(over.headerFrom ? { from: over.headerFrom } : { from }) }),
       raw: new Blob([raw]).stream(),
       setReject: (r: string) => { rejects.push(r); }, reply: async (m: unknown) => { replies.push(m); }, forward: async (a: string) => { forwards.push(a); },
     },
@@ -209,12 +211,13 @@ await t('email-on: switch "1", RFC 5322 message with Message-ID, OWNER_ADDRESS e
   assert.deepEqual(sendLog(env).map((r) => [r.kind, r.ok, r.error_code]), [['owner_summary', 0, 'E_NO_OWNER_ADDRESS'], ['ack', 1, null], ['owner_summary', 0, 'E_NO_OWNER_ADDRESS']]); // per queued code, the ack, then the end-of-event check
   assert.equal(env.EMAIL.sent.length, 0, 'no EMAIL.send needed when message.reply works');
 });
-await t('email-on: reply and the fallback send both throw -> the submission stays stored and the handler does not throw', async () => {
-  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined, EMAIL: throwingMailer('E_SENDER_NOT_VERIFIED') });
-  const m = fakeMail({ body: 'Helps.\n' + VALID }); (m.msg as any).reply = async () => { throw new Error('reply refused'); };
+await t('email-on: reply() throws -> stored, handler does not throw, NO EMAIL.send fallback, the failure is logged', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined });
+  const m = fakeMail({ body: 'Helps.\n' + VALID }); (m.msg as any).reply = async () => { throw Object.assign(new Error('reply refused'), { code: 'E_REPLY_REFUSED' }); };
   await worker.email(m.msg, env, makeCtx());
   assert.deepEqual(m.rejects, []); assert.equal(botRow(env, 'intakecode00000000001')!.status, 'pending'); assert.equal(count(env, 'submissions'), 1);
-  assert.ok(sendLog(env).some((r) => r.kind === 'ack' && r.ok === 0 && r.error_code === 'E_SENDER_NOT_VERIFIED'));
+  assert.equal(env.EMAIL.sent.length, 0, 'no fallback send');
+  assert.ok(sendLog(env).some((r) => r.kind === 'ack' && r.ok === 0 && r.error_code === 'E_REPLY_REFUSED'));
 });
 await t('email-on: switch "0" still rejects politely and stores nothing', async () => {
   const env = makeEnv({ EMAIL_SUBMIT_ENABLED: '0' }); const m = await sendEmail(env, { body: 'x\n' + VALID });
@@ -234,21 +237,44 @@ await t('F2 dark: bogus token -> 410 with no row data', async () => {
   }
   assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'active' }]);
 });
-await t('F2 dark: valid token flips the row, logs kind unsubscribe, never echoes the address', async () => {
+await t('C1 unsubscribe: GET (a link scanner or prefetch) shows a confirm page with a POST button and changes nothing', async () => {
+  for (const sw of ['0', '1']) {
+    const env = makeEnv({ SUBSCRIBE_ENABLED: sw }); seedSub(env);
+    for (const method of ['GET', 'HEAD']) {
+      const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method });
+      assert.equal(res.status, 200);
+      if (method === 'GET') {
+        const html = await res.text();
+        assert.match(html, /<form method="post" action="\/subscribe\/unsubscribe\?t=a{32}">/); assert.match(html, /name="List-Unsubscribe" value="One-Click"/); assert.match(html, /<button type="submit">Unsubscribe<\/button>/);
+        assert.ok(!html.includes('example.test'), 'never echoes the address');
+      }
+    }
+    assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'active' }]);
+    assert.equal(count(env, 'send_log'), 0);
+  }
+});
+await t('C1 unsubscribe: the button POST (form body) unsubscribes, logs once, answers an HTML page to a browser', async () => {
   const env = makeEnv({ SUBSCRIBE_ENABLED: '0' }); seedSub(env);
-  const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx());
-  assert.equal(res.status, 200);
-  assert.ok(!(await res.text()).includes('example.test'));
+  const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded', accept: 'text/html,*/*' }, body: 'List-Unsubscribe=One-Click' });
+  assert.equal(res.status, 200); const html = await res.text(); assert.match(html, /You are unsubscribed/); assert.ok(!html.includes('example.test'));
   assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'unsubscribed' }]);
   assert.deepEqual(env.DB.rows('SELECT kind, ok FROM send_log'), [{ kind: 'unsubscribe', ok: 1 }]);
+  const again = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx());
+  assert.doesNotMatch(await again.text(), /<form/, 'an already-unsubscribed link offers no button');
 });
-await t('F2 dark: one-click POST flips the row and logs it once', async () => {
+await t('C1 unsubscribe: RFC 8058 one-click POST (plain text answer) flips the row and logs it once', async () => {
   const env = makeEnv({ SUBSCRIBE_ENABLED: '0' }); seedSub(env);
   const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method: 'POST', body: 'List-Unsubscribe=One-Click' });
-  assert.equal(res.status, 200); assert.ok(!(await res.text()).includes('example.test'));
+  assert.equal(res.status, 200); assert.equal(await res.text(), 'Unsubscribed.');
   await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method: 'POST', body: 'List-Unsubscribe=One-Click' });
   assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'unsubscribed' }]);
   assert.equal(count(env, 'send_log'), 1, 'a repeat click is not logged again');
+});
+await t('C1 unsubscribe: a POST without List-Unsubscribe=One-Click changes nothing (400); a bad token is 410 on GET and POST', async () => {
+  const env = makeEnv({ SUBSCRIBE_ENABLED: '0' }); seedSub(env);
+  assert.equal((await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method: 'POST', body: 'nope=1' })).status, 400);
+  assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'active' }]);
+  for (const method of ['GET', 'POST']) assert.equal((await call(`/subscribe/unsubscribe?t=${'b'.repeat(32)}`, env, makeCtx(), { method, body: method === 'POST' ? 'List-Unsubscribe=One-Click' : undefined })).status, 410);
 });
 await t('F2 dark: confirm and subscribe stay 503', async () => {
   const env = makeEnv({ SUBSCRIBE_ENABLED: '0' }); seedSub(env, 'pending');
@@ -313,6 +339,106 @@ await t('F4 email: a throwing or missing limiter fails closed', async () => {
     const r = await sendEmail(env);
     assert.equal(r.rejects.length, 1); assert.equal(count(env, 'submissions'), 0); assert.equal(r.forwards.length, 0);
   }
+});
+
+// ---- A0 (AR-08 F1): ack mail must go only to an address proven by SPF + header From ----
+const ackCount = (env: Record<string, any>, m: { replies: unknown[] }) => m.replies.length + env.EMAIL.sent.filter((x: any) => x.to !== undefined).length;
+const A0_CASES: [string, Parameters<typeof fakeMail>[0], boolean][] = [
+  ['A: dmarc=none', { auth: 'mx.cloudflare.net; dmarc=none' }, false],
+  ['A: dmarc=temperror (no spf result)', { auth: 'mx.cloudflare.net; dkim=temperror; dmarc=temperror' }, false],
+  ['A: spf=softfail', { auth: 'mx.cloudflare.net; spf=softfail smtp.mailfrom=author@example.test; dmarc=none' }, false],
+  ['A: a forged second Authentication-Results header after the real failing one', { auth: 'mx.cloudflare.net; spf=fail smtp.mailfrom=author@example.test; dmarc=none, mx.cloudflare.net; spf=pass smtp.mailfrom=author@example.test; dmarc=pass' }, false],
+  ['A: spf=pass written only inside a comment', { auth: 'mx.cloudflare.net; spf=none (spf=pass smtp.mailfrom=author@example.test) smtp.mailfrom=author@example.test' }, false],
+  ['B: header From lists two addresses, one equals the envelope', { headerFrom: 'author@example.test, attacker@evil.test' }, false],
+  ['A: no Authentication-Results header', { auth: null }, false],
+  ['A: header does not start with mx.cloudflare.net', { auth: 'evil.example; spf=pass smtp.mailfrom=author@example.test; dmarc=pass' }, false],
+  ['B: dkim-aligned dmarc=pass, spf not pass, other MAIL FROM', { from: 'victim@example.test', headerFrom: 'attacker@evil.test', auth: 'mx.cloudflare.net; dkim=pass header.d=evil.test; spf=fail smtp.mailfrom=victim@example.test; dmarc=pass header.from=evil.test' }, false],
+  ['B: spf=pass but smtp.mailfrom differs from the envelope', { from: 'victim@example.test', headerFrom: 'victim@example.test', auth: 'mx.cloudflare.net; spf=pass smtp.mailfrom=attacker@evil.test; dmarc=pass' }, false],
+  ['B: header From differs from the envelope', { from: 'victim@example.test', headerFrom: 'Attacker <attacker@evil.test>', auth: authPass('victim@example.test') }, false],
+  ['full pass (envelope = smtp.mailfrom = header From, any letter case)', { from: 'Author@Example.test', headerFrom: 'Some Name <author@example.TEST>', auth: authPass('AUTHOR@example.test') }, true],
+];
+for (const [name, over, sends] of A0_CASES) {
+  await t(`A0/A1 email ack: ${name} -> ${sends ? 'sends' : 'sends nothing, still stores'}`, async () => {
+    for (const replyThrows of [true, false]) { // a throwing reply() must not open the EMAIL.send fallback either
+      const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined });
+      const m = fakeMail({ ...over, body: 'Helps.\n' + VALID }); if (replyThrows) (m.msg as any).reply = async () => { throw new Error('reply refused'); };
+      await worker.email(m.msg, env, makeCtx());
+      assert.deepEqual(m.rejects, []); assert.equal(count(env, 'submissions'), 1, 'stored');
+      if (sends && !replyThrows) assert.equal(m.replies.length, 1);
+      else if (!sends) assert.equal(ackCount(env, m), 0, `sent ${m.replies.length} replies, ${env.EMAIL.sent.length} EMAIL.send`);
+    }
+  });
+}
+
+// ---- A2: one global daily ack budget, shared by email acks and form acks ----
+const ackLog = (env: Record<string, any>) => sendLog(env).filter((r) => r.kind === 'ack');
+await t('A2 email: budget spent -> the submission is stored, nothing is sent, E_ACK_BUDGET is logged', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined, ACK_DAILY_BUDGET: '2' });
+  const out = [];
+  for (const c of ['AaaaAaaa1000000000001', 'BbbbBbbb2000000000002', 'CcccCccc3000000000003']) out.push(await sendEmail(env, { from: `${c.slice(0, 4).toLowerCase()}@example.test`, body: `Helps.\nhttps://x.ai/bot/${c}` }));
+  assert.deepEqual(out.map((m) => m.replies.length), [1, 1, 0]);
+  assert.equal(count(env, 'submissions'), 3, 'all stored');
+  assert.deepEqual(ackLog(env).map((r) => [r.ok, r.error_code]), [[1, null], [1, null], [0, 'E_ACK_BUDGET']]);
+  assert.equal(env.EMAIL.sent.length, 0);
+});
+await t('A2 form: the same budget; spent -> 201, stored, no ack mail', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined, ACK_DAILY_BUDGET: '1' });
+  for (const code of ['FormOne10000000000001', 'FormTwo20000000000002']) { const ctx = makeCtx(); assert.equal((await postJson('/api/submit', env, ctx, { ...GOOD, link: `https://x.ai/bot/${code}` })).status, 201); await ctx.drain(); }
+  assert.equal(count(env, 'submissions'), 2); assert.equal(env.EMAIL.sent.filter((m: any) => m.subject?.startsWith('Your bot submission')).length, 1);
+  assert.deepEqual(ackLog(env).map((r) => [r.ok, r.error_code]), [[1, null], [0, 'E_ACK_BUDGET']]);
+});
+await t('A2: form acks and email acks draw on one counter; a new UTC day starts a new count; a broken D1 counter fails closed', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined, ACK_DAILY_BUDGET: '2' });
+  const ctx = makeCtx(); await postJson('/api/submit', env, ctx, { ...GOOD, link: 'https://x.ai/bot/FormOne10000000000001' }); await ctx.drain();
+  const e1 = await sendEmail(env, { body: 'Helps.\nhttps://x.ai/bot/AaaaAaaa1000000000001' }); const e2 = await sendEmail(env, { from: 'b@example.test', body: 'Helps.\nhttps://x.ai/bot/BbbbBbbb2000000000002' });
+  assert.deepEqual([e1.replies.length, e2.replies.length], [1, 0], 'one slot went to the form ack');
+  assert.equal(env.DB.rows("SELECT v FROM meta WHERE k LIKE 'ack_budget:%'").length, 1);
+  env.DB.db.prepare("UPDATE meta SET k = 'ack_budget:2000-01-01' WHERE k LIKE 'ack_budget:%'").run(); // yesterday's counter is irrelevant today
+  assert.equal((await sendEmail(env, { from: 'c@example.test', body: 'Helps.\nhttps://x.ai/bot/CcccCccc3000000000003' })).replies.length, 1);
+  const broken = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined }); const orig = broken.DB.prepare.bind(broken.DB);
+  broken.DB.prepare = (sql: string) => { if (/ack_budget|INTO meta/.test(sql)) throw new Error('D1 down'); return orig(sql); };
+  const m = await sendEmail(broken, { body: 'Helps.\n' + VALID }); assert.equal(m.replies.length, 0); assert.equal(count(broken, 'submissions'), 1);
+});
+await t('A2 default budget is 200 per day', async () => {
+  const env = makeEnv({ OWNER_ADDRESS: '', NOTIFY_OWNER: undefined });
+  env.DB.db.prepare("INSERT INTO meta(k, v) VALUES(?, '199')").run(`ack_budget:${new Date().toISOString().slice(0, 10)}`);
+  const a = await sendEmail(env, { body: 'Helps.\n' + VALID }); const b = await sendEmail(env, { from: 'b@example.test', body: 'Helps.\nhttps://x.ai/bot/BbbbBbbb2000000000002' });
+  assert.deepEqual([a.replies.length, b.replies.length], [1, 0]);
+});
+
+// ---- C2: the digest refuses to send while the mailing address is empty ----
+const seedActive = (env: Record<string, any>, n = 2) => { for (let i = 0; i < n; i++) env.DB.db.prepare("INSERT INTO subscribers (email, status, confirm_token, unsub_token) VALUES (?, 'active', ?, ?)").run(`r${i}@example.test`, String(i).repeat(32), String(i + 3).repeat(32)); };
+const DIGEST_PAYLOAD = { asOf: '2026-11-01', totalBots: 7, categoryCount: 2, top: [{ id: 'cat-AbCdEfGhIjKlMnOpQrStU', name: 'Tax Helper', description: 'Helps with taxes. More text.' }] };
+const digestEnv = (over: Record<string, unknown> = {}) => makeEnv({ DIGEST_ENABLED: '1', NOTIFY_OWNER: undefined, ASSETS: { fetch: async () => Response.json(DIGEST_PAYLOAD) }, ...over });
+/** Fires the digest cron, drains the work it hands to waitUntil, returns what it logged. */
+const fireDigest = async (env: unknown) => {
+  const ctx = makeCtx(); const logs: string[] = []; const o = [console.log, console.error];
+  console.log = console.error = (...a: unknown[]) => { logs.push(a.join(' ')); };
+  try { await (worker as any).scheduled({ cron: '0 13 * * MON,THU', scheduledTime: Date.UTC(2026, 10, 2, 13) }, env, ctx); await ctx.drain(); } finally { [console.log, console.error] = o; }
+  return logs;
+};
+for (const empty of [undefined, '', '   ']) {
+  await t(`C2 digest: MAIL_POSTAL_ADDRESS ${JSON.stringify(empty)} -> refuses, 0 sends, says why`, async () => {
+    const env = digestEnv({ MAIL_POSTAL_ADDRESS: empty }); seedActive(env);
+    const logs = await fireDigest(env);
+    assert.equal(env.EMAIL.sent.length, 0); assert.ok(logs.some((l) => /MAIL_POSTAL_ADDRESS is empty/.test(l)), logs.join('|'));
+  });
+}
+await t('C2 digest: with an address the digest sends to active readers, with the address, an unsubscribe link and both List-Unsubscribe headers', async () => {
+  const env = digestEnv({ MAIL_POSTAL_ADDRESS: 'PO Box 1, Example City' }); seedActive(env);
+  await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 2);
+  const m = env.EMAIL.sent[0]; assert.match(m.text, /GrokBot Zone, PO Box 1, Example City/); assert.match(m.html, /PO Box 1, Example City/);
+  assert.match(m.text, /Unsubscribe: https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/);
+  assert.match(m.headers['List-Unsubscribe'], /^<https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/); assert.equal(m.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+});
+await t('C2 confirm mail: the footer carries the address when set; the digest renderer itself throws on an empty one', async () => {
+  const { confirmMail, digestMail } = await import('../src/lib/submissions');
+  assert.match(confirmMail('f'.repeat(32), 'PO Box 1, Example City').text, /GrokBot Zone, PO Box 1, Example City/);
+  assert.match(confirmMail('f'.repeat(32), 'PO Box 1, Example City').html, /PO Box 1, Example City/);
+  assert.ok(!/GrokBot Zone, /.test(confirmMail('f'.repeat(32)).text), 'no address, no footer line');
+  assert.throws(() => digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), ''), /MAIL_POSTAL_ADDRESS/);
+  assert.throws(() => digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), '  \n '), /MAIL_POSTAL_ADDRESS/);
 });
 
 // ---- F5: a rejected row flips to pending only if it is still rejected ----

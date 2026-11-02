@@ -71,6 +71,28 @@ export function validateSubmission(body: unknown, categorySlugs: ReadonlySet<str
   };
 }
 
+/**
+ * A1: may we send an acknowledgment to the envelope sender? Only when Cloudflare's own first
+ * Authentication-Results value says spf=pass for exactly this envelope address AND the header From is
+ * exactly one address and the same one. Anything else (dmarc none/temperror, no header, a forged second header,
+ * a DKIM-only pass with another MAIL FROM, a From that differs from the envelope) -> false.
+ */
+export function ackAuthorized(authResults: string | null, envelopeFrom: string, headerFromRaw: string | null): boolean {
+  const env = envelopeFrom.trim().toLowerCase();
+  if (!env || !authResults) return false;
+  // Headers.get() joins repeated headers with ", ": keep only the first value (Cloudflare's), cut where a second authserv-id starts.
+  const first = authResults.trim().split(/,\s*(?=[a-z0-9.-]+(?:\s+\d+)?\s*;)/i)[0].replace(/\([^)]*\)/g, ' ');
+  if (!/^mx\.cloudflare\.net\b/i.test(first)) return false;
+  const spf = first.split(';').find((c) => /^\s*spf=/i.test(c));
+  if (!spf || !/^\s*spf=pass\b/i.test(spf)) return false;
+  const mailfrom = /\bsmtp\.mailfrom=("?)([^\s";]+)\1/i.exec(spf)?.[2].replace(/^<|>$/g, '').toLowerCase();
+  if (mailfrom !== env) return false;
+  // Header From: strip quoted display names and comments, then exactly one addr-spec must remain.
+  const bare = (headerFromRaw ?? '').replace(/"(?:[^"\\]|\\.)*"/g, ' ').replace(/\([^)]*\)/g, ' ');
+  const addrs = bare.match(/[^\s<>@,;:"()]+@[^\s<>@,;:"()]+/g) ?? [];
+  return addrs.length === 1 && addrs[0].toLowerCase() === env;
+}
+
 /** 32 lowercase hex characters from 16 random bytes. */
 export function makeToken(rand: (a: Uint8Array) => Uint8Array = (a) => crypto.getRandomValues(a)): string {
   return [...rand(new Uint8Array(16))].map((x) => x.toString(16).padStart(2, '0')).join('');
@@ -132,20 +154,33 @@ export function ownerSummary(r: { id: number; name: string; author: string | nul
   };
 }
 
-export const confirmText = (token: string) =>
-  `Confirm: ${SITE}/subscribe/confirm?t=${token}\nYou'll get an update email Monday and Thursday. Nothing happens until you confirm.`;
+/** C2: the one-line mailing address for the footer, from env MAIL_POSTAL_ADDRESS. Empty when unset. */
+export const postalLine = (v: unknown) => (typeof v === 'string' ? singleLine(v) : '');
+
+export function confirmMail(token: string, postal = '') {
+  const url = `${SITE}/subscribe/confirm?t=${token}`;
+  const addr = postalLine(postal);
+  const foot = ['If you did not ask for this, ignore this email and nothing will happen.', addr ? `GrokBot Zone, ${addr}` : ''].filter(Boolean);
+  const text = `Confirm: ${url}\nYou'll get an update email Monday and Thursday. Nothing happens until you confirm.\n\n-- \n${foot.join('\n')}`;
+  const html = `<p>Confirm your subscription to GrokBot Zone updates:</p><p><a href="${url}">Confirm my subscription</a></p><p>You'll get an update email Monday and Thursday. Nothing happens until you confirm.</p><hr><p style="color:#666;font-size:12px">${foot.map(esc).join('<br>')}</p>`;
+  return { subject: 'Confirm your GrokBot Zone update emails', text, html };
+}
+export const confirmText = (token: string, postal = '') => confirmMail(token, postal).text;
 
 export interface DigestPayload { asOf: string; totalBots: number; categoryCount: number; top: { id: string; name: string; description: string }[] }
 const firstSentence = (s: string) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200);
 
-export function digestMail(p: DigestPayload, weekday: 'Monday' | 'Thursday', unsubToken: string) {
+/** The digest refuses to render without a mailing address (C2, CAN-SPAM): it throws instead of sending a footer-less mail. */
+export function digestMail(p: DigestPayload, weekday: 'Monday' | 'Thursday', unsubToken: string, postal: string) {
+  const addr = postalLine(postal);
+  if (!addr) throw new Error('digest: MAIL_POSTAL_ADDRESS is empty');
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
   const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} — ${firstSentence(b.description)} → ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} — ${p.totalBots} bots in ${p.categoryCount} categories.`;
   return {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
-    text: `${head}\n${lines.join('\n')}\nUnsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><p><a href="${unsub}">Unsubscribe</a></p>`,
+    text: `${head}\n${lines.join('\n')}\n\n-- \nGrokBot Zone, ${addr}\nYou get this because you confirmed a subscription.\nUnsubscribe: ${unsub}`,
+    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><hr><p style="color:#666;font-size:12px">GrokBot Zone, ${esc(addr)}<br>You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
   };
 }

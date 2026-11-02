@@ -47,7 +47,12 @@ EMAIL_SUBMIT_ENABLED = "1"
 SUBSCRIBE_ENABLED    = "0"
 DIGEST_ENABLED       = "0"
 OWNER_ADDRESS        = ""
+# Acknowledgment mails (email + form) per UTC day across all senders; over budget the submission is stored and nothing is sent.
+ACK_DAILY_BUDGET     = "200"
 MIN_FILL_MS          = "3000"
 DIGEST_MAX_SENDS     = "100"
+# MAIL_POSTAL_ADDRESS (footer postal address of the update emails) is deliberately NOT here: the repo is public.
+# The operator sets it as a Worker secret (`wrangler secret put MAIL_POSTAL_ADDRESS`, which survives deploys).
+# While it is empty the digest refuses to send.
 # First-party telemetry starts counting here: the UTC date of the production deploy (spec 07 D20, O4).
 TELEMETRY_START      = "2026-11-01"

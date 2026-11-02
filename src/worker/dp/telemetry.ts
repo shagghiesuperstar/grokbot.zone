@@ -1,4 +1,4 @@
-// D17: first-party telemetry. No cookies, no stored IP: a visitor is a daily-salted hash, counted once
+// D17: first-party telemetry. No cookies, no stored IP: a visitor is a daily-salted hash of the IP, counted once
 // per bot per kind per UTC day. Every write is best effort and never slows or breaks a page.
 import { botUrl } from './ingest';
 import { dayOf } from './util';
@@ -17,8 +17,10 @@ export function isHuman(req: Request): boolean {
 }
 
 const hex = (b: ArrayBuffer) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
-export async function visitorHash(salt: string, ip: string, ua: string): Promise<string> {
-  return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${salt}|${ip}|${ua}`))).slice(0, 16);
+/** B1: salt + IP only. The user agent is deliberately NOT part of the hash: one client that rotates its UA is
+ *  still one visitor, so it cannot multiply a bot's counts. The raw IP is never stored. */
+export async function visitorHash(salt: string, ip: string): Promise<string> {
+  return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${salt}|${ip}`))).slice(0, 16);
 }
 
 let saltCache: { db: D1Database; day: string; salt: string } | null = null;
@@ -38,7 +40,7 @@ export async function record(db: D1Database | undefined, kind: Kind, codeLc: str
   try {
     if (!db || !isHuman(req)) return;
     const day = dayOf(nowMs);
-    const vh = await visitorHash(await dailySalt(db, day), req.headers.get('cf-connecting-ip') ?? '', req.headers.get('user-agent') ?? '');
+    const vh = await visitorHash(await dailySalt(db, day), req.headers.get('cf-connecting-ip') ?? '');
     const ins = await db.prepare('INSERT OR IGNORE INTO visit_seen(day, code_lc, kind, vh) VALUES(?, ?, ?, ?)').bind(day, codeLc, kind, vh).run();
     if (!Number((ins as { meta?: { changes?: number } }).meta?.changes ?? 0)) return;
     const col = kind === 'open' ? 'opens' : 'views';

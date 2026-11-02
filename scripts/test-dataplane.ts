@@ -341,6 +341,23 @@ await t('telemetry: same visitor twice = 1 open; a second visitor = 2', async ()
   assert.equal(JSON.stringify(db.rows('SELECT * FROM visit_seen')).includes('203.0.113'), false, 'no raw IP stored');
   assert.match(db.one('SELECT vh FROM visit_seen').vh, /^[0-9a-f]{16}$/);
 });
+await t('A0/B1 telemetry (AR-08 F2): one client rotating its user agent is still one open and one view per bot per day', async () => {
+  resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
+  const id = `coding-software-${LIVE}`;
+  for (const ua of [HUMAN, HUMAN + ' Edg/1', 'Mozilla/5.0 (X11; Linux) Firefox/130', 'Mozilla/5.0 (iPhone) Mobile/15E148']) {
+    const h = { 'user-agent': ua, 'cf-connecting-ip': '203.0.113.50' };
+    await get(env, `/go/${LIVE}`, h); await get(env, `/bots/${id}/`, h);
+  }
+  assert.deepEqual(opens(db), { o: 1, v: 1 });
+  assert.equal(db.rows('SELECT * FROM visit_seen').length, 2, 'one row per kind');
+  assert.equal(JSON.stringify(db.rows('SELECT * FROM visit_seen')).includes('203.0.113'), false, 'no raw IP stored');
+  // a different client is still a different visitor; the same client on the next UTC day counts again
+  await get(env, `/go/${LIVE}`, { 'user-agent': HUMAN, 'cf-connecting-ip': '203.0.113.51' });
+  assert.equal(opens(db).o, 2);
+  const h2 = { 'user-agent': 'Other/1', 'cf-connecting-ip': '203.0.113.50' };
+  await record(db as never, 'open', LIVE.toLowerCase(), new Request('https://x/', { headers: h2 }), Date.now() + 86_400_000);
+  assert.equal(opens(db).o, 3, 'next day, same client: a new visit');
+});
 await t('telemetry: crawler UA = 0, HEAD = 0, prefetch = 0, no UA = 0', async () => {
   resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
   for (const ua of ['Googlebot/2.1', 'curl/8.4', 'python-requests/2.31', 'Mozilla/5.0 (compatible; bingbot)', 'Slackbot-LinkExpanding', 'HeadlessChrome/120', 'WhatsApp link preview', 'Go-http-client/2.0', 'okhttp/4', 'Java/17', 'Wget/1.21', 'Apache-HttpClient/4 http-client', 'Yahoo Slurp', 'Baiduspider', 'SomeCrawl/1']) await get(env, `/go/${LIVE}`, { 'user-agent': ua, 'cf-connecting-ip': '1.1.1.1' });

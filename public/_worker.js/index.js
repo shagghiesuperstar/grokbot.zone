@@ -5594,9 +5594,8 @@ ${foot.join("\n")}`;
   return { subject: "Confirm your GrokBot Zone update emails", text, html };
 }
 var firstSentence = (s) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200);
-function digestMail(p, weekday, unsubToken, postal) {
+function digestMail(p, weekday, unsubToken, postal = "") {
   const addr = postalLine(postal);
-  if (!addr) throw new Error("digest: MAIL_POSTAL_ADDRESS is empty");
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
   const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} \u2014 ${firstSentence(b.description)} \u2192 ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} \u2014 ${p.totalBots} bots in ${p.categoryCount} categories.`;
@@ -5606,10 +5605,10 @@ function digestMail(p, weekday, unsubToken, postal) {
 ${lines.join("\n")}
 
 -- 
-GrokBot Zone, ${addr}
-You get this because you confirmed a subscription.
+${addr ? `GrokBot Zone, ${addr}
+` : ""}You get this because you confirmed a subscription.
 Unsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">GrokBot Zone, ${esc(addr)}<br>You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
+    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ""}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" }
   };
 }
@@ -8187,10 +8186,6 @@ async function digest(controller, env) {
     return;
   }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  if (!postal) {
-    console.error("digest: MAIL_POSTAL_ADDRESS is empty, refusing to send (0 sends)");
-    return;
-  }
   const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
   if (!res.ok) {
     console.error(`digest: payload ${res.status}, 0 sends`);

@@ -397,7 +397,6 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   if (!isOn(env.DIGEST_ENABLED)) { console.log('digest: dark (DIGEST_ENABLED != 1), 0 sends'); return; }
   if (!env.DB) { console.log('digest: no DB binding, 0 sends'); return; }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  if (!postal) { console.error('digest: MAIL_POSTAL_ADDRESS is empty, refusing to send (0 sends)'); return; }
   const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
   if (!res.ok) { console.error(`digest: payload ${res.status}, 0 sends`); return; }
   const payload = (await res.json()) as DigestPayload;

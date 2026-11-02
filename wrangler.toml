@@ -53,6 +53,6 @@ MIN_FILL_MS          = "3000"
 DIGEST_MAX_SENDS     = "100"
 # MAIL_POSTAL_ADDRESS (footer postal address of the update emails) is deliberately NOT here: the repo is public.
 # The operator sets it as a Worker secret (`wrangler secret put MAIL_POSTAL_ADDRESS`, which survives deploys).
-# While it is empty the digest refuses to send.
+# Optional: while it is empty the footer address line is simply omitted.
 # First-party telemetry starts counting here: the UTC date of the production deploy (spec 07 D20, O4).
 TELEMETRY_START      = "2026-11-01"

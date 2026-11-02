@@ -1,5 +1,5 @@
 // Renders the two subscription emails from the real templates (src/lib/submissions.ts) for the owner's review.
-// Nothing is sent. The footer address is a placeholder: the real one comes from env MAIL_POSTAL_ADDRESS.
+// Nothing is sent. The postal address is optional and rendered EMPTY here, so the samples show no address line.
 // Usage: tsx scripts/render-samples.ts <outDir>   (needs dist/digests/latest.json from `pnpm build`)
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -7,7 +7,6 @@ import { confirmMail, digestMail, type DigestPayload } from '../src/lib/submissi
 
 const ROOT = resolve(import.meta.dirname, '..');
 const outDir = resolve(process.argv[2] ?? join(ROOT, 'samples'));
-const PLACEHOLDER = '[MAILING ADDRESS - owner to confirm]';
 const payload = JSON.parse(readFileSync(join(ROOT, 'dist/digests/latest.json'), 'utf8')) as DigestPayload;
 mkdirSync(outDir, { recursive: true });
 
@@ -17,8 +16,8 @@ const page = (title: string, m: { subject: string; html: string; headers?: Recor
   (m.headers ? `<br><b>List-Unsubscribe:</b> ${m.headers['List-Unsubscribe'].replace(/</g, '&lt;')}<br><b>List-Unsubscribe-Post:</b> ${m.headers['List-Unsubscribe-Post']}` : '') +
   `</p>${m.html}</body>`;
 
-const confirm = confirmMail('0'.repeat(32), PLACEHOLDER);
-const digest = digestMail(payload, 'Monday', '1'.repeat(32), PLACEHOLDER);
+const confirm = confirmMail('0'.repeat(32), '');
+const digest = digestMail(payload, 'Monday', '1'.repeat(32), '');
 writeFileSync(join(outDir, 'confirm.html'), page('Sample: confirm email', confirm));
 writeFileSync(join(outDir, 'confirm.txt'), `Subject: ${confirm.subject}\n\n${confirm.text}\n`);
 writeFileSync(join(outDir, 'digest.html'), page('Sample: digest email', digest));

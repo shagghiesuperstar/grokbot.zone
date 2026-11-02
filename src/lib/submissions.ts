@@ -158,7 +158,7 @@ export function ownerSummary(r: { id: number; name: string; author: string | nul
   };
 }
 
-/** C2: the one-line mailing address for the footer, from env MAIL_POSTAL_ADDRESS. Empty when unset. */
+/** The optional one-line postal address for the footer, from env MAIL_POSTAL_ADDRESS. Empty when unset: the footer line is then omitted. */
 export const postalLine = (v: unknown) => (typeof v === 'string' ? singleLine(v) : '');
 
 export function confirmMail(token: string, postal = '') {
@@ -174,17 +174,15 @@ export const confirmText = (token: string, postal = '') => confirmMail(token, po
 export interface DigestPayload { asOf: string; totalBots: number; categoryCount: number; top: { id: string; name: string; description: string }[] }
 const firstSentence = (s: string) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200);
 
-/** The digest refuses to render without a mailing address (C2, CAN-SPAM): it throws instead of sending a footer-less mail. */
-export function digestMail(p: DigestPayload, weekday: 'Monday' | 'Thursday', unsubToken: string, postal: string) {
+export function digestMail(p: DigestPayload, weekday: 'Monday' | 'Thursday', unsubToken: string, postal = '') {
   const addr = postalLine(postal);
-  if (!addr) throw new Error('digest: MAIL_POSTAL_ADDRESS is empty');
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
   const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} — ${firstSentence(b.description)} → ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} — ${p.totalBots} bots in ${p.categoryCount} categories.`;
   return {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
-    text: `${head}\n${lines.join('\n')}\n\n-- \nGrokBot Zone, ${addr}\nYou get this because you confirmed a subscription.\nUnsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><hr><p style="color:#666;font-size:12px">GrokBot Zone, ${esc(addr)}<br>You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
+    text: `${head}\n${lines.join('\n')}\n\n-- \n${addr ? `GrokBot Zone, ${addr}\n` : ''}You get this because you confirmed a subscription.\nUnsubscribe: ${unsub}`,
+    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ''}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
   };
 }

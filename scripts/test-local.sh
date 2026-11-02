@@ -174,12 +174,13 @@ reset_db
 for e in a b c d; do post /subscribe 10.3.0.$RANDOM "{\"email\":\"$e@example.test\"}" >/dev/null; done
 $W d1 execute grokbot-zone --local --command "UPDATE subscribers SET status='active'" >/dev/null 2>&1
 stop
-# C2: no MAIL_POSTAL_ADDRESS -> the digest refuses to send, whatever the switch says.
+# C2: MAIL_POSTAL_ADDRESS is optional: empty, the digest still sends (simulated) and says nothing about an address.
 start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:3
 curl -s -o /dev/null "$B/cdn-cgi/handler/scheduled?cron=0+13+*+*+MON"; sleep 3
-check "empty MAIL_POSTAL_ADDRESS: zero digest sends" '[{"n":0}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest'")"
-check "empty MAIL_POSTAL_ADDRESS: the refusal is logged" 1 "$(grep -c 'MAIL_POSTAL_ADDRESS is empty' "$LOG")"
+check "empty MAIL_POSTAL_ADDRESS: 3 digest sends" '[{"n":3}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest' AND ok=1")"
+check "empty MAIL_POSTAL_ADDRESS: no refusal logged" 0 "$(grep -c 'MAIL_POSTAL_ADDRESS' "$LOG")"
 stop
+$W d1 execute grokbot-zone --local --command "DELETE FROM send_log" >/dev/null 2>&1
 start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:3 --var "MAIL_POSTAL_ADDRESS:Test Postal Line, Testville"
 curl -s -o /dev/null "$B/cdn-cgi/handler/scheduled?cron=0+13+*+*+MON"; sleep 3
 check "4 active, cap 3: exactly 3 digest sends" '[{"n":3}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest' AND ok=1")"

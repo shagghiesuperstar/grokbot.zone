@@ -67,5 +67,5 @@ pnpm build && pnpm deploy
 ## Update emails (dark) and acknowledgments
 
 - `SUBSCRIBE_ENABLED` and `DIGEST_ENABLED` stay `"0"` until the owner approves the sample emails. Unsubscribe: the link in a mail opens a confirm page (a GET changes nothing); the button, or an RFC 8058 one-click `POST` with `List-Unsubscribe=One-Click`, unsubscribes.
-- `MAIL_POSTAL_ADDRESS` is the postal address printed in the footer of the confirm and digest mails. It is **not** in `wrangler.toml` (this repo is public): the operator sets it as a Worker secret, `wrangler secret put MAIL_POSTAL_ADDRESS`. While it is empty the digest refuses to send.
+- `MAIL_POSTAL_ADDRESS` is the optional postal address printed in the footer of the confirm and digest mails. It is **not** in `wrangler.toml` (this repo is public): the operator sets it as a Worker secret, `wrangler secret put MAIL_POSTAL_ADDRESS`. It is **optional**: when empty or unset the digest sends normally and the footer address line is omitted entirely.
 - Acknowledgment mails: an email submission is acknowledged only when Cloudflare's first `Authentication-Results` shows `spf=pass` for the envelope address and the header `From` is that same single address; otherwise the submission is stored and nothing is sent. All acks (email and form) share one budget of `ACK_DAILY_BUDGET` (default 200) per UTC day.

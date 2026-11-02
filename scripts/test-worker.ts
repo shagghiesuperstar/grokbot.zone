@@ -405,7 +405,7 @@ await t('A2 default budget is 200 per day', async () => {
   assert.deepEqual([a.replies.length, b.replies.length], [1, 0]);
 });
 
-// ---- C2: the digest refuses to send while the mailing address is empty ----
+// ---- C2: the postal address is optional; when set it is printed once, when empty the line is omitted ----
 const seedActive = (env: Record<string, any>, n = 2) => { for (let i = 0; i < n; i++) env.DB.db.prepare("INSERT INTO subscribers (email, status, confirm_token, unsub_token) VALUES (?, 'active', ?, ?)").run(`r${i}@example.test`, String(i).repeat(32), String(i + 3).repeat(32)); };
 const DIGEST_PAYLOAD = { asOf: '2026-11-01', totalBots: 7, categoryCount: 2, top: [{ id: 'cat-AbCdEfGhIjKlMnOpQrStU', name: 'Tax Helper', description: 'Helps with taxes. More text.' }] };
 const digestEnv = (over: Record<string, unknown> = {}) => makeEnv({ DIGEST_ENABLED: '1', NOTIFY_OWNER: undefined, ASSETS: { fetch: async () => Response.json(DIGEST_PAYLOAD) }, ...over });
@@ -417,10 +417,16 @@ const fireDigest = async (env: unknown) => {
   return logs;
 };
 for (const empty of [undefined, '', '   ']) {
-  await t(`C2 digest: MAIL_POSTAL_ADDRESS ${JSON.stringify(empty)} -> refuses, 0 sends, says why`, async () => {
+  await t(`C2 digest: MAIL_POSTAL_ADDRESS ${JSON.stringify(empty)} -> sends normally, no address line, no placeholder`, async () => {
     const env = digestEnv({ MAIL_POSTAL_ADDRESS: empty }); seedActive(env);
     const logs = await fireDigest(env);
-    assert.equal(env.EMAIL.sent.length, 0); assert.ok(logs.some((l) => /MAIL_POSTAL_ADDRESS is empty/.test(l)), logs.join('|'));
+    assert.equal(env.EMAIL.sent.length, 2); assert.ok(!logs.some((l) => /MAIL_POSTAL_ADDRESS|refus/.test(l)), logs.join('|'));
+    const m = env.EMAIL.sent[0];
+    for (const body of [m.text, m.html]) { assert.ok(!/GrokBot Zone, /.test(body), 'no address line'); assert.ok(!/\[|MAILING|undefined/.test(body.replace(/<a [^>]*>/g, '')), 'no placeholder'); }
+    assert.match(m.text, /-- \nYou get this because you confirmed a subscription\.\nUnsubscribe: /, 'no empty line before the next footer line');
+    assert.match(m.html, /font-size:12px">You get this because/);
+    assert.match(m.text, /Unsubscribe: https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/);
+    assert.match(m.headers['List-Unsubscribe'], /^<https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/); assert.equal(m.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
   });
 }
 await t('C2 digest: with an address the digest sends to active readers, with the address, an unsubscribe link and both List-Unsubscribe headers', async () => {
@@ -431,13 +437,19 @@ await t('C2 digest: with an address the digest sends to active readers, with the
   assert.match(m.text, /Unsubscribe: https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/);
   assert.match(m.headers['List-Unsubscribe'], /^<https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/); assert.equal(m.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
 });
-await t('C2 confirm mail: the footer carries the address when set; the digest renderer itself throws on an empty one', async () => {
+await t('C2 confirm mail: the address line renders exactly once when set and not at all when empty', async () => {
   const { confirmMail, digestMail } = await import('../src/lib/submissions');
   assert.match(confirmMail('f'.repeat(32), 'PO Box 1, Example City').text, /GrokBot Zone, PO Box 1, Example City/);
   assert.match(confirmMail('f'.repeat(32), 'PO Box 1, Example City').html, /PO Box 1, Example City/);
   assert.ok(!/GrokBot Zone, /.test(confirmMail('f'.repeat(32)).text), 'no address, no footer line');
-  assert.throws(() => digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), ''), /MAIL_POSTAL_ADDRESS/);
-  assert.throws(() => digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), '  \n '), /MAIL_POSTAL_ADDRESS/);
+  const once = (s: string) => s.split('PO Box 1, Example City').length - 1;
+  const set = digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), 'PO Box 1, Example City');
+  assert.equal(once(set.text), 1); assert.equal(once(set.html), 1);
+  assert.equal(once(confirmMail('f'.repeat(32), 'PO Box 1, Example City').text), 1);
+  for (const empty of ['', '  \n ']) {
+    const d = digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), empty);
+    assert.ok(!/GrokBot Zone, /.test(d.text + d.html), 'no address line'); assert.match(d.text, /-- \nYou get this/);
+  }
 });
 
 // ---- F5: a rejected row flips to pending only if it is still rejected ----

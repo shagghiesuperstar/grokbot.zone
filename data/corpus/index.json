@@ -1,6 +1,6 @@
 {
  "asOf": "2026-10-28",
- "rawTotalBots": 7414,
+ "rawTotalBots": 7412,
  "categories": [
   {
    "slug": "business-operations",
@@ -53,7 +53,7 @@
   {
    "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
    "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
-   "count": 462,
+   "count": 461,
    "path": "data/corpus/grok-bot-helpers-bots-that-build-or-manage-bots.json"
   },
   {
@@ -101,7 +101,7 @@
   {
    "slug": "productivity-personal-assistant",
    "label": "Productivity & Personal Assistant",
-   "count": 551,
+   "count": 550,
    "path": "data/corpus/productivity-personal-assistant.json"
   },
   {

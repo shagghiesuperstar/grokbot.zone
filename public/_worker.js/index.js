@@ -5791,8 +5791,9 @@ function scrub(f, list) {
   const name = stripEmails(f.name).slice(0, 200);
   let author = stripEmails(f.author).slice(0, 200);
   const description = stripEmails(f.description).slice(0, 2e3);
-  if (hits(author, list)) author = "";
-  return { name, author, description, excluded: hits(name, list) || hits(description, list) };
+  const authorHit = hits(author, list);
+  if (authorHit) author = "";
+  return { name, author, description, excluded: authorHit || hits(name, list) || hits(description, list) };
 }
 function ingest(head, requestedCode, list, model) {
   if (!head.name) return null;
@@ -7548,7 +7549,8 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
     discovery: {
       last_run: m.discovery_last_run ?? null,
       new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0),
-      lists: { last_run: ls.last_run ?? null, sources: ls.sources ?? 0, fetched_ok: ls.fetched_ok ?? 0, added: ls.added ?? 0 }
+      lists: { last_run: ls.last_run ?? null, sources: ls.sources ?? 0, fetched_ok: ls.fetched_ok ?? 0, added: ls.added ?? 0 },
+      noref: { configured: nosecret, excluded: st.excluded ?? 0 }
     },
     submissions: { rejected_unresolved: Number(m.rejected_unresolved ?? 0) },
     telemetry: { events_today: events },

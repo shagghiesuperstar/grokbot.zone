@@ -58,7 +58,7 @@
  {
   "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
   "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
-  "count": 453,
+  "count": 452,
   "purpose": "Bots that build, tune or manage other Grok bots.",
   "updated": "2026-10-28"
  },
@@ -114,7 +114,7 @@
  {
   "slug": "productivity-personal-assistant",
   "label": "Productivity & Personal Assistant",
-  "count": 547,
+  "count": 546,
   "purpose": "Tasks, notes, reminders and a personal assistant for the day.",
   "updated": "2026-10-28"
  },

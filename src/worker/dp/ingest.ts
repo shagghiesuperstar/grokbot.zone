@@ -75,13 +75,14 @@ export const denylist = (secret: string | undefined): string[] =>
 const hits = (text: string, list: string[]) => { const t = text.toLowerCase(); return list.some((w) => t.includes(w)); };
 
 export interface Scrubbed { name: string; author: string; description: string; excluded: boolean }
-/** Strip email addresses; an author hit blanks the author; a name or description hit excludes the bot. */
+/** Strip email addresses; a hit in the name, author or description excludes the bot (an author hit also blanks the author). */
 export function scrub(f: { name: string; author: string; description: string }, list: string[]): Scrubbed {
   const name = stripEmails(f.name).slice(0, 200);
   let author = stripEmails(f.author).slice(0, 200);
   const description = stripEmails(f.description).slice(0, 2000);
-  if (hits(author, list)) author = '';
-  return { name, author, description, excluded: hits(name, list) || hits(description, list) };
+  const authorHit = hits(author, list);
+  if (authorHit) author = '';
+  return { name, author, description, excluded: authorHit || hits(name, list) || hits(description, list) };
 }
 
 export interface Ingested extends Scrubbed { category: string | null; code: string }

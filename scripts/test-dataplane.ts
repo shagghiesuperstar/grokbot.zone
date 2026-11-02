@@ -194,15 +194,29 @@ await t('filters: email stripped from author and description', () => {
   const s = scrub({ name: 'Helper', author: 'ann@example.com', description: 'Write to bob@example.org now' }, []);
   assert.ok(!/@/.test(s.author + s.description)); assert.equal(s.excluded, false);
 });
-await t('filters: a denylist hit in the author blanks it; in the name or description excludes the bot', () => {
+await t('filters: a denylist hit in the author, name or description excludes the bot (author is also blanked); empty list excludes nothing', () => {
   const list = denylist(`${FAKE}|other`);
   assert.deepEqual(list, [FAKE, 'other']);
   const a = scrub({ name: 'Fine', author: `By ${FAKE.toUpperCase()}`, description: 'ok' }, list);
-  assert.equal(a.author, ''); assert.equal(a.excluded, false);
+  assert.equal(a.author, ''); assert.equal(a.excluded, true);
+  assert.equal(scrub({ name: 'Fine', author: 'Ann', description: 'ok' }, list).excluded, false);
+  assert.equal(scrub({ name: `My ${FAKE}`, author: `By ${FAKE}`, description: `${FAKE}` }, denylist('')).excluded, false);
+  assert.equal(scrub({ name: `My ${FAKE}`, author: '', description: '' }, denylist(undefined)).excluded, false);
   assert.equal(scrub({ name: `My ${FAKE} bot`, author: '', description: 'ok' }, list).excluded, true);
   assert.equal(scrub({ name: 'Fine', author: '', description: `about ${FAKE}` }, list).excluded, true);
   const head = parseHead(`<meta property="og:title" content="${FAKE} helper by Ann"><meta property="og:description" content="d">`);
   assert.equal(ingest(head, CODE(1), list, model as never)!.excluded, true);
+});
+await t('cron: an author-only denylist hit publishes nothing: the row is excluded, not live', async () => {
+  const db = new FakeD1(); insertBot(db, CODE(1), { source: 'listing', status: 'pending', name: '', category: null, cats: null });
+  const c = clock();
+  const p = platform(() => ({ status: 200, body: `<head><link rel="canonical" href="x"><meta property="og:title" content="Fine Helper by ${FAKE} Co"><meta property="og:description" content="ok"></head><body>` }), c);
+  await runDataPlane({ DB: db as never, NOREF_TOKENS: FAKE, TELEMETRY_START: '2026-11-01' }, c.t, { fetch: p.f, clock: c });
+  assert.equal(db.one('SELECT status FROM bots WHERE code_lc=?', CODE(1).toLowerCase()).status, 'excluded');
+  const h = await healthBody(db as never, c.t, new Date(c.t).toISOString(), true, {});
+  assert.deepEqual(h.discovery.noref, { configured: true, excluded: 1 });
+  assert.equal((await healthBody(new FakeD1() as never, c.t, new Date(c.t).toISOString(), false, {})).discovery.noref.configured, false);
+  assert.ok(!JSON.stringify(h).includes(FAKE), 'health carries counts only');
 });
 await t('classifier: argmax or null; tokens are the only input', () => {
   assert.deepEqual(tokenize('Hello Worlds!'), ['hello', 'world']);

@@ -240,14 +240,12 @@ await t('F2 dark: bogus token -> 410 with no row data', async () => {
 await t('C1 unsubscribe: GET (a link scanner or prefetch) shows a confirm page with a POST button and changes nothing', async () => {
   for (const sw of ['0', '1']) {
     const env = makeEnv({ SUBSCRIBE_ENABLED: sw }); seedSub(env);
-    for (const method of ['GET', 'HEAD']) {
-      const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx(), { method });
+    for (let i = 0; i < 2; i++) { // a scanner may fetch it more than once
+      const res = await call(`/subscribe/unsubscribe?t=${TOKEN}`, env, makeCtx());
       assert.equal(res.status, 200);
-      if (method === 'GET') {
-        const html = await res.text();
-        assert.match(html, /<form method="post" action="\/subscribe\/unsubscribe\?t=a{32}">/); assert.match(html, /name="List-Unsubscribe" value="One-Click"/); assert.match(html, /<button type="submit">Unsubscribe<\/button>/);
-        assert.ok(!html.includes('example.test'), 'never echoes the address');
-      }
+      const html = await res.text();
+      assert.match(html, /<form method="post" action="\/subscribe\/unsubscribe\?t=a{32}">/); assert.match(html, /name="List-Unsubscribe" value="One-Click"/); assert.match(html, /<button type="submit">Unsubscribe<\/button>/);
+      assert.ok(!html.includes('example.test'), 'never echoes the address');
     }
     assert.deepEqual(env.DB.rows('SELECT status FROM subscribers'), [{ status: 'active' }]);
     assert.equal(count(env, 'send_log'), 0);

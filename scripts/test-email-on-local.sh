@@ -41,7 +41,9 @@ M=$(mail submit@grokbot.zone author@example.test "My bot" "Helps with taxes.\nht
 email submit@grokbot.zone author@example.test "$M" >/dev/null; sleep 2
 check "email: RFC 5322 message with Message-ID -> pending bot, source submission" "pending submission" "$(sql "SELECT status, source FROM bots WHERE code_lc=lower('$MAILC')" | python3 -c 'import json,sys;r=json.load(sys.stdin)[0];print(r["status"],r["source"])')"
 check "email: submissions row, source email" 1 "$(n "SELECT COUNT(*) AS n FROM submissions WHERE source='email' AND code='$MAILC'")"
-check "email: reply attempt logged as ack" 1 "$(n "SELECT COUNT(*) AS n FROM send_log WHERE kind='ack' AND recipient='author@example.test'")"
+# The local endpoint adds no Authentication-Results, so the ack gate (A1) must send nothing and say why.
+check "email: no authenticated sender -> ack skipped and logged E_ACK_UNAUTHENTICATED" 1 "$(n "SELECT COUNT(*) AS n FROM send_log WHERE kind='ack' AND ok=0 AND error_code='E_ACK_UNAUTHENTICATED' AND recipient='author@example.test'")"
+check "email: no ack mail went out" 0 "$(n "SELECT COUNT(*) AS n FROM send_log WHERE kind='ack' AND ok=1 AND recipient='author@example.test'")"
 email info@grokbot.zone author@example.test "$(mail info@grokbot.zone author@example.test x "https://x.ai/bot/EmailOnOther000000001")" >/dev/null; sleep 1
 check "email: other mailbox stores nothing" 0 "$(n "SELECT COUNT(*) AS n FROM bots WHERE code_lc=lower('EmailOnOther000000001')")"
 check "no email address is exposed by any public page" 0 "$( (curl -s $B/api/flags; curl -s $B/submit/; curl -s $B/api/health) | grep -c 'author@example.test')"

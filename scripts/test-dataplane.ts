@@ -14,7 +14,7 @@ import { parseCdx, parseListing } from '../src/worker/dp/discovery';
 import { build as buildTrending, order, prior, SEED_RANK, type Scored } from '../src/worker/dp/trending';
 import { runDataPlane } from '../src/worker/dp/cron';
 import { recentList, trendingList } from '../src/worker/dp/serve';
-import { isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
+import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
 import model from '../src/data/classifier.json';
@@ -357,6 +357,16 @@ await t('A0/B1 telemetry (AR-08 F2): one client rotating its user agent is still
   const h2 = { 'user-agent': 'Other/1', 'cf-connecting-ip': '203.0.113.50' };
   await record(db as never, 'open', LIVE.toLowerCase(), new Request('https://x/', { headers: h2 }), Date.now() + 86_400_000);
   assert.equal(opens(db).o, 3, 'next day, same client: a new visit');
+});
+await t('B1 telemetry: an IPv6 client is its /64 (rotating the host part is one visitor); IPv4 stays whole', async () => {
+  assert.equal(clientKey('203.0.113.7'), '203.0.113.7');
+  const same = ['2001:db8:abcd:12:1:2:3:4', '2001:DB8:ABCD:0012:ffff::1', '2001:db8:abcd:12::'].map(clientKey);
+  assert.deepEqual(new Set(same).size, 1, same.join(' | '));
+  assert.notEqual(clientKey('2001:db8:abcd:13::1'), clientKey('2001:db8:abcd:12::1'));
+  assert.equal(clientKey('::1'), '0:0:0:0'); assert.equal(clientKey('2001:db8::1'), '2001:db8:0:0');
+  resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
+  for (const ip of ['2001:db8:abcd:12::1', '2001:db8:abcd:12:aaaa:bbbb:cccc:dddd']) await get(env, `/go/${LIVE}`, { 'user-agent': HUMAN, 'cf-connecting-ip': ip });
+  assert.equal(opens(db).o, 1);
 });
 await t('telemetry: crawler UA = 0, HEAD = 0, prefetch = 0, no UA = 0', async () => {
   resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);

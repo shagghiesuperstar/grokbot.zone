@@ -17,10 +17,19 @@ export function isHuman(req: Request): boolean {
 }
 
 const hex = (b: ArrayBuffer) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, '0')).join('');
+/** An IPv6 client owns a whole /64, so the first four groups stand for it (one machine can rotate within its /64 at will). IPv4 is kept whole. */
+export function clientKey(ip: string): string {
+  if (!ip.includes(':')) return ip;
+  const [head, tail = ''] = ip.toLowerCase().split('::');
+  const a = head ? head.split(':') : [];
+  const b = tail ? tail.split(':') : [];
+  const groups = ip.includes('::') ? [...a, ...Array(Math.max(0, 8 - a.length - b.length)).fill('0'), ...b] : a;
+  return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, '')).join(':');
+}
 /** B1: salt + IP only. The user agent is deliberately NOT part of the hash: one client that rotates its UA is
  *  still one visitor, so it cannot multiply a bot's counts. The raw IP is never stored. */
 export async function visitorHash(salt: string, ip: string): Promise<string> {
-  return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${salt}|${ip}`))).slice(0, 16);
+  return hex(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${salt}|${clientKey(ip)}`))).slice(0, 16);
 }
 
 let saltCache: { db: D1Database; day: string; salt: string } | null = null;

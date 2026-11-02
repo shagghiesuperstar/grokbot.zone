@@ -7,11 +7,10 @@ import RecentRail from '../components/RecentRail.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import { allCategories, meta } from '../lib/data';
 
-const total = meta.totalBots.toLocaleString('en-US');
 ---
 <Base
   title="GrokBot Zone | Find a Grok bot for any job"
-  description={`Search and browse ${total} public Grok bot listings across ${meta.categoryCount} categories. Find the bot for the job, then open it. Listings as of ${meta.asOf}.`}
+  description={`Search and browse thousands of public Grok bot listings across ${meta.categoryCount} categories. Find the bot for the job, then open it. Listings as of ${meta.asOf}.`}
   path="/"
   jsonLd={[
     { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GrokBot Zone', url: 'https://grokbot.zone/',

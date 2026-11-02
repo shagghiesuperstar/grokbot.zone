@@ -75,7 +75,10 @@ check "dark: GET unsubscribe bogus token -> 410" 410 "$(curl -s -o /dev/null -w 
 check "dark: POST unsubscribe bogus token -> 410" 410 "$(curl -s -o /dev/null -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$BOGUS" -d 'List-Unsubscribe=One-Click')"
 check "dark: bogus token reveals no row data" 0 "$(curl -s "$B/subscribe/unsubscribe?t=$BOGUS" | grep -c 'example.test')"
 check "dark: rows untouched by bogus tokens" '[{"n":2}]' "$(sql "SELECT COUNT(*) AS n FROM subscribers WHERE status='active'")"
-check "dark: GET unsubscribe valid token -> 200" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' "$B/subscribe/unsubscribe?t=$D1T")"
+check "dark: GET unsubscribe valid token -> 200 confirm page" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' "$B/subscribe/unsubscribe?t=$D1T")"
+check "dark: confirm page has a POST button" 1 "$(grep -c '<form method="post"' /tmp/gz-unsub-out)"
+check "dark: a GET (link scanner) changed nothing" '[{"n":2}]' "$(sql "SELECT COUNT(*) AS n FROM subscribers WHERE status='active'")"
+check "dark: the button POST -> 200" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$D1T" -d 'List-Unsubscribe=One-Click')"
 check "dark: response never echoes an email address" 0 "$(grep -c '@' /tmp/gz-unsub-out)"
 check "dark: valid token flipped the row" '[{"status":"unsubscribed"}]' "$(sql "SELECT status FROM subscribers WHERE unsub_token='$D1T'")"
 check "dark: POST one-click valid token -> 200" 200 "$(curl -s -o /tmp/gz-unsub-out -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$D2T" -d 'List-Unsubscribe=One-Click')"
@@ -138,7 +141,9 @@ check "row flipped to active" '[{"status":"active"}]' "$(sql 'SELECT status FROM
 check "re-confirm is idempotent 200" 200 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/confirm?t=$CT")"
 check "active -> 409 already_subscribed" 409 "$(status "$(post /subscribe 10.2.0.4 '{"email":"sub@example.test"}')")"
 check "GET unsubscribe bogus -> 410" 410 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/unsubscribe?t=bogus")"
-check "GET unsubscribe -> 200" 200 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/unsubscribe?t=$UT")"
+check "GET unsubscribe -> 200 confirm page" 200 "$(curl -s -o /dev/null -w '%{http_code}' "$B/subscribe/unsubscribe?t=$UT")"
+check "GET left the row active" '[{"status":"active"}]' "$(sql 'SELECT status FROM subscribers')"
+check "button POST -> 200" 200 "$(curl -s -o /dev/null -w '%{http_code}' -X POST "$B/subscribe/unsubscribe?t=$UT" -d 'List-Unsubscribe=One-Click')"
 check "row flipped to unsubscribed" '[{"status":"unsubscribed"}]' "$(sql 'SELECT status FROM subscribers')"
 post /subscribe 10.2.0.5 '{"email":"sub@example.test"}' >/dev/null
 CT=$(sql "SELECT confirm_token AS t FROM subscribers" | python3 -c 'import json,sys; print(json.load(sys.stdin)[0]["t"])')
@@ -150,7 +155,7 @@ check "POST unsubscribe bogus -> 410" 410 "$(curl -s -o /dev/null -w '%{http_cod
 
 echo "--- email intake"
 reset_db
-OK=$(mail submit@grokbot.zone author@example.test "My bot" "Helps with taxes.\nhttps://x.ai/bot/FreshOne1 and https://x.ai/bot/FreshTwo2\nalso https://x.ai/bot/$CODE_SHIPPED" 'Authentication-Results: mx.cloudflare.net; spf=pass; dkim=pass; dmarc=pass\r\n')
+OK=$(mail submit@grokbot.zone author@example.test "My bot" "Helps with taxes.\nhttps://x.ai/bot/FreshOne1 and https://x.ai/bot/FreshTwo2\nalso https://x.ai/bot/$CODE_SHIPPED" 'Authentication-Results: mx.cloudflare.net; spf=pass smtp.mailfrom=author@example.test; dkim=pass; dmarc=pass\r\n')
 check "email: 2 fresh + 1 shipped accepted" 200 "$(email submit@grokbot.zone author@example.test "$OK")"
 sleep 1
 check "email: 2 pending rows source=email, category NULL" '[{"n":2,"src":"email","c":null}]' "$(sql "SELECT COUNT(*) AS n, MIN(source) AS src, MAX(category) AS c FROM submissions")"
@@ -169,12 +174,18 @@ reset_db
 for e in a b c d; do post /subscribe 10.3.0.$RANDOM "{\"email\":\"$e@example.test\"}" >/dev/null; done
 $W d1 execute grokbot-zone --local --command "UPDATE subscribers SET status='active'" >/dev/null 2>&1
 stop
+# C2: no MAIL_POSTAL_ADDRESS -> the digest refuses to send, whatever the switch says.
 start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:3
+curl -s -o /dev/null "$B/cdn-cgi/handler/scheduled?cron=0+13+*+*+MON"; sleep 3
+check "empty MAIL_POSTAL_ADDRESS: zero digest sends" '[{"n":0}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest'")"
+check "empty MAIL_POSTAL_ADDRESS: the refusal is logged" 1 "$(grep -c 'MAIL_POSTAL_ADDRESS is empty' "$LOG")"
+stop
+start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:3 --var "MAIL_POSTAL_ADDRESS:Test Postal Line, Testville"
 curl -s -o /dev/null "$B/cdn-cgi/handler/scheduled?cron=0+13+*+*+MON"; sleep 3
 check "4 active, cap 3: exactly 3 digest sends" '[{"n":3}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest' AND ok=1")"
 check "digest log line" 1 "$(grep -c 'digest: Monday sent=3' "$LOG")"
 stop
-start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:100
+start --var SUBSCRIBE_ENABLED:1 --var DIGEST_ENABLED:1 --var DIGEST_MAX_SENDS:100 --var "MAIL_POSTAL_ADDRESS:Test Postal Line, Testville"
 $W d1 execute grokbot-zone --local --command "DELETE FROM send_log" >/dev/null 2>&1
 curl -s -o /dev/null "$B/cdn-cgi/handler/scheduled?cron=0+13+*+*+THU"; sleep 3
 check "4 active, cap 100: 4 sends" '[{"n":4}]' "$(sql "SELECT COUNT(*) AS n FROM send_log WHERE kind='digest' AND ok=1")"

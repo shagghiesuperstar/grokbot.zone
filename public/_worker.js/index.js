@@ -7562,8 +7562,16 @@ function isHuman(req) {
   return true;
 }
 var hex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+function clientKey(ip) {
+  if (!ip.includes(":")) return ip;
+  const [head, tail = ""] = ip.toLowerCase().split("::");
+  const a = head ? head.split(":") : [];
+  const b = tail ? tail.split(":") : [];
+  const groups = ip.includes("::") ? [...a, ...Array(Math.max(0, 8 - a.length - b.length)).fill("0"), ...b] : a;
+  return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, "")).join(":");
+}
 async function visitorHash(salt, ip) {
-  return hex(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${salt}|${ip}`))).slice(0, 16);
+  return hex(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${salt}|${clientKey(ip)}`))).slice(0, 16);
 }
 var saltCache = null;
 async function dailySalt(db, day) {

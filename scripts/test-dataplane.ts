@@ -11,9 +11,10 @@ import { build } from 'esbuild';
 import { Upstream, applyVerdict, runChecks, type BotRow } from '../src/worker/dp/liveness';
 import { denylist, ingest, parseHead, scrub } from '../src/worker/dp/ingest';
 import { parseCdx, parseListing } from '../src/worker/dp/discovery';
+import { LIST_ADD_CAP, extractCodes, parseSources, pullLists, queueCodes } from '../src/worker/dp/lists';
 import { build as buildTrending, order, prior, SEED_RANK, type Scored } from '../src/worker/dp/trending';
 import { runDataPlane } from '../src/worker/dp/cron';
-import { recentList, trendingList } from '../src/worker/dp/serve';
+import { healthBody, recentList, trendingList } from '../src/worker/dp/serve';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
@@ -744,12 +745,104 @@ await t('switches: wrangler.toml ships FORM/EMAIL at "1", SUBSCRIBE/DIGEST at "0
   for (const [k, v] of [['FORM_SUBMIT_ENABLED', '1'], ['EMAIL_SUBMIT_ENABLED', '1'], ['SUBSCRIBE_ENABLED', '0'], ['DIGEST_ENABLED', '0'], ['OWNER_ADDRESS', '']]) assert.match(toml, new RegExp(`^${k}\\s*=\\s*"${v}"`, 'm'));
   assert.match(toml, /crons = \["0 13 \* \* MON,THU", "\*\/10 \* \* \* \*"\]/); assert.match(toml, /^TELEMETRY_START\s*=\s*"\d{4}-\d{2}-\d{2}"/m);
 });
+
+// ================= build 11: nightly list pull (LIST_SOURCES) =================
+const LC = (n: number) => `Lst${String(n).padStart(18, '0')}`; // 21 chars
+const lnk = (code: string) => `https://x.ai/bot/${code}`;
+const SRC_A = 'https://example.test/a.json', SRC_B = 'https://example.test/b.txt';
+const listRun = async (db: FakeD1, env: Record<string, unknown>, handler: (url: string) => { status: number; body?: string; headers?: Record<string, string> }) => {
+  const c = clock(); const p = platform((url) => (url.startsWith('https://example.test/') ? handler(url) : { status: 200, body: '' }), c);
+  const rep = await runDataPlane({ DB: db as never, TELEMETRY_START: '2026-11-01', ...env }, c.t, { fetch: p.f, clock: c });
+  return { rep, calls: p.calls.filter((x) => x.url.startsWith('https://example.test/')), c };
+};
+await t('lists: unset, empty or blank LIST_SOURCES = zero fetches and no meta row', async () => {
+  for (const v of [undefined, '', '  \n ']) {
+    const db = new FakeD1(); const { calls, rep } = await listRun(db, v === undefined ? {} : { LIST_SOURCES: v }, () => ({ status: 200, body: lnk(LC(1)) }));
+    assert.equal(calls.length, 0); assert.equal(rep.listed, undefined); assert.equal(db.one("SELECT COUNT(*) AS n FROM meta WHERE k='lists_stat'").n, 0);
+  }
+  let hit = 0; const r = await pullLists(undefined, (async () => { hit++; return new Response(''); }) as typeof fetch);
+  assert.equal(hit, 0); assert.equal(r.sources, 0);
+  assert.deepEqual(parseSources('http://example.test/x\nnot a url\n https://example.test/y \nhttps://example.test/y'), ['https://example.test/y']);
+});
+await t('lists: codes come out of a JSON body and a plain-text body, one GET per source, listing/pending rows', async () => {
+  const db = new FakeD1();
+  const json = JSON.stringify({ items: [{ name: 'x', link: lnk(LC(1)) }, { link: `${lnk(LC(2))}?ref=1` }, { link: lnk('short') }, { link: `${lnk(LC(3))}X` }] });
+  const { rep, calls } = await listRun(db, { LIST_SOURCES: `${SRC_A}\n${SRC_B}` }, (u) => ({ status: 200, body: u === SRC_A ? json : `see ${lnk(LC(4))}, and\nx.ai/bot/${LC(5)}\n` }));
+  assert.deepEqual(calls.map((x) => x.url), [SRC_A, SRC_B]); assert.ok(calls.every((x) => x.method === 'GET'));
+  assert.equal(rep.listed, 4);
+  const rows = db.rows("SELECT code, source, status, first_seen FROM bots ORDER BY code");
+  assert.deepEqual(rows.map((r) => r.code), [LC(1), LC(2), LC(4), LC(5)]);
+  for (const r of rows) { assert.equal(r.source, 'listing'); assert.equal(r.status, 'pending'); assert.equal(r.first_seen, new Date(T0).toISOString()); }
+  assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE source='submission'").n, 0);
+});
+await t('lists: case-insensitive dedupe in the run; codes already in bots are not re-added or rewritten', async () => {
+  const db = new FakeD1(); insertBot(db, LC(7), { source: 'seed', status: 'live', name: 'Kept' });
+  const body = [lnk(LC(6)), lnk(LC(6).toUpperCase()), lnk(LC(6).toLowerCase()), lnk(LC(7).toUpperCase()), lnk(LC(7))].join('\n');
+  const { rep } = await listRun(db, { LIST_SOURCES: `${SRC_A}\n${SRC_B}` }, () => ({ status: 200, body }));
+  assert.equal(rep.listed, 1);
+  assert.equal(db.one('SELECT COUNT(*) AS n FROM bots').n, 2);
+  const kept = db.one('SELECT * FROM bots WHERE code_lc=?', LC(7).toLowerCase()); assert.equal(kept.source, 'seed'); assert.equal(kept.name, 'Kept'); assert.equal(kept.status, 'live');
+  assert.equal(db.one('SELECT code FROM bots WHERE code_lc=?', LC(6).toLowerCase()).code, LC(6));
+  assert.deepEqual([...extractCodes(`${lnk('A'.repeat(21))} ${lnk('a'.repeat(21))}`).values()], ['A'.repeat(21)]);
+});
+await t('lists: at most 1,000 rows are added in one run; the rest arrive the next run', async () => {
+  const db = new FakeD1(); const body = Array.from({ length: 1300 }, (_, i) => lnk(LC(i))).join('\n');
+  const first = await listRun(db, { LIST_SOURCES: SRC_A }, () => ({ status: 200, body }));
+  assert.equal(first.rep.listed, LIST_ADD_CAP); assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE source='listing'").n, 1000);
+  db.db.exec("DELETE FROM meta WHERE k='discovery_last_run'"); // next night
+  const second = await listRun(db, { LIST_SOURCES: SRC_A }, () => ({ status: 200, body }));
+  assert.equal(second.rep.listed, 300); assert.equal(db.one("SELECT COUNT(*) AS n FROM bots WHERE source='listing'").n, 1300);
+  // several chunks, cap inside the second chunk, known codes ahead of the new ones
+  const db2 = new FakeD1(); for (let i = 0; i < 100; i++) insertBot(db2, LC(i));
+  const added = await queueCodes(db2 as never, Array.from({ length: 4500 }, (_, i) => LC(i)), T0, 3000);
+  assert.equal(added, 3000); assert.equal(db2.one("SELECT COUNT(*) AS n FROM bots WHERE source='listing'").n, 3000);
+});
+await t('lists: non-200, timeout and oversize are logged and skipped; the other sources and phases still run', async () => {
+  const errs: string[] = []; const orig = console.error; console.error = (...a: unknown[]) => { errs.push(a.join(' ')); };
+  try {
+    const db = new FakeD1(); insertBot(db, LC(50)); // a live row the checks phase must still reach
+    const S = ['https://example.test/404', 'https://example.test/big', 'https://example.test/boom', 'https://example.test/ok'];
+    const { rep } = await listRun(db, { LIST_SOURCES: S.join('\n'), NOREF_TOKENS: FAKE }, (u) => {
+      if (u.endsWith('/404')) return { status: 404, body: lnk(LC(60)) };
+      if (u.endsWith('/big')) return { status: 200, body: lnk(LC(61)), headers: { 'content-length': String(25 * 1024 * 1024) } };
+      if (u.endsWith('/boom')) throw new DOMException('timed out', 'TimeoutError');
+      return { status: 200, body: lnk(LC(62)) };
+    });
+    assert.deepEqual(db.rows("SELECT code FROM bots WHERE source='listing'").map((r) => r.code), [LC(62)]);
+    const st = JSON.parse(db.one("SELECT v FROM meta WHERE k='lists_stat'").v);
+    assert.deepEqual([st.sources, st.fetched_ok, st.added], [4, 1, 1]);
+    assert.ok(db.one('SELECT last_checked FROM bots WHERE code_lc=?', LC(50).toLowerCase()).last_checked, 'checks phase still ran');
+    assert.ok(db.one("SELECT v FROM meta WHERE k='discovery_last_run'"), 'discovery phase still ran'); assert.equal(rep.skipped, undefined);
+    const log = errs.join('\n');
+    assert.match(log, /status 404/); assert.match(log, /size cap/); assert.match(log, /timeout/); assert.ok(!log.includes('example.test'), 'no URL in logs');
+    // health: counts only, never a URL
+    const h = await healthBody(db as never, T0, new Date(T0).toISOString(), true, {});
+    assert.deepEqual(h.discovery.lists, { last_run: st.last_run, sources: 4, fetched_ok: 1, added: 1 });
+    assert.ok(!JSON.stringify(h).includes('example.test'));
+    assert.deepEqual((await healthBody(new FakeD1() as never, T0, new Date(T0).toISOString(), true, {})).discovery.lists, { last_run: null, sources: 0, fetched_ok: 0, added: 0 });
+  } finally { console.error = orig; }
+});
+await t('lists: a hanging source hits the timeout, a chunked body over the cap is dropped mid-read', async () => {
+  const orig = console.error; console.error = () => {};
+  try {
+    const hang = (async (_u: string, init?: RequestInit) => new Promise<Response>((_, rej) => init?.signal?.addEventListener('abort', () => rej(init.signal!.reason)))) as typeof fetch;
+    const keep = setInterval(() => {}, 10); // AbortSignal.timeout is unref'd under Node: keep the loop alive while the hang waits
+    const a = await pullLists('https://example.test/slow', hang, { timeoutMs: 40 });
+    clearInterval(keep);
+    assert.deepEqual([a.sources, a.fetchedOk, a.codes.length], [1, 0, 0]);
+    const big = (async () => new Response(lnk(LC(1)).repeat(200))) as typeof fetch; // no Content-Length on a string body? read path is checked either way
+    const b = await pullLists('https://example.test/big', big, { maxBytes: 1000 });
+    assert.deepEqual([b.fetchedOk, b.codes.length], [0, 0]);
+    const ok = await pullLists('https://example.test/big', big, { maxBytes: 100_000 });
+    assert.deepEqual([ok.fetchedOk, ok.codes.length], [1, 1]);
+  } finally { console.error = orig; }
+});
 await t('noref: this test file and the worker sources carry no denylist from the audit script', () => {
   const audit = readFileSync(join(process.env.HOME!, '.hermes/scripts/gz-noref-audit.sh'), 'utf8');
   const m = /TOKENS=\(([\s\S]*?)\)/.exec(audit);
   const toks = [...(m?.[1] ?? '').matchAll(/["']([^"']+)["']/g)].map((x) => x[1].toLowerCase()).filter((x) => x.length > 3);
   if (!toks.length) return; // audit script not present on this machine
-  const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'trending', 'telemetry', 'serve', 'classify', 'util', 'page', 'merge'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
+  const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'lists', 'trending', 'telemetry', 'serve', 'classify', 'util', 'page', 'merge', 'lists'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
   for (const f of files) { const src = readFileSync(f, 'utf8').toLowerCase(); for (const tk of toks) assert.ok(!src.includes(tk), `${f} contains a denylist token`); }
 });
 

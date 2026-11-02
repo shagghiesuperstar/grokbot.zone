@@ -52,7 +52,7 @@ export async function healthBody(db: D1Database | undefined, nowMs: number, nowI
   try {
     d1 = !!db && !!(await db.prepare('SELECT 1 AS ok').first());
     if (db) {
-      Object.assign(m, await readMeta(db, ['last_run', 'checks_hourly', 'stats', 'throttled_until', 'discovery_last_run', 'discovery_new', 'trending_at', 'last_error', 'rejected_unresolved']));
+      Object.assign(m, await readMeta(db, ['last_run', 'checks_hourly', 'stats', 'throttled_until', 'discovery_last_run', 'discovery_new', 'trending_at', 'last_error', 'rejected_unresolved', 'lists_stat']));
       const day = nowIso.slice(0, 10);
       const e = await db.prepare('SELECT COALESCE(SUM(views + opens), 0) AS n FROM bot_daily WHERE day = ?').bind(day).first<{ n: number }>();
       events = e?.n ?? 0;
@@ -64,12 +64,14 @@ export async function healthBody(db: D1Database | undefined, nowMs: number, nowI
   const checked = Object.entries(ch).filter(([k]) => k >= cut).reduce((n, [, v]) => n + v, 0);
   const st = parse<Record<string, number>>(m.stats, {});
   const dn = parse<Record<string, number>>(m.discovery_new, {});
+  const ls = parse<Partial<{ last_run: string | null; sources: number; fetched_ok: number; added: number }>>(m.lists_stat, {});
   const wk = new Date(nowMs - 7 * 86400_000).toISOString().slice(0, 10);
   const held = m.throttled_until && Date.parse(m.throttled_until) > nowMs ? m.throttled_until : null;
   return {
     ok: d1, d1,
     liveness: { last_run: m.last_run ?? null, checked_24h: checked, live: st.live ?? 0, dead: st.dead ?? 0, pending: st.pending ?? 0, throttled_until: held },
-    discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0) },
+    discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0),
+      lists: { last_run: ls.last_run ?? null, sources: ls.sources ?? 0, fetched_ok: ls.fetched_ok ?? 0, added: ls.added ?? 0 } },
     submissions: { rejected_unresolved: Number(m.rejected_unresolved ?? 0) },
     telemetry: { events_today: events },
     trending: { generatedAt: m.trending_at ?? null },

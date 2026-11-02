@@ -4,23 +4,24 @@ import classifierJson from '../../data/classifier.json';
 import type { Classifier } from './classify';
 import { discover } from './discovery';
 import { denylist } from './ingest';
+import { pullLists, queueCodes, type ListsStat } from './lists';
 import { MAX_PENDING_PER_RUN, MAX_SUBMISSION_REQUESTS, MAX_UPSTREAM, THROTTLE_HOLD_MS, Upstream, runChecks, type BotRow, type Patch } from './liveness';
 import { buildRecentPhase, buildTrendingPhase } from './trending';
 import { HOUR, addDays, dayOf, iso, metaPut, readMeta, realClock, type Clock } from './util';
 
-export interface CronEnv { DB?: D1Database; NOREF_TOKENS?: string; TELEMETRY_START?: string }
+export interface CronEnv { DB?: D1Database; NOREF_TOKENS?: string; TELEMETRY_START?: string; LIST_SOURCES?: string }
 export interface CronDeps { fetch: typeof fetch; clock: Clock }
 
 const MODEL = classifierJson as unknown as Classifier;
-const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', 'discovery_last_run', 'discovery_new', 'archive_resume', 'archive_from', 'last_run', 'rejected_unresolved'];
-export const PHASES = ['discovery', 'checks', 'submissions', 'trending', 'recent', 'purge'] as const;
+const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', 'discovery_last_run', 'discovery_new', 'archive_resume', 'archive_from', 'last_run', 'rejected_unresolved', 'lists_stat'];
+export const PHASES = ['discovery', 'lists', 'checks', 'submissions', 'trending', 'recent', 'purge'] as const;
 export type Phase = (typeof PHASES)[number];
 export const TRENDING_EVERY_MS = 55 * 60_000;
 
 const COLS = 'code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail';
 const updateSql = 'UPDATE bots SET code=?, name=?, author=?, description=?, category=?, cats=?, status=?, last_checked=?, last_live=?, fail_count=?, first_fail=? WHERE code_lc=?';
 
-export interface Report { upstream: number; checked: number; discovered: number; throttled: boolean; hourly: boolean; queries: number; skipped?: string }
+export interface Report { upstream: number; checked: number; discovered: number; throttled: boolean; hourly: boolean; queries: number; listed?: number; skipped?: string }
 
 /** Wraps D1 so a run can report how many queries it issued (a batch counts as one). */
 export function counted(db: D1Database): { db: D1Database; count: () => number } {
@@ -95,6 +96,18 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
       dn[dayOf(now)] = (dn[dayOf(now)] ?? 0) + report.discovered;
       for (const k of Object.keys(dn)) if (k < addDays(dayOf(now), -8)) delete dn[k];
       setMeta('discovery_new', JSON.stringify(dn));
+    });
+
+    // ---- lists: the LIST_SOURCES pull rides on the same nightly run; unset or empty means no fetch at all ----
+    if (doDiscovery && env.LIST_SOURCES?.trim()) await phase('lists', async () => {
+      const pull = await pullLists(env.LIST_SOURCES, deps.fetch);
+      let added = 0;
+      try { added = await queueCodes(db, pull.codes, now); } finally {
+        const stat: ListsStat = { last_run: iso(now), sources: pull.sources, fetched_ok: pull.fetchedOk, added };
+        setMeta('lists_stat', JSON.stringify(stat));
+      }
+      report.listed = added;
+      stats.pending += added;
     });
 
     // ---- liveness: submissions and pending first, then live and dead by oldest check ----

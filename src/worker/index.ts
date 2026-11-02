@@ -39,6 +39,8 @@ interface Env {
   MIN_FILL_MS?: string;
   DIGEST_MAX_SENDS?: string;
   NOREF_TOKENS?: string;
+  /** Newline-separated https URLs of lists to pull nightly. Worker secret; unset or empty = the phase does nothing. */
+  LIST_SOURCES?: string;
   TELEMETRY_START?: string;
 }
 type Kind = 'ack' | 'owner_summary' | 'confirm' | 'digest' | 'unsubscribe';

@@ -5281,182 +5281,182 @@ var categories_default = [
   {
     slug: "business-operations",
     label: "Business & Operations",
-    count: 355,
+    count: 358,
     purpose: "Run the back office: invoices, reports, vendors, process and team admin.",
     updated: "2026-10-28"
   },
   {
     slug: "calendar-meetings-scheduling",
     label: "Calendar, Meetings & Scheduling",
-    count: 117,
+    count: 120,
     purpose: "Book, move and prepare for meetings without the back-and-forth.",
     updated: "2026-10-28"
   },
   {
     slug: "coding-software",
     label: "Coding & Software",
-    count: 547,
+    count: 574,
     purpose: "Write, review, debug and ship code with a bot at your side.",
     updated: "2026-10-28"
   },
   {
     slug: "email-inbox",
     label: "Email & Inbox",
-    count: 285,
+    count: 300,
     purpose: "Triage, draft and tame your inbox.",
     updated: "2026-10-28"
   },
   {
     slug: "everything-else",
     label: "Everything Else",
-    count: 62,
+    count: 65,
     purpose: "Bots that do not fit a box, from niche tools to one-off ideas.",
     updated: "2026-10-28"
   },
   {
     slug: "family-kids-learning",
     label: "Family, Kids & Learning",
-    count: 316,
+    count: 331,
     purpose: "Homework help, learning plans, and family organising.",
     updated: "2026-10-28"
   },
   {
     slug: "food-recipes-dining",
     label: "Food, Recipes & Dining",
-    count: 158,
+    count: 175,
     purpose: "Plan meals, cook from what you have, and pick where to eat.",
     updated: "2026-10-28"
   },
   {
     slug: "fun-games-hobbies",
     label: "Fun, Games & Hobbies",
-    count: 136,
+    count: 146,
     purpose: "Games, hobbies and play.",
     updated: "2026-10-28"
   },
   {
     slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
     label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-    count: 453,
+    count: 503,
     purpose: "Bots that build, tune or manage other Grok bots.",
     updated: "2026-10-28"
   },
   {
     slug: "health-fitness-wellness",
     label: "Health, Fitness & Wellness",
-    count: 182,
+    count: 190,
     purpose: "Training plans, nutrition, sleep and everyday wellness questions.",
     updated: "2026-10-28"
   },
   {
     slug: "home-garden-pets",
     label: "Home, Garden & Pets",
-    count: 273,
+    count: 278,
     purpose: "Home projects, gardens and pet care.",
     updated: "2026-10-28"
   },
   {
     slug: "jobs-careers",
     label: "Jobs & Careers",
-    count: 219,
+    count: 239,
     purpose: "Resumes, job search, interviews and career moves.",
     updated: "2026-10-28"
   },
   {
     slug: "legal-tax-paperwork",
     label: "Legal, Tax & Paperwork",
-    count: 133,
+    count: 145,
     purpose: "Understand forms, filings and everyday legal and tax paperwork.",
     updated: "2026-10-28"
   },
   {
     slug: "marketing-seo-ads",
     label: "Marketing, SEO & Ads",
-    count: 236,
+    count: 246,
     purpose: "Campaigns, search visibility, ad copy and content plans.",
     updated: "2026-10-28"
   },
   {
     slug: "money-personal-finance",
     label: "Money & Personal Finance",
-    count: 323,
+    count: 340,
     purpose: "Budgets, bills, savings and everyday money decisions.",
     updated: "2026-10-28"
   },
   {
     slug: "privacy-security-scam-protection",
     label: "Privacy, Security & Scam Protection",
-    count: 206,
+    count: 233,
     purpose: "Stop spam calls, spot scams, and lock down your data.",
     updated: "2026-10-28"
   },
   {
     slug: "productivity-personal-assistant",
     label: "Productivity & Personal Assistant",
-    count: 547,
+    count: 550,
     purpose: "Tasks, notes, reminders and a personal assistant for the day.",
     updated: "2026-10-28"
   },
   {
     slug: "real-estate",
     label: "Real Estate",
-    count: 47,
+    count: 61,
     purpose: "Search, compare and manage property, as a buyer, seller or landlord.",
     updated: "2026-10-28"
   },
   {
     slug: "research-news-briefings",
     label: "Research, News & Briefings",
-    count: 725,
+    count: 731,
     purpose: "Research a topic, follow the news, and get a short briefing.",
     updated: "2026-10-28"
   },
   {
     slug: "sales-lead-generation",
     label: "Sales & Lead Generation",
-    count: 250,
+    count: 253,
     purpose: "Find leads, write outreach and keep a pipeline moving.",
     updated: "2026-10-28"
   },
   {
     slug: "shopping-deals",
     label: "Shopping & Deals",
-    count: 240,
+    count: 253,
     purpose: "Compare prices, find deals, and decide what to buy.",
     updated: "2026-10-28"
   },
   {
     slug: "trading-crypto-investing",
     label: "Trading, Crypto & Investing",
-    count: 340,
+    count: 353,
     purpose: "Markets, crypto and investing research and tracking.",
     updated: "2026-10-28"
   },
   {
     slug: "travel",
     label: "Travel",
-    count: 112,
+    count: 123,
     purpose: "Plan trips, find routes, and handle the details of getting there.",
     updated: "2026-10-28"
   },
   {
     slug: "video-images-audio-design",
     label: "Video, Images, Audio & Design",
-    count: 496,
+    count: 543,
     purpose: "Make and edit video, images, audio and design work.",
     updated: "2026-10-28"
   },
   {
     slug: "writing-publishing",
     label: "Writing & Publishing",
-    count: 315,
+    count: 321,
     purpose: "Draft, edit and publish writing of every length.",
     updated: "2026-10-28"
   },
   {
     slug: "x-twitter-social-media",
     label: "X (Twitter) & Social Media",
-    count: 258,
+    count: 286,
     purpose: "Post, grow and manage your presence on X and other social platforms.",
     updated: "2026-10-28"
   }
@@ -5880,6 +5880,95 @@ async function discover(up, st, nowMs) {
     }
   }
   return { found, state };
+}
+
+// src/worker/dp/lists.ts
+var LIST_TIMEOUT_MS = 3e4;
+var LIST_MAX_BYTES = 20 * 1024 * 1024;
+var LIST_ADD_CAP = 1e3;
+var LIST_CHUNK = 2e3;
+var CODE_IN_TEXT = /x\.ai\/bot\/([A-Za-z0-9_-]{21})(?![A-Za-z0-9_-])/g;
+function parseSources(raw) {
+  const out = [];
+  for (const line2 of (raw ?? "").split("\n")) {
+    const u = line2.trim();
+    if (/^https:\/\/\S+$/i.test(u) && !out.includes(u)) out.push(u);
+  }
+  return out;
+}
+function extractCodes2(text, into = /* @__PURE__ */ new Map()) {
+  for (const m of text.matchAll(CODE_IN_TEXT)) if (!into.has(m[1].toLowerCase())) into.set(m[1].toLowerCase(), m[1]);
+  return into;
+}
+async function readCapped(res, maxBytes) {
+  const len = Number(res.headers.get("content-length"));
+  if (Number.isFinite(len) && len > maxBytes) {
+    await res.body?.cancel().catch(() => {
+    });
+    return null;
+  }
+  if (!res.body) return "";
+  const reader = res.body.getReader();
+  const parts = [];
+  let total = 0;
+  for (; ; ) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      await reader.cancel().catch(() => {
+      });
+      return null;
+    }
+    parts.push(value);
+  }
+  const all = new Uint8Array(total);
+  let at = 0;
+  for (const p of parts) {
+    all.set(p, at);
+    at += p.byteLength;
+  }
+  return new TextDecoder().decode(all);
+}
+async function pullLists(raw, f, opts = {}) {
+  const urls = parseSources(raw);
+  const found = /* @__PURE__ */ new Map();
+  let fetchedOk = 0;
+  for (const [i, url] of urls.entries()) {
+    try {
+      const res = await f(url, { method: "GET", headers: { "User-Agent": UA }, signal: AbortSignal.timeout(opts.timeoutMs ?? LIST_TIMEOUT_MS) });
+      if (res.status !== 200) {
+        await res.body?.cancel().catch(() => {
+        });
+        console.error(`lists: source ${i + 1} skipped, status ${res.status}`);
+        continue;
+      }
+      const text = await readCapped(res, opts.maxBytes ?? LIST_MAX_BYTES);
+      if (text === null) {
+        console.error(`lists: source ${i + 1} skipped, body over the size cap`);
+        continue;
+      }
+      extractCodes2(text, found);
+      fetchedOk++;
+    } catch (e) {
+      const timedOut = e instanceof Error && (e.name === "TimeoutError" || e.name === "AbortError");
+      console.error(`lists: source ${i + 1} skipped, ${timedOut ? "timeout" : "fetch failed"}`);
+    }
+  }
+  return { codes: [...found.values()], sources: urls.length, fetchedOk };
+}
+async function queueCodes(db, codes, nowMs, cap = LIST_ADD_CAP) {
+  let added = 0;
+  for (let i = 0; i < codes.length && added < cap; i += LIST_CHUNK) {
+    const chunk = codes.slice(i, i + LIST_CHUNK).map((c) => ({ c }));
+    const r = await db.prepare(
+      `INSERT OR IGNORE INTO bots(code_lc, code, source, status, first_seen)
+       SELECT lower(json_extract(value, '$.c')), json_extract(value, '$.c'), 'listing', 'pending', ? FROM json_each(?)
+       WHERE lower(json_extract(value, '$.c')) NOT IN (SELECT code_lc FROM bots) LIMIT ?`
+    ).bind(iso(nowMs), JSON.stringify(chunk), cap - added).run();
+    added += Number(r.meta?.changes ?? 0);
+  }
+  return added;
 }
 
 // src/worker/dp/liveness.ts
@@ -6891,157 +6980,157 @@ var recent_default = {
     {
       slug: "research-news-briefings",
       label: "Research, News & Briefings",
-      count: 725,
+      count: 731,
       asOf: "2026-10-28"
     },
     {
       slug: "coding-software",
       label: "Coding & Software",
-      count: 547,
+      count: 574,
       asOf: "2026-10-28"
     },
     {
       slug: "productivity-personal-assistant",
       label: "Productivity & Personal Assistant",
-      count: 547,
+      count: 550,
       asOf: "2026-10-28"
     },
     {
       slug: "video-images-audio-design",
       label: "Video, Images, Audio & Design",
-      count: 496,
+      count: 543,
       asOf: "2026-10-28"
     },
     {
       slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
       label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-      count: 453,
+      count: 503,
       asOf: "2026-10-28"
     },
     {
       slug: "business-operations",
       label: "Business & Operations",
-      count: 355,
+      count: 358,
       asOf: "2026-10-28"
     },
     {
       slug: "trading-crypto-investing",
       label: "Trading, Crypto & Investing",
-      count: 340,
+      count: 353,
       asOf: "2026-10-28"
     },
     {
       slug: "money-personal-finance",
       label: "Money & Personal Finance",
-      count: 323,
+      count: 340,
       asOf: "2026-10-28"
     },
     {
       slug: "family-kids-learning",
       label: "Family, Kids & Learning",
-      count: 316,
+      count: 331,
       asOf: "2026-10-28"
     },
     {
       slug: "writing-publishing",
       label: "Writing & Publishing",
-      count: 315,
+      count: 321,
       asOf: "2026-10-28"
     },
     {
       slug: "email-inbox",
       label: "Email & Inbox",
-      count: 285,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "home-garden-pets",
-      label: "Home, Garden & Pets",
-      count: 273,
+      count: 300,
       asOf: "2026-10-28"
     },
     {
       slug: "x-twitter-social-media",
       label: "X (Twitter) & Social Media",
-      count: 258,
+      count: 286,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "home-garden-pets",
+      label: "Home, Garden & Pets",
+      count: 278,
       asOf: "2026-10-28"
     },
     {
       slug: "sales-lead-generation",
       label: "Sales & Lead Generation",
-      count: 250,
+      count: 253,
       asOf: "2026-10-28"
     },
     {
       slug: "shopping-deals",
       label: "Shopping & Deals",
-      count: 240,
+      count: 253,
       asOf: "2026-10-28"
     },
     {
       slug: "marketing-seo-ads",
       label: "Marketing, SEO & Ads",
-      count: 236,
+      count: 246,
       asOf: "2026-10-28"
     },
     {
       slug: "jobs-careers",
       label: "Jobs & Careers",
-      count: 219,
+      count: 239,
       asOf: "2026-10-28"
     },
     {
       slug: "privacy-security-scam-protection",
       label: "Privacy, Security & Scam Protection",
-      count: 206,
+      count: 233,
       asOf: "2026-10-28"
     },
     {
       slug: "health-fitness-wellness",
       label: "Health, Fitness & Wellness",
-      count: 182,
+      count: 190,
       asOf: "2026-10-28"
     },
     {
       slug: "food-recipes-dining",
       label: "Food, Recipes & Dining",
-      count: 158,
+      count: 175,
       asOf: "2026-10-28"
     },
     {
       slug: "fun-games-hobbies",
       label: "Fun, Games & Hobbies",
-      count: 136,
+      count: 146,
       asOf: "2026-10-28"
     },
     {
       slug: "legal-tax-paperwork",
       label: "Legal, Tax & Paperwork",
-      count: 133,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "calendar-meetings-scheduling",
-      label: "Calendar, Meetings & Scheduling",
-      count: 117,
+      count: 145,
       asOf: "2026-10-28"
     },
     {
       slug: "travel",
       label: "Travel",
-      count: 112,
+      count: 123,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "calendar-meetings-scheduling",
+      label: "Calendar, Meetings & Scheduling",
+      count: 120,
       asOf: "2026-10-28"
     },
     {
       slug: "everything-else",
       label: "Everything Else",
-      count: 62,
+      count: 65,
       asOf: "2026-10-28"
     },
     {
       slug: "real-estate",
       label: "Real Estate",
-      count: 47,
+      count: 61,
       asOf: "2026-10-28"
     }
   ]
@@ -7190,7 +7279,7 @@ async function buildRecentPhase(db, nowMs) {
 
 // src/worker/dp/cron.ts
 var MODEL = classifier_default;
-var META_KEYS = ["throttled_until", "trending_at", "checks_hourly", "stats", "discovery_last_run", "discovery_new", "archive_resume", "archive_from", "last_run", "rejected_unresolved"];
+var META_KEYS = ["throttled_until", "trending_at", "checks_hourly", "stats", "discovery_last_run", "discovery_new", "archive_resume", "archive_from", "last_run", "rejected_unresolved", "lists_stat"];
 var TRENDING_EVERY_MS = 55 * 6e4;
 var COLS = "code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail";
 var updateSql = "UPDATE bots SET code=?, name=?, author=?, description=?, category=?, cats=?, status=?, last_checked=?, last_live=?, fail_count=?, first_fail=? WHERE code_lc=?";
@@ -7273,6 +7362,18 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
       dn[dayOf(now)] = (dn[dayOf(now)] ?? 0) + report.discovered;
       for (const k of Object.keys(dn)) if (k < addDays(dayOf(now), -8)) delete dn[k];
       setMeta("discovery_new", JSON.stringify(dn));
+    });
+    if (doDiscovery && env.LIST_SOURCES?.trim()) await phase("lists", async () => {
+      const pull = await pullLists(env.LIST_SOURCES, deps.fetch);
+      let added = 0;
+      try {
+        added = await queueCodes(db, pull.codes, now);
+      } finally {
+        const stat = { last_run: iso(now), sources: pull.sources, fetched_ok: pull.fetchedOk, added };
+        setMeta("lists_stat", JSON.stringify(stat));
+      }
+      report.listed = added;
+      stats.pending += added;
     });
     const room = up.left;
     if (room > 0) await phase("checks", async () => {
@@ -7418,7 +7519,7 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
   try {
     d1 = !!db && !!await db.prepare("SELECT 1 AS ok").first();
     if (db) {
-      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at", "last_error", "rejected_unresolved"]));
+      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at", "last_error", "rejected_unresolved", "lists_stat"]));
       const day = nowIso.slice(0, 10);
       const e = await db.prepare("SELECT COALESCE(SUM(views + opens), 0) AS n FROM bot_daily WHERE day = ?").bind(day).first();
       events = e?.n ?? 0;
@@ -7437,13 +7538,18 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
   const checked = Object.entries(ch).filter(([k]) => k >= cut).reduce((n, [, v]) => n + v, 0);
   const st = parse(m.stats, {});
   const dn = parse(m.discovery_new, {});
+  const ls = parse(m.lists_stat, {});
   const wk = new Date(nowMs - 7 * 864e5).toISOString().slice(0, 10);
   const held = m.throttled_until && Date.parse(m.throttled_until) > nowMs ? m.throttled_until : null;
   return {
     ok: d1,
     d1,
     liveness: { last_run: m.last_run ?? null, checked_24h: checked, live: st.live ?? 0, dead: st.dead ?? 0, pending: st.pending ?? 0, throttled_until: held },
-    discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0) },
+    discovery: {
+      last_run: m.discovery_last_run ?? null,
+      new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0),
+      lists: { last_run: ls.last_run ?? null, sources: ls.sources ?? 0, fetched_ok: ls.fetched_ok ?? 0, added: ls.added ?? 0 }
+    },
     submissions: { rejected_unresolved: Number(m.rejected_unresolved ?? 0) },
     telemetry: { events_today: events },
     trending: { generatedAt: m.trending_at ?? null },

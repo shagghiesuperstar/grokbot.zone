@@ -62,4 +62,10 @@ Cloudflare Workers with static assets, custom domains `grokbot.zone` and `www.gr
 pnpm build && pnpm deploy
 ```
 
-`.github/workflows/deploy.yml` builds and deploys on every push to `main`. It needs two repository secrets: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. The token must be a scoped Cloudflare API token with **Workers Scripts: Edit** and **DNS: Edit** for the `grokbot.zone` zone. No credential is stored in this repository.
+`.github/workflows/deploy.yml` builds and checks on every push to `main` but deploys **only when started by hand** (`workflow_dispatch` from `main`); a push never deploys. The manual deploy needs two repository secrets: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. The token must be a scoped Cloudflare API token with **Workers Scripts: Edit** and **DNS: Edit** for the `grokbot.zone` zone. No credential is stored in this repository.
+
+## Update emails (dark) and acknowledgments
+
+- `SUBSCRIBE_ENABLED` and `DIGEST_ENABLED` stay `"0"` until the owner approves the sample emails. Unsubscribe: the link in a mail opens a confirm page (a GET changes nothing); the button, or an RFC 8058 one-click `POST` with `List-Unsubscribe=One-Click`, unsubscribes.
+- `MAIL_POSTAL_ADDRESS` is the postal address printed in the footer of the confirm and digest mails. It is **not** in `wrangler.toml` (this repo is public): the operator sets it as a Worker secret, `wrangler secret put MAIL_POSTAL_ADDRESS`. While it is empty the digest refuses to send.
+- Acknowledgment mails: an email submission is acknowledged only when Cloudflare's first `Authentication-Results` shows `spf=pass` for the envelope address and the header `From` is that same single address; otherwise the submission is stored and nothing is sent. All acks (email and form) share one budget of `ACK_DAILY_BUDGET` (default 200) per UTC day.

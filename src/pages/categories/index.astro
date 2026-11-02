@@ -11,11 +11,12 @@ import { allCategories, meta } from '../../lib/data';
 >
   <div class="wrap page-head">
     <h1>Categories.<br />Pick a job.</h1>
-    <p>{allCategories.length} categories, {meta.totalBots.toLocaleString('en-US')} bots. Listings as of <time datetime={meta.asOf}>{meta.asOf}</time>.</p>
+    <p>{allCategories.length} categories. Each page lists its bots with a live count. Listings as of <time datetime={meta.asOf}>{meta.asOf}</time>.</p>
   </div>
   <div class="wrap block">
     <ul class="grid">
       {allCategories.map((c) => <li><CategoryCard category={c} level={2} /></li>)}
     </ul>
+    <p class="muted"><a href="/categories/uncategorized/">Uncategorized bots</a>: live bots that have not been sorted into a category yet.</p>
   </div>
 </Base>

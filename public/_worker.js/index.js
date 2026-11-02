@@ -5514,6 +5514,21 @@ function validateSubmission(body, categorySlugs, minFillMs) {
     }
   };
 }
+function ackAuthorized(authResults, envelopeFrom, headerFromRaw) {
+  const env = envelopeFrom.trim().toLowerCase();
+  if (!env || !authResults) return false;
+  const seg = authResults.trim().split(",")[0];
+  if ((seg.match(/\(/g) ?? []).length !== (seg.match(/\)/g) ?? []).length) return false;
+  const first = seg.replace(/\([^)]*\)/g, " ");
+  if (!/^mx\.cloudflare\.net\b/i.test(first)) return false;
+  const spf = first.split(";").find((c) => /^\s*spf=/i.test(c));
+  if (!spf || !/^\s*spf=pass\b/i.test(spf)) return false;
+  const mailfrom = /\bsmtp\.mailfrom=("?)([^\s";]+)\1/i.exec(spf)?.[2].replace(/^<|>$/g, "").toLowerCase();
+  if (mailfrom !== env) return false;
+  const bare = (headerFromRaw ?? "").replace(/"(?:[^"\\]|\\.)*"/g, " ").replace(/\([^)]*\)/g, " ");
+  const addrs = bare.match(/[^\s<>@,;:"()]+@[^\s<>@,;:"()]+/g) ?? [];
+  return addrs.length === 1 && addrs[0].toLowerCase() === env;
+}
 function makeToken(rand = (a) => crypto.getRandomValues(a)) {
   return [...rand(new Uint8Array(16))].map((x) => x.toString(16).padStart(2, "0")).join("");
 }
@@ -5565,10 +5580,23 @@ function ownerSummary(r) {
     ].join("\n")
   };
 }
-var confirmText = (token) => `Confirm: ${SITE}/subscribe/confirm?t=${token}
-You'll get an update email Monday and Thursday. Nothing happens until you confirm.`;
+var postalLine = (v) => typeof v === "string" ? singleLine(v) : "";
+function confirmMail(token, postal = "") {
+  const url = `${SITE}/subscribe/confirm?t=${token}`;
+  const addr = postalLine(postal);
+  const foot = ["If you did not ask for this, ignore this email and nothing will happen.", addr ? `GrokBot Zone, ${addr}` : ""].filter(Boolean);
+  const text = `Confirm: ${url}
+You'll get an update email Monday and Thursday. Nothing happens until you confirm.
+
+-- 
+${foot.join("\n")}`;
+  const html = `<p>Confirm your subscription to GrokBot Zone updates:</p><p><a href="${url}">Confirm my subscription</a></p><p>You'll get an update email Monday and Thursday. Nothing happens until you confirm.</p><hr><p style="color:#666;font-size:12px">${foot.map(esc).join("<br>")}</p>`;
+  return { subject: "Confirm your GrokBot Zone update emails", text, html };
+}
 var firstSentence = (s) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200);
-function digestMail(p, weekday, unsubToken) {
+function digestMail(p, weekday, unsubToken, postal) {
+  const addr = postalLine(postal);
+  if (!addr) throw new Error("digest: MAIL_POSTAL_ADDRESS is empty");
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
   const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} \u2014 ${firstSentence(b.description)} \u2192 ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} \u2014 ${p.totalBots} bots in ${p.categoryCount} categories.`;
@@ -5576,8 +5604,12 @@ function digestMail(p, weekday, unsubToken) {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
     text: `${head}
 ${lines.join("\n")}
+
+-- 
+GrokBot Zone, ${addr}
+You get this because you confirmed a subscription.
 Unsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><p><a href="${unsub}">Unsubscribe</a></p>`,
+    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">GrokBot Zone, ${esc(addr)}<br>You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" }
   };
 }
@@ -7159,7 +7191,7 @@ async function buildRecentPhase(db, nowMs) {
 
 // src/worker/dp/cron.ts
 var MODEL = classifier_default;
-var META_KEYS = ["throttled_until", "trending_at", "checks_hourly", "stats", "discovery_last_run", "discovery_new", "archive_resume", "archive_from", "last_run"];
+var META_KEYS = ["throttled_until", "trending_at", "checks_hourly", "stats", "discovery_last_run", "discovery_new", "archive_resume", "archive_from", "last_run", "rejected_unresolved"];
 var TRENDING_EVERY_MS = 55 * 6e4;
 var COLS = "code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail";
 var updateSql = "UPDATE bots SET code=?, name=?, author=?, description=?, category=?, cats=?, status=?, last_checked=?, last_live=?, fail_count=?, first_fail=? WHERE code_lc=?";
@@ -7294,7 +7326,8 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
   if (due) {
     report.hourly = true;
     await phase("submissions", async () => {
-      await settleSubmissions(db);
+      const n = await settleSubmissions(db, now);
+      if (n) setMeta("rejected_unresolved", String(Number(meta.rejected_unresolved ?? 0) + n));
     });
     const tr = await phase("trending", () => buildTrendingPhase(db, now, start));
     const rc = await phase("recent", () => buildRecentPhase(db, now));
@@ -7332,11 +7365,16 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
   report.queries = count();
   return report;
 }
-async function settleSubmissions(db) {
-  await db.batch([
+var UNRESOLVED_AFTER_DAYS = 7;
+async function settleSubmissions(db, nowMs) {
+  const cutoff = new Date(nowMs - UNRESOLVED_AFTER_DAYS * 864e5).toISOString();
+  const out = await db.batch([
     db.prepare(`UPDATE submissions SET status = 'approved' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status = 'live')`),
-    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`)
+    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`),
+    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND created_at < ?`).bind(cutoff),
+    db.prepare(`UPDATE bots SET status = 'excluded' WHERE status = 'pending' AND source = 'submission' AND first_seen < ?`).bind(cutoff)
   ]);
+  return Number(out[2].meta?.changes ?? 0);
 }
 
 // src/worker/dp/serve.ts
@@ -7381,7 +7419,7 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
   try {
     d1 = !!db && !!await db.prepare("SELECT 1 AS ok").first();
     if (db) {
-      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at", "last_error"]));
+      Object.assign(m, await readMeta(db, ["last_run", "checks_hourly", "stats", "throttled_until", "discovery_last_run", "discovery_new", "trending_at", "last_error", "rejected_unresolved"]));
       const day = nowIso.slice(0, 10);
       const e = await db.prepare("SELECT COALESCE(SUM(views + opens), 0) AS n FROM bot_daily WHERE day = ?").bind(day).first();
       events = e?.n ?? 0;
@@ -7407,6 +7445,7 @@ async function healthBody(db, nowMs, nowIso, nosecret, switches) {
     d1,
     liveness: { last_run: m.last_run ?? null, checked_24h: checked, live: st.live ?? 0, dead: st.dead ?? 0, pending: st.pending ?? 0, throttled_until: held },
     discovery: { last_run: m.discovery_last_run ?? null, new_7d: Object.entries(dn).filter(([k]) => k >= wk).reduce((n, [, v]) => n + v, 0) },
+    submissions: { rejected_unresolved: Number(m.rejected_unresolved ?? 0) },
     telemetry: { events_today: events },
     trending: { generatedAt: m.trending_at ?? null },
     last_error: parse(m.last_error, null),
@@ -7523,8 +7562,8 @@ function isHuman(req) {
   return true;
 }
 var hex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
-async function visitorHash(salt, ip, ua) {
-  return hex(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${salt}|${ip}|${ua}`))).slice(0, 16);
+async function visitorHash(salt, ip) {
+  return hex(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${salt}|${ip}`))).slice(0, 16);
 }
 var saltCache = null;
 async function dailySalt(db, day) {
@@ -7539,7 +7578,7 @@ async function record(db, kind, codeLc, req, nowMs = Date.now()) {
   try {
     if (!db || !isHuman(req)) return;
     const day = dayOf(nowMs);
-    const vh = await visitorHash(await dailySalt(db, day), req.headers.get("cf-connecting-ip") ?? "", req.headers.get("user-agent") ?? "");
+    const vh = await visitorHash(await dailySalt(db, day), req.headers.get("cf-connecting-ip") ?? "");
     const ins = await db.prepare("INSERT OR IGNORE INTO visit_seen(day, code_lc, kind, vh) VALUES(?, ?, ?, ?)").bind(day, codeLc, kind, vh).run();
     if (!Number(ins.meta?.changes ?? 0)) return;
     const col = kind === "open" ? "opens" : "views";
@@ -7652,6 +7691,20 @@ async function categoryPage(res, slug, m) {
   }
   text = text.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_a, x, n, y) => `${x}${Number(n) - removed + add.length}${y}`);
   return new Response(text, { status: 200, headers: res.headers });
+}
+async function uncategorizedPage(tpl, m) {
+  if (tpl.status !== 200) return tpl;
+  const text = await tpl.text();
+  const list = (m?.extras ?? []).filter((b) => !catsOfEntry(b).length);
+  const title = "Uncategorized Grok bots | GrokBot Zone";
+  const desc = `${list.length} live Grok bots that have not been sorted into a category yet.`;
+  const items = list.map((b) => `<li data-code="${esc2(b.code.toLowerCase())}">${cardHtml(b.id, cardOf2(b), 2, false, false)}</li>`).join("");
+  const main = `<main id="main"><div class="wrap page-head"><p class="crumbs"><a href="/categories/">Categories</a> / Uncategorized</p><h1>Uncategorized</h1><p>Bots that have not been sorted into a category yet.</p><p data-count><span class="num">${list.length}</span> bots \xB7 live list</p></div><div class="wrap block">` + (list.length ? `<ul class="grid" data-bot-list>${items}</ul>` : "<p>No bots are waiting for a category right now.</p>") + "</div></main>";
+  const out = text.replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`).replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc2(desc)}">`).replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="https://grokbot.zone/categories/uncategorized/"><meta name="robots" content="noindex">').replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`).replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc2(desc)}">`).replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://grokbot.zone/categories/uncategorized/">').replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "").replace(/<main id="main">[\s\S]*?<\/main>/, () => main);
+  const h = new Headers(tpl.headers);
+  for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
+  h.set("Cache-Control", "no-cache");
+  return new Response(out, { status: 200, headers: h });
 }
 var codeOfUrl = (u) => {
   const x = /\/bots\/([^/]+)\/?$/.exec(u);
@@ -7784,11 +7837,11 @@ var json = (status, body, extra = {}) => new Response(JSON.stringify(body), {
   headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store", ...extra }
 });
 var disabled = () => json(503, { ok: false, error: "disabled" });
-function page(status, title, line2, wantsText2) {
+function page(status, title, line2, wantsText2, extraHtml = "") {
   if (wantsText2) return new Response(`${title}
 ${line2}
 `, { status, headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" } });
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}a{color:#00ffcc}</style></head><body><main><h1>${title}</h1><p>${line2}</p><p><a href="/">Back to GrokBot Zone</a></p></main></body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${title} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}a{color:#00ffcc}button{font:inherit;font-weight:600;padding:.6rem 1.2rem;border:0;border-radius:.4rem;background:#00ffcc;color:#030203;cursor:pointer}</style></head><body><main><h1>${title}</h1><p>${line2}</p>${extraHtml}<p><a href="/">Back to GrokBot Zone</a></p></main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 var wantsText = (req) => {
@@ -7829,6 +7882,18 @@ async function sendMail(env, via, kind, msg) {
     console.error(`send ${kind} failed:`, code, e.message);
     await logSend(env, kind, msg.to, null, false, code);
     return { ok: false, code };
+  }
+}
+async function takeAckSlot(env, nowMs = Date.now()) {
+  if (!env.DB) return false;
+  const cap = Number(env.ACK_DAILY_BUDGET ?? "200");
+  if (!Number.isFinite(cap) || cap <= 0) return false;
+  try {
+    const r = await env.DB.prepare("INSERT INTO meta(k, v) VALUES(?, '1') ON CONFLICT(k) DO UPDATE SET v = CAST(v AS INTEGER) + 1 WHERE CAST(v AS INTEGER) < ?").bind(`ack_budget:${new Date(nowMs).toISOString().slice(0, 10)}`, cap).run();
+    return Number(r.meta.changes) > 0;
+  } catch (e) {
+    console.error("ack budget check failed:", e.message);
+    return false;
   }
 }
 async function gate(rl, key) {
@@ -7911,7 +7976,8 @@ async function submit(req, env, ctx) {
     id = r.meta.last_row_id;
   }
   ctx.waitUntil((async () => {
-    await sendMail(env, env.EMAIL, "ack", { to: s.email, from: SUBMIT_FROM, subject: "Your bot submission to GrokBot Zone", text: ackText(s.name, s.link), html: htmlNote(ackText(s.name, s.link)) });
+    if (await takeAckSlot(env)) await sendMail(env, env.EMAIL, "ack", { to: s.email, from: SUBMIT_FROM, subject: "Your bot submission to GrokBot Zone", text: ackText(s.name, s.link), html: htmlNote(ackText(s.name, s.link)) });
+    else await logSend(env, "ack", s.email, null, false, "E_ACK_BUDGET");
     await notifyOwner(env, { id, name: s.name, author: s.author, category: s.category, link: s.link, submitter: s.email, ip, description: s.description, source: "webform" });
   })());
   return json(201, { ok: true, id, status: "pending" });
@@ -7950,8 +8016,8 @@ async function subscribe(req, env, ctx) {
     const r = await env.DB.prepare("INSERT INTO subscribers (email, confirm_token, unsub_token) VALUES (?, ?, ?) ON CONFLICT(email) DO NOTHING").bind(email2, confirm2, unsub).run();
     if (!r.meta.changes) return json(200, { ok: true, status: "already_pending" });
   }
-  const text = confirmText(confirm2);
-  ctx.waitUntil(sendMail(env, env.EMAIL, "confirm", { to: email2, from: UPDATES_FROM, subject: "Confirm your GrokBot Zone update emails", text, html: htmlNote(text) }).then(() => void 0));
+  const mail = confirmMail(confirm2, env.MAIL_POSTAL_ADDRESS);
+  ctx.waitUntil(sendMail(env, env.EMAIL, "confirm", { to: email2, from: UPDATES_FROM, ...mail }).then(() => void 0));
   return json(201, { ok: true, status: "pending_confirm" });
 }
 var tokenOf = (url) => {
@@ -7974,16 +8040,19 @@ async function unsubscribe(req, env, url) {
   const t = tokenOf(url);
   const row = t ? await env.DB.prepare("SELECT id, status, email FROM subscribers WHERE unsub_token = ?").bind(t).first() : null;
   if (!row) return req.method === "POST" ? json(410, { ok: false, error: "bad_token" }) : badToken(req);
-  if (req.method === "POST") {
-    const body = await req.text();
-    if (!/List-Unsubscribe=One-Click/.test(body)) return json(400, { ok: false, error: "expected List-Unsubscribe=One-Click" });
+  if (req.method !== "POST") {
+    if (row.status !== "pending" && row.status !== "active") return page(200, "You are unsubscribed", "You will not get any more update emails.", wantsText(req));
+    const form = `<form method="post" action="/subscribe/unsubscribe?t=${t}"><input type="hidden" name="List-Unsubscribe" value="One-Click"><button type="submit">Unsubscribe</button></form>`;
+    return page(200, "Unsubscribe from GrokBot Zone?", "Press the button to stop the update emails. Nothing changes until you do.", wantsText(req), form);
   }
+  const body = await req.text();
+  if (!/List-Unsubscribe=One-Click/.test(body)) return json(400, { ok: false, error: "expected List-Unsubscribe=One-Click" });
   if (row.status === "pending" || row.status === "active") {
     const r = await env.DB.prepare("UPDATE subscribers SET status='unsubscribed', unsubscribed_at=strftime('%Y-%m-%dT%H:%M:%SZ','now') WHERE id=? AND status IN ('pending','active')").bind(row.id).run();
     if (r.meta.changes) await logSend(env, "unsubscribe", row.email, null, true, null);
   }
-  if (req.method === "POST") return new Response("Unsubscribed.", { status: 200, headers: { "Content-Type": "text/plain; charset=utf-8" } });
-  return page(200, "You are unsubscribed", "You will not get any more update emails.", wantsText(req));
+  if ((req.headers.get("accept") ?? "").includes("text/html")) return page(200, "You are unsubscribed", "You will not get any more update emails.", false);
+  return new Response("Unsubscribed.", { status: 200, headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }
 async function email(message, env, _ctx) {
   if (!isOn(env.EMAIL_SUBMIT_ENABLED)) {
@@ -8068,19 +8137,23 @@ async function email(message, env, _ctx) {
   }
   const auto = (message.headers.get("auto-submitted") ?? "no").toLowerCase() !== "no" || /no-?reply|mailer-daemon/i.test(message.from);
   if (!auto) {
-    const lines = [`Hi \u2014 we got your message for GrokBot Zone.`];
-    if (queued.length) lines.push(`Queued for review: ${queued.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
-    if (skipped.length) lines.push(`Already listed or already queued: ${skipped.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
-    lines.push("Once the platform page checks out the bot is added automatically, usually within an hour.", `\u2014 GrokBot Zone \xB7 ${SITE}/trending/`);
-    const text = lines.join("\n");
-    const replySubject = `Re: ${subject || "your submission"}`;
-    try {
-      const raw = rawReply({ from: message.to, to: message.from, subject: replySubject, text, inReplyTo: message.headers.get("message-id") });
-      await message.reply(new EmailMessage(message.to, message.from, raw));
-      await logSend(env, "ack", message.from, null, true, null);
-    } catch (e) {
-      console.error("reply failed, falling back to send:", e.message);
-      await sendMail(env, env.EMAIL, "ack", { to: message.from, from: SUBMIT_FROM, subject: replySubject, text });
+    if (!ackAuthorized(auth, message.from, message.headers.get("from"))) await logSend(env, "ack", message.from, null, false, "E_ACK_UNAUTHENTICATED");
+    else if (!await takeAckSlot(env)) await logSend(env, "ack", message.from, null, false, "E_ACK_BUDGET");
+    else {
+      const lines = [`Hi \u2014 we got your message for GrokBot Zone.`];
+      if (queued.length) lines.push(`Queued for review: ${queued.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
+      if (skipped.length) lines.push(`Already listed or already queued: ${skipped.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
+      lines.push("Once the platform page checks out the bot is added automatically, usually within an hour.", `\u2014 GrokBot Zone \xB7 ${SITE}/trending/`);
+      const text = lines.join("\n");
+      const replySubject = `Re: ${subject || "your submission"}`;
+      try {
+        const raw = rawReply({ from: message.to, to: message.from, subject: replySubject, text, inReplyTo: message.headers.get("message-id") });
+        await message.reply(new EmailMessage(message.to, message.from, raw));
+        await logSend(env, "ack", message.from, null, true, null);
+      } catch (e) {
+        console.error("reply failed, no fallback send:", e.message);
+        await logSend(env, "ack", message.from, null, false, e.code ?? "E_REPLY_FAILED");
+      }
     }
   }
   const owner = (env.OWNER_ADDRESS ?? "").trim();
@@ -8105,6 +8178,11 @@ async function digest(controller, env) {
     console.log("digest: no DB binding, 0 sends");
     return;
   }
+  const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
+  if (!postal) {
+    console.error("digest: MAIL_POSTAL_ADDRESS is empty, refusing to send (0 sends)");
+    return;
+  }
   const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
   if (!res.ok) {
     console.error(`digest: payload ${res.status}, 0 sends`);
@@ -8116,7 +8194,7 @@ async function digest(controller, env) {
   const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? "Thursday" : "Monday";
   let sent = 0;
   for (const s of results) {
-    const m = digestMail(payload, weekday, s.unsub_token);
+    const m = digestMail(payload, weekday, s.unsub_token, postal);
     const r = await sendMail(env, env.EMAIL, "digest", { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
     if (r.ok) sent++;
     if (r.code === "E_RATE_LIMIT_EXCEEDED" || r.code?.startsWith("E_QUOTA")) {
@@ -8221,6 +8299,14 @@ async function dataPlaneInner(request, env, ctx, path) {
   }
   if (path === TEMPLATE_PATH.replace(/\/$/, "")) return notFoundPage(request, env);
   if (!get) return env.ASSETS.fetch(request);
+  if (path === "/categories/uncategorized") {
+    let tpl = new Response(null, { status: 404 });
+    for (const slug of [...CATEGORY_SLUGS].slice(0, 3)) {
+      tpl = await env.ASSETS.fetch(new Request(new URL(`/categories/${slug}/`, request.url), { headers: unconditional(request).headers }));
+      if (tpl.status === 200) break;
+    }
+    return uncategorizedPage(tpl, await mergeState(env.DB, env.ASSETS));
+  }
   if (request.method === "GET") {
     const merged = await mergedAsset(request, env, path);
     if (merged) return merged;

@@ -14,7 +14,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, isDead, record } from './dp/telemetry';
-import { categoryPage, feedJson, feedXml, mergeState, searchLive, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
+import { categoryPage, uncategorizedPage, feedJson, feedXml, mergeState, searchLive, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId } from './dp/util';
 
@@ -523,6 +523,14 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
   }
   if (path === TEMPLATE_PATH.replace(/\/$/, '')) return notFoundPage(request, env); // the Worker reads the template through ASSETS only
   if (!get) return env.ASSETS.fetch(request);
+  if (path === '/categories/uncategorized') { // D2: no static page exists for it; built from a category page plus the live bots without a category
+    let tpl = new Response(null, { status: 404 });
+    for (const slug of [...CATEGORY_SLUGS].slice(0, 3)) { // any built category page will do as the frame
+      tpl = await env.ASSETS.fetch(new Request(new URL(`/categories/${slug}/`, request.url), { headers: unconditional(request).headers }));
+      if (tpl.status === 200) break;
+    }
+    return uncategorizedPage(tpl, await mergeState(env.DB, env.ASSETS));
+  }
   if (request.method === 'GET') { const merged = await mergedAsset(request, env, path); if (merged) return merged; }
   const m = BOT_PAGE_RE.exec(path);
   const livePath = path === '/' || path === '/trending' || path === '/recent';

@@ -532,6 +532,22 @@ await t('D27: a live D1-only bot gets its page (200, escaped, head, /go/ link); 
   const nocat = await get(env, `/bots/uncategorized-${NEW_B}/`, h); const nc = await nocat.res.text();
   assert.equal(nocat.res.status, 200); assert.ok(!nc.includes('/categories/travel/') && JSON.parse([...nc.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)][1][1]).itemListElement.length === 2);
 });
+await t('D2 /categories/uncategorized/: lists the live bots without a category, escaped, noindex, no category structured data; empty -> a note', async () => {
+  const db = liveDb(); const env = await fillStore(db); resetDeadCache();
+  for (const path of ['/categories/uncategorized/', '/categories/uncategorized']) {
+    const r = await get(env, path); const html = await r.res.text();
+    assert.equal(r.res.status, 200, path); assert.ok(r.queries <= 50);
+    assert.ok(html.includes('<h1>Uncategorized</h1>') && html.includes(`href="/bots/uncategorized-${NEW_B}/"`) && html.includes('No Category Bot'));
+    assert.ok(!html.includes('Fresh Trip Bot') && !html.includes('Gone Bot') && !html.includes('Hidden Bot'), 'only live bots without a category');
+    assert.match(html, /data-count><span class="num">1<\/span>/); assert.match(html, /name="robots" content="noindex"/);
+    assert.ok(!html.includes('application/ld+json') && !html.includes('/categories/travel/"'), 'nothing left of the frame category');
+    assert.ok(html.includes('rel="canonical" href="https://grokbot.zone/categories/uncategorized/"'));
+  }
+  const empty = await get(envOf(new FakeD1(), { ASSETS: distAssets }), '/categories/uncategorized/');
+  assert.equal(empty.res.status, 200); assert.match(await empty.res.text(), /No bots are waiting for a category/);
+  assert.match(distFile('categories/index.html'), /href="\/categories\/uncategorized\/"/, 'the categories index links to it');
+  assert.ok(!/<span class="num">\d+<\/span> bots<\/p>/.test(distFile('categories/index.html')), 'D1: no static per-category counts on the index');
+});
 await t('D27: dead -> 410, excluded / pending / unknown / wrong id -> 404, the template URL -> 404', async () => {
   const db = liveDb(); const env = envOf(db, { ASSETS: distAssets }); db.db.prepare("INSERT INTO meta(k,v) VALUES('dead_json', ?)").run(JSON.stringify([NEW_DEAD.toLowerCase()]));
   assert.equal((await get(env, `/bots/travel-${NEW_DEAD}/`)).res.status, 410);
@@ -625,6 +641,18 @@ await t('D30: a submission whose bot ends dead or excluded is rejected automatic
   const env = envOf(db); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
   assert.equal(db.one('SELECT status FROM bots WHERE code_lc=?', SUB(2).toLowerCase()).status, 'excluded');
   assert.deepEqual(db.rows('SELECT code, status FROM submissions ORDER BY id').map((x) => x.status), ['rejected', 'rejected']);
+});
+await t('D3: a submission pending for more than 7 days is rejected as unresolved, its bot row is excluded, /api/health counts it; a younger one is left alone', async () => {
+  const db = new FakeD1(); insertBot(db, 'seedone0'); subRow(db, SUB(40)); subBot(db, SUB(40)); subRow(db, SUB(41)); subBot(db, SUB(41));
+  const c = clock(Date.parse('2026-11-10T12:05:00Z'));
+  db.db.prepare("UPDATE submissions SET created_at='2026-11-01T00:00:00Z' WHERE code=?").run(SUB(40)); db.db.prepare("UPDATE bots SET first_seen='2026-11-01T00:00:00Z' WHERE code_lc=?").run(SUB(40).toLowerCase());
+  db.db.prepare("UPDATE submissions SET created_at='2026-11-08T00:00:00Z' WHERE code=?").run(SUB(41)); db.db.prepare("UPDATE bots SET first_seen='2026-11-08T00:00:00Z' WHERE code_lc=?").run(SUB(41).toLowerCase());
+  const p = platform(() => ({ status: 200, body: '<head></head>' }), c); // 200 without a title: never resolves
+  const env = envOf(db); await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
+  assert.deepEqual(db.rows('SELECT code, status FROM submissions ORDER BY id').map((x) => x.status), ['rejected', 'pending']);
+  assert.deepEqual(db.rows('SELECT code_lc, status FROM bots WHERE source = ? ORDER BY first_seen', 'submission').map((x) => x.status), ['excluded', 'pending']);
+  const h = await (await get(env, '/api/health')).res.json() as { submissions: { rejected_unresolved: number } };
+  assert.equal(h.submissions.rejected_unresolved, 1);
 });
 await t('D30 budget: with 100 submission-sourced pending rows a run sends <= 10 requests for them and <= 40 in total', async () => {
   const db = new FakeD1(); for (let i = 0; i < 100; i++) subBot(db, SUB(100 + i)); for (let i = 0; i < 60; i++) insertBot(db, CODE(i));

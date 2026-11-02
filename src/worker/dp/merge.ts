@@ -76,6 +76,36 @@ export async function categoryPage(res: Response, slug: string, m: Merge): Promi
   return new Response(text, { status: 200, headers: res.headers });
 }
 
+// ---- D2: /categories/uncategorized/ ----
+// Live bots whose platform page named no category are not in any category list. This page lists them. It is built
+// from a real category page (same head, styles, header and footer) by string work: head tags are retitled, the
+// structured data is dropped and the page is noindex (it is a live list, not a stable one).
+export async function uncategorizedPage(tpl: Response, m: Merge | null): Promise<Response> {
+  if (tpl.status !== 200) return tpl;
+  const text = await tpl.text();
+  const list = (m?.extras ?? []).filter((b) => !catsOfEntry(b).length);
+  const title = 'Uncategorized Grok bots | GrokBot Zone';
+  const desc = `${list.length} live Grok bots that have not been sorted into a category yet.`;
+  const items = list.map((b) => `<li data-code="${esc(b.code.toLowerCase())}">${cardHtml(b.id, cardOf(b), 2, false, false)}</li>`).join('');
+  const main = '<main id="main"><div class="wrap page-head"><p class="crumbs"><a href="/categories/">Categories</a> / Uncategorized</p><h1>Uncategorized</h1>' +
+    '<p>Bots that have not been sorted into a category yet.</p>' +
+    `<p data-count><span class="num">${list.length}</span> bots · live list</p></div><div class="wrap block">` +
+    (list.length ? `<ul class="grid" data-bot-list>${items}</ul>` : '<p>No bots are waiting for a category right now.</p>') + '</div></main>';
+  const out = text
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(desc)}">`)
+    .replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="https://grokbot.zone/categories/uncategorized/"><meta name="robots" content="noindex">')
+    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`)
+    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc(desc)}">`)
+    .replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://grokbot.zone/categories/uncategorized/">')
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '')
+    .replace(/<main id="main">[\s\S]*?<\/main>/, () => main);
+  const h = new Headers(tpl.headers);
+  for (const k of ['etag', 'last-modified', 'content-length']) h.delete(k);
+  h.set('Cache-Control', 'no-cache');
+  return new Response(out, { status: 200, headers: h });
+}
+
 // ---- feeds ----
 const codeOfUrl = (u: string): string | null => { const x = /\/bots\/([^/]+)\/?$/.exec(u); return x ? splitId(x[1])[1].toLowerCase() : null; };
 const MAX_FEED_EXTRAS = 50;

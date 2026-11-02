@@ -12,7 +12,7 @@ export interface CronEnv { DB?: D1Database; NOREF_TOKENS?: string; TELEMETRY_STA
 export interface CronDeps { fetch: typeof fetch; clock: Clock }
 
 const MODEL = classifierJson as unknown as Classifier;
-const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', 'discovery_last_run', 'discovery_new', 'archive_resume', 'archive_from', 'last_run'];
+const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', 'discovery_last_run', 'discovery_new', 'archive_resume', 'archive_from', 'last_run', 'rejected_unresolved'];
 export const PHASES = ['discovery', 'checks', 'submissions', 'trending', 'recent', 'purge'] as const;
 export type Phase = (typeof PHASES)[number];
 export const TRENDING_EVERY_MS = 55 * 60_000;
@@ -144,7 +144,10 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
   if (due) {
     report.hourly = true;
     // D30: a submission's row follows its bot, no person involved.
-    await phase('submissions', async () => { await settleSubmissions(db); });
+    await phase('submissions', async () => {
+      const n = await settleSubmissions(db, now);
+      if (n) setMeta('rejected_unresolved', String(Number(meta.rejected_unresolved ?? 0) + n));
+    });
     const tr = await phase('trending', () => buildTrendingPhase(db, now, start));
     const rc = await phase('recent', () => buildRecentPhase(db, now));
     if (tr) {
@@ -182,10 +185,18 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
   return report;
 }
 
-/** D30: a submission is approved when its bot goes live, rejected when it ends dead or excluded. One statement pair, no person. */
-async function settleSubmissions(db: D1Database) {
-  await db.batch([
+/** A submission still pending after this long is given up on (its platform page never gave a title). */
+export const UNRESOLVED_AFTER_DAYS = 7;
+/** D30: a submission is approved when its bot goes live, rejected when it ends dead or excluded. One batch, no person.
+ *  D3: whatever is still pending after 7 days is rejected as unresolved and its submission-sourced bot row is excluded so it
+ *  is not polled forever. Returns how many submissions that was (counted in meta `rejected_unresolved`, shown by /api/health). */
+async function settleSubmissions(db: D1Database, nowMs: number): Promise<number> {
+  const cutoff = new Date(nowMs - UNRESOLVED_AFTER_DAYS * 86400_000).toISOString();
+  const out = await db.batch([
     db.prepare(`UPDATE submissions SET status = 'approved' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status = 'live')`),
     db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`),
+    db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND created_at < ?`).bind(cutoff),
+    db.prepare(`UPDATE bots SET status = 'excluded' WHERE status = 'pending' AND source = 'submission' AND first_seen < ?`).bind(cutoff),
   ]);
+  return Number((out[2] as { meta?: { changes?: number } }).meta?.changes ?? 0);
 }

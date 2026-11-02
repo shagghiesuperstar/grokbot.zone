@@ -81,8 +81,11 @@ export function ackAuthorized(authResults: string | null, envelopeFrom: string, 
   const env = envelopeFrom.trim().toLowerCase();
   if (!env || !authResults) return false;
   // Headers.get() joins repeated headers with ", ". Keep only the first value (Cloudflare's; later ones may be sender-supplied):
-  // drop comments first, then cut at the first comma. A genuine result has no comma, so a cut can only fail closed.
-  const first = authResults.trim().replace(/\([^)]*\)/g, ' ').split(',')[0];
+  // cut at the first comma of the RAW string, then drop comments from that segment only. A genuine result has no comma and
+  // balanced parentheses, so a comma inside a comment or an unclosed "(" can only fail closed.
+  const seg = authResults.trim().split(',')[0];
+  if ((seg.match(/\(/g) ?? []).length !== (seg.match(/\)/g) ?? []).length) return false;
+  const first = seg.replace(/\([^)]*\)/g, ' ');
   if (!/^mx\.cloudflare\.net\b/i.test(first)) return false;
   const spf = first.split(';').find((c) => /^\s*spf=/i.test(c));
   if (!spf || !/^\s*spf=pass\b/i.test(spf)) return false;

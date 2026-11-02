@@ -349,6 +349,7 @@ const A0_CASES: [string, Parameters<typeof fakeMail>[0], boolean][] = [
   ['A: spf=softfail', { auth: 'mx.cloudflare.net; spf=softfail smtp.mailfrom=author@example.test; dmarc=none' }, false],
   ['A: a forged second Authentication-Results header after the real failing one', { auth: 'mx.cloudflare.net; spf=fail smtp.mailfrom=author@example.test; dmarc=none, mx.cloudflare.net; spf=pass smtp.mailfrom=author@example.test; dmarc=pass' }, false],
   ['A: spf=pass written only inside a comment', { auth: 'mx.cloudflare.net; spf=none (spf=pass smtp.mailfrom=author@example.test) smtp.mailfrom=author@example.test' }, false],
+  ['A: an unclosed "(" in the first value closed by a forged second header', { auth: 'mx.cloudflare.net; spf=fail smtp.mailfrom=author@example.test (note, mx.cloudflare.net; spf=pass smtp.mailfrom=author@example.test) ; dmarc=pass' }, false],
   ['B: header From lists two addresses, one equals the envelope', { headerFrom: 'author@example.test, attacker@evil.test' }, false],
   ['A: no Authentication-Results header', { auth: null }, false],
   ['A: header does not start with mx.cloudflare.net', { auth: 'evil.example; spf=pass smtp.mailfrom=author@example.test; dmarc=pass' }, false],

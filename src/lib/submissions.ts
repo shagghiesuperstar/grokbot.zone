@@ -80,8 +80,9 @@ export function validateSubmission(body: unknown, categorySlugs: ReadonlySet<str
 export function ackAuthorized(authResults: string | null, envelopeFrom: string, headerFromRaw: string | null): boolean {
   const env = envelopeFrom.trim().toLowerCase();
   if (!env || !authResults) return false;
-  // Headers.get() joins repeated headers with ", ": keep only the first value (Cloudflare's), cut where a second authserv-id starts.
-  const first = authResults.trim().split(/,\s*(?=[a-z0-9.-]+(?:\s+\d+)?\s*;)/i)[0].replace(/\([^)]*\)/g, ' ');
+  // Headers.get() joins repeated headers with ", ". Keep only the first value (Cloudflare's; later ones may be sender-supplied):
+  // drop comments first, then cut at the first comma. A genuine result has no comma, so a cut can only fail closed.
+  const first = authResults.trim().replace(/\([^)]*\)/g, ' ').split(',')[0];
   if (!/^mx\.cloudflare\.net\b/i.test(first)) return false;
   const spf = first.split(';').find((c) => /^\s*spf=/i.test(c));
   if (!spf || !/^\s*spf=pass\b/i.test(spf)) return false;

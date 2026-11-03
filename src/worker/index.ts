@@ -9,6 +9,7 @@ import {
   isEmail, honeypotOk, isOn, makeToken, oneLine, ownerSummary, validateSubmission, TOKEN_RE,
   type DigestPayload,
 } from '../lib/submissions';
+import { stripEmails } from '../lib/strip-emails';
 import { isMediaRequest, serveMedia } from './media';
 import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
@@ -16,7 +17,7 @@ import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/s
 import { go, isDead, record } from './dp/telemetry';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
-import { botId } from './dp/util';
+import { botId, metaPut, readMeta } from './dp/util';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -395,24 +396,206 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
 
 // ---- cron: Monday + Thursday digest ----
 
+const DIGEST_WINDOW_MS = 7 * 86_400_000;
+const DIGEST_SENT_KEY = 'digest_last_sent';
+const DIGEST_RENDER_LIMIT = 10;
+const DIGEST_RETRY_LIMIT = 3;
+const DIGEST_PRUNE_MS = 30 * 86_400_000;
+/** Launch catalog instant. seed-d1 writes this; a date-only 2026-10-30 normalizes to it. Never a new listing. */
+const LAUNCH_FIRST_SEEN = '2026-10-30T00:00:00.000Z';
+const SEEN_ISO = `CASE WHEN length(first_seen) = 10 AND first_seen GLOB '????-??-??' THEN first_seen || 'T00:00:00.000Z' ELSE first_seen END`;
+const SUBSCRIBED_AT = `substr(COALESCE(s.confirmed_at, s.created_at), 1, 19)`;
+
+type OpenWindow = { window_id: string; since_iso: string; window_end: string; opened_at: string };
+
+const DIGEST_HELD_KEY = 'digest_held';
+
+async function readHeld(db: D1Database): Promise<string[]> {
+  const meta = await readMeta(db, [DIGEST_HELD_KEY]);
+  const raw = meta[DIGEST_HELD_KEY];
+  if (!raw) return [];
+  try {
+    const v = JSON.parse(raw) as unknown;
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.length > 0) : [];
+  } catch {
+    return [];
+  }
+}
+
+async function writeHeld(db: D1Database, codes: string[]): Promise<void> {
+  await metaPut(db, DIGEST_HELD_KEY, JSON.stringify([...new Set(codes)])).run();
+}
+
+/** F2: a row still pending when the window closes is not in that email. Remember its code. */
+async function holdPending(db: D1Database, since: string, windowEnd: string): Promise<void> {
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`,
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN).all<{ code: string }>();
+  const prev = await readHeld(db);
+  await writeHeld(db, [...prev, ...results.map((r) => r.code)]);
+}
+
+async function liveHeld(db: D1Database, held: string[]): Promise<string[]> {
+  if (!held.length) return [];
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'live' AND source != 'seed' AND code IN (${held.map(() => '?').join(',')})`,
+  ).bind(...held).all<{ code: string }>();
+  return results.map((r) => r.code);
+}
+
+/** Drop catch-up codes that are no longer pending. Live ones were in the email that just closed. */
+async function settleHeld(db: D1Database): Promise<void> {
+  const held = await readHeld(db);
+  if (!held.length) return;
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND code IN (${held.map(() => '?').join(',')})`,
+  ).bind(...held).all<{ code: string }>();
+  const pending = new Set(results.map((r) => r.code));
+  await writeHeld(db, held.filter((c) => pending.has(c)));
+}
+
 async function digest(controller: ScheduledController, env: Env): Promise<void> {
   if (!isOn(env.DIGEST_ENABLED)) { console.log('digest: dark (DIGEST_ENABLED != 1), 0 sends'); return; }
   if (!env.DB) { console.log('digest: no DB binding, 0 sends'); return; }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
-  if (!res.ok) { console.error(`digest: payload ${res.status}, 0 sends`); return; }
-  const payload = (await res.json()) as DigestPayload;
+  const scheduledIso = new Date(controller.scheduledTime).toISOString();
+  const db = env.DB;
+
+  // M2: one row per subscriber per window, pruned to 30 days. Pending claims are the
+  // proof a cut-off send already happened — deleting them is what re-mails the window (F1).
+  await db.prepare("DELETE FROM digest_delivery WHERE window_end < ? AND status != 'pending'").bind(new Date(controller.scheduledTime - DIGEST_PRUNE_MS).toISOString()).run();
+
+  const existing = await db.prepare('SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1').first<OpenWindow>();
+  let since: string;
+  let windowEnd: string;
+  let windowId: string;
+  let openedAt: string;
+  if (existing) {
+    since = existing.since_iso; windowEnd = existing.window_end; windowId = existing.window_id; openedAt = existing.opened_at;
+  } else {
+    const meta = await readMeta(db, [DIGEST_SENT_KEY]);
+    since = meta[DIGEST_SENT_KEY] ?? new Date(controller.scheduledTime - DIGEST_WINDOW_MS).toISOString();
+    windowEnd = scheduledIso;
+    // F3: one id per fire, not per calendar day. A same-day second run must not reuse a closed claim.
+    windowId = windowEnd;
+    openedAt = scheduledIso;
+  }
+
+  // F1: this window was opened by an earlier fire that did not finish. A pending claim means the
+  // send was handed off (or the invocation died after the claim). Mark it sent so we do not re-mail,
+  // and so the window can close. A fire that is opening the window now has no row to reclaim.
+  if (existing && existing.opened_at < scheduledIso) {
+    await db.prepare("UPDATE digest_delivery SET status = 'sent' WHERE window_id = ? AND status = 'pending'").bind(windowId).run();
+  }
+
+  const heldNow = await liveHeld(db, await readHeld(db));
+  const where = `status = 'live' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`;
+  const countIn = async (lo: string, hi: string) => Number((await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE ${where}`).bind(lo, hi, LAUNCH_FIRST_SEEN).first<{ n: number }>())?.n ?? 0);
+  let newCount = await countIn(since, windowEnd);
+  if (!newCount && !heldNow.length) {
+    if (existing) {
+      // C1: an empty open window still closes, so the next fire moves on.
+      // F2: remember pending rows in the range before the watermark passes them.
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
+      await db.prepare('DELETE FROM digest_open WHERE id = 1').run();
+      await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
+      console.log(`digest: closed empty window ${windowId} since ${since}, 0 sends`);
+    } else console.log(`digest: 0 new listings since ${since}, 0 sends`);
+    return;
+  }
+
+  if (!existing) {
+    // L1: one open-window row. INSERT OR IGNORE, then reuse the winner.
+    await db.prepare('INSERT OR IGNORE INTO digest_open (id, window_id, since_iso, window_end, opened_at) VALUES (1, ?, ?, ?, ?)').bind(windowId, since, windowEnd, openedAt).run();
+    const locked = await db.prepare('SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1').first<OpenWindow>();
+    if (!locked) throw new Error('digest_open missing after insert');
+    since = locked.since_iso; windowEnd = locked.window_end; windowId = locked.window_id; openedAt = locked.opened_at;
+    newCount = await countIn(since, windowEnd);
+    if (!newCount && !heldNow.length) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
+  }
+
+  const heldSql = heldNow.length ? ` OR (status = 'live' AND source != 'seed' AND code IN (${heldNow.map(() => '?').join(',')}))` : '';
+  const { results: fresh } = await db.prepare(
+    `SELECT code, name, description, category FROM bots WHERE (${where})${heldSql} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, ...heldNow, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
+  const totals = await db.prepare(
+    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
+  ).first<{ total: number; cats: number }>();
+  const payload: DigestPayload = {
+    asOf: scheduledIso.slice(0, 10),
+    totalBots: Number(totals?.total ?? newCount),
+    categoryCount: Number(totals?.cats ?? 0),
+    top: fresh.map((b: { code: string; name: string; description: string; category: string | null }) => ({ id: botId(b.category, b.code), name: stripEmails(b.name), description: stripEmails(b.description) })),
+  };
   const cap = Number(env.DIGEST_MAX_SENDS ?? '100');
-  const { results } = await env.DB.prepare("SELECT email, unsub_token FROM subscribers WHERE status='active' ORDER BY id LIMIT ?").bind(digestRecipientCount(1e9, cap)).all<{ email: string; unsub_token: string }>();
+  // C3: a subscriber's first digest is a window opened at or after they subscribed. Never backfill.
+  const { results } = await db.prepare(
+    `SELECT s.id, s.email, s.unsub_token FROM subscribers s
+      WHERE s.status = 'active'
+        AND ${SUBSCRIBED_AT} <= substr(?, 1, 19)
+        AND NOT EXISTS (
+          SELECT 1 FROM digest_delivery d
+          WHERE d.subscriber_id = s.id AND d.window_id = ? AND d.status IN ('sent', 'failed')
+        )
+      ORDER BY s.id LIMIT ?`,
+  ).bind(openedAt, windowId, digestRecipientCount(1e9, cap)).all<{ id: number; email: string; unsub_token: string }>();
   const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? 'Thursday' : 'Monday';
   let sent = 0;
+  let stopped = false;
   for (const s of results) {
+    const claim = await db.prepare(
+      `INSERT INTO digest_delivery (subscriber_id, window_id, window_end, attempts, status) VALUES (?, ?, ?, 0, 'pending') ON CONFLICT(subscriber_id, window_id) DO NOTHING`,
+    ).bind(s.id, windowId, windowEnd).run();
+    let attempts = 0;
+    if (Number(claim.meta.changes) === 0) {
+      const row = await db.prepare('SELECT status, attempts FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?').bind(s.id, windowId).first<{ status: string; attempts: number }>();
+      if (!row || row.status === 'sent' || row.status === 'failed' || row.status === 'pending') continue;
+      attempts = Number(row.attempts);
+      await db.prepare(`UPDATE digest_delivery SET status = 'pending' WHERE subscriber_id = ? AND window_id = ? AND status = 'retry'`).bind(s.id, windowId).run();
+    }
     const m = digestMail(payload, weekday, s.unsub_token, postal);
     const r = await sendMail(env, env.EMAIL, 'digest', { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
-    if (r.ok) sent++;
-    if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) { console.error(`digest: stopped on ${r.code}`); break; }
+    if (!r.ok) {
+      if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) {
+        await db.prepare('DELETE FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?').bind(s.id, windowId).run();
+        console.error(`digest: stopped on ${r.code}`);
+        stopped = true;
+        break;
+      }
+      const next = attempts + 1;
+      const terminal = next >= DIGEST_RETRY_LIMIT;
+      await db.prepare('UPDATE digest_delivery SET status = ?, attempts = ? WHERE subscriber_id = ? AND window_id = ?').bind(terminal ? 'failed' : 'retry', next, s.id, windowId).run();
+      if (terminal) console.error(`DIGEST_TERMINAL subscriber=${s.id} window=${windowId} code=${r.code} attempts=${next}`);
+      else console.error(`digest: retry subscriber=${s.id} window=${windowId} code=${r.code} attempts=${next}`);
+      continue;
+    }
+    try {
+      await db.prepare(`UPDATE digest_delivery SET status = 'sent' WHERE subscriber_id = ? AND window_id = ?`).bind(s.id, windowId).run();
+    } catch (e) {
+      // F1: the message already went out. Leave the claim pending; the next fire marks it sent and does not re-mail.
+      console.error(`digest: sent-write failed subscriber=${s.id} window=${windowId} ${(e as Error).message}`);
+      continue;
+    }
+    sent++;
   }
-  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap}`);
+  if (!stopped) {
+    const pending = await db.prepare(
+      `SELECT COUNT(*) AS n FROM subscribers s WHERE s.status = 'active'
+         AND ${SUBSCRIBED_AT} <= substr(?, 1, 19)
+         AND NOT EXISTS (
+           SELECT 1 FROM digest_delivery d
+           WHERE d.subscriber_id = s.id AND d.window_id = ? AND d.status IN ('sent', 'failed')
+         )`,
+    ).bind(openedAt, windowId).first<{ n: number }>();
+    if (Number(pending?.n ?? 1) === 0) {
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
+      await db.prepare('DELETE FROM digest_open WHERE id = 1').run();
+      await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
+    }
+  }
+  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
 
 // ---- entry ----
@@ -432,7 +615,8 @@ export default {
   email,
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
     // Two triggers share this handler: the digest keeps its own expression, everything else is the data plane.
-    if (controller.cron === DIGEST_CRON) ctx.waitUntil(digest(controller, env));
+    // M1: a missing table logs DIGEST_FAILED and this invocation still finishes. Apply migration 0003 before the bundle.
+    if (controller.cron === DIGEST_CRON) ctx.waitUntil(digest(controller, env).catch((e) => { console.error(`DIGEST_FAILED ${(e as Error).message}`); }));
     else ctx.waitUntil(runDataPlane(env, controller.scheduledTime).then((r) => console.log('dataplane', JSON.stringify(r))).catch((e) => console.error('dataplane failed:', (e as Error).message)));
   },
 };

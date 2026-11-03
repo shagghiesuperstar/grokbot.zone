@@ -1,7 +1,7 @@
 // src/worker/index.ts
 import { EmailMessage } from "cloudflare:email";
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/decode-strings.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/decode-strings.js
 var textEncoder = new TextEncoder();
 var isWsp = (c) => c === 32 || c === 9;
 var base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -527,7 +527,7 @@ function decodeParameterValueContinuations(header) {
   });
 }
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/pass-through-decoder.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/pass-through-decoder.js
 var PassThroughDecoder = class {
   constructor() {
     this.chunks = [];
@@ -578,7 +578,7 @@ var PassThroughDecoder = class {
   }
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/chunk-writer.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/chunk-writer.js
 var ChunkWriter = class {
   constructor(maxChunkSize = 100 * 1024) {
     this.maxChunkSize = maxChunkSize;
@@ -630,7 +630,7 @@ var ChunkWriter = class {
   }
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-decoder.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-decoder.js
 var Base64Decoder = class {
   constructor(opts) {
     opts = opts || {};
@@ -670,7 +670,7 @@ var Base64Decoder = class {
   }
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/qp-decoder.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/qp-decoder.js
 var CHR_EQUALS = 61;
 var QPDecoder = class {
   constructor() {
@@ -727,7 +727,7 @@ var QPDecoder = class {
   }
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/errors.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/errors.js
 var ERROR_TYPES = {
   EINVALIDOPTION: TypeError,
   EINVALIDINPUT: TypeError,
@@ -743,7 +743,7 @@ function createError(code, message) {
   return error;
 }
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/mime-node.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/mime-node.js
 var headerDecoder = new TextDecoder("utf-8", { ignoreBOM: true });
 var FLOWED_JOIN_INTERVAL = 4096;
 var HEADER_LINE_MIN_COST = 64;
@@ -1206,7 +1206,7 @@ var MimeNode = class {
   }
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/html-entities.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/html-entities.js
 var htmlEntities = {
   "&AElig": "\xC6",
   "&AElig;": "\xC6",
@@ -3441,7 +3441,7 @@ var htmlEntities = {
   "&zwnj;": "\u200C"
 };
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/text-format.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/text-format.js
 var C1_ENTITY_REPLACEMENTS = /* @__PURE__ */ new Map([
   [128, 8364],
   [130, 8218],
@@ -3795,7 +3795,7 @@ function formatHtmlHeader(message) {
   return template;
 }
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/address-parser.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/address-parser.js
 var TOKEN_OPERATOR = 1;
 var TOKEN_NO_BREAK = 2;
 var TOKEN_DIRTY = 4;
@@ -4582,7 +4582,7 @@ function addressParser(str2, options) {
 }
 var address_parser_default = addressParser;
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-encoder.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-encoder.js
 function base64ArrayBuffer(arrayBuffer) {
   let base64 = "";
   const encodings = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -4615,7 +4615,7 @@ function base64ArrayBuffer(arrayBuffer) {
   return base64;
 }
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/otp-token.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/otp-token.js
 var MAX_FIELD_LENGTH = 8192;
 var NUMBER = /-?(?:\d{1,12}\.\d{1,3}|\d{1,15})/y;
 var STRING = /"((?:[\x20\x21\x23-\x5b\x5d-\x7e]|\\["\\])*)"/y;
@@ -4728,7 +4728,7 @@ function getOtp(headers) {
   return { code: parsed.value, origin };
 }
 
-// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/postal-mime.js
+// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/postal-mime.js
 function isReadableStream(value) {
   return !!value && typeof value.getReader === "function";
 }
@@ -5599,7 +5599,8 @@ var firstSentence = (s) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200)
 function digestMail(p, weekday, unsubToken, postal = "") {
   const addr = postalLine(postal);
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
-  const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} \u2014 ${firstSentence(b.description)} \u2192 ${SITE}/bots/${b.id}/`);
+  const top = p.top.slice(0, 10).map((b) => ({ ...b, name: singleLine(b.name), description: singleLine(b.description) }));
+  const lines = top.map((b, i) => `${i + 1}. ${b.name} \u2014 ${firstSentence(b.description)} \u2192 ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} \u2014 ${p.totalBots} bots in ${p.categoryCount} categories.`;
   return {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
@@ -5610,7 +5611,7 @@ ${lines.join("\n")}
 ${addr ? `GrokBot Zone, ${addr}
 ` : ""}You get this because you confirmed a subscription.
 Unsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ""}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
+    html: `<p>${esc(head)}</p><table>${top.map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ""}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" }
   };
 }
@@ -5639,6 +5640,10 @@ function rawReply(r) {
   else h.push("Content-Type: text/plain; charset=utf-8", "Content-Transfer-Encoding: base64", "", b64(body));
   return h.join("\r\n") + "\r\n";
 }
+
+// src/lib/strip-emails.ts
+var EMAIL_RE2 = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
+var stripEmails = (s) => s.replace(EMAIL_RE2, "[email hidden]");
 
 // src/worker/media.ts
 var TYPES = { mp4: "video/mp4", webp: "image/webp" };
@@ -5699,10 +5704,6 @@ async function serveMedia(request, assets, url) {
 
 // src/data/classifier.json
 var classifier_default = { v: 1, cats: ["business-operations", "calendar-meetings-scheduling", "coding-software", "email-inbox", "everything-else", "family-kids-learning", "food-recipes-dining", "fun-games-hobbies", "grok-bot-helpers-bots-that-build-or-manage-bots", "health-fitness-wellness", "home-garden-pets", "jobs-careers", "legal-tax-paperwork", "marketing-seo-ads", "money-personal-finance", "privacy-security-scam-protection", "productivity-personal-assistant", "real-estate", "research-news-briefings", "sales-lead-generation", "shopping-deals", "trading-crypto-investing", "travel", "video-images-audio-design", "writing-publishing", "x-twitter-social-media"], min: 20, margin: 6, tokens: { grok: [8, 12], job: [11, 17], bot: [8, 7], video: [23, 12, 25, 3], bots: [8, 10], inbox: [3, 15], news: [18, 13, 7, 3], stock: [21, 17], security: [15, 19], fantasy: [7, 20, 21, 4], draft: [24, 8, 3, 4], home: [10, 14, 17, 6], money: [14, 15, 17, 6], health: [9, 18], staff: [16, 11, 0, 4], travel: [22, 22], deal: [20, 16, 22, 5], school: [5, 17, 17, 4], chief: [16, 10, 0, 3], music: [23, 17], post: [25, 9, 24, 5], parent: [5, 20], resume: [11, 23], gmail: [3, 15], trade: [21, 14, 7, 11], family: [5, 14, 22, 5], broker: [15, 22], recipe: [6, 23], fitness: [9, 26], grocery: [6, 22, 20, 4], watch: [18, 11], email: [3, 9, 15, 5], code: [2, 11], trading: [21, 18], application: [11, 19], trip: [22, 19], meal: [6, 17, 9, 10], coding: [2, 13], bill: [14, 14, 12, 4], growth: [13, 17], research: [18, 8, 21, 4], clip: [23, 15], lead: [19, 12, 17, 5], youtube: [23, 14, 25, 5], opt: [15, 23], crypto: [21, 17], ops: [0, 11, 17, 4], source: [18, 8], customer: [19, 15, 3, 4], watche: [18, 6], flight: [22, 20, 17, 6], language: [5, 13, 12, 5], tailor: [11, 26, 17, 4], role: [11, 16], kids: [5, 17], team: [0, 8, 7, 6], template: [8, 14], football: [7, 19, 21, 6], option: [21, 14, 7, 7], price: [20, 11, 17, 5], seo: [13, 16], brief: [18, 7, 13, 3], data: [15, 11, 7, 7], coach: [9, 10, 7, 4], study: [5, 21, 17, 3], food: [6, 17, 9, 7], outs: [15, 22, 17, 3], car: [10, 16, 17, 6], waiver: [7, 19, 21, 7], search: [15, 11, 11, 8], subscription: [14, 13], career: [11, 23, 17, 4], business: [0, 9, 12, 5], jobs: [11, 14], game: [7, 14, 5, 4], song: [23, 16], repo: [2, 12, 15, 7], site: [15, 10, 13, 5], buy: [20, 14, 17, 8], into: [23, 4], ads: [13, 14, 6, 3], people: [15, 10], github: [2, 12, 15, 4], tutor: [5, 22, 17, 4], engineer: [2, 12, 11, 3], scam: [15, 15, 17, 5], spam: [15, 15, 3, 6], meeting: [1, 16, 19, 4], social: [25, 11, 13, 6], turn: [23, 5], image: [23, 11, 24, 3], shop: [20, 13, 6, 4], track: [18, 5, 12, 4], doctor: [9, 19, 12, 3], brand: [13, 12, 20, 5], medical: [9, 21, 12, 6], ebay: [20, 21, 17, 4], calendar: [1, 11, 3, 5], digest: [18, 7], bookmark: [25, 16, 6, 4], other: [8, 8], dinner: [6, 19, 5, 7], launch: [13, 13], workout: [9, 21, 12, 4], privacy: [15, 19, 22, 4], voice: [23, 7, 24, 5], wallet: [21, 17], agent: [17, 7, 2, 6], art: [23, 14], company: [0, 12], property: [17, 24, 14, 6], tax: [12, 18, 17, 7], return: [20, 13, 12, 8], lineup: [7, 17, 21, 6], app: [2, 9, 15, 4], instagram: [25, 18, 22, 4], triage: [3, 13], website: [2, 10, 13, 6], kitchen: [6, 20, 5, 4], engineering: [2, 13, 15, 4], content: [24, 11, 13, 8], bank: [14, 15, 12, 6], sleep: [9, 22, 17, 5], copy: [24, 12, 13, 5], lyric: [23, 21, 17, 5], token: [21, 12, 8, 4], spending: [14, 19, 12, 5], task: [0, 10, 8, 3], student: [5, 17, 10, 5], solana: [21, 20, 17, 5], legal: [12, 17, 15, 5], receipt: [14, 11, 12, 5], morning: [18, 5, 3, 4], podcast: [23, 13, 25, 3], child: [5, 21, 17, 5], training: [9, 16, 1, 6], design: [23, 8, 8, 4], prs: [2, 16, 17, 4], cli: [2, 12], interview: [11, 13, 0, 3], house: [10, 16, 17, 11], removal: [15, 21, 17, 5], household: [10, 11, 6, 9], maintenance: [10, 18, 17, 9], linkedin: [25, 12, 11, 8], opening: [11, 16, 7, 5], finance: [14, 15, 1, 4], companion: [7, 12, 22, 4], insurance: [12, 16, 9, 7], claude: [2, 10, 8, 6], pipeline: [19, 14, 11, 5], caption: [23, 12, 25, 6], earning: [21, 20, 17, 5], newsletter: [3, 16, 24, 4], photo: [23, 7, 6, 6], point: [22, 15, 7, 4], list: [6, 8], marketing: [13, 13, 3, 4], routine: [8, 9, 9, 5], audio: [23, 14, 1, 4], amazon: [20, 16, 6, 5], tracker: [18, 8, 9, 6], budget: [14, 10, 6, 7], thread: [25, 12, 1, 6], kid: [5, 20, 7, 6], spend: [14, 12, 6, 4], project: [0, 9], lesson: [5, 14], chef: [6, 19, 5, 7], outbound: [19, 17, 1, 5], teacher: [5, 16, 17, 4], intelligence: [18, 13, 22, 4], sale: [19, 11, 20, 6], find: [11, 5, 15, 4], mail: [3, 10, 1, 5], writer: [24, 13, 13, 5], nutrition: [9, 22, 17, 6], hiring: [11, 18, 12, 5], recheck: [15, 23, 17, 6], ticker: [21, 17, 17, 5], hotel: [22, 22, 17, 5], fleet: [8, 9], scrubber: [15, 21, 17, 6], assistant: [16, 4, 12, 4], software: [2, 12], cart: [6, 15, 20, 9], grokbot: [8, 14], tiktok: [25, 14, 13, 5], sit: [7, 18, 21, 7], footage: [23, 17, 17, 5], apps: [2, 9, 15, 8], crm: [19, 15, 17, 8], menu: [6, 19, 17, 5], itinerarie: [22, 25, 17, 7], phone: [15, 10, 3, 4], homework: [5, 21, 17, 6], daily: [9, 4, 18, 3], credit: [14, 10, 12, 5], note: [1, 7, 16, 5], studio: [23, 8, 13, 5], gift: [20, 15, 17, 8], learning: [5, 16, 17, 4], unsubscribe: [3, 19, 17, 6], gym: [9, 21, 17, 6], slack: [0, 11, 19, 6], usage: [8, 8], captain: [7, 16, 22, 4], weather: [10, 12, 22, 10], league: [7, 17, 17, 8], shopping: [20, 13, 6, 12], specialist: [16, 6, 0, 5], cursor: [2, 10], cook: [6, 21, 5, 7], trader: [21, 19, 17, 6], skill: [8, 8, 2, 4], market: [21, 9, 18, 6], plan: [6, 7, 22, 6], invoice: [14, 12, 1, 5], inventory: [10, 14, 20, 7], outlook: [3, 15, 17, 4], pantry: [6, 18, 17, 5], media: [25, 12], remove: [15, 18, 17, 5], gtm: [19, 17, 17, 5], contract: [12, 17, 7, 4], espn: [7, 19, 22, 7], restaurant: [6, 16, 22, 7], call: [15, 7, 19, 6], reply: [3, 9, 25, 7], operation: [0, 14, 17, 8], story: [24, 11, 25, 5], planner: [6, 12, 22, 10], transcript: [1, 14, 23, 5], writing: [24, 13, 17, 3], buys: [20, 13, 21, 7], posting: [11, 12, 25, 7], competitor: [13, 13, 19, 7], make: [23, 6], bitcoin: [21, 17, 17, 6], investor: [21, 16, 12, 6], director: [23, 12, 4, 7], expense: [14, 14, 17, 9], fit: [11, 10, 19, 4], briefing: [18, 9, 7, 4], schedule: [1, 10, 25, 5], founder: [19, 8, 0, 8], account: [25, 6, 13, 5], monitor: [18, 8, 13, 7], robinhood: [21, 17, 22, 7], repair: [10, 15, 12, 7], build: [7, 5, 6, 4], lodging: [22, 28, 17, 9], short: [23, 3], applie: [11, 14, 17, 8], product: [20, 7, 13, 6], blog: [24, 15, 13, 5], fridge: [6, 19, 17, 6], style: [23, 6, 17, 4], cash: [14, 11, 22, 7], tailored: [11, 17, 22, 7], desk: [12, 4, 21, 4], start: [7, 12, 4, 3], mcp: [2, 11, 17, 7], bug: [2, 17, 17, 6], quizze: [5, 17, 17, 6], quiz: [5, 24, 17, 8], campaign: [13, 14, 1, 6], ats: [11, 22, 17, 8], plant: [10, 18, 17, 6], hike: [14, 24, 17, 8], send: [3, 4], court: [12, 18, 17, 5], number: [15, 10, 17, 4], shot: [23, 11, 22, 6], moving: [10, 13, 17, 7], risk: [21, 9, 12, 6], portfolio: [21, 13, 17, 4], avatar: [23, 13, 8, 6], coffee: [6, 21, 17, 7], meme: [23, 14, 17, 5], suno: [23, 19, 17, 7], paperwork: [12, 17, 22, 6], film: [23, 13, 13, 7], board: [0, 9, 11, 7], sold: [20, 14, 17, 11], confirmation: [15, 16, 22, 6], small: [0, 5, 12, 5], retailer: [20, 17, 17, 6], codex: [2, 10, 8, 7], imagine: [23, 13, 17, 5], store: [6, 8, 20, 8], info: [15, 14, 17, 8], startup: [0, 12, 5, 4], deploy: [2, 11, 17, 3], follower: [25, 14, 15, 7], learn: [5, 8, 6, 4], listing: [17, 12, 20, 8], developer: [2, 13, 12, 5], hunt: [11, 10, 20, 6], cloud: [2, 8, 14, 4], sleeper: [7, 19, 21, 9], prospect: [19, 16, 17, 6], visual: [23, 12, 17, 4], route: [22, 7, 16, 6], destination: [22, 24, 17, 8], api: [2, 9, 8, 5], resale: [20, 21, 17, 8], lawyer: [12, 27, 17, 9], scene: [23, 12, 4, 8], installer: [8, 12, 17, 4], realtor: [17, 27, 12, 10], shield: [15, 19, 17, 7], ship: [2, 6, 7, 5], get: [23, 4], play: [7, 13, 23, 3], client: [0, 9, 13, 6], recovery: [9, 15, 17, 9], compliance: [12, 18, 15, 7], new: [17, 5, 18, 3], mac: [2, 8, 1, 4], supplement: [9, 25, 17, 9], wearable: [9, 25, 17, 9], dispute: [12, 16, 14, 8], investing: [21, 19, 17, 8], article: [24, 10, 25, 8], check: [9, 4, 15, 4], best: [20, 8, 22, 5], talent: [11, 25, 17, 9], rental: [17, 17, 22, 13], replie: [25, 7, 3, 6], strength: [9, 17, 17, 6], calorie: [9, 14, 6, 10], tech: [18, 7, 20, 4], apply: [11, 13, 8, 4], charge: [14, 11, 4, 7], topic: [25, 7, 18, 5], hubspot: [19, 24, 17, 9], keyword: [13, 13, 1, 5], explainer: [23, 10, 4, 6], coordinate: [16, 8, 17, 6], creator: [25, 7, 23, 6], notion: [0, 9, 19, 5], matching: [11, 13, 12, 4], transfer: [7, 15, 22, 10], book: [22, 7, 24, 7], finished: [23, 9, 24, 4], itinerary: [22, 23, 17, 9], ingredient: [6, 20, 17, 8], obsidian: [16, 13, 17, 6], debt: [14, 15, 12, 9], appliance: [10, 20, 17, 8], analytic: [13, 18, 17, 7], education: [5, 16, 17, 7], submit: [15, 11, 11, 9], captioned: [23, 14, 7, 7], apartment: [17, 26, 4, 8], reviewer: [2, 10, 12, 4], owed: [14, 14, 22, 9], xero: [14, 19, 12, 9], review: [2, 3], weeknight: [6, 25, 17, 10], report: [15, 4, 13, 4], dish: [6, 22, 17, 9], forgotten: [14, 13, 17, 9], engagement: [25, 15, 13, 8], month: [14, 10, 3, 4], still: [23, 8, 17, 6], viral: [25, 14, 17, 5], storyboard: [23, 21, 17, 9], public: [25, 5, 17, 4], aeo: [13, 17, 17, 7], goal: [16, 7, 9, 5], builder: [2, 6], item: [1, 9, 20, 9], simple: [9, 11, 6, 6], card: [14, 6, 20, 5], render: [23, 13, 17, 6], habit: [9, 13, 1, 5], weekly: [7, 6, 6, 5], pet: [10, 13, 17, 10], buying: [20, 13, 6, 9], meta: [13, 13, 22, 6], work: [0, 4], editor: [24, 10, 23, 7], tesla: [10, 9, 16, 4], reference: [23, 12, 17, 5], cinematic: [23, 16, 17, 8], eggbot: [8, 18, 17, 8], cooking: [6, 18, 5, 8], bookkeeping: [14, 14, 12, 12], estate: [17, 18, 12, 11], fraud: [15, 18, 17, 8], letter: [12, 12, 11, 9], decision: [4, 8, 1, 6], refund: [14, 11, 12, 9], producer: [23, 11, 1, 5], vertical: [23, 11, 25, 7], read: [14, 4], paper: [21, 8, 18, 7], hand: [2, 5, 17, 4], animation: [23, 17, 17, 8], motion: [23, 12, 13, 8], warm: [9, 9, 17, 5], life: [16, 7, 12, 5], activity: [5, 11, 17, 9], cancel: [14, 11, 3, 9], fact: [17, 7, 18, 6], comp: [17, 15, 20, 12], cat: [10, 19, 17, 9], coupon: [20, 15, 6, 13], polymarket: [21, 17, 17, 8], are: [8, 5, 4, 5], manager: [0, 5, 7, 5], twitter: [25, 17, 7, 8], btc: [21, 22, 17, 10], eth: [21, 22, 17, 10], instruction: [8, 10, 22, 5], write: [24, 5], merge: [2, 10, 19, 5], official: [15, 5, 4, 5], edit: [23, 9, 25, 6], maker: [23, 9, 7, 5], headline: [18, 13, 17, 7], candidate: [11, 12, 18, 5], law: [12, 16, 17, 6], lease: [12, 16, 17, 11], fare: [22, 19, 17, 8], narrated: [23, 13, 17, 6], vehicle: [10, 15, 9, 8], cuts: [23, 8, 15, 6], faab: [7, 22, 17, 9], test: [2, 5, 24, 4], prompt: [23, 7, 7, 4], episode: [23, 11, 17, 5], yahoo: [7, 14, 3, 11], coinbase: [21, 19, 17, 9], compare: [22, 11, 20, 8], original: [23, 8, 25, 6], runs: [0, 3], top: [18, 6], log: [9, 8, 10, 5], personal: [15, 5, 9, 4], wine: [6, 21, 17, 9], google: [13, 6, 1, 4], beat: [23, 10, 13, 6], walmart: [20, 18, 17, 8], cover: [11, 11, 25, 6], cleanup: [3, 10, 25, 6], injurie: [7, 18, 17, 8], usdc: [21, 16, 22, 9], script: [24, 8, 17, 5], generation: [23, 21, 17, 10], prospecting: [19, 18, 17, 8], need: [3, 6], injury: [7, 15, 21, 6], voiceover: [23, 15, 17, 8], settlement: [14, 12, 17, 12], match: [11, 11, 17, 8], share: [8, 7, 21, 4], trend: [18, 8, 25, 4], thumbnail: [23, 13, 7, 7], through: [2, 3], audit: [8, 4, 2, 4], sourced: [18, 6, 12, 4], ftc: [15, 17, 17, 8], employer: [11, 15, 1, 8], season: [7, 17, 17, 7], balance: [14, 11, 0, 5], recurring: [14, 10, 1, 8], booking: [22, 13, 1, 11], shortlist: [11, 12, 17, 11], recruiting: [11, 17, 17, 8], internship: [11, 20, 17, 9], recruiter: [11, 20, 17, 9], cfo: [14, 15, 17, 7], quickbook: [14, 15, 12, 8], link: [25, 5], finishe: [15, 15, 7, 7], sport: [7, 12, 5, 7], pump: [21, 15, 7, 10], create: [8, 8, 4, 6], shared: [8, 6, 0, 6], diet: [6, 16, 9, 11], exam: [5, 13, 17, 6], stay: [22, 10, 12, 3], packing: [22, 19, 17, 8], paste: [24, 5, 25, 4], character: [23, 9, 4, 7], computer: [2, 5, 8, 5], off: [15, 9, 17, 5], publish: [24, 10, 25, 6], drop: [20, 7, 7, 4], fun: [7, 14, 21, 8], web: [2, 5, 13, 4], phishing: [3, 14, 15, 13], firm: [12, 14, 17, 5], agentic: [21, 14, 17, 7], protein: [9, 14, 6, 11], run: [0, 5, 8, 4], wrote: [24, 18, 17, 9], saved: [25, 11, 6, 8], pay: [14, 8, 11, 6], purchase: [20, 12, 14, 7], curriculum: [5, 18, 17, 9], reel: [25, 12, 23, 7], payday: [14, 18, 17, 9], backup: [8, 9, 9, 5], ready: [24, 4, 17, 4], clawd: [21, 22, 17, 11], memecoin: [21, 22, 17, 11], suspiciou: [15, 18, 17, 9], flow: [14, 9, 21, 6], use: [8, 6, 15, 4], nfl: [7, 15, 4, 10], upload: [23, 8, 1, 5], free: [15, 5, 1, 4], cited: [12, 8, 18, 7], hunter: [20, 8, 11, 7], drink: [6, 18, 10, 9], deduction: [12, 21, 17, 10], coin: [21, 15, 7, 8], setup: [8, 5, 21, 4], garage: [10, 15, 17, 8], each: [7, 4, 11, 3], address: [17, 12, 15, 10], tailscale: [2, 10, 22, 7], primary: [18, 8, 1, 5], sell: [19, 9, 20, 8], door: [8, 6, 10, 5], creative: [13, 9, 23, 7], service: [10, 6, 19, 4], alert: [17, 6, 7, 4], animated: [23, 11, 24, 7], monthly: [14, 7, 15, 7], visit: [9, 11, 17, 8], allergie: [6, 20, 17, 10], instacart: [6, 20, 17, 10], weekday: [3, 4], title: [20, 8, 23, 7], rewrite: [24, 9, 22, 9], change: [2, 4, 13, 3], garden: [10, 17, 17, 9], order: [6, 8, 20, 6], activitie: [5, 14, 22, 11], sort: [3, 9, 17, 7], text: [15, 6, 3, 4], unclaimed: [17, 18, 14, 14], exposed: [15, 17, 17, 13], injection: [15, 17, 3, 8], before: [14, 4], intel: [18, 11, 17, 7], transport: [22, 20, 17, 9], vacation: [22, 20, 17, 14], spacex: [18, 8, 21, 6], tape: [21, 14, 17, 8], inboxe: [3, 12, 0, 6], connector: [8, 9, 17, 4], hook: [25, 9, 13, 6], niche: [25, 9, 13, 8], sender: [3, 14, 4, 11], memory: [8, 7, 0, 5], icon: [23, 16, 17, 9], chain: [21, 10, 22, 5], diagram: [23, 12, 17, 7], marketplace: [20, 10, 17, 7], all: [8, 5, 12, 5], award: [22, 16, 17, 7], restock: [20, 12, 17, 10], limit: [21, 9, 8, 5], outreach: [19, 7, 11, 7], about: [18, 3], prep: [11, 7, 1, 6], indeed: [11, 19, 17, 10], repro: [2, 16, 17, 9], overlap: [8, 12, 17, 7], junk: [3, 11, 15, 10], score: [19, 6, 17, 5], icp: [19, 16, 25, 9], landing: [13, 14, 1, 8], signal: [19, 6, 21, 6], repost: [25, 16, 1, 10], risky: [7, 12, 21, 5], filing: [12, 12, 21, 7], cro: [13, 19, 17, 10], ledger: [14, 9, 4, 8], fund: [21, 13, 17, 7], comment: [25, 10, 19, 7], ideal: [19, 19, 17, 10], vet: [10, 15, 6, 11], generate: [23, 12, 17, 7], archive: [3, 9, 25, 7], analyst: [21, 7, 13, 6], fat: [9, 15, 17, 8], vercel: [2, 13, 17, 8], net: [14, 11, 20, 6], squad: [7, 15, 17, 7], fixe: [15, 7, 9, 4], page: [24, 4, 13, 4], road: [22, 15, 12, 7], due: [1, 10, 14, 8], playlist: [23, 10, 17, 5], geo: [13, 15, 17, 8], positioning: [13, 15, 19, 8], day: [22, 6], deep: [18, 6, 2, 5], chatgpt: [8, 8, 13, 5], beta: [12, 13, 17, 9], sets: [7, 6, 8, 5], file: [12, 5, 15, 5], flag: [15, 5, 14, 4], fill: [6, 9, 11, 9], patient: [5, 10, 9, 7], following: [25, 13, 1, 7], request: [15, 6, 2, 5], reminder: [1, 9, 9, 6], saving: [14, 9, 17, 8], symptom: [9, 18, 17, 9], ins: [9, 10, 16, 5], marketer: [13, 13, 19, 6], chapter: [23, 11, 24, 9], week: [6, 6, 7, 5], mobile: [2, 9, 15, 5], artist: [23, 10, 4, 9], teache: [5, 10, 8, 5], linux: [2, 10, 15, 8], herme: [8, 11, 17, 6], plain: [12, 7, 9, 4], friendly: [9, 7, 6, 6], control: [10, 8, 12, 4], slot: [1, 17, 17, 8], backtest: [21, 17, 17, 10], care: [10, 7, 9, 5], question: [12, 4], joke: [7, 14, 12, 7], transcribe: [23, 14, 1, 10], shopper: [20, 12, 6, 10], unread: [3, 14, 17, 8], hunting: [17, 13, 11, 12], promo: [3, 9, 13, 7], aisle: [6, 17, 20, 10], action: [1, 8, 3, 6], prototype: [2, 12, 17, 8], camera: [10, 10, 23, 9], fix: [2, 5, 15, 5], traveler: [22, 21, 17, 11], discovery: [19, 12, 11, 8], touch: [19, 12, 4, 9], long: [23, 6, 7, 5], engine: [24, 9, 4, 7], case: [4, 11, 12, 10], handoff: [0, 7, 12, 5], vault: [16, 9, 9, 7], polished: [23, 10, 4, 10], owner: [1, 7, 0, 4], event: [5, 6, 1, 6], around: [6, 8, 9, 7], scout: [17, 6, 11, 5], matchday: [7, 17, 17, 8], claim: [12, 7, 4, 5], relay: [8, 9, 19, 5], facebook: [17, 10, 25, 9], climate: [10, 14, 1, 9], tool: [8, 5], first: [19, 3], scrub: [15, 14, 17, 7], storie: [24, 8, 18, 5], warranty: [10, 12, 20, 8], holiday: [20, 14, 7, 8], who: [19, 4, 1, 4], never: [24, 3], swing: [21, 14, 17, 8], live: [21, 3], grade: [4, 10, 5, 8], practice: [5, 8, 9, 5], landlord: [17, 20, 12, 10], screenshot: [2, 6, 15, 5], coverage: [12, 13, 17, 6], spanish: [5, 9, 12, 6], friend: [7, 11, 6, 6], scan: [15, 6, 21, 4], reputation: [15, 16, 17, 9], counsel: [12, 16, 17, 8], appointment: [1, 11, 9, 10], multi: [0, 5], summary: [1, 7, 17, 6], something: [10, 5, 18, 5], used: [10, 10, 20, 9], coder: [2, 11, 17, 7], effort: [2, 11, 17, 7], agenda: [1, 16, 17, 8], logs: [9, 7, 6, 5], mock: [11, 16, 22, 10], password: [15, 13, 17, 7], help: [12, 4, 15, 4], allergy: [6, 20, 17, 11], sommelier: [6, 20, 17, 11], gif: [23, 16, 17, 10], narration: [23, 16, 17, 10], printing: [23, 16, 17, 10], message: [3, 6, 17, 3], chat: [8, 3], premium: [21, 11, 13, 7], logo: [23, 13, 17, 8], businesse: [19, 7, 0, 6], scholarship: [5, 16, 17, 9], connected: [3, 10, 1, 9], mp4: [23, 11, 13, 11], transaction: [14, 15, 6, 9], contact: [19, 9, 1, 8], fees: [12, 10, 14, 10], clear: [3, 5], grow: [13, 11, 25, 7], x402: [21, 13, 17, 8], maximum: [2, 15, 17, 10], reservation: [6, 15, 22, 9], exchange: [21, 15, 17, 9], insider: [21, 15, 7, 10], sleeve: [21, 15, 17, 9], airline: [22, 19, 17, 10], medication: [9, 19, 1, 12], wellness: [9, 19, 17, 11], real: [17, 6], unfollow: [25, 13, 13, 7], suggest: [7, 8, 6, 6], love: [7, 15, 22, 9], course: [5, 9, 17, 4], progress: [5, 9, 9, 9], cloudflare: [2, 8, 13, 5], plugin: [8, 8, 2, 5], spec: [2, 7, 20, 5], roster: [7, 11, 0, 7], online: [20, 8, 14, 5], zoom: [1, 19, 17, 10], taste: [6, 9, 23, 6], interaction: [25, 15, 17, 9], ios: [2, 13, 17, 8], renewal: [14, 8, 17, 8], conflict: [1, 13, 12, 7], performance: [13, 12, 7, 7], wishlist: [20, 12, 7, 7], defensive: [15, 15, 22, 10], cheapest: [20, 11, 6, 8], console: [13, 11, 7, 7], warrantie: [10, 12, 15, 8], logistic: [22, 12, 5, 11], subject: [5, 12, 1, 8], dog: [10, 15, 17, 9], yard: [10, 15, 17, 9], device: [15, 11, 10, 9], restore: [8, 12, 17, 8], litigation: [12, 15, 17, 7], background: [23, 10, 1, 8], applicant: [11, 18, 17, 11], applier: [11, 18, 17, 11], trainer: [9, 15, 17, 8], changed: [17, 9, 18, 7], calm: [10, 5, 16, 5], follow: [1, 6, 19, 5], concept: [23, 8, 5, 6], college: [5, 10, 7, 8], feed: [17, 6, 18, 5], macro: [9, 12, 21, 9], conversion: [13, 14, 17, 8], bargain: [20, 18, 12, 12], lister: [20, 18, 17, 11], critic: [23, 12, 13, 9], mockup: [23, 12, 12, 9], class: [4, 10, 14, 9], statement: [14, 9, 9, 5], base: [21, 9, 6, 6], duplicate: [8, 7, 14, 7], researche: [19, 6, 12, 5], noise: [3, 10, 17, 5], salesforce: [19, 18, 17, 11], exact: [20, 8, 21, 4], deliver: [4, 6, 18, 5], safe: [7, 8, 15, 6], airport: [22, 18, 6, 9], print: [12, 7, 23, 6], scripture: [16, 10, 5, 9], busy: [5, 8, 9, 7], ninja: [14, 12, 4, 11], dive: [18, 14, 17, 10], matter: [3, 7, 12, 6], age: [5, 10, 9, 7], drill: [5, 10, 16, 7], bridge: [8, 8, 4, 7], checkout: [20, 12, 6, 8], support: [19, 9, 3, 7], profit: [21, 14, 20, 10], rank: [17, 8, 13, 6], helper: [12, 6, 6, 5], important: [3, 10, 4, 8], added: [8, 12, 10, 8], efficiency: [8, 12, 21, 9], open: [1, 5, 11, 4], battery: [10, 14, 17, 8], investment: [21, 11, 14, 8], ups: [1, 9, 17, 7], charging: [22, 12, 10, 11], description: [11, 9, 20, 6], paid: [13, 8, 14, 7], genre: [23, 14, 1, 11], speech: [23, 14, 17, 9], fail: [2, 9, 17, 5], taxe: [12, 17, 17, 9], ate: [9, 17, 17, 10], across: [20, 5, 17, 4], researcher: [17, 8, 18, 6], speaking: [5, 11, 1, 8], trash: [3, 11, 17, 11], worth: [25, 6, 14, 5], focused: [8, 8, 12, 5], waiting: [3, 10, 17, 9], channel: [0, 7, 24, 5], prose: [24, 17, 17, 11], designer: [17, 7, 23, 6], their: [25, 4, 8, 4], assignment: [5, 17, 17, 11], caregiver: [5, 17, 17, 11], session: [9, 8, 2, 4], body: [9, 13, 1, 8], paycheck: [14, 17, 17, 11], private: [10, 5, 5, 4], zero: [15, 8, 3, 7], show: [10, 4], want: [20, 6], player: [7, 13, 17, 6], consent: [15, 17, 12, 11], deadline: [12, 8, 22, 5], acceptance: [2, 13, 12, 10], devin: [2, 13, 17, 9], etfs: [21, 16, 17, 11], musebook: [21, 16, 17, 11], premarket: [21, 16, 17, 11], quant: [21, 16, 7, 11], sol: [21, 16, 7, 11], visibility: [13, 11, 18, 6], companie: [12, 8, 18, 7], amount: [14, 13, 12, 12], federal: [17, 13, 12, 13], idea: [4, 3], part: [20, 6, 23, 6], pick: [7, 5], another: [2, 11, 17, 8], recall: [10, 11, 17, 6], shipping: [20, 9, 12, 6], sound: [23, 9, 24, 8], income: [12, 11, 14, 9], launche: [13, 8, 18, 6], checklist: [22, 9, 12, 6], christma: [20, 16, 17, 10], pull: [17, 5, 16, 4], b2b: [19, 13, 25, 10], mile: [22, 16, 10, 9], assumption: [0, 13, 4, 12], were: [8, 13, 17, 9], smart: [10, 9, 12, 7], delivery: [6, 10, 20, 6], them: [1, 4], made: [4, 10, 17, 7], tester: [15, 12, 2, 8], filter: [17, 11, 10, 8], invent: [1, 8, 18, 7], trending: [18, 7, 20, 6], sec: [18, 10, 21, 9], rent: [17, 15, 14, 6], model: [23, 4, 2, 4], classroom: [5, 12, 17, 8], hint: [5, 12, 1, 9], approve: [17, 5, 3, 4], storm: [10, 12, 12, 8], gate: [17, 5, 2, 4], clipper: [23, 12, 7, 9], looping: [23, 12, 17, 9], spotify: [23, 9, 22, 7], year: [12, 10, 22, 8], location: [11, 10, 22, 6], hold: [21, 6, 1, 6], advice: [7, 9, 12, 7], digs: [18, 8, 20, 6], tutorial: [8, 15, 17, 11], asset: [17, 11, 21, 10], leaked: [15, 15, 17, 9], fyi: [3, 12, 12, 11], within: [20, 10, 7, 8], adhd: [16, 10, 7, 8], ping: [22, 7, 20, 6], against: [17, 5, 24, 4], momentum: [21, 12, 17, 8], put: [21, 12, 1, 9], git: [2, 10, 17, 7], front: [0, 6, 4, 5], equipment: [9, 12, 20, 8], how: [17, 4], scheduling: [1, 15, 17, 13], fed: [18, 12, 17, 9], expert: [4, 7, 2, 5], right: [8, 4, 0, 4], claudia: [23, 15, 17, 11], playing: [23, 15, 17, 11], production: [2, 7, 23, 5], cto: [2, 12, 17, 9], herdr: [2, 12, 17, 9], target: [11, 7, 20, 6], native: [13, 10, 2, 6], via: [2, 5, 1, 3], flashcard: [5, 15, 17, 10], homeschool: [5, 15, 17, 10], chore: [10, 12, 22, 9], release: [18, 5, 19, 4], vendor: [0, 7, 14, 7], water: [10, 10, 4, 9], secret: [15, 10, 8, 6], changelog: [8, 10, 22, 8], funnel: [13, 15, 17, 9], asks: [8, 4, 14, 4], payoff: [17, 12, 14, 12], csv: [14, 10, 12, 6], left: [14, 10, 17, 6], renter: [12, 15, 17, 13], prayer: [16, 14, 17, 11], backed: [7, 10, 25, 4], cut: [23, 5, 14, 5], binary: [2, 14, 17, 11], outer: [2, 14, 17, 11], staging: [2, 14, 17, 11], tonight: [6, 14, 17, 8], hyperliquid: [21, 14, 19, 11], its: [4, 4, 2, 3], word: [4, 6, 5, 5], chip: [7, 14, 17, 8], hour: [1, 7, 25, 6], quiet: [3, 4, 11, 4], steelman: [4, 19, 17, 10], focu: [1, 12, 16, 10], neutral: [18, 10, 17, 8], strategist: [25, 10, 13, 8], audience: [13, 11, 24, 10], remote: [11, 11, 17, 6], holding: [21, 9, 11, 6], weight: [9, 11, 6, 10], synced: [13, 10, 23, 9], length: [22, 12, 23, 11], square: [17, 13, 23, 11], out: [20, 4], ceo: [0, 7, 13, 5], choice: [4, 14, 1, 6], analysi: [21, 8, 7, 7], watchlist: [21, 8, 18, 6], truck: [10, 11, 6, 9], construction: [0, 11, 11, 9], record: [17, 7, 10, 5], installed: [8, 9, 10, 8], add: [4, 7, 8, 7], forecast: [10, 9, 14, 7], zip: [17, 9, 10, 9], community: [17, 9, 25, 9], reddit: [25, 9, 19, 8], loop: [7, 6, 3, 5], buyer: [17, 12, 19, 8], ballot: [4, 10, 18, 8], internet: [14, 11, 10, 9], reading: [16, 6, 5, 6], sponsor: [3, 14, 17, 9], answer: [5, 3], science: [5, 9, 6, 7], playbook: [21, 9, 7, 6], sellable: [8, 11, 17, 8], cad: [2, 11, 17, 8], stop: [22, 8, 21, 5], sounding: [24, 13, 22, 11], output: [8, 9, 12, 7], carrier: [15, 13, 12, 12], not: [4, 5, 12, 5], full: [4, 5, 23, 4], genealogy: [5, 13, 17, 9], teach: [5, 13, 17, 9], scheduler: [1, 18, 17, 11], math: [5, 8, 20, 5], pre: [17, 6, 21, 5], angle: [18, 11, 17, 9], room: [17, 8, 10, 7], sweep: [17, 10, 3, 8], starship: [18, 9, 22, 9], chart: [21, 6, 25, 4], sorted: [6, 11, 3, 6], unknown: [18, 13, 17, 11], watcher: [1, 6, 20, 6], chase: [17, 8, 14, 8], linked: [17, 10, 14, 9], gets: [15, 7, 6, 4], hexakin: [8, 13, 17, 10], bookkeeper: [14, 11, 12, 10], wasted: [14, 11, 8, 9], window: [8, 5, 4, 5], verified: [11, 7, 4, 4], rule: [12, 5, 17, 5], printer: [23, 10, 17, 8], secretary: [1, 13, 17, 7], liquid: [21, 13, 17, 9], thesi: [21, 13, 17, 9], reason: [19, 10, 1, 7], national: [10, 13, 17, 9], pool: [17, 12, 21, 10], tabletop: [7, 17, 17, 11], persona: [8, 9, 11, 7], layout: [23, 9, 17, 6], journal: [16, 9, 21, 7], alt: [23, 13, 17, 10], palette: [23, 13, 17, 10], radio: [23, 13, 17, 10], brain: [16, 6, 8, 5], graph: [2, 9, 18, 7], speak: [4, 13, 23, 5], negotiate: [20, 13, 3, 8], schema: [13, 13, 7, 9], date: [1, 6, 12, 6], honest: [11, 6, 4, 4], few: [17, 6, 8, 5], pickup: [6, 13, 17, 12], architect: [0, 10, 8, 8], pass: [17, 6, 20, 6], whole: [7, 7, 8, 6], independent: [19, 8, 4, 7], contractor: [10, 8, 4, 8], clean: [1, 4, 3, 4], sheet: [14, 5, 17, 4], round: [7, 10, 21, 5], hub: [0, 7, 22, 5], they: [8, 3], vibe: [4, 8, 22, 8], billing: [12, 10, 13, 10], pulse: [18, 7, 9, 7], sunday: [6, 10, 5, 7], grocerie: [6, 17, 17, 11], graphic: [25, 10, 23, 8], searchable: [25, 10, 17, 6], inactive: [25, 12, 7, 11], essay: [24, 12, 17, 9], accessibility: [2, 12, 17, 10], two: [4, 4, 18, 4], optional: [1, 7, 20, 5], canva: [5, 12, 17, 9], spaced: [5, 12, 17, 9], tell: [6, 4, 20, 4], snap: [10, 8, 6, 7], frame: [17, 11, 23, 8], auditor: [4, 5, 8, 5], payout: [14, 12, 12, 10], speaker: [23, 10, 1, 9], principle: [4, 12, 7, 4], routing: [16, 8, 1, 7], look: [17, 6, 10, 4], asking: [17, 10, 19, 10], revenue: [19, 10, 12, 6], without: [17, 4], yourself: [24, 7, 4, 6], over: [10, 5, 17, 4], cyber: [15, 12, 4, 11], permission: [15, 12, 1, 9], finder: [20, 5, 11, 5], birthday: [20, 10, 1, 6], kalshi: [21, 12, 17, 9], sentiment: [21, 12, 17, 9], server: [15, 9, 2, 7], connection: [25, 10, 4, 9], level: [5, 7, 12, 5], webhook: [8, 10, 17, 7], guard: [15, 8, 12, 5], concierge: [22, 12, 10, 8], senior: [11, 10, 13, 5], human: [24, 5, 1, 5], honestly: [11, 12, 17, 8], update: [0, 5, 17, 5], working: [17, 6, 4, 5], until: [4, 4, 2, 4], agency: [13, 9, 19, 8], speed: [13, 9, 4, 9], carousel: [25, 12, 24, 9], happen: [25, 12, 17, 8], publishe: [24, 8, 1, 7], reverse: [2, 9, 17, 8], thin: [4, 11, 2, 9], thing: [20, 6, 1, 5], solo: [17, 8, 0, 7], folder: [3, 7, 25, 6], done: [11, 6, 0, 6], after: [24, 3, 1, 3], leak: [14, 9, 12, 7], router: [2, 8, 8, 6], eye: [18, 8, 1, 8], anything: [20, 5, 17, 4], hardening: [15, 16, 17, 11], japanese: [5, 8, 22, 5], consumer: [15, 12, 12, 8], prioritie: [0, 9, 16, 8], standup: [1, 15, 17, 9], library: [17, 8, 23, 6], statu: [22, 7, 10, 6], approval: [17, 5, 13, 5], sponsorship: [20, 12, 17, 8], emergency: [10, 12, 17, 8], solar: [10, 12, 16, 9], figma: [17, 14, 23, 11], unused: [14, 11, 25, 9], floor: [20, 9, 9, 6], keeper: [14, 7, 7, 5], applying: [11, 15, 17, 11], fitting: [11, 15, 17, 11], cost: [14, 5, 22, 5], line: [1, 5, 3, 4], bids: [4, 12, 7, 11], evidence: [17, 5, 9, 4], today: [17, 9, 3, 5], summarie: [25, 7, 18, 6], recording: [1, 9, 23, 8], miss: [4, 9, 5, 9], missed: [12, 11, 9, 7], seller: [17, 11, 20, 8], box: [4, 10, 20, 7], chatter: [21, 11, 17, 8], prediction: [21, 11, 7, 9], total: [22, 10, 14, 8], category: [14, 9, 1, 7], hard: [17, 6, 6, 6], hidden: [22, 11, 12, 8], time: [1, 4], adjuster: [12, 15, 4, 13], fine: [12, 15, 17, 9], policie: [12, 15, 17, 9], loss: [9, 11, 21, 9], see: [17, 7, 8, 6], burn: [4, 8, 21, 7], closure: [18, 11, 17, 10], literature: [18, 11, 17, 10], sector: [18, 11, 17, 10], craigslist: [17, 16, 20, 15], glasser: [13, 15, 17, 11], thrift: [20, 15, 17, 11], table: [6, 9, 4, 7], broken: [2, 7, 1, 7], idle: [7, 8, 2, 7], booked: [22, 15, 17, 9], directory: [3, 9, 13, 7], choose: [18, 4, 11, 4], reflection: [16, 11, 7, 10], auto: [12, 9, 4, 6], document: [12, 9, 17, 7], red: [15, 7, 0, 6], step: [5, 3], method: [2, 9, 17, 7], tested: [2, 9, 17, 7], practical: [9, 9, 17, 8], whenever: [4, 15, 1, 8], citation: [18, 7, 17, 6], block: [25, 7, 9, 4], glp: [9, 15, 12, 11], manual: [22, 11, 10, 11], heavy: [11, 11, 17, 7], face: [23, 9, 17, 7], person: [17, 6, 24, 5], careful: [2, 6, 22, 5], world: [4, 11, 22, 4], drive: [22, 5, 3, 4], wire: [7, 11, 21, 7], archivist: [8, 11, 17, 9], ssh: [8, 11, 17, 9], covering: [12, 8, 22, 6], material: [11, 9, 5, 7], packet: [11, 9, 12, 9], advisor: [12, 6, 14, 6], deposit: [17, 15, 12, 11], down: [15, 6, 4, 4], using: [15, 5, 17, 4], network: [15, 7, 10, 6], cleaning: [10, 14, 17, 11], outdoor: [10, 14, 17, 11], dos: [3, 11, 12, 8], mailbox: [3, 11, 17, 8], key: [8, 5, 24, 5], command: [4, 8, 8, 7], gemini: [2, 7, 1, 6], worker: [2, 7, 9, 7], english: [12, 6, 21, 4], buffer: [25, 11, 22, 9], feedback: [19, 9, 11, 5], pricing: [13, 9, 20, 8], exploited: [15, 14, 17, 10], gone: [15, 14, 12, 11], protection: [15, 14, 14, 12], vuln: [15, 14, 12, 11], guide: [22, 6, 4, 6], brokerage: [12, 14, 17, 14], texa: [12, 14, 17, 9], noisy: [3, 14, 17, 11], ahead: [1, 11, 4, 8], tree: [5, 8, 10, 8], fee: [20, 11, 1, 8], advocate: [4, 11, 14, 8], receptionist: [1, 14, 22, 10], pixel: [17, 14, 23, 10], http: [2, 8, 17, 7], response: [19, 10, 17, 7], state: [17, 10, 12, 8], general: [4, 9, 0, 8], rest: [1, 9, 0, 8], format: [13, 8, 24, 8], optimizer: [8, 8, 1, 7], preference: [8, 8, 22, 8], tidy: [8, 8, 12, 7], everyday: [5, 7, 22, 5], three: [17, 5, 4, 4], leftover: [6, 7, 16, 7], socratic: [5, 10, 0, 8], history: [20, 6, 7, 6], academic: [5, 14, 1, 12], ages: [5, 14, 17, 11], baby: [5, 14, 17, 11], profile: [13, 6, 25, 6], hardware: [2, 7, 22, 6], access: [4, 9, 15, 8], closer: [3, 10, 19, 9], payment: [17, 12, 12, 9], chaser: [14, 14, 17, 11], high: [6, 6, 25, 5], accountability: [9, 14, 11, 11], adjust: [9, 14, 1, 11], bedtime: [9, 14, 17, 9], demo: [4, 12, 25, 8], view: [25, 8, 19, 5], asked: [20, 10, 17, 7], flip: [17, 11, 20, 10], advertising: [13, 14, 12, 11], experience: [11, 10, 22, 8], strategy: [17, 9, 13, 8], forge: [23, 7, 8, 6], pack: [17, 6, 13, 4], quote: [1, 5, 25, 4], docs: [12, 7, 3, 6], adapt: [6, 13, 9, 11], rsvp: [1, 13, 17, 8], catalyst: [21, 13, 17, 11], dex: [21, 13, 17, 11], edge: [21, 13, 17, 11], quality: [8, 5, 20, 5], behavior: [2, 10, 17, 9], conductor: [2, 10, 17, 9], sits: [2, 10, 7, 9], spot: [21, 5, 15, 4], alpha: [21, 10, 17, 8], position: [21, 10, 17, 8], diy: [10, 10, 17, 7], errand: [10, 10, 17, 7], browser: [13, 7, 25, 6], confirm: [6, 8, 22, 7], nightly: [3, 5, 18, 4], office: [12, 8, 0, 5], intent: [19, 10, 22, 8], form: [24, 4, 5, 3], radar: [1, 4, 19, 4], sidekick: [21, 8, 10, 8], authorized: [15, 13, 6, 9], medicare: [15, 13, 9, 11], political: [15, 13, 17, 9], voicemail: [15, 13, 17, 9], slow: [22, 10, 8, 8], printable: [23, 8, 20, 7], context: [1, 6, 2, 5], finding: [25, 5, 2, 5], already: [6, 5, 14, 5], affect: [18, 10, 17, 9], entertainment: [18, 10, 17, 9], hacker: [13, 10, 18, 10], newsroom: [18, 10, 17, 9], roundup: [7, 9, 1, 7], threat: [15, 10, 18, 7], orchestrate: [2, 8, 11, 7], prove: [2, 8, 17, 7], saas: [14, 9, 2, 8], walk: [1, 5, 19, 4], stream: [4, 8, 23, 7], dollar: [4, 11, 14, 10], freelancer: [14, 10, 19, 8], bible: [24, 8, 5, 7], label: [3, 6, 4, 6], lab: [9, 8, 10, 4], shopify: [20, 8, 13, 7], partner: [4, 4, 5, 4], drafting: [12, 13, 17, 8], hear: [15, 10, 23, 10], shoot: [22, 10, 23, 10], double: [1, 13, 9, 9], lean: [0, 8, 17, 5], onboarding: [0, 8, 7, 6], lock: [7, 8, 15, 8], adult: [5, 8, 10, 7], desktop: [20, 6, 8, 6], actually: [6, 4], talk: [4, 7, 8, 4], seed: [19, 10, 7, 9], clinic: [9, 13, 17, 9], condition: [9, 13, 4, 13], fuel: [9, 13, 12, 10], classifie: [3, 13, 17, 10], ignore: [3, 13, 17, 10], switch: [7, 13, 4, 12], ordered: [6, 13, 7, 9], everything: [24, 6, 3, 5], gentle: [9, 9, 16, 6], equity: [21, 10, 17, 7], explain: [12, 8, 5, 4], tour: [17, 14, 22, 13], login: [15, 9, 1, 7], fans: [7, 8, 18, 8], odds: [22, 9, 21, 8], experiment: [13, 9, 25, 6], operator: [13, 5, 19, 3], repeat: [8, 8, 7, 6], picture: [4, 8, 5, 7], slide: [24, 9, 1, 8], stress: [4, 9, 12, 8], system: [4, 5, 18, 4], searche: [17, 10, 11, 7], checker: [24, 6, 15, 5], yes: [20, 4], discount: [12, 12, 20, 8], pacing: [24, 12, 17, 10], remember: [6, 8, 20, 7], gatekeeper: [15, 12, 1, 10], vulnerabilitie: [15, 12, 17, 9], vulnerability: [15, 12, 17, 9], more: [17, 5, 5, 5], led: [19, 12, 17, 9], objection: [4, 16, 17, 14], learner: [5, 12, 17, 10], require: [5, 12, 17, 10], offer: [17, 9, 19, 5], accounting: [12, 14, 14, 12], cancellation: [14, 12, 6, 10], overdue: [14, 12, 17, 10], propose: [1, 6, 8, 5], driver: [7, 12, 22, 9], scoring: [7, 12, 11, 9], dms: [15, 7, 25, 5], type: [22, 9, 17, 8], memorie: [8, 12, 17, 11], wipe: [8, 12, 17, 11], mention: [25, 6, 22, 6], eat: [6, 12, 9, 10], whatever: [6, 12, 17, 8], keys: [21, 6, 2, 6], install: [15, 6, 2, 5], unifi: [9, 12, 17, 8], package: [8, 4, 24, 4], criteria: [17, 14, 11, 12], side: [17, 8, 12, 7], miner: [17, 12, 21, 9], process: [0, 7, 17, 5], seat: [0, 5, 4, 4], quick: [1, 8, 6, 7], shift: [1, 12, 13, 7], cop: [21, 12, 17, 10], strategie: [17, 15, 21, 12], close: [17, 6, 1, 6], area: [17, 12, 10, 6], album: [22, 12, 23, 9], loud: [23, 9, 17, 8], talking: [22, 9, 23, 9], movie: [23, 7, 17, 6], than: [4, 9, 25, 8], buddy: [20, 6, 5, 5], anywhere: [10, 12, 17, 9], friction: [10, 12, 22, 11], lawn: [10, 12, 1, 11], lot: [10, 12, 17, 9], paint: [10, 12, 20, 10], train: [10, 12, 22, 11], appeal: [17, 14, 12, 12], register: [4, 13, 12, 12], easy: [6, 9, 17, 9], catalog: [16, 4, 8, 4], move: [13, 4, 14, 4] } };
-
-// src/lib/strip-emails.ts
-var EMAIL_RE2 = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
-var stripEmails = (s) => s.replace(EMAIL_RE2, "[email hidden]");
 
 // src/worker/dp/classify.ts
 var tokenize = (s) => (s.toLowerCase().match(/[a-z][a-z0-9]{2,}/g) ?? []).map((t) => t.length > 4 && t.endsWith("s") && !t.endsWith("ss") ? t.slice(0, -1) : t);
@@ -8389,6 +8390,52 @@ async function email(message, env, _ctx) {
     await logSend(env, "owner_summary", owner, null, false, e.code ?? "E_FORWARD_FAILED");
   }
 }
+var DIGEST_WINDOW_MS = 7 * 864e5;
+var DIGEST_SENT_KEY = "digest_last_sent";
+var DIGEST_RENDER_LIMIT = 10;
+var DIGEST_RETRY_LIMIT = 3;
+var DIGEST_PRUNE_MS = 30 * 864e5;
+var LAUNCH_FIRST_SEEN = "2026-10-30T00:00:00.000Z";
+var SEEN_ISO = `CASE WHEN length(first_seen) = 10 AND first_seen GLOB '????-??-??' THEN first_seen || 'T00:00:00.000Z' ELSE first_seen END`;
+var SUBSCRIBED_AT = `substr(COALESCE(s.confirmed_at, s.created_at), 1, 19)`;
+var DIGEST_HELD_KEY = "digest_held";
+async function readHeld(db) {
+  const meta = await readMeta(db, [DIGEST_HELD_KEY]);
+  const raw = meta[DIGEST_HELD_KEY];
+  if (!raw) return [];
+  try {
+    const v = JSON.parse(raw);
+    return Array.isArray(v) ? v.filter((x) => typeof x === "string" && x.length > 0) : [];
+  } catch {
+    return [];
+  }
+}
+async function writeHeld(db, codes) {
+  await metaPut(db, DIGEST_HELD_KEY, JSON.stringify([...new Set(codes)])).run();
+}
+async function holdPending(db, since, windowEnd) {
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN).all();
+  const prev = await readHeld(db);
+  await writeHeld(db, [...prev, ...results.map((r) => r.code)]);
+}
+async function liveHeld(db, held) {
+  if (!held.length) return [];
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'live' AND source != 'seed' AND code IN (${held.map(() => "?").join(",")})`
+  ).bind(...held).all();
+  return results.map((r) => r.code);
+}
+async function settleHeld(db) {
+  const held = await readHeld(db);
+  if (!held.length) return;
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND code IN (${held.map(() => "?").join(",")})`
+  ).bind(...held).all();
+  const pending = new Set(results.map((r) => r.code));
+  await writeHeld(db, held.filter((c) => pending.has(c)));
+}
 async function digest(controller, env) {
   if (!isOn(env.DIGEST_ENABLED)) {
     console.log("digest: dark (DIGEST_ENABLED != 1), 0 sends");
@@ -8399,26 +8446,136 @@ async function digest(controller, env) {
     return;
   }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
-  if (!res.ok) {
-    console.error(`digest: payload ${res.status}, 0 sends`);
+  const scheduledIso = new Date(controller.scheduledTime).toISOString();
+  const db = env.DB;
+  await db.prepare("DELETE FROM digest_delivery WHERE window_end < ? AND status != 'pending'").bind(new Date(controller.scheduledTime - DIGEST_PRUNE_MS).toISOString()).run();
+  const existing = await db.prepare("SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1").first();
+  let since;
+  let windowEnd;
+  let windowId;
+  let openedAt;
+  if (existing) {
+    since = existing.since_iso;
+    windowEnd = existing.window_end;
+    windowId = existing.window_id;
+    openedAt = existing.opened_at;
+  } else {
+    const meta = await readMeta(db, [DIGEST_SENT_KEY]);
+    since = meta[DIGEST_SENT_KEY] ?? new Date(controller.scheduledTime - DIGEST_WINDOW_MS).toISOString();
+    windowEnd = scheduledIso;
+    windowId = windowEnd;
+    openedAt = scheduledIso;
+  }
+  if (existing && existing.opened_at < scheduledIso) {
+    await db.prepare("UPDATE digest_delivery SET status = 'sent' WHERE window_id = ? AND status = 'pending'").bind(windowId).run();
+  }
+  const heldNow = await liveHeld(db, await readHeld(db));
+  const where = `status = 'live' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`;
+  const countIn = async (lo, hi) => Number((await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE ${where}`).bind(lo, hi, LAUNCH_FIRST_SEEN).first())?.n ?? 0);
+  let newCount = await countIn(since, windowEnd);
+  if (!newCount && !heldNow.length) {
+    if (existing) {
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
+      await db.prepare("DELETE FROM digest_open WHERE id = 1").run();
+      await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
+      console.log(`digest: closed empty window ${windowId} since ${since}, 0 sends`);
+    } else console.log(`digest: 0 new listings since ${since}, 0 sends`);
     return;
   }
-  const payload = await res.json();
-  const cap = Number(env.DIGEST_MAX_SENDS ?? "100");
-  const { results } = await env.DB.prepare("SELECT email, unsub_token FROM subscribers WHERE status='active' ORDER BY id LIMIT ?").bind(digestRecipientCount(1e9, cap)).all();
-  const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? "Thursday" : "Monday";
-  let sent = 0;
-  for (const s of results) {
-    const m = digestMail(payload, weekday, s.unsub_token, postal);
-    const r = await sendMail(env, env.EMAIL, "digest", { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
-    if (r.ok) sent++;
-    if (r.code === "E_RATE_LIMIT_EXCEEDED" || r.code?.startsWith("E_QUOTA")) {
-      console.error(`digest: stopped on ${r.code}`);
-      break;
+  if (!existing) {
+    await db.prepare("INSERT OR IGNORE INTO digest_open (id, window_id, since_iso, window_end, opened_at) VALUES (1, ?, ?, ?, ?)").bind(windowId, since, windowEnd, openedAt).run();
+    const locked = await db.prepare("SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1").first();
+    if (!locked) throw new Error("digest_open missing after insert");
+    since = locked.since_iso;
+    windowEnd = locked.window_end;
+    windowId = locked.window_id;
+    openedAt = locked.opened_at;
+    newCount = await countIn(since, windowEnd);
+    if (!newCount && !heldNow.length) {
+      console.log(`digest: 0 new listings since ${since}, 0 sends`);
+      return;
     }
   }
-  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap}`);
+  const heldSql = heldNow.length ? ` OR (status = 'live' AND source != 'seed' AND code IN (${heldNow.map(() => "?").join(",")}))` : "";
+  const { results: fresh2 } = await db.prepare(
+    `SELECT code, name, description, category FROM bots WHERE (${where})${heldSql} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, ...heldNow, DIGEST_RENDER_LIMIT).all();
+  const totals = await db.prepare(
+    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'"
+  ).first();
+  const payload = {
+    asOf: scheduledIso.slice(0, 10),
+    totalBots: Number(totals?.total ?? newCount),
+    categoryCount: Number(totals?.cats ?? 0),
+    top: fresh2.map((b) => ({ id: botId(b.category, b.code), name: stripEmails(b.name), description: stripEmails(b.description) }))
+  };
+  const cap = Number(env.DIGEST_MAX_SENDS ?? "100");
+  const { results } = await db.prepare(
+    `SELECT s.id, s.email, s.unsub_token FROM subscribers s
+      WHERE s.status = 'active'
+        AND ${SUBSCRIBED_AT} <= substr(?, 1, 19)
+        AND NOT EXISTS (
+          SELECT 1 FROM digest_delivery d
+          WHERE d.subscriber_id = s.id AND d.window_id = ? AND d.status IN ('sent', 'failed')
+        )
+      ORDER BY s.id LIMIT ?`
+  ).bind(openedAt, windowId, digestRecipientCount(1e9, cap)).all();
+  const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? "Thursday" : "Monday";
+  let sent = 0;
+  let stopped = false;
+  for (const s of results) {
+    const claim = await db.prepare(
+      `INSERT INTO digest_delivery (subscriber_id, window_id, window_end, attempts, status) VALUES (?, ?, ?, 0, 'pending') ON CONFLICT(subscriber_id, window_id) DO NOTHING`
+    ).bind(s.id, windowId, windowEnd).run();
+    let attempts = 0;
+    if (Number(claim.meta.changes) === 0) {
+      const row = await db.prepare("SELECT status, attempts FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?").bind(s.id, windowId).first();
+      if (!row || row.status === "sent" || row.status === "failed" || row.status === "pending") continue;
+      attempts = Number(row.attempts);
+      await db.prepare(`UPDATE digest_delivery SET status = 'pending' WHERE subscriber_id = ? AND window_id = ? AND status = 'retry'`).bind(s.id, windowId).run();
+    }
+    const m = digestMail(payload, weekday, s.unsub_token, postal);
+    const r = await sendMail(env, env.EMAIL, "digest", { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
+    if (!r.ok) {
+      if (r.code === "E_RATE_LIMIT_EXCEEDED" || r.code?.startsWith("E_QUOTA")) {
+        await db.prepare("DELETE FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?").bind(s.id, windowId).run();
+        console.error(`digest: stopped on ${r.code}`);
+        stopped = true;
+        break;
+      }
+      const next = attempts + 1;
+      const terminal = next >= DIGEST_RETRY_LIMIT;
+      await db.prepare("UPDATE digest_delivery SET status = ?, attempts = ? WHERE subscriber_id = ? AND window_id = ?").bind(terminal ? "failed" : "retry", next, s.id, windowId).run();
+      if (terminal) console.error(`DIGEST_TERMINAL subscriber=${s.id} window=${windowId} code=${r.code} attempts=${next}`);
+      else console.error(`digest: retry subscriber=${s.id} window=${windowId} code=${r.code} attempts=${next}`);
+      continue;
+    }
+    try {
+      await db.prepare(`UPDATE digest_delivery SET status = 'sent' WHERE subscriber_id = ? AND window_id = ?`).bind(s.id, windowId).run();
+    } catch (e) {
+      console.error(`digest: sent-write failed subscriber=${s.id} window=${windowId} ${e.message}`);
+      continue;
+    }
+    sent++;
+  }
+  if (!stopped) {
+    const pending = await db.prepare(
+      `SELECT COUNT(*) AS n FROM subscribers s WHERE s.status = 'active'
+         AND ${SUBSCRIBED_AT} <= substr(?, 1, 19)
+         AND NOT EXISTS (
+           SELECT 1 FROM digest_delivery d
+           WHERE d.subscriber_id = s.id AND d.window_id = ? AND d.status IN ('sent', 'failed')
+         )`
+    ).bind(openedAt, windowId).first();
+    if (Number(pending?.n ?? 1) === 0) {
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
+      await db.prepare("DELETE FROM digest_open WHERE id = 1").run();
+      await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
+    }
+  }
+  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
 var index_default = {
   async fetch(request, env, ctx) {
@@ -8434,7 +8591,9 @@ var index_default = {
   },
   email,
   async scheduled(controller, env, ctx) {
-    if (controller.cron === DIGEST_CRON) ctx.waitUntil(digest(controller, env));
+    if (controller.cron === DIGEST_CRON) ctx.waitUntil(digest(controller, env).catch((e) => {
+      console.error(`DIGEST_FAILED ${e.message}`);
+    }));
     else ctx.waitUntil(runDataPlane(env, controller.scheduledTime).then((r) => console.log("dataplane", JSON.stringify(r))).catch((e) => console.error("dataplane failed:", e.message)));
   }
 };

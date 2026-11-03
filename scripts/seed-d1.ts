@@ -1,5 +1,5 @@
 // D12/section 3: write an idempotent INSERT OR IGNORE seed from src/data/bots.json and apply it to D1.
-// Seed bots are live, first seen 2026-10-30. Re-running changes nothing (existing rows are ignored).
+// Seed bots are live, first seen at the launch instant. Re-running changes nothing (existing rows are ignored).
 // Usage: tsx scripts/seed-d1.ts --remote | --local | --dry   (--dry writes the file and prints its path)
 import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -10,7 +10,7 @@ import { stripEmails } from '../src/lib/strip-emails';
 const ROOT = resolve(import.meta.dirname, '..');
 const mode = process.argv[2] ?? '--dry';
 if (!['--remote', '--local', '--dry'].includes(mode)) { console.error('usage: seed-d1.ts --remote | --local | --dry'); process.exit(2); }
-const FIRST_SEEN = '2026-10-30';
+const FIRST_SEEN = '2026-10-30T00:00:00.000Z';
 const allBots = JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'utf8')) as { code: string; name: string; author: string; description: string; cat: string; cats: string[] }[];
 const bots = allBots.filter((b) => /^[A-Za-z0-9_-]{21}$/.test(b.code));
 

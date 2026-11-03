@@ -14,7 +14,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, isDead, record } from './dp/telemetry';
-import { categoryPage, uncategorizedPage, feedJson, feedXml, mergeState, searchLive, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
+import { categoryPage, codesWithoutDead, deadSeedCount, uncategorizedPage, feedJson, feedXml, mergeState, searchLive, searchPayload, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId, totalWithoutDead } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId } from './dp/util';
 
@@ -483,15 +483,53 @@ async function dbBotPage(request: Request, env: Env, ctx: ExecutionContext, notF
   return renderBotPage(tpl, row);
 }
 
-/** D28/O10: static files merged with the live bots and the dead list; null = nothing to merge, serve the asset. */
+/** Strip validators and mark a rewritten body uncacheable. The asset's etag would hide the dead-set edit. */
+function mergedHeaders(res: Response): Headers {
+  const h = new Headers(res.headers);
+  for (const k of ['etag', 'last-modified', 'content-length']) h.delete(k);
+  h.set('Cache-Control', 'no-cache');
+  return h;
+}
+/** D28/O10: static files merged with the live bots and the dead list; null = nothing to merge, serve the asset.
+ *  Dead set (same D1 list as sitemapStatic): search-cat drops dead bots from /search/<slug>.json and /api/v1/categories/<slug>.json; totals lowers totalBots on /search/index.json and /api/v1/index.json by the dead codes this build shipped; codes drops those codes from /api/v1/codes.json. */
 async function mergedAsset(request: Request, env: Env, path: string): Promise<Response | null> {
   const cat = CATEGORY_RE.exec(path)?.[1];
-  const kind = path === '/search/live.json' ? 'search' : cat && CATEGORY_SLUGS.has(cat) ? 'category'
+  const searchFile = /^\/search\/([a-z0-9-]+)\.json$/.exec(path);
+  const apiCatFile = /^\/api\/v1\/categories\/([a-z0-9-]+)\.json$/.exec(path);
+  const searchSlug = searchFile && CATEGORY_SLUGS.has(searchFile[1]) ? searchFile[1] : null;
+  const apiCatSlug = apiCatFile && CATEGORY_SLUGS.has(apiCatFile[1]) ? apiCatFile[1] : null;
+  const kind = path === '/search/live.json' ? 'search'
+    : path === '/search/index.json' || path === '/api/v1/index.json' ? 'totals'
+    : path === '/api/v1/codes.json' ? 'codes'
+    : searchSlug || apiCatSlug ? 'search-cat'
+    : cat && CATEGORY_SLUGS.has(cat) ? 'category'
     : ['/feed.json', '/feed.xml', '/sitemap-index.xml', '/sitemap-0.xml', '/sitemap-live.xml'].includes(path) ? path : null;
   if (!kind) return null;
   const m = await mergeState(env.DB, env.ASSETS);
   if (!m || (!m.extras.length && !m.dead.size)) return kind === '/sitemap-live.xml' ? notFoundPage(request, env) : null;
   if (kind === 'search') return searchLive(m);
+  // Counts and codes only change when a shipped bot has died. Extras live in sitemap-live.xml, not in these files.
+  if (kind === 'totals' || kind === 'codes' || kind === 'search-cat') {
+    if (!m.dead.size) return null;
+    const res = await env.ASSETS.fetch(unconditional(request));
+    if (res.status !== 200) return res;
+    const body = await res.text();
+    let out = body;
+    if (kind === 'totals') {
+      let seed: Map<string, string> | null = null;
+      try { seed = await seedMap(env.ASSETS); } catch { seed = null; }
+      const n = deadSeedCount(m.dead, seed);
+      if (!n) return new Response(body, { status: 200, headers: res.headers });
+      out = totalWithoutDead(body, n);
+    } else if (kind === 'codes') {
+      out = codesWithoutDead(body, m.dead);
+      if (out === body) return new Response(body, { status: 200, headers: res.headers });
+    } else {
+      out = searchPayload(body, m.dead);
+      if (out === body) return new Response(body, { status: 200, headers: res.headers });
+    }
+    return new Response(out, { status: 200, headers: mergedHeaders(res) });
+  }
   const xml = { headers: { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=300' } };
   if (kind === '/sitemap-live.xml') return m.extras.length ? new Response(sitemapLive(m), xml) : notFoundPage(request, env);
   const res = await env.ASSETS.fetch(unconditional(request));

@@ -135,6 +135,43 @@ export function sitemapStatic(body: string, m: Merge): string {
   if (!m.dead.size) return body;
   return body.split('</url>').filter((u) => { const x = /\/bots\/([^/<]+)\/<\/loc>/.exec(u); return !(x && m.dead.has(splitId(x[1])[1].toLowerCase())); }).join('</url>');
 }
+
+// Dead set (same D1 list as sitemapStatic) applied at request time: /search/<slug>.json and
+// /api/v1/categories/<slug>.json drop dead seed bots; /search/index.json and /api/v1/index.json
+// lower totalBots by how many of those codes the build shipped; /api/v1/codes.json drops them.
+/** Dead codes the deployed build listed. A dead bot the build never shipped is not in the sitemap, so it must not change totalBots. */
+export function deadSeedCount(dead: Set<string>, seed: Map<string, string> | null): number {
+  if (!seed || !dead.size) return 0;
+  let n = 0;
+  for (const c of dead) if (seed.has(c.toLowerCase())) n++;
+  return n;
+}
+const withNl = (body: string, json: string) => json + (body.endsWith('\n') ? '\n' : '');
+/** totalBots minus the dead seed bots sitemapStatic removes. */
+export function totalWithoutDead(body: string, removed: number): string {
+  if (!removed) return body;
+  const j = JSON.parse(body) as { totalBots?: number };
+  if (typeof j.totalBots !== 'number') return body;
+  return withNl(body, JSON.stringify({ ...j, totalBots: j.totalBots - removed }));
+}
+/** codes.json: drop dead codes. Codes the build never shipped are already absent. */
+export function codesWithoutDead(body: string, dead: Set<string>): string {
+  if (!dead.size) return body;
+  const j = JSON.parse(body) as { codes?: string[] };
+  if (!Array.isArray(j.codes)) return body;
+  const codes = j.codes.filter((c) => !dead.has(c.toLowerCase()));
+  if (codes.length === j.codes.length) return body;
+  return withNl(body, JSON.stringify({ ...j, codes }));
+}
+/** A per-category search payload: drop dead bots and fix its count. */
+export function searchPayload(body: string, dead: Set<string>): string {
+  if (!dead.size) return body;
+  const j = JSON.parse(body) as { bots?: { i: string }[]; count?: number };
+  if (!Array.isArray(j.bots)) return body;
+  const bots = j.bots.filter((b) => !dead.has(splitId(b.i)[1].toLowerCase()));
+  if (bots.length === j.bots.length) return body;
+  return withNl(body, JSON.stringify({ ...j, count: bots.length, bots }));
+}
 export function sitemapLive(m: Merge): string {
   return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${m.extras.map((b) => `<url><loc>${SITE}/bots/${esc(b.id)}/</loc></url>`).join('')}</urlset>`;
 }

@@ -509,7 +509,11 @@ const SEED_BOT2 = (JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'ut
 const STATIC: Record<string, [string, string]> = {
   '/bot-template/': ['bot-template/index.html', 'text/html'], '/api/v1/seed-codes.json': ['api/v1/seed-codes.json', 'application/json'],
   '/feed.json': ['feed.json', 'application/json'], '/feed.xml': ['feed.xml', 'application/xml'], '/sitemap-index.xml': ['sitemap-index.xml', 'application/xml'], '/sitemap-0.xml': ['sitemap-0.xml', 'application/xml'],
-  '/search/live.json': ['search/live.json', 'application/json'], '/categories/travel/': ['categories/travel/index.html', 'text/html'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
+  '/search/live.json': ['search/live.json', 'application/json'], '/search/index.json': ['search/index.json', 'application/json'],
+  '/api/v1/index.json': ['api/v1/index.json', 'application/json'], '/api/v1/codes.json': ['api/v1/codes.json', 'application/json'],
+  [`/search/${SEED_BOT2.cat}.json`]: [`search/${SEED_BOT2.cat}.json`, 'application/json'],
+  [`/api/v1/categories/${SEED_BOT2.cat}.json`]: [`api/v1/categories/${SEED_BOT2.cat}.json`, 'application/json'],
+  '/categories/travel/': ['categories/travel/index.html', 'text/html'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
 };
 const distAssets = { fetch: async (r: Request) => {
   const p = new URL(r.url).pathname; const hit = STATIC[p];
@@ -625,6 +629,21 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   assert.ok(fx.includes(`/bots/travel-${NEW_A}/`) && !fx.toLowerCase().includes(SEED_BOT2.code.toLowerCase()) && !fx.includes('<script>'));
   assert.ok(si.includes('sitemap-live.xml')); assert.ok(!s0.toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`) && distFile('sitemap-0.xml').toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`));
   assert.ok(sl.includes(`/bots/travel-${NEW_A}/`) && sl.includes(`/bots/uncategorized-${NEW_B}/`) && !sl.includes(NEW_DEAD) && !sl.includes(NEW_EXC));
+  // same dead set on the search index, codes.json and totalBots: sitemap bot count == search index totalBots
+  const idx = JSON.parse(await g('/search/index.json')) as { totalBots: number };
+  const builtIdx = JSON.parse(distFile('search/index.json')) as { totalBots: number };
+  const sitemapBots = (s0.match(/\/bots\/[^/<]+\//g) ?? []).length;
+  assert.equal(idx.totalBots, builtIdx.totalBots - 1, 'totalBots drops the one dead seed bot, not the dead bot the build never shipped');
+  assert.equal(sitemapBots, idx.totalBots, 'sitemap bot count == search index totalBots');
+  const api = JSON.parse(await g('/api/v1/index.json')) as { totalBots: number };
+  assert.equal(api.totalBots, idx.totalBots, '/api/v1/index.json totalBots matches the search index');
+  const codes = JSON.parse(await g('/api/v1/codes.json')) as { codes: string[] };
+  assert.equal(codes.codes.length, idx.totalBots);
+  assert.ok(!codes.codes.includes(SEED_BOT2.code.toLowerCase()), 'codes.json drops the dead seed code');
+  const catSearch = JSON.parse(await g(`/search/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
+  const apiCat = JSON.parse(await g(`/api/v1/categories/${SEED_BOT2.cat}.json`)) as { bots: { i: string }[] };
+  assert.ok(!catSearch.bots.some((b) => b.i === SEED_BOT2.slug) && !apiCat.bots.some((b) => b.i === SEED_BOT2.slug), 'dead seed bot leaves the search payloads');
+  assert.equal(catSearch.count, catSearch.bots.length);
   console.log('      ' + q.map(([p, n]) => `${p}=${n}`).join('  '));
 });
 await t('D27a: changes.json added lists every bot that was live once (id + code), keeps a dead one, never an excluded or pending one', async () => {

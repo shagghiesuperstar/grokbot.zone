@@ -18,6 +18,8 @@ import { go, isDead, record } from './dp/telemetry';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
+import { LINK_HEADER, agentResponse, htmlToMarkdown, isHtml, wantsMarkdown } from './agent';
+import { handleMcp } from './mcp';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -598,6 +600,39 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
 
+function addVary(headers: Headers, token: string) {
+  const cur = headers.get('Vary');
+  if (!cur) headers.set('Vary', token);
+  else if (!cur.toLowerCase().split(',').map((s) => s.trim()).includes(token.toLowerCase())) headers.set('Vary', `${cur}, ${token}`);
+}
+
+/** Security headers on every response. HTML gets the agent Link header. Markdown and problem+json are opt-in. */
+async function finish(request: Request, res: Response): Promise<Response> {
+  const headers = new Headers(res.headers);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
+  const html = isHtml(res);
+  if (html) {
+    headers.append('Link', LINK_HEADER);
+    addVary(headers, 'Accept');
+  }
+  const accept = request.headers.get('accept') ?? '';
+  const jsonErr = res.status >= 400 && (res.headers.get('content-type') ?? '').includes('application/json') && accept.includes('application/problem+json');
+  if (jsonErr) {
+    const body = await res.json().catch(() => ({})) as Record<string, unknown>;
+    headers.set('Content-Type', 'application/problem+json; charset=utf-8');
+    headers.delete('content-length');
+    const problem = { type: 'about:blank', title: String(body.error ?? 'error'), status: res.status, detail: body.errors ? JSON.stringify(body.errors) : String(body.error ?? '') };
+    return new Response(request.method === 'HEAD' ? null : JSON.stringify(problem), { status: res.status, headers });
+  }
+  if (html && wantsMarkdown(request)) {
+    const md = htmlToMarkdown(await res.text());
+    headers.set('Content-Type', 'text/markdown; charset=utf-8');
+    for (const k of ['etag', 'last-modified', 'content-length']) headers.delete(k);
+    return new Response(request.method === 'HEAD' ? null : md, { status: res.status, statusText: res.statusText, headers });
+  }
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+}
+
 // ---- entry ----
 
 export default {
@@ -608,9 +643,7 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
     const res = await route(request, env, ctx, url);
-    const headers = new Headers(res.headers);
-    for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
-    return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+    return finish(request, res);
   },
   email,
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
@@ -624,6 +657,15 @@ export default {
 async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL): Promise<Response> {
   const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname;
   const m = request.method;
+  if (path === '/mcp') {
+    return handleMcp(request, {
+      dispatch: (req) => route(req, env, ctx, new URL(req.url)),
+      submit: (req) => submit(req, env, ctx),
+      subscribe: (req) => subscribe(req, env, ctx),
+    });
+  }
+  const agent = await agentResponse(request, env, path);
+  if (agent) return agent;
   if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);
   try {
     if (path === '/api/health' && (m === 'GET' || m === 'HEAD')) return await health(env);

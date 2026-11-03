@@ -13,6 +13,7 @@ import { allCategories, meta } from '../lib/data';
   description={`Search and browse thousands of public Grok bot listings across ${meta.categoryCount} categories. Find the bot for the job, then open it. Listings as of ${meta.asOf}.`}
   path="/"
   jsonLd={[
+    { '@context': 'https://schema.org', '@type': 'Organization', name: 'GrokBot Zone', url: 'https://grokbot.zone/', logo: 'https://grokbot.zone/favicon.svg', description: 'Independent index of public Grok bot listings.' },
     { '@context': 'https://schema.org', '@type': 'WebSite', name: 'GrokBot Zone', url: 'https://grokbot.zone/',
       potentialAction: { '@type': 'SearchAction', target: 'https://grokbot.zone/bots/?q={search_term_string}', 'query-input': 'required name=search_term_string' } },
   ]}

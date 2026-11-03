@@ -839,5 +839,72 @@ await t('D4 media: other methods and missing files fall through to the assets un
   assert.equal(miss.res.status, 404); assert.equal(await miss.res.text(), 'not found page'); assert.equal(miss.res.headers.get('cache-control'), null);
 });
 
+const mcpPost = (env: unknown, body: unknown, headers: Record<string, string> = {}) =>
+  call('/mcp', env, makeCtx(), { method: 'POST', headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream', ...headers }, body: JSON.stringify(body) });
+
+await t('MCP: GET /mcp is 405 JSON, not 404', async () => {
+  const env = makeEnv();
+  const res = await call('/mcp', env, makeCtx());
+  assert.equal(res.status, 405);
+  assert.equal(res.headers.get('content-type')?.includes('application/json'), true);
+  const body = await res.json() as { hint?: string };
+  assert.equal(typeof body.hint, 'string');
+});
+
+await t('MCP: initialize + tools/list returns the 9 exact names, sorted', async () => {
+  const env = makeEnv();
+  const init = await mcpPost(env, { jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-11-25', capabilities: {}, clientInfo: { name: 'test', version: '0' } } });
+  assert.equal(init.status, 200);
+  const initBody = await init.json() as { result: { protocolVersion: string; serverInfo: { name: string } } };
+  assert.equal(initBody.result.protocolVersion, '2025-11-25');
+  assert.equal(initBody.result.serverInfo.name, 'grokbot.zone');
+  const listed = await mcpPost(env, { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
+  const tools = ((await listed.json()) as { result: { tools: { name: string }[] } }).result.tools.map((t) => t.name);
+  assert.deepEqual(tools, [
+    'grokbot_check_listed', 'grokbot_get_bot', 'grokbot_get_category', 'grokbot_health', 'grokbot_list_categories',
+    'grokbot_search', 'grokbot_submit_bot', 'grokbot_subscribe', 'grokbot_trending',
+  ]);
+});
+
+await t('MCP: server/discover speaks 2026-07-28', async () => {
+  const env = makeEnv();
+  const res = await mcpPost(env, { jsonrpc: '2.0', id: 'discover-1', method: 'server/discover', params: {} });
+  const body = await res.json() as { result: { supportedVersions: string[]; _meta: Record<string, { name: string }> } };
+  assert.equal(body.result.supportedVersions.includes('2026-07-28'), true);
+  assert.equal(body.result._meta['io.modelcontextprotocol/serverInfo'].name, 'grokbot.zone');
+});
+
+await t('MCP: notifications/initialized is 202', async () => {
+  const env = makeEnv();
+  const res = await mcpPost(env, { jsonrpc: '2.0', method: 'notifications/initialized' });
+  assert.equal(res.status, 202);
+});
+
+await t('MCP: foreign Origin with credentials is 403; without credentials it is public', async () => {
+  const env = makeEnv();
+  const blocked = await mcpPost(env, { jsonrpc: '2.0', id: 1, method: 'ping' }, { authorization: 'Bearer x', origin: 'https://evil.example' });
+  assert.equal(blocked.status, 403);
+  const open = await mcpPost(env, { jsonrpc: '2.0', id: 1, method: 'ping' }, { origin: 'https://evil.example' });
+  assert.equal(open.status, 200);
+});
+
+await t('MCP: submit_bot with an invalid email is isError and writes no row', async () => {
+  const env = makeEnv();
+  const res = await mcpPost(env, { jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'grokbot_submit_bot', arguments: { name: 'Nope Bot', link: 'https://x.ai/bot/NewBot-12345000000000', category: 'privacy-security-scam-protection', description: 'This description is long enough.', email: 'not-an-email' } } });
+  const body = await res.json() as { result: { isError: boolean; structuredContent: { errors?: Record<string, string> } } };
+  assert.equal(body.result.isError, true);
+  assert.equal(typeof body.result.structuredContent.errors?.email, 'string');
+  assert.equal(count(env, 'submissions'), 0);
+});
+
+await t('MCP: grokbot_health tools/call succeeds against the local D1 shim', async () => {
+  const env = makeEnv();
+  const res = await mcpPost(env, { jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'grokbot_health', arguments: {} } });
+  const body = await res.json() as { result: { isError: boolean; structuredContent: { ok: boolean; d1: boolean } } };
+  assert.equal(body.result.isError, false);
+  assert.equal(body.result.structuredContent.ok, true);
+  assert.equal(body.result.structuredContent.d1, true);
+});
+
 console.log(failed ? `test-worker: ${n} passed, ${failed} FAILED` : `test-worker: ${n} passed`);
 process.exit(failed ? 1 : 0);

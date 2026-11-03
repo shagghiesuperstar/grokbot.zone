@@ -1,0 +1,74 @@
+<script is:inline>
+  (function () {
+    var ctx = document.modelContext || navigator.modelContext;
+    if (!ctx || typeof ctx.registerTool !== 'function') return;
+    var started = Date.now();
+    function words(q) {
+      return String(q || '').toLowerCase().split(/\s+/).filter(Boolean).slice(0, 12);
+    }
+    ctx.registerTool({
+      name: 'search_bots',
+      description: 'Search public Grok bot listings by words in the name or description.',
+      inputSchema: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['query'],
+        properties: { query: { type: 'string', maxLength: 200 }, category: { type: 'string', maxLength: 80 } },
+      },
+      annotations: { readOnlyHint: true },
+      execute: async function (args) {
+        var q = words(args && args.query);
+        if (!q.length) return { bots: [] };
+        var slugs = [];
+        if (args && args.category) slugs = [args.category];
+        else {
+          var cats = await fetch('/api/v1/categories.json').then(function (r) { return r.json(); });
+          slugs = (cats || []).map(function (c) { return c.slug; });
+        }
+        var hits = [];
+        for (var i = 0; i < slugs.length; i++) {
+          var doc = await fetch('/api/v1/categories/' + slugs[i] + '.json').then(function (r) { return r.ok ? r.json() : null; });
+          var bots = (doc && doc.bots) || [];
+          for (var j = 0; j < bots.length; j++) {
+            var name = String(bots[j].n || '').toLowerCase();
+            var desc = String(bots[j].d || '').toLowerCase();
+            var score = 0;
+            for (var k = 0; k < q.length; k++) {
+              if (name.indexOf(q[k]) >= 0) score += 2;
+              if (desc.indexOf(q[k]) >= 0) score += 1;
+            }
+            if (score) hits.push({ id: bots[j].i, name: bots[j].n, description: bots[j].d, category: slugs[i], score: score });
+          }
+        }
+        hits.sort(function (a, b) { return b.score - a.score; });
+        return { bots: hits.slice(0, 5) };
+      },
+    });
+    ctx.registerTool({
+      name: 'submit_bot',
+      description: 'Submit a public Grok bot for listing. A receipt email is sent. The bot is not public until it is checked.',
+      inputSchema: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['name', 'link', 'category', 'description', 'email'],
+        properties: {
+          name: { type: 'string', maxLength: 120 },
+          link: { type: 'string', maxLength: 120 },
+          category: { type: 'string', maxLength: 80 },
+          description: { type: 'string', maxLength: 500 },
+          email: { type: 'string', maxLength: 254 },
+          author: { type: 'string', maxLength: 80 },
+        },
+      },
+      annotations: { readOnlyHint: false },
+      execute: async function (args) {
+        var body = Object.assign({}, args, { company_website: '', filled_ms: Math.max(Date.now() - started, 4000) });
+        var res = await fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+        var text = await res.text();
+        var parsed = {};
+        try { parsed = JSON.parse(text); } catch (e) { parsed = { error: text }; }
+        return { status: res.status, body: parsed };
+      },
+    });
+  })();
+</script>

@@ -17,7 +17,7 @@ import { allCategories } from '../lib/data';
     </ol>
     <section class="panel formbox" aria-labelledby="form-h">
       <h2 id="form-h">Submit a bot</h2>
-      <form id="submit-form" action="/api/submit" method="post" novalidate hidden>
+      <form id="submit-form" action="/api/submit" method="post" novalidate hidden toolname="submit_bot" tooldescription="Submit a public Grok bot for listing. A receipt email is sent. The bot is not public until it is checked.">
         <label>Bot name<input name="name" required minlength="3" maxlength="120" autocomplete="off" /></label>
         <label>Author (optional)<input name="author" maxlength="80" autocomplete="off" /></label>
         <label>Bot link<input name="link" required placeholder="https://x.ai/bot/..." inputmode="url" autocomplete="off" /></label>

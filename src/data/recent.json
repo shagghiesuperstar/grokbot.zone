@@ -5,157 +5,157 @@
   {
    "slug": "research-news-briefings",
    "label": "Research, News & Briefings",
-   "count": 725,
+   "count": 731,
    "asOf": "2026-10-28"
   },
   {
    "slug": "coding-software",
    "label": "Coding & Software",
-   "count": 547,
+   "count": 574,
    "asOf": "2026-10-28"
   },
   {
    "slug": "productivity-personal-assistant",
    "label": "Productivity & Personal Assistant",
-   "count": 547,
+   "count": 549,
    "asOf": "2026-10-28"
   },
   {
    "slug": "video-images-audio-design",
    "label": "Video, Images, Audio & Design",
-   "count": 494,
+   "count": 543,
    "asOf": "2026-10-28"
   },
   {
    "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
    "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
-   "count": 453,
+   "count": 501,
    "asOf": "2026-10-28"
   },
   {
    "slug": "business-operations",
    "label": "Business & Operations",
-   "count": 355,
+   "count": 358,
    "asOf": "2026-10-28"
   },
   {
    "slug": "trading-crypto-investing",
    "label": "Trading, Crypto & Investing",
-   "count": 340,
+   "count": 353,
    "asOf": "2026-10-28"
   },
   {
    "slug": "money-personal-finance",
    "label": "Money & Personal Finance",
-   "count": 323,
+   "count": 340,
    "asOf": "2026-10-28"
   },
   {
    "slug": "family-kids-learning",
    "label": "Family, Kids & Learning",
-   "count": 316,
+   "count": 331,
    "asOf": "2026-10-28"
   },
   {
    "slug": "writing-publishing",
    "label": "Writing & Publishing",
-   "count": 315,
+   "count": 321,
    "asOf": "2026-10-28"
   },
   {
    "slug": "email-inbox",
    "label": "Email & Inbox",
-   "count": 285,
-   "asOf": "2026-10-28"
-  },
-  {
-   "slug": "home-garden-pets",
-   "label": "Home, Garden & Pets",
-   "count": 273,
+   "count": 300,
    "asOf": "2026-10-28"
   },
   {
    "slug": "x-twitter-social-media",
    "label": "X (Twitter) & Social Media",
-   "count": 258,
+   "count": 286,
+   "asOf": "2026-10-28"
+  },
+  {
+   "slug": "home-garden-pets",
+   "label": "Home, Garden & Pets",
+   "count": 278,
    "asOf": "2026-10-28"
   },
   {
    "slug": "sales-lead-generation",
    "label": "Sales & Lead Generation",
-   "count": 250,
+   "count": 253,
    "asOf": "2026-10-28"
   },
   {
    "slug": "shopping-deals",
    "label": "Shopping & Deals",
-   "count": 240,
+   "count": 253,
    "asOf": "2026-10-28"
   },
   {
    "slug": "marketing-seo-ads",
    "label": "Marketing, SEO & Ads",
-   "count": 236,
+   "count": 246,
    "asOf": "2026-10-28"
   },
   {
    "slug": "jobs-careers",
    "label": "Jobs & Careers",
-   "count": 219,
+   "count": 239,
    "asOf": "2026-10-28"
   },
   {
    "slug": "privacy-security-scam-protection",
    "label": "Privacy, Security & Scam Protection",
-   "count": 206,
+   "count": 233,
    "asOf": "2026-10-28"
   },
   {
    "slug": "health-fitness-wellness",
    "label": "Health, Fitness & Wellness",
-   "count": 182,
+   "count": 190,
    "asOf": "2026-10-28"
   },
   {
    "slug": "food-recipes-dining",
    "label": "Food, Recipes & Dining",
-   "count": 158,
+   "count": 175,
    "asOf": "2026-10-28"
   },
   {
    "slug": "fun-games-hobbies",
    "label": "Fun, Games & Hobbies",
-   "count": 136,
+   "count": 146,
    "asOf": "2026-10-28"
   },
   {
    "slug": "legal-tax-paperwork",
    "label": "Legal, Tax & Paperwork",
-   "count": 133,
-   "asOf": "2026-10-28"
-  },
-  {
-   "slug": "calendar-meetings-scheduling",
-   "label": "Calendar, Meetings & Scheduling",
-   "count": 117,
+   "count": 145,
    "asOf": "2026-10-28"
   },
   {
    "slug": "travel",
    "label": "Travel",
-   "count": 112,
+   "count": 123,
+   "asOf": "2026-10-28"
+  },
+  {
+   "slug": "calendar-meetings-scheduling",
+   "label": "Calendar, Meetings & Scheduling",
+   "count": 120,
    "asOf": "2026-10-28"
   },
   {
    "slug": "everything-else",
    "label": "Everything Else",
-   "count": 62,
+   "count": 65,
    "asOf": "2026-10-28"
   },
   {
    "slug": "real-estate",
    "label": "Real Estate",
-   "count": 47,
+   "count": 61,
    "asOf": "2026-10-28"
   }
  ]

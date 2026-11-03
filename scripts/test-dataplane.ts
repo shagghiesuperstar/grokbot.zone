@@ -18,6 +18,7 @@ import { healthBody, recentList, trendingList } from '../src/worker/dp/serve';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
+import { categoriesWithoutDead, deadSeedCount, indexWithoutDead } from '../src/worker/dp/merge';
 import model from '../src/data/classifier.json';
 
 // workerd provides HTMLRewriter; under Node the test uses the same lol-html engine from the `htmlrewriter` package.
@@ -85,6 +86,50 @@ let n = 0, failed = 0;
 const t = async (name: string, fn: () => Promise<void> | void) => {
   try { await fn(); n++; console.log(`ok  ${name}`); } catch (e) { failed++; console.log(`FAIL ${name}: ${(e as Error).message.split('\n').slice(0, process.env.GZ_VERBOSE ? 12 : 2).join(' | ')}`); }
 };
+
+await t('category counts: a dead bot in category X drops X by 1, from the same dead set as totalBots', () => {
+  const dead = new Set(['deadcode000000000001', 'nevershipped000000001']);
+  const seed = new Map([['deadcode000000000001', 'DeadCode000000000001'], ['livecode0000000000001', 'LiveCode0000000000001']]);
+  const cats = new Map([['deadcode000000000001', ['travel']], ['livecode0000000000001', ['travel']]]);
+  const index = JSON.stringify({ asOf: '2026-10-28', totalBots: 2, categories: [
+    { slug: 'travel', label: 'Travel', count: 2, path: '/search/travel.json' },
+    { slug: 'food-recipes-dining', label: 'Food', count: 4, path: '/search/food-recipes-dining.json' },
+  ] });
+  const out = JSON.parse(indexWithoutDead(index, dead, seed, cats));
+  assert.equal(out.categories.find((c: { slug: string }) => c.slug === 'travel').count, 1, 'X drops by 1');
+  assert.equal(out.categories.find((c: { slug: string }) => c.slug === 'food-recipes-dining').count, 4, 'a category with no dead bot is unchanged');
+  assert.equal(out.totalBots, 1, 'an unshipped dead code does not change totalBots');
+  const api = JSON.parse(categoriesWithoutDead(JSON.stringify([
+    { slug: 'travel', label: 'Travel', count: 2, purpose: 'p', updated: '2026-10-28' },
+    { slug: 'food-recipes-dining', label: 'Food', count: 4, purpose: 'p', updated: '2026-10-28' },
+  ]), dead, cats));
+  assert.equal(api.find((c: { slug: string }) => c.slug === 'travel').count, 1);
+  assert.equal(api.find((c: { slug: string }) => c.slug === 'food-recipes-dining').count, 4);
+});
+await t('category counts: a bot in two categories drops each listing, totalBots drops once', () => {
+  const dead = new Set(['both00000000000000001']);
+  const seed = new Map([['both00000000000000001', 'Both00000000000000001']]);
+  const cats = new Map([['both00000000000000001', ['travel', 'food-recipes-dining']]]);
+  const out = JSON.parse(indexWithoutDead(JSON.stringify({ totalBots: 5, categories: [{ slug: 'travel', count: 3 }, { slug: 'food-recipes-dining', count: 2 }] }), dead, seed, cats));
+  assert.equal(out.totalBots, 4);
+  assert.equal(out.categories[0].count, 2);
+  assert.equal(out.categories[1].count, 1);
+  const listings = out.categories.reduce((n: number, c: { count: number }) => n + c.count, 0);
+  assert.equal(listings, 3);
+  assert.notEqual(listings, out.totalBots, 'sum of category counts is listings, not distinct bots');
+});
+await t('missing seed-codes.json logs and throws; it does not report 0 dead', () => {
+  const logs: string[] = [];
+  const orig = console.error;
+  console.error = (...a: unknown[]) => { logs.push(a.map(String).join(' ')); };
+  try {
+    let threw = false;
+    try { deadSeedCount(new Set(['abc']), null); } catch { threw = true; }
+    assert.equal(threw, true);
+    assert.ok(logs.some((l) => l.includes('seed-codes.json')), logs.join('\n') || '(no log)');
+    assert.equal(deadSeedCount(new Set(), null), 0, 'no dead codes: nothing to subtract');
+  } finally { console.error = orig; }
+});
 
 // ================= liveness state machine (D14) =================
 const H = 3600_000;
@@ -509,7 +554,12 @@ const SEED_BOT2 = (JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'ut
 const STATIC: Record<string, [string, string]> = {
   '/bot-template/': ['bot-template/index.html', 'text/html'], '/api/v1/seed-codes.json': ['api/v1/seed-codes.json', 'application/json'],
   '/feed.json': ['feed.json', 'application/json'], '/feed.xml': ['feed.xml', 'application/xml'], '/sitemap-index.xml': ['sitemap-index.xml', 'application/xml'], '/sitemap-0.xml': ['sitemap-0.xml', 'application/xml'],
-  '/search/live.json': ['search/live.json', 'application/json'], '/categories/travel/': ['categories/travel/index.html', 'text/html'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
+  '/search/live.json': ['search/live.json', 'application/json'], '/search/index.json': ['search/index.json', 'application/json'],
+  '/api/v1/index.json': ['api/v1/index.json', 'application/json'], '/api/v1/codes.json': ['api/v1/codes.json', 'application/json'],
+  '/api/v1/categories.json': ['api/v1/categories.json', 'application/json'],
+  [`/search/${SEED_BOT2.cat}.json`]: [`search/${SEED_BOT2.cat}.json`, 'application/json'],
+  [`/api/v1/categories/${SEED_BOT2.cat}.json`]: [`api/v1/categories/${SEED_BOT2.cat}.json`, 'application/json'],
+  '/categories/travel/': ['categories/travel/index.html', 'text/html'], [`/bots/${SEED_BOT.slug}/`]: [`bots/${SEED_BOT.slug}/index.html`, 'text/html'], [`/categories/${SEED_BOT.cat}/`]: [`categories/${SEED_BOT.cat}/index.html`, 'text/html'],
 };
 const distAssets = { fetch: async (r: Request) => {
   const p = new URL(r.url).pathname; const hit = STATIC[p];
@@ -625,6 +675,26 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   assert.ok(fx.includes(`/bots/travel-${NEW_A}/`) && !fx.toLowerCase().includes(SEED_BOT2.code.toLowerCase()) && !fx.includes('<script>'));
   assert.ok(si.includes('sitemap-live.xml')); assert.ok(!s0.toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`) && distFile('sitemap-0.xml').toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`));
   assert.ok(sl.includes(`/bots/travel-${NEW_A}/`) && sl.includes(`/bots/uncategorized-${NEW_B}/`) && !sl.includes(NEW_DEAD) && !sl.includes(NEW_EXC));
+  // same dead set on the search index, codes.json and totalBots: sitemap bot count == search index totalBots
+  const idx = JSON.parse(await g('/search/index.json')) as { totalBots: number; categories: { slug: string; count: number }[] };
+  const builtIdx = JSON.parse(distFile('search/index.json')) as { totalBots: number };
+  const sitemapBots = (s0.match(/\/bots\/[^/<]+\//g) ?? []).length;
+  assert.equal(idx.totalBots, builtIdx.totalBots - 1, 'totalBots drops the one dead seed bot, not the dead bot the build never shipped');
+  assert.equal(sitemapBots, idx.totalBots, 'sitemap bot count == search index totalBots');
+  const api = JSON.parse(await g('/api/v1/index.json')) as { totalBots: number };
+  assert.equal(api.totalBots, idx.totalBots, '/api/v1/index.json totalBots matches the search index');
+  const codes = JSON.parse(await g('/api/v1/codes.json')) as { codes: string[] };
+  assert.equal(codes.codes.length, idx.totalBots);
+  assert.ok(!codes.codes.includes(SEED_BOT2.code.toLowerCase()), 'codes.json drops the dead seed code');
+  const builtCats = (builtIdx as { categories: { slug: string; count: number }[] }).categories;
+  assert.equal(idx.categories.find((c) => c.slug === SEED_BOT2.cat)!.count, builtCats.find((c) => c.slug === SEED_BOT2.cat)!.count - 1, 'search index category count drops the dead seed bot');
+  const apiCats = JSON.parse(await g('/api/v1/categories.json')) as { slug: string; count: number }[];
+  const builtApi = JSON.parse(distFile('api/v1/categories.json')) as { slug: string; count: number }[];
+  assert.equal(apiCats.find((c) => c.slug === SEED_BOT2.cat)!.count, builtApi.find((c) => c.slug === SEED_BOT2.cat)!.count - 1, '/api/v1/categories.json drops the same dead bot');
+  const catSearch = JSON.parse(await g(`/search/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
+  const apiCat = JSON.parse(await g(`/api/v1/categories/${SEED_BOT2.cat}.json`)) as { bots: { i: string }[] };
+  assert.ok(!catSearch.bots.some((b) => b.i === SEED_BOT2.slug) && !apiCat.bots.some((b) => b.i === SEED_BOT2.slug), 'dead seed bot leaves the search payloads');
+  assert.equal(catSearch.count, catSearch.bots.length);
   console.log('      ' + q.map(([p, n]) => `${p}=${n}`).join('  '));
 });
 await t('D27a: changes.json added lists every bot that was live once (id + code), keeps a dead one, never an excluded or pending one', async () => {
@@ -640,6 +710,19 @@ await t('D28: a live non-seed bot is in the stored extras only until the build s
   const only = { fetch: async (r: Request) => { const p = new URL(r.url).pathname; if (p === '/api/v1/seed-codes.json') return new Response(JSON.stringify({ codes: [NEW_A] })); return distAssets.fetch(r); } };
   const e2 = { ...(env as object), ASSETS: only } as never; resetDeadCache();
   const live = JSON.parse(await (await get(e2, '/search/live.json')).res.text()); assert.ok(!live.bots.some((b: { i: string }) => b.i.endsWith(NEW_A)), 'already in the static files');
+});
+await t('missing seed-codes.json logs and the count endpoints refuse instead of reporting 0 dead', async () => {
+  const db = liveDb(); const filled = await fillStore(db);
+  const broken = { fetch: async (r: Request) => new URL(r.url).pathname === '/api/v1/seed-codes.json' ? new Response('no', { status: 404 }) : distAssets.fetch(r) };
+  const env = { ...(filled as object), ASSETS: broken };
+  const logs: string[] = []; const orig = console.error;
+  console.error = (...a: unknown[]) => { logs.push(a.map(String).join(' ')); };
+  try {
+    resetDeadCache();
+    assert.equal((await get(env, '/search/index.json')).res.status, 503);
+    assert.equal((await get(env, '/api/v1/categories.json')).res.status, 503);
+    assert.ok(logs.some((l) => l.includes('seed-codes.json')), logs.join('\n') || '(no log)');
+  } finally { console.error = orig; }
 });
 
 // ================= D30: submissions are processed like discovery =================

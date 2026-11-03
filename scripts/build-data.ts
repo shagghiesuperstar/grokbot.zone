@@ -73,7 +73,7 @@ for (const c of index.categories) {
     const r = b as Record<string, string>;
     if (r.id !== `${c.slug}-${r.code}`) fail(file, where, `id must be "${c.slug}-<code>"`);
     if (r.url !== `https://x.ai/bot/${r.code}`) fail(file, where, 'url must be https://x.ai/bot/<code>');
-    if (!/^[A-Za-z0-9_-]+$/.test(r.code)) fail(file, where, 'code has unexpected characters');
+    if (!/^[A-Za-z0-9_-]{21}$/.test(r.code)) fail(file, where, 'code must be exactly 21 characters of [A-Za-z0-9_-]');
     if (seenId.has(r.id)) fail(file, where, 'duplicate id');
     seenId.add(r.id);
     rawBots.push({ id: r.id, slug: r.id, code: r.code, name: r.name, author: r.author, description: r.description, cat: c.slug, cats: [c.slug] });
@@ -130,6 +130,9 @@ const bots: Bot[] = [];
 const live = readLive(new Set(categories.map((c) => c.slug)));
 if (live.dead.size) { const keep = bots.filter((b) => !live.dead.has(b.code.toLowerCase())); bots.length = 0; bots.push(...keep); }
 {
+  for (const a of live.added) {
+    if (!/^[A-Za-z0-9_-]{21}$/.test(a.code)) fail('data/live/changes.json', a.id, 'code must be exactly 21 characters of [A-Za-z0-9_-]');
+  }
   const have = new Set(bots.map((b) => b.code.toLowerCase()));
   for (const a of live.added) if (!have.has(a.code.toLowerCase()) && !live.dead.has(a.code.toLowerCase())) { bots.push(a); have.add(a.code.toLowerCase()); }
 }

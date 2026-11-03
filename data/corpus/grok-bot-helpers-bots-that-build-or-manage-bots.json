@@ -1,7 +1,7 @@
 {
  "slug": "grok-bot-helpers-bots-that-build-or-manage-bots",
  "label": "Grok Bot Helpers (Bots That Build or Manage Bots)",
- "count": 461,
+ "count": 460,
  "asOf": "2026-10-28",
  "bots": [
   {
@@ -1467,14 +1467,6 @@
    "author": "Noah Gundotra",
    "description": "A live platform manual for Grok Bot. Looks up plugins, connectors, and install state so you know what the app can do…",
    "url": "https://x.ai/bot/v13QjVZ83GcaitG_3j4su"
-  },
-  {
-   "id": "grok-bot-helpers-bots-that-build-or-manage-bots-marketplace",
-   "code": "marketplace",
-   "name": "Grok Bot Marketplace",
-   "author": "Unknown",
-   "description": "Make the most out of your Grok Bot experience — browse public, handpicked Grok Bot templates.",
-   "url": "https://x.ai/bot/marketplace"
   },
   {
    "id": "grok-bot-helpers-bots-that-build-or-manage-bots-_YJdQ3bYXlYPOsX0NBmaV",

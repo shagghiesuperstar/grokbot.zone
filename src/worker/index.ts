@@ -408,6 +408,52 @@ const SUBSCRIBED_AT = `substr(COALESCE(s.confirmed_at, s.created_at), 1, 19)`;
 
 type OpenWindow = { window_id: string; since_iso: string; window_end: string; opened_at: string };
 
+const DIGEST_HELD_KEY = 'digest_held';
+
+async function readHeld(db: D1Database): Promise<string[]> {
+  const meta = await readMeta(db, [DIGEST_HELD_KEY]);
+  const raw = meta[DIGEST_HELD_KEY];
+  if (!raw) return [];
+  try {
+    const v = JSON.parse(raw) as unknown;
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string' && x.length > 0) : [];
+  } catch {
+    return [];
+  }
+}
+
+async function writeHeld(db: D1Database, codes: string[]): Promise<void> {
+  await metaPut(db, DIGEST_HELD_KEY, JSON.stringify([...new Set(codes)])).run();
+}
+
+/** F2: a row still pending when the window closes is not in that email. Remember its code. */
+async function holdPending(db: D1Database, since: string, windowEnd: string): Promise<void> {
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`,
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN).all<{ code: string }>();
+  const prev = await readHeld(db);
+  await writeHeld(db, [...prev, ...results.map((r) => r.code)]);
+}
+
+async function liveHeld(db: D1Database, held: string[]): Promise<string[]> {
+  if (!held.length) return [];
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'live' AND source != 'seed' AND code IN (${held.map(() => '?').join(',')})`,
+  ).bind(...held).all<{ code: string }>();
+  return results.map((r) => r.code);
+}
+
+/** Drop catch-up codes that are no longer pending. Live ones were in the email that just closed. */
+async function settleHeld(db: D1Database): Promise<void> {
+  const held = await readHeld(db);
+  if (!held.length) return;
+  const { results } = await db.prepare(
+    `SELECT code FROM bots WHERE status = 'pending' AND code IN (${held.map(() => '?').join(',')})`,
+  ).bind(...held).all<{ code: string }>();
+  const pending = new Set(results.map((r) => r.code));
+  await writeHeld(db, held.filter((c) => pending.has(c)));
+}
+
 async function digest(controller: ScheduledController, env: Env): Promise<void> {
   if (!isOn(env.DIGEST_ENABLED)) { console.log('digest: dark (DIGEST_ENABLED != 1), 0 sends'); return; }
   if (!env.DB) { console.log('digest: no DB binding, 0 sends'); return; }
@@ -415,8 +461,9 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   const scheduledIso = new Date(controller.scheduledTime).toISOString();
   const db = env.DB;
 
-  // M2: one row per subscriber per window, pruned to 30 days. The open window's end is this fire or later.
-  await db.prepare('DELETE FROM digest_delivery WHERE window_end < ?').bind(new Date(controller.scheduledTime - DIGEST_PRUNE_MS).toISOString()).run();
+  // M2: one row per subscriber per window, pruned to 30 days. Pending claims are the
+  // proof a cut-off send already happened — deleting them is what re-mails the window (F1).
+  await db.prepare("DELETE FROM digest_delivery WHERE window_end < ? AND status != 'pending'").bind(new Date(controller.scheduledTime - DIGEST_PRUNE_MS).toISOString()).run();
 
   const existing = await db.prepare('SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1').first<OpenWindow>();
   let since: string;
@@ -429,16 +476,28 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
     const meta = await readMeta(db, [DIGEST_SENT_KEY]);
     since = meta[DIGEST_SENT_KEY] ?? new Date(controller.scheduledTime - DIGEST_WINDOW_MS).toISOString();
     windowEnd = scheduledIso;
-    windowId = scheduledIso.slice(0, 10);
+    // F3: one id per fire, not per calendar day. A same-day second run must not reuse a closed claim.
+    windowId = windowEnd;
     openedAt = scheduledIso;
   }
 
+  // F1: this window was opened by an earlier fire that did not finish. A pending claim means the
+  // send was handed off (or the invocation died after the claim). Mark it sent so we do not re-mail,
+  // and so the window can close. A fire that is opening the window now has no row to reclaim.
+  if (existing && existing.opened_at < scheduledIso) {
+    await db.prepare("UPDATE digest_delivery SET status = 'sent' WHERE window_id = ? AND status = 'pending'").bind(windowId).run();
+  }
+
+  const heldNow = await liveHeld(db, await readHeld(db));
   const where = `status = 'live' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`;
   const countIn = async (lo: string, hi: string) => Number((await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE ${where}`).bind(lo, hi, LAUNCH_FIRST_SEEN).first<{ n: number }>())?.n ?? 0);
   let newCount = await countIn(since, windowEnd);
-  if (!newCount) {
+  if (!newCount && !heldNow.length) {
     if (existing) {
       // C1: an empty open window still closes, so the next fire moves on.
+      // F2: remember pending rows in the range before the watermark passes them.
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
       await db.prepare('DELETE FROM digest_open WHERE id = 1').run();
       await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
       console.log(`digest: closed empty window ${windowId} since ${since}, 0 sends`);
@@ -447,18 +506,19 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   }
 
   if (!existing) {
-    // L1: calendar-day key plus a single-row lock. INSERT OR IGNORE, then reuse the winner.
+    // L1: one open-window row. INSERT OR IGNORE, then reuse the winner.
     await db.prepare('INSERT OR IGNORE INTO digest_open (id, window_id, since_iso, window_end, opened_at) VALUES (1, ?, ?, ?, ?)').bind(windowId, since, windowEnd, openedAt).run();
     const locked = await db.prepare('SELECT window_id, since_iso, window_end, opened_at FROM digest_open WHERE id = 1').first<OpenWindow>();
     if (!locked) throw new Error('digest_open missing after insert');
     since = locked.since_iso; windowEnd = locked.window_end; windowId = locked.window_id; openedAt = locked.opened_at;
     newCount = await countIn(since, windowEnd);
-    if (!newCount) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
+    if (!newCount && !heldNow.length) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
   }
 
+  const heldSql = heldNow.length ? ` OR (status = 'live' AND source != 'seed' AND code IN (${heldNow.map(() => '?').join(',')}))` : '';
   const { results: fresh } = await db.prepare(
-    `SELECT code, name, description, category FROM bots WHERE ${where} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
-  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
+    `SELECT code, name, description, category FROM bots WHERE (${where})${heldSql} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
+  ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, ...heldNow, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
   const totals = await db.prepare(
     "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
   ).first<{ total: number; cats: number }>();
@@ -510,7 +570,13 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
       else console.error(`digest: retry subscriber=${s.id} window=${windowId} code=${r.code} attempts=${next}`);
       continue;
     }
-    await db.prepare(`UPDATE digest_delivery SET status = 'sent' WHERE subscriber_id = ? AND window_id = ?`).bind(s.id, windowId).run();
+    try {
+      await db.prepare(`UPDATE digest_delivery SET status = 'sent' WHERE subscriber_id = ? AND window_id = ?`).bind(s.id, windowId).run();
+    } catch (e) {
+      // F1: the message already went out. Leave the claim pending; the next fire marks it sent and does not re-mail.
+      console.error(`digest: sent-write failed subscriber=${s.id} window=${windowId} ${(e as Error).message}`);
+      continue;
+    }
     sent++;
   }
   if (!stopped) {
@@ -523,6 +589,8 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
          )`,
     ).bind(openedAt, windowId).first<{ n: number }>();
     if (Number(pending?.n ?? 1) === 0) {
+      await holdPending(db, since, windowEnd);
+      await settleHeld(db);
       await db.prepare('DELETE FROM digest_open WHERE id = 1').run();
       await metaPut(db, DIGEST_SENT_KEY, windowEnd).run();
     }

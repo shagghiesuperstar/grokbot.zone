@@ -18,6 +18,9 @@ import { go, isDead, record } from './dp/telemetry';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
+import { LINK_HEADER, agentResponse, htmlToMarkdown, isHtml, wantsMarkdown } from './agent';
+import { handleMcp } from './mcp';
+import { handleOAuth, takeIdentityWrite, verifiedBearer } from './oauth';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -28,6 +31,9 @@ interface Env {
   NOTIFY_OWNER?: Mailer;
   SUBMISSIONS_RL?: Limiter;
   SUBSCRIBE_RL?: Limiter;
+  /** Per-IP floor for bearer writes. Higher than the anonymous cap so a token raises the ceiling; absent -> the anonymous limiter is the floor. */
+  AUTH_SUBMIT_RL?: Limiter;
+  AUTH_SUBSCRIBE_RL?: Limiter;
   FORM_SUBMIT_ENABLED?: string;
   EMAIL_SUBMIT_ENABLED?: string;
   SUBSCRIBE_ENABLED?: string;
@@ -144,6 +150,25 @@ async function writeGate(rl: Limiter | undefined, key: string): Promise<Response
   if (g === 'unavailable') return unavailable();
   return g === 'limited' ? json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' }) : null;
 }
+/** Anonymous writes use only the per-IP CF limiter. A bearer is never anonymous: invalid -> 401, and neither
+ *  limiter is touched. A valid bearer raises the ceiling to 30/60s keyed on the verified email (every token
+ *  for that email shares one bucket) and must still pass a per-IP floor. The floor is the AUTH_* binding when
+ *  present (production: 30/60s, above the anonymous 5) and otherwise the anonymous limiter — a token may raise
+ *  the ceiling, it may not remove the floor. */
+async function writeAccess(req: Request, env: Env, rl: Limiter | undefined, key: string, raisedFloor?: Limiter): Promise<Response | null> {
+  if (req.headers.get('authorization') === null) return writeGate(rl, key);
+  const ident = await verifiedBearer(req, env.DB);
+  if (ident instanceof Response) return ident;
+  const floor = await writeGate(raisedFloor ?? rl, key);
+  if (floor) return floor;
+  if (!env.DB) return unavailable();
+  try {
+    return await takeIdentityWrite(env.DB, ident.email);
+  } catch (e) {
+    console.error('identity write cap failed:', (e as Error).message);
+    return unavailable();
+  }
+}
 const clientIp = (req: Request) => req.headers.get('cf-connecting-ip') ?? 'unknown';
 const isJson = (req: Request) => (req.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json');
 async function readJson(req: Request): Promise<unknown | undefined> {
@@ -193,7 +218,7 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
   const ip = clientIp(req);
-  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`, env.AUTH_SUBMIT_RL);
   if (stop) return stop;
   const body = await readJson(req);
   if (body === undefined) return json(400, { ok: false, errors: { body: 'invalid JSON' } });
@@ -243,7 +268,7 @@ async function subscribe(req: Request, env: Env, ctx: ExecutionContext): Promise
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
-  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`, env.AUTH_SUBSCRIBE_RL);
   if (stop) return stop;
   const body = (await readJson(req)) as { email?: unknown; company_website?: unknown } | undefined;
   if (!body || typeof body !== 'object') return json(400, { ok: false, errors: { body: 'invalid JSON' } });
@@ -598,6 +623,39 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
 
+function addVary(headers: Headers, token: string) {
+  const cur = headers.get('Vary');
+  if (!cur) headers.set('Vary', token);
+  else if (!cur.toLowerCase().split(',').map((s) => s.trim()).includes(token.toLowerCase())) headers.set('Vary', `${cur}, ${token}`);
+}
+
+/** Security headers on every response. HTML gets the agent Link header. Markdown and problem+json are opt-in. */
+async function finish(request: Request, res: Response): Promise<Response> {
+  const headers = new Headers(res.headers);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
+  const html = isHtml(res);
+  if (html) {
+    headers.append('Link', LINK_HEADER);
+    addVary(headers, 'Accept');
+  }
+  const accept = request.headers.get('accept') ?? '';
+  const jsonErr = res.status >= 400 && (res.headers.get('content-type') ?? '').includes('application/json') && accept.includes('application/problem+json');
+  if (jsonErr) {
+    const body = await res.json().catch(() => ({})) as Record<string, unknown>;
+    headers.set('Content-Type', 'application/problem+json; charset=utf-8');
+    headers.delete('content-length');
+    const problem = { type: 'about:blank', title: String(body.error ?? 'error'), status: res.status, detail: body.errors ? JSON.stringify(body.errors) : String(body.error ?? '') };
+    return new Response(request.method === 'HEAD' ? null : JSON.stringify(problem), { status: res.status, headers });
+  }
+  if (html && wantsMarkdown(request)) {
+    const md = htmlToMarkdown(await res.text());
+    headers.set('Content-Type', 'text/markdown; charset=utf-8');
+    for (const k of ['etag', 'last-modified', 'content-length']) headers.delete(k);
+    return new Response(request.method === 'HEAD' ? null : md, { status: res.status, statusText: res.statusText, headers });
+  }
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+}
+
 // ---- entry ----
 
 export default {
@@ -608,9 +666,7 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
     const res = await route(request, env, ctx, url);
-    const headers = new Headers(res.headers);
-    for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
-    return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+    return finish(request, res);
   },
   email,
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
@@ -624,6 +680,17 @@ export default {
 async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL): Promise<Response> {
   const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, '') : url.pathname;
   const m = request.method;
+  if (path === '/mcp') {
+    return handleMcp(request, {
+      dispatch: (req) => route(req, env, ctx, new URL(req.url)),
+      submit: (req) => submit(req, env, ctx),
+      subscribe: (req) => subscribe(req, env, ctx),
+    });
+  }
+  const oauth = await handleOAuth(request, { DB: env.DB, EMAIL: env.EMAIL, mailFrom: UPDATES_FROM }, url, path);
+  if (oauth) return oauth;
+  const agent = await agentResponse(request, env, path);
+  if (agent) return agent;
   if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);
   try {
     if (path === '/api/health' && (m === 'GET' || m === 'HEAD')) return await health(env);

@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="For AI agents | GrokBot Zone"
+  description="How an agent uses GrokBot Zone with no browser: MCP tools, the JSON read API, and the onboarding skill."
+  path="/agents/"
+>
+  <div class="wrap page-head">
+    <h1>For AI agents.</h1>
+    <p>GrokBot Zone is a directory of public Grok bot listings. Every action below is one HTTPS request. No browser and no screen.</p>
+  </div>
+  <div class="wrap block docs">
+    <h2>MCP</h2>
+    <p>Streamable HTTP, JSON responses, no session: <code>POST https://grokbot.zone/mcp</code>. <code>GET /mcp</code> returns 405. Protocols: 2025-11-25 (<code>initialize</code>, <code>notifications/initialized</code>, <code>tools/list</code>, <code>tools/call</code>) and 2026-07-28 (<code>server/discover</code>).</p>
+    <p>Server card: <a href="/mcp/server-card">/mcp/server-card</a> and <a href="/.well-known/mcp/server-card.json">/.well-known/mcp/server-card.json</a>.</p>
+    <table>
+      <thead><tr><th scope="col">Tool</th><th scope="col">What it does</th></tr></thead>
+      <tbody>
+        <tr><td><code>grokbot_health</code></td><td>Worker and database check.</td></tr>
+        <tr><td><code>grokbot_list_categories</code></td><td>Every category slug, label and count.</td></tr>
+        <tr><td><code>grokbot_get_category</code></td><td>Bots in one category.</td></tr>
+        <tr><td><code>grokbot_search</code></td><td>Up to 5 bots scored on name and description.</td></tr>
+        <tr><td><code>grokbot_trending</code></td><td>Ordered bot ids, optional category.</td></tr>
+        <tr><td><code>grokbot_get_bot</code></td><td>One bot record.</td></tr>
+        <tr><td><code>grokbot_check_listed</code></td><td>Whether a link or code is already listed.</td></tr>
+        <tr><td><code>grokbot_submit_bot</code></td><td>Queue a listing. Same checks and rate limit as the form. A receipt goes to the email you pass.</td></tr>
+        <tr><td><code>grokbot_subscribe</code></td><td>Double opt-in for update emails. Nothing is sent until the confirm link is clicked.</td></tr>
+      </tbody>
+    </table>
+    <h2>HTTP, if you have no MCP client</h2>
+    <p>Reads are static JSON. Start at <a href="/api/v1/index.json">/api/v1/index.json</a>. The description is <a href="/openapi.json">/openapi.json</a>. Human docs: <a href="/api/">/api/</a>.</p>
+    <p>Writes: <code>POST /api/v1/submissions</code> and <code>POST /subscribe</code>, <code>content-type: application/json</code>. Same limits as the forms. Send <code>Accept: application/problem+json</code> if you want RFC 9457 errors.</p>
+    <h2>Skill</h2>
+    <p>The onboarding skill is at <a href="/.well-known/agent-skills/grokbot-zone-onboarding/SKILL.md">/.well-known/agent-skills/grokbot-zone-onboarding/SKILL.md</a>. The index is <a href="/.well-known/agent-skills/index.json">/.well-known/agent-skills/index.json</a>.</p>
+    <h2>Other discovery files</h2>
+    <ul>
+      <li><a href="/llms.txt">/llms.txt</a> and <a href="/llms-full.txt">/llms-full.txt</a></li>
+      <li><a href="/.well-known/api-catalog">/.well-known/api-catalog</a></li>
+      <li><a href="/.well-known/ai-catalog.json">/.well-known/ai-catalog.json</a></li>
+      <li><a href="/sitemap.xml">/sitemap.xml</a></li>
+    </ul>
+    <p>Pages answer <code>Accept: text/markdown</code> with a markdown body. HTML stays the default.</p>
+    <p>To list a bot or ask a question, use <a href="/submit/">Submit</a>. Listing is free. We list and link. We never run, host or copy a bot.</p>
+  </div>
+</Base>
+<style>
+  .docs { max-width: 860px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  code { background: var(--panel); border: 1px solid var(--hairline); border-radius: 6px; padding: .1rem .4rem; overflow-wrap: anywhere; }
+  ul { padding-left: 1.2rem; }
+</style>

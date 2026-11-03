@@ -2,4 +2,30 @@ User-agent: *
 Allow: /
 Disallow: /go/
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
 Sitemap: https://grokbot.zone/sitemap-index.xml

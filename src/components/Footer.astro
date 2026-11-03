@@ -9,7 +9,7 @@ import { meta } from '../lib/data';
     </p>
     <section class="signup" id="signup" aria-labelledby="signup-h" hidden>
       <h2 id="signup-h">Get update emails Monday + Thursday</h2>
-      <form id="signup-form" action="/subscribe" method="post" novalidate>
+      <form id="signup-form" action="/subscribe" method="post" novalidate toolname="subscribe" tooldescription="Subscribe an email address to twice-weekly directory updates. A confirm link is sent. Nothing is sent until that link is clicked.">
         <label>Email<input name="email" type="email" required maxlength="254" autocomplete="email" /></label>
         <label class="hp" aria-hidden="true">Company website<input name="company_website" tabindex="-1" autocomplete="off" /></label>
         <button type="submit">Subscribe</button>
@@ -18,6 +18,7 @@ import { meta } from '../lib/data';
     </section>
     <nav aria-label="Footer">
       <ul>
+        <li><a href="/agents/">For AI agents</a></li>
         <li><a href="/categories/">Categories</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/submit/">Submit a bot</a></li>

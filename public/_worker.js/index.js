@@ -1,7 +1,7 @@
 // src/worker/index.ts
 import { EmailMessage } from "cloudflare:email";
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/decode-strings.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/decode-strings.js
 var textEncoder = new TextEncoder();
 var isWsp = (c) => c === 32 || c === 9;
 var base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -282,14 +282,14 @@ function decodeCharset(bytes, charset) {
 var META_PRESCAN_BYTES = 1024;
 var CHARSET_ATTRIBUTE = /charset\s*=\s*["']?\s*([^\s"';>]+)/;
 function sniffHtmlCharset(bytes) {
-  const head = utf8Decoder.decode(bytes.subarray(0, META_PRESCAN_BYTES)).toLowerCase();
+  const head2 = utf8Decoder.decode(bytes.subarray(0, META_PRESCAN_BYTES)).toLowerCase();
   let pos = 0;
-  while ((pos = head.indexOf("<meta", pos)) >= 0) {
-    let end = head.indexOf(">", pos);
+  while ((pos = head2.indexOf("<meta", pos)) >= 0) {
+    let end = head2.indexOf(">", pos);
     if (end < 0) {
-      end = head.length;
+      end = head2.length;
     }
-    const match2 = CHARSET_ATTRIBUTE.exec(head.slice(pos, end));
+    const match2 = CHARSET_ATTRIBUTE.exec(head2.slice(pos, end));
     if (match2) {
       return match2[1];
     }
@@ -336,10 +336,10 @@ function hexNibble(c) {
   }
   return -1;
 }
-function foldLineBreaks(str2) {
-  return str2.replace(/[\r\n]+/g, " ");
+function foldLineBreaks(str3) {
+  return str3.replace(/[\r\n]+/g, " ");
 }
-function decodeWord(charset, encoding, str2) {
+function decodeWord(charset, encoding, str3) {
   let splitPos = charset.indexOf("*");
   if (splitPos >= 0) {
     charset = charset.slice(0, splitPos);
@@ -347,8 +347,8 @@ function decodeWord(charset, encoding, str2) {
   encoding = encoding.toUpperCase();
   let byteStr;
   if (encoding === "Q") {
-    str2 = str2.replace(/=\s+([0-9a-fA-F])/g, "=$1").replace(/[_\s]/g, " ");
-    let buf = textEncoder.encode(str2);
+    str3 = str3.replace(/=\s+([0-9a-fA-F])/g, "=$1").replace(/[_\s]/g, " ");
+    let buf = textEncoder.encode(str3);
     let encodedBytes = [];
     for (let i = 0, len = buf.length; i < len; i++) {
       let c = buf[i];
@@ -369,9 +369,9 @@ function decodeWord(charset, encoding, str2) {
       dataView.setUint8(i, encodedBytes[i]);
     }
   } else if (encoding === "B") {
-    byteStr = decodeBase64(str2.replace(/[^a-zA-Z0-9\+\/=]+/g, ""));
+    byteStr = decodeBase64(str3.replace(/[^a-zA-Z0-9\+\/=]+/g, ""));
   } else {
-    byteStr = textEncoder.encode(str2);
+    byteStr = textEncoder.encode(str3);
   }
   return foldLineBreaks(decodeCharset(byteStr, charset));
 }
@@ -379,23 +379,23 @@ var ENCODED_WORD_PATTERN = "=\\?([^?\\s]+)\\?([QqBb])\\?([^?]*)\\?=";
 var ENCODED_WORD_REGEX = new RegExp(ENCODED_WORD_PATTERN, "g");
 var WORD_SEPARATOR_REGEX = /^[ \t\r\n]+$/;
 var ENCODED_WORDS_ONLY_REGEX = new RegExp(`^(?:${ENCODED_WORD_PATTERN}\\s*)+$`);
-function isEncodedWordsOnly(str2) {
-  return ENCODED_WORDS_ONLY_REGEX.test(str2);
+function isEncodedWordsOnly(str3) {
+  return ENCODED_WORDS_ONLY_REGEX.test(str3);
 }
-function splitEncodedWords(str2) {
+function splitEncodedWords(str3) {
   const tokens = [];
   ENCODED_WORD_REGEX.lastIndex = 0;
   let pos = 0;
   let match2;
-  while (match2 = ENCODED_WORD_REGEX.exec(str2)) {
+  while (match2 = ENCODED_WORD_REGEX.exec(str3)) {
     if (match2.index > pos) {
-      tokens.push({ text: str2.substring(pos, match2.index) });
+      tokens.push({ text: str3.substring(pos, match2.index) });
     }
     tokens.push({ charset: match2[1], encoding: match2[2], encodedText: match2[3] });
     pos = match2.index + match2[0].length;
   }
-  if (pos < str2.length) {
-    tokens.push({ text: str2.substring(pos) });
+  if (pos < str3.length) {
+    tokens.push({ text: str3.substring(pos) });
   }
   return tokens;
 }
@@ -413,32 +413,32 @@ function renderTokens(tokens, joinWords) {
   let result = "";
   let pending = null;
   for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i];
-    if (token.text !== void 0) {
+    const token2 = tokens[i];
+    if (token2.text !== void 0) {
       const nextToken = tokens[i + 1];
-      if (pending && nextToken && nextToken.text === void 0 && WORD_SEPARATOR_REGEX.test(token.text)) {
+      if (pending && nextToken && nextToken.text === void 0 && WORD_SEPARATOR_REGEX.test(token2.text)) {
         continue;
       }
       if (pending) {
         result += decodeWord(pending.charset, pending.encoding, pending.encodedText);
         pending = null;
       }
-      result += token.text;
+      result += token2.text;
       continue;
     }
-    if (pending && joinWords && canJoinWords(pending, token)) {
-      pending.encodedText += token.encodedText;
-      pending.padded = token.encodedText.endsWith("=");
+    if (pending && joinWords && canJoinWords(pending, token2)) {
+      pending.encodedText += token2.encodedText;
+      pending.padded = token2.encodedText.endsWith("=");
       continue;
     }
     if (pending) {
       result += decodeWord(pending.charset, pending.encoding, pending.encodedText);
     }
     pending = {
-      charset: token.charset,
-      encoding: token.encoding,
-      encodedText: token.encodedText,
-      padded: token.encodedText.endsWith("=")
+      charset: token2.charset,
+      encoding: token2.encoding,
+      encodedText: token2.encodedText,
+      padded: token2.encodedText.endsWith("=")
     };
   }
   if (pending) {
@@ -446,8 +446,8 @@ function renderTokens(tokens, joinWords) {
   }
   return result;
 }
-function decodeWords(str2) {
-  const tokens = splitEncodedWords((str2 || "").toString());
+function decodeWords(str3) {
+  const tokens = splitEncodedWords((str3 || "").toString());
   const result = renderTokens(tokens, true);
   return result.indexOf("\uFFFD") < 0 ? result : renderTokens(tokens, false);
 }
@@ -527,7 +527,7 @@ function decodeParameterValueContinuations(header) {
   });
 }
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/pass-through-decoder.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/pass-through-decoder.js
 var PassThroughDecoder = class {
   constructor() {
     this.chunks = [];
@@ -578,7 +578,7 @@ var PassThroughDecoder = class {
   }
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/chunk-writer.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/chunk-writer.js
 var ChunkWriter = class {
   constructor(maxChunkSize = 100 * 1024) {
     this.maxChunkSize = maxChunkSize;
@@ -630,7 +630,7 @@ var ChunkWriter = class {
   }
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-decoder.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-decoder.js
 var Base64Decoder = class {
   constructor(opts) {
     opts = opts || {};
@@ -649,15 +649,15 @@ var Base64Decoder = class {
     this.remainder = "";
   }
   update(buffer) {
-    let str2 = this.decoder.decode(buffer).replace(/[^a-zA-Z0-9+/=]+/g, "");
+    let str3 = this.decoder.decode(buffer).replace(/[^a-zA-Z0-9+/=]+/g, "");
     let start = 0;
     let end;
-    while ((end = str2.indexOf("=", start)) >= 0) {
-      this.remainder += str2.substring(start, end);
+    while ((end = str3.indexOf("=", start)) >= 0) {
+      this.remainder += str3.substring(start, end);
       this.flushRemainder();
       start = end + 1;
     }
-    this.remainder += str2.substring(start);
+    this.remainder += str3.substring(start);
     if (this.remainder.length >= this.maxChunkSize) {
       const alignedLength = Math.floor(this.remainder.length / 4) * 4;
       this.pushChunk(this.remainder.substring(0, alignedLength));
@@ -670,7 +670,7 @@ var Base64Decoder = class {
   }
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/qp-decoder.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/qp-decoder.js
 var CHR_EQUALS = 61;
 var QPDecoder = class {
   constructor() {
@@ -727,7 +727,7 @@ var QPDecoder = class {
   }
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/errors.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/errors.js
 var ERROR_TYPES = {
   EINVALIDOPTION: TypeError,
   EINVALIDINPUT: TypeError,
@@ -743,20 +743,20 @@ function createError(code, message) {
   return error;
 }
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/mime-node.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/mime-node.js
 var headerDecoder = new TextDecoder("utf-8", { ignoreBOM: true });
 var FLOWED_JOIN_INTERVAL = 4096;
 var HEADER_LINE_MIN_COST = 64;
-var trimWsp = (str2) => {
+var trimWsp = (str3) => {
   let start = 0;
-  let end = str2.length;
-  while (start < end && isWsp(str2.charCodeAt(start))) {
+  let end = str3.length;
+  while (start < end && isWsp(str3.charCodeAt(start))) {
     start++;
   }
-  while (end > start && isWsp(str2.charCodeAt(end - 1))) {
+  while (end > start && isWsp(str3.charCodeAt(end - 1))) {
     end--;
   }
-  return str2.slice(start, end);
+  return str3.slice(start, end);
 };
 var FIELD_START = /^(?:From |[!-9;-~]*[ \t]*:)/;
 var CONTENT_HEADERS = /* @__PURE__ */ new Set([
@@ -854,7 +854,7 @@ var MimeNode = class {
   // Inside an unquoted parameter value a parenthesis that continues the current token is
   // content, because `filename=Invoice(1).pdf` is a filename and not a token followed by
   // a comment, and deleting the parens silently renames the attachment.
-  stripComments(str2) {
+  stripComments(str3) {
     let result = "";
     let depth = 0;
     let escaped = false;
@@ -863,18 +863,18 @@ var MimeNode = class {
     let inParameterValue = false;
     let runStart = 0;
     const drop = (i) => {
-      result += str2.slice(runStart, i);
+      result += str3.slice(runStart, i);
       runStart = i + 1;
     };
     let keptAny = false;
     let endsWithWsp = false;
     const keep = (i) => {
       keptAny = true;
-      endsWithWsp = isWsp(str2.charCodeAt(i));
+      endsWithWsp = isWsp(str3.charCodeAt(i));
     };
     const opensComment = () => !inParameterValue || !keptAny || endsWithWsp;
-    for (let i = 0; i < str2.length; i++) {
-      const chr = str2.charAt(i);
+    for (let i = 0; i < str3.length; i++) {
+      const chr = str3.charAt(i);
       if (escaped) {
         escaped = false;
       } else if (chr === "\\") {
@@ -910,12 +910,12 @@ var MimeNode = class {
       }
     }
     if (depth === 0) {
-      return result + str2.slice(runStart);
+      return result + str3.slice(runStart);
     }
-    return str2.indexOf(";", commentStart) < 0 ? result + str2.slice(runStart) : str2;
+    return str3.indexOf(";", commentStart) < 0 ? result + str3.slice(runStart) : str3;
   }
-  parseStructuredHeader(str2) {
-    str2 = this.stripComments(str2);
+  parseStructuredHeader(str3) {
+    str3 = this.stripComments(str3);
     let response = {
       value: "",
       params: {}
@@ -937,7 +937,7 @@ var MimeNode = class {
     let runStart = -1;
     const closeRun = (end) => {
       if (runStart >= 0) {
-        value += str2.slice(runStart, end);
+        value += str3.slice(runStart, end);
         runStart = -1;
       }
     };
@@ -970,8 +970,8 @@ var MimeNode = class {
     const storeEmptyKey = () => {
       storeParam(takeValue().trim().toLowerCase(), "");
     };
-    for (let i = 0, len = str2.length; i < len; i++) {
-      chr = str2.charAt(i);
+    for (let i = 0, len = str3.length; i < len; i++) {
+      chr = str3.charAt(i);
       switch (stage) {
         case "key":
           if (chr === "=") {
@@ -1022,7 +1022,7 @@ var MimeNode = class {
           break;
       }
     }
-    closeRun(str2.length);
+    closeRun(str3.length);
     if (stage === "value") {
       storeValue();
     } else {
@@ -1045,17 +1045,17 @@ var MimeNode = class {
   // The quote marks and stuffing of the first line of a paragraph are kept as they were
   // written, so a fixed quoted line comes out exactly as it went in. An unquoted stuffed
   // line loses its stuffing, which is all the stuffing is for.
-  decodeFlowedText(str2, delSp) {
+  decodeFlowedText(str3, delSp) {
     const chunks = [];
     let parts = [];
     let flowed = false;
     let depth = 0;
-    for (let lineStart = 0; lineStart <= str2.length; ) {
-      let lineEnd = str2.indexOf("\n", lineStart);
+    for (let lineStart = 0; lineStart <= str3.length; ) {
+      let lineEnd = str3.indexOf("\n", lineStart);
       if (lineEnd < 0) {
-        lineEnd = str2.length;
+        lineEnd = str3.length;
       }
-      const line2 = str2.slice(lineStart, lineEnd);
+      const line2 = str3.slice(lineStart, lineEnd);
       let quoteDepth = 0;
       while (line2.charCodeAt(quoteDepth) === 62) {
         quoteDepth++;
@@ -1091,11 +1091,11 @@ var MimeNode = class {
     if (!this.content) {
       return "";
     }
-    let str2 = decodeText(this.content, this.contentType.parsed.params.charset, this.contentType.parsed.value === "text/html").replace(/\r\n/g, "\n");
+    let str3 = decodeText(this.content, this.contentType.parsed.params.charset, this.contentType.parsed.value === "text/html").replace(/\r\n/g, "\n");
     if (this.contentType.parsed.value === "text/plain" && /^flowed$/i.test(this.contentType.parsed.params.format)) {
-      str2 = this.decodeFlowedText(str2, /^yes$/i.test(this.contentType.parsed.params.delsp));
+      str3 = this.decodeFlowedText(str3, /^yes$/i.test(this.contentType.parsed.params.delsp));
     }
-    return str2;
+    return str3;
   }
   processHeaders() {
     let foldedLines = [];
@@ -1188,12 +1188,12 @@ var MimeNode = class {
         if (this.postalMime.counters.headerSize > maxHeadersSize) {
           throw createError("EMAXHEADERSIZE", `Maximum header size of ${maxHeadersSize} bytes exceeded`);
         }
-        const text = decodeUtf8OrWindows1252(line2, headerDecoder);
-        if (!isWsp(line2[0]) && !FIELD_START.test(text)) {
+        const text2 = decodeUtf8OrWindows1252(line2, headerDecoder);
+        if (!isWsp(line2[0]) && !FIELD_START.test(text2)) {
           this.endHeaders();
           return true;
         }
-        this.headerLines.push(text);
+        this.headerLines.push(text2);
         break;
       }
       case "body":
@@ -1206,7 +1206,7 @@ var MimeNode = class {
   }
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/html-entities.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/html-entities.js
 var htmlEntities = {
   "&AElig": "\xC6",
   "&AElig;": "\xC6",
@@ -3441,7 +3441,7 @@ var htmlEntities = {
   "&zwnj;": "\u200C"
 };
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/text-format.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/text-format.js
 var C1_ENTITY_REPLACEMENTS = /* @__PURE__ */ new Map([
   [128, 8364],
   [130, 8218],
@@ -3471,8 +3471,8 @@ var C1_ENTITY_REPLACEMENTS = /* @__PURE__ */ new Map([
   [158, 382],
   [159, 376]
 ]);
-function decodeHTMLEntities(str2) {
-  return str2.replace(/&(#\d+|#x[a-f0-9]+|[a-z]+\d*);?/gi, (match2, entity) => {
+function decodeHTMLEntities(str3) {
+  return str3.replace(/&(#\d+|#x[a-f0-9]+|[a-z]+\d*);?/gi, (match2, entity) => {
     if (typeof htmlEntities[match2] === "string") {
       return htmlEntities[match2];
     }
@@ -3500,73 +3500,73 @@ function decodeHTMLEntities(str2) {
   });
 }
 var hexByte = (value) => value.toString(16).toUpperCase().padStart(2, "0");
-function escapeHtml(str2) {
-  return str2.trim().replace(/[<>"'?&]/g, (c) => "&#x" + hexByte(c.charCodeAt(0)) + ";");
+function escapeHtml(str3) {
+  return str3.trim().replace(/[<>"'?&]/g, (c) => "&#x" + hexByte(c.charCodeAt(0)) + ";");
 }
 var MAILTO_UNSAFE = /[^A-Za-z0-9\-._~!$'()*+,;:@]+/g;
 var PERCENT_ENCODED = Array.from({ length: 256 }, (_, byte) => "%" + hexByte(byte));
 function encodeMailto(address) {
   return address.replace(MAILTO_UNSAFE, (run) => Array.from(textEncoder.encode(run), (byte) => PERCENT_ENCODED[byte]).join(""));
 }
-function textToHtml(str2) {
-  let html = escapeHtml(str2).replace(/\n/g, "<br />");
+function textToHtml(str3) {
+  let html = escapeHtml(str3).replace(/\n/g, "<br />");
   return "<div>" + html + "</div>";
 }
-function createFinder(str2, regex) {
+function createFinder(str3, regex) {
   let searchedFrom = Infinity;
   let found = null;
   return (pos) => {
     if (pos < searchedFrom || found && pos > found.index) {
       regex.lastIndex = pos;
-      found = regex.exec(str2);
+      found = regex.exec(str3);
       searchedFrom = pos;
     }
     return found;
   };
 }
-function throughLastTag(str2, process) {
-  const end = str2.lastIndexOf(">") + 1;
-  return process(str2.slice(0, end)) + str2.slice(end);
+function throughLastTag(str3, process) {
+  const end = str3.lastIndexOf(">") + 1;
+  return process(str3.slice(0, end)) + str3.slice(end);
 }
-function replaceClosedTags(str2, pattern, replacement) {
-  return throughLastTag(str2, (head) => head.replace(pattern, replacement));
+function replaceClosedTags(str3, pattern, replacement) {
+  return throughLastTag(str3, (head2) => head2.replace(pattern, replacement));
 }
-function replaceTags(str2, prefix, pattern, replacement) {
+function replaceTags(str3, prefix, pattern, replacement) {
   const parts = [];
   let copied = 0;
   let searchFrom = 0;
   while (true) {
     prefix.lastIndex = searchFrom;
-    const candidate = prefix.exec(str2);
+    const candidate = prefix.exec(str3);
     if (!candidate) {
       break;
     }
     const start = candidate.index;
-    const gt = str2.indexOf(">", start);
+    const gt = str3.indexOf(">", start);
     if (gt < 0) {
       break;
     }
     pattern.lastIndex = start;
-    const match2 = pattern.exec(str2);
+    const match2 = pattern.exec(str3);
     if (!match2) {
       searchFrom = gt + 1;
       continue;
     }
-    parts.push(str2.slice(copied, start), replacement(...match2));
+    parts.push(str3.slice(copied, start), replacement(...match2));
     copied = searchFrom = start + match2[0].length;
   }
-  parts.push(str2.slice(copied));
+  parts.push(str3.slice(copied));
   return parts.join("");
 }
-function replaceBlocks(str2, open, openToGt, close, closeToGt, replacement) {
-  const nextGt = createFinder(str2, />/g);
-  const nextClose = createFinder(str2, close);
+function replaceBlocks(str3, open, openToGt, close, closeToGt, replacement) {
+  const nextGt = createFinder(str3, />/g);
+  const nextClose = createFinder(str3, close);
   const parts = [];
   let copied = 0;
   let searchFrom = 0;
   while (true) {
     open.lastIndex = searchFrom;
-    const opener = open.exec(str2);
+    const opener = open.exec(str3);
     if (!opener) {
       break;
     }
@@ -3592,47 +3592,47 @@ function replaceBlocks(str2, open, openToGt, close, closeToGt, replacement) {
       }
       end = gt.index + 1;
     }
-    parts.push(str2.slice(copied, start), replacement);
+    parts.push(str3.slice(copied, start), replacement);
     copied = searchFrom = end;
   }
-  parts.push(str2.slice(copied));
+  parts.push(str3.slice(copied));
   return parts.join("");
 }
-function stripThroughLastTag(str2, prefix) {
-  const limit = str2.lastIndexOf(">");
+function stripThroughLastTag(str3, prefix) {
+  const limit = str3.lastIndexOf(">");
   let last = -1;
   prefix.lastIndex = 0;
   let match2;
-  while ((match2 = prefix.exec(str2)) && match2.index < limit) {
+  while ((match2 = prefix.exec(str3)) && match2.index < limit) {
     last = match2.index;
   }
-  return last < 0 ? str2 : str2.slice(str2.indexOf(">", last) + 1);
+  return last < 0 ? str3 : str3.slice(str3.indexOf(">", last) + 1);
 }
-function stripFromFirstTag(str2, prefix) {
+function stripFromFirstTag(str3, prefix) {
   prefix.lastIndex = 0;
-  const match2 = prefix.exec(str2);
-  return match2 && match2.index < str2.lastIndexOf(">") ? str2.slice(0, match2.index) : str2;
+  const match2 = prefix.exec(str3);
+  return match2 && match2.index < str3.lastIndexOf(">") ? str3.slice(0, match2.index) : str3;
 }
-function htmlToText(str2) {
-  str2 = str2.replace(/\r\n|[\n\r\u2028\u2029]/g, "");
-  str2 = replaceBlocks(str2, /<!--/g, false, /-->/g, false, " ");
-  str2 = replaceClosedTags(str2, /<br\b[^>]*>/gi, "\n");
-  str2 = replaceClosedTags(str2, /<\/?(p|div|table|tr|td|th)\b[^>]*>/gi, "\n\n");
-  str2 = replaceBlocks(str2, /<script\b/gi, true, /<\/script\b/gi, true, " ");
-  str2 = replaceBlocks(str2, /<style\b/gi, true, /<\/style\b/gi, true, " ");
-  str2 = stripThroughLastTag(str2, /<body\b/gi);
-  str2 = stripThroughLastTag(str2, /<\/head\b/gi);
-  str2 = stripThroughLastTag(str2, /<!doctype\b/gi);
-  str2 = stripFromFirstTag(str2, /<\/body\b/gi);
-  str2 = stripFromFirstTag(str2, /<\/html\b/gi);
-  str2 = throughLastTag(str2, (head) => replaceTags(head, /<a\b/gi, /<a\b[^>]*href\s*=\s*["']?([^\s"']+)[^>]*>/iy, (match2, href) => ` (${href}) `));
-  str2 = replaceClosedTags(str2, /<\/?(span|em|i|strong|b|u|a)\b[^>]*>/gi, "");
-  str2 = replaceTags(str2, /<li\b/gi, /<li\b[^>]*>[\n\u0001\s]*/iy, () => "* ");
-  str2 = replaceClosedTags(str2, /<hr\b[^>]*>/g, "\n-------------\n");
-  str2 = replaceClosedTags(str2, /<[^>]*>/g, " ");
-  str2 = str2.replace(/\u0001/g, "\n").replace(/[ \t]+/g, " ").replace(/^\s+$/gm, "").replace(/\n\n+/g, "\n\n").replace(/^\n+/, "\n").replace(/\n+$/, "\n");
-  str2 = decodeHTMLEntities(str2);
-  return str2;
+function htmlToText(str3) {
+  str3 = str3.replace(/\r\n|[\n\r\u2028\u2029]/g, "");
+  str3 = replaceBlocks(str3, /<!--/g, false, /-->/g, false, " ");
+  str3 = replaceClosedTags(str3, /<br\b[^>]*>/gi, "\n");
+  str3 = replaceClosedTags(str3, /<\/?(p|div|table|tr|td|th)\b[^>]*>/gi, "\n\n");
+  str3 = replaceBlocks(str3, /<script\b/gi, true, /<\/script\b/gi, true, " ");
+  str3 = replaceBlocks(str3, /<style\b/gi, true, /<\/style\b/gi, true, " ");
+  str3 = stripThroughLastTag(str3, /<body\b/gi);
+  str3 = stripThroughLastTag(str3, /<\/head\b/gi);
+  str3 = stripThroughLastTag(str3, /<!doctype\b/gi);
+  str3 = stripFromFirstTag(str3, /<\/body\b/gi);
+  str3 = stripFromFirstTag(str3, /<\/html\b/gi);
+  str3 = throughLastTag(str3, (head2) => replaceTags(head2, /<a\b/gi, /<a\b[^>]*href\s*=\s*["']?([^\s"']+)[^>]*>/iy, (match2, href) => ` (${href}) `));
+  str3 = replaceClosedTags(str3, /<\/?(span|em|i|strong|b|u|a)\b[^>]*>/gi, "");
+  str3 = replaceTags(str3, /<li\b/gi, /<li\b[^>]*>[\n\u0001\s]*/iy, () => "* ");
+  str3 = replaceClosedTags(str3, /<hr\b[^>]*>/g, "\n-------------\n");
+  str3 = replaceClosedTags(str3, /<[^>]*>/g, " ");
+  str3 = str3.replace(/\u0001/g, "\n").replace(/[ \t]+/g, " ").replace(/^\s+$/gm, "").replace(/\n\n+/g, "\n\n").replace(/^\n+/, "\n").replace(/\n+$/, "\n");
+  str3 = decodeHTMLEntities(str3);
+  return str3;
 }
 var dateFormatter = null;
 function formatDate(date) {
@@ -3698,12 +3698,12 @@ function formatHtmlAddresses(addresses) {
   addresses.forEach(processAddress);
   return parts.join(" ");
 }
-function foldLines(str2, lineLength, afterSpace) {
-  str2 = (str2 || "").toString();
+function foldLines(str3, lineLength, afterSpace) {
+  str3 = (str3 || "").toString();
   lineLength = lineLength || 76;
-  let pos = 0, len = str2.length, result = "", line2, match2;
+  let pos = 0, len = str3.length, result = "", line2, match2;
   while (pos < len) {
-    line2 = str2.slice(pos, pos + lineLength);
+    line2 = str3.slice(pos, pos + lineLength);
     if (line2.length < lineLength) {
       result += line2;
       break;
@@ -3715,7 +3715,7 @@ function foldLines(str2, lineLength, afterSpace) {
       continue;
     } else if ((match2 = line2.match(/(\s+)[^\s]*$/)) && match2[0].length - (afterSpace ? (match2[1] || "").length : 0) < line2.length) {
       line2 = line2.slice(0, line2.length - (match2[0].length - (afterSpace ? (match2[1] || "").length : 0)));
-    } else if (match2 = str2.slice(pos + line2.length).match(/^[^\s]+(\s*)/)) {
+    } else if (match2 = str3.slice(pos + line2.length).match(/^[^\s]+(\s*)/)) {
       line2 = line2 + match2[0].slice(0, match2[0].length - (!afterSpace ? (match2[1] || "").length : 0));
     }
     result += line2;
@@ -3795,15 +3795,15 @@ function formatHtmlHeader(message) {
   return template;
 }
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/address-parser.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/address-parser.js
 var TOKEN_OPERATOR = 1;
 var TOKEN_NO_BREAK = 2;
 var TOKEN_DIRTY = 4;
 var TOKEN_ESCAPES = 8;
 var TOKEN_STARTS_ESCAPED = 16;
 var TokenList = class {
-  constructor(str2) {
-    this.str = str2;
+  constructor(str3) {
+    this.str = str3;
     this.slots = new Int32Array(48);
     this.length = 0;
     this.cleaned = /* @__PURE__ */ new Map();
@@ -3890,12 +3890,12 @@ function isSpaceCode(code) {
 function isWordCode(code) {
   return code >= 48 && code <= 57 || code >= 65 && code <= 90 || code >= 97 && code <= 122 || code === 95;
 }
-function isBoundary(text, at) {
-  return isWordCode(text.charCodeAt(at - 1)) !== isWordCode(text.charCodeAt(at));
+function isBoundary(text2, at) {
+  return isWordCode(text2.charCodeAt(at - 1)) !== isWordCode(text2.charCodeAt(at));
 }
-function indexOfAt(text, from, to) {
+function indexOfAt(text2, from, to) {
   for (let i = from; i < to; i++) {
-    if (text.charCodeAt(i) === 64) {
+    if (text2.charCodeAt(i) === 64) {
       return i;
     }
   }
@@ -3933,11 +3933,11 @@ function collapseAtSpacing(value) {
   }
   return joinAtSpacing(value, at);
 }
-function looseAddressStart(text) {
-  const len = text.length;
+function looseAddressStart(text2) {
+  const len = text2.length;
   let pos = 0;
   while (pos < len) {
-    while (pos < len && isSpaceCode(text.charCodeAt(pos))) {
+    while (pos < len && isSpaceCode(text2.charCodeAt(pos))) {
       pos++;
     }
     if (pos >= len) {
@@ -3945,14 +3945,14 @@ function looseAddressStart(text) {
     }
     const runStart = pos;
     let runEnd = pos;
-    while (runEnd < len && !isSpaceCode(text.charCodeAt(runEnd))) {
+    while (runEnd < len && !isSpaceCode(text2.charCodeAt(runEnd))) {
       runEnd++;
     }
-    let at = indexOfAt(text, runStart, runEnd);
+    let at = indexOfAt(text2, runStart, runEnd);
     if (at >= 0) {
       let lastBoundary = -1;
       for (let k = runEnd; k > runStart; k--) {
-        if (isBoundary(text, k)) {
+        if (isBoundary(text2, k)) {
           lastBoundary = k;
           break;
         }
@@ -3961,12 +3961,12 @@ function looseAddressStart(text) {
       while (lastBoundary >= 0 && at >= 0) {
         if (at > atomStart && runEnd > at + 1 && lastBoundary > at + 1) {
           for (let start = atomStart; start < at; start++) {
-            if (isBoundary(text, start)) {
+            if (isBoundary(text2, start)) {
               if (start > runStart) {
                 return start;
               }
               let padded = runStart;
-              while (padded > 0 && isSpaceCode(text.charCodeAt(padded - 1))) {
+              while (padded > 0 && isSpaceCode(text2.charCodeAt(padded - 1))) {
                 padded--;
               }
               return padded;
@@ -3974,29 +3974,29 @@ function looseAddressStart(text) {
           }
         }
         atomStart = at + 1;
-        at = indexOfAt(text, atomStart, runEnd);
+        at = indexOfAt(text2, atomStart, runEnd);
       }
     }
     pos = runEnd;
   }
   return -1;
 }
-function recoverAddrSpec(address, text) {
+function recoverAddrSpec(address, text2) {
   address = collapseAtSpacing(address);
   if (!HAS_WHITESPACE.test(address)) {
-    return { address, text };
+    return { address, text: text2 };
   }
   let rest;
   const quoted = address.match(QUOTED_LOCAL_ADDR);
   if (quoted) {
     if (!quoted[2]) {
-      return { address, text };
+      return { address, text: text2 };
     }
     address = quoted[1];
     rest = [quoted[2]];
   } else {
     if (address.indexOf('"') >= 0) {
-      return { address, text };
+      return { address, text: text2 };
     }
     const parts = address.split(/\s+/);
     let addrIndex = parts.findIndex(isAddrSpec);
@@ -4004,14 +4004,14 @@ function recoverAddrSpec(address, text) {
       addrIndex = parts.findIndex((part) => LOOSE_ADDR_SPEC.test(part));
     }
     if (addrIndex < 0) {
-      return { address, text };
+      return { address, text: text2 };
     }
     address = parts.splice(addrIndex, 1)[0];
     rest = parts;
   }
   return {
     address,
-    text: [text, ...rest].filter((part) => part).join(" ")
+    text: [text2, ...rest].filter((part) => part).join(" ")
   };
 }
 function stripAddressComments(address) {
@@ -4089,7 +4089,7 @@ function stripAddressComments(address) {
   if (depth) {
     comments.push(comment.trim());
   }
-  return { address: result.trim(), comments: comments.filter((text) => text) };
+  return { address: result.trim(), comments: comments.filter((text2) => text2) };
 }
 function collectAddressParts(tokens, from, to) {
   let state = "text";
@@ -4224,23 +4224,23 @@ function _handleAddress(tokens, from, to) {
     data.text = data.text.concat(data.address.splice(1));
   }
   const addressFromQuotedText = !data.address.length && data.textWasQuoted.some((wasQuoted) => wasQuoted);
-  let text = data.text.join(" ");
+  let text2 = data.text.join(" ");
   let addressValue = data.address.join(" ");
-  if (!addressValue && isEncodedWordsOnly(text.trim())) {
-    return { address: "", name: decodeWords(text) };
+  if (!addressValue && isEncodedWordsOnly(text2.trim())) {
+    return { address: "", name: decodeWords(text2) };
   }
-  if (addressFromQuotedText && text.indexOf("@") >= 0) {
-    addressValue = quoteLocalPart(joinAtSpacing(text, domainAt(text)));
-    text = "";
+  if (addressFromQuotedText && text2.indexOf("@") >= 0) {
+    addressValue = quoteLocalPart(joinAtSpacing(text2, domainAt(text2)));
+    text2 = "";
   }
-  ({ address: addressValue, text } = recoverAddrSpec(addressValue, text));
-  if (!text && addressComments.length) {
-    text = addressComments.join(" ");
+  ({ address: addressValue, text: text2 } = recoverAddrSpec(addressValue, text2));
+  if (!text2 && addressComments.length) {
+    text2 = addressComments.join(" ");
     textFromComment = true;
   }
-  const rawName = text || addressValue || "";
+  const rawName = text2 || addressValue || "";
   const address = {
-    address: addressValue || (textFromComment ? "" : text) || "",
+    address: addressValue || (textFromComment ? "" : text2) || "",
     name: decodeWords(rawName)
   };
   if (address.address === rawName || address.address === address.name) {
@@ -4256,8 +4256,8 @@ var Tokenizer = class {
   /**
    * @param str Address field string
    */
-  constructor(str2) {
-    this.str = (str2 || "").toString();
+  constructor(str3) {
+    this.str = (str3 || "").toString();
     this.operatorCurrent = "";
     this.operatorExpecting = "";
     this.node = -1;
@@ -4293,10 +4293,10 @@ var Tokenizer = class {
    * @return An array of operator|text tokens
    */
   tokenize() {
-    const str2 = this.str;
-    const len = str2.length;
+    const str3 = this.str;
+    const len = str3.length;
     for (let i = 0; i < len; i++) {
-      this.checkChar(str2.charAt(i), i);
+      this.checkChar(str3.charAt(i), i);
     }
     this.closeText(len);
     const list = this.list;
@@ -4313,10 +4313,10 @@ var Tokenizer = class {
         }
         list.cleaned.set(kept, value);
       } else if (!(kind & TOKEN_OPERATOR)) {
-        while (start < end && isSpaceCode(str2.charCodeAt(start))) {
+        while (start < end && isSpaceCode(str3.charCodeAt(start))) {
           start++;
         }
-        while (end > start && isSpaceCode(str2.charCodeAt(end - 1))) {
+        while (end > start && isSpaceCode(str3.charCodeAt(end - 1))) {
           end--;
         }
         if (start === end) {
@@ -4353,12 +4353,12 @@ var Tokenizer = class {
    * @return Value of the run
    */
   cleanValue(start, end, kind) {
-    const str2 = this.str;
+    const str3 = this.str;
     const escapes = (kind & TOKEN_ESCAPES) !== 0;
     let escaped = (kind & TOKEN_STARTS_ESCAPED) !== 0;
     let value = "";
     for (let i = start; i < end; i++) {
-      const chr = str2.charAt(i);
+      const chr = str3.charAt(i);
       if (escapes && !escaped && chr === "\\") {
         escaped = true;
         continue;
@@ -4531,8 +4531,8 @@ function mergeNameFragments(list) {
   }
   return merged.reverse();
 }
-function parseAddressList(str2) {
-  const tokens = new Tokenizer(str2).tokenize();
+function parseAddressList(str3) {
+  const tokens = new Tokenizer(str3).tokenize();
   const parsedAddresses = [];
   let group = null;
   let members = [];
@@ -4562,8 +4562,8 @@ function parseAddressList(str2) {
   }
   return mergeNameFragments(parsedAddresses);
 }
-function addressParser(str2, options) {
-  const parsedAddresses = parseAddressList(str2);
+function addressParser(str3, options) {
+  const parsedAddresses = parseAddressList(str3);
   if (options && options.flatten) {
     let addresses = [];
     let walkAddressList = (list) => {
@@ -4582,7 +4582,7 @@ function addressParser(str2, options) {
 }
 var address_parser_default = addressParser;
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-encoder.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/base64-encoder.js
 function base64ArrayBuffer(arrayBuffer) {
   let base64 = "";
   const encodings = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -4615,7 +4615,7 @@ function base64ArrayBuffer(arrayBuffer) {
   return base64;
 }
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/otp-token.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/otp-token.js
 var MAX_FIELD_LENGTH = 8192;
 var NUMBER = /-?(?:\d{1,12}\.\d{1,3}|\d{1,15})/y;
 var STRING = /"((?:[\x20\x21\x23-\x5b\x5d-\x7e]|\\["\\])*)"/y;
@@ -4728,7 +4728,7 @@ function getOtp(headers) {
   return { code: parsed.value, origin };
 }
 
-// ../../../../../../../grokbot-zone/node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/postal-mime.js
+// node_modules/.pnpm/postal-mime@4.2.0/node_modules/postal-mime/dist/esm/postal-mime.js
 function isReadableStream(value) {
   return !!value && typeof value.getReader === "function";
 }
@@ -5281,21 +5281,21 @@ var categories_default = [
   {
     slug: "business-operations",
     label: "Business & Operations",
-    count: 358,
+    count: 357,
     purpose: "Run the back office: invoices, reports, vendors, process and team admin.",
     updated: "2026-10-28"
   },
   {
     slug: "calendar-meetings-scheduling",
     label: "Calendar, Meetings & Scheduling",
-    count: 120,
+    count: 125,
     purpose: "Book, move and prepare for meetings without the back-and-forth.",
     updated: "2026-10-28"
   },
   {
     slug: "coding-software",
     label: "Coding & Software",
-    count: 574,
+    count: 576,
     purpose: "Write, review, debug and ship code with a bot at your side.",
     updated: "2026-10-28"
   },
@@ -5316,56 +5316,56 @@ var categories_default = [
   {
     slug: "family-kids-learning",
     label: "Family, Kids & Learning",
-    count: 331,
+    count: 350,
     purpose: "Homework help, learning plans, and family organising.",
     updated: "2026-10-28"
   },
   {
     slug: "food-recipes-dining",
     label: "Food, Recipes & Dining",
-    count: 175,
+    count: 177,
     purpose: "Plan meals, cook from what you have, and pick where to eat.",
     updated: "2026-10-28"
   },
   {
     slug: "fun-games-hobbies",
     label: "Fun, Games & Hobbies",
-    count: 146,
+    count: 152,
     purpose: "Games, hobbies and play.",
     updated: "2026-10-28"
   },
   {
     slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
     label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-    count: 501,
+    count: 510,
     purpose: "Bots that build, tune or manage other Grok bots.",
     updated: "2026-10-28"
   },
   {
     slug: "health-fitness-wellness",
     label: "Health, Fitness & Wellness",
-    count: 190,
+    count: 194,
     purpose: "Training plans, nutrition, sleep and everyday wellness questions.",
     updated: "2026-10-28"
   },
   {
     slug: "home-garden-pets",
     label: "Home, Garden & Pets",
-    count: 278,
+    count: 283,
     purpose: "Home projects, gardens and pet care.",
     updated: "2026-10-28"
   },
   {
     slug: "jobs-careers",
     label: "Jobs & Careers",
-    count: 239,
+    count: 246,
     purpose: "Resumes, job search, interviews and career moves.",
     updated: "2026-10-28"
   },
   {
     slug: "legal-tax-paperwork",
     label: "Legal, Tax & Paperwork",
-    count: 145,
+    count: 150,
     purpose: "Understand forms, filings and everyday legal and tax paperwork.",
     updated: "2026-10-28"
   },
@@ -5379,14 +5379,14 @@ var categories_default = [
   {
     slug: "money-personal-finance",
     label: "Money & Personal Finance",
-    count: 340,
+    count: 348,
     purpose: "Budgets, bills, savings and everyday money decisions.",
     updated: "2026-10-28"
   },
   {
     slug: "privacy-security-scam-protection",
     label: "Privacy, Security & Scam Protection",
-    count: 233,
+    count: 239,
     purpose: "Stop spam calls, spot scams, and lock down your data.",
     updated: "2026-10-28"
   },
@@ -5400,63 +5400,63 @@ var categories_default = [
   {
     slug: "real-estate",
     label: "Real Estate",
-    count: 61,
+    count: 66,
     purpose: "Search, compare and manage property, as a buyer, seller or landlord.",
     updated: "2026-10-28"
   },
   {
     slug: "research-news-briefings",
     label: "Research, News & Briefings",
-    count: 731,
+    count: 736,
     purpose: "Research a topic, follow the news, and get a short briefing.",
     updated: "2026-10-28"
   },
   {
     slug: "sales-lead-generation",
     label: "Sales & Lead Generation",
-    count: 253,
+    count: 260,
     purpose: "Find leads, write outreach and keep a pipeline moving.",
     updated: "2026-10-28"
   },
   {
     slug: "shopping-deals",
     label: "Shopping & Deals",
-    count: 253,
+    count: 262,
     purpose: "Compare prices, find deals, and decide what to buy.",
     updated: "2026-10-28"
   },
   {
     slug: "trading-crypto-investing",
     label: "Trading, Crypto & Investing",
-    count: 353,
+    count: 360,
     purpose: "Markets, crypto and investing research and tracking.",
     updated: "2026-10-28"
   },
   {
     slug: "travel",
     label: "Travel",
-    count: 123,
+    count: 126,
     purpose: "Plan trips, find routes, and handle the details of getting there.",
     updated: "2026-10-28"
   },
   {
     slug: "video-images-audio-design",
     label: "Video, Images, Audio & Design",
-    count: 543,
+    count: 556,
     purpose: "Make and edit video, images, audio and design work.",
     updated: "2026-10-28"
   },
   {
     slug: "writing-publishing",
     label: "Writing & Publishing",
-    count: 321,
+    count: 322,
     purpose: "Draft, edit and publish writing of every length.",
     updated: "2026-10-28"
   },
   {
     slug: "x-twitter-social-media",
     label: "X (Twitter) & Social Media",
-    count: 286,
+    count: 294,
     purpose: "Post, grow and manage your presence on X and other social platforms.",
     updated: "2026-10-28"
   }
@@ -5483,7 +5483,7 @@ function parseBotLink(link) {
   const m = BOT_LINK_RE.exec(link);
   return m ? { link: `https://x.ai/bot/${m[1].toLowerCase()}`, code: m[1] } : null;
 }
-function validateSubmission(body, categorySlugs, minFillMs) {
+function validateSubmission(body, categorySlugs2, minFillMs) {
   const b = body && typeof body === "object" ? body : {};
   const errors = {};
   const name = line(b.name);
@@ -5496,7 +5496,7 @@ function validateSubmission(body, categorySlugs, minFillMs) {
   const parsed = linkRaw ? parseBotLink(linkRaw) : null;
   if (!parsed) errors.link = "must look like https://x.ai/bot/<code>";
   const category = str(b.category);
-  if (!category || !categorySlugs.has(category)) errors.category = "must be one of the listed categories";
+  if (!category || !categorySlugs2.has(category)) errors.category = "must be one of the listed categories";
   if (!isEmail(b.email)) errors.email = "required, a valid email address";
   if (!honeypotOk(b.company_website)) errors.company_website = "must be empty";
   if (!fillTimeOk(b.filled_ms, minFillMs)) errors.filled_ms = "too fast";
@@ -5547,16 +5547,16 @@ function digestRecipientCount(active, cap) {
   return Math.max(0, Math.min(active, Number.isFinite(cap) ? cap : 0));
 }
 var isOn = (v) => v === "1";
-function firstDescriptionLine(text) {
-  for (const raw of (text ?? "").split(/\r?\n/)) {
-    const text2 = singleLine(raw.replace(BOT_LINK_SCAN, "").replace(/\s+/g, " "));
-    if (text2.length >= 3 && !text2.startsWith(">")) return text2.slice(0, 500);
+function firstDescriptionLine(text2) {
+  for (const raw of (text2 ?? "").split(/\r?\n/)) {
+    const text3 = singleLine(raw.replace(BOT_LINK_SCAN, "").replace(/\s+/g, " "));
+    if (text3.length >= 3 && !text3.startsWith(">")) return text3.slice(0, 500);
   }
   return "(no description supplied)";
 }
 var oneLine = singleLine;
 var esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-var htmlNote = (text) => `<p>${esc(text).replace(/\n/g, "<br>")}</p>`;
+var htmlNote = (text2) => `<p>${esc(text2).replace(/\n/g, "<br>")}</p>`;
 var SITE = "https://grokbot.zone";
 function ackText(name, link) {
   return `Hi \u2014 we got "${name}" (${link}).
@@ -5583,17 +5583,17 @@ function ownerSummary(r) {
   };
 }
 var postalLine = (v) => typeof v === "string" ? singleLine(v) : "";
-function confirmMail(token, postal = "") {
-  const url = `${SITE}/subscribe/confirm?t=${token}`;
+function confirmMail(token2, postal = "") {
+  const url = `${SITE}/subscribe/confirm?t=${token2}`;
   const addr = postalLine(postal);
   const foot = ["If you did not ask for this, ignore this email and nothing will happen.", addr ? `GrokBot Zone, ${addr}` : ""].filter(Boolean);
-  const text = `Confirm: ${url}
+  const text2 = `Confirm: ${url}
 You'll get an update email Monday and Thursday. Nothing happens until you confirm.
 
 -- 
 ${foot.join("\n")}`;
   const html = `<p>Confirm your subscription to GrokBot Zone updates:</p><p><a href="${url}">Confirm my subscription</a></p><p>You'll get an update email Monday and Thursday. Nothing happens until you confirm.</p><hr><p style="color:#666;font-size:12px">${foot.map(esc).join("<br>")}</p>`;
-  return { subject: "Confirm your GrokBot Zone update emails", text, html };
+  return { subject: "Confirm your GrokBot Zone update emails", text: text2, html };
 }
 var firstSentence = (s) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).slice(0, 200);
 function digestMail(p, weekday, unsubToken, postal = "") {
@@ -5601,17 +5601,17 @@ function digestMail(p, weekday, unsubToken, postal = "") {
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
   const top = p.top.slice(0, 10).map((b) => ({ ...b, name: singleLine(b.name), description: singleLine(b.description) }));
   const lines = top.map((b, i) => `${i + 1}. ${b.name} \u2014 ${firstSentence(b.description)} \u2192 ${SITE}/bots/${b.id}/`);
-  const head = `${p.asOf} \u2014 ${p.totalBots} bots in ${p.categoryCount} categories.`;
+  const head2 = `${p.asOf} \u2014 ${p.totalBots} bots in ${p.categoryCount} categories.`;
   return {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
-    text: `${head}
+    text: `${head2}
 ${lines.join("\n")}
 
 -- 
 ${addr ? `GrokBot Zone, ${addr}
 ` : ""}You get this because you confirmed a subscription.
 Unsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${top.map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ""}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
+    html: `<p>${esc(head2)}</p><table>${top.map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> \u2014 ${esc(firstSentence(b.description))}</td></tr>`).join("")}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ""}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { "List-Unsubscribe": `<${unsub}>`, "List-Unsubscribe-Post": "List-Unsubscribe=One-Click" }
   };
 }
@@ -5663,7 +5663,7 @@ var isMediaRequest = (request, url) => (request.method === "GET" || request.meth
 async function serveMedia(request, assets, url) {
   const res = await assets.fetch(new Request(url.toString()));
   if (res.status !== 200 || res.headers.has("content-encoding")) return res;
-  const head = request.method === "HEAD";
+  const head2 = request.method === "HEAD";
   const ext = url.pathname.split(".").pop() ?? "";
   const base = {
     "Accept-Ranges": "bytes",
@@ -5686,7 +5686,7 @@ async function serveMedia(request, assets, url) {
   }
   if (!range) {
     const headers2 = { ...base, "Content-Length": String(size) };
-    if (head) {
+    if (head2) {
       await drop();
       return new Response(null, { status: 200, headers: headers2 });
     }
@@ -5694,7 +5694,7 @@ async function serveMedia(request, assets, url) {
   }
   const length = range.end - range.start + 1;
   const headers = { ...base, "Content-Range": `bytes ${range.start}-${range.end}/${size}`, "Content-Length": String(length) };
-  if (head) {
+  if (head2) {
     await drop();
     return new Response(null, { status: 206, headers });
   }
@@ -5742,10 +5742,10 @@ var attr = (tag, name) => {
 };
 function parseHead(html) {
   const end = html.toLowerCase().indexOf("</head>");
-  const head = end >= 0 ? html.slice(0, end) : html;
+  const head2 = end >= 0 ? html.slice(0, end) : html;
   let canonical = null;
   const og = {};
-  for (const m of head.matchAll(/<(link|meta)\b[^>]*>/gi)) {
+  for (const m of head2.matchAll(/<(link|meta)\b[^>]*>/gi)) {
     const tag = m[0];
     if (m[1].toLowerCase() === "link") {
       if ((attr(tag, "rel") ?? "").toLowerCase() === "canonical") canonical = attr(tag, "href");
@@ -5769,13 +5769,13 @@ async function readHead(res, max = 16384) {
   if (!res.body) return "";
   const reader = res.body.getReader();
   const dec = new TextDecoder();
-  let out = "";
+  let out2 = "";
   try {
     for (; ; ) {
       const { done, value } = await reader.read();
       if (done) break;
-      out += dec.decode(value, { stream: true });
-      if (/<\/head>/i.test(out) || out.length >= max) break;
+      out2 += dec.decode(value, { stream: true });
+      if (/<\/head>/i.test(out2) || out2.length >= max) break;
     }
   } finally {
     try {
@@ -5783,11 +5783,11 @@ async function readHead(res, max = 16384) {
     } catch {
     }
   }
-  return out;
+  return out2;
 }
 var denylist = (secret) => (secret ?? "").split("|").map((t) => t.trim().toLowerCase()).filter(Boolean);
-var hits = (text, list) => {
-  const t = text.toLowerCase();
+var hits = (text2, list) => {
+  const t = text2.toLowerCase();
   return list.some((w) => t.includes(w));
 };
 function scrub(f, list) {
@@ -5798,9 +5798,9 @@ function scrub(f, list) {
   if (authorHit) author = "";
   return { name, author, description, excluded: authorHit || hits(name, list) || hits(description, list) };
 }
-function ingest(head, requestedCode, list, model) {
-  if (!head.name) return null;
-  const s = scrub(head, list);
+function ingest(head2, requestedCode, list, model) {
+  if (!head2.name) return null;
+  const s = scrub(head2, list);
   return { ...s, code: requestedCode, category: s.excluded ? null : classify(model, s.name, s.description) };
 }
 
@@ -5828,11 +5828,11 @@ var CDX = "https://web.archive.org/cdx/search/cdx";
 var CDX_ROWS = 500;
 var ARCHIVE_TIMEOUT_MS = 9e4;
 function parseListing(html) {
-  const out = /* @__PURE__ */ new Map();
+  const out2 = /* @__PURE__ */ new Map();
   for (const m of html.matchAll(/href=["'](?:https?:\/\/(?:www\.)?x\.ai)?\/bot\/([A-Za-z0-9_-]+)["'/?#]/g)) {
-    if (CODE_RE.test(m[1]) && !out.has(m[1].toLowerCase())) out.set(m[1].toLowerCase(), m[1]);
+    if (CODE_RE.test(m[1]) && !out2.has(m[1].toLowerCase())) out2.set(m[1].toLowerCase(), m[1]);
   }
-  return [...out.values()];
+  return [...out2.values()];
 }
 function parseCdx(rows) {
   const found = /* @__PURE__ */ new Map();
@@ -5893,15 +5893,15 @@ var LIST_ADD_CAP = 1e3;
 var LIST_CHUNK = 2e3;
 var CODE_IN_TEXT = /x\.ai\/bot\/([A-Za-z0-9_-]{21})(?![A-Za-z0-9_-])/g;
 function parseSources(raw) {
-  const out = [];
+  const out2 = [];
   for (const line2 of (raw ?? "").split("\n")) {
     const u = line2.trim();
-    if (/^https:\/\/\S+$/i.test(u) && !out.includes(u)) out.push(u);
+    if (/^https:\/\/\S+$/i.test(u) && !out2.includes(u)) out2.push(u);
   }
-  return out;
+  return out2;
 }
-function extractCodes2(text, into = /* @__PURE__ */ new Map()) {
-  for (const m of text.matchAll(CODE_IN_TEXT)) if (!into.has(m[1].toLowerCase())) into.set(m[1].toLowerCase(), m[1]);
+function extractCodes2(text2, into = /* @__PURE__ */ new Map()) {
+  for (const m of text2.matchAll(CODE_IN_TEXT)) if (!into.has(m[1].toLowerCase())) into.set(m[1].toLowerCase(), m[1]);
   return into;
 }
 async function readCapped(res, maxBytes) {
@@ -5947,12 +5947,12 @@ async function pullLists(raw, f, opts = {}) {
         console.error(`lists: source ${i + 1} skipped, status ${res.status}`);
         continue;
       }
-      const text = await readCapped(res, opts.maxBytes ?? LIST_MAX_BYTES);
-      if (text === null) {
+      const text2 = await readCapped(res, opts.maxBytes ?? LIST_MAX_BYTES);
+      if (text2 === null) {
         console.error(`lists: source ${i + 1} skipped, body over the size cap`);
         continue;
       }
-      extractCodes2(text, found);
+      extractCodes2(text2, found);
       fetchedOk++;
     } catch (e) {
       const timedOut = e instanceof Error && (e.name === "TimeoutError" || e.name === "AbortError");
@@ -6080,8 +6080,8 @@ async function ingestCheck(up, row, clock, list, model) {
     } catch {
       return retryLater;
     }
-    const head = parseHead(html);
-    const got = ingest(head, code, list, model);
+    const head2 = parseHead(html);
+    const got = ingest(head2, code, list, model);
     if (!got) return retryLater;
     return {
       ...applyVerdict(row, { kind: "live", code }, clock.now()),
@@ -6984,13 +6984,19 @@ var recent_default = {
     {
       slug: "research-news-briefings",
       label: "Research, News & Briefings",
-      count: 731,
+      count: 736,
       asOf: "2026-10-28"
     },
     {
       slug: "coding-software",
       label: "Coding & Software",
-      count: 574,
+      count: 576,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "video-images-audio-design",
+      label: "Video, Images, Audio & Design",
+      count: 556,
       asOf: "2026-10-28"
     },
     {
@@ -7000,45 +7006,39 @@ var recent_default = {
       asOf: "2026-10-28"
     },
     {
-      slug: "video-images-audio-design",
-      label: "Video, Images, Audio & Design",
-      count: 543,
-      asOf: "2026-10-28"
-    },
-    {
       slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
       label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-      count: 501,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "business-operations",
-      label: "Business & Operations",
-      count: 358,
+      count: 510,
       asOf: "2026-10-28"
     },
     {
       slug: "trading-crypto-investing",
       label: "Trading, Crypto & Investing",
-      count: 353,
+      count: 360,
       asOf: "2026-10-28"
     },
     {
-      slug: "money-personal-finance",
-      label: "Money & Personal Finance",
-      count: 340,
+      slug: "business-operations",
+      label: "Business & Operations",
+      count: 357,
       asOf: "2026-10-28"
     },
     {
       slug: "family-kids-learning",
       label: "Family, Kids & Learning",
-      count: 331,
+      count: 350,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "money-personal-finance",
+      label: "Money & Personal Finance",
+      count: 348,
       asOf: "2026-10-28"
     },
     {
       slug: "writing-publishing",
       label: "Writing & Publishing",
-      count: 321,
+      count: 322,
       asOf: "2026-10-28"
     },
     {
@@ -7050,25 +7050,31 @@ var recent_default = {
     {
       slug: "x-twitter-social-media",
       label: "X (Twitter) & Social Media",
-      count: 286,
+      count: 294,
       asOf: "2026-10-28"
     },
     {
       slug: "home-garden-pets",
       label: "Home, Garden & Pets",
-      count: 278,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "sales-lead-generation",
-      label: "Sales & Lead Generation",
-      count: 253,
+      count: 283,
       asOf: "2026-10-28"
     },
     {
       slug: "shopping-deals",
       label: "Shopping & Deals",
-      count: 253,
+      count: 262,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "sales-lead-generation",
+      label: "Sales & Lead Generation",
+      count: 260,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "jobs-careers",
+      label: "Jobs & Careers",
+      count: 246,
       asOf: "2026-10-28"
     },
     {
@@ -7078,63 +7084,57 @@ var recent_default = {
       asOf: "2026-10-28"
     },
     {
-      slug: "jobs-careers",
-      label: "Jobs & Careers",
-      count: 239,
-      asOf: "2026-10-28"
-    },
-    {
       slug: "privacy-security-scam-protection",
       label: "Privacy, Security & Scam Protection",
-      count: 233,
+      count: 239,
       asOf: "2026-10-28"
     },
     {
       slug: "health-fitness-wellness",
       label: "Health, Fitness & Wellness",
-      count: 190,
+      count: 194,
       asOf: "2026-10-28"
     },
     {
       slug: "food-recipes-dining",
       label: "Food, Recipes & Dining",
-      count: 175,
+      count: 177,
       asOf: "2026-10-28"
     },
     {
       slug: "fun-games-hobbies",
       label: "Fun, Games & Hobbies",
-      count: 146,
+      count: 152,
       asOf: "2026-10-28"
     },
     {
       slug: "legal-tax-paperwork",
       label: "Legal, Tax & Paperwork",
-      count: 145,
+      count: 150,
       asOf: "2026-10-28"
     },
     {
       slug: "travel",
       label: "Travel",
-      count: 123,
+      count: 126,
       asOf: "2026-10-28"
     },
     {
       slug: "calendar-meetings-scheduling",
       label: "Calendar, Meetings & Scheduling",
-      count: 120,
+      count: 125,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "real-estate",
+      label: "Real Estate",
+      count: 66,
       asOf: "2026-10-28"
     },
     {
       slug: "everything-else",
       label: "Everything Else",
       count: 65,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "real-estate",
-      label: "Real Estate",
-      count: 61,
       asOf: "2026-10-28"
     }
   ]
@@ -7472,13 +7472,13 @@ async function runDataPlane(env, scheduledTime, deps = { fetch: (...a) => fetch(
 var UNRESOLVED_AFTER_DAYS = 7;
 async function settleSubmissions(db, nowMs) {
   const cutoff = new Date(nowMs - UNRESOLVED_AFTER_DAYS * 864e5).toISOString();
-  const out = await db.batch([
+  const out2 = await db.batch([
     db.prepare(`UPDATE submissions SET status = 'approved' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status = 'live')`),
     db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND lower(code) IN (SELECT code_lc FROM bots WHERE status IN ('dead', 'excluded'))`),
     db.prepare(`UPDATE submissions SET status = 'rejected' WHERE status = 'pending' AND created_at < ?`).bind(cutoff),
     db.prepare(`UPDATE bots SET status = 'excluded' WHERE status = 'pending' AND source = 'submission' AND first_seen < ?`).bind(cutoff)
   ]);
-  return Number(out[2].meta?.changes ?? 0);
+  return Number(out2[2].meta?.changes ?? 0);
 }
 
 // src/worker/dp/serve.ts
@@ -7616,11 +7616,11 @@ async function livePage(res, db, path, nowMs = Date.now()) {
         e.remove();
       } });
     } else return res;
-    const out = rw.transform(res);
-    const h = new Headers(out.headers);
+    const out2 = rw.transform(res);
+    const h = new Headers(out2.headers);
     for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
     h.set("Cache-Control", "no-cache");
-    return new Response(out.body, { status: out.status, headers: h });
+    return new Response(out2.body, { status: out2.status, headers: h });
   } catch {
     return res;
   }
@@ -7674,8 +7674,8 @@ function isHuman(req) {
 var hex = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
 function clientKey(ip) {
   if (!ip.includes(":")) return ip;
-  const [head, tail = ""] = ip.toLowerCase().split("::");
-  const a = head ? head.split(":") : [];
+  const [head2, tail = ""] = ip.toLowerCase().split("::");
+  const a = head2 ? head2.split(":") : [];
   const b = tail ? tail.split(":") : [];
   const groups = ip.includes("::") ? [...a, ...Array(Math.max(0, 8 - a.length - b.length)).fill("0"), ...b] : a;
   return groups.slice(0, 4).map((g) => g.replace(/^0+(?=.)/, "")).join(":");
@@ -7828,34 +7828,34 @@ function searchLive(m) {
 }
 async function categoryPage(res, slug, m) {
   if (res.status !== 200) return res;
-  let text = await res.text();
+  let text2 = await res.text();
   const add = m.extras.filter((b) => catsOfEntry(b).includes(slug));
   let removed = 0;
-  if (m.dead.size) text = text.replace(/<li data-code="([a-z0-9_-]+)">[\s\S]*?<\/li>/g, (all, c) => m.dead.has(c) ? (removed++, "") : all);
-  if (!add.length && !removed) return new Response(text, { status: 200, headers: res.headers });
+  if (m.dead.size) text2 = text2.replace(/<li data-code="([a-z0-9_-]+)">[\s\S]*?<\/li>/g, (all, c) => m.dead.has(c) ? (removed++, "") : all);
+  if (!add.length && !removed) return new Response(text2, { status: 200, headers: res.headers });
   if (add.length) {
     const html = add.map((b) => `<li data-code="${esc2(b.code.toLowerCase())}">${cardHtml(b.id, cardOf2(b), 2, false, false)}</li>`).join("");
-    const at = text.indexOf("data-bot-list");
-    const end = at >= 0 ? text.indexOf("</ul>", at) : -1;
-    if (end >= 0) text = text.slice(0, end) + html + text.slice(end);
+    const at = text2.indexOf("data-bot-list");
+    const end = at >= 0 ? text2.indexOf("</ul>", at) : -1;
+    if (end >= 0) text2 = text2.slice(0, end) + html + text2.slice(end);
     else add.length = 0;
   }
-  text = text.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_a, x, n, y) => `${x}${Number(n) - removed + add.length}${y}`);
-  return new Response(text, { status: 200, headers: res.headers });
+  text2 = text2.replace(/(data-count[^>]*><span class="num"[^>]*>)(\d+)(<\/span>)/, (_a, x, n, y) => `${x}${Number(n) - removed + add.length}${y}`);
+  return new Response(text2, { status: 200, headers: res.headers });
 }
 async function uncategorizedPage(tpl, m) {
   if (tpl.status !== 200) return tpl;
-  const text = await tpl.text();
+  const text2 = await tpl.text();
   const list = (m?.extras ?? []).filter((b) => !catsOfEntry(b).length);
   const title = "Uncategorized Grok bots | GrokBot Zone";
   const desc = `${list.length} live Grok bots that have not been sorted into a category yet.`;
   const items = list.map((b) => `<li data-code="${esc2(b.code.toLowerCase())}">${cardHtml(b.id, cardOf2(b), 2, false, false)}</li>`).join("");
   const main = `<main id="main"><div class="wrap page-head"><p class="crumbs"><a href="/categories/">Categories</a> / Uncategorized</p><h1>Uncategorized</h1><p>Bots that have not been sorted into a category yet.</p><p data-count><span class="num">${list.length}</span> bots \xB7 live list</p></div><div class="wrap block">` + (list.length ? `<ul class="grid" data-bot-list>${items}</ul>` : "<p>No bots are waiting for a category right now.</p>") + "</div></main>";
-  const out = text.replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`).replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc2(desc)}">`).replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="https://grokbot.zone/categories/uncategorized/"><meta name="robots" content="noindex">').replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`).replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc2(desc)}">`).replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://grokbot.zone/categories/uncategorized/">').replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "").replace(/<main id="main">[\s\S]*?<\/main>/, () => main);
+  const out2 = text2.replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`).replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc2(desc)}">`).replace(/<link rel="canonical" href="[^"]*">/, '<link rel="canonical" href="https://grokbot.zone/categories/uncategorized/"><meta name="robots" content="noindex">').replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`).replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${esc2(desc)}">`).replace(/<meta property="og:url" content="[^"]*">/, '<meta property="og:url" content="https://grokbot.zone/categories/uncategorized/">').replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "").replace(/<main id="main">[\s\S]*?<\/main>/, () => main);
   const h = new Headers(tpl.headers);
   for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
   h.set("Cache-Control", "no-cache");
-  return new Response(out, { status: 200, headers: h });
+  return new Response(out2, { status: 200, headers: h });
 }
 var codeOfUrl = (u) => {
   const x = /\/bots\/([^/]+)\/?$/.exec(u);
@@ -7870,10 +7870,10 @@ function feedJson(body, m) {
 }
 function feedXml(body, m, generatedAt) {
   const entries = [...body.matchAll(/ {2}<entry>[\s\S]*?<\/entry>\n/g)];
-  let out = body;
+  let out2 = body;
   for (const e of entries) {
     const c = /<id>[^<]*\/bots\/([^/<]+)\/<\/id>/.exec(e[0]);
-    if (c && m.dead.has(splitId(c[1])[1].toLowerCase())) out = out.replace(e[0], "");
+    if (c && m.dead.has(splitId(c[1])[1].toLowerCase())) out2 = out2.replace(e[0], "");
   }
   const add = m.extras.slice(0, MAX_FEED_EXTRAS).map((b) => `  <entry>
     <title>${esc2(b.name)}</title>
@@ -7884,11 +7884,11 @@ function feedXml(body, m, generatedAt) {
   </entry>
 `).join("");
   if (add) {
-    const i = out.indexOf("  <entry>");
-    out = i >= 0 ? out.slice(0, i) + add + out.slice(i) : out.replace("</feed>", add + "</feed>");
-    out = out.replace(/<updated>[^<]*<\/updated>/, `<updated>${generatedAt}</updated>`);
+    const i = out2.indexOf("  <entry>");
+    out2 = i >= 0 ? out2.slice(0, i) + add + out2.slice(i) : out2.replace("</feed>", add + "</feed>");
+    out2 = out2.replace(/<updated>[^<]*<\/updated>/, `<updated>${generatedAt}</updated>`);
   }
-  return out;
+  return out2;
 }
 function sitemapIndex(body, m) {
   return m.extras.length ? body.replace("</sitemapindex>", `<sitemap><loc>${SITE2}/sitemap-live.xml</loc></sitemap></sitemapindex>`) : body;
@@ -8017,29 +8017,1145 @@ function renderBotPage(tpl, r) {
   const attr2 = (name, value) => ({ element(e) {
     e.setAttribute(name, value);
   } });
-  const text = (v) => ({ element(e) {
+  const text2 = (v) => ({ element(e) {
     e.setInnerContent(v);
   } });
   const drop = { element(e) {
     e.remove();
   } };
-  const rw = new HTMLRewriter().on('meta[name="robots"]', drop).on("title", text(title)).on('meta[name="description"]', attr2("content", description)).on('meta[property="og:title"]', attr2("content", title)).on('meta[property="og:description"]', attr2("content", description)).on('meta[property="og:url"]', attr2("content", url)).on('link[rel="canonical"]', attr2("href", url)).on('script[type="application/ld+json"]', { element(e) {
+  const rw = new HTMLRewriter().on('meta[name="robots"]', drop).on("title", text2(title)).on('meta[name="description"]', attr2("content", description)).on('meta[property="og:title"]', attr2("content", title)).on('meta[property="og:description"]', attr2("content", description)).on('meta[property="og:url"]', attr2("content", url)).on('link[rel="canonical"]', attr2("href", url)).on('script[type="application/ld+json"]', { element(e) {
     e.setInnerContent(ld[ldAt++] ?? "{}", { html: true });
   } }).on('[data-f="crumb"]', slugs[0] ? {} : drop).on('[data-f="crumb-link"]', slugs[0] ? { element(e) {
     e.setAttribute("href", `/categories/${slugs[0]}/`);
     e.setInnerContent(cat);
-  } } : {}).on('[data-f="name"]', text(r.name)).on('[data-f="by"]', r.author ? text(`by ${r.author}`) : drop).on('[data-f="desc"]', text(r.description)).on('[data-f="cats-row"]', slugs.length ? {} : drop).on('[data-f="cats-row"] dt', text(slugs.length === 1 ? "Category" : "Categories")).on('[data-f="cats"]', { element(e) {
+  } } : {}).on('[data-f="name"]', text2(r.name)).on('[data-f="by"]', r.author ? text2(`by ${r.author}`) : drop).on('[data-f="desc"]', text2(r.description)).on('[data-f="cats-row"]', slugs.length ? {} : drop).on('[data-f="cats-row"] dt', text2(slugs.length === 1 ? "Category" : "Categories")).on('[data-f="cats"]', { element(e) {
     e.setInnerContent(slugs.map((s) => `<a href="/categories/${esc2(s)}/">${esc2(LABEL2.get(s))}</a>`).join(" \xB7 "), { html: true });
-  } }).on('[data-f="author-row"]', r.author ? {} : drop).on('[data-f="author"]', text(r.author)).on('[data-f="date-label"]', text("First listed")).on('[data-f="date"]', { element(e) {
+  } }).on('[data-f="author-row"]', r.author ? {} : drop).on('[data-f="author"]', text2(r.author)).on('[data-f="date-label"]', text2("First listed")).on('[data-f="date"]', { element(e) {
     e.setAttribute("datetime", date);
     e.setInnerContent(date);
   } }).on('[data-f="open"]', attr2("href", `/go/${r.code}`)).on('[data-f="share"]', { element(e) {
     e.setAttribute("data-title", r.name);
     e.setAttribute("data-url", url);
-  } }).on('[data-f="note"]', text(`This description is a snapshot from ${date}. The bot's own page has the current details.`));
-  const out = rw.transform(tpl);
+  } }).on('[data-f="note"]', text2(`This description is a snapshot from ${date}. The bot's own page has the current details.`));
+  const out2 = rw.transform(tpl);
   const headers = new Headers({ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, s-maxage=3600" });
-  return new Response(out.body, { status: 200, headers });
+  return new Response(out2.body, { status: 200, headers });
+}
+
+// src/worker/agent.ts
+var LINK_HEADER = '</.well-known/api-catalog>; rel="api-catalog", </openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"; type="text/markdown", </.well-known/ai-catalog.json>; rel="ai-catalog", </mcp/server-card>; rel="mcp-server-card"';
+var SKILL_PATH = "/.well-known/agent-skills/grokbot-zone-onboarding/SKILL.md";
+var MCP_URL = `${SITE}/mcp`;
+function isHtml(res) {
+  return (res.headers.get("content-type") ?? "").toLowerCase().includes("text/html");
+}
+function mediaQ(accept, type) {
+  let best = 0;
+  for (const part of accept.split(",")) {
+    const [raw, ...params] = part.split(";").map((s) => s.trim());
+    if (raw.toLowerCase() !== type) continue;
+    const q = params.find((p) => p.toLowerCase().startsWith("q="));
+    const n = q ? Number(q.slice(2)) : 1;
+    if (Number.isFinite(n) && n > best) best = n;
+  }
+  return best;
+}
+function wantsMarkdown(req) {
+  const accept = req.headers.get("accept") ?? "";
+  if (!accept.toLowerCase().includes("text/markdown")) return false;
+  return mediaQ(accept, "text/markdown") >= mediaQ(accept, "text/html");
+}
+function decode(s) {
+  return s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+}
+function textOf(s) {
+  return decode(s.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ")).trim();
+}
+function htmlToMarkdown(html) {
+  const title = textOf(html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "");
+  return structuredMarkdown(html, title);
+}
+function structuredMarkdown(html, title) {
+  let s = html.replace(/<script[\s\S]*?<\/script>/gi, "").replace(/<style[\s\S]*?<\/style>/gi, "").replace(/<svg[\s\S]*?<\/svg>/gi, "").replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+  s = s.replace(/<h([1-6])[^>]*>([\s\S]*?)<\/h\1>/gi, (_, n, inner) => `
+${"#".repeat(Number(n))} ${textOf(inner)}
+
+`);
+  s = s.replace(/<a\s[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, (_, href, inner) => {
+    const label = textOf(inner);
+    return label ? `[${label}](${href})` : href;
+  });
+  s = s.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_, inner) => `
+- ${textOf(inner)}`);
+  s = s.replace(/<br\s*\/?>/gi, "\n");
+  s = s.replace(/<\/(p|div|section|article|li|tr)>/gi, "\n");
+  s = s.replace(/<[^>]+>/g, " ");
+  s = decode(s).replace(/[ \t]+\n/g, "\n").replace(/[ \t]{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+  const head2 = title ? `# ${title}
+
+` : "";
+  return `${head2}${s}
+`;
+}
+var text = (body, type, status = 200) => new Response(body, {
+  status,
+  headers: { "Content-Type": type, "Cache-Control": "public, max-age=300" }
+});
+var jsonDoc = (body, type) => text(JSON.stringify(body) + "\n", type);
+var SERVER_CARD = {
+  name: "grokbot.zone",
+  title: "GrokBot Zone",
+  version: "1.0.0",
+  description: "Search and list public Grok bot listings. Read tools need no account. Submit and subscribe use the same limits as the site forms.",
+  websiteUrl: `${SITE}/`,
+  serverInfo: { name: "grokbot.zone", version: "1.0.0", title: "GrokBot Zone" },
+  remotes: [{ type: "streamable-http", url: MCP_URL }]
+};
+var LLMS = `# GrokBot Zone
+
+> A searchable directory of public Grok bot listings. Agents can search, read, submit and subscribe with no browser.
+
+The catalog is a snapshot, refreshed Monday and Thursday. A submitted bot is queued and checked before it is public. This site is not a store. The contact path is the submit form.
+
+## Products / Services
+- [Categories](${SITE}/categories/): bots grouped by the job they do
+- [Search](${SITE}/bots/): find a bot by name or job
+- [Submit a bot](${SITE}/submit/): list a public Grok bot
+- [Read API](${SITE}/api/): static JSON catalog
+
+## Policies
+- [FAQ](${SITE}/faq/): what the directory lists, and what it does not run or host
+
+## Help
+- [For AI agents](${SITE}/agents/): MCP endpoint, HTTP API and the onboarding skill
+- [Submit](${SITE}/submit/): the contact path on this site
+
+## Agent context
+- Prices and stock: not a store. Listing is free.
+- Actions: MCP at ${MCP_URL} (Streamable HTTP, JSON responses). Read tools need no auth. Submit and subscribe use the same rate limits and double opt-in as the site forms.
+
+## Optional
+- [Full agent notes](${SITE}/llms-full.txt)
+- [OpenAPI](${SITE}/openapi.json)
+- [API catalog](${SITE}/.well-known/api-catalog)
+`;
+var LLMS_FULL = `${LLMS}
+## MCP tools
+POST ${MCP_URL}. Protocol 2025-11-25 (initialize, notifications/initialized, tools/list, tools/call) and 2026-07-28 (server/discover). Stateless. GET returns 405.
+
+| Tool | Input | Effect |
+|---|---|---|
+| grokbot_health | none | Worker and database check |
+| grokbot_list_categories | none | Category slugs, labels, counts |
+| grokbot_get_category | slug | Bots in one category |
+| grokbot_search | query, optional category | Up to 5 bots scored on name and description |
+| grokbot_trending | optional category | Ordered bot ids |
+| grokbot_get_bot | id | One bot record |
+| grokbot_check_listed | link or code | Whether that bot is already listed |
+| grokbot_submit_bot | name, link, category, description, email, optional author | Queue a listing. Same handler as the form |
+| grokbot_subscribe | email | Double opt-in. Nothing is sent until the confirm link is clicked |
+
+## HTTP reads
+- GET /api/v1/index.json
+- GET /api/v1/categories.json
+- GET /api/v1/categories/{slug}.json
+- GET /api/v1/trending.json
+- GET /api/v1/recent.json
+- GET /api/v1/bots/{id}.json
+- GET /api/v1/codes.json
+- GET /api/health
+- GET /feed.json and GET /feed.xml
+
+## HTTP writes
+- POST /api/v1/submissions (alias POST /api/submit), JSON, content-type application/json
+- POST /subscribe, JSON
+
+Errors are JSON \`{ok:false, error}\` or \`{ok:false, errors}\`. Send \`Accept: application/problem+json\` for an RFC 9457 body.
+`;
+var PROBLEM = {
+  type: "object",
+  properties: {
+    type: { type: "string" },
+    title: { type: "string" },
+    status: { type: "integer" },
+    detail: { type: "string" }
+  },
+  required: ["type", "title", "status"],
+  additionalProperties: true
+};
+var ERR_JSON = {
+  type: "object",
+  properties: { ok: { const: false }, error: { type: "string" }, errors: { type: "object", additionalProperties: { type: "string" } } },
+  required: ["ok"],
+  additionalProperties: true
+};
+var errorContent = {
+  "application/json": { schema: ERR_JSON },
+  "application/problem+json": { schema: PROBLEM }
+};
+var OPENAPI = {
+  openapi: "3.1.0",
+  info: {
+    title: "GrokBot Zone",
+    version: "1.0.0",
+    summary: "Read the public Grok bot directory, submit a bot, or subscribe to updates.",
+    description: "Static JSON reads plus two write endpoints. Write errors are JSON by default. Send Accept: application/problem+json for an RFC 9457 problem body."
+  },
+  servers: [{ url: SITE }],
+  paths: {
+    "/api/health": { get: op("getHealth", "Worker and database health", { ok: { type: "boolean" }, d1: { type: "boolean" } }, ["ok", "d1"]) },
+    "/api/flags": { get: op("getFlags", "Which write features are switched on", { form: { type: "boolean" }, subscribe: { type: "boolean" }, email: { type: "boolean" } }, ["form", "subscribe", "email"]) },
+    "/api/v1/index.json": { get: op("getApiIndex", "Endpoint map, asOf and total bot count", { asOf: { type: "string" }, totalBots: { type: "integer" } }, ["asOf", "totalBots"]) },
+    "/api/v1/categories.json": { get: op("listCategories", "Every category", { type: "array", items: { type: "object" } }) },
+    "/api/v1/categories/{slug}.json": { get: op("getCategory", "Bots in one category", { slug: { type: "string" }, bots: { type: "array" } }, ["slug"], [{ name: "slug", in: "path", required: true, schema: { type: "string", maxLength: 80 } }]) },
+    "/api/v1/trending.json": { get: op("getTrending", "Ordered bot ids, global and per category", { global: { type: "array", items: { type: "string" } } }, ["global"]) },
+    "/api/v1/recent.json": { get: op("getRecent", "Categories in refresh order", { type: "object" }) },
+    "/api/v1/bots/{id}.json": { get: op("getBot", "One bot record", { id: { type: "string" }, name: { type: "string" }, link: { type: "string" } }, ["id", "name"], [{ name: "id", in: "path", required: true, schema: { type: "string", maxLength: 160 } }]) },
+    "/api/v1/codes.json": { get: op("listCodes", "Every listed bot code, lowercased", { codes: { type: "array", items: { type: "string" } } }, ["codes"]) },
+    "/api/v1/submissions": { post: writeOp("submitBot", "Queue a public Grok bot for listing", submissionSchema()) },
+    "/subscribe": { post: writeOp("subscribe", "Start a double opt-in for update emails", { type: "object", additionalProperties: false, required: ["email"], properties: { email: { type: "string", format: "email", maxLength: 254 }, company_website: { type: "string", maxLength: 0 } } }) }
+  }
+};
+function op(operationId, summary, schema, required, parameters) {
+  const respSchema = required ? { type: "object", properties: schema, required, additionalProperties: true } : schema;
+  return {
+    operationId,
+    summary,
+    ...parameters ? { parameters } : {},
+    responses: {
+      "200": { description: "OK", content: { "application/json": { schema: respSchema } } },
+      "404": { description: "Not found", content: errorContent },
+      "503": { description: "Not ready or disabled", content: errorContent }
+    }
+  };
+}
+function submissionSchema() {
+  return {
+    type: "object",
+    additionalProperties: false,
+    required: ["name", "link", "category", "description", "email"],
+    properties: {
+      name: { type: "string", minLength: 3, maxLength: 120 },
+      author: { type: "string", maxLength: 80 },
+      link: { type: "string", maxLength: 120 },
+      category: { type: "string", maxLength: 80 },
+      description: { type: "string", minLength: 10, maxLength: 500 },
+      email: { type: "string", format: "email", maxLength: 254 },
+      company_website: { type: "string", maxLength: 0 },
+      filled_ms: { type: "integer", minimum: 3e3 }
+    }
+  };
+}
+function writeOp(operationId, summary, schema) {
+  return {
+    operationId,
+    summary,
+    requestBody: { required: true, content: { "application/json": { schema } } },
+    responses: {
+      "201": { description: "Accepted", content: { "application/json": { schema: { type: "object", properties: { ok: { const: true }, status: { type: "string" } }, required: ["ok"] } } } },
+      "200": { description: "Already pending", content: { "application/json": { schema: { type: "object" } } } },
+      "400": { description: "Invalid fields", content: errorContent },
+      "409": { description: "Already listed, pending, or subscribed", content: errorContent },
+      "415": { description: "Content type must be application/json", content: errorContent },
+      "429": { description: "Rate limited", content: errorContent },
+      "503": { description: "Disabled or limiter unavailable", content: errorContent }
+    }
+  };
+}
+function apiCatalog() {
+  return {
+    linkset: [
+      {
+        anchor: `${SITE}/api/v1/index.json`,
+        "service-desc": [{ href: `${SITE}/openapi.json`, type: "application/vnd.oai.openapi+json" }],
+        "service-doc": [{ href: `${SITE}/api/`, type: "text/html" }, { href: `${SITE}/agents/`, type: "text/html" }],
+        status: [{ href: `${SITE}/api/health`, type: "application/json" }],
+        "mcp-server": [{ href: MCP_URL, type: "application/json" }]
+      }
+    ]
+  };
+}
+function aiCatalog(skillUrl) {
+  const entry = (name, displayName, type, url) => ({
+    id: `urn:air:grokbot.zone:discovery:${name}`,
+    displayName,
+    type,
+    url
+  });
+  return {
+    specVersion: "0.1",
+    host: { name: "grokbot.zone", url: `${SITE}/` },
+    entries: [
+      entry("mcp-server-card", "MCP server card", "application/mcp-server-card+json", `${SITE}/mcp/server-card`),
+      entry("openapi", "OpenAPI description", "application/vnd.oai.openapi+json", `${SITE}/openapi.json`),
+      entry("llms", "llms.txt", "text/markdown", `${SITE}/llms.txt`),
+      entry("onboarding-skill", "Onboarding skill", "text/markdown", skillUrl)
+    ]
+  };
+}
+async function sha256(text2) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text2));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+function securityTxt() {
+  const exp = new Date(Date.now() + 180 * 864e5).toISOString().replace(/\.\d{3}Z$/, "Z");
+  return `Contact: mailto:submit@grokbot.zone
+Expires: ${exp}
+Preferred-Languages: en
+Canonical: ${SITE}/.well-known/security.txt
+`;
+}
+function allowGet(req) {
+  if (req.method === "GET" || req.method === "HEAD") return null;
+  return new Response(JSON.stringify({ ok: false, error: "method_not_allowed" }) + "\n", {
+    status: 405,
+    headers: { Allow: "GET, HEAD", "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }
+  });
+}
+function head(req, res) {
+  if (req.method !== "HEAD") return res;
+  const headers = new Headers(res.headers);
+  if (!headers.has("content-length")) headers.set("content-length", "0");
+  return new Response(null, { status: res.status, headers });
+}
+async function agentResponse(request, env, path) {
+  const denied = allowGet(request);
+  const skillUrl = `${SITE}${SKILL_PATH}`;
+  if (path === "/sitemap.xml") {
+    if (denied) return denied;
+    const asset = await env.ASSETS.fetch(new Request(new URL("/sitemap-index.xml", request.url), { headers: request.headers }));
+    if (!asset.ok) return new Response("sitemap unavailable\n", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+    const body = await asset.text();
+    return head(request, text(body, "application/xml; charset=utf-8"));
+  }
+  if (path === "/llms.txt") return denied ?? head(request, text(LLMS, "text/markdown; charset=utf-8"));
+  if (path === "/llms-full.txt") return denied ?? head(request, text(LLMS_FULL, "text/markdown; charset=utf-8"));
+  if (path === "/openapi.json") return denied ?? head(request, jsonDoc(OPENAPI, "application/vnd.oai.openapi+json; charset=utf-8"));
+  if (path === "/.well-known/api-catalog") return denied ?? head(request, jsonDoc(apiCatalog(), "application/linkset+json; charset=utf-8"));
+  if (path === "/.well-known/ai-catalog.json") return denied ?? head(request, jsonDoc(aiCatalog(skillUrl), "application/ai-catalog+json; charset=utf-8"));
+  if (path === "/.well-known/mcp/server-card.json" || path === "/mcp/server-card") {
+    return denied ?? head(request, jsonDoc(SERVER_CARD, "application/mcp-server-card+json; charset=utf-8"));
+  }
+  if (path === "/.well-known/security.txt") {
+    if (denied) return denied;
+    return head(request, text(securityTxt(), "text/plain; charset=utf-8"));
+  }
+  if (path === SKILL_PATH) {
+    if (denied) return denied;
+    const asset = await env.ASSETS.fetch(new Request(new URL(SKILL_PATH, request.url)));
+    if (!asset.ok) return new Response("skill missing\n", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8" } });
+    const body = await asset.text();
+    return head(request, text(body.endsWith("\n") ? body : body + "\n", "text/markdown; charset=utf-8"));
+  }
+  if (path === "/.well-known/agent-skills/index.json") {
+    if (denied) return denied;
+    const asset = await env.ASSETS.fetch(new Request(new URL(SKILL_PATH, request.url)));
+    if (!asset.ok) return new Response(JSON.stringify({ ok: false, error: "skill_missing" }) + "\n", { status: 404, headers: { "Content-Type": "application/json; charset=utf-8" } });
+    const body = await asset.text();
+    const digest2 = `sha256:${await sha256(body)}`;
+    const index = {
+      $schema: "https://agentskills.io/schema/index.json",
+      skills: [{
+        name: "grokbot-zone-onboarding",
+        type: "skill",
+        description: "Use when finding or listing bots on grokbot.zone.",
+        url: skillUrl,
+        digest: digest2
+      }]
+    };
+    return head(request, jsonDoc(index, "application/json; charset=utf-8"));
+  }
+  return null;
+}
+
+// src/lib/search.ts
+var UNCATEGORIZED = "uncategorized";
+function codeOfId(id, slugs) {
+  let best = "";
+  for (const s of [...slugs, UNCATEGORIZED]) if (id.startsWith(`${s}-`) && s.length > best.length) best = s;
+  return best ? id.slice(best.length + 1) : id;
+}
+
+// src/worker/mcp.ts
+var PROTOCOL_LEGACY = "2025-11-25";
+var PROTOCOL_DISCOVER = "2026-07-28";
+var SUPPORTED = [PROTOCOL_DISCOVER, PROTOCOL_LEGACY, "2025-06-18", "2025-03-26", "2024-11-05"];
+var SERVER_INFO = { name: "grokbot.zone", title: "GrokBot Zone", version: "1.0.0" };
+var READ_ANN = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+var WRITE_ANN = { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+var str2 = (maxLength, extra = {}) => ({ type: "string", maxLength, ...extra });
+var obj = (properties, required = []) => ({
+  type: "object",
+  additionalProperties: false,
+  properties,
+  ...required.length ? { required } : {}
+});
+var out = (properties, required = []) => ({
+  type: "object",
+  additionalProperties: true,
+  properties,
+  ...required.length ? { required } : {}
+});
+var TOOLS = [
+  {
+    name: "grokbot_check_listed",
+    title: "Check if a bot is listed",
+    description: "Reports whether a Grok bot code is already in the directory. Pass a link or a code.",
+    inputSchema: obj({ link: str2(200), code: str2(64) }),
+    outputSchema: out({ listed: { type: "boolean" }, code: { type: "string" } }, ["listed"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_get_bot",
+    title: "Get one bot",
+    description: "Returns the public record for one bot id.",
+    inputSchema: obj({ id: str2(160) }, ["id"]),
+    outputSchema: out({ id: { type: "string" }, name: { type: "string" }, link: { type: "string" } }, ["id", "name"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_get_category",
+    title: "Get one category",
+    description: "Returns the bots filed under one category slug.",
+    inputSchema: obj({ slug: str2(80) }, ["slug"]),
+    outputSchema: out({ slug: { type: "string" }, label: { type: "string" }, count: { type: "integer" }, bots: { type: "array" } }, ["slug"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_health",
+    title: "Directory health",
+    description: "Reports whether the directory API and its database are up.",
+    inputSchema: obj({}),
+    outputSchema: out({ ok: { type: "boolean" }, d1: { type: "boolean" } }, ["ok", "d1"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_list_categories",
+    title: "List categories",
+    description: "Returns every category slug, label, count and purpose.",
+    inputSchema: obj({}),
+    outputSchema: out({ categories: { type: "array" } }, ["categories"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_search",
+    title: "Search bots",
+    description: "Scores public listings by how many query words appear in the name and description. Name matches count double. Returns at most 5.",
+    inputSchema: obj({ query: str2(200), category: str2(80) }, ["query"]),
+    outputSchema: out({ bots: { type: "array" } }, ["bots"]),
+    annotations: READ_ANN
+  },
+  {
+    name: "grokbot_submit_bot",
+    title: "Submit a bot",
+    description: "Queues a public Grok bot for listing and sends a receipt to the given email. Uses the same checks and rate limit as the submit form.",
+    inputSchema: obj({
+      name: str2(120, { minLength: 3 }),
+      link: str2(120),
+      category: str2(80),
+      description: str2(500, { minLength: 10 }),
+      email: str2(254),
+      author: str2(80)
+    }, ["name", "link", "category", "description", "email"]),
+    outputSchema: out({ ok: { type: "boolean" }, id: { type: "integer" }, status: { type: "string" }, errors: { type: "object" } }, ["ok"]),
+    annotations: WRITE_ANN
+  },
+  {
+    name: "grokbot_subscribe",
+    title: "Subscribe to updates",
+    description: "Starts a double opt-in for twice-weekly update emails. Nothing is sent until the confirm link is clicked. Uses the same rate limit as the subscribe form.",
+    inputSchema: obj({ email: str2(254) }, ["email"]),
+    outputSchema: out({ ok: { type: "boolean" }, status: { type: "string" }, errors: { type: "object" } }, ["ok"]),
+    annotations: WRITE_ANN
+  },
+  {
+    name: "grokbot_trending",
+    title: "Trending bot ids",
+    description: "Returns bot ids in trending order, optionally for one category.",
+    inputSchema: obj({ category: str2(80) }),
+    outputSchema: out({ ids: { type: "array", items: { type: "string" } } }, ["ids"]),
+    annotations: READ_ANN
+  }
+].sort((a, b) => a.name.localeCompare(b.name));
+var TOOL_BY_NAME = new Map(TOOLS.map((t) => [t.name, t]));
+var rpc = (id, result, status = 200) => new Response(JSON.stringify({ jsonrpc: "2.0", id, result }), {
+  status,
+  headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }
+});
+var rpcError = (id, code, message, status = 200, data) => new Response(JSON.stringify({ jsonrpc: "2.0", id: id ?? null, error: { code, message, ...data === void 0 ? {} : { data } } }), {
+  status,
+  headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }
+});
+function originBlocked(req) {
+  if (!req.headers.get("authorization") && !req.headers.get("cookie")) return false;
+  const origin = req.headers.get("origin");
+  if (!origin) return false;
+  try {
+    const host = new URL(origin).hostname;
+    return host !== "grokbot.zone" && host !== "www.grokbot.zone" && host !== "localhost" && host !== "127.0.0.1";
+  } catch {
+    return true;
+  }
+}
+function toolResult(id, structured, isError, text2, status = 200) {
+  return rpc(id, {
+    content: [{ type: "text", text: text2 }],
+    structuredContent: structured,
+    isError
+  }, status);
+}
+async function readJson(res) {
+  const text2 = await res.text();
+  try {
+    return JSON.parse(text2);
+  } catch {
+    return { ok: false, error: "bad_json", status: res.status, body: text2.slice(0, 200) };
+  }
+}
+function asRecord(v) {
+  return v && typeof v === "object" && !Array.isArray(v) ? v : {};
+}
+function clientIp(req) {
+  return req.headers.get("cf-connecting-ip") ?? "unknown";
+}
+function internalPost(path, body, ip, authorization = null) {
+  return new Request(`https://grokbot.zone${path}`, {
+    method: "POST",
+    headers: { "content-type": "application/json", "cf-connecting-ip": ip, ...authorization !== null ? { authorization } : {} },
+    body: JSON.stringify(body)
+  });
+}
+async function siteGet(hooks, path) {
+  const res = await hooks.dispatch(new Request(`https://grokbot.zone${path}`));
+  return { status: res.status, body: await readJson(res) };
+}
+function invalid(id, errors) {
+  return toolResult(id, { ok: false, errors }, true, Object.entries(errors).map(([k, v]) => `${k}: ${v}`).join("; "));
+}
+function codeFrom(link, code) {
+  if (typeof code === "string" && /^[A-Za-z0-9_-]{4,64}$/.test(code)) return code;
+  if (typeof link === "string") {
+    const m = link.trim().match(/^https:\/\/x\.ai\/bot\/([A-Za-z0-9_-]{4,64})\/?$/i);
+    if (m) return m[1];
+  }
+  return null;
+}
+function scoreBots(bots, query, slug) {
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean).slice(0, 12);
+  if (!words.length) return [];
+  const ranked = bots.map((b) => {
+    const name = (b.n ?? "").toLowerCase();
+    const desc = (b.d ?? "").toLowerCase();
+    let score = 0;
+    for (const w of words) {
+      if (name.includes(w)) score += 2;
+      if (desc.includes(w)) score += 1;
+    }
+    return { id: b.i, name: b.n, author: b.a ?? "", description: b.d ?? "", category: b.c ?? slug, score };
+  }).filter((b) => b.score > 0);
+  ranked.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name) || x.id.localeCompare(y.id));
+  return ranked.slice(0, 5);
+}
+async function callTool(name, args, req, hooks, id) {
+  const tool = TOOL_BY_NAME.get(name);
+  if (!tool) return toolResult(id, { ok: false, error: "unknown_tool" }, true, `Unknown tool ${name}`);
+  if (args && typeof args === "object") {
+    for (const key of Object.keys(args)) {
+      if (!tool.inputSchema.properties[key]) return invalid(id, { [key]: "unexpected property" });
+    }
+  }
+  if (name === "grokbot_health") {
+    const { status, body } = await siteGet(hooks, "/api/health");
+    const ok = status === 200 && asRecord(body).ok === true;
+    return toolResult(id, body, !ok, ok ? "ok" : `health ${status}`);
+  }
+  if (name === "grokbot_list_categories") {
+    const { status, body } = await siteGet(hooks, "/api/v1/categories.json");
+    if (status !== 200 || !Array.isArray(body)) return toolResult(id, { ok: false, status }, true, `categories ${status}`);
+    return toolResult(id, { categories: body }, false, `${body.length} categories`);
+  }
+  if (name === "grokbot_get_category") {
+    const slug = args.slug;
+    if (typeof slug !== "string" || !/^[a-z0-9-]{1,80}$/.test(slug)) return invalid(id, { slug: "required, a category slug" });
+    const { status, body } = await siteGet(hooks, `/api/v1/categories/${slug}.json`);
+    if (status !== 200) return toolResult(id, { ok: false, status }, true, `category ${status}`);
+    return toolResult(id, body, false, `category ${slug}`);
+  }
+  if (name === "grokbot_get_bot") {
+    const botId2 = args.id;
+    if (typeof botId2 !== "string" || !/^[A-Za-z0-9_-]{1,160}$/.test(botId2)) return invalid(id, { id: "required" });
+    const { status, body } = await siteGet(hooks, `/api/v1/bots/${botId2}.json`);
+    if (status !== 200) return toolResult(id, { ok: false, status }, true, `bot ${status}`);
+    return toolResult(id, body, false, `bot ${botId2}`);
+  }
+  if (name === "grokbot_trending") {
+    const category = args.category;
+    if (category !== void 0 && (typeof category !== "string" || !/^[a-z0-9-]{1,80}$/.test(category))) return invalid(id, { category: "must be a category slug" });
+    const { status, body } = await siteGet(hooks, "/api/v1/trending.json");
+    if (status !== 200) return toolResult(id, { ok: false, status }, true, `trending ${status}`);
+    const doc = asRecord(body);
+    const ids = category ? asRecord(doc.perCategory)[category] ?? null : doc.global;
+    if (!Array.isArray(ids)) return invalid(id, { category: "unknown category" });
+    return toolResult(id, { ids, category: category ?? null }, false, `${ids.length} ids`);
+  }
+  if (name === "grokbot_check_listed") {
+    const code = codeFrom(args.link, args.code);
+    if (!code) return invalid(id, { link: "pass a link or a code" });
+    const { status, body } = await siteGet(hooks, "/api/v1/codes.json");
+    if (status !== 200) return toolResult(id, { ok: false, status }, true, `codes ${status}`);
+    const codes = asRecord(body).codes;
+    const listed = Array.isArray(codes) && codes.includes(code.toLowerCase());
+    return toolResult(id, { listed, code: code.toLowerCase() }, false, listed ? "listed" : "not listed");
+  }
+  if (name === "grokbot_search") {
+    const query = args.query;
+    if (typeof query !== "string" || query.trim().length < 2 || query.length > 200) return invalid(id, { query: "required, 2-200 characters" });
+    const category = args.category;
+    if (category !== void 0 && (typeof category !== "string" || !/^[a-z0-9-]{1,80}$/.test(category))) return invalid(id, { category: "must be a category slug" });
+    const slugs = category ? [category] : await categorySlugs(hooks);
+    if (!slugs) return toolResult(id, { ok: false }, true, "categories unavailable");
+    const found = [];
+    for (const slug of slugs) {
+      const { status, body } = await siteGet(hooks, `/api/v1/categories/${slug}.json`);
+      if (status !== 200) continue;
+      const bots2 = asRecord(body).bots;
+      if (!Array.isArray(bots2)) continue;
+      found.push(...scoreBots(bots2, query, slug));
+    }
+    found.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
+    const bots = found.slice(0, 5).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
+    return toolResult(id, { bots }, false, `${bots.length} matches`);
+  }
+  if (name === "grokbot_submit_bot") {
+    const errors = {};
+    for (const key of ["name", "link", "category", "description", "email"]) if (typeof args[key] !== "string" || !args[key].trim()) errors[key] = "required";
+    if (Object.keys(errors).length) return invalid(id, errors);
+    const body = {
+      name: args.name,
+      link: args.link,
+      category: args.category,
+      description: args.description,
+      email: args.email,
+      ...typeof args.author === "string" ? { author: args.author } : {},
+      company_website: "",
+      // MCP exemption: a tool call has no form clock. The public skill documents this; REST callers must send the real elapsed time.
+      filled_ms: 3e4
+    };
+    const res = await hooks.submit(internalPost("/api/v1/submissions", body, clientIp(req), req.headers.get("authorization")));
+    return mapWrite(id, res);
+  }
+  if (name === "grokbot_subscribe") {
+    if (typeof args.email !== "string" || !args.email.trim()) return invalid(id, { email: "required" });
+    const res = await hooks.subscribe(internalPost("/subscribe", { email: args.email, company_website: "" }, clientIp(req), req.headers.get("authorization")));
+    return mapWrite(id, res);
+  }
+  return rpcError(id, -32601, "Method not found");
+}
+async function categorySlugs(hooks) {
+  const { status, body } = await siteGet(hooks, "/api/v1/categories.json");
+  if (status !== 200 || !Array.isArray(body)) return null;
+  return body.map((c) => asRecord(c).slug).filter((s) => typeof s === "string");
+}
+async function mapWrite(id, res) {
+  const body = await readJson(res);
+  const ok = res.status >= 200 && res.status < 300;
+  const text2 = ok ? `status ${res.status}` : `error ${res.status}`;
+  const status = res.status === 401 || res.status === 429 ? res.status : 200;
+  return toolResult(id, body, !ok, text2, status);
+}
+async function handleMcp(request, hooks) {
+  if (request.method !== "POST") {
+    return new Response(JSON.stringify({ ok: false, error: "method_not_allowed", hint: "POST a JSON-RPC body to this URL. Streamable HTTP, JSON responses, no session." }) + "\n", {
+      status: 405,
+      headers: { Allow: "POST", "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }
+    });
+  }
+  if (originBlocked(request)) {
+    return new Response(JSON.stringify({ ok: false, error: "origin_not_allowed" }) + "\n", {
+      status: 403,
+      headers: { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" }
+    });
+  }
+  let msg;
+  try {
+    msg = await request.json();
+  } catch {
+    return rpcError(null, -32700, "Parse error", 400);
+  }
+  if (!msg || typeof msg !== "object" || Array.isArray(msg)) return rpcError(null, -32600, "Invalid Request", 400);
+  const rec = msg;
+  const id = rec.id;
+  const method = rec.method;
+  if (typeof method !== "string") return rpcError(id ?? null, -32600, "Invalid Request", 400);
+  const headerMethod = request.headers.get("mcp-method");
+  if (headerMethod && headerMethod !== method) return rpcError(id ?? null, -32600, "Mcp-Method does not match the JSON-RPC method", 400);
+  const headerVersion = request.headers.get("mcp-protocol-version");
+  if (headerVersion && !SUPPORTED.includes(headerVersion)) {
+    return rpcError(id ?? null, -32022, "Unsupported protocol version", 400, { supported: SUPPORTED });
+  }
+  const isNotification = id === void 0;
+  if (method === "notifications/initialized" || isNotification && method.startsWith("notifications/")) {
+    return new Response(null, { status: 202 });
+  }
+  if (method === "initialize") {
+    const params = asRecord(rec.params);
+    const asked = typeof params.protocolVersion === "string" ? params.protocolVersion : PROTOCOL_LEGACY;
+    const protocolVersion = SUPPORTED.includes(asked) && asked !== PROTOCOL_DISCOVER ? asked : PROTOCOL_LEGACY;
+    return rpc(id ?? null, {
+      protocolVersion,
+      capabilities: { tools: { listChanged: false } },
+      serverInfo: SERVER_INFO
+    });
+  }
+  if (method === "server/discover") {
+    return rpc(id ?? null, {
+      resultType: "complete",
+      supportedVersions: [PROTOCOL_DISCOVER, PROTOCOL_LEGACY],
+      capabilities: { tools: {} },
+      _meta: { "io.modelcontextprotocol/serverInfo": { name: SERVER_INFO.name, version: SERVER_INFO.version } },
+      ttlMs: 36e5,
+      cacheScope: "public"
+    });
+  }
+  if (method === "ping") return rpc(id ?? null, {});
+  if (method === "tools/list") {
+    return rpc(id ?? null, {
+      tools: TOOLS.map(({ name, title, description, inputSchema, outputSchema, annotations }) => ({ name, title, description, inputSchema, outputSchema, annotations }))
+    });
+  }
+  if (method === "tools/call") {
+    const params = asRecord(rec.params);
+    const name = params.name;
+    const args = asRecord(params.arguments);
+    if (typeof name !== "string") return invalid(id ?? null, { name: "required" });
+    try {
+      return await callTool(name, args, request, hooks, id ?? null);
+    } catch (e) {
+      console.error("mcp tools/call", name, e.message);
+      return rpcError(id ?? null, -32603, "Internal error");
+    }
+  }
+  return rpcError(id ?? null, -32601, "Method not found");
+}
+
+// src/worker/oauth.ts
+var HOSTS = /* @__PURE__ */ new Set(["grokbot.zone", "www.grokbot.zone", "127.0.0.1", "localhost"]);
+var LOOPBACK = /* @__PURE__ */ new Set(["127.0.0.1", "localhost"]);
+var SCOPE = "mcp:write";
+var MAGIC_TTL_MS = 15 * 6e4;
+var CODE_TTL_MS = 6e4;
+var TOKEN_TTL_S = 3600;
+var TOKEN_WRITES_PER_MIN = 30;
+var REGISTRATIONS_PER_HOUR = 10;
+var MAILS_PER_IP_HOUR = 30;
+var MAILS_PER_ADDRESS_HOUR = 5;
+var IDENTITY_CLIENT = "agent-identity";
+var BODY_MAX = 8192;
+var REGISTER_BODY_MAX = 16384;
+var enc = new TextEncoder();
+var b64u = (b) => btoa(String.fromCharCode(...b)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+var hex2 = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+var sha2562 = (s) => crypto.subtle.digest("SHA-256", enc.encode(s));
+var sha256hex = async (s) => hex2(await sha2562(s));
+var randomSecret = (bytes = 32) => b64u(crypto.getRandomValues(new Uint8Array(bytes)));
+function timingSafeEqual(a, b) {
+  const x = enc.encode(a);
+  const y = enc.encode(b);
+  let d = x.length ^ y.length;
+  for (let i = 0; i < Math.max(x.length, y.length); i++) d |= (x[i] ?? 0) ^ (y[i] ?? 0);
+  return d === 0;
+}
+var oj = (status, body, extra = {}) => new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json", "Cache-Control": "no-store", ...extra } });
+var oerr = (status, error, description, extra = {}) => oj(status, description ? { error, error_description: description } : { error }, extra);
+var unavailable = () => oerr(503, "temporarily_unavailable");
+var notAllowed = (allow) => oerr(405, "method_not_allowed", void 0, { Allow: allow });
+var esc3 = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+var HTML_CSP = "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'";
+function htmlPage(status, title, bodyHtml) {
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${esc3(title)} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}input{font:inherit;padding:.6rem;border-radius:.4rem;border:1px solid #555;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}button{font:inherit;font-weight:600;padding:.6rem 1.2rem;border:0;border-radius:.4rem;background:#00ffcc;color:#030203;cursor:pointer}a{color:#00ffcc}</style></head><body><main><h1>${esc3(title)}</h1>${bodyHtml}</main></body></html>`;
+  return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Content-Security-Policy": HTML_CSP } });
+}
+var wantsJson = (req) => (req.headers.get("accept") ?? "").includes("application/json");
+var failFor = (req, status, error, description) => wantsJson(req) ? oerr(status, error, description) : htmlPage(status, "Request not valid", `<p>${esc3(description)}</p>`);
+function originOf(url) {
+  if (!HOSTS.has(url.hostname)) return null;
+  return LOOPBACK.has(url.hostname) ? url.origin : "https://grokbot.zone";
+}
+async function readText(req, max = BODY_MAX) {
+  const t = await req.text();
+  return t.length > max ? null : t;
+}
+async function readJsonObject(req, max = BODY_MAX) {
+  const t = await readText(req, max);
+  if (t === null) return null;
+  try {
+    const v = JSON.parse(t);
+    return v && typeof v === "object" && !Array.isArray(v) ? v : null;
+  } catch {
+    return null;
+  }
+}
+var ctype = (req) => (req.headers.get("content-type") ?? "").toLowerCase();
+async function take(db, key, cap, windowSec, now = Date.now()) {
+  const cutoff = now - windowSec * 1e3;
+  const r = await db.prepare(
+    `INSERT INTO oauth_rl (k, n, window_start) VALUES (?, 1, ?)
+     ON CONFLICT(k) DO UPDATE SET
+       n = CASE WHEN window_start <= ? THEN 1 ELSE n + 1 END,
+       window_start = CASE WHEN window_start <= ? THEN ? ELSE window_start END
+     WHERE window_start <= ? OR n < ?`
+  ).bind(key, now, cutoff, cutoff, now, cutoff, cap).run();
+  return Number(r.meta.changes) > 0;
+}
+function authServerDoc(o) {
+  return {
+    issuer: o,
+    authorization_endpoint: `${o}/oauth/authorize`,
+    token_endpoint: `${o}/oauth/token`,
+    registration_endpoint: `${o}/oauth/register`,
+    revocation_endpoint: `${o}/oauth/revoke`,
+    response_types_supported: ["code"],
+    grant_types_supported: ["authorization_code"],
+    code_challenge_methods_supported: ["S256"],
+    token_endpoint_auth_methods_supported: ["none"],
+    scopes_supported: [SCOPE],
+    agent_auth: {
+      skill: `${o}/auth.md`,
+      register_uri: `${o}/oauth/agent/identity`,
+      identity_endpoint: `${o}/oauth/agent/identity`,
+      claim_uri: `${o}/oauth/agent/claim`,
+      claim_endpoint: `${o}/oauth/agent/claim`,
+      revocation_uri: `${o}/oauth/revoke`,
+      identity_types_supported: ["service_auth"],
+      assertion_types_supported: ["verified_email"],
+      credential_types_supported: ["access_token"]
+    }
+  };
+}
+function authMd(o) {
+  return `# Authorization for the GrokBot Zone MCP server
+
+Reading the directory needs no account. Anonymous writes still work at the usual per-IP rate limit. A bearer
+token from the flow below raises the write limit for the two MCP write tools, \`grokbot_submit_bot\` and
+\`grokbot_subscribe\`, and for the matching REST routes. Read tools stay anonymous either way.
+
+## Flow
+
+1. Discovery. Fetch \`${o}/.well-known/oauth-protected-resource\` (names the resource and its authorization server)
+   and \`${o}/.well-known/oauth-authorization-server\` (RFC 8414 metadata with every endpoint).
+2. Register a public client at \`${o}/oauth/register\` (RFC 7591). POST JSON with \`redirect_uris\`
+   (https, or http on 127.0.0.1 or localhost; exact strings, no fragments, no wildcards) and optionally
+   \`client_name\`. The reply has a \`client_id\`. There is no client secret.
+3. Authorize with PKCE. Open \`${o}/oauth/authorize\` with \`response_type=code\`, \`client_id\`, \`redirect_uri\`,
+   \`code_challenge\` (base64url SHA-256 of a random verifier of 43 to 128 characters), \`code_challenge_method=S256\`,
+   optional \`state\`, and optional \`scope=mcp:write\`. Plain PKCE is refused.
+4. Email magic link. Submit the account's email address on that page (or POST \`{"email": ...}\` as JSON to the same URL).
+   A single-use sign-in link valid for 15 minutes is mailed there. Opening it redirects to your registered
+   \`redirect_uri\` with \`code\` (valid for 60 seconds) and your \`state\`.
+5. Exchange the code at \`${o}/oauth/token\` with a form body: \`grant_type=authorization_code\`, \`code\`,
+   \`redirect_uri\`, \`client_id\`, \`code_verifier\`. The reply carries \`access_token\`, \`token_type\` Bearer,
+   \`expires_in\` 3600 and \`scope\` mcp:write.
+6. Send \`Authorization: Bearer <access_token>\` with POST requests to \`${o}/mcp\` for the write tools.
+   A bearer that is missing from our records, expired or revoked is answered with 401 and the write is not stored.
+7. Revoke with a form POST of \`token=<access_token>\` to \`${o}/oauth/revoke\`.
+
+## Agent identity
+
+A service that wants to start the email login without a browser can POST \`{"type": "service_auth", "login_hint": "<email>"}\`
+to \`${o}/oauth/agent/identity\`. The reply names a claim page at \`${o}/oauth/agent/claim\`; the person finishes by
+opening the emailed link.
+
+## Limits
+
+Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per verified email, shared by every token for that email. The per-IP limiter still applies underneath; a token raises that ceiling, it does not remove it.
+Access tokens last one hour and are stored only as SHA-256 digests.
+`;
+}
+function validRedirect(u) {
+  if (typeof u !== "string" || u.length === 0 || u.length > 2048) return false;
+  if (/[#*\\\s\u0000-\u001f\u007f]/.test(u)) return false;
+  if (!u.startsWith("https://") && !u.startsWith("http://")) return false;
+  let p;
+  try {
+    p = new URL(u);
+  } catch {
+    return false;
+  }
+  if (p.username || p.password) return false;
+  if (p.protocol === "https:") return true;
+  return p.protocol === "http:" && LOOPBACK.has(p.hostname);
+}
+var onlyAllowed = (v, allowed) => v === void 0 || Array.isArray(v) && v.length > 0 && v.every((x) => x === allowed);
+async function register(req, env) {
+  if (!ctype(req).startsWith("application/json")) return oerr(415, "invalid_client_metadata", "content type must be application/json");
+  const b = await readJsonObject(req, REGISTER_BODY_MAX);
+  if (!b) return oerr(400, "invalid_client_metadata", "invalid JSON body");
+  const uris = b.redirect_uris;
+  if (!Array.isArray(uris) || uris.length < 1 || uris.length > 5 || !uris.every(validRedirect) || new Set(uris).size !== uris.length) {
+    return oerr(400, "invalid_redirect_uri", "redirect_uris must be 1 to 5 exact https URIs, or http on 127.0.0.1 or localhost, with no fragment or wildcard");
+  }
+  if (b.token_endpoint_auth_method !== void 0 && b.token_endpoint_auth_method !== "none") return oerr(400, "invalid_client_metadata", 'only token_endpoint_auth_method "none" is supported');
+  if (!onlyAllowed(b.grant_types, "authorization_code")) return oerr(400, "invalid_client_metadata", "only the authorization_code grant is supported");
+  if (!onlyAllowed(b.response_types, "code")) return oerr(400, "invalid_client_metadata", "only the code response type is supported");
+  if (b.client_name !== void 0 && typeof b.client_name !== "string") return oerr(400, "invalid_client_metadata", "client_name must be a string");
+  const name = typeof b.client_name === "string" ? b.client_name.replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g, " ").trim().slice(0, 100) : "";
+  if (!env.DB) return unavailable();
+  const ip = req.headers.get("cf-connecting-ip") ?? "unknown";
+  const ipHash = await sha256hex(ip);
+  if (!await take(env.DB, `reg:${ipHash}`, REGISTRATIONS_PER_HOUR, 3600)) return oerr(429, "rate_limited", void 0, { "Retry-After": "3600" });
+  const clientId = `gz_${randomSecret(16)}`;
+  await env.DB.prepare("INSERT INTO oauth_client (client_id, redirect_uris, client_name, created_at, ip_hash) VALUES (?, ?, ?, ?, ?)").bind(clientId, JSON.stringify(uris), name || null, Date.now(), ipHash).run();
+  return oj(201, {
+    client_id: clientId,
+    ...name ? { client_name: name } : {},
+    redirect_uris: uris,
+    token_endpoint_auth_method: "none",
+    grant_types: ["authorization_code"],
+    response_types: ["code"]
+  });
+}
+async function checkAuthParams(req, db, q) {
+  const bad = (msg, error = "invalid_request") => ({ ok: false, res: failFor(req, 400, error, msg) });
+  if (q.get("response_type") !== "code") return bad("response_type must be code", "unsupported_response_type");
+  const clientId = q.get("client_id") ?? "";
+  const redirect = q.get("redirect_uri") ?? "";
+  const challenge = q.get("code_challenge") ?? "";
+  const method = q.get("code_challenge_method");
+  const state = q.get("state");
+  const scope = q.get("scope");
+  if (!clientId || clientId.length > 128) return bad("unknown client_id", "invalid_client");
+  const row = await db.prepare("SELECT redirect_uris FROM oauth_client WHERE client_id = ?").bind(clientId).first();
+  if (!row) return bad("unknown client_id", "invalid_client");
+  let uris;
+  try {
+    uris = JSON.parse(row.redirect_uris);
+  } catch {
+    uris = [];
+  }
+  if (!redirect || !Array.isArray(uris) || !uris.includes(redirect)) return bad("redirect_uri does not match a registered URI");
+  if (method !== "S256") return bad("code_challenge_method must be S256");
+  if (!/^[A-Za-z0-9_-]{43}$/.test(challenge)) return bad("code_challenge must be a base64url SHA-256 digest");
+  if (scope !== null && scope !== SCOPE) return bad(`scope must be ${SCOPE}`, "invalid_scope");
+  if (state !== null && state.length > 512) return bad("state is too long");
+  return { ok: true, p: { client_id: clientId, redirect_uri: redirect, code_challenge: challenge, state, scope: SCOPE } };
+}
+function authorizeForm(p) {
+  const keep = new URLSearchParams({ response_type: "code", client_id: p.client_id, redirect_uri: p.redirect_uri, code_challenge: p.code_challenge, code_challenge_method: "S256", scope: p.scope });
+  if (p.state !== null) keep.set("state", p.state);
+  return htmlPage(200, "Sign in to GrokBot Zone", `<p>Enter your email address. We will send a single-use sign-in link.</p><form method="post" action="${esc3(`/oauth/authorize?${keep.toString()}`)}"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="254"><button type="submit">Send sign-in link</button></form>`);
+}
+async function startLogin(env, origin, p, email2, ip, id = randomSecret(16)) {
+  const db = env.DB;
+  if (!db) return unavailable();
+  const now = Date.now();
+  if (!await take(db, `mail-ip:${await sha256hex(ip)}`, MAILS_PER_IP_HOUR, 3600, now) || !await take(db, `mail-em:${await sha256hex(email2)}`, MAILS_PER_ADDRESS_HOUR, 3600, now)) {
+    return oerr(429, "rate_limited", "too many sign-in emails; try again later", { "Retry-After": "3600" });
+  }
+  const token2 = randomSecret(32);
+  await db.prepare("INSERT INTO oauth_pending (id, client_id, redirect_uri, code_challenge, state, scope, email, magic_hash, expires_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(id, p.client_id, p.redirect_uri, p.code_challenge, p.state, p.scope, email2, await sha256hex(token2), now + MAGIC_TTL_MS).run();
+  const magicUrl = `${origin}/oauth/magic?token=${token2}`;
+  let sent = false;
+  try {
+    if (env.EMAIL) {
+      await env.EMAIL.send({
+        to: email2,
+        from: env.mailFrom,
+        subject: "Your GrokBot Zone sign-in link",
+        text: `Open this link within 15 minutes to finish signing in to GrokBot Zone:
+
+${magicUrl}
+
+It works once. If you did not ask for it, ignore this message and nothing happens.
+`
+      });
+      sent = true;
+    }
+  } catch (e) {
+    console.error("oauth magic send failed:", e.code ?? "E_SEND_FAILED");
+  }
+  if (!sent) {
+    try {
+      await db.prepare("DELETE FROM oauth_pending WHERE id = ?").bind(id).run();
+    } catch {
+      try {
+        await db.prepare("UPDATE oauth_pending SET magic_hash = NULL, expires_at = 0 WHERE id = ?").bind(id).run();
+      } catch {
+      }
+    }
+    return unavailable();
+  }
+  try {
+    await db.prepare("DELETE FROM oauth_pending WHERE expires_at < ?").bind(now - 36e5).run();
+    await db.prepare("DELETE FROM oauth_rl WHERE window_start < ?").bind(now - 864e5).run();
+  } catch {
+  }
+  return { ok: true, id, magicUrl };
+}
+async function authorize(req, env, url, origin) {
+  if (!env.DB) return unavailable();
+  const checked = await checkAuthParams(req, env.DB, url.searchParams);
+  if (!checked.ok) return checked.res;
+  if (req.method === "GET") return authorizeForm(checked.p);
+  let rawEmail;
+  if (ctype(req).startsWith("application/json")) rawEmail = (await readJsonObject(req))?.email;
+  else if (ctype(req).startsWith("application/x-www-form-urlencoded")) {
+    const t = await readText(req);
+    rawEmail = t === null ? void 0 : new URLSearchParams(t).get("email");
+  } else return failFor(req, 415, "invalid_request", "send JSON or a form body");
+  const email2 = typeof rawEmail === "string" ? rawEmail.trim().toLowerCase() : "";
+  if (!isEmail(email2)) return failFor(req, 400, "invalid_request", "a valid email address is required");
+  const login = await startLogin(env, origin, checked.p, email2, req.headers.get("cf-connecting-ip") ?? "unknown");
+  if (login instanceof Response) return login;
+  if (wantsJson(req)) return oj(200, { ok: true, ...LOOPBACK.has(url.hostname) ? { dev_magic_url: login.magicUrl } : {} });
+  return htmlPage(200, "Check your email", "<p>If the address is valid, a sign-in link is on its way. It works once and expires in 15 minutes.</p>");
+}
+function withParams(uri, params) {
+  const q = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+  return `${uri}${uri.includes("?") ? "&" : "?"}${q}`;
+}
+async function magic(url, env) {
+  if (!env.DB) return unavailable();
+  const token2 = url.searchParams.get("token") ?? "";
+  if (!/^[A-Za-z0-9_-]{43}$/.test(token2)) return oerr(400, "invalid_grant", "invalid or expired link");
+  const now = Date.now();
+  const code = randomSecret(32);
+  const r = await env.DB.prepare("UPDATE oauth_pending SET magic_hash = NULL, code_hash = ?, expires_at = ? WHERE magic_hash = ? AND expires_at > ? AND consumed_at IS NULL").bind(await sha256hex(code), now + CODE_TTL_MS, await sha256hex(token2), now).run();
+  if (Number(r.meta.changes) !== 1) return oerr(400, "invalid_grant", "invalid or expired link");
+  const row = await env.DB.prepare("SELECT client_id, redirect_uri, state FROM oauth_pending WHERE code_hash = ?").bind(await sha256hex(code)).first();
+  if (!row) return oerr(400, "invalid_grant", "invalid or expired link");
+  const params = row.client_id === IDENTITY_CLIENT ? { verified: "1" } : { code, ...row.state !== null ? { state: row.state } : {} };
+  return new Response(null, { status: 302, headers: { Location: withParams(row.redirect_uri, params), "Cache-Control": "no-store" } });
+}
+var tokenErr = (status, error, description) => oerr(status, error, description, { Pragma: "no-cache" });
+async function token(req, env) {
+  if (!ctype(req).startsWith("application/x-www-form-urlencoded")) return tokenErr(400, "invalid_request", "content type must be application/x-www-form-urlencoded");
+  const text2 = await readText(req);
+  if (text2 === null) return tokenErr(400, "invalid_request");
+  const f = new URLSearchParams(text2);
+  if (f.get("grant_type") !== "authorization_code") return tokenErr(400, "unsupported_grant_type");
+  const code = f.get("code") ?? "";
+  const redirect = f.get("redirect_uri") ?? "";
+  const clientId = f.get("client_id") ?? "";
+  const verifier = f.get("code_verifier") ?? "";
+  if (!code || !redirect || !clientId) return tokenErr(400, "invalid_request", "code, redirect_uri and client_id are required");
+  if (!/^[A-Za-z0-9\-._~]{43,128}$/.test(verifier)) return tokenErr(400, "invalid_grant", "code_verifier must be 43 to 128 unreserved characters");
+  if (!env.DB) return unavailable();
+  const now = Date.now();
+  const codeHash = await sha256hex(code);
+  const row = await env.DB.prepare("SELECT id, client_id, redirect_uri, code_challenge, scope, email FROM oauth_pending WHERE code_hash = ?").bind(codeHash).first();
+  if (!row || !row.email) return tokenErr(400, "invalid_grant");
+  const spent = await env.DB.prepare("UPDATE oauth_pending SET consumed_at = ? WHERE id = ? AND code_hash = ? AND consumed_at IS NULL AND expires_at > ?").bind(now, row.id, codeHash, now).run();
+  if (Number(spent.meta.changes) !== 1) return tokenErr(400, "invalid_grant");
+  const challenge = b64u(new Uint8Array(await sha2562(verifier)));
+  const okClient = timingSafeEqual(row.client_id, clientId);
+  const okRedirect = timingSafeEqual(row.redirect_uri, redirect);
+  const okPkce = timingSafeEqual(challenge, row.code_challenge);
+  if (!(okClient && okRedirect && okPkce)) return tokenErr(400, "invalid_grant");
+  const access = randomSecret(32);
+  await env.DB.prepare("INSERT INTO oauth_token (token_hash, client_id, email, scope, expires_at) VALUES (?, ?, ?, ?, ?)").bind(await sha256hex(access), row.client_id, row.email, row.scope, now + TOKEN_TTL_S * 1e3).run();
+  return oj(200, { access_token: access, token_type: "Bearer", expires_in: TOKEN_TTL_S, scope: row.scope }, { Pragma: "no-cache" });
+}
+async function revoke(req, env) {
+  if (!ctype(req).startsWith("application/x-www-form-urlencoded")) return oerr(400, "invalid_request", "content type must be application/x-www-form-urlencoded");
+  const text2 = await readText(req);
+  const t = text2 === null ? "" : new URLSearchParams(text2).get("token") ?? "";
+  if (!t) return oerr(400, "invalid_request", "token is required");
+  if (!env.DB) return unavailable();
+  await env.DB.prepare("UPDATE oauth_token SET revoked_at = ? WHERE token_hash = ? AND revoked_at IS NULL").bind(Date.now(), await sha256hex(t)).run();
+  return oj(200, {});
+}
+async function identity(req, env, url, origin) {
+  if (!ctype(req).startsWith("application/json")) return oerr(415, "invalid_request", "content type must be application/json");
+  const b = await readJsonObject(req);
+  if (!b) return oerr(400, "invalid_request", "invalid JSON body");
+  if (b.type !== "service_auth") return oerr(400, "invalid_request", "type must be service_auth");
+  const email2 = typeof b.login_hint === "string" ? b.login_hint.trim().toLowerCase() : "";
+  if (!isEmail(email2)) return oerr(400, "invalid_request", "login_hint must be a valid email address");
+  if (!env.DB) return unavailable();
+  const id = randomSecret(16);
+  let params;
+  if (b.client_id === void 0) {
+    params = { client_id: IDENTITY_CLIENT, redirect_uri: `${origin}/oauth/agent/claim?registration_id=${id}`, code_challenge: randomSecret(32), state: null, scope: SCOPE };
+  } else {
+    const q = new URLSearchParams({ response_type: "code" });
+    for (const k of ["client_id", "redirect_uri", "code_challenge", "code_challenge_method", "state", "scope"]) if (typeof b[k] === "string") q.set(k, b[k]);
+    const checked = await checkAuthParams(new Request(req.url, { headers: { accept: "application/json" } }), env.DB, q);
+    if (!checked.ok) return checked.res;
+    params = checked.p;
+  }
+  const login = await startLogin(env, origin, params, email2, req.headers.get("cf-connecting-ip") ?? "unknown", id);
+  if (login instanceof Response) return login;
+  return oj(200, {
+    registration_id: login.id,
+    registration_type: "service_auth",
+    expires_in: MAGIC_TTL_MS / 1e3,
+    claim: { verification_uri: `${origin}/oauth/agent/claim?registration_id=${login.id}`, expires_in: MAGIC_TTL_MS / 1e3, interval: 5 },
+    ...LOOPBACK.has(url.hostname) ? { dev_magic_url: login.magicUrl } : {}
+  });
+}
+function claim(req) {
+  const msg = "Finish by opening the sign-in link we emailed to the address you gave. The link works once and expires in 15 minutes.";
+  if (wantsJson(req)) return oj(200, { status: "pending_email_verification", message: msg });
+  return htmlPage(200, "Check your email", `<p>${esc3(msg)}</p>`);
+}
+var invalidToken = () => oj(401, { ok: false, error: "invalid_token" }, { "WWW-Authenticate": 'Bearer error="invalid_token"' });
+async function verifiedBearer(req, db) {
+  const m = /^Bearer ([A-Za-z0-9_-]{16,128})$/i.exec((req.headers.get("authorization") ?? "").trim());
+  if (!m) return invalidToken();
+  if (!db) return unavailable();
+  try {
+    const hash = await sha256hex(m[1]);
+    const now = Date.now();
+    const row = await db.prepare("SELECT email FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?").bind(hash, now).first();
+    if (!row?.email) return invalidToken();
+    return { email: row.email };
+  } catch (e) {
+    console.error("bearer check failed:", e.message);
+    return oj(503, { ok: false, error: "unavailable" });
+  }
+}
+async function takeIdentityWrite(db, email2, now = Date.now()) {
+  const key = `id:${await sha256hex(email2.trim().toLowerCase())}`;
+  if (!await take(db, key, TOKEN_WRITES_PER_MIN, 60, now)) return oj(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
+  return null;
+}
+async function handleOAuth(req, env, url, path) {
+  const wellKnown = path === "/.well-known/oauth-authorization-server" || path === "/.well-known/oauth-protected-resource";
+  if (!wellKnown && path !== "/auth.md" && !path.startsWith("/oauth/")) return null;
+  const origin = originOf(url);
+  if (!origin) return oerr(400, "invalid_request", "host not allowed");
+  const m = req.method;
+  const read = m === "GET" || m === "HEAD";
+  const doc = (body, type) => new Response(m === "HEAD" ? null : body, { status: 200, headers: { "Content-Type": type, "Cache-Control": "no-store" } });
+  try {
+    switch (path) {
+      case "/.well-known/oauth-authorization-server":
+        return read ? doc(JSON.stringify(authServerDoc(origin)), "application/json") : notAllowed("GET, HEAD");
+      case "/.well-known/oauth-protected-resource":
+        return read ? doc(JSON.stringify({ resource: `${origin}/mcp`, authorization_servers: [origin], scopes_supported: [SCOPE], bearer_methods_supported: ["header"] }), "application/json") : notAllowed("GET, HEAD");
+      case "/auth.md":
+        return read ? doc(authMd(origin), "text/markdown; charset=utf-8") : notAllowed("GET, HEAD");
+      case "/oauth/register":
+        return m === "POST" ? await register(req, env) : notAllowed("POST");
+      case "/oauth/authorize":
+        return m === "GET" || m === "POST" ? await authorize(req, env, url, origin) : notAllowed("GET, POST");
+      case "/oauth/magic":
+        return m === "GET" ? await magic(url, env) : notAllowed("GET");
+      case "/oauth/token":
+        return m === "POST" ? await token(req, env) : notAllowed("POST");
+      case "/oauth/revoke":
+        return m === "POST" ? await revoke(req, env) : notAllowed("POST");
+      case "/oauth/agent/identity":
+        return m === "POST" ? await identity(req, env, url, origin) : notAllowed("POST");
+      case "/oauth/agent/claim":
+        return m === "GET" || m === "POST" || m === "HEAD" ? claim(req) : notAllowed("GET, POST");
+      default:
+        return null;
+    }
+  } catch (e) {
+    console.error("oauth error", path, e.message);
+    return unavailable();
+  }
 }
 
 // src/worker/index.ts
@@ -8125,15 +9241,29 @@ async function gate(rl, key) {
     return "unavailable";
   }
 }
-var unavailable = () => json(503, { ok: false, error: "unavailable" });
+var unavailable2 = () => json(503, { ok: false, error: "unavailable" });
 async function writeGate(rl, key) {
   const g = await gate(rl, key);
-  if (g === "unavailable") return unavailable();
+  if (g === "unavailable") return unavailable2();
   return g === "limited" ? json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" }) : null;
 }
-var clientIp = (req) => req.headers.get("cf-connecting-ip") ?? "unknown";
+async function writeAccess(req, env, rl, key, raisedFloor) {
+  if (req.headers.get("authorization") === null) return writeGate(rl, key);
+  const ident = await verifiedBearer(req, env.DB);
+  if (ident instanceof Response) return ident;
+  const floor = await writeGate(raisedFloor ?? rl, key);
+  if (floor) return floor;
+  if (!env.DB) return unavailable2();
+  try {
+    return await takeIdentityWrite(env.DB, ident.email);
+  } catch (e) {
+    console.error("identity write cap failed:", e.message);
+    return unavailable2();
+  }
+}
+var clientIp2 = (req) => req.headers.get("cf-connecting-ip") ?? "unknown";
 var isJson = (req) => (req.headers.get("content-type") ?? "").toLowerCase().startsWith("application/json");
-async function readJson(req) {
+async function readJson2(req) {
   try {
     return await req.json();
   } catch {
@@ -8171,10 +9301,10 @@ async function submit(req, env, ctx) {
   if (!isOn(env.FORM_SUBMIT_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
-  const ip = clientIp(req);
-  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  const ip = clientIp2(req);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`, env.AUTH_SUBMIT_RL);
   if (stop) return stop;
-  const body = await readJson(req);
+  const body = await readJson2(req);
   if (body === void 0) return json(400, { ok: false, errors: { body: "invalid JSON" } });
   const v = validateSubmission(body, CATEGORY_SLUGS, Number(env.MIN_FILL_MS ?? "3000"));
   if (!v.ok) return json(400, { ok: false, errors: v.errors });
@@ -8216,9 +9346,9 @@ async function subscribe(req, env, ctx) {
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
-  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp2(req)}:subscribe`, env.AUTH_SUBSCRIBE_RL);
   if (stop) return stop;
-  const body = await readJson(req);
+  const body = await readJson2(req);
   if (!body || typeof body !== "object") return json(400, { ok: false, errors: { body: "invalid JSON" } });
   const errors = {};
   const email2 = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
@@ -8365,10 +9495,10 @@ async function email(message, env, _ctx) {
       if (queued.length) lines.push(`Queued for review: ${queued.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
       if (skipped.length) lines.push(`Already listed or already queued: ${skipped.map((c) => `https://x.ai/bot/${c}`).join(", ")}`);
       lines.push("Once the platform page checks out the bot is added automatically, usually within an hour.", `\u2014 GrokBot Zone \xB7 ${SITE}/trending/`);
-      const text = lines.join("\n");
+      const text2 = lines.join("\n");
       const replySubject = `Re: ${subject || "your submission"}`;
       try {
-        const raw = rawReply({ from: message.to, to: message.from, subject: replySubject, text, inReplyTo: message.headers.get("message-id") });
+        const raw = rawReply({ from: message.to, to: message.from, subject: replySubject, text: text2, inReplyTo: message.headers.get("message-id") });
         await message.reply(new EmailMessage(message.to, message.from, raw));
         await logSend(env, "ack", message.from, null, true, null);
       } catch (e) {
@@ -8525,11 +9655,11 @@ async function digest(controller, env) {
   let sent = 0;
   let stopped = false;
   for (const s of results) {
-    const claim = await db.prepare(
+    const claim2 = await db.prepare(
       `INSERT INTO digest_delivery (subscriber_id, window_id, window_end, attempts, status) VALUES (?, ?, ?, 0, 'pending') ON CONFLICT(subscriber_id, window_id) DO NOTHING`
     ).bind(s.id, windowId, windowEnd).run();
     let attempts = 0;
-    if (Number(claim.meta.changes) === 0) {
+    if (Number(claim2.meta.changes) === 0) {
       const row = await db.prepare("SELECT status, attempts FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?").bind(s.id, windowId).first();
       if (!row || row.status === "sent" || row.status === "failed" || row.status === "pending") continue;
       attempts = Number(row.attempts);
@@ -8577,6 +9707,36 @@ async function digest(controller, env) {
   }
   console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
+function addVary(headers, token2) {
+  const cur = headers.get("Vary");
+  if (!cur) headers.set("Vary", token2);
+  else if (!cur.toLowerCase().split(",").map((s) => s.trim()).includes(token2.toLowerCase())) headers.set("Vary", `${cur}, ${token2}`);
+}
+async function finish(request, res) {
+  const headers = new Headers(res.headers);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
+  const html = isHtml(res);
+  if (html) {
+    headers.append("Link", LINK_HEADER);
+    addVary(headers, "Accept");
+  }
+  const accept = request.headers.get("accept") ?? "";
+  const jsonErr = res.status >= 400 && (res.headers.get("content-type") ?? "").includes("application/json") && accept.includes("application/problem+json");
+  if (jsonErr) {
+    const body = await res.json().catch(() => ({}));
+    headers.set("Content-Type", "application/problem+json; charset=utf-8");
+    headers.delete("content-length");
+    const problem = { type: "about:blank", title: String(body.error ?? "error"), status: res.status, detail: body.errors ? JSON.stringify(body.errors) : String(body.error ?? "") };
+    return new Response(request.method === "HEAD" ? null : JSON.stringify(problem), { status: res.status, headers });
+  }
+  if (html && wantsMarkdown(request)) {
+    const md = htmlToMarkdown(await res.text());
+    headers.set("Content-Type", "text/markdown; charset=utf-8");
+    for (const k of ["etag", "last-modified", "content-length"]) headers.delete(k);
+    return new Response(request.method === "HEAD" ? null : md, { status: res.status, statusText: res.statusText, headers });
+  }
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+}
 var index_default = {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -8585,9 +9745,7 @@ var index_default = {
       return Response.redirect(url.toString(), 301);
     }
     const res = await route(request, env, ctx, url);
-    const headers = new Headers(res.headers);
-    for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
-    return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+    return finish(request, res);
   },
   email,
   async scheduled(controller, env, ctx) {
@@ -8600,6 +9758,17 @@ var index_default = {
 async function route(request, env, ctx, url) {
   const path = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
   const m = request.method;
+  if (path === "/mcp") {
+    return handleMcp(request, {
+      dispatch: (req) => route(req, env, ctx, new URL(req.url)),
+      submit: (req) => submit(req, env, ctx),
+      subscribe: (req) => subscribe(req, env, ctx)
+    });
+  }
+  const oauth = await handleOAuth(request, { DB: env.DB, EMAIL: env.EMAIL, mailFrom: UPDATES_FROM }, url, path);
+  if (oauth) return oauth;
+  const agent = await agentResponse(request, env, path);
+  if (agent) return agent;
   if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);
   try {
     if (path === "/api/health" && (m === "GET" || m === "HEAD")) return await health(env);
@@ -8656,7 +9825,7 @@ async function mergedAsset(request, env, path) {
     const res2 = await env.ASSETS.fetch(unconditional(request));
     if (res2.status !== 200) return res2;
     const body2 = await res2.text();
-    let out = body2;
+    let out2 = body2;
     if (kind === "totals" || kind === "cat-index") {
       let catalog = null;
       try {
@@ -8670,20 +9839,20 @@ async function mergedAsset(request, env, path) {
         return json(503, { ok: false, error: "seed_unreadable" });
       }
       try {
-        out = kind === "cat-index" ? categoriesWithoutDead(body2, m.dead, catalog.cats) : indexWithoutDead(body2, m.dead, catalog.map, catalog.cats);
+        out2 = kind === "cat-index" ? categoriesWithoutDead(body2, m.dead, catalog.cats) : indexWithoutDead(body2, m.dead, catalog.map, catalog.cats);
       } catch (e) {
         console.error("seed-codes.json unreadable", e.message);
         return json(503, { ok: false, error: "seed_unreadable" });
       }
-      if (out === body2) return new Response(body2, { status: 200, headers: res2.headers });
+      if (out2 === body2) return new Response(body2, { status: 200, headers: res2.headers });
     } else if (kind === "codes") {
-      out = codesWithoutDead(body2, m.dead);
-      if (out === body2) return new Response(body2, { status: 200, headers: res2.headers });
+      out2 = codesWithoutDead(body2, m.dead);
+      if (out2 === body2) return new Response(body2, { status: 200, headers: res2.headers });
     } else {
-      out = searchPayload(body2, m.dead);
-      if (out === body2) return new Response(body2, { status: 200, headers: res2.headers });
+      out2 = searchPayload(body2, m.dead);
+      if (out2 === body2) return new Response(body2, { status: 200, headers: res2.headers });
     }
-    return new Response(out, { status: 200, headers: mergedHeaders(res2) });
+    return new Response(out2, { status: 200, headers: mergedHeaders(res2) });
   }
   const xml = { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=300" } };
   if (kind === "/sitemap-live.xml") return m.extras.length ? new Response(sitemapLive(m), xml) : notFoundPage(request, env);
@@ -8693,8 +9862,8 @@ async function mergedAsset(request, env, path) {
   for (const k of ["etag", "last-modified", "content-length"]) h.delete(k);
   h.set("Cache-Control", "no-cache");
   if (kind === "category") {
-    const out = await categoryPage(new Response(res.body, { status: 200, headers: h }), cat, m);
-    return out;
+    const out2 = await categoryPage(new Response(res.body, { status: 200, headers: h }), cat, m);
+    return out2;
   }
   const body = await res.text();
   const merged = kind === "/feed.json" ? feedJson(body, m) : kind === "/feed.xml" ? feedXml(body, m, (/* @__PURE__ */ new Date()).toISOString()) : kind === "/sitemap-index.xml" ? sitemapIndex(body, m) : sitemapStatic(body, m);

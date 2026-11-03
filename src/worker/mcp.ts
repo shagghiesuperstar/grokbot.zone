@@ -169,10 +169,11 @@ function clientIp(req: Request): string {
   return req.headers.get('cf-connecting-ip') ?? 'unknown';
 }
 
-function internalPost(path: string, body: unknown, ip: string): Request {
+/** Write tools forward the caller's own Authorization header; submit()/subscribe() verify it against D1. */
+function internalPost(path: string, body: unknown, ip: string, authorization: string | null = null): Request {
   return new Request(`https://grokbot.zone${path}`, {
     method: 'POST',
-    headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip },
+    headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip, ...(authorization !== null ? { authorization } : {}) },
     body: JSON.stringify(body),
   });
 }
@@ -298,12 +299,12 @@ async function callTool(name: string, args: Record<string, unknown>, req: Reques
       company_website: '',
       filled_ms: 30000,
     };
-    const res = await hooks.submit(internalPost('/api/v1/submissions', body, clientIp(req)));
+    const res = await hooks.submit(internalPost('/api/v1/submissions', body, clientIp(req), req.headers.get('authorization')));
     return mapWrite(id, res);
   }
   if (name === 'grokbot_subscribe') {
     if (typeof args.email !== 'string' || !args.email.trim()) return invalid(id, { email: 'required' });
-    const res = await hooks.subscribe(internalPost('/subscribe', { email: args.email, company_website: '' }, clientIp(req)));
+    const res = await hooks.subscribe(internalPost('/subscribe', { email: args.email, company_website: '' }, clientIp(req), req.headers.get('authorization')));
     return mapWrite(id, res);
   }
   return rpcError(id, -32601, 'Method not found');

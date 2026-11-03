@@ -20,6 +20,7 @@ import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
 import { LINK_HEADER, agentResponse, htmlToMarkdown, isHtml, wantsMarkdown } from './agent';
 import { handleMcp } from './mcp';
+import { bearerGate, handleOAuth } from './oauth';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -146,6 +147,10 @@ async function writeGate(rl: Limiter | undefined, key: string): Promise<Response
   if (g === 'unavailable') return unavailable();
   return g === 'limited' ? json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' }) : null;
 }
+/** A request with an Authorization header is judged on the bearer alone: invalid -> 401 (never the anonymous path), valid -> the
+ *  per-token D1 cap instead of the IP limiter. No header -> the IP limiter, unchanged. */
+const writeAccess = (req: Request, env: Env, rl: Limiter | undefined, key: string): Promise<Response | null> =>
+  req.headers.get('authorization') !== null ? bearerGate(req, env.DB) : writeGate(rl, key);
 const clientIp = (req: Request) => req.headers.get('cf-connecting-ip') ?? 'unknown';
 const isJson = (req: Request) => (req.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json');
 async function readJson(req: Request): Promise<unknown | undefined> {
@@ -195,7 +200,7 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
   const ip = clientIp(req);
-  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`);
   if (stop) return stop;
   const body = await readJson(req);
   if (body === undefined) return json(400, { ok: false, errors: { body: 'invalid JSON' } });
@@ -245,7 +250,7 @@ async function subscribe(req: Request, env: Env, ctx: ExecutionContext): Promise
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
-  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
   if (stop) return stop;
   const body = (await readJson(req)) as { email?: unknown; company_website?: unknown } | undefined;
   if (!body || typeof body !== 'object') return json(400, { ok: false, errors: { body: 'invalid JSON' } });
@@ -664,6 +669,8 @@ async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL
       subscribe: (req) => subscribe(req, env, ctx),
     });
   }
+  const oauth = await handleOAuth(request, { DB: env.DB, EMAIL: env.EMAIL, mailFrom: UPDATES_FROM }, url, path);
+  if (oauth) return oauth;
   const agent = await agentResponse(request, env, path);
   if (agent) return agent;
   if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);

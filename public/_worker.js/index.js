@@ -413,32 +413,32 @@ function renderTokens(tokens, joinWords) {
   let result = "";
   let pending = null;
   for (let i = 0; i < tokens.length; i++) {
-    const token = tokens[i];
-    if (token.text !== void 0) {
+    const token2 = tokens[i];
+    if (token2.text !== void 0) {
       const nextToken = tokens[i + 1];
-      if (pending && nextToken && nextToken.text === void 0 && WORD_SEPARATOR_REGEX.test(token.text)) {
+      if (pending && nextToken && nextToken.text === void 0 && WORD_SEPARATOR_REGEX.test(token2.text)) {
         continue;
       }
       if (pending) {
         result += decodeWord(pending.charset, pending.encoding, pending.encodedText);
         pending = null;
       }
-      result += token.text;
+      result += token2.text;
       continue;
     }
-    if (pending && joinWords && canJoinWords(pending, token)) {
-      pending.encodedText += token.encodedText;
-      pending.padded = token.encodedText.endsWith("=");
+    if (pending && joinWords && canJoinWords(pending, token2)) {
+      pending.encodedText += token2.encodedText;
+      pending.padded = token2.encodedText.endsWith("=");
       continue;
     }
     if (pending) {
       result += decodeWord(pending.charset, pending.encoding, pending.encodedText);
     }
     pending = {
-      charset: token.charset,
-      encoding: token.encoding,
-      encodedText: token.encodedText,
-      padded: token.encodedText.endsWith("=")
+      charset: token2.charset,
+      encoding: token2.encoding,
+      encodedText: token2.encodedText,
+      padded: token2.encodedText.endsWith("=")
     };
   }
   if (pending) {
@@ -5583,8 +5583,8 @@ function ownerSummary(r) {
   };
 }
 var postalLine = (v) => typeof v === "string" ? singleLine(v) : "";
-function confirmMail(token, postal = "") {
-  const url = `${SITE}/subscribe/confirm?t=${token}`;
+function confirmMail(token2, postal = "") {
+  const url = `${SITE}/subscribe/confirm?t=${token2}`;
   const addr = postalLine(postal);
   const foot = ["If you did not ask for this, ignore this email and nothing will happen.", addr ? `GrokBot Zone, ${addr}` : ""].filter(Boolean);
   const text2 = `Confirm: ${url}
@@ -8518,10 +8518,10 @@ function asRecord(v) {
 function clientIp(req) {
   return req.headers.get("cf-connecting-ip") ?? "unknown";
 }
-function internalPost(path, body, ip) {
+function internalPost(path, body, ip, authorization = null) {
   return new Request(`https://grokbot.zone${path}`, {
     method: "POST",
-    headers: { "content-type": "application/json", "cf-connecting-ip": ip },
+    headers: { "content-type": "application/json", "cf-connecting-ip": ip, ...authorization !== null ? { authorization } : {} },
     body: JSON.stringify(body)
   });
 }
@@ -8640,12 +8640,12 @@ async function callTool(name, args, req, hooks, id) {
       company_website: "",
       filled_ms: 3e4
     };
-    const res = await hooks.submit(internalPost("/api/v1/submissions", body, clientIp(req)));
+    const res = await hooks.submit(internalPost("/api/v1/submissions", body, clientIp(req), req.headers.get("authorization")));
     return mapWrite(id, res);
   }
   if (name === "grokbot_subscribe") {
     if (typeof args.email !== "string" || !args.email.trim()) return invalid(id, { email: "required" });
-    const res = await hooks.subscribe(internalPost("/subscribe", { email: args.email, company_website: "" }, clientIp(req)));
+    const res = await hooks.subscribe(internalPost("/subscribe", { email: args.email, company_website: "" }, clientIp(req), req.headers.get("authorization")));
     return mapWrite(id, res);
   }
   return rpcError(id, -32601, "Method not found");
@@ -8736,6 +8736,421 @@ async function handleMcp(request, hooks) {
   return rpcError(id ?? null, -32601, "Method not found");
 }
 
+// src/worker/oauth.ts
+var HOSTS = /* @__PURE__ */ new Set(["grokbot.zone", "www.grokbot.zone", "127.0.0.1", "localhost"]);
+var LOOPBACK = /* @__PURE__ */ new Set(["127.0.0.1", "localhost"]);
+var SCOPE = "mcp:write";
+var MAGIC_TTL_MS = 15 * 6e4;
+var CODE_TTL_MS = 6e4;
+var TOKEN_TTL_S = 3600;
+var TOKEN_WRITES_PER_MIN = 30;
+var REGISTRATIONS_PER_HOUR = 10;
+var MAILS_PER_IP_HOUR = 30;
+var MAILS_PER_ADDRESS_HOUR = 5;
+var IDENTITY_CLIENT = "agent-identity";
+var BODY_MAX = 8192;
+var enc = new TextEncoder();
+var b64u = (b) => btoa(String.fromCharCode(...b)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+var hex2 = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
+var sha2562 = (s) => crypto.subtle.digest("SHA-256", enc.encode(s));
+var sha256hex = async (s) => hex2(await sha2562(s));
+var randomSecret = (bytes = 32) => b64u(crypto.getRandomValues(new Uint8Array(bytes)));
+function timingSafeEqual(a, b) {
+  const x = enc.encode(a);
+  const y = enc.encode(b);
+  let d = x.length ^ y.length;
+  for (let i = 0; i < Math.max(x.length, y.length); i++) d |= (x[i] ?? 0) ^ (y[i] ?? 0);
+  return d === 0;
+}
+var oj = (status, body, extra = {}) => new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json", "Cache-Control": "no-store", ...extra } });
+var oerr = (status, error, description, extra = {}) => oj(status, description ? { error, error_description: description } : { error }, extra);
+var unavailable = () => oerr(503, "temporarily_unavailable");
+var notAllowed = (allow) => oerr(405, "method_not_allowed", void 0, { Allow: allow });
+var esc3 = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+var HTML_CSP = "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'";
+function htmlPage(status, title, bodyHtml) {
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>${esc3(title)} | GrokBot Zone</title><style>body{background:#030203;color:#f4f1f4;font:16px/1.5 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0}main{max-width:36rem;padding:2rem}input{font:inherit;padding:.6rem;border-radius:.4rem;border:1px solid #555;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}button{font:inherit;font-weight:600;padding:.6rem 1.2rem;border:0;border-radius:.4rem;background:#00ffcc;color:#030203;cursor:pointer}a{color:#00ffcc}</style></head><body><main><h1>${esc3(title)}</h1>${bodyHtml}</main></body></html>`;
+  return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Content-Security-Policy": HTML_CSP } });
+}
+var wantsJson = (req) => (req.headers.get("accept") ?? "").includes("application/json");
+var failFor = (req, status, error, description) => wantsJson(req) ? oerr(status, error, description) : htmlPage(status, "Request not valid", `<p>${esc3(description)}</p>`);
+function originOf(url) {
+  if (!HOSTS.has(url.hostname)) return null;
+  return LOOPBACK.has(url.hostname) ? url.origin : "https://grokbot.zone";
+}
+async function readText(req) {
+  const t = await req.text();
+  return t.length > BODY_MAX ? null : t;
+}
+async function readJsonObject(req) {
+  const t = await readText(req);
+  if (t === null) return null;
+  try {
+    const v = JSON.parse(t);
+    return v && typeof v === "object" && !Array.isArray(v) ? v : null;
+  } catch {
+    return null;
+  }
+}
+var ctype = (req) => (req.headers.get("content-type") ?? "").toLowerCase();
+async function take(db, key, cap, windowSec, now = Date.now()) {
+  const cutoff = now - windowSec * 1e3;
+  const r = await db.prepare(
+    `INSERT INTO oauth_rl (k, n, window_start) VALUES (?, 1, ?)
+     ON CONFLICT(k) DO UPDATE SET
+       n = CASE WHEN window_start <= ? THEN 1 ELSE n + 1 END,
+       window_start = CASE WHEN window_start <= ? THEN ? ELSE window_start END
+     WHERE window_start <= ? OR n < ?`
+  ).bind(key, now, cutoff, cutoff, now, cutoff, cap).run();
+  return Number(r.meta.changes) > 0;
+}
+function authServerDoc(o) {
+  return {
+    issuer: o,
+    authorization_endpoint: `${o}/oauth/authorize`,
+    token_endpoint: `${o}/oauth/token`,
+    registration_endpoint: `${o}/oauth/register`,
+    revocation_endpoint: `${o}/oauth/revoke`,
+    response_types_supported: ["code"],
+    grant_types_supported: ["authorization_code"],
+    code_challenge_methods_supported: ["S256"],
+    token_endpoint_auth_methods_supported: ["none"],
+    scopes_supported: [SCOPE],
+    agent_auth: {
+      skill: `${o}/auth.md`,
+      register_uri: `${o}/oauth/agent/identity`,
+      identity_endpoint: `${o}/oauth/agent/identity`,
+      claim_uri: `${o}/oauth/agent/claim`,
+      claim_endpoint: `${o}/oauth/agent/claim`,
+      revocation_uri: `${o}/oauth/revoke`,
+      identity_types_supported: ["service_auth"],
+      assertion_types_supported: ["verified_email"],
+      credential_types_supported: ["access_token"]
+    }
+  };
+}
+function authMd(o) {
+  return `# Authorization for the GrokBot Zone MCP server
+
+Reading the directory needs no account. Anonymous writes still work at the usual per-IP rate limit. A bearer
+token from the flow below raises the write limit for the two MCP write tools, \`grokbot_submit_bot\` and
+\`grokbot_subscribe\`, and for the matching REST routes. Read tools stay anonymous either way.
+
+## Flow
+
+1. Discovery. Fetch \`${o}/.well-known/oauth-protected-resource\` (names the resource and its authorization server)
+   and \`${o}/.well-known/oauth-authorization-server\` (RFC 8414 metadata with every endpoint).
+2. Register a public client at \`${o}/oauth/register\` (RFC 7591). POST JSON with \`redirect_uris\`
+   (https, or http on 127.0.0.1 or localhost; exact strings, no fragments, no wildcards) and optionally
+   \`client_name\`. The reply has a \`client_id\`. There is no client secret.
+3. Authorize with PKCE. Open \`${o}/oauth/authorize\` with \`response_type=code\`, \`client_id\`, \`redirect_uri\`,
+   \`code_challenge\` (base64url SHA-256 of a random verifier of 43 to 128 characters), \`code_challenge_method=S256\`,
+   optional \`state\`, and optional \`scope=mcp:write\`. Plain PKCE is refused.
+4. Email magic link. Submit the account's email address on that page (or POST \`{"email": ...}\` as JSON to the same URL).
+   A single-use sign-in link valid for 15 minutes is mailed there. Opening it redirects to your registered
+   \`redirect_uri\` with \`code\` (valid for 60 seconds) and your \`state\`.
+5. Exchange the code at \`${o}/oauth/token\` with a form body: \`grant_type=authorization_code\`, \`code\`,
+   \`redirect_uri\`, \`client_id\`, \`code_verifier\`. The reply carries \`access_token\`, \`token_type\` Bearer,
+   \`expires_in\` 3600 and \`scope\` mcp:write.
+6. Send \`Authorization: Bearer <access_token>\` with POST requests to \`${o}/mcp\` for the write tools.
+   A bearer that is missing from our records, expired or revoked is answered with 401 and the write is not stored.
+7. Revoke with a form POST of \`token=<access_token>\` to \`${o}/oauth/revoke\`.
+
+## Agent identity
+
+A service that wants to start the email login without a browser can POST \`{"type": "service_auth", "login_hint": "<email>"}\`
+to \`${o}/oauth/agent/identity\`. The reply names a claim page at \`${o}/oauth/agent/claim\`; the person finishes by
+opening the emailed link.
+
+## Limits
+
+Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per token.
+Access tokens last one hour and are stored only as SHA-256 digests.
+`;
+}
+function validRedirect(u) {
+  if (typeof u !== "string" || u.length === 0 || u.length > 2048) return false;
+  if (/[#*\\\s\u0000-\u001f\u007f]/.test(u)) return false;
+  if (!u.startsWith("https://") && !u.startsWith("http://")) return false;
+  let p;
+  try {
+    p = new URL(u);
+  } catch {
+    return false;
+  }
+  if (p.username || p.password) return false;
+  if (p.protocol === "https:") return true;
+  return p.protocol === "http:" && LOOPBACK.has(p.hostname);
+}
+var onlyAllowed = (v, allowed) => v === void 0 || Array.isArray(v) && v.length > 0 && v.every((x) => x === allowed);
+async function register(req, env) {
+  if (!ctype(req).startsWith("application/json")) return oerr(415, "invalid_client_metadata", "content type must be application/json");
+  const b = await readJsonObject(req);
+  if (!b) return oerr(400, "invalid_client_metadata", "invalid JSON body");
+  const uris = b.redirect_uris;
+  if (!Array.isArray(uris) || uris.length < 1 || uris.length > 5 || !uris.every(validRedirect) || new Set(uris).size !== uris.length) {
+    return oerr(400, "invalid_redirect_uri", "redirect_uris must be 1 to 5 exact https URIs, or http on 127.0.0.1 or localhost, with no fragment or wildcard");
+  }
+  if (b.token_endpoint_auth_method !== void 0 && b.token_endpoint_auth_method !== "none") return oerr(400, "invalid_client_metadata", 'only token_endpoint_auth_method "none" is supported');
+  if (!onlyAllowed(b.grant_types, "authorization_code")) return oerr(400, "invalid_client_metadata", "only the authorization_code grant is supported");
+  if (!onlyAllowed(b.response_types, "code")) return oerr(400, "invalid_client_metadata", "only the code response type is supported");
+  if (b.client_name !== void 0 && typeof b.client_name !== "string") return oerr(400, "invalid_client_metadata", "client_name must be a string");
+  const name = typeof b.client_name === "string" ? b.client_name.replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g, " ").trim().slice(0, 100) : "";
+  if (!env.DB) return unavailable();
+  const ip = req.headers.get("cf-connecting-ip") ?? "unknown";
+  const ipHash = await sha256hex(ip);
+  if (!await take(env.DB, `reg:${ipHash}`, REGISTRATIONS_PER_HOUR, 3600)) return oerr(429, "rate_limited", void 0, { "Retry-After": "3600" });
+  const clientId = `gz_${randomSecret(16)}`;
+  await env.DB.prepare("INSERT INTO oauth_client (client_id, redirect_uris, client_name, created_at, ip_hash) VALUES (?, ?, ?, ?, ?)").bind(clientId, JSON.stringify(uris), name || null, Date.now(), ipHash).run();
+  return oj(201, {
+    client_id: clientId,
+    ...name ? { client_name: name } : {},
+    redirect_uris: uris,
+    token_endpoint_auth_method: "none",
+    grant_types: ["authorization_code"],
+    response_types: ["code"]
+  });
+}
+async function checkAuthParams(req, db, q) {
+  const bad = (msg, error = "invalid_request") => ({ ok: false, res: failFor(req, 400, error, msg) });
+  if (q.get("response_type") !== "code") return bad("response_type must be code", "unsupported_response_type");
+  const clientId = q.get("client_id") ?? "";
+  const redirect = q.get("redirect_uri") ?? "";
+  const challenge = q.get("code_challenge") ?? "";
+  const method = q.get("code_challenge_method");
+  const state = q.get("state");
+  const scope = q.get("scope");
+  if (!clientId || clientId.length > 128) return bad("unknown client_id", "invalid_client");
+  const row = await db.prepare("SELECT redirect_uris FROM oauth_client WHERE client_id = ?").bind(clientId).first();
+  if (!row) return bad("unknown client_id", "invalid_client");
+  let uris;
+  try {
+    uris = JSON.parse(row.redirect_uris);
+  } catch {
+    uris = [];
+  }
+  if (!redirect || !Array.isArray(uris) || !uris.includes(redirect)) return bad("redirect_uri does not match a registered URI");
+  if (method !== "S256") return bad("code_challenge_method must be S256");
+  if (!/^[A-Za-z0-9_-]{43}$/.test(challenge)) return bad("code_challenge must be a base64url SHA-256 digest");
+  if (scope !== null && scope !== SCOPE) return bad(`scope must be ${SCOPE}`, "invalid_scope");
+  if (state !== null && state.length > 512) return bad("state is too long");
+  return { ok: true, p: { client_id: clientId, redirect_uri: redirect, code_challenge: challenge, state, scope: SCOPE } };
+}
+function authorizeForm(p) {
+  const keep = new URLSearchParams({ response_type: "code", client_id: p.client_id, redirect_uri: p.redirect_uri, code_challenge: p.code_challenge, code_challenge_method: "S256", scope: p.scope });
+  if (p.state !== null) keep.set("state", p.state);
+  return htmlPage(200, "Sign in to GrokBot Zone", `<p>Enter your email address. We will send a single-use sign-in link.</p><form method="post" action="${esc3(`/oauth/authorize?${keep.toString()}`)}"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="254"><button type="submit">Send sign-in link</button></form>`);
+}
+async function startLogin(env, origin, p, email2, ip, id = randomSecret(16)) {
+  const db = env.DB;
+  if (!db) return unavailable();
+  const now = Date.now();
+  if (!await take(db, `mail-ip:${await sha256hex(ip)}`, MAILS_PER_IP_HOUR, 3600, now) || !await take(db, `mail-em:${await sha256hex(email2)}`, MAILS_PER_ADDRESS_HOUR, 3600, now)) {
+    return oerr(429, "rate_limited", "too many sign-in emails; try again later", { "Retry-After": "3600" });
+  }
+  const token2 = randomSecret(32);
+  await db.prepare("INSERT INTO oauth_pending (id, client_id, redirect_uri, code_challenge, state, scope, email, magic_hash, expires_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(id, p.client_id, p.redirect_uri, p.code_challenge, p.state, p.scope, email2, await sha256hex(token2), now + MAGIC_TTL_MS).run();
+  const magicUrl = `${origin}/oauth/magic?token=${token2}`;
+  let sent = false;
+  try {
+    if (env.EMAIL) {
+      await env.EMAIL.send({
+        to: email2,
+        from: env.mailFrom,
+        subject: "Your GrokBot Zone sign-in link",
+        text: `Open this link within 15 minutes to finish signing in to GrokBot Zone:
+
+${magicUrl}
+
+It works once. If you did not ask for it, ignore this message and nothing happens.
+`
+      });
+      sent = true;
+    }
+  } catch (e) {
+    console.error("oauth magic send failed:", e.code ?? "E_SEND_FAILED");
+  }
+  if (!sent) {
+    try {
+      await db.prepare("DELETE FROM oauth_pending WHERE id = ?").bind(id).run();
+    } catch {
+      try {
+        await db.prepare("UPDATE oauth_pending SET magic_hash = NULL, expires_at = 0 WHERE id = ?").bind(id).run();
+      } catch {
+      }
+    }
+    return unavailable();
+  }
+  try {
+    await db.prepare("DELETE FROM oauth_pending WHERE expires_at < ?").bind(now - 36e5).run();
+    await db.prepare("DELETE FROM oauth_rl WHERE window_start < ?").bind(now - 864e5).run();
+  } catch {
+  }
+  return { ok: true, id, magicUrl };
+}
+async function authorize(req, env, url, origin) {
+  if (!env.DB) return unavailable();
+  const checked = await checkAuthParams(req, env.DB, url.searchParams);
+  if (!checked.ok) return checked.res;
+  if (req.method === "GET") return authorizeForm(checked.p);
+  let rawEmail;
+  if (ctype(req).startsWith("application/json")) rawEmail = (await readJsonObject(req))?.email;
+  else if (ctype(req).startsWith("application/x-www-form-urlencoded")) {
+    const t = await readText(req);
+    rawEmail = t === null ? void 0 : new URLSearchParams(t).get("email");
+  } else return failFor(req, 415, "invalid_request", "send JSON or a form body");
+  const email2 = typeof rawEmail === "string" ? rawEmail.trim().toLowerCase() : "";
+  if (!isEmail(email2)) return failFor(req, 400, "invalid_request", "a valid email address is required");
+  const login = await startLogin(env, origin, checked.p, email2, req.headers.get("cf-connecting-ip") ?? "unknown");
+  if (login instanceof Response) return login;
+  if (wantsJson(req)) return oj(200, { ok: true, ...LOOPBACK.has(url.hostname) ? { dev_magic_url: login.magicUrl } : {} });
+  return htmlPage(200, "Check your email", "<p>If the address is valid, a sign-in link is on its way. It works once and expires in 15 minutes.</p>");
+}
+function withParams(uri, params) {
+  const q = Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+  return `${uri}${uri.includes("?") ? "&" : "?"}${q}`;
+}
+async function magic(url, env) {
+  if (!env.DB) return unavailable();
+  const token2 = url.searchParams.get("token") ?? "";
+  if (!/^[A-Za-z0-9_-]{43}$/.test(token2)) return oerr(400, "invalid_grant", "invalid or expired link");
+  const now = Date.now();
+  const code = randomSecret(32);
+  const r = await env.DB.prepare("UPDATE oauth_pending SET magic_hash = NULL, code_hash = ?, expires_at = ? WHERE magic_hash = ? AND expires_at > ? AND consumed_at IS NULL").bind(await sha256hex(code), now + CODE_TTL_MS, await sha256hex(token2), now).run();
+  if (Number(r.meta.changes) !== 1) return oerr(400, "invalid_grant", "invalid or expired link");
+  const row = await env.DB.prepare("SELECT client_id, redirect_uri, state FROM oauth_pending WHERE code_hash = ?").bind(await sha256hex(code)).first();
+  if (!row) return oerr(400, "invalid_grant", "invalid or expired link");
+  const params = row.client_id === IDENTITY_CLIENT ? { verified: "1" } : { code, ...row.state !== null ? { state: row.state } : {} };
+  return new Response(null, { status: 302, headers: { Location: withParams(row.redirect_uri, params), "Cache-Control": "no-store" } });
+}
+var tokenErr = (status, error, description) => oerr(status, error, description, { Pragma: "no-cache" });
+async function token(req, env) {
+  if (!ctype(req).startsWith("application/x-www-form-urlencoded")) return tokenErr(400, "invalid_request", "content type must be application/x-www-form-urlencoded");
+  const text2 = await readText(req);
+  if (text2 === null) return tokenErr(400, "invalid_request");
+  const f = new URLSearchParams(text2);
+  if (f.get("grant_type") !== "authorization_code") return tokenErr(400, "unsupported_grant_type");
+  const code = f.get("code") ?? "";
+  const redirect = f.get("redirect_uri") ?? "";
+  const clientId = f.get("client_id") ?? "";
+  const verifier = f.get("code_verifier") ?? "";
+  if (!code || !redirect || !clientId) return tokenErr(400, "invalid_request", "code, redirect_uri and client_id are required");
+  if (!/^[A-Za-z0-9\-._~]{43,128}$/.test(verifier)) return tokenErr(400, "invalid_grant", "code_verifier must be 43 to 128 unreserved characters");
+  if (!env.DB) return unavailable();
+  const now = Date.now();
+  const codeHash = await sha256hex(code);
+  const row = await env.DB.prepare("SELECT id, client_id, redirect_uri, code_challenge, scope, email FROM oauth_pending WHERE code_hash = ?").bind(codeHash).first();
+  if (!row || !row.email) return tokenErr(400, "invalid_grant");
+  const spent = await env.DB.prepare("UPDATE oauth_pending SET consumed_at = ? WHERE id = ? AND code_hash = ? AND consumed_at IS NULL AND expires_at > ?").bind(now, row.id, codeHash, now).run();
+  if (Number(spent.meta.changes) !== 1) return tokenErr(400, "invalid_grant");
+  const challenge = b64u(new Uint8Array(await sha2562(verifier)));
+  const okClient = timingSafeEqual(row.client_id, clientId);
+  const okRedirect = timingSafeEqual(row.redirect_uri, redirect);
+  const okPkce = timingSafeEqual(challenge, row.code_challenge);
+  if (!(okClient && okRedirect && okPkce)) return tokenErr(400, "invalid_grant");
+  const access = randomSecret(32);
+  await env.DB.prepare("INSERT INTO oauth_token (token_hash, client_id, email, scope, expires_at) VALUES (?, ?, ?, ?, ?)").bind(await sha256hex(access), row.client_id, row.email, row.scope, now + TOKEN_TTL_S * 1e3).run();
+  return oj(200, { access_token: access, token_type: "Bearer", expires_in: TOKEN_TTL_S, scope: row.scope }, { Pragma: "no-cache" });
+}
+async function revoke(req, env) {
+  if (!ctype(req).startsWith("application/x-www-form-urlencoded")) return oerr(400, "invalid_request", "content type must be application/x-www-form-urlencoded");
+  const text2 = await readText(req);
+  const t = text2 === null ? "" : new URLSearchParams(text2).get("token") ?? "";
+  if (!t) return oerr(400, "invalid_request", "token is required");
+  if (!env.DB) return unavailable();
+  await env.DB.prepare("UPDATE oauth_token SET revoked_at = ? WHERE token_hash = ? AND revoked_at IS NULL").bind(Date.now(), await sha256hex(t)).run();
+  return oj(200, {});
+}
+async function identity(req, env, url, origin) {
+  if (!ctype(req).startsWith("application/json")) return oerr(415, "invalid_request", "content type must be application/json");
+  const b = await readJsonObject(req);
+  if (!b) return oerr(400, "invalid_request", "invalid JSON body");
+  if (b.type !== "service_auth") return oerr(400, "invalid_request", "type must be service_auth");
+  const email2 = typeof b.login_hint === "string" ? b.login_hint.trim().toLowerCase() : "";
+  if (!isEmail(email2)) return oerr(400, "invalid_request", "login_hint must be a valid email address");
+  if (!env.DB) return unavailable();
+  const id = randomSecret(16);
+  let params;
+  if (b.client_id === void 0) {
+    params = { client_id: IDENTITY_CLIENT, redirect_uri: `${origin}/oauth/agent/claim?registration_id=${id}`, code_challenge: randomSecret(32), state: null, scope: SCOPE };
+  } else {
+    const q = new URLSearchParams({ response_type: "code" });
+    for (const k of ["client_id", "redirect_uri", "code_challenge", "code_challenge_method", "state", "scope"]) if (typeof b[k] === "string") q.set(k, b[k]);
+    const checked = await checkAuthParams(new Request(req.url, { headers: { accept: "application/json" } }), env.DB, q);
+    if (!checked.ok) return checked.res;
+    params = checked.p;
+  }
+  const login = await startLogin(env, origin, params, email2, req.headers.get("cf-connecting-ip") ?? "unknown", id);
+  if (login instanceof Response) return login;
+  return oj(200, {
+    registration_id: login.id,
+    registration_type: "service_auth",
+    expires_in: MAGIC_TTL_MS / 1e3,
+    claim: { verification_uri: `${origin}/oauth/agent/claim?registration_id=${login.id}`, expires_in: MAGIC_TTL_MS / 1e3, interval: 5 },
+    ...LOOPBACK.has(url.hostname) ? { dev_magic_url: login.magicUrl } : {}
+  });
+}
+function claim(req) {
+  const msg = "Finish by opening the sign-in link we emailed to the address you gave. The link works once and expires in 15 minutes.";
+  if (wantsJson(req)) return oj(200, { status: "pending_email_verification", message: msg });
+  return htmlPage(200, "Check your email", `<p>${esc3(msg)}</p>`);
+}
+var invalidToken = () => oj(401, { ok: false, error: "invalid_token" }, { "WWW-Authenticate": 'Bearer error="invalid_token"' });
+async function bearerGate(req, db) {
+  const m = /^Bearer ([A-Za-z0-9_-]{16,128})$/i.exec((req.headers.get("authorization") ?? "").trim());
+  if (!m) return invalidToken();
+  if (!db) return unavailable();
+  try {
+    const hash = await sha256hex(m[1]);
+    const now = Date.now();
+    const row = await db.prepare("SELECT 1 AS x FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?").bind(hash, now).first();
+    if (!row) return invalidToken();
+    if (!await take(db, `tok:${hash}`, TOKEN_WRITES_PER_MIN, 60, now)) return oj(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
+    return null;
+  } catch (e) {
+    console.error("bearer check failed:", e.message);
+    return oj(503, { ok: false, error: "unavailable" });
+  }
+}
+async function handleOAuth(req, env, url, path) {
+  const wellKnown = path === "/.well-known/oauth-authorization-server" || path === "/.well-known/oauth-protected-resource";
+  if (!wellKnown && path !== "/auth.md" && !path.startsWith("/oauth/")) return null;
+  const origin = originOf(url);
+  if (!origin) return oerr(400, "invalid_request", "host not allowed");
+  const m = req.method;
+  const read = m === "GET" || m === "HEAD";
+  const doc = (body, type) => new Response(m === "HEAD" ? null : body, { status: 200, headers: { "Content-Type": type, "Cache-Control": "no-store" } });
+  try {
+    switch (path) {
+      case "/.well-known/oauth-authorization-server":
+        return read ? doc(JSON.stringify(authServerDoc(origin)), "application/json") : notAllowed("GET, HEAD");
+      case "/.well-known/oauth-protected-resource":
+        return read ? doc(JSON.stringify({ resource: `${origin}/mcp`, authorization_servers: [origin], scopes_supported: [SCOPE], bearer_methods_supported: ["header"] }), "application/json") : notAllowed("GET, HEAD");
+      case "/auth.md":
+        return read ? doc(authMd(origin), "text/markdown; charset=utf-8") : notAllowed("GET, HEAD");
+      case "/oauth/register":
+        return m === "POST" ? await register(req, env) : notAllowed("POST");
+      case "/oauth/authorize":
+        return m === "GET" || m === "POST" ? await authorize(req, env, url, origin) : notAllowed("GET, POST");
+      case "/oauth/magic":
+        return m === "GET" ? await magic(url, env) : notAllowed("GET");
+      case "/oauth/token":
+        return m === "POST" ? await token(req, env) : notAllowed("POST");
+      case "/oauth/revoke":
+        return m === "POST" ? await revoke(req, env) : notAllowed("POST");
+      case "/oauth/agent/identity":
+        return m === "POST" ? await identity(req, env, url, origin) : notAllowed("POST");
+      case "/oauth/agent/claim":
+        return m === "GET" || m === "POST" || m === "HEAD" ? claim(req) : notAllowed("GET, POST");
+      default:
+        return null;
+    }
+  } catch (e) {
+    console.error("oauth error", path, e.message);
+    return unavailable();
+  }
+}
+
 // src/worker/index.ts
 var SECURITY_HEADERS = {
   "X-Content-Type-Options": "nosniff",
@@ -8819,12 +9234,13 @@ async function gate(rl, key) {
     return "unavailable";
   }
 }
-var unavailable = () => json(503, { ok: false, error: "unavailable" });
+var unavailable2 = () => json(503, { ok: false, error: "unavailable" });
 async function writeGate(rl, key) {
   const g = await gate(rl, key);
-  if (g === "unavailable") return unavailable();
+  if (g === "unavailable") return unavailable2();
   return g === "limited" ? json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" }) : null;
 }
+var writeAccess = (req, env, rl, key) => req.headers.get("authorization") !== null ? bearerGate(req, env.DB) : writeGate(rl, key);
 var clientIp2 = (req) => req.headers.get("cf-connecting-ip") ?? "unknown";
 var isJson = (req) => (req.headers.get("content-type") ?? "").toLowerCase().startsWith("application/json");
 async function readJson2(req) {
@@ -8866,7 +9282,7 @@ async function submit(req, env, ctx) {
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
   const ip = clientIp2(req);
-  const stop = await writeGate(env.SUBMISSIONS_RL, `${ip}:submit`);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`);
   if (stop) return stop;
   const body = await readJson2(req);
   if (body === void 0) return json(400, { ok: false, errors: { body: "invalid JSON" } });
@@ -8910,7 +9326,7 @@ async function subscribe(req, env, ctx) {
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
-  const stop = await writeGate(env.SUBSCRIBE_RL, `${clientIp2(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp2(req)}:subscribe`);
   if (stop) return stop;
   const body = await readJson2(req);
   if (!body || typeof body !== "object") return json(400, { ok: false, errors: { body: "invalid JSON" } });
@@ -9219,11 +9635,11 @@ async function digest(controller, env) {
   let sent = 0;
   let stopped = false;
   for (const s of results) {
-    const claim = await db.prepare(
+    const claim2 = await db.prepare(
       `INSERT INTO digest_delivery (subscriber_id, window_id, window_end, attempts, status) VALUES (?, ?, ?, 0, 'pending') ON CONFLICT(subscriber_id, window_id) DO NOTHING`
     ).bind(s.id, windowId, windowEnd).run();
     let attempts = 0;
-    if (Number(claim.meta.changes) === 0) {
+    if (Number(claim2.meta.changes) === 0) {
       const row = await db.prepare("SELECT status, attempts FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?").bind(s.id, windowId).first();
       if (!row || row.status === "sent" || row.status === "failed" || row.status === "pending") continue;
       attempts = Number(row.attempts);
@@ -9271,10 +9687,10 @@ async function digest(controller, env) {
   }
   console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
-function addVary(headers, token) {
+function addVary(headers, token2) {
   const cur = headers.get("Vary");
-  if (!cur) headers.set("Vary", token);
-  else if (!cur.toLowerCase().split(",").map((s) => s.trim()).includes(token.toLowerCase())) headers.set("Vary", `${cur}, ${token}`);
+  if (!cur) headers.set("Vary", token2);
+  else if (!cur.toLowerCase().split(",").map((s) => s.trim()).includes(token2.toLowerCase())) headers.set("Vary", `${cur}, ${token2}`);
 }
 async function finish(request, res) {
   const headers = new Headers(res.headers);
@@ -9329,6 +9745,8 @@ async function route(request, env, ctx, url) {
       subscribe: (req) => subscribe(req, env, ctx)
     });
   }
+  const oauth = await handleOAuth(request, { DB: env.DB, EMAIL: env.EMAIL, mailFrom: UPDATES_FROM }, url, path);
+  if (oauth) return oauth;
   const agent = await agentResponse(request, env, path);
   if (agent) return agent;
   if (isMediaRequest(request, url)) return serveMedia(request, env.ASSETS, url);

@@ -118,7 +118,11 @@ def main():
     check("apiCatalog", cat_status == 200 and "linkset+json" in hdr(cat_headers, "content-type") and isinstance(linkset, list) and len(linkset) >= 1, f"{cat_status} {hdr(cat_headers, 'content-type')}")
 
     oa_status, _, oa_body = fetch("/.well-known/oauth-authorization-server")
-    check("oauthDiscovery", oa_status == 200 and b"authorization_endpoint" in oa_body, f"{oa_status}")
+    check(
+        "oauthDiscovery",
+        oa_status == 200 and b"authorization_endpoint" in oa_body and b"agent_auth" in oa_body and b"registration_endpoint" in oa_body and b"S256" in oa_body,
+        f"{oa_status}",
+    )
     pr_status, _, pr_body = fetch("/.well-known/oauth-protected-resource")
     check("oauthProtectedResource", pr_status == 200 and b"authorization_servers" in pr_body and b"resource" in pr_body, f"{pr_status}")
     au_status, _, au_body = fetch("/auth.md")

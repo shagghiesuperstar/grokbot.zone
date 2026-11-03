@@ -130,6 +130,9 @@ const bots: Bot[] = [];
 const live = readLive(new Set(categories.map((c) => c.slug)));
 if (live.dead.size) { const keep = bots.filter((b) => !live.dead.has(b.code.toLowerCase())); bots.length = 0; bots.push(...keep); }
 {
+  for (const a of live.added) {
+    if (!/^[A-Za-z0-9_-]{21}$/.test(a.code)) fail('data/live/changes.json', a.id, 'code must be exactly 21 characters of [A-Za-z0-9_-]');
+  }
   const have = new Set(bots.map((b) => b.code.toLowerCase()));
   for (const a of live.added) if (!have.has(a.code.toLowerCase()) && !live.dead.has(a.code.toLowerCase())) { bots.push(a); have.add(a.code.toLowerCase()); }
 }

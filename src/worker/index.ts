@@ -9,6 +9,7 @@ import {
   isEmail, honeypotOk, isOn, makeToken, oneLine, ownerSummary, validateSubmission, TOKEN_RE,
   type DigestPayload,
 } from '../lib/submissions';
+import { stripEmails } from '../lib/strip-emails';
 import { isMediaRequest, serveMedia } from './media';
 import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
@@ -395,24 +396,44 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
 
 // ---- cron: Monday + Thursday digest ----
 
+const DIGEST_WINDOW_MS = 7 * 86_400_000;
+const DIGEST_SENT_KEY = 'digest_last_sent';
+
 async function digest(controller: ScheduledController, env: Env): Promise<void> {
   if (!isOn(env.DIGEST_ENABLED)) { console.log('digest: dark (DIGEST_ENABLED != 1), 0 sends'); return; }
   if (!env.DB) { console.log('digest: no DB binding, 0 sends'); return; }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  const res = await env.ASSETS.fetch(new Request(`${SITE}/digests/latest.json`));
-  if (!res.ok) { console.error(`digest: payload ${res.status}, 0 sends`); return; }
-  const payload = (await res.json()) as DigestPayload;
+  const scheduled = controller.scheduledTime;
+  const prev = await env.DB.prepare('SELECT v FROM meta WHERE k = ?').bind(DIGEST_SENT_KEY).first<{ v: string }>();
+  const since = prev?.v ?? new Date(scheduled - DIGEST_WINDOW_MS).toISOString();
+  const { results: fresh } = await env.DB.prepare(
+    "SELECT code, name, description, category FROM bots WHERE status = 'live' AND first_seen > ? ORDER BY first_seen DESC, code_lc ASC",
+  ).bind(since).all<{ code: string; name: string; description: string; category: string | null }>();
+  if (!fresh.length) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
+  const totals = await env.DB.prepare(
+    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
+  ).first<{ total: number; cats: number }>();
+  const payload: DigestPayload = {
+    asOf: new Date(scheduled).toISOString().slice(0, 10),
+    totalBots: Number(totals?.total ?? fresh.length),
+    categoryCount: Number(totals?.cats ?? 0),
+    top: fresh.map((b) => ({ id: botId(b.category, b.code), name: stripEmails(b.name), description: stripEmails(b.description) })),
+  };
   const cap = Number(env.DIGEST_MAX_SENDS ?? '100');
   const { results } = await env.DB.prepare("SELECT email, unsub_token FROM subscribers WHERE status='active' ORDER BY id LIMIT ?").bind(digestRecipientCount(1e9, cap)).all<{ email: string; unsub_token: string }>();
-  const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? 'Thursday' : 'Monday';
+  const weekday = new Date(scheduled).getUTCDay() === 4 ? 'Thursday' : 'Monday';
   let sent = 0;
+  let stopped = false;
   for (const s of results) {
     const m = digestMail(payload, weekday, s.unsub_token, postal);
     const r = await sendMail(env, env.EMAIL, 'digest', { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
     if (r.ok) sent++;
-    if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) { console.error(`digest: stopped on ${r.code}`); break; }
+    if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) { console.error(`digest: stopped on ${r.code}`); stopped = true; break; }
   }
-  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap}`);
+  if (sent > 0 && !stopped) {
+    await env.DB.prepare('INSERT INTO meta(k, v) VALUES(?, ?) ON CONFLICT(k) DO UPDATE SET v = excluded.v').bind(DIGEST_SENT_KEY, new Date(scheduled).toISOString()).run();
+  }
+  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${fresh.length} since=${since}`);
 }
 
 // ---- entry ----

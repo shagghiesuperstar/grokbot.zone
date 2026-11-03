@@ -433,6 +433,8 @@ await t('A2 default budget is 200 per day', async () => {
 
 // ---- C2: the postal address is optional; when set it is printed once, when empty the line is omitted ----
 const seedActive = (env: Record<string, any>, n = 2) => { for (let i = 0; i < n; i++) env.DB.db.prepare("INSERT INTO subscribers (email, status, confirm_token, unsub_token) VALUES (?, 'active', ?, ?)").run(`r${i}@example.test`, String(i).repeat(32), String(i + 3).repeat(32)); };
+const seedBot = (env: Record<string, any>, row: { code: string; name: string; first_seen: string; status?: string; description?: string; category?: string | null }) =>
+  env.DB.db.prepare("INSERT INTO bots (code_lc, code, name, author, description, category, source, status, first_seen) VALUES (?, ?, ?, '', ?, ?, 'listing', ?, ?)").run(row.code.toLowerCase(), row.code, row.name, row.description ?? 'A new listing.', row.category === undefined ? 'coding-software' : row.category, row.status ?? 'live', row.first_seen);
 const DIGEST_PAYLOAD = { asOf: '2026-11-01', totalBots: 7, categoryCount: 2, top: [{ id: 'cat-AbCdEfGhIjKlMnOpQrStU', name: 'Tax Helper', description: 'Helps with taxes. More text.' }] };
 const digestEnv = (over: Record<string, unknown> = {}) => makeEnv({ DIGEST_ENABLED: '1', NOTIFY_OWNER: undefined, ASSETS: { fetch: async () => Response.json(DIGEST_PAYLOAD) }, ...over });
 /** Fires the digest cron, drains the work it hands to waitUntil, returns what it logged. */
@@ -445,6 +447,7 @@ const fireDigest = async (env: unknown) => {
 for (const empty of [undefined, '', '   ']) {
   await t(`C2 digest: MAIL_POSTAL_ADDRESS ${JSON.stringify(empty)} -> sends normally, no address line, no placeholder`, async () => {
     const env = digestEnv({ MAIL_POSTAL_ADDRESS: empty }); seedActive(env);
+    seedBot(env, { code: 'DigestBot100000000001', name: 'Digest Bot', first_seen: '2026-11-01T00:00:00.000Z', description: 'Listed this week.' });
     const logs = await fireDigest(env);
     assert.equal(env.EMAIL.sent.length, 2); assert.ok(!logs.some((l) => /MAIL_POSTAL_ADDRESS|refus/.test(l)), logs.join('|'));
     const m = env.EMAIL.sent[0];
@@ -457,6 +460,7 @@ for (const empty of [undefined, '', '   ']) {
 }
 await t('C2 digest: with an address the digest sends to active readers, with the address, an unsubscribe link and both List-Unsubscribe headers', async () => {
   const env = digestEnv({ MAIL_POSTAL_ADDRESS: 'PO Box 1, Example City' }); seedActive(env);
+  seedBot(env, { code: 'DigestBot100000000001', name: 'Digest Bot', first_seen: '2026-11-01T00:00:00.000Z', description: 'Listed this week.' });
   await fireDigest(env);
   assert.equal(env.EMAIL.sent.length, 2);
   const m = env.EMAIL.sent[0]; assert.match(m.text, /GrokBot Zone, PO Box 1, Example City/); assert.match(m.html, /PO Box 1, Example City/);
@@ -476,6 +480,55 @@ await t('C2 confirm mail: the address line renders exactly once when set and not
     const d = digestMail(DIGEST_PAYLOAD, 'Monday', 'a'.repeat(32), empty);
     assert.ok(!/GrokBot Zone, /.test(d.text + d.html), 'no address line'); assert.match(d.text, /-- \nYou get this/);
   }
+});
+
+// ---- digest reads live D1 at send time, not the deploy-time snapshot ----
+const noAssets = () => ({ fetch: async () => { throw new Error('digest must not read ASSETS'); } });
+await t('digest: live rows first seen after the last send, static file unread', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  env.DB.db.prepare("INSERT INTO meta(k, v) VALUES('digest_last_sent', ?)").run('2026-11-01T13:00:00.000Z');
+  seedBot(env, { code: 'NewLive10000000000001', name: 'Fresh Bot', description: 'Just went live.', first_seen: '2026-11-02T01:00:00.000Z' });
+  seedBot(env, { code: 'OldLive10000000000001', name: 'Old Bot', first_seen: '2026-10-01T00:00:00.000Z' });
+  seedBot(env, { code: 'PendBot10000000000001', name: 'Pending Bot', status: 'pending', first_seen: '2026-11-02T02:00:00.000Z' });
+  seedBot(env, { code: 'DeadBot10000000000001', name: 'Dead Bot', status: 'dead', first_seen: '2026-11-02T02:00:00.000Z' });
+  seedBot(env, { code: 'ExclBot10000000000001', name: 'Excluded Bot', status: 'excluded', first_seen: '2026-11-02T02:00:00.000Z' });
+  seedBot(env, { code: 'MailBot10000000000001', name: 'Mail Bot', description: 'Write ada@example.test please.', first_seen: '2026-11-02T03:00:00.000Z' });
+  const logs = await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 1, logs.join('|'));
+  const text = env.EMAIL.sent[0].text as string;
+  assert.match(text, /Fresh Bot/);
+  assert.match(text, /2026-11-02 — /);
+  assert.match(text, /\[email hidden\]/);
+  assert.ok(!text.includes('ada@example.test'));
+  assert.match(text, /\/bots\/coding-software-NewLive10000000000001\//);
+  assert.ok(!text.includes('Old Bot') && !text.includes('Pending Bot') && !text.includes('Dead Bot') && !text.includes('Excluded Bot') && !text.includes('Tax Helper'), text);
+  assert.equal((env.DB.rows("SELECT v FROM meta WHERE k = 'digest_last_sent'")[0] as { v: string }).v, '2026-11-02T13:00:00.000Z');
+});
+await t('digest: no prior send uses the last 7 days', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  seedBot(env, { code: 'WeekNew10000000000001', name: 'Week New', first_seen: '2026-10-27T00:00:00.000Z' });
+  seedBot(env, { code: 'WeekOld10000000000001', name: 'Week Old', first_seen: '2026-10-25T00:00:00.000Z' });
+  seedBot(env, { code: 'OnCut1000000000000001', name: 'On Cutoff', first_seen: '2026-10-26T13:00:00.000Z' });
+  const logs = await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 1, logs.join('|'));
+  const text = env.EMAIL.sent[0].text as string;
+  assert.match(text, /Week New/);
+  assert.ok(!text.includes('Week Old') && !text.includes('On Cutoff'), text);
+});
+await t('digest: zero new listings sends nothing and logs it', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 2);
+  seedBot(env, { code: 'OldOnly10000000000001', name: 'Stale Bot', first_seen: '2026-01-01T00:00:00.000Z' });
+  const logs = await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 0);
+  assert.ok(logs.some((l) => /0 new listings/.test(l) && /0 sends/.test(l)), logs.join('|'));
+  assert.equal(env.DB.rows("SELECT COUNT(*) AS n FROM meta WHERE k = 'digest_last_sent'")[0].n, 0);
+  assert.equal(env.DB.rows("SELECT COUNT(*) AS n FROM send_log WHERE kind = 'digest'")[0].n, 0);
+});
+await t('digest: DIGEST_MAX_SENDS still caps recipients', async () => {
+  const env = digestEnv({ DIGEST_MAX_SENDS: '1', ASSETS: noAssets() }); seedActive(env, 3);
+  seedBot(env, { code: 'CapBot100000000000001', name: 'Cap Bot', first_seen: '2026-11-01T00:00:00.000Z' });
+  await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 1);
 });
 
 // ---- F5: a rejected row flips to pending only if it is still rejected ----

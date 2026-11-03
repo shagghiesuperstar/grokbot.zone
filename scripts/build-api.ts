@@ -80,7 +80,11 @@ for (const b of bots) {
 mkdirSync(join(ROOT, 'public/search'), { recursive: true });
 writeFileSync(join(ROOT, 'public/search/live.json'), '{"bots":[],"dead":[]}\n');
 // Spelling-preserving twin of codes.json: the Worker's /go/ falls back to it only when D1 is unavailable (spec 08 O6).
-put(join(apiDir, 'seed-codes.json'), { codes: [...new Set(bots.map((b) => b.code))].sort() });
+// cats is parallel to codes: the categories each shipped bot is listed in. The Worker subtracts the same
+// D1 dead set from these, so category counts and totalBots share one source. Not a second dead list.
+const seedCodes = [...new Set(bots.map((b) => b.code))].sort();
+const catsByCode = new Map(bots.map((b) => [b.code.toLowerCase(), b.cats]));
+put(join(apiDir, 'seed-codes.json'), { codes: seedCodes, cats: seedCodes.map((c) => catsByCode.get(c.toLowerCase()) ?? []) });
 put(join(apiDir, 'codes.json'), { codes: [...new Set(bots.map((b) => b.code.toLowerCase()))].sort() });
 
 // Count guard: files emitted == dataset == meta.totalBots.

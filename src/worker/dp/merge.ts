@@ -18,16 +18,41 @@ export function splitId(id: string): [string | null, string] {
   return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
 }
 
-export interface Seed { assets: unknown; map: Map<string, string> }
-let seedCache: Seed | null = null;
+export interface SeedCatalog {
+  map: Map<string, string>;
+  /** Lowercased code -> category slugs the build listed that bot under. null when the file has no cats field. */
+  cats: Map<string, string[]> | null;
+}
+let seedCache: { assets: unknown; catalog: SeedCatalog } | null = null;
+const seedUnreadable = (why: string): null => { console.error(`seed-codes.json unreadable: ${why}`); return null; };
+/** Shipped codes, and the categories each one is listed in, from the one seed file totalBots already reads. */
+export async function seedCatalog(assets: { fetch(r: Request): Promise<Response> }): Promise<SeedCatalog | null> {
+  if (seedCache && seedCache.assets === assets) return seedCache.catalog;
+  let res: Response;
+  try { res = await assets.fetch(new Request(`${SITE}/api/v1/seed-codes.json`)); }
+  catch (e) { return seedUnreadable((e as Error).message); }
+  if (!res.ok) return seedUnreadable(`HTTP ${res.status}`);
+  let raw: { codes?: unknown; cats?: unknown };
+  try { raw = await res.json() as { codes?: unknown; cats?: unknown }; }
+  catch (e) { return seedUnreadable((e as Error).message); }
+  if (!Array.isArray(raw.codes) || raw.codes.some((c) => typeof c !== 'string')) return seedUnreadable('codes is not a string array');
+  const codes = raw.codes as string[];
+  const map = new Map(codes.map((c) => [c.toLowerCase(), c]));
+  if (raw.cats == null) { seedCache = { assets, catalog: { map, cats: null } }; return seedCache.catalog; }
+  if (!Array.isArray(raw.cats) || raw.cats.length !== codes.length) return seedUnreadable('cats is not aligned with codes');
+  const cats = new Map<string, string[]>();
+  for (let i = 0; i < codes.length; i++) {
+    const row = raw.cats[i];
+    if (!Array.isArray(row) || row.some((s) => typeof s !== 'string')) return seedUnreadable('cats row is not a string array');
+    cats.set(codes[i].toLowerCase(), [...new Set(row as string[])]);
+  }
+  seedCache = { assets, catalog: { map, cats } };
+  return seedCache.catalog;
+}
 /** Lowercased code -> stored spelling for every bot the deployed site has a page for (built asset). */
 export async function seedMap(assets: { fetch(r: Request): Promise<Response> }): Promise<Map<string, string> | null> {
-  if (seedCache && seedCache.assets === assets) return seedCache.map;
-  const res = await assets.fetch(new Request(`${SITE}/api/v1/seed-codes.json`));
-  if (!res.ok) return null;
-  const codes = ((await res.json()) as { codes: string[] }).codes;
-  seedCache = { assets, map: new Map(codes.map((c) => [c.toLowerCase(), c])) };
-  return seedCache.map;
+  const catalog = await seedCatalog(assets);
+  return catalog ? catalog.map : null;
 }
 
 export interface Merge { extras: LiveAdded[]; dead: Set<string> }
@@ -36,7 +61,7 @@ export async function mergeState(db: D1Database | undefined, assets: { fetch(r: 
   const st = await liveState(db);
   if (!st) return null;
   let seed: Map<string, string> | null = null;
-  try { seed = await seedMap(assets); } catch { seed = null; }
+  try { seed = await seedMap(assets); } catch (e) { console.error('seed-codes.json unreadable', (e as Error).message); seed = null; }
   // Without the built list a bot cannot be told from a static one, so no extra is added (a dead one is still dropped).
   const extras = seed ? st.added.filter((b) => !st.dead.has(b.code.toLowerCase()) && !seed!.has(b.code.toLowerCase()))
     .sort((a, b) => (a.first_seen < b.first_seen ? 1 : a.first_seen > b.first_seen ? -1 : a.code < b.code ? -1 : 1)) : [];
@@ -137,14 +162,30 @@ export function sitemapStatic(body: string, m: Merge): string {
 }
 
 // Dead set (same D1 list as sitemapStatic) applied at request time: /search/<slug>.json and
-// /api/v1/categories/<slug>.json drop dead seed bots; /search/index.json and /api/v1/index.json
-// lower totalBots by how many of those codes the build shipped; /api/v1/codes.json drops them.
-/** Dead codes the deployed build listed. A dead bot the build never shipped is not in the sitemap, so it must not change totalBots. */
+// /api/v1/categories/<slug>.json drop dead seed bots; /search/index.json, /api/v1/index.json and
+// /api/v1/categories.json lower counts by how many of those codes the build shipped; /api/v1/codes.json drops them.
+// Category count is listings, not distinct bots: a bot in two categories is listed in both, so the sum of
+// category counts is totalListings, not totalBots. A bot in none is not in these files. One dead set, no second list.
+/** Dead codes the deployed build listed. A dead bot the build never shipped is not in the sitemap, so it must not change a count. A missing seed is an error, not zero dead. */
 export function deadSeedCount(dead: Set<string>, seed: Map<string, string> | null): number {
-  if (!seed || !dead.size) return 0;
+  if (!dead.size) return 0;
+  if (!seed) {
+    console.error('seed-codes.json unreadable; refusing to report 0 dead shipped bots');
+    throw new Error('seed-codes.json unreadable');
+  }
   let n = 0;
   for (const c of dead) if (seed.has(c.toLowerCase())) n++;
   return n;
+}
+/** How many shipped dead bots each category lists. Same intersection as deadSeedCount: a code absent from the seed was never shipped. */
+export function categoryDrops(dead: Set<string>, seedCats: Map<string, string[]>): Map<string, number> {
+  const drop = new Map<string, number>();
+  for (const code of dead) {
+    const listed = seedCats.get(code.toLowerCase());
+    if (!listed) continue;
+    for (const slug of listed) drop.set(slug, (drop.get(slug) ?? 0) + 1);
+  }
+  return drop;
 }
 const withNl = (body: string, json: string) => json + (body.endsWith('\n') ? '\n' : '');
 /** totalBots minus the dead seed bots sitemapStatic removes. */
@@ -153,6 +194,36 @@ export function totalWithoutDead(body: string, removed: number): string {
   const j = JSON.parse(body) as { totalBots?: number };
   if (typeof j.totalBots !== 'number') return body;
   return withNl(body, JSON.stringify({ ...j, totalBots: j.totalBots - removed }));
+}
+const dropCounts = (rows: { slug?: string; count?: number }[], drop: Map<string, number>): boolean => {
+  let changed = false;
+  for (const row of rows) {
+    const n = row.slug ? drop.get(row.slug) : 0;
+    if (n && typeof row.count === 'number') { row.count -= n; changed = true; }
+  }
+  return changed;
+};
+/** Search index (and /api/v1/index.json): totalBots and, when present, each category count, from the same dead set. */
+export function indexWithoutDead(body: string, dead: Set<string>, seed: Map<string, string>, seedCats: Map<string, string[]> | null): string {
+  const removed = deadSeedCount(dead, seed);
+  const j = JSON.parse(body) as { totalBots?: number; categories?: { slug: string; count?: number }[] };
+  let changed = false;
+  if (typeof j.totalBots === 'number' && removed) { j.totalBots -= removed; changed = true; }
+  if (Array.isArray(j.categories)) {
+    if (!seedCats) {
+      console.error('seed-codes.json unreadable: no category list; refusing to report counts that include dead bots');
+      throw new Error('seed-codes.json unreadable');
+    }
+    if (dropCounts(j.categories, categoryDrops(dead, seedCats))) changed = true;
+  }
+  return changed ? withNl(body, JSON.stringify(j)) : body;
+}
+/** /api/v1/categories.json: each category's count minus the shipped dead bots listed in it. */
+export function categoriesWithoutDead(body: string, dead: Set<string>, seedCats: Map<string, string[]>): string {
+  const j = JSON.parse(body) as { slug?: string; count?: number }[];
+  if (!Array.isArray(j)) return body;
+  if (!dropCounts(j, categoryDrops(dead, seedCats))) return body;
+  return withNl(body, JSON.stringify(j));
 }
 /** codes.json: drop dead codes. Codes the build never shipped are already absent. */
 export function codesWithoutDead(body: string, dead: Set<string>): string {

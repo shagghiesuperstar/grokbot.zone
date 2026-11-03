@@ -14,7 +14,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, isDead, record } from './dp/telemetry';
-import { categoryPage, codesWithoutDead, deadSeedCount, uncategorizedPage, feedJson, feedXml, mergeState, searchLive, searchPayload, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId, totalWithoutDead } from './dp/merge';
+import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId } from './dp/util';
 
@@ -491,7 +491,7 @@ function mergedHeaders(res: Response): Headers {
   return h;
 }
 /** D28/O10: static files merged with the live bots and the dead list; null = nothing to merge, serve the asset.
- *  Dead set (same D1 list as sitemapStatic): search-cat drops dead bots from /search/<slug>.json and /api/v1/categories/<slug>.json; totals lowers totalBots on /search/index.json and /api/v1/index.json by the dead codes this build shipped; codes drops those codes from /api/v1/codes.json. */
+ *  Dead set (same D1 list as sitemapStatic): search-cat drops dead bots from /search/<slug>.json and /api/v1/categories/<slug>.json; totals lowers totalBots and, on /search/index.json, each category count; cat-index lowers counts on /api/v1/categories.json; codes drops those codes from /api/v1/codes.json. One dead set. A missing seed refuses the count, it does not report 0 dead. */
 async function mergedAsset(request: Request, env: Env, path: string): Promise<Response | null> {
   const cat = CATEGORY_RE.exec(path)?.[1];
   const searchFile = /^\/search\/([a-z0-9-]+)\.json$/.exec(path);
@@ -499,6 +499,7 @@ async function mergedAsset(request: Request, env: Env, path: string): Promise<Re
   const searchSlug = searchFile && CATEGORY_SLUGS.has(searchFile[1]) ? searchFile[1] : null;
   const apiCatSlug = apiCatFile && CATEGORY_SLUGS.has(apiCatFile[1]) ? apiCatFile[1] : null;
   const kind = path === '/search/live.json' ? 'search'
+    : path === '/api/v1/categories.json' ? 'cat-index'
     : path === '/search/index.json' || path === '/api/v1/index.json' ? 'totals'
     : path === '/api/v1/codes.json' ? 'codes'
     : searchSlug || apiCatSlug ? 'search-cat'
@@ -509,18 +510,27 @@ async function mergedAsset(request: Request, env: Env, path: string): Promise<Re
   if (!m || (!m.extras.length && !m.dead.size)) return kind === '/sitemap-live.xml' ? notFoundPage(request, env) : null;
   if (kind === 'search') return searchLive(m);
   // Counts and codes only change when a shipped bot has died. Extras live in sitemap-live.xml, not in these files.
-  if (kind === 'totals' || kind === 'codes' || kind === 'search-cat') {
+  if (kind === 'totals' || kind === 'cat-index' || kind === 'codes' || kind === 'search-cat') {
     if (!m.dead.size) return null;
     const res = await env.ASSETS.fetch(unconditional(request));
     if (res.status !== 200) return res;
     const body = await res.text();
     let out = body;
-    if (kind === 'totals') {
-      let seed: Map<string, string> | null = null;
-      try { seed = await seedMap(env.ASSETS); } catch { seed = null; }
-      const n = deadSeedCount(m.dead, seed);
-      if (!n) return new Response(body, { status: 200, headers: res.headers });
-      out = totalWithoutDead(body, n);
+    if (kind === 'totals' || kind === 'cat-index') {
+      let catalog: Awaited<ReturnType<typeof seedCatalog>> = null;
+      try { catalog = await seedCatalog(env.ASSETS); } catch (e) { console.error('seed-codes.json unreadable', (e as Error).message); }
+      const needsCats = kind === 'cat-index' || path === '/search/index.json';
+      if (!catalog || (needsCats && !catalog.cats)) {
+        console.error('seed-codes.json unreadable; refusing to report counts that include dead bots');
+        return json(503, { ok: false, error: 'seed_unreadable' });
+      }
+      try {
+        out = kind === 'cat-index' ? categoriesWithoutDead(body, m.dead, catalog.cats!) : indexWithoutDead(body, m.dead, catalog.map, catalog.cats);
+      } catch (e) {
+        console.error('seed-codes.json unreadable', (e as Error).message);
+        return json(503, { ok: false, error: 'seed_unreadable' });
+      }
+      if (out === body) return new Response(body, { status: 200, headers: res.headers });
     } else if (kind === 'codes') {
       out = codesWithoutDead(body, m.dead);
       if (out === body) return new Response(body, { status: 200, headers: res.headers });

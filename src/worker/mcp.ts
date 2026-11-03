@@ -148,12 +148,12 @@ function originBlocked(req: Request): boolean {
   }
 }
 
-function toolResult(id: unknown, structured: unknown, isError: boolean, text: string) {
+function toolResult(id: unknown, structured: unknown, isError: boolean, text: string, status = 200) {
   return rpc(id, {
     content: [{ type: 'text', text }],
     structuredContent: structured,
     isError,
-  });
+  }, status);
 }
 
 async function readJson(res: Response): Promise<unknown> {
@@ -297,6 +297,7 @@ async function callTool(name: string, args: Record<string, unknown>, req: Reques
       email: args.email,
       ...(typeof args.author === 'string' ? { author: args.author } : {}),
       company_website: '',
+      // MCP exemption: a tool call has no form clock. The public skill documents this; REST callers must send the real elapsed time.
       filled_ms: 30000,
     };
     const res = await hooks.submit(internalPost('/api/v1/submissions', body, clientIp(req), req.headers.get('authorization')));
@@ -320,7 +321,9 @@ async function mapWrite(id: unknown, res: Response): Promise<Response> {
   const body = await readJson(res);
   const ok = res.status >= 200 && res.status < 300;
   const text = ok ? `status ${res.status}` : `error ${res.status}`;
-  return toolResult(id, body, !ok, text);
+  // 401/429 must be visible to status-gating proxies. Field errors stay HTTP 200 + isError (the MCP shape).
+  const status = res.status === 401 || res.status === 429 ? res.status : 200;
+  return toolResult(id, body, !ok, text, status);
 }
 
 export async function handleMcp(request: Request, hooks: McpHooks): Promise<Response> {

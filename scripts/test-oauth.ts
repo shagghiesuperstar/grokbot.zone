@@ -93,9 +93,9 @@ async function magicToCode(env: unknown, magicUrl: string, base = LOCAL) {
   const res = await at(base, u.pathname + u.search, env);
   return res;
 }
-async function getToken(env: unknown, c: { client_id: string; redirect: string }, base = LOCAL) {
+async function getToken(env: unknown, c: { client_id: string; redirect: string }, base = LOCAL, email?: string) {
   const { verifier, challenge } = pkce();
-  const { body } = await login(env, c, challenge, base);
+  const { body } = await login(env, c, challenge, base, email);
   const mr = await magicToCode(env, body.dev_magic_url, base);
   assert.equal(mr.status, 302);
   const code = new URL(mr.headers.get('location')!).searchParams.get('code')!;
@@ -183,6 +183,16 @@ await t('DCR: rejects http (non-loopback), fragments, wildcards, other schemes, 
   for (const b of bad) assert.equal((await jpost(PROD, '/oauth/register', env, b)).status, 400, JSON.stringify(b));
   assert.equal(count(env, 'oauth_client'), 0);
   assert.equal((await at(PROD, '/oauth/register', env, { method: 'POST', headers: { 'content-type': 'text/plain' }, body: 'x' })).status >= 400, true);
+});
+await t('DCR: 5 redirect_uris of 2048 characters are accepted (documented max)', async () => {
+  const env = makeEnv();
+  const uris = [0, 1, 2, 3, 4].map((i) => {
+    const prefix = `https://app${i}.example/`;
+    return prefix + 'a'.repeat(2048 - prefix.length);
+  });
+  const res = await jpost(PROD, '/oauth/register', env, { redirect_uris: uris });
+  const text = await res.text();
+  assert.equal(res.status, 201, text.slice(0, 180));
 });
 await t('DCR: 10 per IP per hour, the 11th is 429; another IP is unaffected; D1 failure -> 503', async () => {
   const env = makeEnv();
@@ -370,27 +380,28 @@ await t('anonymous submit still accepted through REST and MCP; invalid email sti
   assert.equal(count(env, 'submissions'), 2);
   assert.equal((await jpost(PROD, '/subscribe', env, { email: 'sub@example.test', company_website: '' })).status, 201);
 });
-await t('valid bearer on submit: token bucket used, IP limiter untouched, validation still runs, row stored', async () => {
+await t('valid bearer on submit: identity bucket used, IP floor consumed, validation still runs, row stored', async () => {
   const env = makeEnv(); const c = await register(env); const token = await getToken(env, c); const auth = { authorization: `Bearer ${token}` };
   const res = await jpost(PROD, '/api/v1/submissions', env, GOOD, auth); assert.equal(res.status, 201);
-  assert.deepEqual(env.SUBMISSIONS_RL.keys, [], 'IP limiter key not consumed');
-  const rl = env.DB.rows('SELECT * FROM oauth_rl WHERE k = ?', `tok:${sha256hex(token)}`); assert.equal(rl.length, 1); assert.equal(rl[0].n, 1);
+  assert.deepEqual(env.SUBMISSIONS_RL.keys, ['9.9.9.9:submit'], 'IP floor consumed under a valid token');
+  const email = env.DB.rows('SELECT email FROM oauth_token')[0].email as string;
+  const rl = env.DB.rows('SELECT * FROM oauth_rl WHERE k = ?', `id:${sha256hex(email)}`); assert.equal(rl.length, 1); assert.equal(rl[0].n, 1);
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, link: 'https://x.ai/bot/Other-12345000000000', email: 'bad' }, auth)).status, 400);
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, link: 'https://x.ai/bot/Third-12345000000000', company_website: 'spam.example' }, auth)).status, 400);
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, link: 'https://x.ai/bot/Fourth-1234500000000', filled_ms: 10 }, auth)).status, 400);
-  assert.equal(count(env, 'submissions'), 1); assert.equal(env.DB.rows('SELECT n FROM oauth_rl WHERE k = ?', `tok:${sha256hex(token)}`)[0].n, 4);
+  assert.equal(count(env, 'submissions'), 1); assert.equal(env.DB.rows('SELECT n FROM oauth_rl WHERE k = ?', `id:${sha256hex(email)}`)[0].n, 4);
   const viaMcp = await mcp(env, 'grokbot_submit_bot', { ...MCP_SUBMIT, link: 'https://x.ai/bot/ViaMcp-12345000000000' }, auth); assert.equal((await viaMcp.json() as any).result.isError, false);
-  assert.deepEqual(env.SUBMISSIONS_RL.keys, []); assert.equal(count(env, 'submissions'), 2);
+  assert.ok(env.SUBMISSIONS_RL.keys.every((k: string) => k === '9.9.9.9:submit')); assert.equal(count(env, 'submissions'), 2);
   const badMcp = await mcp(env, 'grokbot_submit_bot', { ...MCP_SUBMIT, email: 'not-an-email' }, auth); assert.equal((await badMcp.json() as any).result.isError, true);
 });
-await t('valid bearer on subscribe: still a double opt-in (pending + confirm mail), IP limiter untouched', async () => {
+await t('valid bearer on subscribe: still a double opt-in (pending + confirm mail), IP floor consumed', async () => {
   const env = makeEnv(); const c = await register(env); const token = await getToken(env, c); const auth = { authorization: `Bearer ${token}` };
   const ctx = makeCtx();
   const res = await worker.fetch(new Request(`${PROD}/subscribe`, { method: 'POST', headers: { 'content-type': 'application/json', ...auth }, body: JSON.stringify({ email: 'Reader@Example.test', company_website: '' }) }), env, ctx);
   assert.equal(res.status, 201); assert.deepEqual(await res.json(), { ok: true, status: 'pending_confirm' }); await ctx.drain();
   assert.deepEqual(env.DB.rows('SELECT email, status FROM subscribers'), [{ email: 'reader@example.test', status: 'pending' }]);
   assert.ok(env.EMAIL.sent.some((m: any) => m.to === 'reader@example.test' && /confirm/i.test(m.text)));
-  assert.deepEqual(env.SUBSCRIBE_RL.keys, []);
+  assert.deepEqual(env.SUBSCRIBE_RL.keys, ['unknown:subscribe'], 'IP floor consumed under a valid token');
   const viaMcp = await mcp(env, 'grokbot_subscribe', { email: 'nope' }, auth); assert.equal((await viaMcp.json() as any).result.isError, true);
 });
 await t('invalid bearer on a write -> 401 invalid_token, nothing stored, no fall-through to the anonymous limiter (REST and MCP)', async () => {
@@ -399,7 +410,7 @@ await t('invalid bearer on a write -> 401 invalid_token, nothing stored, no fall
   for (const a of variants) {
     const r1 = await jpost(PROD, '/api/v1/submissions', env, GOOD, { authorization: a }); assert.equal(r1.status, 401, `submit [${a}]`); assert.deepEqual(await r1.json(), { ok: false, error: 'invalid_token' });
     const r2 = await jpost(PROD, '/subscribe', env, { email: 'x@example.test', company_website: '' }, { authorization: a }); assert.equal(r2.status, 401, `subscribe [${a}]`);
-    const r3 = await mcp(env, 'grokbot_submit_bot', MCP_SUBMIT, { authorization: a }); const j = (await r3.json() as any).result; assert.equal(j.isError, true); assert.equal(j.structuredContent.error, 'invalid_token');
+    const r3 = await mcp(env, 'grokbot_submit_bot', MCP_SUBMIT, { authorization: a }); assert.equal(r3.status, 401, `mcp [${a}]`); const j = (await r3.json() as any).result; assert.equal(j.isError, true); assert.equal(j.structuredContent.error, 'invalid_token');
     const r4 = await jpost(PROD, '/api/submit', env, GOOD, { authorization: a }); assert.equal(r4.status, 401);
   }
   assert.equal(count(env, 'submissions'), 0); assert.equal(count(env, 'bots'), 0); assert.equal(count(env, 'subscribers'), 0);
@@ -409,7 +420,7 @@ await t('expired bearer -> 401', async () => {
   const env = makeEnv(); const c = await register(env); const token = await getToken(env, c); env.DB.db.exec('UPDATE oauth_token SET expires_at = 1');
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, GOOD, { authorization: `Bearer ${token}` })).status, 401);
 });
-await t('bearer bucket: 30 writes per 60 s per token, the 31st is 429 with Retry-After; another token is unaffected; D1 failure -> 503', async () => {
+await t('bearer bucket: 30 writes per 60 s per verified email, the 31st is 429 with Retry-After; a different email is unaffected; D1 failure -> 503', async () => {
   const env = makeEnv(); const c = await register(env); const token = await getToken(env, c); const other = await getToken(env, c);
   const auth = { authorization: `Bearer ${token}` };
   for (let i = 0; i < 30; i++) assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, email: 'bad' }, auth)).status, 400, `write ${i + 1}`);
@@ -429,6 +440,52 @@ await t('no Authorization header: the IP limiter path still returns 429 when exh
   const env = makeEnv({ SUBMISSIONS_RL: limiter(1) });
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, GOOD)).status, 201);
   assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, link: 'https://x.ai/bot/Second-1234500000000' })).status, 429);
+});
+await t('two tokens for the same email share one 30/min write bucket; a different email does not', async () => {
+  const env = makeEnv({ SUBMISSIONS_RL: limiter(1000), AUTH_SUBMIT_RL: limiter(1000) });
+  const c = await register(env);
+  const email = freshEmail();
+  const otherEmail = freshEmail();
+  const a = await getToken(env, c, LOCAL, email);
+  const b = await getToken(env, c, LOCAL, email);
+  const other = await getToken(env, c, LOCAL, otherEmail);
+  const bad = { ...GOOD, email: 'bad' };
+  for (let i = 0; i < 30; i++) assert.equal((await jpost(PROD, '/api/v1/submissions', env, bad, { authorization: `Bearer ${a}` })).status, 400, `write ${i + 1}`);
+  const again = await jpost(PROD, '/api/v1/submissions', env, bad, { authorization: `Bearer ${b}` });
+  assert.equal(again.status, 429, 'minting a second token must not mint another 30/min');
+  assert.ok(again.headers.get('retry-after'));
+  const shared = env.DB.rows('SELECT n FROM oauth_rl WHERE k = ?', `id:${sha256hex(email)}`);
+  assert.equal(shared.length, 1, 'bucket must be keyed on the verified email, not the token hash');
+  assert.equal(shared[0].n, 30);
+  assert.equal(env.DB.rows("SELECT k FROM oauth_rl WHERE k LIKE 'tok:%'").length, 0, 'a token hash must not be its own write bucket');
+  assert.equal((await jpost(PROD, '/api/v1/submissions', env, bad, { authorization: `Bearer ${other}` })).status, 400, 'a different email keeps its own budget');
+  assert.equal(env.DB.rows('SELECT n FROM oauth_rl WHERE k = ?', `id:${sha256hex(otherEmail)}`)[0].n, 1);
+});
+await t('per-IP floor still rejects a valid bearer once that IP cap is spent', async () => {
+  const floor = limiter(1);
+  const env = makeEnv({ SUBMISSIONS_RL: floor });
+  const c = await register(env);
+  const token = await getToken(env, c);
+  const auth = { authorization: `Bearer ${token}` };
+  assert.equal((await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, email: 'bad' }, auth)).status, 400);
+  const second = await jpost(PROD, '/api/v1/submissions', env, { ...GOOD, email: 'bad' }, auth);
+  assert.equal(second.status, 429, 'a valid token must not remove the per-IP floor');
+  assert.ok(second.headers.get('retry-after'));
+  assert.ok(floor.keys.length >= 2, 'the IP limiter must actually be called');
+  assert.equal(env.DB.rows("SELECT n FROM oauth_rl WHERE k LIKE 'id:%'")[0].n, 1, 'the 429 is the IP floor, not a spent identity bucket');
+});
+await t('a token raises the submit ceiling above the anonymous per-IP cap; the raised IP floor still bites', async () => {
+  const anon = limiter(2);
+  const raised = limiter(5);
+  const env = makeEnv({ SUBMISSIONS_RL: anon, AUTH_SUBMIT_RL: raised });
+  const c = await register(env);
+  const token = await getToken(env, c);
+  const auth = { authorization: `Bearer ${token}` };
+  const bad = { ...GOOD, email: 'bad' };
+  for (let i = 0; i < 5; i++) assert.equal((await jpost(PROD, '/api/v1/submissions', env, bad, auth)).status, 400, `auth write ${i + 1}`);
+  assert.equal((await jpost(PROD, '/api/v1/submissions', env, bad, auth)).status, 429);
+  assert.deepEqual(anon.keys, [], 'a bearer must not spend the anonymous 5/min bucket');
+  assert.equal(raised.keys.length, 6);
 });
 
 console.log(`\n${n} passed, ${failed} failed`);

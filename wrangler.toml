@@ -35,6 +35,18 @@ name = "SUBSCRIBE_RL"
 namespace_id = "1002"
 simple = { limit = 10, period = 60 }
 
+# Bearer writes. Higher than the anonymous caps so a token raises the ceiling. The Worker still
+# calls these on every valid bearer, so one IP cannot skip a per-IP floor by minting tokens.
+[[ratelimits]]
+name = "AUTH_SUBMIT_RL"
+namespace_id = "1003"
+simple = { limit = 30, period = 60 }
+
+[[ratelimits]]
+name = "AUTH_SUBSCRIBE_RL"
+namespace_id = "1004"
+simple = { limit = 30, period = 60 }
+
 [triggers]
 # The digest keeps its own expression (dark); */10 is the data plane (spec 07 D14).
 crons = ["0 13 * * MON,THU", "*/10 * * * *"]

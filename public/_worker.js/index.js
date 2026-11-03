@@ -8497,12 +8497,12 @@ function originBlocked(req) {
     return true;
   }
 }
-function toolResult(id, structured, isError, text2) {
+function toolResult(id, structured, isError, text2, status = 200) {
   return rpc(id, {
     content: [{ type: "text", text: text2 }],
     structuredContent: structured,
     isError
-  });
+  }, status);
 }
 async function readJson(res) {
   const text2 = await res.text();
@@ -8638,6 +8638,7 @@ async function callTool(name, args, req, hooks, id) {
       email: args.email,
       ...typeof args.author === "string" ? { author: args.author } : {},
       company_website: "",
+      // MCP exemption: a tool call has no form clock. The public skill documents this; REST callers must send the real elapsed time.
       filled_ms: 3e4
     };
     const res = await hooks.submit(internalPost("/api/v1/submissions", body, clientIp(req), req.headers.get("authorization")));
@@ -8659,7 +8660,8 @@ async function mapWrite(id, res) {
   const body = await readJson(res);
   const ok = res.status >= 200 && res.status < 300;
   const text2 = ok ? `status ${res.status}` : `error ${res.status}`;
-  return toolResult(id, body, !ok, text2);
+  const status = res.status === 401 || res.status === 429 ? res.status : 200;
+  return toolResult(id, body, !ok, text2, status);
 }
 async function handleMcp(request, hooks) {
   if (request.method !== "POST") {
@@ -8749,6 +8751,7 @@ var MAILS_PER_IP_HOUR = 30;
 var MAILS_PER_ADDRESS_HOUR = 5;
 var IDENTITY_CLIENT = "agent-identity";
 var BODY_MAX = 8192;
+var REGISTER_BODY_MAX = 16384;
 var enc = new TextEncoder();
 var b64u = (b) => btoa(String.fromCharCode(...b)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 var hex2 = (b) => [...new Uint8Array(b)].map((x) => x.toString(16).padStart(2, "0")).join("");
@@ -8778,12 +8781,12 @@ function originOf(url) {
   if (!HOSTS.has(url.hostname)) return null;
   return LOOPBACK.has(url.hostname) ? url.origin : "https://grokbot.zone";
 }
-async function readText(req) {
+async function readText(req, max = BODY_MAX) {
   const t = await req.text();
-  return t.length > BODY_MAX ? null : t;
+  return t.length > max ? null : t;
 }
-async function readJsonObject(req) {
-  const t = await readText(req);
+async function readJsonObject(req, max = BODY_MAX) {
+  const t = await readText(req, max);
   if (t === null) return null;
   try {
     const v = JSON.parse(t);
@@ -8864,7 +8867,7 @@ opening the emailed link.
 
 ## Limits
 
-Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per token.
+Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per verified email, shared by every token for that email. The per-IP limiter still applies underneath; a token raises that ceiling, it does not remove it.
 Access tokens last one hour and are stored only as SHA-256 digests.
 `;
 }
@@ -8885,7 +8888,7 @@ function validRedirect(u) {
 var onlyAllowed = (v, allowed) => v === void 0 || Array.isArray(v) && v.length > 0 && v.every((x) => x === allowed);
 async function register(req, env) {
   if (!ctype(req).startsWith("application/json")) return oerr(415, "invalid_client_metadata", "content type must be application/json");
-  const b = await readJsonObject(req);
+  const b = await readJsonObject(req, REGISTER_BODY_MAX);
   if (!b) return oerr(400, "invalid_client_metadata", "invalid JSON body");
   const uris = b.redirect_uris;
   if (!Array.isArray(uris) || uris.length < 1 || uris.length > 5 || !uris.every(validRedirect) || new Set(uris).size !== uris.length) {
@@ -9096,21 +9099,25 @@ function claim(req) {
   return htmlPage(200, "Check your email", `<p>${esc3(msg)}</p>`);
 }
 var invalidToken = () => oj(401, { ok: false, error: "invalid_token" }, { "WWW-Authenticate": 'Bearer error="invalid_token"' });
-async function bearerGate(req, db) {
+async function verifiedBearer(req, db) {
   const m = /^Bearer ([A-Za-z0-9_-]{16,128})$/i.exec((req.headers.get("authorization") ?? "").trim());
   if (!m) return invalidToken();
   if (!db) return unavailable();
   try {
     const hash = await sha256hex(m[1]);
     const now = Date.now();
-    const row = await db.prepare("SELECT 1 AS x FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?").bind(hash, now).first();
-    if (!row) return invalidToken();
-    if (!await take(db, `tok:${hash}`, TOKEN_WRITES_PER_MIN, 60, now)) return oj(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
-    return null;
+    const row = await db.prepare("SELECT email FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?").bind(hash, now).first();
+    if (!row?.email) return invalidToken();
+    return { email: row.email };
   } catch (e) {
     console.error("bearer check failed:", e.message);
     return oj(503, { ok: false, error: "unavailable" });
   }
+}
+async function takeIdentityWrite(db, email2, now = Date.now()) {
+  const key = `id:${await sha256hex(email2.trim().toLowerCase())}`;
+  if (!await take(db, key, TOKEN_WRITES_PER_MIN, 60, now)) return oj(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" });
+  return null;
 }
 async function handleOAuth(req, env, url, path) {
   const wellKnown = path === "/.well-known/oauth-authorization-server" || path === "/.well-known/oauth-protected-resource";
@@ -9240,7 +9247,20 @@ async function writeGate(rl, key) {
   if (g === "unavailable") return unavailable2();
   return g === "limited" ? json(429, { ok: false, error: "rate_limited" }, { "Retry-After": "60" }) : null;
 }
-var writeAccess = (req, env, rl, key) => req.headers.get("authorization") !== null ? bearerGate(req, env.DB) : writeGate(rl, key);
+async function writeAccess(req, env, rl, key, raisedFloor) {
+  if (req.headers.get("authorization") === null) return writeGate(rl, key);
+  const ident = await verifiedBearer(req, env.DB);
+  if (ident instanceof Response) return ident;
+  const floor = await writeGate(raisedFloor ?? rl, key);
+  if (floor) return floor;
+  if (!env.DB) return unavailable2();
+  try {
+    return await takeIdentityWrite(env.DB, ident.email);
+  } catch (e) {
+    console.error("identity write cap failed:", e.message);
+    return unavailable2();
+  }
+}
 var clientIp2 = (req) => req.headers.get("cf-connecting-ip") ?? "unknown";
 var isJson = (req) => (req.headers.get("content-type") ?? "").toLowerCase().startsWith("application/json");
 async function readJson2(req) {
@@ -9282,7 +9302,7 @@ async function submit(req, env, ctx) {
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
   const ip = clientIp2(req);
-  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`, env.AUTH_SUBMIT_RL);
   if (stop) return stop;
   const body = await readJson2(req);
   if (body === void 0) return json(400, { ok: false, errors: { body: "invalid JSON" } });
@@ -9326,7 +9346,7 @@ async function subscribe(req, env, ctx) {
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: "content type must be application/json" });
-  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp2(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp2(req)}:subscribe`, env.AUTH_SUBSCRIBE_RL);
   if (stop) return stop;
   const body = await readJson2(req);
   if (!body || typeof body !== "object") return json(400, { ok: false, errors: { body: "invalid JSON" } });

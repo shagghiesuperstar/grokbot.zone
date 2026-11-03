@@ -8,7 +8,7 @@ version: 1.1.0
 
 This skill lets an agent use grokbot.zone end to end. It finds bot templates that fit an operator's goals, and it lists the operator's own Grok bots on the directory. Use the grokbot.zone MCP connector when one is attached; otherwise make plain HTTPS JSON calls. **Never open a browser or drive a screen.** Every action below is one JSON request.
 
-The directory MCP server is POST https://grokbot.zone/mcp (Streamable HTTP, JSON). Read tools need no account.
+The directory MCP server is POST https://grokbot.zone/mcp (Streamable HTTP, JSON). Read tools need no account. A bearer that raises the write ceiling starts at `https://grokbot.zone/.well-known/oauth-protected-resource` (flow in `/auth.md`).
 
 ---
 
@@ -154,10 +154,11 @@ content-type: application/json
 
 {"name":"Inbox Zero Coach","author":"@handle","link":"https://x.ai/bot/<21-char code>",
  "category":"email-inbox","description":"Sorts your inbox each morning and drafts replies.",
- "email":"operator@example.com","company_website":"","filled_ms":30000}
+ "email":"operator@example.com","company_website":""}
 ```
 - `company_website` is the spam honeypot. Send it empty or leave it out.
-- `filled_ms` is the time spent filling the form, in ms. The server requires at least 3000. Send the real elapsed time of the interview step, which is always well over 3 s. Never send a number bigger than the truth.
+- `filled_ms` is the time spent filling the form, in ms. The server requires at least 3000. Send the real elapsed time of this step. Never send a number bigger than the truth.
+- The MCP tool `grokbot_submit_bot` does not take `filled_ms` or `company_website`. The server sets them (empty honeypot, and a server-side elapsed value) because a tool call has no form clock. That exemption is the tool only — the REST route above still requires the truth.
 - `/api/submit` is an alias for the same handler.
 
 | Response | Meaning | Tell the operator |
@@ -167,7 +168,7 @@ content-type: application/json
 | 409 `already_listed` | The code is already in the directory | Show the existing page |
 | 409 `already_pending` | The same link is waiting for review | "Already in the queue." |
 | 415 | Missing `content-type: application/json` | Client bug; fix it and retry once |
-| 429 `rate_limited` | Limit is 5 submits per minute per IP | Wait 60 s |
+| 429 `rate_limited` | Anonymous: 5 submits per minute per IP. A bearer from `/.well-known/oauth-protected-resource` raises that to 30 per minute per verified email; extra tokens do not add budget, and the per-IP floor still applies. | Wait 60 s |
 | 429 text "Too many new submissions today" | Daily intake cap reached | Try tomorrow |
 | 503 or `disabled` | Submissions are switched off | Stop and tell the operator |
 
@@ -183,7 +184,7 @@ content-type: application/json
 | 200 `pending` or `already_pending` | Confirm email sent |
 | 409 `already_subscribed` | Address is already subscribed |
 | 409 `unavailable` | Address bounced earlier |
-| 429 | Limit is 10 per minute per IP |
+| 429 | Anonymous: 10 per minute per IP. A bearer raises that to 30 per minute per verified email; the per-IP floor still applies. |
 
 The operator must click the link in the confirm email. Every email has a one-click unsubscribe link. Agents never unsubscribe anyone on their behalf.
 

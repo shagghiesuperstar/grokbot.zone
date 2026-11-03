@@ -20,7 +20,7 @@ import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
 import { LINK_HEADER, agentResponse, htmlToMarkdown, isHtml, wantsMarkdown } from './agent';
 import { handleMcp } from './mcp';
-import { bearerGate, handleOAuth } from './oauth';
+import { handleOAuth, takeIdentityWrite, verifiedBearer } from './oauth';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -31,6 +31,9 @@ interface Env {
   NOTIFY_OWNER?: Mailer;
   SUBMISSIONS_RL?: Limiter;
   SUBSCRIBE_RL?: Limiter;
+  /** Per-IP floor for bearer writes. Higher than the anonymous cap so a token raises the ceiling; absent -> the anonymous limiter is the floor. */
+  AUTH_SUBMIT_RL?: Limiter;
+  AUTH_SUBSCRIBE_RL?: Limiter;
   FORM_SUBMIT_ENABLED?: string;
   EMAIL_SUBMIT_ENABLED?: string;
   SUBSCRIBE_ENABLED?: string;
@@ -147,10 +150,25 @@ async function writeGate(rl: Limiter | undefined, key: string): Promise<Response
   if (g === 'unavailable') return unavailable();
   return g === 'limited' ? json(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' }) : null;
 }
-/** A request with an Authorization header is judged on the bearer alone: invalid -> 401 (never the anonymous path), valid -> the
- *  per-token D1 cap instead of the IP limiter. No header -> the IP limiter, unchanged. */
-const writeAccess = (req: Request, env: Env, rl: Limiter | undefined, key: string): Promise<Response | null> =>
-  req.headers.get('authorization') !== null ? bearerGate(req, env.DB) : writeGate(rl, key);
+/** Anonymous writes use only the per-IP CF limiter. A bearer is never anonymous: invalid -> 401, and neither
+ *  limiter is touched. A valid bearer raises the ceiling to 30/60s keyed on the verified email (every token
+ *  for that email shares one bucket) and must still pass a per-IP floor. The floor is the AUTH_* binding when
+ *  present (production: 30/60s, above the anonymous 5) and otherwise the anonymous limiter — a token may raise
+ *  the ceiling, it may not remove the floor. */
+async function writeAccess(req: Request, env: Env, rl: Limiter | undefined, key: string, raisedFloor?: Limiter): Promise<Response | null> {
+  if (req.headers.get('authorization') === null) return writeGate(rl, key);
+  const ident = await verifiedBearer(req, env.DB);
+  if (ident instanceof Response) return ident;
+  const floor = await writeGate(raisedFloor ?? rl, key);
+  if (floor) return floor;
+  if (!env.DB) return unavailable();
+  try {
+    return await takeIdentityWrite(env.DB, ident.email);
+  } catch (e) {
+    console.error('identity write cap failed:', (e as Error).message);
+    return unavailable();
+  }
+}
 const clientIp = (req: Request) => req.headers.get('cf-connecting-ip') ?? 'unknown';
 const isJson = (req: Request) => (req.headers.get('content-type') ?? '').toLowerCase().startsWith('application/json');
 async function readJson(req: Request): Promise<unknown | undefined> {
@@ -200,7 +218,7 @@ async function submit(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
   const ip = clientIp(req);
-  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`);
+  const stop = await writeAccess(req, env, env.SUBMISSIONS_RL, `${ip}:submit`, env.AUTH_SUBMIT_RL);
   if (stop) return stop;
   const body = await readJson(req);
   if (body === undefined) return json(400, { ok: false, errors: { body: 'invalid JSON' } });
@@ -250,7 +268,7 @@ async function subscribe(req: Request, env: Env, ctx: ExecutionContext): Promise
   if (!isOn(env.SUBSCRIBE_ENABLED)) return disabled();
   if (!env.DB) return disabled();
   if (!isJson(req)) return json(415, { ok: false, error: 'content type must be application/json' });
-  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`);
+  const stop = await writeAccess(req, env, env.SUBSCRIBE_RL, `${clientIp(req)}:subscribe`, env.AUTH_SUBSCRIBE_RL);
   if (stop) return stop;
   const body = (await readJson(req)) as { email?: unknown; company_website?: unknown } | undefined;
   if (!body || typeof body !== 'object') return json(400, { ok: false, errors: { body: 'invalid JSON' } });

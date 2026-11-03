@@ -23,6 +23,8 @@ const MAILS_PER_ADDRESS_HOUR = 5;
 /** Pending-row client_id for agent-identity logins that carry no OAuth client: the magic link only proves the address. */
 const IDENTITY_CLIENT = 'agent-identity';
 const BODY_MAX = 8192;
+/** DCR documents 5 redirect_uris of 2048 characters. JSON overhead puts that just over BODY_MAX. */
+const REGISTER_BODY_MAX = 16384;
 
 // ---- small helpers ----
 
@@ -65,12 +67,12 @@ function originOf(url: URL): string | null {
   return LOOPBACK.has(url.hostname) ? url.origin : 'https://grokbot.zone';
 }
 
-async function readText(req: Request): Promise<string | null> {
+async function readText(req: Request, max = BODY_MAX): Promise<string | null> {
   const t = await req.text();
-  return t.length > BODY_MAX ? null : t;
+  return t.length > max ? null : t;
 }
-async function readJsonObject(req: Request): Promise<Record<string, unknown> | null> {
-  const t = await readText(req);
+async function readJsonObject(req: Request, max = BODY_MAX): Promise<Record<string, unknown> | null> {
+  const t = await readText(req, max);
   if (t === null) return null;
   try { const v = JSON.parse(t) as unknown; return v && typeof v === 'object' && !Array.isArray(v) ? v as Record<string, unknown> : null; } catch { return null; }
 }
@@ -152,7 +154,7 @@ opening the emailed link.
 
 ## Limits
 
-Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per token.
+Registrations: 10 per IP per hour. Sign-in emails: 5 per address per hour. Writes with a token: 30 per 60 seconds per verified email, shared by every token for that email. The per-IP limiter still applies underneath; a token raises that ceiling, it does not remove it.
 Access tokens last one hour and are stored only as SHA-256 digests.
 `;
 }
@@ -173,7 +175,7 @@ const onlyAllowed = (v: unknown, allowed: string) => v === undefined || (Array.i
 
 async function register(req: Request, env: OAuthEnv): Promise<Response> {
   if (!ctype(req).startsWith('application/json')) return oerr(415, 'invalid_client_metadata', 'content type must be application/json');
-  const b = await readJsonObject(req);
+  const b = await readJsonObject(req, REGISTER_BODY_MAX);
   if (!b) return oerr(400, 'invalid_client_metadata', 'invalid JSON body');
   const uris = b.redirect_uris;
   if (!Array.isArray(uris) || uris.length < 1 || uris.length > 5 || !uris.every(validRedirect) || new Set(uris).size !== uris.length) {
@@ -403,25 +405,32 @@ function claim(req: Request): Response {
 const invalidToken = () => oj(401, { ok: false, error: 'invalid_token' }, { 'WWW-Authenticate': 'Bearer error="invalid_token"' });
 
 /**
- * For a request that carries an Authorization header. Returns null when the bearer is valid and under its write cap,
+ * For a request that carries an Authorization header. Returns the verified email when the bearer is a live token,
  * otherwise the response that stops the request: 401 for anything that is not a live token (never falls through to the
- * anonymous path), 429 over the cap, 503 when D1 fails (fail closed).
+ * anonymous path), 503 when D1 fails (fail closed). Does not consume a rate-limit bucket — the caller applies the
+ * per-IP floor first, then takeIdentityWrite, so a bad token touches neither limiter.
  */
-export async function bearerGate(req: Request, db: D1Database | undefined): Promise<Response | null> {
+export async function verifiedBearer(req: Request, db: D1Database | undefined): Promise<{ email: string } | Response> {
   const m = /^Bearer ([A-Za-z0-9_-]{16,128})$/i.exec((req.headers.get('authorization') ?? '').trim());
   if (!m) return invalidToken();
   if (!db) return unavailable();
   try {
     const hash = await sha256hex(m[1]);
     const now = Date.now();
-    const row = await db.prepare('SELECT 1 AS x FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?').bind(hash, now).first();
-    if (!row) return invalidToken();
-    if (!(await take(db, `tok:${hash}`, TOKEN_WRITES_PER_MIN, 60, now))) return oj(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' });
-    return null;
+    const row = await db.prepare('SELECT email FROM oauth_token WHERE token_hash = ? AND revoked_at IS NULL AND expires_at > ?').bind(hash, now).first<{ email: string }>();
+    if (!row?.email) return invalidToken();
+    return { email: row.email };
   } catch (e) {
     console.error('bearer check failed:', (e as Error).message);
     return oj(503, { ok: false, error: 'unavailable' });
   }
+}
+
+/** One 30/60s write budget per verified email. Every token for that email shares it. Throws on a D1 error (caller fails closed). */
+export async function takeIdentityWrite(db: D1Database, email: string, now = Date.now()): Promise<Response | null> {
+  const key = `id:${await sha256hex(email.trim().toLowerCase())}`;
+  if (!(await take(db, key, TOKEN_WRITES_PER_MIN, 60, now))) return oj(429, { ok: false, error: 'rate_limited' }, { 'Retry-After': '60' });
+  return null;
 }
 
 // ---- router ----

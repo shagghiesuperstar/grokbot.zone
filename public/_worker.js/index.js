@@ -7758,13 +7758,45 @@ function splitId(id) {
   return best ? [best, id.slice(best.length + 1)] : id.startsWith(`${CATEGORY_NONE}-`) ? [null, id.slice(CATEGORY_NONE.length + 1)] : [null, id];
 }
 var seedCache = null;
+var seedUnreadable = (why) => {
+  console.error(`seed-codes.json unreadable: ${why}`);
+  return null;
+};
+async function seedCatalog(assets) {
+  if (seedCache && seedCache.assets === assets) return seedCache.catalog;
+  let res;
+  try {
+    res = await assets.fetch(new Request(`${SITE2}/api/v1/seed-codes.json`));
+  } catch (e) {
+    return seedUnreadable(e.message);
+  }
+  if (!res.ok) return seedUnreadable(`HTTP ${res.status}`);
+  let raw;
+  try {
+    raw = await res.json();
+  } catch (e) {
+    return seedUnreadable(e.message);
+  }
+  if (!Array.isArray(raw.codes) || raw.codes.some((c) => typeof c !== "string")) return seedUnreadable("codes is not a string array");
+  const codes = raw.codes;
+  const map = new Map(codes.map((c) => [c.toLowerCase(), c]));
+  if (raw.cats == null) {
+    seedCache = { assets, catalog: { map, cats: null } };
+    return seedCache.catalog;
+  }
+  if (!Array.isArray(raw.cats) || raw.cats.length !== codes.length) return seedUnreadable("cats is not aligned with codes");
+  const cats = /* @__PURE__ */ new Map();
+  for (let i = 0; i < codes.length; i++) {
+    const row = raw.cats[i];
+    if (!Array.isArray(row) || row.some((s) => typeof s !== "string")) return seedUnreadable("cats row is not a string array");
+    cats.set(codes[i].toLowerCase(), [...new Set(row)]);
+  }
+  seedCache = { assets, catalog: { map, cats } };
+  return seedCache.catalog;
+}
 async function seedMap(assets) {
-  if (seedCache && seedCache.assets === assets) return seedCache.map;
-  const res = await assets.fetch(new Request(`${SITE2}/api/v1/seed-codes.json`));
-  if (!res.ok) return null;
-  const codes = (await res.json()).codes;
-  seedCache = { assets, map: new Map(codes.map((c) => [c.toLowerCase(), c])) };
-  return seedCache.map;
+  const catalog = await seedCatalog(assets);
+  return catalog ? catalog.map : null;
 }
 async function mergeState(db, assets) {
   const st = await liveState(db);
@@ -7772,7 +7804,8 @@ async function mergeState(db, assets) {
   let seed = null;
   try {
     seed = await seedMap(assets);
-  } catch {
+  } catch (e) {
+    console.error("seed-codes.json unreadable", e.message);
     seed = null;
   }
   const extras = seed ? st.added.filter((b) => !st.dead.has(b.code.toLowerCase()) && !seed.has(b.code.toLowerCase())).sort((a, b) => a.first_seen < b.first_seen ? 1 : a.first_seen > b.first_seen ? -1 : a.code < b.code ? -1 : 1) : [];
@@ -7867,17 +7900,58 @@ function sitemapStatic(body, m) {
   }).join("</url>");
 }
 function deadSeedCount(dead, seed) {
-  if (!seed || !dead.size) return 0;
+  if (!dead.size) return 0;
+  if (!seed) {
+    console.error("seed-codes.json unreadable; refusing to report 0 dead shipped bots");
+    throw new Error("seed-codes.json unreadable");
+  }
   let n = 0;
   for (const c of dead) if (seed.has(c.toLowerCase())) n++;
   return n;
 }
+function categoryDrops(dead, seedCats) {
+  const drop = /* @__PURE__ */ new Map();
+  for (const code of dead) {
+    const listed = seedCats.get(code.toLowerCase());
+    if (!listed) continue;
+    for (const slug of listed) drop.set(slug, (drop.get(slug) ?? 0) + 1);
+  }
+  return drop;
+}
 var withNl = (body, json2) => json2 + (body.endsWith("\n") ? "\n" : "");
-function totalWithoutDead(body, removed) {
-  if (!removed) return body;
+var dropCounts = (rows, drop) => {
+  let changed = false;
+  for (const row of rows) {
+    const n = row.slug ? drop.get(row.slug) : 0;
+    if (n && typeof row.count === "number") {
+      row.count -= n;
+      changed = true;
+    }
+  }
+  return changed;
+};
+function indexWithoutDead(body, dead, seed, seedCats) {
+  const removed = deadSeedCount(dead, seed);
   const j = JSON.parse(body);
-  if (typeof j.totalBots !== "number") return body;
-  return withNl(body, JSON.stringify({ ...j, totalBots: j.totalBots - removed }));
+  let changed = false;
+  if (typeof j.totalBots === "number" && removed) {
+    j.totalBots -= removed;
+    changed = true;
+  }
+  if (Array.isArray(j.categories)) {
+    if (!seedCats) {
+      console.error("seed-codes.json unreadable: no category list; refusing to report counts that include dead bots");
+      throw new Error("seed-codes.json unreadable");
+    }
+    if (dropCounts(j.categories, categoryDrops(dead, seedCats))) changed = true;
+  }
+  return changed ? withNl(body, JSON.stringify(j)) : body;
+}
+function categoriesWithoutDead(body, dead, seedCats) {
+  const j = JSON.parse(body);
+  if (!Array.isArray(j)) return body;
+  if (!dropCounts(j, categoryDrops(dead, seedCats))) return body;
+  return withNl(body, JSON.stringify(j));
 }
 function codesWithoutDead(body, dead) {
   if (!dead.size) return body;
@@ -8413,27 +8487,36 @@ async function mergedAsset(request, env, path) {
   const apiCatFile = /^\/api\/v1\/categories\/([a-z0-9-]+)\.json$/.exec(path);
   const searchSlug = searchFile && CATEGORY_SLUGS.has(searchFile[1]) ? searchFile[1] : null;
   const apiCatSlug = apiCatFile && CATEGORY_SLUGS.has(apiCatFile[1]) ? apiCatFile[1] : null;
-  const kind = path === "/search/live.json" ? "search" : path === "/search/index.json" || path === "/api/v1/index.json" ? "totals" : path === "/api/v1/codes.json" ? "codes" : searchSlug || apiCatSlug ? "search-cat" : cat && CATEGORY_SLUGS.has(cat) ? "category" : ["/feed.json", "/feed.xml", "/sitemap-index.xml", "/sitemap-0.xml", "/sitemap-live.xml"].includes(path) ? path : null;
+  const kind = path === "/search/live.json" ? "search" : path === "/api/v1/categories.json" ? "cat-index" : path === "/search/index.json" || path === "/api/v1/index.json" ? "totals" : path === "/api/v1/codes.json" ? "codes" : searchSlug || apiCatSlug ? "search-cat" : cat && CATEGORY_SLUGS.has(cat) ? "category" : ["/feed.json", "/feed.xml", "/sitemap-index.xml", "/sitemap-0.xml", "/sitemap-live.xml"].includes(path) ? path : null;
   if (!kind) return null;
   const m = await mergeState(env.DB, env.ASSETS);
   if (!m || !m.extras.length && !m.dead.size) return kind === "/sitemap-live.xml" ? notFoundPage(request, env) : null;
   if (kind === "search") return searchLive(m);
-  if (kind === "totals" || kind === "codes" || kind === "search-cat") {
+  if (kind === "totals" || kind === "cat-index" || kind === "codes" || kind === "search-cat") {
     if (!m.dead.size) return null;
     const res2 = await env.ASSETS.fetch(unconditional(request));
     if (res2.status !== 200) return res2;
     const body2 = await res2.text();
     let out = body2;
-    if (kind === "totals") {
-      let seed = null;
+    if (kind === "totals" || kind === "cat-index") {
+      let catalog = null;
       try {
-        seed = await seedMap(env.ASSETS);
-      } catch {
-        seed = null;
+        catalog = await seedCatalog(env.ASSETS);
+      } catch (e) {
+        console.error("seed-codes.json unreadable", e.message);
       }
-      const n = deadSeedCount(m.dead, seed);
-      if (!n) return new Response(body2, { status: 200, headers: res2.headers });
-      out = totalWithoutDead(body2, n);
+      const needsCats = kind === "cat-index" || path === "/search/index.json";
+      if (!catalog || needsCats && !catalog.cats) {
+        console.error("seed-codes.json unreadable; refusing to report counts that include dead bots");
+        return json(503, { ok: false, error: "seed_unreadable" });
+      }
+      try {
+        out = kind === "cat-index" ? categoriesWithoutDead(body2, m.dead, catalog.cats) : indexWithoutDead(body2, m.dead, catalog.map, catalog.cats);
+      } catch (e) {
+        console.error("seed-codes.json unreadable", e.message);
+        return json(503, { ok: false, error: "seed_unreadable" });
+      }
+      if (out === body2) return new Response(body2, { status: 200, headers: res2.headers });
     } else if (kind === "codes") {
       out = codesWithoutDead(body2, m.dead);
       if (out === body2) return new Response(body2, { status: 200, headers: res2.headers });

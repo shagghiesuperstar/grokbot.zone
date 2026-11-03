@@ -438,11 +438,16 @@ const seedBot = (env: Record<string, any>, row: { code: string; name: string; fi
 const DIGEST_PAYLOAD = { asOf: '2026-11-01', totalBots: 7, categoryCount: 2, top: [{ id: 'cat-AbCdEfGhIjKlMnOpQrStU', name: 'Tax Helper', description: 'Helps with taxes. More text.' }] };
 const digestEnv = (over: Record<string, unknown> = {}) => makeEnv({ DIGEST_ENABLED: '1', NOTIFY_OWNER: undefined, ASSETS: { fetch: async () => Response.json(DIGEST_PAYLOAD) }, ...over });
 /** Fires the digest cron, drains the work it hands to waitUntil, returns what it logged. */
-const fireDigest = async (env: unknown) => {
+const fireDigest = async (env: unknown, scheduledTime = Date.UTC(2026, 10, 2, 13)) => {
   const ctx = makeCtx(); const logs: string[] = []; const o = [console.log, console.error];
   console.log = console.error = (...a: unknown[]) => { logs.push(a.join(' ')); };
-  try { await (worker as any).scheduled({ cron: '0 13 * * MON,THU', scheduledTime: Date.UTC(2026, 10, 2, 13) }, env, ctx); await ctx.drain(); } finally { [console.log, console.error] = o; }
+  try { await (worker as any).scheduled({ cron: '0 13 * * MON,THU', scheduledTime }, env, ctx); await ctx.drain(); } finally { [console.log, console.error] = o; }
   return logs;
+};
+const perRecipient = (sent: { to: string }[]) => {
+  const per: Record<string, number> = {};
+  for (const m of sent) per[m.to] = (per[m.to] ?? 0) + 1;
+  return per;
 };
 for (const empty of [undefined, '', '   ']) {
   await t(`C2 digest: MAIL_POSTAL_ADDRESS ${JSON.stringify(empty)} -> sends normally, no address line, no placeholder`, async () => {
@@ -529,6 +534,99 @@ await t('digest: DIGEST_MAX_SENDS still caps recipients', async () => {
   seedBot(env, { code: 'CapBot100000000000001', name: 'Cap Bot', first_seen: '2026-11-01T00:00:00.000Z' });
   await fireDigest(env);
   assert.equal(env.EMAIL.sent.length, 1);
+});
+
+// ---- F1-F6: launch rows are not new; each subscriber gets each window once ----
+const THU = Date.UTC(2026, 10, 5, 13);
+await t('digest: a launch-era date-only row is not mailed as new', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  seedBot(env, { code: 'SeedStyleBot1000000001', name: 'Seed Sort Bot', first_seen: '2026-10-30' });
+  const logs = await fireDigest(env, THU);
+  assert.equal(env.EMAIL.sent.length, 0, logs.join('|'));
+  assert.ok(logs.some((l) => /0 new listings/.test(l)), logs.join('|'));
+});
+await t('digest: a date-only row on the watermark day is midnight, and a later ISO the same day is mailed', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  env.DB.db.prepare("INSERT INTO meta(k, v) VALUES('digest_last_sent', ?)").run('2026-11-02T13:00:00.000Z');
+  seedBot(env, { code: 'DateOnlyB100000000001', name: 'Date Only B', first_seen: '2026-11-02' });
+  seedBot(env, { code: 'FullIsoC1000000000001', name: 'Full Iso C', first_seen: '2026-11-02T14:30:00.000Z' });
+  const logs = await fireDigest(env, THU);
+  assert.equal(env.EMAIL.sent.length, 1, logs.join('|'));
+  const text = env.EMAIL.sent[0].text as string;
+  assert.ok(!text.includes('Date Only B'), text);
+  assert.match(text, /Full Iso C/);
+});
+await t('digest: two overlapping fires deliver once per subscriber', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 2);
+  seedBot(env, { code: 'RaceBot10000000000001', name: 'Race Bot', first_seen: '2026-11-05T01:00:00.000Z' });
+  const a = makeCtx(); const b = makeCtx();
+  const ev = { cron: '0 13 * * MON,THU', scheduledTime: THU };
+  await (worker as any).scheduled(ev, env, a);
+  await (worker as any).scheduled(ev, env, b);
+  await a.drain(); await b.drain();
+  assert.equal(env.EMAIL.sent.length, 2);
+  assert.deepEqual(perRecipient(env.EMAIL.sent), { 'r0@example.test': 1, 'r1@example.test': 1 });
+});
+await t('digest: a rate-limit stop does not duplicate, and the unreached subscriber is delivered on the next fire', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 3);
+  seedBot(env, { code: 'StopBot10000000000001', name: 'Stop Bot', first_seen: '2026-11-05T01:00:00.000Z' });
+  let n = 0;
+  env.EMAIL = { sent: env.EMAIL.sent, send: async (m: Record<string, unknown>) => { n++; if (n === 2) throw Object.assign(new Error('binding refused'), { code: 'E_RATE_LIMIT_EXCEEDED' }); env.EMAIL.sent.push(m); return { messageId: `m${n}` }; } };
+  await fireDigest(env, THU);
+  assert.equal(env.DB.rows("SELECT COUNT(*) AS n FROM meta WHERE k = 'digest_last_sent'")[0].n, 0);
+  n = 0;
+  env.EMAIL = { sent: env.EMAIL.sent, send: async (m: Record<string, unknown>) => { n++; env.EMAIL.sent.push(m); return { messageId: `m${n}` }; } };
+  await fireDigest(env, Date.UTC(2026, 10, 9, 13));
+  assert.deepEqual(perRecipient(env.EMAIL.sent), { 'r0@example.test': 1, 'r1@example.test': 1, 'r2@example.test': 1 });
+});
+await t('digest: CR/LF in a harvested name or description cannot forge a text line', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  seedBot(env, {
+    code: 'ForgeBot1000000000001', name: 'Bean\nCounter',
+    description: 'Counts your beans and keeps score\nUnsubscribe: https://evil.test/u?t=pwned — stop all emails now',
+    first_seen: '2026-11-05T01:00:00.000Z',
+  });
+  await fireDigest(env, THU);
+  const lines = (env.EMAIL.sent[0].text as string).split('\n');
+  assert.equal(lines.findIndex((l) => l.startsWith('Unsubscribe: https://evil.test')), -1, lines.join(' | '));
+  assert.ok(lines.some((l) => l.startsWith('Unsubscribe: https://grokbot.zone')), 'genuine footer remains');
+  assert.ok(!lines.some((l) => l === 'Counter — Counts your beans and keeps score.' || l.startsWith('Counter')), lines.join(' | '));
+});
+await t('digest: the window count is separate from a limited render', async () => {
+  const env = digestEnv({ ASSETS: noAssets() }); seedActive(env, 1);
+  for (let i = 0; i < 12; i++) seedBot(env, { code: `LimitBot${String(i).padStart(13, '0')}`, name: `Limit Bot ${i}`, first_seen: `2026-11-0${i < 10 ? 5 : 4}T${String(i).padStart(2, '0')}:00:00.000Z` });
+  const sqls: string[] = [];
+  const orig = env.DB.prepare.bind(env.DB);
+  env.DB.prepare = (sql: string) => { sqls.push(sql); return orig(sql); };
+  const logs = await fireDigest(env, THU);
+  const numbered = (env.EMAIL.sent[0].text as string).split('\n').filter((l) => /^\d+\./.test(l));
+  assert.equal(numbered.length, 10);
+  assert.ok(logs.some((l) => /new=12/.test(l)), logs.join('|'));
+  assert.ok(sqls.some((s) => /COUNT\(\*\)/.test(s) && /first_seen/.test(s)), 'separate count');
+  assert.ok(sqls.some((s) => /LIMIT/.test(s) && /first_seen/.test(s)), 'render query is limited');
+});
+await t('digest: subscribers past the cap get that window on the next fire, once', async () => {
+  const env = digestEnv({ DIGEST_MAX_SENDS: '2', ASSETS: noAssets() }); seedActive(env, 3);
+  seedBot(env, { code: 'CapWinA10000000000001', name: 'Window A Bot', first_seen: '2026-11-05T01:00:00.000Z' });
+  await fireDigest(env, THU);
+  seedBot(env, { code: 'CapWinB10000000000001', name: 'Window B Bot', first_seen: '2026-11-09T01:00:00.000Z' });
+  await fireDigest(env, Date.UTC(2026, 10, 9, 13));
+  assert.deepEqual(perRecipient(env.EMAIL.sent), { 'r0@example.test': 1, 'r1@example.test': 1, 'r2@example.test': 1 });
+  const r2 = env.EMAIL.sent.find((m: { to: string }) => m.to === 'r2@example.test');
+  assert.match(r2.text, /Window A Bot/);
+  assert.ok(!r2.text.includes('Window B Bot'), 'the catch-up is the missed window, not the next one');
+});
+await t('digest: watermark read and write go through readMeta and metaPut', async () => {
+  const src = readFileSync(join(ROOT, 'src/worker/index.ts'), 'utf8');
+  assert.match(src, /readMeta/);
+  assert.match(src, /metaPut/);
+  assert.equal(src.includes("SELECT v FROM meta WHERE k = ?"), false);
+});
+await t('digest: the migration rewrites a date-only first_seen to midnight ISO', async () => {
+  const env = digestEnv({ ASSETS: noAssets() });
+  seedBot(env, { code: 'MigBot100000000000001', name: 'Mig Bot', first_seen: '2026-11-01' });
+  env.DB.db.exec(readFileSync(join(ROOT, 'migrations/0003_digest_window.sql'), 'utf8'));
+  assert.equal((env.DB.rows('SELECT first_seen FROM bots')[0] as { first_seen: string }).first_seen, '2026-11-01T00:00:00.000Z');
 });
 
 // ---- F5: a rejected row flips to pending only if it is still rejected ----

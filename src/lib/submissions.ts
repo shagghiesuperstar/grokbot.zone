@@ -183,12 +183,13 @@ const firstSentence = (s: string) => (/^.*?[.!?](?=\s|$)/.exec(s)?.[0] ?? s).sli
 export function digestMail(p: DigestPayload, weekday: 'Monday' | 'Thursday', unsubToken: string, postal = '') {
   const addr = postalLine(postal);
   const unsub = `${SITE}/subscribe/unsubscribe?t=${unsubToken}`;
-  const lines = p.top.slice(0, 10).map((b, i) => `${i + 1}. ${b.name} — ${firstSentence(b.description)} → ${SITE}/bots/${b.id}/`);
+  const top = p.top.slice(0, 10).map((b) => ({ ...b, name: singleLine(b.name), description: singleLine(b.description) }));
+  const lines = top.map((b, i) => `${i + 1}. ${b.name} — ${firstSentence(b.description)} → ${SITE}/bots/${b.id}/`);
   const head = `${p.asOf} — ${p.totalBots} bots in ${p.categoryCount} categories.`;
   return {
     subject: `GrokBot Zone: ${p.totalBots} bots tracked + the ${weekday} top 10`,
     text: `${head}\n${lines.join('\n')}\n\n-- \n${addr ? `GrokBot Zone, ${addr}\n` : ''}You get this because you confirmed a subscription.\nUnsubscribe: ${unsub}`,
-    html: `<p>${esc(head)}</p><table>${p.top.slice(0, 10).map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ''}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
+    html: `<p>${esc(head)}</p><table>${top.map((b, i) => `<tr><td>${i + 1}.</td><td><a href="${SITE}/bots/${esc(b.id)}/">${esc(b.name)}</a> — ${esc(firstSentence(b.description))}</td></tr>`).join('')}</table><hr><p style="color:#666;font-size:12px">${addr ? `GrokBot Zone, ${esc(addr)}<br>` : ''}You get this because you confirmed a subscription.<br><a href="${unsub}">Unsubscribe</a></p>`,
     headers: { 'List-Unsubscribe': `<${unsub}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
   };
 }

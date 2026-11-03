@@ -17,7 +17,7 @@ import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/s
 import { go, isDead, record } from './dp/telemetry';
 import { categoryPage, uncategorizedPage, feedJson, feedXml, mergeState, searchLive, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
-import { botId } from './dp/util';
+import { botId, metaPut, readMeta } from './dp/util';
 
 interface Mailer { send(m: Record<string, unknown>): Promise<{ messageId?: string }> }
 interface Limiter { limit(o: { key: string }): Promise<{ success: boolean }> }
@@ -398,42 +398,76 @@ async function email(message: ForwardableEmailMessage, env: Env, _ctx: Execution
 
 const DIGEST_WINDOW_MS = 7 * 86_400_000;
 const DIGEST_SENT_KEY = 'digest_last_sent';
+const DIGEST_RENDER_LIMIT = 10;
+/** Launch catalog instant. seed-d1 writes this; a date-only 2026-10-30 normalizes to it. Never a new listing. */
+const LAUNCH_FIRST_SEEN = '2026-10-30T00:00:00.000Z';
+const SEEN_ISO = `CASE WHEN length(first_seen) = 10 AND first_seen GLOB '????-??-??' THEN first_seen || 'T00:00:00.000Z' ELSE first_seen END`;
 
 async function digest(controller: ScheduledController, env: Env): Promise<void> {
   if (!isOn(env.DIGEST_ENABLED)) { console.log('digest: dark (DIGEST_ENABLED != 1), 0 sends'); return; }
   if (!env.DB) { console.log('digest: no DB binding, 0 sends'); return; }
   const postal = postalLine(env.MAIL_POSTAL_ADDRESS);
-  const scheduled = controller.scheduledTime;
-  const prev = await env.DB.prepare('SELECT v FROM meta WHERE k = ?').bind(DIGEST_SENT_KEY).first<{ v: string }>();
-  const since = prev?.v ?? new Date(scheduled - DIGEST_WINDOW_MS).toISOString();
+  const scheduledIso = new Date(controller.scheduledTime).toISOString();
+  const meta = await readMeta(env.DB, [DIGEST_SENT_KEY]);
+  // An unfinished window (cap or a rate-limit stop) keeps its id, so the next fire delivers it instead of opening a new one.
+  const open = await env.DB.prepare(
+    `SELECT window_id, window_end FROM digest_delivery d
+      WHERE EXISTS (
+        SELECT 1 FROM subscribers s WHERE s.status = 'active'
+          AND NOT EXISTS (SELECT 1 FROM digest_delivery x WHERE x.subscriber_id = s.id AND x.window_id = d.window_id)
+      )
+      ORDER BY window_id ASC LIMIT 1`,
+  ).first<{ window_id: string; window_end: string }>();
+  const since = open?.window_id ?? meta[DIGEST_SENT_KEY] ?? new Date(controller.scheduledTime - DIGEST_WINDOW_MS).toISOString();
+  const windowEnd = open?.window_end ?? scheduledIso;
+  const where = `status = 'live' AND source != 'seed' AND ${SEEN_ISO} > ? AND ${SEEN_ISO} <= ? AND ${SEEN_ISO} != ?`;
+  const bounds = [since, windowEnd, LAUNCH_FIRST_SEEN];
+  const counted = await env.DB.prepare(`SELECT COUNT(*) AS n FROM bots WHERE ${where}`).bind(...bounds).first<{ n: number }>();
+  const newCount = Number(counted?.n ?? 0);
+  if (!newCount) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
   const { results: fresh } = await env.DB.prepare(
-    "SELECT code, name, description, category FROM bots WHERE status = 'live' AND first_seen > ? ORDER BY first_seen DESC, code_lc ASC",
-  ).bind(since).all<{ code: string; name: string; description: string; category: string | null }>();
-  if (!fresh.length) { console.log(`digest: 0 new listings since ${since}, 0 sends`); return; }
+    `SELECT code, name, description, category FROM bots WHERE ${where} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
+  ).bind(...bounds, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
   const totals = await env.DB.prepare(
     "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
   ).first<{ total: number; cats: number }>();
   const payload: DigestPayload = {
-    asOf: new Date(scheduled).toISOString().slice(0, 10),
-    totalBots: Number(totals?.total ?? fresh.length),
+    asOf: scheduledIso.slice(0, 10),
+    totalBots: Number(totals?.total ?? newCount),
     categoryCount: Number(totals?.cats ?? 0),
     top: fresh.map((b) => ({ id: botId(b.category, b.code), name: stripEmails(b.name), description: stripEmails(b.description) })),
   };
   const cap = Number(env.DIGEST_MAX_SENDS ?? '100');
-  const { results } = await env.DB.prepare("SELECT email, unsub_token FROM subscribers WHERE status='active' ORDER BY id LIMIT ?").bind(digestRecipientCount(1e9, cap)).all<{ email: string; unsub_token: string }>();
-  const weekday = new Date(scheduled).getUTCDay() === 4 ? 'Thursday' : 'Monday';
+  const { results } = await env.DB.prepare(
+    `SELECT id, email, unsub_token FROM subscribers WHERE status = 'active'
+       AND NOT EXISTS (SELECT 1 FROM digest_delivery WHERE subscriber_id = subscribers.id AND window_id = ?)
+      ORDER BY id LIMIT ?`,
+  ).bind(since, digestRecipientCount(1e9, cap)).all<{ id: number; email: string; unsub_token: string }>();
+  const weekday = new Date(controller.scheduledTime).getUTCDay() === 4 ? 'Thursday' : 'Monday';
   let sent = 0;
   let stopped = false;
   for (const s of results) {
+    const claim = await env.DB.prepare(
+      'INSERT INTO digest_delivery (subscriber_id, window_id, window_end) VALUES (?, ?, ?) ON CONFLICT(subscriber_id, window_id) DO NOTHING',
+    ).bind(s.id, since, windowEnd).run();
+    if (Number(claim.meta.changes) === 0) continue;
     const m = digestMail(payload, weekday, s.unsub_token, postal);
     const r = await sendMail(env, env.EMAIL, 'digest', { to: s.email, from: UPDATES_FROM, subject: m.subject, text: m.text, html: m.html, headers: m.headers });
-    if (r.ok) sent++;
-    if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) { console.error(`digest: stopped on ${r.code}`); stopped = true; break; }
+    if (!r.ok) {
+      await env.DB.prepare('DELETE FROM digest_delivery WHERE subscriber_id = ? AND window_id = ?').bind(s.id, since).run();
+      if (r.code === 'E_RATE_LIMIT_EXCEEDED' || r.code?.startsWith('E_QUOTA')) { console.error(`digest: stopped on ${r.code}`); stopped = true; break; }
+      continue;
+    }
+    sent++;
   }
-  if (sent > 0 && !stopped) {
-    await env.DB.prepare('INSERT INTO meta(k, v) VALUES(?, ?) ON CONFLICT(k) DO UPDATE SET v = excluded.v').bind(DIGEST_SENT_KEY, new Date(scheduled).toISOString()).run();
+  if (!stopped) {
+    const pending = await env.DB.prepare(
+      `SELECT COUNT(*) AS n FROM subscribers s WHERE s.status = 'active'
+         AND NOT EXISTS (SELECT 1 FROM digest_delivery d WHERE d.subscriber_id = s.id AND d.window_id = ?)`,
+    ).bind(since).first<{ n: number }>();
+    if (Number(pending?.n ?? 1) === 0) await metaPut(env.DB, DIGEST_SENT_KEY, windowEnd).run();
   }
-  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${fresh.length} since=${since}`);
+  console.log(`digest: ${weekday} sent=${sent} active_considered=${results.length} cap=${cap} new=${newCount} since=${since}`);
 }
 
 // ---- entry ----

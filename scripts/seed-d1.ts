@@ -11,7 +11,8 @@ const ROOT = resolve(import.meta.dirname, '..');
 const mode = process.argv[2] ?? '--dry';
 if (!['--remote', '--local', '--dry'].includes(mode)) { console.error('usage: seed-d1.ts --remote | --local | --dry'); process.exit(2); }
 const FIRST_SEEN = '2026-10-30';
-const bots = JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'utf8')) as { code: string; name: string; author: string; description: string; cat: string; cats: string[] }[];
+const allBots = JSON.parse(readFileSync(join(ROOT, 'src/data/bots.json'), 'utf8')) as { code: string; name: string; author: string; description: string; cat: string; cats: string[] }[];
+const bots = allBots.filter((b) => /^[A-Za-z0-9_-]{21}$/.test(b.code));
 
 const q = (s: string | null) => (s === null ? 'NULL' : `'${s.replace(/\0/g, '').replace(/'/g, "''")}'`);
 const rowSql = (b: (typeof bots)[number]) =>

@@ -73,7 +73,7 @@ for (const c of index.categories) {
     const r = b as Record<string, string>;
     if (r.id !== `${c.slug}-${r.code}`) fail(file, where, `id must be "${c.slug}-<code>"`);
     if (r.url !== `https://x.ai/bot/${r.code}`) fail(file, where, 'url must be https://x.ai/bot/<code>');
-    if (!/^[A-Za-z0-9_-]+$/.test(r.code)) fail(file, where, 'code has unexpected characters');
+    if (!/^[A-Za-z0-9_-]{21}$/.test(r.code)) fail(file, where, 'code must be exactly 21 characters of [A-Za-z0-9_-]');
     if (seenId.has(r.id)) fail(file, where, 'duplicate id');
     seenId.add(r.id);
     rawBots.push({ id: r.id, slug: r.id, code: r.code, name: r.name, author: r.author, description: r.description, cat: c.slug, cats: [c.slug] });

@@ -40,19 +40,17 @@ simple = { limit = 10, period = 60 }
 crons = ["0 13 * * MON,THU", "*/10 * * * *"]
 
 # Dark-ship switches: "1" turns a feature on. Submissions (form + email) are on since 2026-11-01;
-# subscriptions and the digest stay "0" until the first send is approved.
+# subscriptions and the digest are on since 2026-11-02.
 [vars]
 FORM_SUBMIT_ENABLED  = "1"
 EMAIL_SUBMIT_ENABLED = "1"
-SUBSCRIBE_ENABLED    = "0"
-DIGEST_ENABLED       = "0"
+SUBSCRIBE_ENABLED    = "1"
+DIGEST_ENABLED       = "1"
 OWNER_ADDRESS        = ""
 # Acknowledgment mails (email + form) per UTC day across all senders; over budget the submission is stored and nothing is sent.
 ACK_DAILY_BUDGET     = "200"
 MIN_FILL_MS          = "3000"
 DIGEST_MAX_SENDS     = "100"
-# MAIL_POSTAL_ADDRESS (footer postal address of the update emails) is deliberately NOT here: the repo is public.
-# The operator sets it as a Worker secret (`wrangler secret put MAIL_POSTAL_ADDRESS`, which survives deploys).
-# Optional: while it is empty the footer address line is simply omitted.
+# MAIL_POSTAL_ADDRESS is intentionally unset (operator decision): the footer address line is omitted.
 # First-party telemetry starts counting here: the UTC date of the production deploy (spec 07 D20, O4).
 TELEMETRY_START      = "2026-11-01"

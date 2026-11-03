@@ -9,6 +9,7 @@ import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 import { build } from 'esbuild';
+import { ackAuthorized } from '../src/lib/submissions.ts';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const tmp = mkdtempSync(join(tmpdir(), 'gz-test-worker-'));
@@ -341,6 +342,7 @@ await t('F4 email: a throwing or missing limiter fails closed', async () => {
 
 // ---- A0 (AR-08 F1): ack mail must go only to an address proven by SPF + header From ----
 const ackCount = (env: Record<string, any>, m: { replies: unknown[] }) => m.replies.length + env.EMAIL.sent.filter((x: any) => x.to !== undefined).length;
+const CF_DOC = 'mx.cloudflare.net; spf=pass; dkim=pass; dmarc=pass';
 const A0_CASES: [string, Parameters<typeof fakeMail>[0], boolean][] = [
   ['A: dmarc=none', { auth: 'mx.cloudflare.net; dmarc=none' }, false],
   ['A: dmarc=temperror (no spf result)', { auth: 'mx.cloudflare.net; dkim=temperror; dmarc=temperror' }, false],
@@ -354,6 +356,24 @@ const A0_CASES: [string, Parameters<typeof fakeMail>[0], boolean][] = [
   ['B: dkim-aligned dmarc=pass, spf not pass, other MAIL FROM', { from: 'victim@example.test', headerFrom: 'attacker@evil.test', auth: 'mx.cloudflare.net; dkim=pass header.d=evil.test; spf=fail smtp.mailfrom=victim@example.test; dmarc=pass header.from=evil.test' }, false],
   ['B: spf=pass but smtp.mailfrom differs from the envelope', { from: 'victim@example.test', headerFrom: 'victim@example.test', auth: 'mx.cloudflare.net; spf=pass smtp.mailfrom=attacker@evil.test; dmarc=pass' }, false],
   ['B: header From differs from the envelope', { from: 'victim@example.test', headerFrom: 'Attacker <attacker@evil.test>', auth: authPass('victim@example.test') }, false],
+  ['A1: documented Cloudflare header (no smtp.mailfrom), spf+dkim+dmarc pass, From = envelope', { auth: CF_DOC }, true],
+  ['A1: documented header, display-name From of the envelope address', { headerFrom: 'Author <author@example.test>', auth: CF_DOC }, true],
+  ['A1: spf missing', { auth: 'mx.cloudflare.net; dkim=pass; dmarc=pass' }, false],
+  ['A1: spf=fail', { auth: 'mx.cloudflare.net; spf=fail; dkim=pass; dmarc=pass' }, false],
+  ['A1: dkim missing', { auth: 'mx.cloudflare.net; spf=pass; dmarc=pass' }, false],
+  ['A1: dkim=fail', { auth: 'mx.cloudflare.net; spf=pass; dkim=fail; dmarc=pass' }, false],
+  ['A1: dmarc missing', { auth: 'mx.cloudflare.net; spf=pass; dkim=pass' }, false],
+  ['A1: dmarc=none (dmarc=fail is rejected before the gate, at worker/index.ts:315)', { auth: 'mx.cloudflare.net; spf=pass; dkim=pass; dmarc=none' }, false],
+  ['A1: all three pass but header From differs from the envelope', { headerFrom: 'attacker@evil.test', auth: CF_DOC }, false],
+  ['A1: all three pass but header From lists two addresses', { headerFrom: 'author@example.test, attacker@evil.test', auth: CF_DOC }, false],
+  ['A1: all three pass but the header is not from mx.cloudflare.net', { auth: 'evil.example; spf=pass; dkim=pass; dmarc=pass' }, false],
+  ['A1: first value lacks dkim, a sender-supplied second value supplies every pass', { auth: 'mx.cloudflare.net; spf=pass; dmarc=pass, mx.cloudflare.net; spf=pass; dkim=pass; dmarc=pass' }, false],
+  ['A1: lookalike authenticator mx.cloudflare.net.evil.example', { auth: 'mx.cloudflare.net.evil.example; spf=pass; dkim=pass; dmarc=pass' }, false],
+  ['A1: lookalike authenticator with a version, mx.cloudflare.net.evil.example 1', { auth: 'mx.cloudflare.net.evil.example 1; spf=pass; dkim=pass; dmarc=pass' }, false],
+  ['A1: genuine authenticator with an RFC 8601 version, mx.cloudflare.net 1', { auth: 'mx.cloudflare.net 1; spf=pass; dkim=pass; dmarc=pass' }, true],
+  ['A1: spf+dkim+dmarc pass but smtp.mailfrom names a different address than the envelope', { auth: 'mx.cloudflare.net; spf=pass smtp.mailfrom=attacker@evil.test; dkim=pass; dmarc=pass' }, false],
+  ['A1: spf+dkim+dmarc pass and smtp.mailfrom equals the envelope', { auth: 'mx.cloudflare.net; spf=pass smtp.mailfrom=author@example.test; dkim=pass; dmarc=pass' }, true],
+  ['A1: dkim=pass written only inside a comment', { auth: 'mx.cloudflare.net; spf=pass; dkim=none (dkim=pass); dmarc=pass' }, false],
   ['full pass (envelope = smtp.mailfrom = header From, any letter case)', { from: 'Author@Example.test', headerFrom: 'Some Name <author@example.TEST>', auth: authPass('AUTHOR@example.test') }, true],
 ];
 for (const [name, over, sends] of A0_CASES) {
@@ -368,6 +388,12 @@ for (const [name, over, sends] of A0_CASES) {
     }
   });
 }
+
+await t('A1 gate: an empty or blank envelope sender is refused even with every pass and a matching From', async () => {
+  for (const env of ['', '   ']) assert.equal(ackAuthorized(CF_DOC, env, env), false);
+  assert.equal(ackAuthorized(CF_DOC, 'author@example.test', 'author@example.test'), true);
+  assert.equal(ackAuthorized(null, 'author@example.test', 'author@example.test'), false);
+});
 
 // ---- A2: one global daily ack budget, shared by email acks and form acks ----
 const ackLog = (env: Record<string, any>) => sendLog(env).filter((r) => r.kind === 'ack');

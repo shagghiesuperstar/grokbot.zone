@@ -3,7 +3,7 @@
 A static, searchable directory of public Grok bot listings, live at https://grokbot.zone.
 
 <!-- counts:start -->
-- 7,292 distinct bots published from a raw corpus snapshot of 7,414 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
+- 7,676 distinct bots published from a raw corpus snapshot of 7,412 listings, in 26 function categories, as of 2026-10-28 (see `data/corpus/index.json`).
 <!-- counts:end -->
 - Search, categories, Trending, Recent, Related, a page for every bot, FAQ, submit page.
 - Trending and Recent come from committed, dated signal files in `data/signals/`. There is no live popularity feed, and the site says so.
@@ -40,9 +40,9 @@ listed in both, so the category listings add up to more than the number of bots.
 Two counts, two layers, and they are never interchangeable:
 
 <!-- layers:start -->
-- `data/corpus/index.json` `rawTotalBots` (7,414) is the **raw snapshot**: listing records.
-- `src/data/meta.json` `totalBots` (7,292) is the **published** count: distinct bots.
-- `src/data/meta.json` `totalListings` (7,331) is the category listings: a bot in two
+- `data/corpus/index.json` `rawTotalBots` (7,412) is the **raw snapshot**: listing records.
+- `src/data/meta.json` `totalBots` (7,676) is the **published** count: distinct bots.
+- `src/data/meta.json` `totalListings` (7,715) is the category listings: a bot in two
   categories is listed in both, so it is counted twice.
 <!-- layers:end -->
 
@@ -70,4 +70,4 @@ pnpm build && pnpm deploy
 - `MAIL_POSTAL_ADDRESS` is the optional postal address printed in the footer of the confirm and digest mails. It is **not** in `wrangler.toml` (this repo is public): the operator sets it as a Worker secret, `wrangler secret put MAIL_POSTAL_ADDRESS`. It is **optional**: when empty or unset the digest sends normally and the footer address line is omitted entirely.
 - `LIST_SOURCES` is an optional Worker secret: newline-separated `https://` URLs. When set, the nightly discovery run fetches each one (30 s timeout, 20 MB cap), lifts share codes out of the body and queues the unknown ones as `listing` / `pending` (at most 1,000 a night); the usual pending checks fill and publish them. Unset or empty = nothing is fetched. `/api/health` shows counts only (`discovery.lists`).
 - `NOREF_TOKENS` filters the publish step too: a pending bot whose name, author or description matches the secret (case-insensitive substring) is set to `excluded`, never `live`. `/api/health` shows `discovery.noref` as `{configured, excluded}` counts only.
-- Acknowledgment mails: an email submission is acknowledged only when Cloudflare's first `Authentication-Results` shows `spf=pass` for the envelope address and the header `From` is that same single address; otherwise the submission is stored and nothing is sent. All acks (email and form) share one budget of `ACK_DAILY_BUDGET` (default 200) per UTC day.
+- Acknowledgment mails: an email submission is acknowledged only when Cloudflare's first `Authentication-Results` (authserv-id exactly `mx.cloudflare.net`) shows `spf=pass`, `dkim=pass` and `dmarc=pass`, any `smtp.mailfrom` it carries is the envelope address, and the header `From` is that same single address; otherwise the submission is stored and nothing is sent. All acks (email and form) share one budget of `ACK_DAILY_BUDGET` (default 200) per UTC day.

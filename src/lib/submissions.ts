@@ -73,9 +73,10 @@ export function validateSubmission(body: unknown, categorySlugs: ReadonlySet<str
 
 /**
  * A1: may we send an acknowledgment to the envelope sender? Only when Cloudflare's own first
- * Authentication-Results value says spf=pass for exactly this envelope address AND the header From is
- * exactly one address and the same one. Anything else (dmarc none/temperror, no header, a forged second header,
- * a DKIM-only pass with another MAIL FROM, a From that differs from the envelope) -> false.
+ * Authentication-Results value says spf=pass AND dkim=pass AND dmarc=pass, and the header From is exactly one
+ * address and the same one as the envelope sender. Cloudflare's header does not carry smtp.mailfrom, so the
+ * envelope binding comes from From == envelope plus DMARC alignment; a smtp.mailfrom that IS present must equal the envelope. Anything else (a missing or non-pass method,
+ * no header, a forged second header, a From that differs from the envelope) -> false.
  */
 export function ackAuthorized(authResults: string | null, envelopeFrom: string, headerFromRaw: string | null): boolean {
   const env = envelopeFrom.trim().toLowerCase();
@@ -86,11 +87,16 @@ export function ackAuthorized(authResults: string | null, envelopeFrom: string, 
   const seg = authResults.trim().split(',')[0];
   if ((seg.match(/\(/g) ?? []).length !== (seg.match(/\)/g) ?? []).length) return false;
   const first = seg.replace(/\([^)]*\)/g, ' ');
-  if (!/^mx\.cloudflare\.net\b/i.test(first)) return false;
-  const spf = first.split(';').find((c) => /^\s*spf=/i.test(c));
-  if (!spf || !/^\s*spf=pass\b/i.test(spf)) return false;
-  const mailfrom = /\bsmtp\.mailfrom=("?)([^\s";]+)\1/i.exec(spf)?.[2].replace(/^<|>$/g, '').toLowerCase();
-  if (mailfrom !== env) return false;
+  // The authserv-id must be exactly mx.cloudflare.net, optionally followed by an RFC 8601 version integer, then ";".
+  // (A bare \b would let "mx.cloudflare.net.evil.example" through, since "." is not a word character.)
+  if (!/^\s*mx\.cloudflare\.net(?:\s+\d+)?\s*;/i.test(first)) return false;
+  const clauses = first.split(';');
+  // Cloudflare's documented header carries no smtp.mailfrom; if one is present it must name the envelope sender.
+  for (const m of first.matchAll(/smtp\.mailfrom\s*=\s*("?)<?([^\s;"<>]*)>?\1/gi)) if (m[2].toLowerCase() !== env) return false;
+  for (const method of ['spf', 'dkim', 'dmarc']) {
+    const c = clauses.find((x) => new RegExp(`^\\s*${method}=`, 'i').test(x));
+    if (!c || !new RegExp(`^\\s*${method}=pass\\b`, 'i').test(c)) return false;
+  }
   // Header From: strip quoted display names and comments, then exactly one addr-spec must remain.
   const bare = (headerFromRaw ?? '').replace(/"(?:[^"\\]|\\.)*"/g, ' ').replace(/\([^)]*\)/g, ' ');
   const addrs = bare.match(/[^\s<>@,;:"()]+@[^\s<>@,;:"()]+/g) ?? [];

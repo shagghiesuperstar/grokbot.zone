@@ -1,5 +1,4 @@
 ---
-import { REFERRAL_URL } from '../lib/referral';
 interface Props { compact?: boolean }
 const { compact = false } = Astro.props;
 ---
@@ -8,7 +7,7 @@ const { compact = false } = Astro.props;
     <h2 id={compact ? 'cta-h-c' : 'cta-h'}>New to Grok Bot?</h2>
     <p class="muted">Pick a bot from the list, or start with Grok Bot itself. This is a referral link: if you sign up through it, we may be credited at no cost to you.</p>
   </div>
-  <a class="btn" href={REFERRAL_URL} rel="sponsored noopener" target="_blank">Try Grok Bot</a>
+  <a class="btn" href="/go/grok" rel="sponsored noopener" target="_blank">Try Grok Bot</a>
 </section>
 <style>
   .cta { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; align-items: center; justify-content: space-between; padding: 1.75rem 2rem; border-color: var(--olo); }

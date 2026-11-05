@@ -1,5 +1,6 @@
 // D17: first-party telemetry. No cookies, no stored IP: a visitor is a daily-salted hash of the IP, counted once
 // per bot per kind per UTC day. Every write is best effort and never slows or breaks a page.
+import { REFERRAL_URL } from '../../lib/referral';
 import { botUrl } from './ingest';
 import { dayOf } from './util';
 
@@ -87,6 +88,27 @@ export async function go(req: Request, db: D1Database | undefined, code: string,
   }
   wait(record(db, 'open', lc, req));
   return redirect(target!);
+}
+
+/** GET /go/grok: count one referral click, then 302 to REFERRAL_URL. Not a bot event, so it never
+ *  lands in visit_seen or bot_daily. One row per visitor per UTC day. Best-effort: a write failure
+ *  still redirects. Bot user-agents are redirected and not counted. */
+export async function goReferral(req: Request, db: D1Database | undefined, wait: (p: Promise<unknown>) => void): Promise<Response> {
+  const redirect = () => new Response(null, { status: 302, headers: { Location: REFERRAL_URL, 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex', 'Referrer-Policy': 'no-referrer' } });
+  if (req.method !== 'GET' && req.method !== 'HEAD') return new Response('Method not allowed\n', { status: 405, headers: { Allow: 'GET, HEAD' } });
+  wait(recordReferral(db, req));
+  return redirect();
+}
+
+async function recordReferral(db: D1Database | undefined, req: Request, nowMs = Date.now()): Promise<void> {
+  try {
+    if (!db || !isHuman(req)) return;
+    const day = dayOf(nowMs);
+    const vh = await visitorHash(await dailySalt(db, day), req.headers.get('cf-connecting-ip') ?? '');
+    await db.prepare('INSERT OR IGNORE INTO referral_clicks(day, vh) VALUES(?, ?)').bind(day, vh).run();
+  } catch (e) {
+    console.error('referral write skipped:', (e as Error).message);
+  }
 }
 
 // ---- dead bots: the cron stores the list; handlers keep it for a few minutes ----

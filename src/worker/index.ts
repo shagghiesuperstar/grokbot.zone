@@ -14,7 +14,7 @@ import { isMediaRequest, serveMedia } from './media';
 import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
-import { go, isDead, record } from './dp/telemetry';
+import { go, goReferral, isDead, record } from './dp/telemetry';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
@@ -632,7 +632,11 @@ function addVary(headers: Headers, token: string) {
 /** Security headers on every response. HTML gets the agent Link header. Markdown and problem+json are opt-in. */
 async function finish(request: Request, res: Response): Promise<Response> {
   const headers = new Headers(res.headers);
-  for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
+    // /go/ and /go/grok set Referrer-Policy: no-referrer on the 302. Do not replace a policy the handler already chose.
+    if (k === 'Referrer-Policy' && headers.has('Referrer-Policy')) continue;
+    headers.set(k, v);
+  }
   const html = isHtml(res);
   if (html) {
     headers.append('Link', LINK_HEADER);
@@ -815,6 +819,7 @@ async function dataPlane(request: Request, env: Env, ctx: ExecutionContext, path
 
 async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
   const get = request.method === 'GET' || request.method === 'HEAD';
+  if (path === '/go/grok') return goReferral(request, env.DB, (p) => ctx.waitUntil(p));
   if (path === '/go' || path.startsWith('/go/')) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ''), (p) => ctx.waitUntil(p), (lc) => seedSpelling(env, lc));
   if (get && isStoredFile(path)) {
     const stored = await storedFile(env.DB, path);

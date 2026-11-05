@@ -26,7 +26,15 @@ fail() { echo "FAIL: $1" >&2; exit 1; }
 
 home="$(fetch /)"
 grep -q '<title>GrokBot Zone' <<< "$home" || fail "home page title missing"
-grep -q 'https://grok.com/refer/bot?code=B4ZFFHHS64AC' <<< "$home" || fail "referral link missing from home page"
+grep -q '/go/grok' <<< "$home" || fail "homepage missing /go/grok"
+# fetch() requires 200; /go/grok is a 302, so check status and Location directly.
+go_hdr="$(mktemp)"
+go_status="$(curl -sS -o /dev/null -D "$go_hdr" -w '%{http_code}' --retry 5 --retry-delay 5 --retry-all-errors "$ORIGIN/go/grok" || true)"
+go_loc="$(grep -i '^location:' "$go_hdr" || true)"
+go_loc="$(printf '%s\n' "$go_loc" | sed -n '1s/^[Ll]ocation:[[:space:]]*//; 1s/[[:space:]]*$//p')"
+rm -f "$go_hdr"
+[ "$go_status" = "302" ] || fail "/go/grok returned HTTP ${go_status:-000}, expected 302"
+[ "$go_loc" = "https://grok.com/refer/bot?code=B4ZFFHHS64AC" ] || fail "/go/grok Location is '${go_loc}', expected the referral URL"
 
 sitemap="$(fetch /sitemap-0.xml)"
 category_path="$(paths '/categories/' "$sitemap" | grep -v '^/categories/$' | sed -n '1p')"
@@ -54,4 +62,4 @@ grep -q '<feed xmlns=' <<< "$(fetch /feed.xml)" || fail "/feed.xml is not an Ato
 grep -q '"ok":true' <<< "$(fetch /api/health)" || fail "/api/health not ok"
 grep -qiE '<form[^>]+action="/api/submit"' <<< "$(fetch /submit/)" || fail "/submit/ form missing"
 
-echo "PASS: $ORIGIN verified (home, category page, bot page, $total bots in sitemap and search index, referral link)"
+echo "PASS: $ORIGIN verified (home, category page, bot page, $total bots in sitemap and search index, /go/grok 302 to referral URL)"

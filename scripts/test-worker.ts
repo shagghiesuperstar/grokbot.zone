@@ -906,5 +906,124 @@ await t('MCP: grokbot_health tools/call succeeds against the local D1 shim', asy
   assert.equal(body.result.structuredContent.d1, true);
 });
 
+// ---- grokbot_search: optional author filter + 10-result cap (deterministic ASSETS, no network) ----
+const FUN = 'fun-games-hobbies';
+const CODE = 'coding-software';
+type SearchOut = { id: string; name: string; author: string; description: string; category: string; score: number; link: string };
+type SearchCall = { result: { isError: boolean; structuredContent: { bots?: SearchOut[]; errors?: Record<string, string> } } };
+function searchAssets(docs: Record<string, unknown>) {
+  return {
+    fetch: async (r: Request) => {
+      const p = new URL(r.url).pathname;
+      if (Object.prototype.hasOwnProperty.call(docs, p)) return Response.json(docs[p]);
+      if (p === '/api/v1/codes.json') return Response.json({ codes: [SHIPPED.toLowerCase()] });
+      return new Response('missing', { status: 404 });
+    },
+  };
+}
+const bot = (slug: string, code: string, name: string, author: string, description: string) => ({ i: `${slug}-${code}`, n: name, a: author, d: description });
+const funMixed = [
+  bot(FUN, 'alpha', 'Alpha Puzzle', 'Hernan', 'a puzzle hobby'),
+  bot(FUN, 'beta', 'Beta Puzzle', 'hernan', 'a puzzle hobby'),
+  bot(FUN, 'gamma', 'Gamma Puzzle', 'Hernan ', 'a puzzle hobby'),
+  bot(FUN, 'delta', 'Delta Puzzle', 'Other', 'a puzzle hobby'),
+  bot(FUN, 'epsilon', 'Epsilon Puzzle', 'Hernán', 'a puzzle hobby'),
+  bot(FUN, 'quiet', 'Quiet Hobby', 'Hernan', 'no matching words here'),
+];
+const codeMixed = [bot(CODE, 'code', 'Code Puzzle', 'Hernan', 'a puzzle hobby')];
+const mixedDocs = {
+  '/api/v1/categories.json': [{ slug: FUN, label: 'Fun', count: funMixed.length }, { slug: CODE, label: 'Code', count: codeMixed.length }],
+  [`/api/v1/categories/${FUN}.json`]: { slug: FUN, bots: funMixed },
+  [`/api/v1/categories/${CODE}.json`]: { slug: CODE, bots: codeMixed },
+};
+const capBots = Array.from({ length: 14 }, (_, i) => {
+  const n = String(i + 1).padStart(2, '0');
+  return bot(FUN, `h${n}`, `Hernan Puzzle ${n}`, 'Hernan', 'a puzzle hobby');
+});
+const capDocs = {
+  '/api/v1/categories.json': [{ slug: FUN, label: 'Fun', count: capBots.length }],
+  [`/api/v1/categories/${FUN}.json`]: { slug: FUN, bots: capBots },
+};
+const searchCall = async (docs: Record<string, unknown>, args: Record<string, unknown>) => {
+  const res = await mcpPost(makeEnv({ ASSETS: searchAssets(docs) }), { jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'grokbot_search', arguments: args } });
+  return await res.json() as SearchCall;
+};
+const authorsOf = (bots: SearchOut[]) => bots.map((b) => b.author);
+
+await t('MCP: grokbot_search schema adds optional author and still lists exactly 9 tools', async () => {
+  const env = makeEnv();
+  const listed = await mcpPost(env, { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
+  const tools = ((await listed.json()) as { result: { tools: { name: string; description: string; inputSchema: { additionalProperties: boolean; required?: string[]; properties: Record<string, { type: string; maxLength?: number; description?: string }> } }[] } }).result.tools;
+  assert.equal(tools.length, 9);
+  assert.deepEqual(tools.map((t) => t.name), [
+    'grokbot_check_listed', 'grokbot_get_bot', 'grokbot_get_category', 'grokbot_health', 'grokbot_list_categories',
+    'grokbot_search', 'grokbot_submit_bot', 'grokbot_subscribe', 'grokbot_trending',
+  ]);
+  const search = tools.find((t) => t.name === 'grokbot_search');
+  if (!search) throw new Error('grokbot_search missing');
+  assert.equal(search.inputSchema.additionalProperties, false);
+  assert.deepEqual(search.inputSchema.required, ['query']);
+  assert.deepEqual(Object.keys(search.inputSchema.properties), ['query', 'category', 'author']);
+  assert.equal(search.inputSchema.properties.query.type, 'string');
+  assert.equal(search.inputSchema.properties.query.maxLength, 200);
+  assert.equal(search.inputSchema.properties.category.maxLength, 80);
+  assert.equal(search.inputSchema.properties.author.type, 'string');
+  assert.equal(search.inputSchema.properties.author.maxLength, 80);
+  assert.equal(search.inputSchema.properties.author.description, 'Filter to one author name (case-insensitive exact match).');
+  assert.equal(search.description, 'Scores public listings by how many query words appear in the name and description. Name matches count double. Optionally filter to one author. Returns at most 10.');
+});
+
+await t('MCP: grokbot_search author filter is a case-insensitive exact match and keeps score>0', async () => {
+  const body = await searchCall(mixedDocs, { query: 'puzzle', category: FUN, author: 'hernan' });
+  assert.equal(body.result.isError, false);
+  const bots = body.result.structuredContent.bots ?? [];
+  assert.deepEqual(bots.map((b) => b.name), ['Alpha Puzzle', 'Beta Puzzle', 'Gamma Puzzle']);
+  assert.deepEqual(authorsOf(bots), ['Hernan', 'hernan', 'Hernan ']);
+  assert.ok(bots.every((b) => b.author.trim().toLowerCase() === 'hernan'));
+  assert.ok(bots.every((b) => b.category === FUN && b.score > 0 && b.link.startsWith('https://x.ai/bot/')));
+  assert.deepEqual(Object.keys(bots[0]).sort(), ['author', 'category', 'description', 'id', 'link', 'name', 'score']);
+});
+
+await t('MCP: grokbot_search author filter ANDs with category', async () => {
+  const scoped = await searchCall(mixedDocs, { query: 'puzzle', category: FUN, author: 'Hernan' });
+  const open = await searchCall(mixedDocs, { query: 'puzzle', author: 'Hernan' });
+  assert.equal(scoped.result.isError, false);
+  assert.equal(open.result.isError, false);
+  assert.ok((scoped.result.structuredContent.bots ?? []).every((b) => b.category === FUN));
+  assert.equal((scoped.result.structuredContent.bots ?? []).some((b) => b.name === 'Code Puzzle'), false);
+  assert.equal((open.result.structuredContent.bots ?? []).some((b) => b.name === 'Code Puzzle' && b.category === CODE), true);
+  assert.ok((open.result.structuredContent.bots ?? []).every((b) => b.author.trim().toLowerCase() === 'hernan'));
+});
+
+await t('MCP: grokbot_search returns exactly 10 when a category has 14 matches', async () => {
+  const body = await searchCall(capDocs, { query: 'puzzle', category: FUN, author: 'Hernan' });
+  assert.equal(body.result.isError, false);
+  const bots = body.result.structuredContent.bots ?? [];
+  assert.equal(bots.length, 10);
+  assert.deepEqual(bots.map((b) => b.name), Array.from({ length: 10 }, (_, i) => `Hernan Puzzle ${String(i + 1).padStart(2, '0')}`));
+  assert.ok(bots.every((b) => b.author === 'Hernan' && b.category === FUN));
+});
+
+await t('MCP: grokbot_search rejects blank, non-string and over-long author; absent author does not filter', async () => {
+  const long = 'a'.repeat(81);
+  for (const author of ['   ', 123, long]) {
+    const body = await searchCall(mixedDocs, { query: 'puzzle', category: FUN, author });
+    assert.equal(body.result.isError, true, `author ${JSON.stringify(author)} should be invalid`);
+    assert.equal(body.result.structuredContent.errors?.author, 'must be an author name of 1-80 characters');
+  }
+  const absent = await searchCall(mixedDocs, { query: 'puzzle', category: FUN });
+  assert.equal(absent.result.isError, false);
+  const names = (absent.result.structuredContent.bots ?? []).map((b) => b.name);
+  assert.equal(names.includes('Delta Puzzle'), true, 'absent author must not drop other authors');
+  assert.equal(names.includes('Epsilon Puzzle'), true, 'absent author must not drop a different spelling');
+  assert.equal(names.includes('Quiet Hobby'), false, 'score>0 still applies');
+});
+
+await t('MCP: grokbot_search still rejects an unknown argument', async () => {
+  const body = await searchCall(mixedDocs, { query: 'puzzle', nope: 1 });
+  assert.equal(body.result.isError, true);
+  assert.equal(body.result.structuredContent.errors?.nope, 'unexpected property');
+});
+
 console.log(failed ? `test-worker: ${n} passed, ${failed} FAILED` : `test-worker: ${n} passed`);
 process.exit(failed ? 1 : 0);

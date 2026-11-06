@@ -133,7 +133,7 @@ POST ${MCP_URL}. Protocol 2025-11-25 (initialize, notifications/initialized, too
 | grokbot_health | none | Worker and database check |
 | grokbot_list_categories | none | Category slugs, labels, counts |
 | grokbot_get_category | slug | Bots in one category |
-| grokbot_search | query, optional category | Up to 5 bots scored on name and description |
+| grokbot_search | query, optional category, optional author | Up to 10 bots scored on name and description |
 | grokbot_trending | optional category | Ordered bot ids |
 | grokbot_get_bot | id | One bot record |
 | grokbot_check_listed | link or code | Whether that bot is already listed |

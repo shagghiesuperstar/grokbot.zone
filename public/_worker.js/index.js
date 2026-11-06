@@ -5281,21 +5281,21 @@ var categories_default = [
   {
     slug: "business-operations",
     label: "Business & Operations",
-    count: 357,
+    count: 358,
     purpose: "Run the back office: invoices, reports, vendors, process and team admin.",
     updated: "2026-10-28"
   },
   {
     slug: "calendar-meetings-scheduling",
     label: "Calendar, Meetings & Scheduling",
-    count: 125,
+    count: 120,
     purpose: "Book, move and prepare for meetings without the back-and-forth.",
     updated: "2026-10-28"
   },
   {
     slug: "coding-software",
     label: "Coding & Software",
-    count: 576,
+    count: 574,
     purpose: "Write, review, debug and ship code with a bot at your side.",
     updated: "2026-10-28"
   },
@@ -5316,56 +5316,56 @@ var categories_default = [
   {
     slug: "family-kids-learning",
     label: "Family, Kids & Learning",
-    count: 350,
+    count: 331,
     purpose: "Homework help, learning plans, and family organising.",
     updated: "2026-10-28"
   },
   {
     slug: "food-recipes-dining",
     label: "Food, Recipes & Dining",
-    count: 177,
+    count: 175,
     purpose: "Plan meals, cook from what you have, and pick where to eat.",
     updated: "2026-10-28"
   },
   {
     slug: "fun-games-hobbies",
     label: "Fun, Games & Hobbies",
-    count: 152,
+    count: 146,
     purpose: "Games, hobbies and play.",
     updated: "2026-10-28"
   },
   {
     slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
     label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-    count: 510,
+    count: 501,
     purpose: "Bots that build, tune or manage other Grok bots.",
     updated: "2026-10-28"
   },
   {
     slug: "health-fitness-wellness",
     label: "Health, Fitness & Wellness",
-    count: 194,
+    count: 190,
     purpose: "Training plans, nutrition, sleep and everyday wellness questions.",
     updated: "2026-10-28"
   },
   {
     slug: "home-garden-pets",
     label: "Home, Garden & Pets",
-    count: 283,
+    count: 278,
     purpose: "Home projects, gardens and pet care.",
     updated: "2026-10-28"
   },
   {
     slug: "jobs-careers",
     label: "Jobs & Careers",
-    count: 246,
+    count: 239,
     purpose: "Resumes, job search, interviews and career moves.",
     updated: "2026-10-28"
   },
   {
     slug: "legal-tax-paperwork",
     label: "Legal, Tax & Paperwork",
-    count: 150,
+    count: 145,
     purpose: "Understand forms, filings and everyday legal and tax paperwork.",
     updated: "2026-10-28"
   },
@@ -5379,14 +5379,14 @@ var categories_default = [
   {
     slug: "money-personal-finance",
     label: "Money & Personal Finance",
-    count: 348,
+    count: 340,
     purpose: "Budgets, bills, savings and everyday money decisions.",
     updated: "2026-10-28"
   },
   {
     slug: "privacy-security-scam-protection",
     label: "Privacy, Security & Scam Protection",
-    count: 239,
+    count: 233,
     purpose: "Stop spam calls, spot scams, and lock down your data.",
     updated: "2026-10-28"
   },
@@ -5400,63 +5400,63 @@ var categories_default = [
   {
     slug: "real-estate",
     label: "Real Estate",
-    count: 66,
+    count: 61,
     purpose: "Search, compare and manage property, as a buyer, seller or landlord.",
     updated: "2026-10-28"
   },
   {
     slug: "research-news-briefings",
     label: "Research, News & Briefings",
-    count: 736,
+    count: 731,
     purpose: "Research a topic, follow the news, and get a short briefing.",
     updated: "2026-10-28"
   },
   {
     slug: "sales-lead-generation",
     label: "Sales & Lead Generation",
-    count: 260,
+    count: 253,
     purpose: "Find leads, write outreach and keep a pipeline moving.",
     updated: "2026-10-28"
   },
   {
     slug: "shopping-deals",
     label: "Shopping & Deals",
-    count: 262,
+    count: 253,
     purpose: "Compare prices, find deals, and decide what to buy.",
     updated: "2026-10-28"
   },
   {
     slug: "trading-crypto-investing",
     label: "Trading, Crypto & Investing",
-    count: 360,
+    count: 353,
     purpose: "Markets, crypto and investing research and tracking.",
     updated: "2026-10-28"
   },
   {
     slug: "travel",
     label: "Travel",
-    count: 126,
+    count: 123,
     purpose: "Plan trips, find routes, and handle the details of getting there.",
     updated: "2026-10-28"
   },
   {
     slug: "video-images-audio-design",
     label: "Video, Images, Audio & Design",
-    count: 556,
+    count: 543,
     purpose: "Make and edit video, images, audio and design work.",
     updated: "2026-10-28"
   },
   {
     slug: "writing-publishing",
     label: "Writing & Publishing",
-    count: 322,
+    count: 321,
     purpose: "Draft, edit and publish writing of every length.",
     updated: "2026-10-28"
   },
   {
     slug: "x-twitter-social-media",
     label: "X (Twitter) & Social Media",
-    count: 294,
+    count: 286,
     purpose: "Post, grow and manage your presence on X and other social platforms.",
     updated: "2026-10-28"
   }
@@ -6984,19 +6984,13 @@ var recent_default = {
     {
       slug: "research-news-briefings",
       label: "Research, News & Briefings",
-      count: 736,
+      count: 731,
       asOf: "2026-10-28"
     },
     {
       slug: "coding-software",
       label: "Coding & Software",
-      count: 576,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "video-images-audio-design",
-      label: "Video, Images, Audio & Design",
-      count: 556,
+      count: 574,
       asOf: "2026-10-28"
     },
     {
@@ -7006,39 +7000,45 @@ var recent_default = {
       asOf: "2026-10-28"
     },
     {
-      slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
-      label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
-      count: 510,
+      slug: "video-images-audio-design",
+      label: "Video, Images, Audio & Design",
+      count: 543,
       asOf: "2026-10-28"
     },
     {
-      slug: "trading-crypto-investing",
-      label: "Trading, Crypto & Investing",
-      count: 360,
+      slug: "grok-bot-helpers-bots-that-build-or-manage-bots",
+      label: "Grok Bot Helpers (Bots That Build or Manage Bots)",
+      count: 501,
       asOf: "2026-10-28"
     },
     {
       slug: "business-operations",
       label: "Business & Operations",
-      count: 357,
+      count: 358,
       asOf: "2026-10-28"
     },
     {
-      slug: "family-kids-learning",
-      label: "Family, Kids & Learning",
-      count: 350,
+      slug: "trading-crypto-investing",
+      label: "Trading, Crypto & Investing",
+      count: 353,
       asOf: "2026-10-28"
     },
     {
       slug: "money-personal-finance",
       label: "Money & Personal Finance",
-      count: 348,
+      count: 340,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "family-kids-learning",
+      label: "Family, Kids & Learning",
+      count: 331,
       asOf: "2026-10-28"
     },
     {
       slug: "writing-publishing",
       label: "Writing & Publishing",
-      count: 322,
+      count: 321,
       asOf: "2026-10-28"
     },
     {
@@ -7050,31 +7050,25 @@ var recent_default = {
     {
       slug: "x-twitter-social-media",
       label: "X (Twitter) & Social Media",
-      count: 294,
+      count: 286,
       asOf: "2026-10-28"
     },
     {
       slug: "home-garden-pets",
       label: "Home, Garden & Pets",
-      count: 283,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "shopping-deals",
-      label: "Shopping & Deals",
-      count: 262,
+      count: 278,
       asOf: "2026-10-28"
     },
     {
       slug: "sales-lead-generation",
       label: "Sales & Lead Generation",
-      count: 260,
+      count: 253,
       asOf: "2026-10-28"
     },
     {
-      slug: "jobs-careers",
-      label: "Jobs & Careers",
-      count: 246,
+      slug: "shopping-deals",
+      label: "Shopping & Deals",
+      count: 253,
       asOf: "2026-10-28"
     },
     {
@@ -7084,57 +7078,63 @@ var recent_default = {
       asOf: "2026-10-28"
     },
     {
+      slug: "jobs-careers",
+      label: "Jobs & Careers",
+      count: 239,
+      asOf: "2026-10-28"
+    },
+    {
       slug: "privacy-security-scam-protection",
       label: "Privacy, Security & Scam Protection",
-      count: 239,
+      count: 233,
       asOf: "2026-10-28"
     },
     {
       slug: "health-fitness-wellness",
       label: "Health, Fitness & Wellness",
-      count: 194,
+      count: 190,
       asOf: "2026-10-28"
     },
     {
       slug: "food-recipes-dining",
       label: "Food, Recipes & Dining",
-      count: 177,
+      count: 175,
       asOf: "2026-10-28"
     },
     {
       slug: "fun-games-hobbies",
       label: "Fun, Games & Hobbies",
-      count: 152,
+      count: 146,
       asOf: "2026-10-28"
     },
     {
       slug: "legal-tax-paperwork",
       label: "Legal, Tax & Paperwork",
-      count: 150,
+      count: 145,
       asOf: "2026-10-28"
     },
     {
       slug: "travel",
       label: "Travel",
-      count: 126,
+      count: 123,
       asOf: "2026-10-28"
     },
     {
       slug: "calendar-meetings-scheduling",
       label: "Calendar, Meetings & Scheduling",
-      count: 125,
-      asOf: "2026-10-28"
-    },
-    {
-      slug: "real-estate",
-      label: "Real Estate",
-      count: 66,
+      count: 120,
       asOf: "2026-10-28"
     },
     {
       slug: "everything-else",
       label: "Everything Else",
       count: 65,
+      asOf: "2026-10-28"
+    },
+    {
+      slug: "real-estate",
+      label: "Real Estate",
+      count: 61,
       asOf: "2026-10-28"
     }
   ]
@@ -7660,6 +7660,10 @@ async function liveState(db, nowMs = Date.now()) {
   }
 }
 
+// src/lib/referral.ts
+var REFERRAL_CODE = "B4ZFFHHS64AC";
+var REFERRAL_URL = `https://grok.com/refer/bot?code=${REFERRAL_CODE}`;
+
 // src/worker/dp/telemetry.ts
 var BLOCKED_UA = /bot|crawl|spider|slurp|preview|headless|curl|wget|python|go-http|okhttp|java|http-client/i;
 function isHuman(req) {
@@ -7735,6 +7739,22 @@ async function go(req, db, code, wait, seed = async () => null) {
   }
   wait(record(db, "open", lc, req));
   return redirect(target2);
+}
+async function goReferral(req, db, wait) {
+  const redirect = () => new Response(null, { status: 302, headers: { Location: REFERRAL_URL, "Cache-Control": "no-store", "X-Robots-Tag": "noindex", "Referrer-Policy": "no-referrer" } });
+  if (req.method !== "GET" && req.method !== "HEAD") return new Response("Method not allowed\n", { status: 405, headers: { Allow: "GET, HEAD" } });
+  wait(recordReferral(db, req));
+  return redirect();
+}
+async function recordReferral(db, req, nowMs = Date.now()) {
+  try {
+    if (!db || !isHuman(req)) return;
+    const day = dayOf(nowMs);
+    const vh = await visitorHash(await dailySalt(db, day), req.headers.get("cf-connecting-ip") ?? "");
+    await db.prepare("INSERT OR IGNORE INTO referral_clicks(day, vh) VALUES(?, ?)").bind(day, vh).run();
+  } catch (e) {
+    console.error("referral write skipped:", e.message);
+  }
 }
 var deadCache = null;
 async function isDead(db, codeLc, nowMs = Date.now()) {
@@ -8148,7 +8168,7 @@ POST ${MCP_URL}. Protocol 2025-11-25 (initialize, notifications/initialized, too
 | grokbot_health | none | Worker and database check |
 | grokbot_list_categories | none | Category slugs, labels, counts |
 | grokbot_get_category | slug | Bots in one category |
-| grokbot_search | query, optional category | Up to 5 bots scored on name and description |
+| grokbot_search | query, optional category, optional author | Up to 10 bots scored on name and description |
 | grokbot_trending | optional category | Ordered bot ids |
 | grokbot_get_bot | id | One bot record |
 | grokbot_check_listed | link or code | Whether that bot is already listed |
@@ -8440,8 +8460,8 @@ var TOOLS = [
   {
     name: "grokbot_search",
     title: "Search bots",
-    description: "Scores public listings by how many query words appear in the name and description. Name matches count double. Returns at most 5.",
-    inputSchema: obj({ query: str2(200), category: str2(80) }, ["query"]),
+    description: "Scores public listings by how many query words appear in the name and description. Name matches count double. Optionally filter to one author. Returns at most 10.",
+    inputSchema: obj({ query: str2(200), category: str2(80), author: str2(80, { description: "Filter to one author name (case-insensitive exact match)." }) }, ["query"]),
     outputSchema: out({ bots: { type: "array" } }, ["bots"]),
     annotations: READ_ANN
   },
@@ -8554,7 +8574,7 @@ function scoreBots(bots, query, slug) {
     return { id: b.i, name: b.n, author: b.a ?? "", description: b.d ?? "", category: b.c ?? slug, score };
   }).filter((b) => b.score > 0);
   ranked.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name) || x.id.localeCompare(y.id));
-  return ranked.slice(0, 5);
+  return ranked.slice(0, 10);
 }
 async function callTool(name, args, req, hooks, id) {
   const tool = TOOL_BY_NAME.get(name);
@@ -8612,6 +8632,11 @@ async function callTool(name, args, req, hooks, id) {
     if (typeof query !== "string" || query.trim().length < 2 || query.length > 200) return invalid(id, { query: "required, 2-200 characters" });
     const category = args.category;
     if (category !== void 0 && (typeof category !== "string" || !/^[a-z0-9-]{1,80}$/.test(category))) return invalid(id, { category: "must be a category slug" });
+    const author = args.author;
+    if (author !== void 0 && (typeof author !== "string" || author.trim().length === 0 || author.length > 80)) {
+      return invalid(id, { author: "must be an author name of 1-80 characters" });
+    }
+    const wantAuthor = typeof author === "string" ? author.trim().toLowerCase() : "";
     const slugs = category ? [category] : await categorySlugs(hooks);
     if (!slugs) return toolResult(id, { ok: false }, true, "categories unavailable");
     const found = [];
@@ -8620,10 +8645,11 @@ async function callTool(name, args, req, hooks, id) {
       if (status !== 200) continue;
       const bots2 = asRecord(body).bots;
       if (!Array.isArray(bots2)) continue;
-      found.push(...scoreBots(bots2, query, slug));
+      const candidates = wantAuthor ? bots2.filter((b) => (b.a ?? "").trim().toLowerCase() === wantAuthor) : bots2;
+      found.push(...scoreBots(candidates, query, slug));
     }
     found.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
-    const bots = found.slice(0, 5).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
+    const bots = found.slice(0, 10).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
     return toolResult(id, { bots }, false, `${bots.length} matches`);
   }
   if (name === "grokbot_submit_bot") {
@@ -9714,7 +9740,10 @@ function addVary(headers, token2) {
 }
 async function finish(request, res) {
   const headers = new Headers(res.headers);
-  for (const [k, v] of Object.entries(SECURITY_HEADERS)) headers.set(k, v);
+  for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
+    if (k === "Referrer-Policy" && headers.has("Referrer-Policy")) continue;
+    headers.set(k, v);
+  }
   const html = isHtml(res);
   if (html) {
     headers.append("Link", LINK_HEADER);
@@ -9879,6 +9908,7 @@ async function dataPlane(request, env, ctx, path) {
 }
 async function dataPlaneInner(request, env, ctx, path) {
   const get = request.method === "GET" || request.method === "HEAD";
+  if (path === "/go/grok") return goReferral(request, env.DB, (p) => ctx.waitUntil(p));
   if (path === "/go" || path.startsWith("/go/")) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ""), (p) => ctx.waitUntil(p), (lc) => seedSpelling(env, lc));
   if (get && isStoredFile(path)) {
     const stored2 = await storedFile(env.DB, path);

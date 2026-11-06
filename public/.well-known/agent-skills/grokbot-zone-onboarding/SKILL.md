@@ -50,7 +50,7 @@ Ask one question at a time and keep the answers in a working note. Don't move on
 4. "How often should it run: on demand, daily, or on a schedule?"
 5. "Any hard limits? Things it must never do, data it must not touch."
 
-Map the answers to 1-3 category slugs (section 5), then search (section 3 or 4.3). Show at most 5 matches. For each, give:
+Map the answers to 1-3 category slugs (section 5), then search (section 3 or 4.3). Show at most 10 matches. For each, give:
 - the **name** and a one-line description
 - the category
 - the bot link (`https://x.ai/bot/<code>`)
@@ -91,7 +91,7 @@ Connector contract v1. Same semantics as the HTTP calls in section 4.
 | `grokbot_health` | none | health JSON | `GET /api/health` |
 | `grokbot_list_categories` | none | `[{slug,label,count,purpose,updated}]` | `GET /api/v1/categories.json` |
 | `grokbot_get_category` | `slug` | bots in that category | `GET /api/v1/categories/{slug}.json` |
-| `grokbot_search` | `query`, optional `category` | ranked bot records | 4.3 |
+| `grokbot_search` | `query`, optional `category`, optional `author` | ranked bot records | 4.3 |
 | `grokbot_trending` | optional `category` | ordered bot ids | `GET /api/v1/trending.json` |
 | `grokbot_get_bot` | `id` | one bot record | `GET /api/v1/bots/{id}.json` |
 | `grokbot_check_listed` | `link` or `code` | `{listed: bool}` | `GET /api/v1/codes.json` |
@@ -140,9 +140,10 @@ Public page: `https://grokbot.zone/bots/<id>`.
 ### 4.3 Search (there is no search endpoint; do it client-side)
 1. Pick 1-3 slugs from the interview.
 2. `GET /api/v1/categories/{slug}.json` for each.
-3. Score each bot by counting query words found in `name` + `description` (case-insensitive). Name hits count double.
-4. Break ties using the `/api/v1/trending.json` order for that category.
-5. Return the top 5.
+3. If an author was named, keep only bots whose author is an exact match after trimming both sides and ignoring case. Do this before scoring.
+4. Score each remaining bot by counting query words found in `name` + `description` (case-insensitive). Name hits count double.
+5. Break ties using the `/api/v1/trending.json` order for that category.
+6. Return the top 10.
 
 ### 4.4 Duplicate check
 `GET /api/v1/codes.json`, then lowercase the 21-character code from the link. If it's in the list, the bot is already listed. The submit endpoint enforces this too (409), so this check only makes for a friendlier answer.

@@ -1,7 +1,7 @@
 // Stateless Streamable HTTP MCP. JSON responses only.
 // Protocols: 2025-11-25 (initialize → notifications/initialized → tools/list/tools/call)
 // and 2026-07-28 server/discover. Tools are sorted by name.
-import { codeOfId } from '../lib/search';
+import { codeOfId, normalize } from '../lib/search';
 
 export const PROTOCOL_LEGACY = '2025-11-25';
 export const PROTOCOL_DISCOVER = '2026-07-28';
@@ -204,15 +204,27 @@ function scoreBots(bots: SearchBot[], query: string, slug: string): { id: string
   const ranked = bots.map((b) => {
     const name = (b.n ?? '').toLowerCase();
     const desc = (b.d ?? '').toLowerCase();
+    const author = normalize(b.a ?? '');
     let score = 0;
     for (const w of words) {
       if (name.includes(w)) score += 2;
       if (desc.includes(w)) score += 1;
+      const aw = normalize(w);
+      if (aw && author.includes(aw)) score += 1;
     }
     return { id: b.i, name: b.n, author: b.a ?? '', description: b.d ?? '', category: b.c ?? slug, score };
   }).filter((b) => b.score > 0);
   ranked.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name) || x.id.localeCompare(y.id));
   return ranked.slice(0, 10);
+}
+
+function searchResultText(bots: { id: string; name: string }[]): string {
+  const lines = [`${bots.length} matches:`];
+  for (let i = 0; i < bots.length; i++) {
+    const b = bots[i];
+    lines.push(`${i + 1}. ${b.name} \u2014 id: ${b.id} \u2014 https://grokbot.zone/bots/${b.id}/`);
+  }
+  return lines.join('\n');
 }
 
 async function callTool(name: string, args: Record<string, unknown>, req: Request, hooks: McpHooks, id: unknown): Promise<Response> {
@@ -291,7 +303,7 @@ async function callTool(name: string, args: Record<string, unknown>, req: Reques
     }
     found.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
     const bots = found.slice(0, 10).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
-    return toolResult(id, { bots }, false, `${bots.length} matches`);
+    return toolResult(id, { bots }, false, searchResultText(bots));
   }
   if (name === 'grokbot_submit_bot') {
     const errors: Record<string, string> = {};

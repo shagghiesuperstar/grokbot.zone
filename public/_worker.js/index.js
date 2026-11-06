@@ -8389,6 +8389,9 @@ async function agentResponse(request, env, path) {
 }
 
 // src/lib/search.ts
+function normalize(s) {
+  return s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
 var UNCATEGORIZED = "uncategorized";
 function codeOfId(id, slugs) {
   let best = "";
@@ -8566,15 +8569,26 @@ function scoreBots(bots, query, slug) {
   const ranked = bots.map((b) => {
     const name = (b.n ?? "").toLowerCase();
     const desc = (b.d ?? "").toLowerCase();
+    const author = normalize(b.a ?? "");
     let score = 0;
     for (const w of words) {
       if (name.includes(w)) score += 2;
       if (desc.includes(w)) score += 1;
+      const aw = normalize(w);
+      if (aw && author.includes(aw)) score += 1;
     }
     return { id: b.i, name: b.n, author: b.a ?? "", description: b.d ?? "", category: b.c ?? slug, score };
   }).filter((b) => b.score > 0);
   ranked.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name) || x.id.localeCompare(y.id));
   return ranked.slice(0, 10);
+}
+function searchResultText(bots) {
+  const lines = [`${bots.length} matches:`];
+  for (let i = 0; i < bots.length; i++) {
+    const b = bots[i];
+    lines.push(`${i + 1}. ${b.name} \u2014 id: ${b.id} \u2014 https://grokbot.zone/bots/${b.id}/`);
+  }
+  return lines.join("\n");
 }
 async function callTool(name, args, req, hooks, id) {
   const tool = TOOL_BY_NAME.get(name);
@@ -8650,7 +8664,7 @@ async function callTool(name, args, req, hooks, id) {
     }
     found.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
     const bots = found.slice(0, 10).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
-    return toolResult(id, { bots }, false, `${bots.length} matches`);
+    return toolResult(id, { bots }, false, searchResultText(bots));
   }
   if (name === "grokbot_submit_bot") {
     const errors = {};

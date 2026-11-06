@@ -910,7 +910,7 @@ await t('MCP: grokbot_health tools/call succeeds against the local D1 shim', asy
 const FUN = 'fun-games-hobbies';
 const CODE = 'coding-software';
 type SearchOut = { id: string; name: string; author: string; description: string; category: string; score: number; link: string };
-type SearchCall = { result: { isError: boolean; structuredContent: { bots?: SearchOut[]; errors?: Record<string, string> } } };
+type SearchCall = { result: { isError: boolean; content?: { type: string; text: string }[]; structuredContent: { bots?: SearchOut[]; errors?: Record<string, string> } } };
 function searchAssets(docs: Record<string, unknown>) {
   return {
     fetch: async (r: Request) => {
@@ -949,6 +949,20 @@ const searchCall = async (docs: Record<string, unknown>, args: Record<string, un
   return await res.json() as SearchCall;
 };
 const authorsOf = (bots: SearchOut[]) => bots.map((b) => b.author);
+const DASH = '\u2014';
+function assertNamedText(text: string, bots: SearchOut[]) {
+  const lines = text.split('\n');
+  assert.equal(lines[0], `${bots.length} matches:`, `first line ${JSON.stringify(lines[0])}`);
+  assert.equal(lines.length, bots.length + 1, `expected ${bots.length + 1} lines, got ${lines.length}`);
+  bots.forEach((b, i) => {
+    assert.equal(lines[i + 1], `${i + 1}. ${b.name} ${DASH} id: ${b.id} ${DASH} https://grokbot.zone/bots/${b.id}/`);
+  });
+}
+const textOf = (body: SearchCall) => {
+  const block = body.result.content?.[0];
+  assert.equal(block?.type, 'text');
+  return block?.text ?? '';
+};
 
 await t('MCP: grokbot_search schema adds optional author and still lists exactly 9 tools', async () => {
   const env = makeEnv();
@@ -1023,6 +1037,89 @@ await t('MCP: grokbot_search still rejects an unknown argument', async () => {
   const body = await searchCall(mixedDocs, { query: 'puzzle', nope: 1 });
   assert.equal(body.result.isError, true);
   assert.equal(body.result.structuredContent.errors?.nope, 'unexpected property');
+});
+
+const authorOnlyBots = [
+  bot(FUN, 'relay1', 'Relay Helper', 'Shagghie', 'builds other bots'),
+  bot(FUN, 'grid1', 'Grid Watch', 'Shagghie', 'watches the grid'),
+  bot(FUN, 'jose1', 'Plain Widget', 'José', 'no token match'),
+  bot(FUN, 'name1', 'Jose Widget', 'Other', 'no token match'),
+  bot(FUN, 'other1', 'Catalog Entry', 'Someone', 'unrelated catalog words'),
+];
+const authorOnlyDocs = {
+  '/api/v1/categories.json': [{ slug: FUN, label: 'Fun', count: authorOnlyBots.length }],
+  [`/api/v1/categories/${FUN}.json`]: { slug: FUN, bots: authorOnlyBots },
+};
+
+await t('MCP: grokbot_search text names every returned bot with id and canonical listing link', async () => {
+  const body = await searchCall(mixedDocs, { query: 'puzzle', category: FUN });
+  assert.equal(body.result.isError, false);
+  const bots = body.result.structuredContent.bots ?? [];
+  assert.ok(bots.length >= 1);
+  assertNamedText(textOf(body), bots);
+  assert.equal(textOf(body).includes('a puzzle hobby'), false, 'description must stay out of the text');
+  assert.equal(textOf(body).includes('https://x.ai/'), false, 'text link is the listing, not the x.ai bot URL');
+  for (const b of bots) {
+    assert.deepEqual(Object.keys(b).sort(), ['author', 'category', 'description', 'id', 'link', 'name', 'score']);
+    assert.equal(b.link, `https://x.ai/bot/${b.id.slice(FUN.length + 1)}`);
+    assert.equal(b.description, 'a puzzle hobby');
+  }
+});
+
+await t('MCP: grokbot_search zero matches is exactly "0 matches:" and no bot lines', async () => {
+  const body = await searchCall(mixedDocs, { query: 'zzznomatch', category: FUN });
+  assert.equal(body.result.isError, false);
+  assert.deepEqual(body.result.structuredContent.bots, []);
+  assert.equal(textOf(body), '0 matches:');
+});
+
+await t('MCP: grokbot_search query naming only an author returns that author; @shagghie stays 0', async () => {
+  const found = await searchCall(authorOnlyDocs, { query: 'shagghie', category: FUN });
+  assert.equal(found.result.isError, false);
+  const bots = found.result.structuredContent.bots ?? [];
+  assert.deepEqual(bots.map((b) => b.name), ['Grid Watch', 'Relay Helper']);
+  assert.deepEqual(authorsOf(bots), ['Shagghie', 'Shagghie']);
+  assert.ok(bots.every((b) => b.score === 1 && b.link.startsWith('https://x.ai/bot/')));
+  const text = textOf(found);
+  assertNamedText(text, bots);
+  assert.equal(text.includes('Shagghie'), false);
+  assert.equal(text.includes('builds other bots'), false);
+  const at = await searchCall(authorOnlyDocs, { query: 'shagghie', category: FUN, author: '@shagghie' });
+  assert.equal(at.result.isError, false);
+  assert.deepEqual(at.result.structuredContent.bots, []);
+  assert.equal(textOf(at), '0 matches:');
+  const other = await searchCall(authorOnlyDocs, { query: 'shagghie', category: FUN, author: 'Someone' });
+  assert.deepEqual(other.result.structuredContent.bots, []);
+  assert.equal(textOf(other), '0 matches:');
+  const exact = await searchCall(authorOnlyDocs, { query: 'shagghie', category: FUN, author: 'SHAGGHIE' });
+  assert.deepEqual((exact.result.structuredContent.bots ?? []).map((b) => b.id), bots.map((b) => b.id));
+});
+
+await t('MCP: grokbot_search author match uses site-search normalization and ranks under a name match', async () => {
+  const body = await searchCall(authorOnlyDocs, { query: 'jose', category: FUN });
+  assert.equal(body.result.isError, false);
+  const bots = body.result.structuredContent.bots ?? [];
+  assert.deepEqual(bots.map((b) => b.name), ['Jose Widget', 'Plain Widget']);
+  assert.equal(bots[0].score, 2);
+  assert.equal(bots[1].score, 1);
+  assert.equal(bots[1].author, 'José');
+  assertNamedText(textOf(body), bots);
+});
+
+await t('MCP: grokbot_search cap stays 10 and schema stays frozen while text names the ten', async () => {
+  const body = await searchCall(capDocs, { query: 'puzzle', category: FUN });
+  assert.equal(body.result.isError, false);
+  const bots = body.result.structuredContent.bots ?? [];
+  assert.equal(bots.length, 10);
+  assertNamedText(textOf(body), bots);
+  const listed = await mcpPost(makeEnv(), { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
+  const tools = ((await listed.json()) as { result: { tools: { name: string; inputSchema: { additionalProperties: boolean; required?: string[]; properties: Record<string, unknown> } }[] } }).result.tools;
+  assert.equal(tools.length, 9);
+  const search = tools.find((tool) => tool.name === 'grokbot_search');
+  if (!search) throw new Error('grokbot_search missing');
+  assert.equal(search.inputSchema.additionalProperties, false);
+  assert.deepEqual(search.inputSchema.required, ['query']);
+  assert.deepEqual(Object.keys(search.inputSchema.properties), ['query', 'category', 'author']);
 });
 
 console.log(failed ? `test-worker: ${n} passed, ${failed} FAILED` : `test-worker: ${n} passed`);

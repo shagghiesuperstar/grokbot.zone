@@ -8,17 +8,22 @@
     }
     ctx.registerTool({
       name: 'search_bots',
-      description: 'Search public Grok bot listings by words in the name or description.',
+      description: 'Search public Grok bot listings by words in the name or description. Optionally filter to one author. Returns at most 10.',
       inputSchema: {
         type: 'object',
         additionalProperties: false,
         required: ['query'],
-        properties: { query: { type: 'string', maxLength: 200 }, category: { type: 'string', maxLength: 80 } },
+        properties: {
+          query: { type: 'string', maxLength: 200 },
+          category: { type: 'string', maxLength: 80 },
+          author: { type: 'string', maxLength: 80, description: 'Filter to one author name (case-insensitive exact match).' },
+        },
       },
       annotations: { readOnlyHint: true },
       execute: async function (args) {
         var q = words(args && args.query);
         if (!q.length) return { bots: [] };
+        var want = args && typeof args.author === 'string' ? args.author.trim().toLowerCase() : '';
         var slugs = [];
         if (args && args.category) slugs = [args.category];
         else {
@@ -30,6 +35,7 @@
           var doc = await fetch('/api/v1/categories/' + slugs[i] + '.json').then(function (r) { return r.ok ? r.json() : null; });
           var bots = (doc && doc.bots) || [];
           for (var j = 0; j < bots.length; j++) {
+            if (want && String(bots[j].a || '').trim().toLowerCase() !== want) continue;
             var name = String(bots[j].n || '').toLowerCase();
             var desc = String(bots[j].d || '').toLowerCase();
             var score = 0;
@@ -41,7 +47,7 @@
           }
         }
         hits.sort(function (a, b) { return b.score - a.score; });
-        return { bots: hits.slice(0, 5) };
+        return { bots: hits.slice(0, 10) };
       },
     });
     ctx.registerTool({

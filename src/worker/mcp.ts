@@ -78,8 +78,8 @@ export const TOOLS: Tool[] = [
   {
     name: 'grokbot_search',
     title: 'Search bots',
-    description: 'Scores public listings by how many query words appear in the name and description. Name matches count double. Returns at most 5.',
-    inputSchema: obj({ query: str(200), category: str(80) }, ['query']),
+    description: 'Scores public listings by how many query words appear in the name and description. Name matches count double. Optionally filter to one author. Returns at most 10.',
+    inputSchema: obj({ query: str(200), category: str(80), author: str(80, { description: 'Filter to one author name (case-insensitive exact match).' }) }, ['query']),
     outputSchema: out({ bots: { type: 'array' } }, ['bots']),
     annotations: READ_ANN,
   },
@@ -212,7 +212,7 @@ function scoreBots(bots: SearchBot[], query: string, slug: string): { id: string
     return { id: b.i, name: b.n, author: b.a ?? '', description: b.d ?? '', category: b.c ?? slug, score };
   }).filter((b) => b.score > 0);
   ranked.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name) || x.id.localeCompare(y.id));
-  return ranked.slice(0, 5);
+  return ranked.slice(0, 10);
 }
 
 async function callTool(name: string, args: Record<string, unknown>, req: Request, hooks: McpHooks, id: unknown): Promise<Response> {
@@ -271,6 +271,11 @@ async function callTool(name: string, args: Record<string, unknown>, req: Reques
     if (typeof query !== 'string' || query.trim().length < 2 || query.length > 200) return invalid(id, { query: 'required, 2-200 characters' });
     const category = args.category;
     if (category !== undefined && (typeof category !== 'string' || !/^[a-z0-9-]{1,80}$/.test(category))) return invalid(id, { category: 'must be a category slug' });
+    const author = args.author;
+    if (author !== undefined && (typeof author !== 'string' || author.trim().length === 0 || author.length > 80)) {
+      return invalid(id, { author: 'must be an author name of 1-80 characters' });
+    }
+    const wantAuthor = typeof author === 'string' ? author.trim().toLowerCase() : '';
     const slugs = category ? [category] : await categorySlugs(hooks);
     if (!slugs) return toolResult(id, { ok: false }, true, 'categories unavailable');
     const found: ReturnType<typeof scoreBots> = [];
@@ -279,10 +284,13 @@ async function callTool(name: string, args: Record<string, unknown>, req: Reques
       if (status !== 200) continue;
       const bots = asRecord(body).bots;
       if (!Array.isArray(bots)) continue;
-      found.push(...scoreBots(bots as SearchBot[], query, slug));
+      const candidates = wantAuthor
+        ? (bots as SearchBot[]).filter((b) => (b.a ?? '').trim().toLowerCase() === wantAuthor)
+        : bots as SearchBot[];
+      found.push(...scoreBots(candidates, query, slug));
     }
     found.sort((x, y) => y.score - x.score || x.name.localeCompare(y.name));
-    const bots = found.slice(0, 5).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
+    const bots = found.slice(0, 10).map((b) => ({ ...b, link: `https://x.ai/bot/${codeOfId(b.id, slugs)}` }));
     return toolResult(id, { bots }, false, `${bots.length} matches`);
   }
   if (name === 'grokbot_submit_bot') {

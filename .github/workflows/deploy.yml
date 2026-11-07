@@ -23,6 +23,7 @@ jobs:
       - run: corepack enable && corepack prepare pnpm@10.11.1 --activate
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      - run: pnpm run gate:deploy
       - run: pnpm check:counts
       - run: pnpm check:contrast
 
@@ -57,6 +58,9 @@ jobs:
       - if: steps.creds.outputs.present == 'true'
         run: pnpm build
       - if: steps.creds.outputs.present == 'true'
+        run: pnpm run gate:deploy
+      - if: steps.creds.outputs.present == 'true'
+        name: wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

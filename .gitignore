@@ -10,3 +10,6 @@ public/api/
 public/feed.xml
 public/feed.json
 public/digests/
+src/data/
+public/_worker.js/
+.worktrees/

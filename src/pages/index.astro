@@ -20,6 +20,7 @@ import { allCategories, meta } from '../lib/data';
 >
   <section class="hero">
     <div class="wrap">
+      <p class="total-bots"><span class="num">{meta.totalBots.toLocaleString('en-US')}</span> <span class="label">Grok bots indexed</span></p>
       <h1><span class="line">Find the bot.</span><span class="line accent">Skip the hunt.</span></h1>
       <p class="lede">Thousands of public Grok bot listings in {meta.categoryCount} categories. Search by name, author or job, then open the bot.</p>
       <SearchBar />
@@ -41,4 +42,7 @@ import { allCategories, meta } from '../lib/data';
 </Base>
 <style>
   .snapshot { margin: 1rem 0 0; }
+  .total-bots { margin: 0 0 1rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .25em .6em; }
+  .total-bots .num { font-family: var(--font-display); font-size: clamp(3.5rem, 13vw, 8rem); line-height: 1; color: var(--olo); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+  .total-bots .label { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.4rem, 4vw, 2.4rem); color: var(--text); }
 </style>

@@ -4,10 +4,11 @@
 //
 // Usage: tsx scripts/verify-deploy-artifact.ts [--bundle PATH] [--bots PATH]
 //   GATE_BUNDLE / GATE_BOTS override the same paths (discrimination proof only).
+//   GATE_LIVE overrides the data/live/changes.json path (regression test only).
 import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { readLive } from './lib-live';
+import { readLive, splitLiveAdded } from './lib-live';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const BASE = 'e760334a95393b08ff8fbf125d9fb3e85f24b114';
@@ -119,13 +120,16 @@ const categories = readJson(categoriesPath) as Category[];
 const meta = readJson(metaPath) as { totalBots: number; totalListings: number };
 const bots = readJson(botsPath) as Bot[];
 const known = new Set(categories.map((c) => c.slug));
-const live = readLive(known);
+const live = readLive(known, process.env.GATE_LIVE);
 const builtIds = new Set(bots.map((b) => String(b.id ?? '')));
-const missing = live.added.filter((a) => !builtIds.has(a.id));
+// build-data.ts builds seed + added - dead, so an added id that is also dead is correctly absent from bots.json.
+const { expected, deadExcluded } = splitLiveAdded(live);
+const missing = expected.filter((a) => !builtIds.has(a.id));
 const extra = bots.filter((b) => !live.added.some((a) => a.id === b.id)).length;
 
 console.log(`gate:deploy live-added expected: ${live.added.length}`);
 console.log(`gate:deploy missing: ${missing.length}`);
+if (deadExcluded.length) console.log(`gate:deploy INFO ${deadExcluded.length} accepted live-added ids also marked dead this snapshot, excluded from G1a (build rule: seed + added - dead)`);
 console.log(`gate:deploy built-bot count: ${bots.length}`);
 if (botsPath !== join(ROOT, 'src/data/bots.json')) console.log(`gate:deploy bots override: ${botsPath}`);
 if (bundlePath !== join(ROOT, 'public/_worker.js/index.js')) console.log(`gate:deploy bundle override: ${bundlePath}`);
@@ -136,7 +140,7 @@ if (missing.length) {
   console.error('gate:deploy missing ids:');
   for (const a of missing) console.error(a.id);
 } else {
-  pass(`G1a every accepted live-added id is in bots.json (${live.added.length})`);
+  pass(`G1a every accepted live-added id not also dead is in bots.json (${expected.length})`);
 }
 console.log(`gate:deploy INFO extra built ids not in accepted live-added: ${extra} (not a failure; corpus bots are expected)`);
 

@@ -76,6 +76,7 @@ section.block { padding: 3rem 0; }
 .site-header nav ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 .site-header nav a { color: var(--text); text-decoration: none; font-weight: 500; padding: .4rem 0; }
 .site-header nav a:hover, .site-header nav a[aria-current='page'] { color: var(--olo); }
+.site-header nav a.nav-feature { border-bottom: 2px solid var(--olo); }
 .site-footer { border-top: 1px solid var(--glass-edge); box-shadow: var(--glass-highlight); padding: 2rem 0 3rem; margin-top: 3rem; font-size: .9rem; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; flex-wrap: wrap; }

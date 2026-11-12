@@ -26,6 +26,7 @@
     "precheck:counts": "pnpm run build:data",
     "check:counts": "tsx scripts/assert-counts.ts",
     "gate:deploy": "tsx scripts/verify-deploy-artifact.ts",
+    "test:gate": "tsx scripts/test-gate-g1a.ts",
     "deploy": "pnpm run gate:deploy && npx --yes wrangler@4.123.0 deploy --config wrangler.toml"
   },
   "dependencies": {

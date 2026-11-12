@@ -27,3 +27,11 @@ export function readLive(knownCategories: Set<string>, file = join(ROOT, 'data/l
   }
   return { added, dead: new Set(ch.dead.map((c) => String(c).toLowerCase())) };
 }
+
+/** The build rule "seed + added - dead" (build-data.ts): an added bot also dead in the same snapshot is not built. */
+export function splitLiveAdded(live: { added: LiveAdded[]; dead: Set<string> }): { expected: LiveAdded[]; deadExcluded: LiveAdded[] } {
+  const expected: LiveAdded[] = [];
+  const deadExcluded: LiveAdded[] = [];
+  for (const a of live.added) (live.dead.has(a.code.toLowerCase()) ? deadExcluded : expected).push(a);
+  return { expected, deadExcluded };
+}

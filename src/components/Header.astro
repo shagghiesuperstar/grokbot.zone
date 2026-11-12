@@ -1,6 +1,7 @@
 ---
 const here = Astro.url.pathname;
 const links = [
+  { href: '/agents/', label: 'For AI Agents', feature: true },
   { href: '/categories/', label: 'Categories' },
   { href: '/bots/', label: 'Search' },
   { href: '/faq/', label: 'FAQ' },
@@ -13,7 +14,7 @@ const links = [
     <nav aria-label="Main">
       <ul>
         {links.map((l) => (
-          <li><a href={l.href} aria-current={here.startsWith(l.href) ? 'page' : undefined}>{l.label}</a></li>
+          <li><a href={l.href} class={l.feature ? 'nav-feature' : undefined} aria-current={here.startsWith(l.href) ? 'page' : undefined}>{l.label}</a></li>
         ))}
       </ul>
     </nav>

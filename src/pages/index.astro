@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import SearchBar from '../components/SearchBar.astro';
 import TrendingRail from '../components/TrendingRail.astro';
 import ReferralCTA from '../components/ReferralCTA.astro';
+import FeaturedBotCTA from '../components/FeaturedBotCTA.astro';
 import RecentRail from '../components/RecentRail.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import { allCategories, meta } from '../lib/data';
@@ -18,6 +19,7 @@ import { allCategories, meta } from '../lib/data';
       potentialAction: { '@type': 'SearchAction', target: 'https://grokbot.zone/bots/?q={search_term_string}', 'query-input': 'required name=search_term_string' } },
   ]}
 >
+  <FeaturedBotCTA />
   <section class="hero">
     <div class="wrap">
       <p class="total-bots"><span class="num">{meta.totalBots.toLocaleString('en-US')}</span> <span class="label">Grok bots indexed</span></p>

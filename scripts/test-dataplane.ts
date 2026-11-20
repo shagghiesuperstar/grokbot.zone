@@ -639,8 +639,14 @@ await t('D27: only a missing page falls through to D1; the asset binding\'s redi
 await t('O11: a seed bot page and the static JSON/feeds/sitemaps are byte-for-byte the built files when D1 has nothing for them', async () => {
   const db = liveDb(); const env = envOf(db, { ASSETS: distAssets });
   const page = await get(env, `/bots/${SEED_BOT.slug}/`, { 'user-agent': HUMAN }); assert.equal(await page.res.text(), distFile(`bots/${SEED_BOT.slug}/index.html`));
-  for (const [path, file] of [['/feed.json', 'feed.json'], ['/feed.xml', 'feed.xml'], ['/sitemap-index.xml', 'sitemap-index.xml'], ['/sitemap-0.xml', 'sitemap-0.xml'], [`/categories/${SEED_BOT.cat}/`, `categories/${SEED_BOT.cat}/index.html`], ['/search/live.json', 'search/live.json']] as const)
+  for (const [path, file] of [['/feed.json', 'feed.json'], ['/feed.xml', 'feed.xml'], ['/sitemap-index.xml', 'sitemap-index.xml'], [`/categories/${SEED_BOT.cat}/`, `categories/${SEED_BOT.cat}/index.html`], ['/search/live.json', 'search/live.json']] as const)
     assert.equal(await (await get(env, path)).res.text(), distFile(file), `${path} before the first hourly job`);
+  // sitemap-0 bot URLs and the search index follow the live list as soon as D1 has live rows, not after the hourly job.
+  const earlyApi = JSON.parse(await (await get(env, '/api/v1/index.json')).res.text()) as { totalBots: number };
+  const earlySearch = JSON.parse(await (await get(env, '/search/index.json')).res.text()) as { totalBots: number };
+  const earlySm = await (await get(env, '/sitemap-0.xml')).res.text();
+  assert.equal(earlySearch.totalBots, earlyApi.totalBots, 'search index matches the live API before the hourly job');
+  assert.equal((earlySm.match(/\/bots\/[^/<]+\//g) ?? []).length, earlyApi.totalBots, 'sitemap bot URLs match the live API before the hourly job');
   const filled = await fillStore(liveDb());
   const page2 = await get(filled, `/bots/${SEED_BOT.slug}/`, { 'user-agent': HUMAN }); assert.equal(await page2.res.text(), distFile(`bots/${SEED_BOT.slug}/index.html`), 'a live seed page is never touched');
 });
@@ -669,31 +675,30 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   assert.ok(!sc.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`) && stat.includes(`data-code="${SEED_BOT2.code.toLowerCase()}"`), 'the dead seed bot is dropped from its category page');
   const n0 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(stat)![1]); const n1 = Number(/data-count[^>]*><span class="num"[^>]*>(\d+)</.exec(sc)![1]);
   assert.equal(n1, n0 - 1 + (SEED_BOT.cat === 'travel' ? 2 : 0));
-  const nodes = await Promise.all(['/feed.json', '/feed.xml', '/sitemap-index.xml', '/sitemap-0.xml', '/sitemap-live.xml'].map(g));
-  const [fj, fx, si, s0, sl] = nodes;
+  const nodes = await Promise.all(['/feed.json', '/feed.xml', '/sitemap-index.xml', '/sitemap-0.xml'].map(g));
+  const [fj, fx, si, s0] = nodes;
   const items = JSON.parse(fj).items.map((i: { url: string }) => i.url);
   assert.ok(items.includes(`https://grokbot.zone/bots/travel-${NEW_A}/`) && !items.some((u: string) => u.toLowerCase().endsWith(`-${SEED_BOT2.code.toLowerCase()}/`)));
   assert.ok(fx.includes(`/bots/travel-${NEW_A}/`) && !fx.toLowerCase().includes(SEED_BOT2.code.toLowerCase()) && !fx.includes('<script>'));
-  assert.ok(si.includes('sitemap-live.xml')); assert.ok(!s0.toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`) && distFile('sitemap-0.xml').toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`));
-  assert.ok(sl.includes(`/bots/travel-${NEW_A}/`) && sl.includes(`/bots/uncategorized-${NEW_B}/`) && !sl.includes(NEW_DEAD) && !sl.includes(NEW_EXC));
-  // same dead set on the search index, codes.json and totalBots: sitemap bot count == search index totalBots
+  assert.ok(!si.includes('sitemap-live.xml'), 'sitemap index does not advertise a second bot list');
+  assert.ok(!s0.toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`) && distFile('sitemap-0.xml').toLowerCase().includes(`-${SEED_BOT2.code.toLowerCase()}/`));
+  assert.ok(s0.includes(`/bots/travel-${NEW_A}/`) && s0.includes(`/bots/uncategorized-${NEW_B}/`) && !s0.includes(NEW_DEAD) && !s0.includes(NEW_EXC));
+  assert.equal((await get(env, '/sitemap-live.xml')).res.status, 404, 'sitemap-live is not a second copy of the live list');
   const idx = JSON.parse(await g('/search/index.json')) as { totalBots: number; categories: { slug: string; count: number }[] };
-  const builtIdx = JSON.parse(distFile('search/index.json')) as { totalBots: number };
   const sitemapBots = (s0.match(/\/bots\/[^/<]+\//g) ?? []).length;
-  assert.equal(idx.totalBots, builtIdx.totalBots - 1, 'totalBots drops the one dead seed bot, not the dead bot the build never shipped');
-  assert.equal(sitemapBots, idx.totalBots, 'sitemap bot count == search index totalBots');
   // The read API is the live partition, not the static snapshot minus dead. Sum of category counts == totalBots.
   const api = JSON.parse(await g('/api/v1/index.json')) as { totalBots: number; asOf: string };
   const apiCats = JSON.parse(await g('/api/v1/categories.json')) as { slug: string; count: number }[];
   const liveTotal = apiCats.reduce((n, c) => n + c.count, 0);
   assert.equal(api.totalBots, liveTotal, 'index.totalBots equals the sum of live category counts');
+  assert.equal(idx.totalBots, api.totalBots, 'search index totalBots is the same live list as /api/v1/index.json');
+  assert.equal(sitemapBots, idx.totalBots, 'sitemap bot count == search index totalBots');
   assert.notEqual(api.asOf, '2026-10-28');
   const codes = JSON.parse(await g('/api/v1/codes.json')) as { codes: string[] };
   assert.equal(codes.codes.length, api.totalBots, 'codes.json is the same live set');
   assert.ok(!codes.codes.includes(SEED_BOT2.code.toLowerCase()), 'codes.json drops the dead seed code');
   assert.ok(codes.codes.includes(NEW_A.toLowerCase()) && codes.codes.includes(NEW_B.toLowerCase()));
-  const builtCats = (builtIdx as { categories: { slug: string; count: number }[] }).categories;
-  assert.equal(idx.categories.find((c) => c.slug === SEED_BOT2.cat)!.count, builtCats.find((c) => c.slug === SEED_BOT2.cat)!.count - 1, 'search index category count drops the dead seed bot');
+  assert.equal(idx.categories.find((c) => c.slug === SEED_BOT2.cat)!.count, apiCats.find((c) => c.slug === SEED_BOT2.cat)!.count, 'search index category count is the live partition');
   const catSearch = JSON.parse(await g(`/search/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
   const apiCat = JSON.parse(await g(`/api/v1/categories/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
   assert.ok(!catSearch.bots.some((b) => b.i === SEED_BOT2.slug) && !apiCat.bots.some((b) => b.i === SEED_BOT2.slug), 'dead seed bot leaves the search payloads');
@@ -729,9 +734,14 @@ await t('missing seed-codes.json logs and the count endpoints refuse instead of 
   console.error = (...a: unknown[]) => { logs.push(a.map(String).join(' ')); };
   try {
     resetDeadCache();
-    assert.equal((await get(env, '/search/index.json')).res.status, 503);
+    const search = await get(env, '/search/index.json');
+    assert.equal(search.res.status, 200, 'search index reads the live list, not seed-codes.json');
+    const searchBody = await search.res.json() as { totalBots: number };
+    const apiBody = await (await get(env, '/api/v1/index.json')).res.json() as { totalBots: number };
+    assert.equal(searchBody.totalBots, apiBody.totalBots);
     const liveCats = await get(env, '/api/v1/categories.json');
     assert.equal(liveCats.res.status, 200, 'live categories do not read seed-codes.json');
+    await get(env, '/search/live.json');
     assert.ok(logs.some((l) => l.includes('seed-codes.json')), logs.join('\n') || '(no log)');
   } finally { console.error = orig; }
 });
@@ -984,6 +994,43 @@ await t('codes.json: marketplace live row is dropped; index and category counts 
   assert.ok(goodBot);
   const goodBody = (await goodBot.json()) as { code: string };
   assert.equal(goodBody.code, good);
+});
+
+await t('live list: one bad-shape row is absent from search total, sitemap bot URLs, and index.json totalBots', async () => {
+  const db = new FakeD1();
+  const good = CODE(1);
+  insertBot(db, good, { category: 'coding-software' });
+  insertBot(db, 'marketplace', { category: 'coding-software' });
+  const sm = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://grokbot.zone/categories/coding-software/</loc></url><url><loc>https://grokbot.zone/bots/</loc></url><url><loc>https://grokbot.zone/bots/coding-software-STALECODE00000000001/</loc></url></urlset>`;
+  const indexXml = `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://grokbot.zone/sitemap-0.xml</loc></sitemap></sitemapindex>`;
+  const assets = { fetch: async (r: Request) => {
+    const p = new URL(r.url).pathname;
+    if (p === '/sitemap-0.xml') return new Response(sm, { headers: { 'content-type': 'application/xml' } });
+    if (p === '/sitemap-index.xml') return new Response(indexXml, { headers: { 'content-type': 'application/xml' } });
+    return new Response('missing', { status: 404 });
+  } };
+  const env = envOf(db, { ASSETS: assets });
+  const searchRes = await get(env, '/search/index.json');
+  assert.equal(searchRes.res.status, 200);
+  assert.equal(searchRes.res.headers.get('cache-control'), 'public, max-age=60');
+  const search = await searchRes.res.json() as { totalBots: number };
+  const api = await (await get(env, '/api/v1/index.json')).res.json() as { totalBots: number };
+  const siteRes = await get(env, '/sitemap-0.xml');
+  assert.equal(siteRes.res.status, 200);
+  assert.equal(siteRes.res.headers.get('cache-control'), 'public, max-age=60');
+  const xml = await siteRes.res.text();
+  const bots = xml.match(/\/bots\/[^/<]+\//g) ?? [];
+  assert.equal(search.totalBots, 1);
+  assert.equal(api.totalBots, search.totalBots);
+  assert.equal(bots.length, search.totalBots, 'sitemap bot count == search total == index.json totalBots');
+  assert.equal(bots[0], `/bots/coding-software-${good}/`);
+  assert.ok(!xml.includes('marketplace'));
+  assert.ok(!xml.includes('STALECODE'));
+  assert.ok(xml.includes('/categories/coding-software/'));
+  assert.ok(xml.includes('https://grokbot.zone/bots/</loc>'));
+  assert.equal((await get(env, '/sitemap-live.xml')).res.status, 404);
+  const index = await (await get(env, '/sitemap-index.xml')).res.text();
+  assert.ok(!index.includes('sitemap-live.xml'));
 });
 
 console.log(failed ? `test-dataplane: ${n} passed, ${failed} FAILED` : `test-dataplane: ${n} passed`);

@@ -16,6 +16,7 @@ import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, goReferral, isDead, record } from './dp/telemetry';
 import { liveCatalog } from './dp/catalog';
+import { liveSurface } from './dp/catalog';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
@@ -713,6 +714,11 @@ async function route(request: Request, env: Env, ctx: ExecutionContext, url: URL
   } catch (e) {
     console.error('route error', path, (e as Error).message);
     return json(500, { ok: false, error: 'internal' });
+  }
+  // Search index and sitemap bot URLs: the catalog list, not the build-time corpus. Not the digest path.
+  if ((m === 'GET' || m === 'HEAD') && (path === '/search/index.json' || path === '/sitemap-0.xml' || path === '/sitemap-index.xml' || path === '/sitemap-live.xml')) {
+    const surface = await liveSurface(env.DB, env.ASSETS, path, request);
+    if (surface) return surface;
   }
   return dataPlane(request, env, ctx, path);
 }

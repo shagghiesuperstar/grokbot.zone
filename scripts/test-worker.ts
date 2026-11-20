@@ -468,10 +468,16 @@ await t('C2 digest: the emailed total counts only well-shaped live rows, matchin
   const env = digestEnv(); seedActive(env, 1);
   seedBot(env, { code: 'DigestBot100000000001', name: 'Digest Bot', first_seen: '2026-11-01T00:00:00.000Z', description: 'Listed this week.' });
   seedBot(env, { code: 'marketplace', name: 'Bad Shape', first_seen: '2026-11-01T00:00:00.000Z', status: 'live' });
+  const indexRes = await call('/api/v1/index.json', env, makeCtx());
+  assert.equal(indexRes.status, 200);
+  const index = await indexRes.json() as { totalBots: number };
+  const rawLive = Number(env.DB.rows("SELECT COUNT(*) AS n FROM bots WHERE status = 'live'")[0].n);
+  assert.ok(Number.isInteger(index.totalBots) && index.totalBots < rawLive, 'fixture keeps one bad-shape live row the catalog excludes');
   await fireDigest(env);
   assert.equal(env.EMAIL.sent.length, 1);
-  assert.match(env.EMAIL.sent[0].text, /^2026-11-02 — 1 bots in /, 'the live bad-shape row is not in the total');
-  assert.match(env.EMAIL.sent[0].subject, /1 bots tracked/);
+  const mailed = Number(/^(\d{4}-\d{2}-\d{2}) — (\d+) bots in /.exec(env.EMAIL.sent[0].text)?.[2]);
+  assert.equal(mailed, index.totalBots, 'digest total equals /api/v1/index.json totalBots');
+  assert.match(env.EMAIL.sent[0].subject, new RegExp(`\\b${index.totalBots} bots tracked\\b`));
 });
 await t('C2 digest: with an address the digest sends to active readers, with the address, an unsubscribe link and both List-Unsubscribe headers', async () => {
   const env = digestEnv({ MAIL_POSTAL_ADDRESS: 'PO Box 1, Example City' }); seedActive(env);

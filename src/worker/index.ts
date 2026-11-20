@@ -15,6 +15,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, goReferral, isDead, record } from './dp/telemetry';
+import { liveCatalog } from './dp/catalog';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
@@ -821,6 +822,10 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
   const get = request.method === 'GET' || request.method === 'HEAD';
   if (path === '/go/grok') return goReferral(request, env.DB, (p) => ctx.waitUntil(p));
   if (path === '/go' || path.startsWith('/go/')) return go(request, env.DB, decodeURIComponent(path.slice(4)).replace(/\/+$/, ''), (p) => ctx.waitUntil(p), (lc) => seedSpelling(env, lc));
+  if (get) {
+    const catalog = await liveCatalog(env.DB, path);
+    if (catalog) return catalog;
+  }
   if (get && isStoredFile(path)) {
     const stored = await storedFile(env.DB, path);
     if (stored) return stored;

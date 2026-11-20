@@ -2,9 +2,10 @@
 // Served by the Worker so content-types match the scanners. No postal location and no mailbox
 // in these bodies (assert-no-emails scans dist text; the contact mailbox stays in the Worker-only security.txt).
 import { SITE } from '../lib/submissions';
+import { mcpManifest } from './mcp';
 
 export const LINK_HEADER =
-  '</.well-known/api-catalog>; rel="api-catalog", </openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"; type="text/markdown", </.well-known/ai-catalog.json>; rel="ai-catalog", </mcp/server-card>; rel="mcp-server-card"';
+  '</.well-known/api-catalog>; rel="api-catalog", </openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"; type="text/markdown", </.well-known/ai-catalog.json>; rel="ai-catalog", </.well-known/mcp.json>; rel="mcp", </mcp/server-card>; rel="mcp-server-card"';
 
 const SKILL_PATH = '/.well-known/agent-skills/grokbot-zone-onboarding/SKILL.md';
 const MCP_URL = `${SITE}/mcp`;
@@ -99,7 +100,7 @@ const LLMS = `# GrokBot Zone
 
 > A searchable directory of public Grok bot listings. Agents can search, read, submit and subscribe with no browser.
 
-The catalog is a snapshot, refreshed Monday and Thursday. A submitted bot is queued and checked before it is public. This site is not a store. The contact path is the submit form.
+The read API is generated from the live directory. A submitted bot is queued and checked before it is public. This site is not a store. The contact path is the submit form.
 
 ## Products / Services
 - [Categories](${SITE}/categories/): bots grouped by the job they do
@@ -267,6 +268,21 @@ function apiCatalog() {
   };
 }
 
+function aiPlugin() {
+  return {
+    schema_version: 'v1',
+    name_for_human: 'GrokBot Zone',
+    name_for_model: 'grokbotzone',
+    description_for_human: 'A searchable directory of public Grok bot listings.',
+    description_for_model: 'Search and read public Grok bot listings. Read tools need no account. Submit and subscribe use the same limits as the site forms.',
+    auth: { type: 'none' },
+    api: { type: 'openapi', url: `${SITE}/openapi.json` },
+    logo_url: `${SITE}/favicon.svg`,
+    contact_email: 'submit@grokbot.zone',
+    legal_info_url: `${SITE}/faq/`,
+  };
+}
+
 function aiCatalog(skillUrl: string) {
   const entry = (name: string, displayName: string, type: string, url: string) => ({
     id: `urn:air:grokbot.zone:discovery:${name}`,
@@ -327,6 +343,8 @@ export async function agentResponse(request: Request, env: AssetEnv, path: strin
   if (path === '/openapi.json') return denied ?? head(request, jsonDoc(OPENAPI, 'application/vnd.oai.openapi+json; charset=utf-8'));
   if (path === '/.well-known/api-catalog') return denied ?? head(request, jsonDoc(apiCatalog(), 'application/linkset+json; charset=utf-8'));
   if (path === '/.well-known/ai-catalog.json') return denied ?? head(request, jsonDoc(aiCatalog(skillUrl), 'application/ai-catalog+json; charset=utf-8'));
+  if (path === '/.well-known/mcp.json') return denied ?? head(request, jsonDoc(mcpManifest(), 'application/json; charset=utf-8'));
+  if (path === '/.well-known/ai-plugin.json') return denied ?? head(request, jsonDoc(aiPlugin(), 'application/json; charset=utf-8'));
   if (path === '/.well-known/mcp/server-card.json' || path === '/mcp/server-card') {
     return denied ?? head(request, jsonDoc(SERVER_CARD, 'application/mcp-server-card+json; charset=utf-8'));
   }

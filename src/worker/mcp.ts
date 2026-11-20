@@ -38,8 +38,20 @@ export const TOOLS: Tool[] = [
   {
     name: 'grokbot_check_listed',
     title: 'Check if a bot is listed',
-    description: 'Reports whether a Grok bot code is already in the directory. Pass a link or a code.',
-    inputSchema: obj({ link: str(200), code: str(64) }),
+    description: 'Reports whether a Grok bot code is already in the directory. Pass a link or a code. One of the two is required.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      description: 'Pass a link or a code. One of the two is required.',
+      properties: {
+        link: str(200, { description: 'A public bot link (https://x.ai/bot/<code>). Required if code is omitted.' }),
+        code: str(64, { description: 'A bot code. Required if link is omitted.' }),
+      },
+      anyOf: [{ required: ['link'] }, { required: ['code'] }],
+      // Probes that only read top-level required must not call this with an empty object.
+      // anyOf is the OR. The handler still accepts either field on its own.
+      required: ['link'],
+    },
     outputSchema: out({ listed: { type: 'boolean' }, code: { type: 'string' } }, ['listed']),
     annotations: READ_ANN,
   },
@@ -115,6 +127,18 @@ export const TOOLS: Tool[] = [
     annotations: READ_ANN,
   },
 ].sort((a, b) => a.name.localeCompare(b.name));
+
+export function mcpManifest() {
+  return {
+    name: SERVER_INFO.name,
+    title: SERVER_INFO.title,
+    description: 'Search and list public Grok bot listings. Read tools need no account.',
+    endpoint: 'https://grokbot.zone/mcp',
+    transport: 'streamable-http',
+    protocolVersion: PROTOCOL_LEGACY,
+    tools: TOOLS.map((t) => ({ name: t.name, title: t.title, description: t.description })),
+  };
+}
 
 const TOOL_BY_NAME = new Map(TOOLS.map((t) => [t.name, t]));
 

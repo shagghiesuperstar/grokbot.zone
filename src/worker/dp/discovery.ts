@@ -10,12 +10,14 @@ const ARCHIVE_TIMEOUT_MS = 90_000;
 
 export interface Found { code: string; source: 'listing' | 'archive' }
 
-/** F5: every /bot/<code> href on the platform listing page. */
+/** F5: every /bot/<code> on the platform listing page. href= is the old shape; the page now also embeds addHref":"/bot/<code>". */
 export function parseListing(html: string): string[] {
   const out = new Map<string, string>();
-  for (const m of html.matchAll(/href=["'](?:https?:\/\/(?:www\.)?x\.ai)?\/bot\/([A-Za-z0-9_-]+)["'/?#]/g)) {
-    if (CODE_RE.test(m[1]) && !out.has(m[1].toLowerCase())) out.set(m[1].toLowerCase(), m[1]);
-  }
+  const add = (code: string) => {
+    if (CODE_RE.test(code) && !out.has(code.toLowerCase())) out.set(code.toLowerCase(), code);
+  };
+  for (const m of html.matchAll(/href=["'](?:https?:\/\/(?:www\.)?x\.ai)?\/bot\/([A-Za-z0-9_-]+)["'/?#]/g)) add(m[1]);
+  for (const m of html.matchAll(/\/bot\/([A-Za-z0-9_-]{21})(?![A-Za-z0-9_-])/g)) add(m[1]);
   return [...out.values()];
 }
 

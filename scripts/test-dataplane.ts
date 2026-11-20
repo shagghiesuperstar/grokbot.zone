@@ -479,7 +479,9 @@ await t('read files: served from meta once the cron has run; static fallback bef
   resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
   const before = await get(env, '/api/v1/trending.json'); assert.equal(before.res.status, 200); assert.ok((await before.res.text()).includes('/api/v1/trending.json'), 'static fallback');
   assert.equal((await get(env, '/api/v1/signals/daily.json')).res.status, 503);
-  const c = clock(); const p = platform(() => ({ status: 200 }), c);
+  // The cron's clock is the time the run happened; freshness is judged against the wall clock, so the
+  // frozen suite clock (2026-11-10) would stamp meta that is already past STALE_MS.
+  const c = clock(Date.now()); const p = platform(() => ({ status: 200 }), c);
   await runDataPlane(env as never, c.t, { fetch: p.f, clock: c });
   for (const path of ['/api/v1/trending.json', '/api/v1/recent.json', '/api/v1/signals/daily.json', '/api/v1/catalog/changes.json']) {
     const r = await get(env, path); assert.equal(r.res.status, 200, path); assert.ok(r.queries <= 50);

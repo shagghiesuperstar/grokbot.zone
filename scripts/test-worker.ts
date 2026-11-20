@@ -463,6 +463,15 @@ for (const empty of [undefined, '', '   ']) {
     assert.match(m.headers['List-Unsubscribe'], /^<https:\/\/grokbot\.zone\/subscribe\/unsubscribe\?t=/); assert.equal(m.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
   });
 }
+await t('C2 digest: the emailed total counts only well-shaped live rows, matching the read API', async () => {
+  const env = digestEnv(); seedActive(env, 1);
+  seedBot(env, { code: 'DigestBot100000000001', name: 'Digest Bot', first_seen: '2026-11-01T00:00:00.000Z', description: 'Listed this week.' });
+  seedBot(env, { code: 'marketplace', name: 'Bad Shape', first_seen: '2026-11-01T00:00:00.000Z', status: 'live' });
+  await fireDigest(env);
+  assert.equal(env.EMAIL.sent.length, 1);
+  assert.match(env.EMAIL.sent[0].text, /^2026-11-02 — 1 bots in /, 'the live bad-shape row is not in the total');
+  assert.match(env.EMAIL.sent[0].subject, /1 bots tracked/);
+});
 await t('C2 digest: with an address the digest sends to active readers, with the address, an unsubscribe link and both List-Unsubscribe headers', async () => {
   const env = digestEnv({ MAIL_POSTAL_ADDRESS: 'PO Box 1, Example City' }); seedActive(env);
   seedBot(env, { code: 'DigestBot100000000001', name: 'Digest Bot', first_seen: '2026-11-01T00:00:00.000Z', description: 'Listed this week.' });

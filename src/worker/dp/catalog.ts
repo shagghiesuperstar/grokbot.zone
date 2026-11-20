@@ -1,6 +1,7 @@
-// The read API (index, categories, category files, bot records, codes, recent) from one live query:
-// bots WHERE status = 'live'. Each bot is filed under exactly one slug, so the sum of category
-// counts equals totalBots by construction. Static files remain the fallback when D1 is down.
+// The read API (index, categories, category files, bot records, codes, recent), the search index,
+// and sitemap bot URLs from one live query: bots WHERE status = 'live', then the JS CODE_RE filter
+// in listedLive. Each bot is filed under exactly one slug, so the sum of category counts equals
+// totalBots by construction. Static files remain the fallback when D1 is down or empty.
 import categories from '../../data/categories.json';
 import { catalogGuardMessage } from '../../lib/catalog-guard';
 import { stripEmails } from '../../lib/strip-emails';
@@ -19,6 +20,9 @@ PURPOSE.set(CATEGORY_NONE, 'Live bots that have not been filed in a category yet
 const NO_RANK = 1_000_000;
 const SITE = 'https://grokbot.zone';
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=60' };
+const XML_HEADERS = { 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=60' };
+// Bot page URLs only. /bots/ (the index) has nothing between the slashes, so it stays.
+const BOT_LOC = /<url><loc>https:\/\/grokbot\.zone\/bots\/[^/<]+\/<\/loc><\/url>/g;
 const BOT_JSON = /^\/api\/v1\/bots\/([A-Za-z0-9_-]{1,160})\.json$/;
 const CAT_JSON = /^\/api\/v1\/categories\/([a-z0-9-]{1,80})\.json$/;
 
@@ -178,6 +182,59 @@ async function recentFile(db: D1Database, asOf: string, nowMs: number): Promise<
     categories: rows.map((c) => ({ slug: c.slug, label: c.label, count: c.count, asOf })),
     generatedAt: iso(nowMs),
   });
+}
+
+function xmlEscape(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/** Static sitemap with its bot URLs replaced by ids from listedLive. Null if the file has no urlset. */
+export function sitemapWithListed(body: string, ids: string[]): string | null {
+  const kept = body.replace(BOT_LOC, '');
+  const at = kept.lastIndexOf('</urlset>');
+  if (at < 0) return null;
+  const urls = ids.map((id) => `<url><loc>${SITE}/bots/${xmlEscape(id)}/</loc></url>`).join('');
+  return kept.slice(0, at) + urls + kept.slice(at);
+}
+
+async function liveSearchIndex(db: D1Database, nowMs: number): Promise<Response> {
+  const asOf = dayOf(nowMs);
+  const { total, counts } = await liveCounts(db);
+  const rows = categoryRows(counts, asOf);
+  const guard = catalogGuardMessage(rows.reduce((n, c) => n + c.count, 0), total, total);
+  if (guard) return guardFail(guard);
+  // Category payloads are taxonomy-only. Uncategorized stays in totalBots (the guard counted it) but has no /search file.
+  return json({
+    asOf,
+    totalBots: total,
+    categories: TAXONOMY.map((c) => ({ slug: c.slug, label: c.label, count: counts.get(c.slug) ?? 0, path: `/search/${c.slug}.json` })),
+  });
+}
+
+/**
+ * /search/index.json and sitemap bot URLs from listedLive — the same filter as /api/v1/index.json.
+ * Null when D1 is missing or has no live rows, so the static files still answer.
+ * sitemap-live is 404 while the live list is active: one bot list, not a second copy.
+ */
+export async function liveSurface(db: D1Database | undefined, assets: { fetch(r: Request): Promise<Response> }, path: string, request: Request, nowMs = Date.now()): Promise<Response | null> {
+  if (!db) return null;
+  if (path !== '/search/index.json' && path !== '/sitemap-0.xml' && path !== '/sitemap-index.xml' && path !== '/sitemap-live.xml') return null;
+  try {
+    const totalRow = await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE status = 'live'`).first<{ n: number }>();
+    if (!Number(totalRow?.n)) return null;
+    if (path === '/search/index.json') return await liveSearchIndex(db, nowMs);
+    if (path === '/sitemap-live.xml') return new Response('not found\n', { status: 404, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=60' } });
+    if (path === '/sitemap-index.xml') return assets.fetch(new Request(new URL(path, request.url)));
+    const rows = await listedLive(db);
+    const res = await assets.fetch(new Request(new URL(path, request.url)));
+    if (!res.ok) return new Response('sitemap unavailable\n', { status: 503, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=60' } });
+    const xml = sitemapWithListed(await res.text(), rows.map((r) => botId(r.category, r.code)));
+    if (xml === null) return new Response('sitemap unavailable\n', { status: 503, headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, max-age=60' } });
+    return new Response(xml, { headers: XML_HEADERS });
+  } catch (e) {
+    console.error('live surface', path, (e as Error).message);
+    return null;
+  }
 }
 
 /** Live catalog response, or null to fall through to the static asset. A guard failure is a 503, not the stale file. */

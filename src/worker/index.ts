@@ -546,7 +546,7 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
     `SELECT code, name, description, category FROM bots WHERE (${where})${heldSql} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
   ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, ...heldNow, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
   const totals = await db.prepare(
-    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
+    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live' AND length(code) = 21 AND code NOT GLOB '*[^A-Za-z0-9_-]*'",
   ).first<{ total: number; cats: number }>();
   const payload: DigestPayload = {
     asOf: scheduledIso.slice(0, 10),
@@ -827,7 +827,7 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     if (catalog) return catalog;
   }
   if (get && isStoredFile(path)) {
-    const stored = await storedFile(env.DB, path);
+    const stored = await storedFile(env.DB, path, Date.now());
     if (stored) return stored;
     if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
   }

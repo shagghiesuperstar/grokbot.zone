@@ -48,9 +48,9 @@ export const TOOLS: Tool[] = [
         code: str(64, { description: 'A bot code. Required if link is omitted.' }),
       },
       anyOf: [{ required: ['link'] }, { required: ['code'] }],
-      // Probes that only read top-level required must not call this with an empty object.
-      // anyOf is the OR. The handler still accepts either field on its own.
-      required: ['link'],
+      // Neither field is always required. anyOf is the contract: a link or a code.
+      // No in-repo probe reads only top-level required. required is omitted so it
+      // cannot contradict anyOf. {} fails anyOf and the handler.
     },
     outputSchema: out({ listed: { type: 'boolean' }, code: { type: 'string' } }, ['listed']),
     annotations: READ_ANN,
@@ -136,7 +136,7 @@ export function mcpManifest() {
     endpoint: 'https://grokbot.zone/mcp',
     transport: 'streamable-http',
     protocolVersion: PROTOCOL_LEGACY,
-    tools: TOOLS.map((t) => ({ name: t.name, title: t.title, description: t.description })),
+    tools: TOOLS.map((t) => ({ name: t.name, title: t.title, description: t.description, inputSchema: t.inputSchema })),
   };
 }
 

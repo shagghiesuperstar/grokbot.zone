@@ -17,6 +17,8 @@ const META_KEYS = ['throttled_until', 'trending_at', 'checks_hourly', 'stats', '
 export const PHASES = ['discovery', 'lists', 'checks', 'submissions', 'trending', 'recent', 'purge'] as const;
 export type Phase = (typeof PHASES)[number];
 export const TRENDING_EVERY_MS = 55 * 60_000;
+/** Discovery is daily at 04:10 UTC, and also whenever the last run is older than this, so a missed tick cannot skip a day. */
+export const DISCOVERY_EVERY_MS = 6 * HOUR;
 
 const COLS = 'code_lc, code, name, author, description, category, cats, source, status, first_seen, last_checked, last_live, fail_count, first_fail';
 const updateSql = 'UPDATE bots SET code=?, name=?, author=?, description=?, category=?, cats=?, status=?, last_checked=?, last_live=?, fail_count=?, first_fail=? WHERE code_lc=?';
@@ -76,10 +78,11 @@ export async function runDataPlane(env: CronEnv, scheduledTime: number, deps: Cr
   if (heldUntil > now) {
     report.throttled = true;
   } else {
-    // ---- discovery: the daily 04:10 run, and once on a fresh database (no earlier discovery recorded) ----
+    // ---- discovery: the daily 04:10 run, once on a fresh database, and whenever the last run is overdue ----
     const t = new Date(scheduledTime);
     const inWindow = t.getUTCHours() === 4 && t.getUTCMinutes() >= 10 && t.getUTCMinutes() < 20;
-    const doDiscovery = inWindow || !meta.discovery_last_run;
+    const lastDisc = meta.discovery_last_run ? Date.parse(meta.discovery_last_run) : 0;
+    const doDiscovery = inWindow || !lastDisc || now - lastDisc >= DISCOVERY_EVERY_MS;
     if (doDiscovery) await phase('discovery', async () => {
       const found = await discover(up, { archive_resume: meta.archive_resume, archive_from: meta.archive_from }, now);
       if (found.found.length) {

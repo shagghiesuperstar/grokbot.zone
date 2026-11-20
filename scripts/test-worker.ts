@@ -10,6 +10,7 @@ import { pathToFileURL } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 import { build } from 'esbuild';
 import { ackAuthorized } from '../src/lib/submissions.ts';
+import { mcpManifest } from '../src/worker/mcp.ts';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const tmp = mkdtempSync(join(tmpdir(), 'gz-test-worker-'));
@@ -967,7 +968,7 @@ const textOf = (body: SearchCall) => {
 await t('MCP: grokbot_search schema adds optional author and still lists exactly 9 tools', async () => {
   const env = makeEnv();
   const listed = await mcpPost(env, { jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} });
-  const tools = ((await listed.json()) as { result: { tools: { name: string; description: string; inputSchema: { additionalProperties: boolean; required?: string[]; properties: Record<string, { type: string; maxLength?: number; description?: string }> } }[] } }).result.tools;
+  const tools = ((await listed.json()) as { result: { tools: { name: string; description: string; inputSchema: { additionalProperties: boolean; required?: string[]; anyOf?: { required: string[] }[]; properties: Record<string, { type: string; maxLength?: number; description?: string }> } }[] } }).result.tools;
   assert.equal(tools.length, 9);
   assert.deepEqual(tools.map((t) => t.name), [
     'grokbot_check_listed', 'grokbot_get_bot', 'grokbot_get_category', 'grokbot_health', 'grokbot_list_categories',
@@ -985,6 +986,22 @@ await t('MCP: grokbot_search schema adds optional author and still lists exactly
   assert.equal(search.inputSchema.properties.author.maxLength, 80);
   assert.equal(search.inputSchema.properties.author.description, 'Filter to one author name (case-insensitive exact match).');
   assert.equal(search.description, 'Scores public listings by how many query words appear in the name and description. Name matches count double. Optionally filter to one author. Returns at most 10.');
+  const listedTool = tools.find((t) => t.name === 'grokbot_check_listed');
+  if (!listedTool) throw new Error('grokbot_check_listed missing');
+  assert.equal(listedTool.description, 'Reports whether a Grok bot code is already in the directory. Pass a link or a code. One of the two is required.');
+  assert.deepEqual(listedTool.inputSchema.anyOf, [{ required: ['link'] }, { required: ['code'] }]);
+  assert.equal(listedTool.inputSchema.required, undefined);
+  assert.ok(listedTool.inputSchema.properties.link);
+  assert.ok(listedTool.inputSchema.properties.code);
+});
+
+await t('MCP: /.well-known/mcp.json serves the corrected grokbot_check_listed schema', async () => {
+  const tool = mcpManifest().tools.find((x) => x.name === 'grokbot_check_listed');
+  assert.ok(tool, 'grokbot_check_listed missing from mcpManifest');
+  assert.equal(tool.description, 'Reports whether a Grok bot code is already in the directory. Pass a link or a code. One of the two is required.');
+  assert.deepEqual(tool.inputSchema.anyOf, [{ required: ['link'] }, { required: ['code'] }]);
+  assert.equal(tool.inputSchema.required, undefined);
+  assert.equal(Object.prototype.hasOwnProperty.call(tool.inputSchema, 'required'), false);
 });
 
 await t('MCP: grokbot_search author filter is a case-insensitive exact match and keeps score>0', async () => {

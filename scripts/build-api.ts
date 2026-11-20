@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, copyFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { stripEmails } from '../src/lib/strip-emails';
+import { catalogGuardMessage } from '../src/lib/catalog-guard';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SITE = 'https://grokbot.zone';
@@ -87,10 +88,11 @@ const catsByCode = new Map(bots.map((b) => [b.code.toLowerCase(), b.cats]));
 put(join(apiDir, 'seed-codes.json'), { codes: seedCodes, cats: seedCodes.map((c) => catsByCode.get(c.toLowerCase()) ?? []) });
 put(join(apiDir, 'codes.json'), { codes: [...new Set(bots.map((b) => b.code.toLowerCase()))].sort() });
 
-// Count guard: files emitted == dataset == meta.totalBots.
+// Count guard: files emitted == dataset == meta.totalBots. The live catalog uses the same check.
 const botFiles = readdirSync(join(apiDir, 'bots')).length;
-if (botFiles !== bots.length || bots.length !== meta.totalBots) {
-  console.error(`build-api: FAIL ${botFiles} bot files, ${bots.length} dataset records, meta.totalBots ${meta.totalBots}`);
+const guard = catalogGuardMessage(botFiles, bots.length, meta.totalBots);
+if (guard) {
+  console.error(`build-api: FAIL ${guard}`);
   process.exit(1);
 }
 if (catFiles !== cats.length) {

@@ -15,6 +15,7 @@ import { LIST_ADD_CAP, extractCodes, parseSources, pullLists, queueCodes } from 
 import { build as buildTrending, order, prior, SEED_RANK, type Scored } from '../src/worker/dp/trending';
 import { runDataPlane } from '../src/worker/dp/cron';
 import { healthBody, recentList, trendingList } from '../src/worker/dp/serve';
+import { liveCatalog } from '../src/worker/dp/catalog';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
@@ -226,8 +227,8 @@ await t('D1 queries: a full cron run (discovery + 40 checks + hourly) issues <= 
 
 // ================= discovery + ingest =================
 await t('discovery: listing hrefs and archive rows parse; archive spelling comes from `original`', () => {
-  const codes = parseListing(`<a href="/bot/${CODE(1)}">a</a><a href="https://x.ai/bot/${CODE(2)}?x=1">b</a><a href="/bot/short">c</a><a href="/bot/marketplace">d</a><a href="/bot/${CODE(1)}">dup</a>`);
-  assert.deepEqual(codes, [CODE(1), CODE(2)]);
+  const codes = parseListing(`<a href="/bot/${CODE(1)}">a</a><a href="https://x.ai/bot/${CODE(2)}?x=1">b</a><a href="/bot/short">c</a><a href="/bot/marketplace">d</a><a href="/bot/${CODE(1)}">dup</a> addHref\\":\\"/bot/${CODE(4)}\\"`);
+  assert.deepEqual(codes, [CODE(1), CODE(2), CODE(4)]);
   const cdx = parseCdx([['timestamp', 'original'], ['2026', 'https://x.ai/bot'], ['2026', `https://x.ai/bot/${CODE(3)}`], ['2026', `http://www.x.ai/bot/${CODE(3).toLowerCase()}`], [], ['KEY']]);
   assert.deepEqual(cdx.found, [CODE(3)]); assert.equal(cdx.resume, 'KEY');
 });
@@ -681,20 +682,29 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   const sitemapBots = (s0.match(/\/bots\/[^/<]+\//g) ?? []).length;
   assert.equal(idx.totalBots, builtIdx.totalBots - 1, 'totalBots drops the one dead seed bot, not the dead bot the build never shipped');
   assert.equal(sitemapBots, idx.totalBots, 'sitemap bot count == search index totalBots');
-  const api = JSON.parse(await g('/api/v1/index.json')) as { totalBots: number };
-  assert.equal(api.totalBots, idx.totalBots, '/api/v1/index.json totalBots matches the search index');
+  // The read API is the live partition, not the static snapshot minus dead. Sum of category counts == totalBots.
+  const api = JSON.parse(await g('/api/v1/index.json')) as { totalBots: number; asOf: string };
+  const apiCats = JSON.parse(await g('/api/v1/categories.json')) as { slug: string; count: number }[];
+  const liveTotal = apiCats.reduce((n, c) => n + c.count, 0);
+  assert.equal(api.totalBots, liveTotal, 'index.totalBots equals the sum of live category counts');
+  assert.notEqual(api.asOf, '2026-10-28');
   const codes = JSON.parse(await g('/api/v1/codes.json')) as { codes: string[] };
-  assert.equal(codes.codes.length, idx.totalBots);
+  assert.equal(codes.codes.length, api.totalBots, 'codes.json is the same live set');
   assert.ok(!codes.codes.includes(SEED_BOT2.code.toLowerCase()), 'codes.json drops the dead seed code');
+  assert.ok(codes.codes.includes(NEW_A.toLowerCase()) && codes.codes.includes(NEW_B.toLowerCase()));
   const builtCats = (builtIdx as { categories: { slug: string; count: number }[] }).categories;
   assert.equal(idx.categories.find((c) => c.slug === SEED_BOT2.cat)!.count, builtCats.find((c) => c.slug === SEED_BOT2.cat)!.count - 1, 'search index category count drops the dead seed bot');
-  const apiCats = JSON.parse(await g('/api/v1/categories.json')) as { slug: string; count: number }[];
-  const builtApi = JSON.parse(distFile('api/v1/categories.json')) as { slug: string; count: number }[];
-  assert.equal(apiCats.find((c) => c.slug === SEED_BOT2.cat)!.count, builtApi.find((c) => c.slug === SEED_BOT2.cat)!.count - 1, '/api/v1/categories.json drops the same dead bot');
   const catSearch = JSON.parse(await g(`/search/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
-  const apiCat = JSON.parse(await g(`/api/v1/categories/${SEED_BOT2.cat}.json`)) as { bots: { i: string }[] };
+  const apiCat = JSON.parse(await g(`/api/v1/categories/${SEED_BOT2.cat}.json`)) as { count: number; bots: { i: string }[] };
   assert.ok(!catSearch.bots.some((b) => b.i === SEED_BOT2.slug) && !apiCat.bots.some((b) => b.i === SEED_BOT2.slug), 'dead seed bot leaves the search payloads');
   assert.equal(catSearch.count, catSearch.bots.length);
+  assert.equal(apiCat.count, apiCat.bots.length);
+  assert.equal(apiCat.count, apiCats.find((c) => c.slug === SEED_BOT2.cat)!.count, 'category file count is the same live partition');
+  const recent = JSON.parse(await g('/api/v1/recent.json')) as { bots: string[] };
+  for (const id of recent.bots) assert.equal((await get(env, `/api/v1/bots/${id}.json`)).res.status, 200, `recent id ${id} resolves`);
+  const uncat = JSON.parse(await g(`/api/v1/bots/uncategorized-${NEW_B}.json`)) as { category: { slug: string }; code: string };
+  assert.equal(uncat.category.slug, 'uncategorized');
+  assert.equal(uncat.code, NEW_B);
   console.log('      ' + q.map(([p, n]) => `${p}=${n}`).join('  '));
 });
 await t('D27a: changes.json added lists every bot that was live once (id + code), keeps a dead one, never an excluded or pending one', async () => {
@@ -720,7 +730,8 @@ await t('missing seed-codes.json logs and the count endpoints refuse instead of 
   try {
     resetDeadCache();
     assert.equal((await get(env, '/search/index.json')).res.status, 503);
-    assert.equal((await get(env, '/api/v1/categories.json')).res.status, 503);
+    const liveCats = await get(env, '/api/v1/categories.json');
+    assert.equal(liveCats.res.status, 200, 'live categories do not read seed-codes.json');
     assert.ok(logs.some((l) => l.includes('seed-codes.json')), logs.join('\n') || '(no log)');
   } finally { console.error = orig; }
 });
@@ -941,6 +952,38 @@ await t('noref: this test file and the worker sources carry no denylist from the
   if (!toks.length) return; // audit script not present on this machine
   const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'lists', 'trending', 'telemetry', 'serve', 'classify', 'util', 'page', 'merge', 'lists'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
   for (const f of files) { const src = readFileSync(f, 'utf8').toLowerCase(); for (const tk of toks) assert.ok(!src.includes(tk), `${f} contains a denylist token`); }
+});
+
+await t('codes.json: marketplace live row is dropped; index and category counts drop the same one', async () => {
+  const db = new FakeD1();
+  const good = CODE(1);
+  insertBot(db, good, { category: 'coding-software' });
+  insertBot(db, 'marketplace', { category: 'coding-software' });
+  const codesRes = await liveCatalog(db as never, '/api/v1/codes.json');
+  assert.ok(codesRes);
+  const codes = (await codesRes.json()) as { codes: string[] };
+  assert.deepEqual(codes.codes, [good.toLowerCase()]);
+  const indexRes = await liveCatalog(db as never, '/api/v1/index.json');
+  assert.ok(indexRes);
+  const index = (await indexRes.json()) as { totalBots: number };
+  assert.equal(index.totalBots, 1);
+  const catsRes = await liveCatalog(db as never, '/api/v1/categories.json');
+  assert.ok(catsRes);
+  const cats = (await catsRes.json()) as { slug: string; count: number }[];
+  const sum = cats.reduce((n, c) => n + c.count, 0);
+  assert.equal(sum, 1);
+  assert.equal(sum, index.totalBots);
+  const catRes = await liveCatalog(db as never, '/api/v1/categories/coding-software.json');
+  assert.ok(catRes);
+  const cat = (await catRes.json()) as { count: number; bots: { i: string }[] };
+  assert.equal(cat.count, 1);
+  assert.ok(!JSON.stringify(cat).includes('marketplace'));
+  const badBot = await liveCatalog(db as never, '/api/v1/bots/coding-software-marketplace.json');
+  assert.equal(badBot, null);
+  const goodBot = await liveCatalog(db as never, `/api/v1/bots/coding-software-${good.toLowerCase()}.json`);
+  assert.ok(goodBot);
+  const goodBody = (await goodBot.json()) as { code: string };
+  assert.equal(goodBody.code, good);
 });
 
 console.log(failed ? `test-dataplane: ${n} passed, ${failed} FAILED` : `test-dataplane: ${n} passed`);

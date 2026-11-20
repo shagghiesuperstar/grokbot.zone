@@ -15,8 +15,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, goReferral, isDead, record } from './dp/telemetry';
-import { liveCatalog } from './dp/catalog';
-import { liveSurface } from './dp/catalog';
+import { liveCatalog, liveCounts, liveSurface } from './dp/catalog';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
@@ -546,13 +545,12 @@ async function digest(controller: ScheduledController, env: Env): Promise<void> 
   const { results: fresh } = await db.prepare(
     `SELECT code, name, description, category FROM bots WHERE (${where})${heldSql} ORDER BY ${SEEN_ISO} DESC, code_lc ASC LIMIT ?`,
   ).bind(since, windowEnd, LAUNCH_FIRST_SEEN, ...heldNow, DIGEST_RENDER_LIMIT).all<{ code: string; name: string; description: string; category: string | null }>();
-  const totals = await db.prepare(
-    "SELECT COUNT(*) AS total, COUNT(DISTINCT COALESCE(category, 'uncategorized')) AS cats FROM bots WHERE status = 'live'",
-  ).first<{ total: number; cats: number }>();
+  // One filter: catalog.ts listedLive (CODE_RE), the same list index.json totalBots is counted from.
+  const totals = await liveCounts(db);
   const payload: DigestPayload = {
     asOf: scheduledIso.slice(0, 10),
-    totalBots: Number(totals?.total ?? newCount),
-    categoryCount: Number(totals?.cats ?? 0),
+    totalBots: totals.total,
+    categoryCount: totals.counts.size,
     top: fresh.map((b: { code: string; name: string; description: string; category: string | null }) => ({ id: botId(b.category, b.code), name: stripEmails(b.name), description: stripEmails(b.description) })),
   };
   const cap = Number(env.DIGEST_MAX_SENDS ?? '100');
@@ -833,7 +831,7 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     if (catalog) return catalog;
   }
   if (get && isStoredFile(path)) {
-    const stored = await storedFile(env.DB, path);
+    const stored = await storedFile(env.DB, path, Date.now());
     if (stored) return stored;
     if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
   }

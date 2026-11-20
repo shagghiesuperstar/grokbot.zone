@@ -32,7 +32,7 @@ const FILES: Record<string, string> = {
 export const isStoredFile = (path: string) => path in FILES;
 
 /** The stored JSON for a read endpoint, or null to fall through to the static asset. */
-export async function storedFile(db: D1Database | undefined, path: string, nowMs = Date.now()): Promise<Response | null> {
+export async function storedFile(db: D1Database | undefined, path: string, nowMs: number): Promise<Response | null> {
   if (!db) return null;
   try {
     const meta = await stored(db, nowMs);

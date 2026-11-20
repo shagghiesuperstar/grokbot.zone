@@ -4,6 +4,7 @@
 import categories from '../../data/categories.json';
 import { catalogGuardMessage } from '../../lib/catalog-guard';
 import { stripEmails } from '../../lib/strip-emails';
+import { CODE_RE } from './ingest';
 import { splitId } from './merge';
 import { SEED_RANK } from './trending';
 import { CATEGORY_NONE, botId, dayOf, iso } from './util';
@@ -33,7 +34,6 @@ const ENDPOINTS = {
   health: '/api/health',
 };
 
-interface CountRow { slug: string; n: number }
 interface BotRow { code: string; name: string; author: string; description: string; category: string | null; status?: string }
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body) + '\n', { status, headers: JSON_HEADERS });
@@ -48,18 +48,22 @@ export function filingSlug(category: string | null): string {
   return CATEGORY_NONE;
 }
 
+// The JS CODE_RE filter is the gate for every codes/count read, not a SQL length check.
+async function listedLive(db: D1Database): Promise<{ code: string; category: string | null }[]> {
+  const rows = await db.prepare(
+    `SELECT code, category FROM bots WHERE status = 'live' ORDER BY code_lc`,
+  ).all<{ code: string; category: string | null }>();
+  return rows.results.filter((r) => CODE_RE.test(r.code));
+}
+
 export async function liveCounts(db: D1Database): Promise<{ total: number; counts: Map<string, number> }> {
-  const totalRow = await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE status = 'live'`).first<{ n: number }>();
-  const grouped = await db.prepare(
-    `SELECT CASE WHEN category IS NULL OR category = '' THEN 'uncategorized' ELSE category END AS slug, COUNT(*) AS n
-       FROM bots WHERE status = 'live' GROUP BY 1`,
-  ).all<CountRow>();
+  const listed = await listedLive(db);
   const counts = new Map<string, number>();
-  for (const row of grouped.results) {
-    const slug = filingSlug(row.slug === CATEGORY_NONE ? null : row.slug);
-    counts.set(slug, (counts.get(slug) ?? 0) + Number(row.n));
+  for (const row of listed) {
+    const slug = filingSlug(row.category);
+    counts.set(slug, (counts.get(slug) ?? 0) + 1);
   }
-  return { total: Number(totalRow?.n ?? 0), counts };
+  return { total: listed.length, counts };
 }
 
 function categoryRows(counts: Map<string, number>, asOf: string) {
@@ -115,7 +119,7 @@ async function categoryFile(db: D1Database, slug: string): Promise<Response | nu
     ? `SELECT code, name, author, description, category FROM bots WHERE status = 'live' AND (category IS NULL OR category = '' OR category NOT IN (SELECT value FROM json_each(?))) ORDER BY code_lc`
     : `SELECT code, name, author, description, category FROM bots WHERE status = 'live' AND category = ? ORDER BY code_lc`;
   const rows = await db.prepare(sql).bind(slug === CATEGORY_NONE ? knownJson : slug).all<BotRow>();
-  const bots = rows.results.map(card);
+  const bots = rows.results.filter((r) => CODE_RE.test(r.code)).map(card);
   return json({ slug, label: LABEL.get(slug) ?? slug, count: bots.length, bots });
 }
 
@@ -125,15 +129,15 @@ async function botFile(db: D1Database, id: string, asOf: string): Promise<Respon
   const row = await db.prepare(
     `SELECT code, name, author, description, category, status FROM bots WHERE code_lc = ?`,
   ).bind(code.toLowerCase()).first<BotRow>();
-  if (!row || row.status !== 'live') return null;
+  if (!row || row.status !== 'live' || !CODE_RE.test(row.code)) return null;
   const expect = listedId(row.category, row.code);
   if (!expect || expect.toLowerCase() !== id.toLowerCase()) return null;
   return json(record(row, asOf));
 }
 
 async function codesFile(db: D1Database): Promise<Response> {
-  const rows = await db.prepare(`SELECT lower(code) AS code FROM bots WHERE status = 'live' ORDER BY code_lc`).all<{ code: string }>();
-  return json({ codes: rows.results.map((r) => r.code) });
+  const rows = await listedLive(db);
+  return json({ codes: rows.map((r) => r.code.toLowerCase()) });
 }
 
 async function indexAndCategories(db: D1Database, path: string, asOf: string): Promise<Response> {
@@ -163,6 +167,7 @@ async function recentFile(db: D1Database, asOf: string, nowMs: number): Promise<
   ).all<{ code: string; category: string | null }>();
   const bots: string[] = [];
   for (const r of rec.results) {
+    if (!CODE_RE.test(r.code)) continue;
     const id = listedId(r.category, r.code);
     if (id) bots.push(id);
   }

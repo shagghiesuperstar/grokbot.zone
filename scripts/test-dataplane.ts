@@ -15,6 +15,7 @@ import { LIST_ADD_CAP, extractCodes, parseSources, pullLists, queueCodes } from 
 import { build as buildTrending, order, prior, SEED_RANK, type Scored } from '../src/worker/dp/trending';
 import { runDataPlane } from '../src/worker/dp/cron';
 import { healthBody, recentList, trendingList } from '../src/worker/dp/serve';
+import { liveCatalog } from '../src/worker/dp/catalog';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
@@ -951,6 +952,38 @@ await t('noref: this test file and the worker sources carry no denylist from the
   if (!toks.length) return; // audit script not present on this machine
   const files = [join(ROOT, 'scripts/test-dataplane.ts'), ...['cron', 'ingest', 'liveness', 'discovery', 'lists', 'trending', 'telemetry', 'serve', 'classify', 'util', 'page', 'merge', 'lists'].map((f) => join(ROOT, `src/worker/dp/${f}.ts`))];
   for (const f of files) { const src = readFileSync(f, 'utf8').toLowerCase(); for (const tk of toks) assert.ok(!src.includes(tk), `${f} contains a denylist token`); }
+});
+
+await t('codes.json: marketplace live row is dropped; index and category counts drop the same one', async () => {
+  const db = new FakeD1();
+  const good = CODE(1);
+  insertBot(db, good, { category: 'coding-software' });
+  insertBot(db, 'marketplace', { category: 'coding-software' });
+  const codesRes = await liveCatalog(db as never, '/api/v1/codes.json');
+  assert.ok(codesRes);
+  const codes = (await codesRes.json()) as { codes: string[] };
+  assert.deepEqual(codes.codes, [good.toLowerCase()]);
+  const indexRes = await liveCatalog(db as never, '/api/v1/index.json');
+  assert.ok(indexRes);
+  const index = (await indexRes.json()) as { totalBots: number };
+  assert.equal(index.totalBots, 1);
+  const catsRes = await liveCatalog(db as never, '/api/v1/categories.json');
+  assert.ok(catsRes);
+  const cats = (await catsRes.json()) as { slug: string; count: number }[];
+  const sum = cats.reduce((n, c) => n + c.count, 0);
+  assert.equal(sum, 1);
+  assert.equal(sum, index.totalBots);
+  const catRes = await liveCatalog(db as never, '/api/v1/categories/coding-software.json');
+  assert.ok(catRes);
+  const cat = (await catRes.json()) as { count: number; bots: { i: string }[] };
+  assert.equal(cat.count, 1);
+  assert.ok(!JSON.stringify(cat).includes('marketplace'));
+  const badBot = await liveCatalog(db as never, '/api/v1/bots/coding-software-marketplace.json');
+  assert.equal(badBot, null);
+  const goodBot = await liveCatalog(db as never, `/api/v1/bots/coding-software-${good.toLowerCase()}.json`);
+  assert.ok(goodBot);
+  const goodBody = (await goodBot.json()) as { code: string };
+  assert.equal(goodBody.code, good);
 });
 
 console.log(failed ? `test-dataplane: ${n} passed, ${failed} FAILED` : `test-dataplane: ${n} passed`);

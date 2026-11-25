@@ -1,7 +1,10 @@
 // The read API (index, categories, category files, bot records, codes, recent), the search index,
 // and sitemap bot URLs from one live query: bots WHERE status = 'live', then the JS CODE_RE filter
 // in listedLive. Each bot is filed under exactly one slug, so the sum of category counts equals
-// totalBots by construction. Static files remain the fallback when D1 is down or empty.
+// totalBots by construction. Index, categories, codes and recent still fall through to their static
+// JSON files when D1 is down or empty. /api/v1/bots/<id>.json does not: a live row is the record,
+// a row that exists but is not live is 410, an unknown id is 404, and a read failure is 503.
+// The built bot file is a snapshot. It must not answer a delisted id or stand in for a failed read.
 import categories from '../../data/categories.json';
 import { catalogGuardMessage } from '../../lib/catalog-guard';
 import { stripEmails } from '../../lib/strip-emails';
@@ -41,6 +44,15 @@ const ENDPOINTS = {
 interface BotRow { code: string; name: string; author: string; description: string; category: string | null; status?: string }
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body) + '\n', { status, headers: JSON_HEADERS });
+// Errors are not a catalog snapshot. no-store so a blip is not cached as "this bot does not exist".
+const ERR_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' };
+/** Short enough that a transient D1 blip is retried, not treated as a ten-minute outage. */
+export const CATALOG_RETRY_AFTER = '60';
+export const isBotJsonPath = (path: string) => BOT_JSON.test(path);
+export function catalogError(status: number, error: string, extra: Record<string, string> = {}): Response {
+  return new Response(JSON.stringify({ ok: false, error }) + '\n', { status, headers: { ...ERR_HEADERS, ...extra } });
+}
+const catalogUnavailable = () => catalogError(503, 'catalog_unavailable', { 'Retry-After': CATALOG_RETRY_AFTER });
 const guardFail = (msg: string) => {
   console.error(`live catalog: FAIL ${msg}`);
   return json({ ok: false, error: 'catalog_guard' }, 503);
@@ -127,15 +139,19 @@ async function categoryFile(db: D1Database, slug: string): Promise<Response | nu
   return json({ slug, label: LABEL.get(slug) ?? slug, count: bots.length, bots });
 }
 
-async function botFile(db: D1Database, id: string, asOf: string): Promise<Response | null> {
+/** Always a JSON response. Never null: a null here used to fall through to the built file or the HTML 404 page. */
+async function botFile(db: D1Database, id: string, asOf: string): Promise<Response> {
   const [, code] = splitId(id);
-  if (!code) return null;
+  if (!code) return catalogError(404, 'bot_not_found');
   const row = await db.prepare(
     `SELECT code, name, author, description, category, status FROM bots WHERE code_lc = ?`,
   ).bind(code.toLowerCase()).first<BotRow>();
-  if (!row || row.status !== 'live' || !CODE_RE.test(row.code)) return null;
+  if (!row) return catalogError(404, 'bot_not_found');
+  // The row is the bot, even when the requested id's category prefix is stale.
+  if (row.status !== 'live') return catalogError(410, 'bot_gone');
+  if (!CODE_RE.test(row.code)) return catalogError(404, 'bot_not_found');
   const expect = listedId(row.category, row.code);
-  if (!expect || expect.toLowerCase() !== id.toLowerCase()) return null;
+  if (!expect || expect.toLowerCase() !== id.toLowerCase()) return catalogError(404, 'bot_not_found');
   return json(record(row, asOf));
 }
 
@@ -237,27 +253,31 @@ export async function liveSurface(db: D1Database | undefined, assets: { fetch(r:
   }
 }
 
-/** Live catalog response, or null to fall through to the static asset. A guard failure is a 503, not the stale file. */
+/** Live catalog response, or null to fall through to a static JSON file. Bot JSON never falls through. A guard failure is a 503, not the stale file. */
 export async function liveCatalog(db: D1Database | undefined, path: string, nowMs = Date.now()): Promise<Response | null> {
-  if (!db) return null;
   const cat = CAT_JSON.exec(path);
   const bot = BOT_JSON.exec(path);
   const known = path === '/api/v1/index.json' || path === '/api/v1/categories.json' || path === '/api/v1/codes.json' || path === '/api/v1/recent.json' || !!cat || !!bot;
   if (!known) return null;
+  // A missing binding is a read failure for a bot id. Other catalog files still have a static JSON twin.
+  if (!db) return bot ? catalogUnavailable() : null;
   const asOf = dayOf(nowMs);
   try {
     // An empty live table is an unseeded database: the static files (and the test fixtures) still answer.
-    // Production always has live rows, so this is not a second catalog.
+    // Production always has live rows, so this is not a second catalog. A bot id is still resolved
+    // against the row, so an empty table cannot serve a stale built file.
     const totalRow = await db.prepare(`SELECT COUNT(*) AS n FROM bots WHERE status = 'live'`).first<{ n: number }>();
-    if (!Number(totalRow?.n)) return null;
+    if (!Number(totalRow?.n)) return bot ? await botFile(db, bot[1], asOf) : null;
     if (path === '/api/v1/index.json' || path === '/api/v1/categories.json') return await indexAndCategories(db, path, asOf);
     if (path === '/api/v1/codes.json') return await codesFile(db);
     if (path === '/api/v1/recent.json') return await recentFile(db, asOf, nowMs);
-    if (cat) return await categoryFile(db, cat[1]);
+    if (cat) return await categoryFile(db, cat[1]) ?? catalogError(404, 'not_found');
     if (bot) return await botFile(db, bot[1], asOf);
     return null;
   } catch (e) {
     console.error('live catalog', path, (e as Error).message);
+    // A failed read must not become "bot not found" or the built file. Other catalog paths keep their JSON twin.
+    if (bot) return catalogUnavailable();
     return null;
   }
 }

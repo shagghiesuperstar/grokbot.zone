@@ -15,7 +15,7 @@ import { runDataPlane } from './dp/cron';
 import { CODE_RE, denylist } from './dp/ingest';
 import { gonePage, healthBody, isStoredFile, livePage, storedFile } from './dp/serve';
 import { go, goReferral, isDead, record } from './dp/telemetry';
-import { liveCatalog, liveCounts, liveSurface } from './dp/catalog';
+import { CATALOG_RETRY_AFTER, catalogError, isBotJsonPath, liveCatalog, liveCounts, liveSurface } from './dp/catalog';
 import { categoriesWithoutDead, categoryPage, codesWithoutDead, uncategorizedPage, feedJson, feedXml, indexWithoutDead, mergeState, searchLive, searchPayload, seedCatalog, seedMap, sitemapIndex, sitemapLive, sitemapStatic, splitId } from './dp/merge';
 import { renderBotPage, TEMPLATE_PATH } from './dp/page';
 import { botId, metaPut, readMeta } from './dp/util';
@@ -629,8 +629,24 @@ function addVary(headers: Headers, token: string) {
   else if (!cur.toLowerCase().split(',').map((s) => s.trim()).includes(token.toLowerCase())) headers.set('Vary', `${cur}, ${token}`);
 }
 
-/** Security headers on every response. HTML gets the agent Link header. Markdown and problem+json are opt-in. */
+/** Security headers on every response. HTML gets the agent Link header. Markdown and problem+json are opt-in.
+ *  /api/v1 is a JSON API. A text/html body here is the asset 404 page, which an agent cannot tell from "this bot does not exist". */
+function coerceApiHtml(path: string, res: Response): Response {
+  if (!path.startsWith('/api/v1/')) return res;
+  const ct = (res.headers.get('content-type') ?? '').toLowerCase();
+  if (ct.includes('json')) return res;
+  const html = ct.includes('text/html');
+  const bare404 = res.status === 404 && !ct.includes('json');
+  if (!html && !bare404) return res;
+  const status = res.status === 410 ? 410 : res.status >= 500 ? 503 : 404;
+  const error = status === 503 ? 'catalog_unavailable' : status === 410 ? 'bot_gone' : isBotJsonPath(path) ? 'bot_not_found' : 'not_found';
+  return catalogError(status, error, status === 503 ? { 'Retry-After': CATALOG_RETRY_AFTER } : {});
+}
+
 async function finish(request: Request, res: Response): Promise<Response> {
+  const rawPath = new URL(request.url).pathname;
+  const path = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : rawPath;
+  if (path.startsWith('/api/v1/')) res = coerceApiHtml(path, res);
   const headers = new Headers(res.headers);
   for (const [k, v] of Object.entries(SECURITY_HEADERS)) {
     // /go/ and /go/grok set Referrer-Policy: no-referrer on the 302. Do not replace a policy the handler already chose.
@@ -815,9 +831,10 @@ async function mergedAsset(request: Request, env: Env, path: string): Promise<Re
   return new Response(merged, { status: 200, headers: h });
 }
 async function dataPlane(request: Request, env: Env, ctx: ExecutionContext, path: string): Promise<Response> {
-  // Whatever goes wrong in the data plane, the static site still answers.
+  // A throw on /api/v1 must not become the HTML 404 page or a stale bot file.
   try { return await dataPlaneInner(request, env, ctx, path); } catch (e) {
     console.error('dataplane route error', path, (e as Error).message);
+    if (path.startsWith('/api/v1/')) return catalogError(503, 'catalog_unavailable', { 'Retry-After': CATALOG_RETRY_AFTER });
     return path === '/go' || path.startsWith('/go/') ? new Response('Not found\n', { status: 404 }) : env.ASSETS.fetch(request);
   }
 }
@@ -829,6 +846,8 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
   if (get) {
     const catalog = await liveCatalog(env.DB, path);
     if (catalog) return catalog;
+    // liveCatalog owns every bot id. A null here is a bug; do not serve the built file.
+    if (isBotJsonPath(path)) return catalogError(503, 'catalog_unavailable', { 'Retry-After': CATALOG_RETRY_AFTER });
   }
   if (get && isStoredFile(path)) {
     const stored = await storedFile(env.DB, path, Date.now());
@@ -836,7 +855,11 @@ async function dataPlaneInner(request: Request, env: Env, ctx: ExecutionContext,
     if (path !== '/api/v1/trending.json' && path !== '/api/v1/recent.json') return json(503, { ok: false, error: 'not_ready' }, { 'Retry-After': '600' });
   }
   if (path === TEMPLATE_PATH.replace(/\/$/, '')) return notFoundPage(request, env); // the Worker reads the template through ASSETS only
-  if (!get) return env.ASSETS.fetch(request);
+  if (!get) {
+    // Reads are the only /api/v1 methods that reach the data plane. Do not hand a write the HTML 404 page.
+    if (path.startsWith('/api/v1/')) return json(405, { ok: false, error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
+    return env.ASSETS.fetch(request);
+  }
   if (path === '/categories/uncategorized') { // D2: no static page exists for it; built from a category page plus the live bots without a category
     let tpl = new Response(null, { status: 404 });
     for (const slug of [...CATEGORY_SLUGS].slice(0, 3)) { // any built category page will do as the frame

@@ -156,7 +156,7 @@ POST ${MCP_URL}. Protocol 2025-11-25 (initialize, notifications/initialized, too
 - POST /api/v1/submissions (alias POST /api/submit), JSON, content-type application/json
 - POST /subscribe, JSON
 
-Errors are JSON \`{ok:false, error}\` or \`{ok:false, errors}\`. Send \`Accept: application/problem+json\` for an RFC 9457 body.
+Errors are JSON \`{ok:false, error}\` or \`{ok:false, errors}\`. Send \`Accept: application/problem+json\` for an RFC 9457 body. GET /api/v1/bots/{id}.json is 404 \`bot_not_found\` when that id is not a live listing, 410 \`bot_gone\` when the bot is no longer shared, and 503 \`catalog_unavailable\` with Retry-After when the catalog cannot be read. That path is never an HTML page.
 `;
 
 const PROBLEM = {
@@ -198,13 +198,16 @@ export const OPENAPI = {
     '/api/v1/categories/{slug}.json': { get: op('getCategory', 'Bots in one category', { slug: { type: 'string' }, bots: { type: 'array' } }, ['slug'], [{ name: 'slug', in: 'path', required: true, schema: { type: 'string', maxLength: 80 } }]) },
     '/api/v1/trending.json': { get: op('getTrending', 'Ordered bot ids, global and per category', { global: { type: 'array', items: { type: 'string' } } }, ['global']) },
     '/api/v1/recent.json': { get: op('getRecent', 'Categories in refresh order', { type: 'object' }) },
-    '/api/v1/bots/{id}.json': { get: op('getBot', 'One bot record', { id: { type: 'string' }, name: { type: 'string' }, link: { type: 'string' } }, ['id', 'name'], [{ name: 'id', in: 'path', required: true, schema: { type: 'string', maxLength: 160 } }]) },
+    '/api/v1/bots/{id}.json': { get: withGone(op('getBot', 'One bot record', { id: { type: 'string' }, name: { type: 'string' }, link: { type: 'string' } }, ['id', 'name'], [{ name: 'id', in: 'path', required: true, schema: { type: 'string', maxLength: 160 } }])) },
     '/api/v1/codes.json': { get: op('listCodes', 'Every listed bot code, lowercased', { codes: { type: 'array', items: { type: 'string' } } }, ['codes']) },
     '/api/v1/submissions': { post: writeOp('submitBot', 'Queue a public Grok bot for listing', submissionSchema()) },
     '/subscribe': { post: writeOp('subscribe', 'Start a double opt-in for update emails', { type: 'object', additionalProperties: false, required: ['email'], properties: { email: { type: 'string', format: 'email', maxLength: 254 }, company_website: { type: 'string', maxLength: 0 } } }) },
   },
 };
 
+function withGone(operation: ReturnType<typeof op>) {
+  return { ...operation, responses: { ...operation.responses, '410': { description: 'No longer shared', content: errorContent } } };
+}
 function op(operationId: string, summary: string, schema: unknown, required?: string[], parameters?: unknown[]) {
   const respSchema = required ? { type: 'object', properties: schema, required, additionalProperties: true } : schema;
   return {

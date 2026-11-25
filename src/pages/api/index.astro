@@ -30,6 +30,7 @@ const rows: [string, string][] = [
     </table>
     <h2>Bot record</h2>
     <pre><code>{`{"id":"…","name":"…","author":"…","description":"…","category":{"slug":"…","label":"…"},"code":"…","link":"https://x.ai/bot/…","asOf":"${meta.asOf}"}`}</code></pre>
+    <p>A live bot is that record, with status 200. An id that is not a live listing is 404 <code>{"ok":false,"error":"bot_not_found"}</code>. A bot that is no longer shared is 410 <code>{"ok":false,"error":"bot_gone"}</code>. If the catalog cannot be read, the same path is 503 <code>{"ok":false,"error":"catalog_unavailable"}</code> with <code>Retry-After</code>. Those answers are JSON, never an HTML page.</p>
     <h2>Submitting a bot</h2>
     <p>Writes are same-origin only: use the form on the <a href="/submit/">Submit page</a><span data-needs-email hidden>, or email <a href="mailto:submit@grokbot.zone">submit@grokbot.zone</a> with the bot's name, its link and a one-line description</span>. The form posts JSON to <code>/api/submit</code>; browsers on other origins are blocked, and the endpoint is rate limited.</p>
   </div>

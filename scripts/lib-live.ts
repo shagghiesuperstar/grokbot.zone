@@ -5,6 +5,13 @@ import { join, resolve } from 'node:path';
 import { stripEmails } from '../src/lib/strip-emails';
 
 const ROOT = resolve(import.meta.dirname, '..');
+/** Ids ("<category>-<code>") held out of the directory (data/excluded-bots.json); a missing file is an empty set. */
+function readExcluded(): Set<string> {
+  const f = join(ROOT, 'data/excluded-bots.json');
+  if (!existsSync(f)) return new Set();
+  const j = JSON.parse(readFileSync(f, 'utf8')) as unknown;
+  return new Set(Array.isArray(j) ? j.filter((x): x is string => typeof x === 'string') : []);
+}
 export interface LiveAdded { id: string; slug: string; code: string; name: string; author: string; description: string; cat: string; cats: string[] }
 
 /** Added bots that have a known category and a well-formed code, plus the lowercased codes of dead bots. */
@@ -14,10 +21,12 @@ export function readLive(knownCategories: Set<string>, file = join(ROOT, 'data/l
   if (!Array.isArray(ch.added) || !Array.isArray(ch.dead)) throw new Error(`${file}: expected "added" and "dead" arrays`);
   const added: LiveAdded[] = [];
   const seen = new Set<string>();
+  const excluded = readExcluded();
   for (const a of ch.added) {
     const code = String(a.code ?? '');
     const cat = typeof a.category === 'string' ? a.category : '';
     if (!/^[A-Za-z0-9_-]{1,64}$/.test(code) || !knownCategories.has(cat) || seen.has(code.toLowerCase())) continue; // no category = no static page
+    if (excluded.has(`${cat}-${code}`)) continue;
     const name = stripEmails(String(a.name ?? '')).trim();
     const description = stripEmails(String(a.description ?? '')).trim();
     if (!name || !description) continue;

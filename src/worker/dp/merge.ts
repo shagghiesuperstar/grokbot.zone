@@ -4,12 +4,18 @@
 // stored dead list. When nothing applies a path is passed through untouched, so a seed bot's static page and the
 // static JSON stay byte-for-byte as built (O11).
 import categories from '../../data/categories.json';
+import excludedBots from '../../../data/excluded-bots.json';
 import { cardHtml, esc, liveState, type LiveAdded } from './serve';
 import type { Card } from './trending';
 import { CATEGORY_NONE } from './util';
 
 const SLUGS = new Set((categories as { slug: string }[]).map((c) => c.slug));
 const SITE = 'https://grokbot.zone';
+
+/** Ids ("<category>-<code>") held out of the directory; the same list the refresh workflow and static build apply. */
+export const EXCLUDED_BOTS: ReadonlySet<string> = new Set(excludedBots as string[]);
+export const dropExcluded = (b: { id: string; code: string; category: string | null }): boolean =>
+  EXCLUDED_BOTS.has(b.id) || EXCLUDED_BOTS.has(`${b.category}-${b.code}`);
 
 /** "<category>-<code>" -> [category, code]. Codes contain "-", so strip a known category prefix instead of splitting. */
 export function splitId(id: string): [string | null, string] {
@@ -63,7 +69,7 @@ export async function mergeState(db: D1Database | undefined, assets: { fetch(r: 
   let seed: Map<string, string> | null = null;
   try { seed = await seedMap(assets); } catch (e) { console.error('seed-codes.json unreadable', (e as Error).message); seed = null; }
   // Without the built list a bot cannot be told from a static one, so no extra is added (a dead one is still dropped).
-  const extras = seed ? st.added.filter((b) => !st.dead.has(b.code.toLowerCase()) && !seed!.has(b.code.toLowerCase()))
+  const extras = seed ? st.added.filter((b) => !dropExcluded(b) && !st.dead.has(b.code.toLowerCase()) && !seed!.has(b.code.toLowerCase()))
     .sort((a, b) => (a.first_seen < b.first_seen ? 1 : a.first_seen > b.first_seen ? -1 : a.code < b.code ? -1 : 1)) : [];
   return { extras, dead: st.dead };
 }

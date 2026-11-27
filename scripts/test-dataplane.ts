@@ -2,6 +2,7 @@
 // fetch; the bundled Worker is driven for the route-level cases. Tokens in here are FAKE ("zzfaketokenzz").
 // Usage: pnpm test:dataplane
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
 import { mkdtempSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -19,7 +20,7 @@ import { liveCatalog } from '../src/worker/dp/catalog';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
-import { categoriesWithoutDead, deadSeedCount, indexWithoutDead } from '../src/worker/dp/merge';
+import { EXCLUDED_BOTS, categoriesWithoutDead, deadSeedCount, indexWithoutDead } from '../src/worker/dp/merge';
 import model from '../src/data/classifier.json';
 
 // workerd provides HTMLRewriter; under Node the test uses the same lol-html engine from the `htmlrewriter` package.
@@ -857,6 +858,36 @@ await t('D24: readLive keeps categorised adds, drops category-less and malformed
   assert.equal(r.added.length, 1); assert.equal(r.added[0].id, 'coding-software-AddedOne00000000001'); assert.ok(!/@/.test(r.added[0].author + r.added[0].description));
   assert.ok(r.dead.has('deadone0000000000001'));
   assert.deepEqual(readLive(new Set(), join(tmp, 'absent.json')).added, []);
+});
+
+const EXCL_ID = 'coding-software-_9kXD14exd2rqaN1afg04';
+await t('D24: readLive drops the excluded bot id and keeps the fixture', () => {
+  const f = join(tmp, 'changes-excl.json');
+  writeFileSync(f, JSON.stringify({ added: [
+    { code: '_9kXD14exd2rqaN1afg04', name: 'Listed Fixture', author: '', description: 'Held out of the directory.', category: 'coding-software' },
+    { code: 'KeepBot10000000000001', name: 'Listed Fixture', author: '', description: 'Held out of the directory.', category: 'coding-software' },
+  ], dead: [] }));
+  const r = readLive(new Set(['coding-software']), f);
+  assert.deepEqual(r.added.map((a) => a.id), ['coding-software-KeepBot10000000000001']);
+  assert.ok(!r.added.some((a) => a.id === EXCL_ID));
+});
+await t('exclude-listed-bots.mjs removes only the excluded object, keeps the rest unformatted, and is idempotent', () => {
+  const f = join(tmp, 'changes-script.json');
+  const mk = (code: string) => `    {"id":"coding-software-${code}","code":"${code}","name":"Listed Fixture","description":"Held out of the directory.","category":"coding-software"}`;
+  const keep = 'KeepBot10000000000001';
+  for (const order of [[EXCL_ID.slice(16), keep], [keep, EXCL_ID.slice(16)], [keep, EXCL_ID.slice(16), 'KeepBot20000000000002']]) {
+    writeFileSync(f, `{\n  "added": [\n${order.map(mk).join(',\n')}\n  ],\n  "dead":["x"]\n}\n`);
+    const run = () => spawnSync('node', [join(ROOT, 'scripts/exclude-listed-bots.mjs'), f], { encoding: 'utf8' });
+    const r1 = run(); assert.equal(r1.status, 0); assert.equal(r1.stdout.trim(), 'removed_added=1 excluded_ids=1');
+    const after = readFileSync(f, 'utf8');
+    assert.ok(!after.includes('_9kXD14exd2rqaN1afg04')); assert.ok(after.includes(keep));
+    assert.deepEqual(JSON.parse(after).added.map((a: { code: string }) => a.code), order.filter((c) => c !== EXCL_ID.slice(16)));
+    assert.ok(after.includes('\n  "dead":["x"]\n}\n'), 'rest of the file not reformatted');
+    const r2 = run(); assert.equal(r2.stdout.trim(), 'removed_added=0 excluded_ids=1'); assert.equal(readFileSync(f, 'utf8'), after);
+  }
+});
+await t('worker merge exports the exclusion set containing the bot id', () => {
+  assert.ok(EXCLUDED_BOTS.has(EXCL_ID));
 });
 
 // ================= switches =================

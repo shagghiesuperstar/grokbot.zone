@@ -16,7 +16,7 @@ import { LIST_ADD_CAP, extractCodes, parseSources, pullLists, queueCodes } from 
 import { build as buildTrending, order, prior, SEED_RANK, type Scored } from '../src/worker/dp/trending';
 import { runDataPlane } from '../src/worker/dp/cron';
 import { healthBody, recentList, trendingList } from '../src/worker/dp/serve';
-import { liveCatalog } from '../src/worker/dp/catalog';
+import { CATALOG_RETRY_AFTER, liveCatalog } from '../src/worker/dp/catalog';
 import { clientKey, isHuman, record, resetDeadCache, resetSaltCache } from '../src/worker/dp/telemetry';
 import { classify, tokenize } from '../src/worker/dp/classify';
 import { readLive } from './lib-live';
@@ -477,8 +477,10 @@ await t('O6 /go/ fails closed when D1 is down and the seed list cannot be read: 
   const env = envOf(db, { ASSETS: { fetch: async () => { throw new Error('assets down'); } } });
   for (const p of [`/go/${LIVE}`, '/go/seedcodeabcdefghijkl1']) assert.equal((await get(env, p)).res.status, 404, p);
 });
-await t('read files: served from meta once the cron has run; static fallback before; D1 queries <= 50 each', async () => {
-  resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE); const env = envOf(db);
+await t('read files: served from meta once the cron has run; static JSON fallback before; D1 queries <= 50 each', async () => {
+  resetSaltCache(); const db = new FakeD1(); insertBot(db, LIVE);
+  const assets = { fetch: async () => new Response('{"static":true,"path":"/api/v1/trending.json"}\n', { status: 200, headers: { 'content-type': 'application/json' } }) };
+  const env = envOf(db, { ASSETS: assets });
   const before = await get(env, '/api/v1/trending.json'); assert.equal(before.res.status, 200); assert.ok((await before.res.text()).includes('/api/v1/trending.json'), 'static fallback');
   assert.equal((await get(env, '/api/v1/signals/daily.json')).res.status, 503);
   // The cron's clock is the time the run happened; freshness is judged against the wall clock, so the
@@ -709,7 +711,14 @@ await t('D28/O10: search, category page, feeds and sitemap gain live D1-only bot
   assert.equal(apiCat.count, apiCat.bots.length);
   assert.equal(apiCat.count, apiCats.find((c) => c.slug === SEED_BOT2.cat)!.count, 'category file count is the same live partition');
   const recent = JSON.parse(await g('/api/v1/recent.json')) as { bots: string[] };
-  for (const id of recent.bots) assert.equal((await get(env, `/api/v1/bots/${id}.json`)).res.status, 200, `recent id ${id} resolves`);
+  for (const id of recent.bots) {
+    const hit = await get(env, `/api/v1/bots/${id}.json`);
+    assert.equal(hit.res.status, 200, `recent id ${id} resolves`);
+    assert.match(hit.res.headers.get('content-type') ?? '', /application\/json/);
+    const body = await hit.res.json() as { id: string; code: string };
+    assert.equal(body.id, id);
+    assert.ok(id.toLowerCase().endsWith(body.code.toLowerCase()), `${id} vs ${body.code}`);
+  }
   const uncat = JSON.parse(await g(`/api/v1/bots/uncategorized-${NEW_B}.json`)) as { category: { slug: string }; code: string };
   assert.equal(uncat.category.slug, 'uncategorized');
   assert.equal(uncat.code, NEW_B);
@@ -1022,7 +1031,9 @@ await t('codes.json: marketplace live row is dropped; index and category counts 
   assert.equal(cat.count, 1);
   assert.ok(!JSON.stringify(cat).includes('marketplace'));
   const badBot = await liveCatalog(db as never, '/api/v1/bots/coding-software-marketplace.json');
-  assert.equal(badBot, null);
+  assert.ok(badBot);
+  assert.equal(badBot.status, 404);
+  assert.equal((await badBot.json() as { error: string }).error, 'bot_not_found');
   const goodBot = await liveCatalog(db as never, `/api/v1/bots/coding-software-${good.toLowerCase()}.json`);
   assert.ok(goodBot);
   const goodBody = (await goodBot.json()) as { code: string };
@@ -1064,6 +1075,80 @@ await t('live list: one bad-shape row is absent from search total, sitemap bot U
   assert.equal((await get(env, '/sitemap-live.xml')).res.status, 404);
   const index = await (await get(env, '/sitemap-index.xml')).res.text();
   assert.ok(!index.includes('sitemap-live.xml'));
+});
+
+await t('bot json: unknown 404, not-live 410, unread 503, never the built file; every /api/v1 answer is JSON', async () => {
+  const db = new FakeD1();
+  const live = CODE(1);
+  insertBot(db, live, { category: 'coding-software', name: 'Live One', description: 'still shared' });
+  insertBot(db, CODE(2), { status: 'dead', category: 'travel', name: 'Gone One' });
+  insertBot(db, CODE(3), { status: 'pending', category: 'travel', name: 'Pending One' });
+  insertBot(db, CODE(4), { status: 'excluded', category: 'travel', name: 'Hidden One' });
+  let assetHits = 0;
+  const poison = { fetch: async (r: Request) => {
+    assetHits++;
+    const p = new URL(r.url).pathname;
+    if (p.startsWith('/api/v1/bots/')) return new Response(JSON.stringify({ stale: true, path: p }), { status: 200, headers: { 'content-type': 'application/json' } });
+    return new Response('<!DOCTYPE html><title>Page not found</title>', { status: 404, headers: { 'content-type': 'text/html' } });
+  } };
+  const env = envOf(db, { ASSETS: poison });
+  const expectJson = async (path: string, status: number, error?: string) => {
+    const r = await get(env, path);
+    assert.equal(r.res.status, status, path);
+    assert.match(r.res.headers.get('content-type') ?? '', /application\/json/, path);
+    assert.ok(!((r.res.headers.get('content-type') ?? '').includes('text/html')), path);
+    const body = await r.res.json() as { ok?: boolean; error?: string; stale?: boolean; code?: string; id?: string };
+    assert.notEqual(body.stale, true, `${path} served the built file`);
+    if (error) assert.deepEqual({ ok: body.ok, error: body.error }, { ok: false, error });
+    return body;
+  };
+  await expectJson('/api/v1/bots/uncategorized-AAAAAAAAAAAAAAAAAAAAA.json', 404, 'bot_not_found');
+  await expectJson(`/api/v1/bots/travel-${CODE(2)}.json`, 410, 'bot_gone');
+  await expectJson(`/api/v1/bots/travel-${CODE(3)}.json`, 410, 'bot_gone');
+  await expectJson(`/api/v1/bots/travel-${CODE(4)}.json`, 410, 'bot_gone');
+  await expectJson(`/api/v1/bots/travel-${live}.json`, 404, 'bot_not_found');
+  await expectJson('/api/v1/bots/coding-software-marketplace.json', 404, 'bot_not_found');
+  const ok = await expectJson(`/api/v1/bots/coding-software-${live}.json`, 200);
+  assert.equal(ok.code, live);
+  assert.equal(ok.id, `coding-software-${live}`);
+  assert.equal(assetHits, 0, 'a bot id must not be read from the asset');
+  const recent = await expectJson('/api/v1/recent.json', 200);
+  const ids = (recent as { bots?: string[] }).bots ?? [];
+  assert.ok(ids.length > 0);
+  for (const id of ids) {
+    const body = await expectJson(`/api/v1/bots/${id}.json`, 200);
+    assert.equal(body.id, id);
+    assert.ok(id.toLowerCase().endsWith(String(body.code).toLowerCase()), `${id} vs ${body.code}`);
+  }
+  for (const path of ['/api/v1/index.json', '/api/v1/categories.json', '/api/v1/codes.json', '/api/v1/no-such.json']) {
+    const r = await get(env, path);
+    assert.match(r.res.headers.get('content-type') ?? '', /application\/json/, path);
+    assert.ok(!((await r.res.clone().text()).slice(0, 20).toLowerCase().includes('<html')), path);
+  }
+  assert.equal((await get(env, '/api/v1/no-such.json')).res.status, 404);
+  const down = new FakeD1(); insertBot(down, live);
+  (down as unknown as { prepare: () => never }).prepare = () => { throw new Error('d1 down'); };
+  let downHits = 0;
+  const downEnv = envOf(down, { ASSETS: { fetch: async () => { downHits++; return new Response(JSON.stringify({ stale: true }), { status: 200, headers: { 'content-type': 'application/json' } }); } } });
+  const unread = await get(downEnv, `/api/v1/bots/coding-software-${live}.json`);
+  assert.equal(unread.res.status, 503);
+  assert.equal(unread.res.headers.get('retry-after'), CATALOG_RETRY_AFTER);
+  assert.match(unread.res.headers.get('content-type') ?? '', /application\/json/);
+  assert.deepEqual(await unread.res.json(), { ok: false, error: 'catalog_unavailable' });
+  assert.equal(downHits, 0, 'a failed read must not serve the built file');
+  const noDb = envOf(db, { DB: undefined, ASSETS: poison });
+  const missing = await get(noDb, `/api/v1/bots/coding-software-${live}.json`);
+  assert.equal(missing.res.status, 503);
+  assert.equal(missing.res.headers.get('retry-after'), CATALOG_RETRY_AFTER);
+  assert.equal((await missing.res.json() as { error: string }).error, 'catalog_unavailable');
+  const empty = new FakeD1();
+  insertBot(empty, CODE(2), { status: 'dead', category: 'travel' });
+  const beforeEmpty = assetHits;
+  const emptyEnv = envOf(empty, { ASSETS: poison });
+  const gone = await get(emptyEnv, `/api/v1/bots/travel-${CODE(2)}.json`);
+  assert.equal(gone.res.status, 410);
+  assert.equal((await gone.res.json() as { error: string }).error, 'bot_gone');
+  assert.equal(assetHits, beforeEmpty, 'an empty live table still must not serve the built bot file');
 });
 
 console.log(failed ? `test-dataplane: ${n} passed, ${failed} FAILED` : `test-dataplane: ${n} passed`);

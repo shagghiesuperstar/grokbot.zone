@@ -34,6 +34,7 @@ jobs:
           for f in catalog/changes trending recent; do
             curl -fsS --retry 3 --retry-delay 10 -A 'GrokBotZone-refresh/1.0 (+https://grokbot.zone/)' "https://grokbot.zone/api/v1/$f.json" -o "data/live/$(basename "$f").json.new"
           done
+          node scripts/exclude-listed-bots.mjs data/live/changes.json.new
           node -e '
             const fs = require("fs");
             const c = JSON.parse(fs.readFileSync("data/live/changes.json.new", "utf8"));
